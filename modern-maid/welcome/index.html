@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Modern Maid — Digital Growth Brief | Aspire Digital</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg: #FAF0E2;
+    --bg-alt: #F2EDE6;
+    --text: #2C3340;
+    --text-sec: #666666;
+    --text-muted: #999999;
+    --accent: #C4622D;
+    --accent-dark: #B53D00;
+    --border: #E5E5E5;
+    --border-light: #F0F0F0;
+    --green: #4a7b5a;
+    --hero-green: #8FAF8A;
+    --white: #ffffff;
+    --font: 'DM Sans', system-ui, -apple-system, sans-serif;
+    --font-head: 'Montserrat', system-ui, sans-serif;
+    --font-accent: 'Playfair Display', Georgia, serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 15px;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection { background: var(--accent); color: #fff; }
+
+  /* PAGE HEADER */
+  .page-header {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 48px;
+  }
+  .page-header-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+  }
+  .page-header .aspire-logo {
+    width: 200px;
+    height: auto;
+  }
+  .page-header .divider {
+    width: 1px;
+    height: 48px;
+    background: var(--border);
+    margin: 0;
+  }
+  .page-header .tees-logo {
+    height: 70px;
+    width: auto;
+    border-radius: 8px;
+  }
+
+  /* HERO */
+  .hero {
+    background: var(--hero-green);
+    text-align: center;
+    padding: 60px 48px 80px;
+    position: relative;
+  }
+  .hero h1 {
+    font-family: var(--font-head);
+    font-weight: 800;
+    font-size: clamp(36px, 6vw, 56px);
+    color: var(--accent);
+    line-height: 1.08;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+  }
+  .hero .sub {
+    font-family: var(--font-head);
+    font-weight: 600;
+    font-size: clamp(18px, 3vw, 24px);
+    color: #2C3340;
+    margin-bottom: 4px;
+    letter-spacing: -0.01em;
+  }
+  .hero .accent-word {
+    font-family: var(--font-accent);
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(36px, 6vw, 56px);
+    color: var(--white);
+    line-height: 1.08;
+  }
+  .hero .body-text {
+    color: var(--white);
+    font-size: 17px;
+    max-width: 540px;
+    margin: 28px auto 0;
+    line-height: 1.7;
+  }
+
+  /* ARC DIVIDER — matches AD site */
+  .hero-arc {
+    margin-top: -1px;
+    background: var(--hero-green);
+  }
+  .hero-arc svg {
+    display: block;
+    width: 100%;
+    height: 80px;
+  }
+
+  /* CONTAINER */
+  .container {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  /* META BAR */
+  .meta-bar {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 32px 0 20px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 56px;
+    font-size: 13px;
+    color: var(--text-muted);
+    letter-spacing: 0.3px;
+  }
+  .meta-bar strong { color: var(--text); font-weight: 600; }
+  .meta-bar a { color: var(--accent); text-decoration: none; }
+
+  /* SECTIONS */
+  section { margin-bottom: 64px; }
+
+  h2 {
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: clamp(24px, 3.5vw, 32px);
+    color: var(--text);
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+  }
+  h2 .number {
+    font-family: var(--font);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+  }
+  h2 em {
+    font-family: var(--font-accent);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--accent);
+  }
+
+  h3 {
+    font-family: var(--font-head);
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin: 32px 0 12px;
+  }
+
+  p { margin-bottom: 16px; color: var(--text-sec); }
+  p strong { color: var(--text); }
+  ul { margin: 0 0 16px 20px; }
+  li { margin-bottom: 6px; color: var(--text-sec); }
+  li strong { color: var(--text); }
+
+  .paw { font-size: 0.85em; }
+
+  /* CALLOUT */
+  .callout {
+    background: var(--bg-alt);
+    border-left: 3px solid var(--accent);
+    padding: 20px 24px;
+    margin: 24px 0;
+    font-size: 0.9rem;
+    border-radius: 0 12px 12px 0;
+    color: var(--text-sec);
+  }
+  .callout strong { color: var(--text); }
+
+  /* PILL TAGS */
+  .tag {
+    display: inline-block;
+    padding: 4px 14px;
+    border-radius: 9999px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .tag.easy { background: #e8f5e9; color: #2e7d32; }
+  .tag.medium { background: #fff3e0; color: #e65100; }
+  .tag.high { background: var(--accent); color: white; }
+  .tag.mid-impact { background: #e3f2fd; color: #1565c0; }
+
+  /* SCORE CARDS */
+  .score-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 16px;
+    margin: 24px 0;
+  }
+  .score-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 24px 16px;
+    text-align: center;
+    border: 1px solid var(--border-light);
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+  .score-card:hover {
+    box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+    transform: translateY(-2px);
+  }
+  .score-card .label {
+    font-family: var(--font-head);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+  }
+  .score-card .value {
+    font-family: var(--font-head);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent);
+  }
+  .score-card .note {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 4px;
+  }
+
+  /* BAR CHART */
+  .bar-chart { margin: 24px 0; }
+  .bar-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  .bar-row .bar-label {
+    width: 160px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text);
+    flex-shrink: 0;
+  }
+  .bar-row .bar-track {
+    flex: 1;
+    height: 28px;
+    background: var(--bg-alt);
+    border-radius: 14px;
+    overflow: hidden;
+    margin: 0 12px;
+  }
+  .bar-row .bar-fill {
+    height: 100%;
+    border-radius: 14px;
+  }
+  .bar-row .bar-val {
+    width: 40px;
+    font-family: var(--font-head);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-align: right;
+  }
+
+  /* COMPARE CARDS */
+  .compare-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin: 24px 0;
+  }
+  .compare-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 24px 20px;
+    border: 1px solid var(--border-light);
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+  .compare-card:hover {
+    box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+    transform: translateY(-2px);
+  }
+  .compare-card.you {
+    border: 2px solid var(--accent);
+    background: #FFF9F5;
+  }
+  .compare-card .comp-name {
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--text);
+    margin-bottom: 14px;
+  }
+  .compare-card .comp-stat {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    padding: 5px 0;
+    border-bottom: 1px solid var(--border-light);
+  }
+  .compare-card .comp-stat:last-child { border-bottom: none; }
+  .compare-card .comp-stat .stat-label { color: var(--text-muted); }
+  .compare-card .comp-stat .stat-val { font-weight: 600; }
+  .stat-val.good { color: var(--green); }
+  .stat-val.mid { color: #b8860b; }
+  .stat-val.low { color: #c44; }
+
+  /* KEYWORD CARDS */
+  .kw-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 10px;
+    margin: 24px 0;
+  }
+  .kw-card {
+    background: var(--white);
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    padding: 14px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: box-shadow 0.3s;
+  }
+  .kw-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.05); }
+  .kw-card .kw-term {
+    font-weight: 500;
+    font-size: 13px;
+    color: var(--text);
+  }
+  .kw-card .kw-vol {
+    font-size: 11px;
+    color: var(--text-muted);
+    white-space: nowrap;
+    margin-left: 12px;
+  }
+  .kw-card .kw-vol strong {
+    font-family: var(--font-head);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--accent);
+  }
+
+  /* TIMELINE */
+  .timeline {
+    position: relative;
+    margin: 24px 0;
+    padding-left: 36px;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    bottom: 8px;
+    width: 2px;
+    background: var(--border);
+  }
+  .timeline-item {
+    position: relative;
+    margin-bottom: 32px;
+  }
+  .timeline-item:last-child { margin-bottom: 0; }
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -32px;
+    top: 6px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 3px solid var(--bg);
+    box-shadow: 0 0 0 2px var(--accent);
+  }
+  .timeline-item .week {
+    font-family: var(--font-head);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 4px;
+  }
+  .timeline-item .task {
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--text);
+    margin-bottom: 4px;
+    line-height: 1.3;
+  }
+  .timeline-item .detail {
+    font-size: 14px;
+    color: var(--text-sec);
+    line-height: 1.65;
+  }
+
+  /* OPPORTUNITY CARDS */
+  .opp-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    margin: 24px 0;
+  }
+  .opp-card {
+    background: var(--white);
+    border: 1px solid var(--border-light);
+    border-radius: 16px;
+    padding: 28px 24px;
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+  .opp-card:hover {
+    box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+    transform: translateY(-2px);
+  }
+  .opp-card h4 {
+    font-family: var(--font-head);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 8px;
+  }
+  .opp-card p { font-size: 13px; color: var(--text-sec); margin-bottom: 14px; }
+  .opp-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+
+  /* REVENUE BOX */
+  .revenue-box {
+    background: var(--green);
+    color: white;
+    border-radius: 16px;
+    padding: 48px 40px;
+    text-align: center;
+    margin: 32px 0;
+  }
+  .revenue-box .rev-label {
+    font-family: var(--font-head);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    opacity: 0.7;
+    margin-bottom: 8px;
+  }
+  .revenue-box .rev-amount {
+    font-family: var(--font-head);
+    font-size: clamp(40px, 8vw, 56px);
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 8px;
+    letter-spacing: -0.02em;
+  }
+  .revenue-box .rev-note {
+    font-size: 14px;
+    opacity: 0.7;
+  }
+
+  /* LOGO SHOWCASE */
+  .logo-showcase {
+    background: var(--bg-alt);
+    border-radius: 16px;
+    padding: 36px;
+    text-align: center;
+    margin: 24px 0;
+  }
+  .logo-showcase img {
+    max-width: 180px;
+    border-radius: 12px;
+    margin: 16px 0;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  }
+  .logo-showcase .caption {
+    font-size: 13px;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-top: 8px;
+  }
+
+  /* CTA BOX */
+  .cta-box {
+    text-align: center;
+    border: 2px solid var(--accent);
+    border-radius: 16px;
+    padding: 40px 32px;
+    margin: 32px 0;
+  }
+  .cta-box .cta-heading {
+    font-family: var(--font-head);
+    font-size: clamp(20px, 3vw, 28px);
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 8px;
+    line-height: 1.2;
+  }
+  .cta-box .cta-heading em {
+    font-family: var(--font-accent);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--accent);
+  }
+  .cta-box .cta-sub {
+    color: var(--text-muted);
+    margin-bottom: 0;
+  }
+
+  /* DIVIDER */
+  .divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 56px 0;
+  }
+
+  /* FOOTER */
+  .footer {
+    background: var(--bg);
+    text-align: center;
+    padding: 32px 48px;
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 13px;
+  }
+  .footer a { color: var(--accent); text-decoration: none; }
+
+  /* RESPONSIVE */
+  @media (max-width: 640px) {
+    .hero { padding: 40px 20px 60px; }
+    .hero-logo { width: 200px; }
+    .hero h1 { font-size: 32px; }
+    .hero .accent-word { font-size: 32px; }
+    .container { padding: 0 20px; }
+    .meta-bar { flex-direction: column; gap: 8px; }
+    .compare-grid { grid-template-columns: 1fr; }
+    .bar-row .bar-label { width: 100px; font-size: 11px; }
+    .score-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+
+<style>
+  .review-quote {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 24px 28px;
+    margin: 16px 0;
+    border: 1px solid var(--border-light);
+    position: relative;
+  }
+  .review-quote::before {
+    content: '“';
+    font-family: var(--font-accent);
+    font-size: 48px;
+    color: var(--accent);
+    opacity: 0.3;
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    line-height: 1;
+  }
+  .review-quote p {
+    font-style: italic;
+    color: var(--text-sec);
+    margin-bottom: 8px;
+    padding-left: 20px;
+  }
+  .review-quote .attribution {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-weight: 600;
+    padding-left: 20px;
+  }
+  .icon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin: 24px 0;
+  }
+  .icon-card {
+    background: var(--white);
+    border: 1px solid var(--border-light);
+    border-radius: 16px;
+    padding: 24px 20px;
+    text-align: center;
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+  .icon-card:hover {
+    box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+    transform: translateY(-2px);
+  }
+  .icon-card .icon-emoji { font-size: 32px; margin-bottom: 12px; }
+  .icon-card h4 {
+    font-family: var(--font-head);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .icon-card p { font-size: 13px; color: var(--text-sec); margin-bottom: 0; }
+  .page-header .client-name {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    color: #2C3340;
+  }
+</style>
+</head>
+<body>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="page-header-inner">
+    <img class="aspire-logo" src="/assets/aspire-logo.svg" alt="Aspire Digital">
+    <div class="divider"></div>
+    <div class="client-name">The Modern Maid</div>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>THE MODERN MAID</h1>
+  <div class="sub">Your business deserves a website that</div>
+  <div class="accent-word">shines.</div>
+  <div class="body-text">
+    Twenty-two years of trust, eco-friendly values, and community heart &mdash; your online presence should reflect the care you bring to every home you clean.
+  </div>
+</div>
+
+<!-- ARC DIVIDER -->
+<div class="hero-arc">
+  <svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,120 C480,0 960,0 1440,120 L1440,120 L0,120 Z" fill="#FAF0E2"/>
+  </svg>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+
+  <div class="meta-bar">
+    <span><strong>Prepared for:</strong> Amanda Owens, The Modern Maid</span>
+    <span><strong>Date:</strong> March 26, 2026</span>
+    <span><strong>By:</strong> <a href="https://madebyaspire.com" target="_blank">madebyaspire.com</a></span>
+    <span><strong>Confidential</strong></span>
+  </div>
+
+  <!-- 01: THE HONEST PICTURE -->
+  <section>
+    <h2><span class="number">01</span>The Honest Picture</h2>
+
+    <p>The Modern Maid isn't just a cleaning service &mdash; it's a Delaware, Ohio institution. <strong>Amanda Owens founded this company in 2003, starting with nothing more than determination and a trunk full of supplies.</strong> More than two decades later, The Modern Maid operates out of a dedicated office on historic Winter Street, employs a team of vetted professionals, and has earned the kind of reputation that money can't buy.</p>
+
+    <p>What sets The Modern Maid apart from the franchises and fly-by-night operators in the Delaware County market is <strong>authenticity</strong>. Amanda built this business on old-fashioned values learned from her parents and grandparents &mdash; the same parents she lost to cancer in 2005 and 2011. That personal loss drove her to partner with <strong>Cleaning for a Reason</strong>, donating free non-toxic cleaning to two cancer patient homes every month. That's not a marketing play. That's character.</p>
+
+    <p>The numbers back up the reputation. With <strong>407 reviews and a 4.9-star rating</strong> across platforms, The Modern Maid consistently ranks among the top cleaning services in Delaware County. Customers rave about the team's attention to detail, their eco-friendly Norwex products, and a personal touch that makes clients feel like family &mdash; not just another account number. Multiple Reader's Choice Awards confirm what the reviews already show.</p>
+
+    <p>And then there's the innovation. While most cleaning companies stick to the basics, The Modern Maid recently launched an <strong>Elder Check-In &amp; Companionship Service</strong> &mdash; blending light housework with genuine human connection for seniors. That kind of forward thinking shows a business owner who's paying attention to what her community actually needs.</p>
+
+    <div class="score-grid">
+      <div class="score-card">
+        <div class="label">Years in Business</div>
+        <div class="value">22+</div>
+        <div class="note">Founded 2003</div>
+      </div>
+      <div class="score-card">
+        <div class="label">Review Rating</div>
+        <div class="value">4.9</div>
+        <div class="note">407 reviews</div>
+      </div>
+      <div class="score-card">
+        <div class="label">Facebook</div>
+        <div class="value">100%</div>
+        <div class="note">Recommend rate</div>
+      </div>
+      <div class="score-card">
+        <div class="label">Service Lines</div>
+        <div class="value">7</div>
+        <div class="note">Incl. companionship</div>
+      </div>
+    </div>
+
+    <div class="review-quote">
+      <p>The Modern Maid offers customizable cleaning plans and a la carte options. The glass patio door was so clean that I thought it was open!!! They were extremely nice and pet friendly, thorough and easy to work with!</p>
+      <div class="attribution">&mdash; Verified Customer, BirdEye</div>
+    </div>
+
+    <div class="review-quote">
+      <p>I appreciate Amanda and her crew squeezing me in at the last minute when my other cleaner canceled the day before my whole family was coming from England for my wedding! Amanda personally handled a detail and even sent me a gift card for our wedding!</p>
+      <div class="attribution">&mdash; Verified Customer, BirdEye</div>
+    </div>
+
+    <div class="review-quote">
+      <p>WOW are we impressed (and we are picky)! The team not only did a thorough job, they were also friendly and fun. Most importantly they use environmentally safe cleaning products. Insured and bonded, trustworthy and give you peace of mind.</p>
+      <div class="attribution">&mdash; Verified Customer, BirdEye</div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- 02: YOUR SCORECARD -->
+  <section>
+    <h2><span class="number">02</span>Your Digital <em>Scorecard</em></h2>
+
+    <p>Your reputation is outstanding. Your digital presence? It's doing the job, but it's not doing <em>you</em> justice. Here's an honest look at where your online presence stands today &mdash; what's working, what's holding you back, and where the easy wins are hiding.</p>
+
+    <h3>The Overview</h3>
+
+    <div class="bar-chart">
+      <div class="bar-row">
+        <div class="bar-label">Reputation</div>
+        <div class="bar-track"><div class="bar-fill" style="width:96%;background:var(--green)"></div></div>
+        <div class="bar-val">A+</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">Website Design</div>
+        <div class="bar-track"><div class="bar-fill" style="width:55%;background:#b8860b"></div></div>
+        <div class="bar-val">C+</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">SEO</div>
+        <div class="bar-track"><div class="bar-fill" style="width:45%;background:#b8860b"></div></div>
+        <div class="bar-val">C</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">Mobile Experience</div>
+        <div class="bar-track"><div class="bar-fill" style="width:50%;background:#b8860b"></div></div>
+        <div class="bar-val">C+</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">Content Depth</div>
+        <div class="bar-track"><div class="bar-fill" style="width:60%;background:#b8860b"></div></div>
+        <div class="bar-val">B-</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">Social Media</div>
+        <div class="bar-track"><div class="bar-fill" style="width:55%;background:#b8860b"></div></div>
+        <div class="bar-val">C+</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">Online Booking</div>
+        <div class="bar-track"><div class="bar-fill" style="width:20%;background:#c44"></div></div>
+        <div class="bar-val">D</div>
+      </div>
+    </div>
+
+    <h3>What's Working</h3>
+    <ul>
+      <li><strong>SSL certificate active</strong> (Let's Encrypt wildcard) &mdash; secure browsing for visitors</li>
+      <li><strong>Basic schema markup present</strong> &mdash; Organization, WebSite, and WebPage types detected</li>
+      <li><strong>Clear service pages</strong> &mdash; each service has its own dedicated page with detailed descriptions</li>
+      <li><strong>Blog section exists</strong> ("The Modern Maid Diaries") &mdash; shows content intent</li>
+      <li><strong>Domain maturity</strong> &mdash; registered since 2011 on GoDaddy, secured through 2031</li>
+      <li><strong>Contact info visible</strong> &mdash; phone number and address on homepage</li>
+    </ul>
+
+    <h3>Where the Gaps Are</h3>
+    <ul>
+      <li><strong>Joomla CMS with YOOtheme template</strong> &mdash; functional but aging technology. Joomla's market share has declined significantly, making it harder to find developers, plugins, and security updates compared to modern alternatives</li>
+      <li><strong>No online booking or quote request system</strong> &mdash; visitors must call or submit a basic form. In 2026, most cleaning service customers expect instant scheduling</li>
+      <li><strong>Page title is just "Home"</strong> &mdash; a critical SEO miss. Should be something like "The Modern Maid | Professional Eco-Friendly Cleaning in Delaware, OH"</li>
+      <li><strong>No visible pricing or estimate ranges</strong> &mdash; potential customers leave to compare competitors before ever calling</li>
+      <li><strong>Blog appears light on content</strong> &mdash; "The Modern Maid Diaries" has the right idea but needs consistent, keyword-rich posts</li>
+      <li><strong>No Instagram presence found</strong> &mdash; before/after cleaning transformations are social media gold, especially on Instagram</li>
+      <li><strong>No LocalBusiness schema</strong> &mdash; the site has basic Organization schema but lacks the specific LocalBusiness markup that helps Google understand your service area, hours, and services</li>
+      <li><strong>Minor copy errors on service pages</strong> &mdash; "engloying" instead of "enjoying," "withing" instead of "within" on the Elder Companionship page</li>
+    </ul>
+
+    <div class="callout">
+      <strong>PageSpeed data unavailable</strong> &mdash; our testing API quota was reached during analysis. However, Joomla sites with the YOOtheme template typically score in the 40&ndash;60 range on mobile performance. We can run a fresh test during a follow-up conversation to get your exact numbers.
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- 03: HOW YOU STACK UP -->
+  <section>
+    <h2><span class="number">03</span>How You <em>Stack Up</em></h2>
+
+    <p>Delaware, Ohio is a growing market. With Columbus suburbs expanding north, the demand for quality home services is rising &mdash; and so is competition. Here's how The Modern Maid compares to the other names showing up in local search results.</p>
+
+    <h3>Local Competitor Snapshot</h3>
+
+    <div class="compare-grid">
+      <div class="compare-card you">
+        <div class="comp-name">The Modern Maid (You)</div>
+        <div class="comp-stat"><span class="stat-label">Reviews</span><span class="stat-val good">407 (4.9 stars)</span></div>
+        <div class="comp-stat"><span class="stat-label">Website</span><span class="stat-val mid">Joomla/YOOtheme</span></div>
+        <div class="comp-stat"><span class="stat-label">Online Booking</span><span class="stat-val low">No</span></div>
+        <div class="comp-stat"><span class="stat-label">Facebook</span><span class="stat-val good">Active (100% rec.)</span></div>
+        <div class="comp-stat"><span class="stat-label">Unique Edge</span><span class="stat-val good">Eco + Companion</span></div>
+      </div>
+      <div class="compare-card">
+        <div class="comp-name">You've Got Maids</div>
+        <div class="comp-stat"><span class="stat-label">Reviews</span><span class="stat-val mid">Franchise-level</span></div>
+        <div class="comp-stat"><span class="stat-label">Website</span><span class="stat-val good">Modern/branded</span></div>
+        <div class="comp-stat"><span class="stat-label">Online Booking</span><span class="stat-val good">Yes</span></div>
+        <div class="comp-stat"><span class="stat-label">Facebook</span><span class="stat-val mid">Corporate page</span></div>
+        <div class="comp-stat"><span class="stat-label">Unique Edge</span><span class="stat-val mid">52-pt deep clean</span></div>
+      </div>
+      <div class="compare-card">
+        <div class="comp-name">Molly Maid</div>
+        <div class="comp-stat"><span class="stat-label">Reviews</span><span class="stat-val mid">Franchise-level</span></div>
+        <div class="comp-stat"><span class="stat-label">Website</span><span class="stat-val good">Professional</span></div>
+        <div class="comp-stat"><span class="stat-label">Online Booking</span><span class="stat-val good">Yes</span></div>
+        <div class="comp-stat"><span class="stat-label">Facebook</span><span class="stat-val good">National brand</span></div>
+        <div class="comp-stat"><span class="stat-label">Unique Edge</span><span class="stat-val mid">Brand recognition</span></div>
+      </div>
+    </div>
+
+    <h3>What This Means</h3>
+
+    <p>Here's the good news: <strong>you're winning on reputation and authenticity.</strong> No franchise can match 22 years of local trust, 407 organic reviews, and a Cleaning for a Reason partnership that comes from real personal experience. That's your competitive moat.</p>
+
+    <p>The challenge? <strong>The franchises are outpacing you on digital infrastructure.</strong> They have online booking, modern responsive websites, instant quoting tools, and robust local SEO strategies backed by corporate marketing teams. When someone Googles "house cleaning Delaware OH," the franchise sites are engineered to convert. Your site relies on visitors being impressed enough to pick up the phone &mdash; and in 2026, many won't.</p>
+
+    <div class="callout">
+      <strong>The strategic insight:</strong> You don't need to become a franchise. You need to take the trust and authenticity you already have and wrap it in a digital experience that's as professional as your cleaning. A local business with franchise-level digital presence is an unbeatable combination.
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- 04: WHAT PEOPLE ARE SEARCHING FOR -->
+  <section>
+    <h2><span class="number">04</span>What People Are <em>Searching For</em></h2>
+
+    <p>Understanding what your potential customers are typing into Google is the foundation of any digital strategy. Here are the search terms most relevant to The Modern Maid, along with relative demand levels. Delaware, OH sits in the Columbus metro, so you're tapping into both hyper-local and broader metro searches.</p>
+
+    <h3>High-Intent Local Searches</h3>
+
+    <div class="kw-grid">
+      <div class="kw-card"><span class="kw-term">house cleaning Delaware OH</span><span class="kw-vol">High demand</span></div>
+      <div class="kw-card"><span class="kw-term">maid service Delaware Ohio</span><span class="kw-vol">High demand</span></div>
+      <div class="kw-card"><span class="kw-term">cleaning service near me</span><span class="kw-vol">Very high demand</span></div>
+      <div class="kw-card"><span class="kw-term">deep cleaning service Delaware OH</span><span class="kw-vol">Medium demand</span></div>
+      <div class="kw-card"><span class="kw-term">move out cleaning Delaware Ohio</span><span class="kw-vol">Medium demand</span></div>
+      <div class="kw-card"><span class="kw-term">eco-friendly cleaning service Ohio</span><span class="kw-vol">Medium demand</span></div>
+      <div class="kw-card"><span class="kw-term">office cleaning Delaware County</span><span class="kw-vol">Medium demand</span></div>
+      <div class="kw-card"><span class="kw-term">non-toxic house cleaning</span><span class="kw-vol">Growing demand</span></div>
+    </div>
+
+    <h3>Long-Tail Opportunities</h3>
+
+    <div class="kw-grid">
+      <div class="kw-card"><span class="kw-term">house cleaning gift certificate Ohio</span><span class="kw-vol">Low competition</span></div>
+      <div class="kw-card"><span class="kw-term">senior companion services Delaware OH</span><span class="kw-vol">Low competition</span></div>
+      <div class="kw-card"><span class="kw-term">Norwex cleaning service near me</span><span class="kw-vol">Niche</span></div>
+      <div class="kw-card"><span class="kw-term">cleaning service for cancer patients Ohio</span><span class="kw-vol">Low competition</span></div>
+      <div class="kw-card"><span class="kw-term">cleaning before open house Delaware</span><span class="kw-vol">Seasonal</span></div>
+      <div class="kw-card"><span class="kw-term">recurring cleaning service Powell OH</span><span class="kw-vol">Medium demand</span></div>
+    </div>
+
+    <h3>Google "People Also Ask" Opportunities</h3>
+    <ul>
+      <li><strong>"How much does house cleaning cost in Delaware, OH?"</strong> &mdash; Average is ~$21/hr according to Care.com. A pricing guide page could capture this traffic.</li>
+      <li><strong>"What's included in house cleaning services?"</strong> &mdash; Your detailed service pages partially answer this, but they're not optimized for this query.</li>
+      <li><strong>"How to find a house cleaner near me?"</strong> &mdash; Blog content opportunity about what to look for in a cleaning service.</li>
+      <li><strong>"Are eco-friendly cleaning products effective?"</strong> &mdash; Perfect content match for The Modern Maid's Norwex-based approach.</li>
+    </ul>
+
+    <div class="callout">
+      <strong>Content gap analysis:</strong> Your biggest missed opportunity is the Elder Companionship service. There's virtually no competition for "senior companion services Delaware OH" &mdash; you could own that search term with a single well-optimized page and a few supporting blog posts. This is also a service that generates powerful word-of-mouth from adult children searching on behalf of aging parents.
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- 05: THE FUTURE OF SEARCH -->
+  <section>
+    <h2><span class="number">05</span>The Future of <em>Search</em></h2>
+
+    <p>Search is changing fast. Google's AI Overviews, voice assistants, and platforms like ChatGPT are increasingly answering questions directly &mdash; without users ever clicking through to a website. For a local service business, this means the bar for visibility is rising. Here's where The Modern Maid stands in this new landscape.</p>
+
+    <h3>AI Search Readiness</h3>
+
+    <p><strong>AI-powered search engines prioritize businesses with clear, structured, authoritative content.</strong> They pull from Google Business Profiles, schema-marked websites, and consistent NAP (name, address, phone) data across the web. The Modern Maid has some of these pieces in place &mdash; but not enough to consistently appear in AI-generated answers.</p>
+
+    <ul>
+      <li><strong>Schema markup:</strong> Basic Organization and WebSite types present, but <strong>missing LocalBusiness, CleaningService, and FAQ schema</strong> &mdash; the specific types AI search engines look for when answering "cleaning service near me" queries</li>
+      <li><strong>Google Business Profile:</strong> Active presence with strong review count. This is your strongest AI-search asset right now.</li>
+      <li><strong>Content authority:</strong> The blog section exists but lacks the depth and consistency that AI models use to assess expertise. More long-form, helpful content about cleaning topics would strengthen your E-E-A-T signals.</li>
+    </ul>
+
+    <h3>Voice Search</h3>
+
+    <p>When someone asks Alexa or Siri "find a house cleaner near me," the answer comes from Google's local pack, review data, and business profiles. <strong>Your 4.9 rating and 407 reviews position you well here</strong> &mdash; but the lack of specific service-area schema and optimized business categories could mean voice assistants recommend competitors with better-structured data.</p>
+
+    <h3>E-E-A-T Assessment</h3>
+
+    <p>Google's E-E-A-T framework (Experience, Expertise, Authoritativeness, Trustworthiness) matters more than ever:</p>
+
+    <ul>
+      <li><strong>Experience:</strong> 22+ years, real customer stories, community involvement</li>
+      <li><strong>Expertise:</strong> GBAC certification, eco-friendly knowledge, but not prominently featured on the site</li>
+      <li><strong>Authoritativeness:</strong> Cleaning for a Reason partnership and Reader's Choice Awards exist but aren't leveraged as trust badges on the website</li>
+      <li><strong>Trustworthiness:</strong> SSL active, real address, real phone, insured and bonded messaging</li>
+    </ul>
+
+    <div class="callout">
+      <strong>The opportunity:</strong> You have incredible E-E-A-T signals (GBAC certification, cancer charity partnership, 22 years of experience, Reader's Choice Awards). They're just buried. Surfacing these prominently on your homepage and in structured data would immediately boost how AI search engines perceive your authority.
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- 06: HERE'S WHAT WE'D ACTUALLY DO -->
+  <section>
+    <h2><span class="number">06</span>Here's What We'd <em>Actually Do</em></h2>
+
+    <p>This isn't a kitchen sink proposal. These are the specific, high-impact moves we'd prioritize for The Modern Maid &mdash; designed to turn your outstanding real-world reputation into online revenue.</p>
+
+    <div class="opp-grid">
+      <div class="opp-card">
+        <h4>1. Modern, Conversion-Focused Website</h4>
+        <p>Replace the Joomla/YOOtheme site with a fast, mobile-first design that matches the quality of your service. Online booking integration, clear CTAs on every page, before/after galleries, and trust badges (GBAC, Cleaning for a Reason, Reader's Choice) front and center. Your Elder Companionship service gets a dedicated, emotionally compelling landing page.</p>
+        <div class="opp-tags"><span class="tag high">High Impact</span><span class="tag medium">4-6 weeks</span></div>
+      </div>
+      <div class="opp-card">
+        <h4>2. Online Booking &amp; Quote System</h4>
+        <p>Integrate a booking system that lets customers select service type, home size, frequency, and add-ons &mdash; then instantly schedule or request a quote. This alone could increase conversions by 25&ndash;40% based on industry benchmarks. Recurring customers get a simple rebooking flow.</p>
+        <div class="opp-tags"><span class="tag high">High Impact</span><span class="tag easy">Quick Win</span></div>
+      </div>
+      <div class="opp-card">
+        <h4>3. Local SEO Overhaul</h4>
+        <p>Full LocalBusiness and CleaningService schema markup. Optimized title tags and meta descriptions for every page. Google Business Profile audit with service-area refinement for Delaware County, Powell, Westerville, and northern Columbus suburbs. NAP consistency audit across all directories.</p>
+        <div class="opp-tags"><span class="tag high">High Impact</span><span class="tag easy">Quick Win</span></div>
+      </div>
+      <div class="opp-card">
+        <h4>4. Content Strategy</h4>
+        <p>A monthly blog calendar targeting "People Also Ask" queries and long-tail keywords. Topics: cleaning cost guides, eco-friendly cleaning tips, seasonal cleaning checklists, senior care resources. Each post positions Amanda as the go-to expert in Delaware County cleaning. FAQ schema on every relevant page.</p>
+        <div class="opp-tags"><span class="tag mid-impact">Ongoing</span><span class="tag medium">Medium effort</span></div>
+      </div>
+      <div class="opp-card">
+        <h4>5. Instagram Launch &amp; Social Strategy</h4>
+        <p>Before/after cleaning transformations, behind-the-scenes team stories, eco-cleaning tips, and community involvement highlights. Cleaning content performs exceptionally well on Instagram &mdash; satisfying visual transformations drive shares and saves. Cross-post to Facebook for maximum reach.</p>
+        <div class="opp-tags"><span class="tag mid-impact">Medium Impact</span><span class="tag easy">Low Cost</span></div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- 07: HOW THIS WORKS -->
+  <section>
+    <h2><span class="number">07</span>How This <em>Works</em></h2>
+
+    <p>We believe in honest timelines and clear communication. Here's what working with Aspire Digital actually looks like &mdash; no surprises, no scope creep, no disappearing acts.</p>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="week">Week 1</div>
+        <div class="task">Discovery &amp; Strategy</div>
+        <div class="detail">We sit down (virtually or in person) to understand your business goals, ideal customers, and what's working today. We audit your current site, review competitor positioning, and define the project scope. You'll walk away with a clear creative brief.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="week">Week 2</div>
+        <div class="task">Design &amp; Content Architecture</div>
+        <div class="detail">We design the new site structure, wireframes, and visual direction &mdash; inspired by The Modern Maid's warm, professional brand. You'll see mockups before we write a single line of code. We also plan the booking system integration and content calendar.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="week">Weeks 3&ndash;4</div>
+        <div class="task">Build &amp; Integrate</div>
+        <div class="detail">Development begins on a fast, mobile-first site with booking system, SEO foundations, schema markup, and analytics. All content is written to target your highest-value search terms. We keep you in the loop with weekly check-ins.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="week">Week 5</div>
+        <div class="task">Review, Refine &amp; Launch</div>
+        <div class="detail">You review everything. We refine based on your feedback. Once approved, we handle the technical migration &mdash; DNS, redirects, Google Search Console &mdash; so nothing breaks. Launch day is seamless.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="week">Ongoing</div>
+        <div class="task">Growth &amp; Support</div>
+        <div class="detail">Post-launch, we monitor performance, publish monthly blog content, optimize your Google Business Profile, and track booking conversions. You get a monthly report showing real numbers &mdash; not vanity metrics.</div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- 08: BEYOND THE WEBSITE -->
+  <section>
+    <h2><span class="number">08</span>Beyond the <em>Website</em></h2>
+
+    <p>A great website is the foundation, but there's a whole ecosystem of digital tools that could amplify The Modern Maid's reach. Here are the opportunities we see beyond the core site build.</p>
+
+    <div class="icon-grid">
+      <div class="icon-card">
+        <div class="icon-emoji">&#x1F4CD;</div>
+        <h4>Google Business Optimization</h4>
+        <p>Full profile audit &mdash; categories, services, products, Q&amp;A, weekly posts, photo strategy. Your 407 reviews are a goldmine; let's make sure Google's algorithm sees every signal.</p>
+      </div>
+      <div class="icon-card">
+        <div class="icon-emoji">&#x1F4F8;</div>
+        <h4>Instagram Presence</h4>
+        <p>Launch a dedicated Instagram with before/after transformations, cleaning tips, and team spotlights. Cleaning content is hugely popular &mdash; Reels of satisfying cleans routinely get 100K+ views.</p>
+      </div>
+      <div class="icon-card">
+        <div class="icon-emoji">&#x1F4E7;</div>
+        <h4>Email Marketing</h4>
+        <p>Monthly newsletter to existing clients &mdash; seasonal cleaning reminders, referral incentives, new service announcements. The gift certificate program and referral credit are perfect email content.</p>
+      </div>
+      <div class="icon-card">
+        <div class="icon-emoji">&#x1F4C5;</div>
+        <h4>Automated Booking &amp; CRM</h4>
+        <p>Online scheduling, automated confirmations, rebooking reminders for recurring clients, and a simple CRM to track customer preferences and history.</p>
+      </div>
+      <div class="icon-card">
+        <div class="icon-emoji">&#x2B50;</div>
+        <h4>Review Generation System</h4>
+        <p>Automated post-service review requests via text or email. You're already getting great reviews &mdash; a system would increase volume and keep the momentum going.</p>
+      </div>
+      <div class="icon-card">
+        <div class="icon-emoji">&#x1F381;</div>
+        <h4>Gift Certificate Platform</h4>
+        <p>A dedicated gift card page with beautiful design, occasion-based messaging (new baby, birthday, Mother's Day), and instant digital delivery. Currently this service exists but isn't prominently featured.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- 09: WHAT THIS COULD MEAN -->
+  <section>
+    <h2><span class="number">09</span>What This Could <em>Mean</em></h2>
+
+    <p>Let's talk numbers &mdash; conservatively. These projections are based on industry averages for cleaning service businesses that invest in modern websites with online booking, local SEO, and content marketing.</p>
+
+    <div class="revenue-box">
+      <div class="rev-label">Estimated Additional Annual Revenue</div>
+      <div class="rev-amount">$36K&ndash;$72K</div>
+      <div class="rev-note">Conservative estimate based on improved conversion rates and expanded reach</div>
+    </div>
+
+    <h3>How We Get There</h3>
+
+    <ul>
+      <li><strong>Online booking conversion:</strong> Industry data shows that adding online scheduling to a service business website can increase bookings by 25&ndash;40%. If The Modern Maid currently serves around 200 clients, even a 15% increase in new recurring clients could mean 30+ new accounts.</li>
+      <li><strong>Average cleaning client value:</strong> At roughly $150&ndash;250/month for bi-weekly service, each new recurring client represents $1,800&ndash;$3,000 in annual revenue.</li>
+      <li><strong>Local SEO visibility:</strong> Appearing in the local 3-pack for key searches (which proper schema and optimization would target) typically drives a 20&ndash;30% increase in organic traffic for local service businesses.</li>
+      <li><strong>Elder Companionship niche:</strong> This is an untapped market with virtually no digital competition in Delaware County. Even 5&ndash;10 new companionship clients could represent additional steady revenue with strong word-of-mouth potential.</li>
+      <li><strong>Gift certificate sales:</strong> With a prominent, easy-to-use online gift card system, cleaning gift certificates see their highest demand around Mother's Day, holidays, and new homeowner seasons &mdash; conservatively $3,000&ndash;$8,000 annually for a business of your size.</li>
+    </ul>
+
+    <div class="callout">
+      <strong>Important note:</strong> These are conservative ranges, not guarantees. Results depend on market conditions, service capacity, and execution. We use qualifier language ("conservatively," "could mean") because we believe in honest projections. What we <em>can</em> guarantee is that the gap between your real-world reputation and your digital presence is costing you customers right now &mdash; and closing that gap will generate measurable returns.
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- 10: WHY ASPIRE DIGITAL + CTA -->
+  <section>
+    <h2><span class="number">10</span>Why <em>Aspire Digital</em></h2>
+
+    <p>We're not a factory. We don't sell templates with your logo slapped on top. <strong>Aspire Digital builds custom digital experiences for businesses that have earned their reputation the hard way</strong> &mdash; and deserve a website that reflects it.</p>
+
+    <p>We chose to reach out to The Modern Maid because your story resonated with us. A woman-owned business built from a trunk in 2003, surviving and thriving through recessions and pandemics, donating free cleaning to cancer patients because it's personal &mdash; that's the kind of business we want to work with. That's the kind of story that deserves to be told well online.</p>
+
+    <p>Here's what working with us means:</p>
+
+    <ul>
+      <li><strong>You own everything.</strong> Your website, your content, your data. No hostage situations, no proprietary platforms you can't leave.</li>
+      <li><strong>We speak human.</strong> No jargon, no buzzwords. If we recommend something, we'll explain why in plain English.</li>
+      <li><strong>We measure what matters.</strong> Not vanity metrics &mdash; real leads, real bookings, real revenue impact.</li>
+      <li><strong>We're accessible.</strong> You'll have direct access to the people building your site, not a customer service queue.</li>
+    </ul>
+
+    <div class="cta-box">
+      <div class="cta-heading">Let's make your digital presence <em>shine</em> like the homes you clean.</div>
+      <p class="cta-sub">No pressure, no commitment &mdash; just a conversation about what's possible. Reach out at <strong>hello@madebyaspire.com</strong> or visit <a href="https://madebyaspire.com" target="_blank" style="color:var(--accent)">madebyaspire.com</a>.</p>
+    </div>
+  </section>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  Prepared by <strong>Aspire Digital</strong> &middot; <a href="https://madebyaspire.com">madebyaspire.com</a> &middot; Confidential
+</div>
+
+</body>
+</html>
