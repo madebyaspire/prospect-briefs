@@ -1,0 +1,8 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#FAF0E2"/>
+  <rect x="0" y="0" width="1200" height="8" fill="#C4622D"/>
+  <text x="600" y="260" text-anchor="middle" font-family="Montserrat,system-ui,sans-serif" font-weight="800" font-size="48" fill="#2C3340">YOUR DIGITAL</text>
+  <text x="600" y="330" text-anchor="middle" font-family="Playfair Display,Georgia,serif" font-style="italic" font-size="56" fill="#C4622D">Growth Opportunity</text>
+  <text x="600" y="420" text-anchor="middle" font-family="DM Sans,system-ui,sans-serif" font-size="24" fill="#666666">A personalized review by Aspire Digital</text>
+  <text x="600" y="560" text-anchor="middle" font-family="Montserrat,system-ui,sans-serif" font-weight="600" font-size="18" fill="#8FAF8A">madebyaspire.com</text>
+</svg>

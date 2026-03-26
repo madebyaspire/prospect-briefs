@@ -4,6 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{BUSINESS_NAME} — Digital Growth Brief | Aspire Digital</title>
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<!-- Open Graph / iMessage / SMS preview -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="{BUSINESS_NAME} — Your Digital Growth Opportunity">
+<meta property="og:description" content="We took a deep look at {BUSINESS_NAME}'s online presence and found some exciting opportunities. Here's what we found.">
+<meta property="og:image" content="https://yoursite.madebyaspire.com/assets/og-preview.png">
+<meta property="og:url" content="https://yoursite.madebyaspire.com/{CLIENT_SLUG}/welcome/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{BUSINESS_NAME} — Your Digital Growth Opportunity">
+<meta name="twitter:description" content="A personalized digital review prepared by Aspire Digital.">
+<meta name="twitter:image" content="https://yoursite.madebyaspire.com/assets/og-preview.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
@@ -52,22 +63,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 32px;
   }
   .page-header .aspire-logo {
     width: 200px;
     height: auto;
-  }
-  .page-header .divider {
-    width: 1px;
-    height: 48px;
-    background: var(--border);
-    margin: 0;
-  }
-  .page-header .tees-logo {
-    height: 70px;
-    width: auto;
-    border-radius: 8px;
   }
 
   /* HERO */
@@ -572,11 +571,7 @@
 <!-- PAGE HEADER -->
 <div class="page-header">
   <div class="page-header-inner">
-    <!-- Aspire Digital Logo -->
     <img class="aspire-logo" src="/assets/aspire-logo.svg" alt="Aspire Digital">
-    <div class="divider"></div>
-    <!-- Replace with client logo <img> or styled text -->
-    <div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:22px;color:#2C3340">{BUSINESS_NAME}</div>
   </div>
 </div>
 
@@ -601,10 +596,10 @@
 <div class="container">
 
   <div class="meta-bar">
-    <span><strong>Prepared for:</strong> {OWNER_NAME}, {BUSINESS_NAME}</span>
+    <!-- CONDITIONAL: Only include this span if a contact name was provided in the request -->
+    <!-- {IF_CONTACT_NAME}<span><strong>Prepared for:</strong> {CONTACT_NAME}, {BUSINESS_NAME}</span>{/IF_CONTACT_NAME} -->
     <span><strong>Date:</strong> {DATE}</span>
     <span><strong>By:</strong> <a href="https://madebyaspire.com" target="_blank">madebyaspire.com</a></span>
-    <span><strong>Confidential</strong></span>
   </div>
 
   <!-- 01: THE HONEST PICTURE -->
@@ -680,7 +675,9 @@
 
 <!-- FOOTER -->
 <div class="footer">
-  Prepared by <strong>Aspire Digital</strong> · <a href="https://madebyaspire.com">madebyaspire.com</a> · Confidential
+  <p>Prepared by <strong>Aspire Digital</strong> · <a href="https://madebyaspire.com">madebyaspire.com</a></p>
+  <p style="margin-top:8px">Questions? Reach out to <a href="mailto:{REQUESTER_EMAIL}">{REQUESTER_NAME}</a> · <a href="mailto:{REQUESTER_EMAIL}">{REQUESTER_EMAIL}</a></p>
+  <p style="margin-top:12px;font-size:11px;color:var(--text-muted)">© 2026 Aspire Digital · This brief was prepared exclusively for {BUSINESS_NAME}</p>
 </div>
 
 </body>
