@@ -9,12 +9,12 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="{BUSINESS_NAME} — Your Digital Growth Opportunity">
 <meta property="og:description" content="We took a deep look at {BUSINESS_NAME}'s online presence and found some exciting opportunities. Here's what we found.">
-<meta property="og:image" content="https://yoursite.madebyaspire.com/assets/og-preview.png">
+<meta property="og:image" content="https://yoursite.madebyaspire.com/{CLIENT_SLUG}/welcome/og-card.png">
 <meta property="og:url" content="https://yoursite.madebyaspire.com/{CLIENT_SLUG}/welcome/">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{BUSINESS_NAME} — Your Digital Growth Opportunity">
 <meta name="twitter:description" content="A personalized digital review prepared by Aspire Digital.">
-<meta name="twitter:image" content="https://yoursite.madebyaspire.com/assets/og-preview.png">
+<meta name="twitter:image" content="https://yoursite.madebyaspire.com/{CLIENT_SLUG}/welcome/og-card.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
@@ -531,7 +531,43 @@
   }
   .cta-box .cta-sub {
     color: var(--text-muted);
+    margin-bottom: 24px;
+  }
+  .cta-button {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--white);
+    padding: 16px 40px;
+    border-radius: 9999px;
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+  }
+  .cta-button:hover {
+    background: var(--accent-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(196,98,45,0.3);
+  }
+  .cta-or {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: 16px;
     margin-bottom: 0;
+  }
+  .cta-or a { color: var(--accent); text-decoration: none; }
+
+  /* SCREENSHOT FRAME */
+  .screenshot-frame {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 8px;
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    margin: 16px 0;
+    overflow: hidden;
   }
 
   /* DIVIDER */
@@ -611,7 +647,17 @@
   <!-- 02: YOUR SCORECARD -->
   <section>
     <h2><span class="number">02</span>Your Digital <em>Scorecard</em></h2>
-    <!-- Use .scorecard grid with .score-card items. Classes: .good, .ok, .gap -->
+
+    <!-- CURRENT SITE SCREENSHOT — Paris captures this with agent-browser during research -->
+    <div class="site-screenshot">
+      <h3>Your Current Website</h3>
+      <div class="screenshot-frame">
+        <img src="./{CLIENT_SLUG}-screenshot.png" alt="{BUSINESS_NAME} current website" style="width:100%;border-radius:8px;border:1px solid var(--border)">
+      </div>
+      <p class="screenshot-caption" style="text-align:center;font-size:12px;color:var(--text-muted);margin-top:8px">Captured {DATE}</p>
+    </div>
+
+    <!-- Use .score-grid with .score-card items -->
     <!-- Then h3 "What's Working" and h3 "Where the Gaps Are" with bullet lists -->
   </section>
 
@@ -668,6 +714,8 @@
     <div class="cta-box">
       <div class="cta-heading">{PERSONALIZED_CTA_HEADING}</div>
       <p class="cta-sub">{PERSONALIZED_CTA_BODY}</p>
+      <a href="{BOOKING_LINK}" class="cta-button" target="_blank">Book a Free Strategy Call</a>
+      <p class="cta-or">or email <a href="mailto:{REQUESTER_EMAIL}">{REQUESTER_NAME}</a> directly</p>
     </div>
   </section>
 
