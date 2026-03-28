@@ -864,8 +864,95 @@
   <!-- 05: THE FUTURE OF SEARCH -->
   <section>
     <h2><span class="number">05</span>The Future of <em>Search</em></h2>
-    <!-- AI search readiness, voice search, E-E-A-T assessment -->
-    <!-- h3 "What AI Search Looks For" and h3 "What's Missing" -->
+
+    <p>Search is no longer just a list of blue links. AI-powered search engines — ChatGPT, Google's AI Overviews, Perplexity, Microsoft Copilot — are fundamentally changing how B2B buyers find and evaluate service providers. For a technology advisory firm like Tellaire, this shift isn't just relevant; it's existential. The firms that AI search engines recommend will capture an outsized share of high-intent inquiries. The firms they can't parse won't be mentioned at all.</p>
+
+    <h3>What AI Search Looks For</h3>
+
+    <p>AI search engines don't rank pages — they synthesize answers from sources they trust. To be included in those synthesized answers, a site needs to signal expertise, authority, and trustworthiness in ways that machines can parse. Here's what matters:</p>
+
+    <div class="score-grid">
+      <div class="score-card">
+        <div class="label">E-E-A-T (Experience)</div>
+        <div class="value" style="color:var(--green)">B+</div>
+        <div class="note">Blog shows real practitioner experience; case studies cite real engagements</div>
+      </div>
+      <div class="score-card">
+        <div class="label">E-E-A-T (Expertise)</div>
+        <div class="value" style="color:var(--green)">A-</div>
+        <div class="note">Deep technical content on AI governance, architecture, AIOps</div>
+      </div>
+      <div class="score-card">
+        <div class="label">E-E-A-T (Authority)</div>
+        <div class="value" style="color:var(--accent)">C</div>
+        <div class="note">No backlink profile, no Clutch reviews, no industry citations</div>
+      </div>
+      <div class="score-card">
+        <div class="label">E-E-A-T (Trust)</div>
+        <div class="value" style="color:var(--accent)">C+</div>
+        <div class="note">No About page, no team bios, WordPress.com hosting undermines credibility</div>
+      </div>
+      <div class="score-card">
+        <div class="label">Schema Markup</div>
+        <div class="value" style="color:var(--accent-dark)">F</div>
+        <div class="note">No structured data detected — invisible to rich results</div>
+      </div>
+      <div class="score-card">
+        <div class="label">AI Citation Readiness</div>
+        <div class="value" style="color:var(--accent)">D+</div>
+        <div class="note">Great content, but poorly structured for AI extraction</div>
+      </div>
+    </div>
+
+    <h3>How AI Search Engines Would Handle Tellaire Today</h3>
+
+    <p>If a CTO asks ChatGPT or Perplexity "Who are good AI consulting firms for mid-market companies?", Tellaire is unlikely to appear. Here's why:</p>
+
+    <ul>
+      <li><strong>No structured data means no machine-readable identity.</strong> AI search engines use schema markup (Organization, ProfessionalService, Article) to understand what a business does, who runs it, and what it offers. Tellaire has none. The site is readable by humans but essentially invisible to machines trying to categorize and cite it</li>
+      <li><strong>WordPress.com limits crawlability.</strong> Free/premium WordPress.com sites have restricted robots.txt control and limited ability to implement custom schema, JSON-LD, or canonical URL strategies. AI crawlers may deprioritize or skip content they can't fully parse</li>
+      <li><strong>No author authority signals.</strong> Blog posts are attributed to "jooserklee" with no linked bio, no LinkedIn profile, no credentials page. AI engines increasingly weight authorship signals — who wrote this, what's their background, are they cited elsewhere? Without these signals, even excellent content gets treated as generic</li>
+      <li><strong>The AIX framework isn't extractable.</strong> Tellaire's AI Execution Framework (Scan → Pilot → Scale) is the kind of proprietary methodology that AI engines love to cite — it's structured, actionable, and original. But it's buried inside a service page with no dedicated URL, no schema markup, and no FAQ structure. An AI engine can't cite what it can't cleanly extract</li>
+    </ul>
+
+    <h3>What's Missing — And What Would Fix It</h3>
+
+    <div class="opp-grid">
+      <div class="opp-card">
+        <h4>Schema Markup Implementation</h4>
+        <p>Add Organization, ProfessionalService, Article, FAQ, and Person schema across the site. This tells AI engines exactly what Tellaire does, who the team is, what services are offered, and how to cite each piece of content. This is the single highest-leverage technical change for AI search visibility.</p>
+        <div class="opp-tags">
+          <span class="tag high">Critical for AI Search</span>
+        </div>
+      </div>
+      <div class="opp-card">
+        <h4>Author Entity Building</h4>
+        <p>Create a detailed author page with credentials, experience, LinkedIn link, conference appearances, and published works. Link every blog post to this author entity. AI engines use author reputation as a ranking signal — an established author entity makes every piece of content more citable.</p>
+        <div class="opp-tags">
+          <span class="tag high">High Impact</span>
+        </div>
+      </div>
+      <div class="opp-card">
+        <h4>FAQ + How-To Structured Content</h4>
+        <p>Restructure key blog posts and service pages with FAQ schema. Questions like "What does an AI strategy engagement cost?", "How long does an AI pilot take?", and "What's the difference between AI consulting and AI implementation?" are exactly what AI search engines surface as direct answers.</p>
+        <div class="opp-tags">
+          <span class="tag mid-impact">Medium Impact</span>
+          <span class="tag easy">Quick Win</span>
+        </div>
+      </div>
+      <div class="opp-card">
+        <h4>Voice Search Optimization</h4>
+        <p>Voice queries are conversational: "Who can help my company implement AI?" rather than "AI consulting firm Ohio." Tellaire's blog content is already conversational in tone — but it needs to be structured with question-and-answer patterns, featured snippet formatting, and concise summary paragraphs that voice assistants can read aloud.</p>
+        <div class="opp-tags">
+          <span class="tag mid-impact">Medium Impact</span>
+          <span class="tag medium">Ongoing</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout">
+      <strong>The opportunity is timing.</strong> Most B2B consultancies haven't optimized for AI search yet — they're still thinking in terms of traditional SEO. Tellaire has a narrow window to be among the first technology advisory firms that AI engines can cleanly parse, cite, and recommend. The content already exists. The structure just needs to catch up.
+    </div>
   </section>
 
   <section>
