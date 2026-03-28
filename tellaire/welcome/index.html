@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tellaire — Digital Growth Brief | Aspire Digital</title>
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<!-- Open Graph / iMessage / SMS preview -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Tellaire — Your Digital Growth Opportunity">
+<meta property="og:description" content="We took a deep look at Tellaire's online presence and found some exciting opportunities. Here's what we found.">
+<meta property="og:image" content="https://yoursite.madebyaspire.com/tellaire/welcome/og-card.png">
+<meta property="og:url" content="https://yoursite.madebyaspire.com/tellaire/welcome/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tellaire — Your Digital Growth Opportunity">
+<meta name="twitter:description" content="A personalized digital review prepared by Aspire Digital.">
+<meta name="twitter:image" content="https://yoursite.madebyaspire.com/tellaire/welcome/og-card.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FAF0E2;
+    --bg-alt: #F2EDE6;
+    --text: #2C3340;
+    --text-sec: #666666;
+    --text-muted: #999999;
+    --accent: #C4622D;
+    --accent-dark: #B53D00;
+    --border: #E5E5E5;
+    --border-light: #F0F0F0;
+    --green: #4a7b5a;
+    --hero-green: #8FAF8A;
+    --white: #ffffff;
+    --font: 'DM Sans', system-ui, -apple-system, sans-serif;
+    --font-head: 'Montserrat', system-ui, sans-serif;
+    --font-accent: 'Playfair Display', Georgia, serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 15px;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection { background: var(--accent); color: #fff; }
+
+  /* PAGE HEADER */
+  .page-header {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 48px;
+  }
+  .page-header-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .page-header .aspire-logo {
+    width: 200px;
+    height: auto;
+  }
+
+  /* HERO */
+  .hero {
+    background: var(--hero-green);
+    text-align: center;
+    padding: 60px 48px 80px;
+    position: relative;
+  }
+  .hero h1 {
+    font-family: var(--font-head);
+    font-weight: 800;
+    font-size: clamp(36px, 6vw, 56px);
+    color: var(--accent);
+    line-height: 1.08;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+  }
+  .hero .sub {
+    font-family: var(--font-head);
+    font-weight: 600;
+    font-size: clamp(18px, 3vw, 24px);
+    color: #2C3340;
+    margin-bottom: 4px;
+    letter-spacing: -0.01em;
+  }
+  .hero .accent-word {
+    font-family: var(--font-accent);
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(36px, 6vw, 56px);
+    color: var(--white);
+    line-height: 1.08;
+  }
+  .hero .body-text {
+    color: var(--white);
+    font-size: 17px;
+    max-width: 540px;
+    margin: 28px auto 0;
+    line-height: 1.7;
+  }
+
+  /* ARC DIVIDER — matches AD site */
+  .hero-arc {
+    margin-top: -1px;
+    background: var(--hero-green);
+  }
+  .hero-arc svg {
+    display: block;
+    width: 100%;
+    height: 80px;
+  }
+
+  /* CONTAINER */
+  .container {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  /* META BAR */
+  .meta-bar {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 32px 0 20px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 56px;
+    font-size: 13px;
+    color: var(--text-muted);
+    letter-spacing: 0.3px;
+  }
+  .meta-bar strong { color: var(--text); font-weight: 600; }
+  .meta-bar a { color: var(--accent); text-decoration: none; }
+
+  /* SECTIONS */
+  section { margin-bottom: 64px; }
+
+  h2 {
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: clamp(24px, 3.5vw, 32px);
+    color: var(--text);
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+  }
+  h2 .number {
+    font-family: var(--font);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+  }
+  h2 em {
+    font-family: var(--font-accent);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--accent);
+  }
+
+  h3 {
+    font-family: var(--font-head);
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin: 32px 0 12px;
+  }
+
+  p { margin-bottom: 16px; color: var(--text-sec); }
+  p strong { color: var(--text); }
+  ul { margin: 0 0 16px 20px; }
+  li { margin-bottom: 6px; color: var(--text-sec); }
+  li strong { color: var(--text); }
+
+  .paw { font-size: 0.85em; }
+
+  /* CALLOUT */
+  .callout {
+    background: var(--bg-alt);
+    border-left: 3px solid var(--accent);
+    padding: 20px 24px;
+    margin: 24px 0;
+    font-size: 0.9rem;
+    border-radius: 0 12px 12px 0;
+    color: var(--text-sec);
+  }
+  .callout strong { color: var(--text); }
+
+  /* PILL TAGS */
+  .tag {
+    display: inline-block;
+    padding: 4px 14px;
+    border-radius: 9999px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .tag.easy { background: #e8f5e9; color: #2e7d32; }
+  .tag.medium { background: #fff3e0; color: #e65100; }
+  .tag.high { background: var(--accent); color: white; }
+  .tag.mid-impact { background: #e3f2fd; color: #1565c0; }
+
+  /* SCORE CARDS */
+  .score-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 16px;
+    margin: 24px 0;
+  }
+  .score-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 24px 16px;
+    text-align: center;
+    border: 1px solid var(--border-light);
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+  .score-card:hover {
+    box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+    transform: translateY(-2px);
+  }
+  .score-card .label {
+    font-family: var(--font-head);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+  }
+  .score-card .value {
+    font-family: var(--font-head);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent);
+  }
+  .score-card .note {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 4px;
+  }
+
+  /* BAR CHART */
+  .bar-chart { margin: 24px 0; }
+  .bar-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  .bar-row .bar-label {
+    width: 160px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text);
+    flex-shrink: 0;
+  }
+  .bar-row .bar-track {
+    flex: 1;
+    height: 28px;
+    background: var(--bg-alt);
+    border-radius: 14px;
+    overflow: hidden;
+    margin: 0 12px;
+  }
+  .bar-row .bar-fill {
+    height: 100%;
+    border-radius: 14px;
+  }
+  .bar-row .bar-val {
+    width: 40px;
+    font-family: var(--font-head);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-align: right;
+  }
+
+  /* COMPARE CARDS */
+  .compare-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin: 24px 0;
+  }
+  .compare-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 24px 20px;
+    border: 1px solid var(--border-light);
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+  .compare-card:hover {
+    box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+    transform: translateY(-2px);
+  }
+  .compare-card.you {
+    border: 2px solid var(--accent);
+    background: #FFF9F5;
+  }
+  .compare-card .comp-name {
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--text);
+    margin-bottom: 14px;
+  }
+  .compare-card .comp-stat {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    padding: 5px 0;
+    border-bottom: 1px solid var(--border-light);
+  }
+  .compare-card .comp-stat:last-child { border-bottom: none; }
+  .compare-card .comp-stat .stat-label { color: var(--text-muted); }
+  .compare-card .comp-stat .stat-val { font-weight: 600; }
+  .stat-val.good { color: var(--green); }
+  .stat-val.mid { color: #b8860b; }
+  .stat-val.low { color: #c44; }
+
+  /* KEYWORD CARDS */
+  .kw-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 10px;
+    margin: 24px 0;
+  }
+  .kw-card {
+    background: var(--white);
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    padding: 14px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: box-shadow 0.3s;
+  }
+  .kw-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.05); }
+  .kw-card .kw-term {
+    font-weight: 500;
+    font-size: 13px;
+    color: var(--text);
+  }
+  .kw-card .kw-vol {
+    font-size: 11px;
+    color: var(--text-muted);
+    white-space: nowrap;
+    margin-left: 12px;
+  }
+  .kw-card .kw-vol strong {
+    font-family: var(--font-head);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--accent);
+  }
+
+  /* TIMELINE */
+  .timeline {
+    position: relative;
+    margin: 24px 0;
+    padding-left: 36px;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    bottom: 8px;
+    width: 2px;
+    background: var(--border);
+  }
+  .timeline-item {
+    position: relative;
+    margin-bottom: 32px;
+  }
+  .timeline-item:last-child { margin-bottom: 0; }
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -32px;
+    top: 6px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 3px solid var(--bg);
+    box-shadow: 0 0 0 2px var(--accent);
+  }
+  .timeline-item .week {
+    font-family: var(--font-head);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 4px;
+  }
+  .timeline-item .task {
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--text);
+    margin-bottom: 4px;
+    line-height: 1.3;
+  }
+  .timeline-item .detail {
+    font-size: 14px;
+    color: var(--text-sec);
+    line-height: 1.65;
+  }
+
+  /* OPPORTUNITY CARDS */
+  .opp-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    margin: 24px 0;
+  }
+  .opp-card {
+    background: var(--white);
+    border: 1px solid var(--border-light);
+    border-radius: 16px;
+    padding: 28px 24px;
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+  .opp-card:hover {
+    box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+    transform: translateY(-2px);
+  }
+  .opp-card h4 {
+    font-family: var(--font-head);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 8px;
+  }
+  .opp-card p { font-size: 13px; color: var(--text-sec); margin-bottom: 14px; }
+  .opp-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+
+  /* REVENUE BOX */
+  .revenue-box {
+    background: var(--green);
+    color: white;
+    border-radius: 16px;
+    padding: 48px 40px;
+    text-align: center;
+    margin: 32px 0;
+  }
+  .revenue-box .rev-label {
+    font-family: var(--font-head);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    opacity: 0.7;
+    margin-bottom: 8px;
+  }
+  .revenue-box .rev-amount {
+    font-family: var(--font-head);
+    font-size: clamp(40px, 8vw, 56px);
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 8px;
+    letter-spacing: -0.02em;
+  }
+  .revenue-box .rev-note {
+    font-size: 14px;
+    opacity: 0.7;
+  }
+
+  /* LOGO SHOWCASE */
+  .logo-showcase {
+    background: var(--bg-alt);
+    border-radius: 16px;
+    padding: 36px;
+    text-align: center;
+    margin: 24px 0;
+  }
+  .logo-showcase img {
+    max-width: 180px;
+    border-radius: 12px;
+    margin: 16px 0;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  }
+  .logo-showcase .caption {
+    font-size: 13px;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-top: 8px;
+  }
+
+  /* CTA BOX */
+  .cta-box {
+    text-align: center;
+    border: 2px solid var(--accent);
+    border-radius: 16px;
+    padding: 40px 32px;
+    margin: 32px 0;
+  }
+  .cta-box .cta-heading {
+    font-family: var(--font-head);
+    font-size: clamp(20px, 3vw, 28px);
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 8px;
+    line-height: 1.2;
+  }
+  .cta-box .cta-heading em {
+    font-family: var(--font-accent);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--accent);
+  }
+  .cta-box .cta-sub {
+    color: var(--text-muted);
+    margin-bottom: 24px;
+  }
+  .cta-button {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--white);
+    padding: 16px 40px;
+    border-radius: 9999px;
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+  }
+  .cta-button:hover {
+    background: var(--accent-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(196,98,45,0.3);
+  }
+  .cta-or {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: 16px;
+    margin-bottom: 0;
+  }
+  .cta-or a { color: var(--accent); text-decoration: none; }
+
+  /* SCREENSHOT FRAME */
+  .screenshot-frame {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 8px;
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    margin: 16px 0;
+    overflow: hidden;
+  }
+
+  /* DIVIDER */
+  .divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 56px 0;
+  }
+
+  /* FOOTER */
+  .footer {
+    background: var(--bg);
+    text-align: center;
+    padding: 32px 48px;
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 13px;
+  }
+  .footer a { color: var(--accent); text-decoration: none; }
+
+  /* RESPONSIVE */
+  @media (max-width: 640px) {
+    .hero { padding: 40px 20px 60px; }
+    .hero-logo { width: 200px; }
+    .hero h1 { font-size: 32px; }
+    .hero .accent-word { font-size: 32px; }
+    .container { padding: 0 20px; }
+    .meta-bar { flex-direction: column; gap: 8px; }
+    .compare-grid { grid-template-columns: 1fr; }
+    .bar-row .bar-label { width: 100px; font-size: 11px; }
+    .score-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  /* ── Section 08: Beyond the Website — Icon Cards ── */
+  .icon-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 32px;
+  }
+  @media (max-width: 700px) {
+    .icon-card-grid { grid-template-columns: 1fr; }
+  }
+  .icon-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 36px 28px 32px;
+    text-align: center;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+  .icon-card .material-icons {
+    font-size: 42px;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 16px;
+  }
+  .icon-card h4 {
+    font-family: var(--font-head);
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text);
+    margin: 0 0 12px;
+  }
+  .icon-card p {
+    font-size: 13.5px;
+    color: var(--text-sec);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+</style>
+</head>
+<body>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="page-header-inner">
+    <img class="aspire-logo" src="/assets/aspire-logo.svg" alt="Aspire Digital">
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>TELLAIRE</h1>
+  <div class="sub">Your business deserves a website that</div>
+  <div class="accent-word">delivers..</div>
+  <div class="body-text">
+    Tellaire is a technology advisory firm with enterprise-grade depth — AI strategy, architecture, app development, and managed support — purpose-built for small and medium-sized businesses. The expertise is obvious: case studies involving global manufacturers, Adobe Experience Cloud, and AI prototyping in four-week sprints. The website, though, isn't doing the work justice. It's on WordPress.com, it's missing key pages, and it doesn't make it easy for a prospect to understand what working with Tellaire actually looks like or costs.
+  </div>
+</div>
+
+<!-- ARC DIVIDER — same as aspiredigital.dev -->
+<div class="hero-arc">
+  <svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,120 C480,0 960,0 1440,120 L1440,120 L0,120 Z" fill="#FAF0E2"/>
+  </svg>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+
+  <div class="meta-bar">
+    
+    <span><strong>Date:</strong> March 27, 2026</span>
+    <span><strong>By:</strong> <a href="https://madebyaspire.com" target="_blank">madebyaspire.com</a></span>
+  </div>
+
+  <section>
+    <h2><span class="number">01</span>The Honest Picture</h2>
+
+    <p>Tellaire isn't a startup spinning buzzwords — it's an enterprise technology consultancy with real depth. Their tagline, "Enterprise Expertise, Small Business Reach," captures a genuine market position: bringing the kind of AI strategy, architecture assessment, and managed support that Fortune 500 companies get from Deloitte or Accenture, but scaled for the small-to-midsize businesses that can't afford (or don't need) a Big Four engagement. That's a smart niche, and a growing one.</p>
+
+    <p>The substance is there. Tellaire offers four clearly defined service pillars — AI & Innovation (with their proprietary AIX framework: Scan, Pilot, Scale), Advisory (transformation roadmaps, technology investment optimization, RFP facilitation), Architecture (enterprise architecture reviews, digitecture roadmaps, DevSecOps), and App Development (AI-powered development, digital product strategy). The case studies are strong: an AI-powered managed support engagement for a global manufacturer's Adobe Experience Cloud, and a generative AI image prototype for a B2B retailer delivered in four weeks. These aren't hypotheticals.</p>
+
+    <p>The thought leadership is aggressive in the best sense — <strong>27 blog posts since January 2025</strong>, published roughly biweekly, covering AI governance, vibe coding, model collapse, tech debt, and enterprise AI strategy. The author (jooserklee) writes with genuine practitioner authority, not marketing fluff. There's a testimonial from Spencer Lee at smartlee, inc. calling Tellaire "rocket fuel" for growth. And the LinkedIn presence — while we couldn't scrape the full profile — confirms Tellaire serves financial services, retail, healthcare, life sciences, and education sectors.</p>
+
+    <p>The domain has been registered since <strong>2013</strong> (currently through Squarespace Domains, expiring April 2026), which suggests this isn't a new venture — it's an established brand that's evolving its positioning. The website, however, is on <strong>WordPress.com</strong> (not self-hosted WordPress.org), which creates real limitations for a company selling enterprise technology expertise.</p>
+
+    <div class="score-grid">
+      <div class="score-card">
+        <div class="label">Service Pillars</div>
+        <div class="value">4</div>
+        <div class="note">AI · Advisory · Architecture · App Dev</div>
+      </div>
+      <div class="score-card">
+        <div class="label">Blog Posts</div>
+        <div class="value">27+</div>
+        <div class="note">Since Jan 2025 · ~biweekly</div>
+      </div>
+      <div class="score-card">
+        <div class="label">Domain Age</div>
+        <div class="value">12 yrs</div>
+        <div class="note">Registered April 2013</div>
+      </div>
+      <div class="score-card">
+        <div class="label">Case Studies</div>
+        <div class="value">2</div>
+        <div class="note">Enterprise AI & managed support</div>
+      </div>
+    </div>
+
+    <div class="callout">
+      <strong>The bottom line:</strong> Tellaire has the expertise, the case studies, the thought leadership cadence, and a genuinely differentiated market position. What it doesn't have is a website that reflects any of that. The digital presence is a WordPress.com blog theme masquerading as an enterprise consultancy site — and for a company that sells technology strategy, that's a credibility gap that costs real revenue.
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="number">02</span>Your Digital <em>Scorecard</em></h2>
+
+    <p>For a company that advises enterprises on technology architecture, the current website sends a mixed signal. Here's the honest assessment.</p>
+
+    <div class="score-grid">
+      <div class="score-card">
+        <div class="label">Website Platform</div>
+        <div class="value" style="color:#c44">C-</div>
+        <div class="note">WordPress.com hosted (not self-hosted)</div>
+      </div>
+      <div class="score-card">
+        <div class="label">Content Depth</div>
+        <div class="value" style="color:var(--green)">A-</div>
+        <div class="note">Strong blog + case studies</div>
+      </div>
+      <div class="score-card">
+        <div class="label">SEO</div>
+        <div class="value" style="color:#c44">D+</div>
+        <div class="note">No schema, thin metadata</div>
+      </div>
+      <div class="score-card">
+        <div class="label">Conversion Design</div>
+        <div class="value" style="color:#c44">D</div>
+        <div class="note">No CTAs, no lead capture</div>
+      </div>
+      <div class="score-card">
+        <div class="label">Social Proof</div>
+        <div class="value" style="color:#b8860b">C+</div>
+        <div class="note">1 testimonial, 2 case studies</div>
+      </div>
+      <div class="score-card">
+        <div class="label">Thought Leadership</div>
+        <div class="value" style="color:var(--green)">A</div>
+        <div class="note">27+ posts, practitioner voice</div>
+      </div>
+    </div>
+
+    <h3>What's Working</h3>
+    <ul>
+      <li><strong>Blog cadence is exceptional</strong> — 27+ posts in 14 months, roughly biweekly, covering topics that enterprise technology buyers actually care about. This is a rare asset most consultancies never build</li>
+      <li><strong>Case studies are specific and credible</strong> — The Adobe Experience Cloud managed support case and the generative AI prototype case both include real metrics (99.99% SLA, 4-week delivery), named technologies, and clear outcomes. These sell</li>
+      <li><strong>Service page content has real depth</strong> — The AI & Innovation page includes the full AIX framework (Scan, Pilot, Scale) with distinct process and product tracks. This is genuine IP being shared, which builds trust</li>
+      <li><strong>The testimonial is placed well</strong> — Spencer Lee/smartlee, inc. quote on the homepage is a strong social proof anchor</li>
+      <li><strong>Values positioning is clear</strong> — Accessibility, Simplicity, Empowerment, Transparency. Clean, memorable, and genuinely differentiated from the typical "synergy/innovation/disruption" consulting speak</li>
+    </ul>
+
+    <h3>Where the Gaps Are</h3>
+    <ul>
+      <li><strong>WordPress.com hosting is a credibility problem</strong> — The site runs on wordpress.com (free/premium tier), not self-hosted WordPress. For a technology consultancy, this is like a financial advisor running their practice from a Gmail address. The WordPress.com toolbar and login prompts are visible. It signals "blog" not "business"</li>
+      <li><strong>No About page</strong> — tellaire.com/about returns a 404. Who runs Tellaire? What's their background? For B2B advisory services, the people ARE the product. This is a critical trust gap</li>
+      <li><strong>No pricing signals</strong> — Not even ranges. Enterprise buyers expect at minimum "starting at" ranges or engagement-type pricing tiers. The current site gives zero indication of whether Tellaire is a $5K engagement or a $500K engagement</li>
+      <li><strong>Contact page is a bare form</strong> — Name, email, message. No phone number, no address, no scheduling link. For a company selling six-figure advisory engagements, this is a conversion wall</li>
+      <li><strong>Homepage is all rotating hero banners</strong> — The four service pillars cycle through full-screen hero slides with "Learn More" buttons. This is a 2015 design pattern. Modern B2B sites use scannable above-the-fold layouts that let visitors self-select their path immediately</li>
+      <li><strong>No team/leadership page</strong> — The blog is written by "jooserklee" with a Gravatar avatar. No bio, no LinkedIn link, no headshot on the site. Advisory work is sold on expertise and credibility — invisible leadership is a conversion killer</li>
+      <li><strong>Stock photography throughout</strong> — Every page uses Unsplash stock images (credited in the footer). While well-chosen, they don't build the kind of trust that photos of the actual team, actual work, or actual client environments would</li>
+      <li><strong>No industry-specific landing pages</strong> — LinkedIn says Tellaire serves financial services, retail, healthcare, life sciences, and education. The website has zero industry pages. Each of these verticals should have a dedicated page with relevant case studies and pain points</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="number">03</span>How You <em>Stack Up</em></h2>
+
+    <p>Tellaire occupies an interesting niche: enterprise-grade technology advisory services aimed at SMBs. The competitive landscape includes both the massive consulting firms (too expensive for SMBs) and the Ohio-based AI/tech consultancies listed on platforms like Clutch and DesignRush. Here's how Tellaire compares to firms competing for the same mid-market buyer.</p>
+
+    <div class="compare-grid">
+      <div class="compare-card you">
+        <div class="comp-name">Tellaire (You)</div>
+        <div class="comp-stat"><span class="stat-label">Website</span><span class="stat-val low">WordPress.com blog theme</span></div>
+        <div class="comp-stat"><span class="stat-label">Case Studies</span><span class="stat-val good">2 detailed with metrics</span></div>
+        <div class="comp-stat"><span class="stat-label">Blog/Content</span><span class="stat-val good">27+ posts, biweekly</span></div>
+        <div class="comp-stat"><span class="stat-label">Team Visible</span><span class="stat-val low">No bios, no About page</span></div>
+        <div class="comp-stat"><span class="stat-label">Reviews/Ratings</span><span class="stat-val low">None on Clutch/G2</span></div>
+        <div class="comp-stat"><span class="stat-label">Lead Capture</span><span class="stat-val low">Basic contact form only</span></div>
+        <div class="comp-stat"><span class="stat-label">Industry Pages</span><span class="stat-val low">None</span></div>
+        <div class="comp-stat"><span class="stat-label">Pricing Info</span><span class="stat-val low">None</span></div>
+      </div>
+      <div class="compare-card">
+        <div class="comp-name">Wednesday Solutions (Columbus)</div>
+        <div class="comp-stat"><span class="stat-label">Website</span><span class="stat-val good">Custom-built, modern</span></div>
+        <div class="comp-stat"><span class="stat-label">Case Studies</span><span class="stat-val good">Multiple with metrics</span></div>
+        <div class="comp-stat"><span class="stat-label">Blog/Content</span><span class="stat-val good">Active tech blog</span></div>
+        <div class="comp-stat"><span class="stat-label">Team Visible</span><span class="stat-val good">Full team page</span></div>
+        <div class="comp-stat"><span class="stat-label">Reviews/Ratings</span><span class="stat-val good">23 reviews on Clutch</span></div>
+        <div class="comp-stat"><span class="stat-label">Lead Capture</span><span class="stat-val good">Scheduling + form</span></div>
+        <div class="comp-stat"><span class="stat-label">Industry Pages</span><span class="stat-val mid">Some</span></div>
+        <div class="comp-stat"><span class="stat-label">Pricing Info</span><span class="stat-val mid">$5K+ starting</span></div>
+      </div>
+      <div class="compare-card">
+        <div class="comp-name">Moreland Connect (Ohio)</div>
+        <div class="comp-stat"><span class="stat-label">Website</span><span class="stat-val good">Professional, polished</span></div>
+        <div class="comp-stat"><span class="stat-label">Case Studies</span><span class="stat-val good">Portfolio + outcomes</span></div>
+        <div class="comp-stat"><span class="stat-label">Blog/Content</span><span class="stat-val mid">Moderate</span></div>
+        <div class="comp-stat"><span class="stat-label">Team Visible</span><span class="stat-val good">Leadership bios</span></div>
+        <div class="comp-stat"><span class="stat-label">Reviews/Ratings</span><span class="stat-val good">8 reviews on Clutch</span></div>
+        <div class="comp-stat"><span class="stat-label">Lead Capture</span><span class="stat-val good">Multiple CTAs</span></div>
+        <div class="comp-stat"><span class="stat-label">Industry Pages</span><span class="stat-val good">Yes</span></div>
+        <div class="comp-stat"><span class="stat-label">Pricing Info</span><span class="stat-val mid">$50K+ starting</span></div>
+      </div>
+    </div>
+
+    <div class="callout">
+      <strong>The credibility gap is real:</strong> Tellaire's thought leadership and case study depth are competitive with firms that have 20+ Clutch reviews and polished custom websites. But the website itself — WordPress.com, no team page, no About page, stock photos — undermines that credibility before a prospect even reads the content. The substance is there; the packaging isn't.
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="number">04</span>What People Are <em>Searching For</em></h2>
+
+    <p>B2B technology advisory is a high-intent, low-volume search market. The people searching for these terms are decision-makers with budget — CTOs, VPs of Engineering, founders evaluating whether to hire internally or engage a firm. Each converted search is worth tens of thousands of dollars.</p>
+
+    <h3>AI & Technology Advisory Searches</h3>
+    <div class="kw-grid">
+      <div class="kw-card"><span class="kw-term">AI consulting for small business</span><span class="kw-vol">Volume: <strong>Med</strong></span></div>
+      <div class="kw-card"><span class="kw-term">AI strategy consulting</span><span class="kw-vol">Volume: <strong>Med-High</strong></span></div>
+      <div class="kw-card"><span class="kw-term">enterprise architecture consulting</span><span class="kw-vol">Volume: <strong>Med</strong></span></div>
+      <div class="kw-card"><span class="kw-term">technology advisory services SMB</span><span class="kw-vol">Volume: <strong>Low-Med</strong></span></div>
+      <div class="kw-card"><span class="kw-term">AI implementation consultant</span><span class="kw-vol">Volume: <strong>Med</strong></span></div>
+      <div class="kw-card"><span class="kw-term">digital transformation consulting Ohio</span><span class="kw-vol">Volume: <strong>Low-Med</strong></span></div>
+    </div>
+
+    <h3>Problem-Aware Searches (Higher Intent)</h3>
+    <div class="kw-grid">
+      <div class="kw-card"><span class="kw-term">how to evaluate AI vendors</span><span class="kw-vol">Volume: <strong>Med</strong></span></div>
+      <div class="kw-card"><span class="kw-term">AI pilot program strategy</span><span class="kw-vol">Volume: <strong>Low-Med</strong></span></div>
+      <div class="kw-card"><span class="kw-term">reduce technical debt consulting</span><span class="kw-vol">Volume: <strong>Low</strong></span></div>
+      <div class="kw-card"><span class="kw-term">AI governance framework</span><span class="kw-vol">Volume: <strong>Med</strong></span></div>
+      <div class="kw-card"><span class="kw-term">AIOps implementation guide</span><span class="kw-vol">Volume: <strong>Low-Med</strong></span></div>
+      <div class="kw-card"><span class="kw-term">enterprise AI roadmap template</span><span class="kw-vol">Volume: <strong>Med</strong></span></div>
+    </div>
+
+    <h3>Content Tellaire Should Own</h3>
+    <ul>
+      <li><strong>The blog posts already cover the topics — but they're invisible to search.</strong> Tellaire has written substantive posts on AI governance, pilot programs, tech debt, and data readiness. But on a WordPress.com blog with minimal SEO optimization, these aren't ranking for the searches that matter. Moving to a self-hosted site with proper metadata, schema, and internal linking would unlock the search value of content that already exists</li>
+      <li><strong>"How much does AI consulting cost?" content doesn't exist</strong> — Pricing transparency content (even ranges) ranks extremely well for high-intent buyers. A page or post addressing "What does an AI strategy engagement actually cost?" would attract exactly the prospects Tellaire wants</li>
+      <li><strong>Industry-specific landing pages</strong> — "AI consulting for healthcare" and "AI consulting for retail" are medium-volume terms with high conversion intent. Tellaire already has case studies in both industries — they just need dedicated pages targeting those searches</li>
+      <li><strong>Comparison and evaluation content</strong> — "How to choose an AI consultant" or "AI consulting firm vs. in-house hire" are high-intent searches where Tellaire's advisory credibility would shine</li>
+      <li><strong>Framework/methodology pages</strong> — The AIX framework (Scan, Pilot, Scale) is genuine IP. It deserves its own optimized, linkable page — not buried in the AI & Innovation service page. This is the kind of content other sites link to, which builds domain authority</li>
+    </ul>
+
+    <div class="callout">
+      <strong>The untapped asset:</strong> Tellaire has already created the content that would rank for high-value B2B searches. It just lives on a platform that can't leverage it. Migrating to a properly structured, SEO-optimized site would unlock search traffic from content that already exists — no new writing required for the initial boost.
+    </div>
+  </section>
+
+  <!-- 05: THE FUTURE OF SEARCH -->
+  <section>
+    <h2><span class="number">05</span>The Future of <em>Search</em></h2>
+    <!-- AI search readiness, voice search, E-E-A-T assessment -->
+    <!-- h3 "What AI Search Looks For" and h3 "What's Missing" -->
+  </section>
+
+  <section>
+    <h2><span class="number">06</span>Here's What We'd <em>Actually Do</em></h2>
+
+    <p>Tellaire doesn't need a website redesign — it needs a website that actually functions as a business development platform. The content is strong. The positioning is clear. The packaging needs to match.</p>
+
+    <div class="opp-grid">
+      <div class="opp-card">
+        <h4>1. Platform Migration: WordPress.com → Self-Hosted</h4>
+        <p>Move from WordPress.com to a self-hosted solution (Next.js, Astro, or self-hosted WordPress on quality hosting). This eliminates the WordPress.com toolbar and branding, gives full control over SEO, allows custom schema markup, and removes the credibility gap of a managed blog platform. All 27+ blog posts migrate with full URL preservation. This single change unlocks everything else.</p>
+        <div class="opp-tags">
+          <span class="tag high">Critical</span>
+          <span class="tag medium">3-4 weeks</span>
+        </div>
+      </div>
+      <div class="opp-card">
+        <h4>2. Build the Trust Pages</h4>
+        <p>The site is missing the pages that B2B buyers check before making contact: About (team bios, company story, values), individual case study pages with full metrics and methodology, industry-specific pages for each vertical Tellaire serves, and a "How We Work" page that explains engagement models and provides pricing signals. Every one of these pages exists as content in Tellaire's head — it just hasn't been written for the web yet.</p>
+        <div class="opp-tags">
+          <span class="tag high">High Impact</span>
+          <span class="tag medium">2-3 weeks</span>
+        </div>
+      </div>
+      <div class="opp-card">
+        <h4>3. Conversion Architecture</h4>
+        <p>Replace the bare contact form with a real conversion system: a scheduling link (Calendly or similar) on every service page, a "Request a Discovery Call" CTA in the site header, case study downloads gated behind email capture, and an email nurture sequence for leads who aren't ready to talk yet. The current site has one conversion path (contact form) with no urgency, no specificity, and no alternative actions.</p>
+        <div class="opp-tags">
+          <span class="tag high">High Impact</span>
+          <span class="tag easy">Quick Win</span>
+        </div>
+      </div>
+      <div class="opp-card">
+        <h4>4. SEO Foundation + Blog Optimization</h4>
+        <p>Implement comprehensive schema markup (Organization, ProfessionalService, Article, FAQ), optimize existing blog posts with proper metadata and internal linking, create pillar pages around Tellaire's core topics (AI governance, enterprise architecture, tech debt), and establish the technical SEO foundation that lets the existing content rank for the searches it already deserves.</p>
+        <div class="opp-tags">
+          <span class="tag high">High Impact</span>
+          <span class="tag medium">Ongoing</span>
+        </div>
+      </div>
+      <div class="opp-card">
+        <h4>5. AIX Framework as a Standalone Asset</h4>
+        <p>The Tellaire AI Execution Framework (Scan, Pilot, Scale) is genuine intellectual property. It deserves its own dedicated, beautifully designed page — not buried in a service page. Build it as a linkable, shareable resource with downloadable components. This becomes a backlink magnet, a sales tool, and a differentiation asset all at once.</p>
+        <div class="opp-tags">
+          <span class="tag mid-impact">Medium Impact</span>
+          <span class="tag easy">Quick Win</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="number">07</span>How This <em>Works</em></h2>
+
+    <p>Tellaire understands project methodology — so here's ours, in terms you'll appreciate. No scope creep, clear deliverables, and a timeline that respects the fact that your time is expensive.</p>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="week">Week 1</div>
+        <div class="task">Discovery + Content Audit</div>
+        <div class="detail">We inventory every page, blog post, and asset on the current site. We interview the Tellaire team to understand the brand voice, target buyer personas, service positioning, and competitive differentiation. We audit the existing content for migration readiness and identify gaps (About, team bios, industry pages, pricing signals). Output: a site architecture document and content gap analysis.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="week">Week 2</div>
+        <div class="task">Design Direction</div>
+        <div class="detail">Two homepage concepts that reflect Tellaire's positioning: enterprise expertise, approachable delivery. The design should feel authoritative without being corporate-stiff — think "the smartest person in the room who's also easy to work with." We nail the visual system, typography, and component library before building.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="week">Weeks 3–4</div>
+        <div class="task">Build + Migrate</div>
+        <div class="detail">Full site build on the new platform. All 27+ blog posts migrated with URL preservation and proper redirects. New pages built: About, Team, individual Case Studies, Industry verticals, How We Work, AIX Framework. Schema markup implemented across all pages. Conversion architecture (scheduling, email capture, CTAs) built into every template.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="week">Week 5</div>
+        <div class="task">QA + Launch</div>
+        <div class="detail">Full cross-browser and mobile testing. SEO migration verification — every old URL accounted for. Analytics and conversion tracking configured. DNS cutover managed cleanly. Post-launch monitoring for 404s, indexing issues, and performance.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="week">Ongoing</div>
+        <div class="task">Growth + Optimization</div>
+        <div class="detail">Monthly SEO performance reporting, blog post optimization recommendations, conversion rate analysis, and iterative improvements based on data. As Tellaire publishes new thought leadership, we ensure each piece is optimized for search and integrated into the site's content architecture.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 08: BEYOND THE WEBSITE -->
+  <section>
+    <h2><span class="number">08</span>Beyond the <em>Website</em></h2>
+    <p>{BEYOND_INTRO}</p>
+    <!-- Icon card grid — always use this layout. Replace icons/titles/body with business-relevant content. -->
+    <!-- Material Icons reference: https://fonts.google.com/icons -->
+    <div class="icon-card-grid">
+
+      <div class="icon-card">
+        <span class="material-icons">location_on</span>
+        <h4>Google Business Profile</h4>
+        <p>{GBP_CARD_BODY}</p>
+      </div>
+
+      <div class="icon-card">
+        <span class="material-icons">star</span>
+        <h4>Review Management</h4>
+        <p>{REVIEWS_CARD_BODY}</p>
+      </div>
+
+      <div class="icon-card">
+        <span class="material-icons">thumb_up</span>
+        <h4>Social Media</h4>
+        <p>{SOCIAL_CARD_BODY}</p>
+      </div>
+
+      <div class="icon-card">
+        <span class="material-icons">email</span>
+        <h4>Email and SMS</h4>
+        <p>{EMAIL_CARD_BODY}</p>
+      </div>
+
+      <div class="icon-card">
+        <span class="material-icons">calendar_today</span>
+        <h4>Booking Optimization</h4>
+        <p>{BOOKING_CARD_BODY}</p>
+      </div>
+
+      <div class="icon-card">
+        <span class="material-icons">{SIXTH_CARD_ICON}</span>
+        <h4>{SIXTH_CARD_TITLE}</h4>
+        <p>{SIXTH_CARD_BODY}</p>
+      </div>
+
+    </div>
+    <!-- NOTE: Swap icon names, titles, and body copy to fit the specific business.
+         Always keep 6 cards in a 3x2 grid. Always use <span class="material-icons"> — NEVER emoji. -->
+  </section>
+
+  <section>
+    <h2><span class="number">09</span>What This Could <em>Mean</em></h2>
+
+    <p>B2B technology advisory is a high-value, low-volume business. You don't need thousands of leads — you need the <em>right</em> 3-5 conversations per month. Here's what improved digital presence would mean in real terms.</p>
+
+    <h3>The Math</h3>
+    <p>If Tellaire's average engagement is in the $50K–$150K range (a reasonable estimate for enterprise AI advisory, architecture assessments, and managed support contracts), then even a modest increase in qualified inbound leads has outsized revenue impact.</p>
+
+    <div class="revenue-box">
+      <div class="rev-label">Conservative Annual Revenue Opportunity</div>
+      <div class="rev-amount">$150K–$500K+</div>
+      <div class="rev-note">Additional annual revenue from improved inbound lead generation</div>
+    </div>
+
+    <ul>
+      <li><strong>Inbound lead generation:</strong> A properly optimized site with existing content should generate 8-15 qualified inbound leads per month (from organic search, blog traffic, and LinkedIn referrals). If 10% of those convert to engagements, that's 1-2 new clients per month from inbound alone</li>
+      <li><strong>Blog traffic monetization:</strong> 27+ posts on AI strategy, governance, and implementation — properly optimized — could generate 3,000-8,000 monthly organic visits. Even a 1% conversion rate to email capture builds a valuable nurture pipeline of 30-80 qualified contacts per month</li>
+      <li><strong>Reduced sales cycle:</strong> A credible website with case studies, team bios, and clear methodology reduces the "can we trust these people?" phase of the buying cycle. Prospects arrive at discovery calls pre-sold on expertise, which shortens sales cycles and improves close rates</li>
+      <li><strong>Higher perceived value:</strong> A polished digital presence supports premium pricing. The WordPress.com blog creates downward pricing pressure because it doesn't look like a firm that commands enterprise rates. A professional site with clear IP (AIX Framework) and detailed case studies supports the pricing Tellaire's expertise actually warrants</li>
+    </ul>
+
+    <div class="callout">
+      <strong>The compounding return:</strong> Every blog post Tellaire publishes becomes more valuable on a properly optimized platform. The 27+ posts already written are an appreciating asset — they just need to be on infrastructure that lets them compound. A new site doesn't just capture today's searches; it makes every future piece of content more effective.
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="number">10</span>Why <em>Aspire Digital</em></h2>
+
+    <p>There's an irony in recommending a web agency to a technology consultancy — and we're aware of it. Here's why it makes sense anyway.</p>
+
+    <ul>
+      <li><strong>You should spend your time on client work, not your own website.</strong> Tellaire's expertise is AI strategy, architecture, and advisory. Building your own site is like a surgeon doing their own accounting — you can, but should you? We build the digital presence so you can focus on the $100K+ engagements your expertise commands</li>
+      <li><strong>We understand B2B service firms.</strong> We know that your website isn't a brochure — it's a trust-building machine. Every page either moves a prospect closer to a discovery call or loses them. We build with that conversion architecture in mind from day one</li>
+      <li><strong>We respect what you've built.</strong> The 27+ blog posts, the case studies, the AIX framework — this is real intellectual property. We'd migrate and elevate every piece of it, not start from scratch. The content is the asset; we're building the platform it deserves</li>
+      <li><strong>We're technical enough to understand your world.</strong> We know what schema markup, API-driven architectures, and headless CMS platforms are. We won't suggest a Wix template and call it a day. The site we build will reflect the technical sophistication Tellaire's prospects expect to see</li>
+      <li><strong>We deliver on timelines.</strong> Five weeks from kickoff to launch. Clear milestones, no scope creep, no "we're still in the design phase" three months later. The Tellaire team knows what good project delivery looks like — and so do we</li>
+    </ul>
+
+    <p>Tellaire was founded to give smaller businesses access to world-class technology expertise. We're proposing the same thing in reverse: giving a world-class technology consultancy access to the digital marketing expertise that makes its expertise visible.</p>
+
+    <div class="cta-box">
+      <div class="cta-heading">Let's Make Tellaire's Website <em>as Sharp</em> as Its Expertise</div>
+      <p class="cta-sub">The advisory work speaks for itself. Let's build a digital presence that speaks just as clearly — one that converts the right prospects before they even pick up the phone.</p>
+      <a href="https://madebyaspire.com/book" class="cta-button" target="_blank">Book a Free Strategy Call</a>
+      <p class="cta-or">or email <a href="mailto:Chris@aspiredigital.dev">Chris</a> directly</p>
+    </div>
+  </section>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <p>Prepared by <strong>Aspire Digital</strong> · <a href="https://madebyaspire.com">madebyaspire.com</a></p>
+  <p style="margin-top:8px">Questions? Reach out to <a href="mailto:Chris@aspiredigital.dev">Chris</a> · <a href="mailto:Chris@aspiredigital.dev">Chris@aspiredigital.dev</a></p>
+  <p style="margin-top:12px;font-size:11px;color:var(--text-muted)">© 2026 Aspire Digital · This brief was prepared exclusively for Tellaire</p>
+</div>
+
+</body>
+</html>
