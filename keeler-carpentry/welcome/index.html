@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Keeler Carpentry — Digital Growth Brief | Aspire Digital</title>
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<!-- Open Graph / iMessage / SMS preview -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Keeler Carpentry — Your Digital Growth Opportunity">
+<meta property="og:description" content="We took a deep look at Keeler Carpentry's online presence and found some exciting opportunities. Here's what we found.">
+<meta property="og:image" content="https://yoursite.madebyaspire.com/keeler-carpentry/welcome/og-card.png">
+<meta property="og:url" content="https://yoursite.madebyaspire.com/keeler-carpentry/welcome/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Keeler Carpentry — Your Digital Growth Opportunity">
+<meta name="twitter:description" content="A personalized digital review prepared by Aspire Digital.">
+<meta name="twitter:image" content="https://yoursite.madebyaspire.com/keeler-carpentry/welcome/og-card.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FAF0E2;
+    --bg-alt: #F2EDE6;
+    --text: #2C3340;
+    --text-sec: #666666;
+    --text-muted: #999999;
+    --accent: #C4622D;
+    --accent-dark: #B53D00;
+    --border: #E5E5E5;
+    --border-light: #F0F0F0;
+    --green: #4a7b5a;
+    --hero-green: #8FAF8A;
+    --white: #ffffff;
+    --font: 'DM Sans', system-ui, -apple-system, sans-serif;
+    --font-head: 'Montserrat', system-ui, sans-serif;
+    --font-accent: 'Playfair Display', Georgia, serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 15px;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection { background: var(--accent); color: #fff; }
+
+  .page-header {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 48px;
+  }
+  .page-header-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .page-header .aspire-logo {
+    width: 200px;
+    height: auto;
+  }
+
+  .hero {
+    background: var(--hero-green);
+    text-align: center;
+    padding: 60px 48px 80px;
+    position: relative;
+  }
+  .hero h1 {
+    font-family: var(--font-head);
+    font-weight: 800;
+    font-size: clamp(36px, 6vw, 56px);
+    color: var(--accent);
+    line-height: 1.08;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+  }
+  .hero .sub {
+    font-family: var(--font-head);
+    font-weight: 600;
+    font-size: clamp(18px, 3vw, 24px);
+    color: #2C3340;
+    margin-bottom: 4px;
+    letter-spacing: -0.01em;
+  }
+  .hero .accent-word {
+    font-family: var(--font-accent);
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(36px, 6vw, 56px);
+    color: var(--white);
+    line-height: 1.08;
+  }
+  .hero .body-text {
+    color: var(--white);
+    font-size: 17px;
+    max-width: 540px;
+    margin: 28px auto 0;
+    line-height: 1.7;
+  }
+
+  .hero-arc {
+    margin-top: -1px;
+    background: var(--hero-green);
+  }
+  .hero-arc svg {
+    display: block;
+    width: 100%;
+    height: 80px;
+  }
+
+  .container {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  .meta-bar {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 32px 0 20px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 56px;
+    font-size: 13px;
+    color: var(--text-muted);
+    letter-spacing: 0.3px;
+  }
+  .meta-bar strong { color: var(--text); font-weight: 600; }
+  .meta-bar a { color: var(--accent); text-decoration: none; }
+
+  section { margin-bottom: 64px; }
+
+  h2 {
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: clamp(24px, 3.5vw, 32px);
+    color: var(--text);
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+  }
+  h2 .number {
+    font-family: var(--font);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+  }
+  h2 em {
+    font-family: var(--font-accent);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--accent);
+  }
+
+  h3 {
+    font-family: var(--font-head);
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin: 32px 0 12px;
+  }
+
+  p { margin-bottom: 16px; color: var(--text-sec); }
+  p strong { color: var(--text); }
+  ul { margin: 0 0 16px 20px; }
+  li { margin-bottom: 6px; color: var(--text-sec); }
+  li strong { color: var(--text); }
+
+  .callout {
+    background: var(--bg-alt);
+    border-left: 3px solid var(--accent);
+    padding: 20px 24px;
+    margin: 24px 0;
+    font-size: 0.9rem;
+    border-radius: 0 12px 12px 0;
+    color: var(--text-sec);
+  }
+  .callout strong { color: var(--text); }
+
+  .tag {
+    display: inline-block;
+    padding: 4px 14px;
+    border-radius: 9999px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .tag.easy { background: #e8f5e9; color: #2e7d32; }
+  .tag.medium { background: #fff3e0; color: #e65100; }
+  .tag.high { background: var(--accent); color: white; }
+  .tag.mid-impact { background: #e3f2fd; color: #1565c0; }
+  .score-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 16px;
+    margin: 24px 0;
+  }
+  .score-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 24px 16px;
+    text-align: center;
+    border: 1px solid var(--border-light);
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+  .score-card:hover {
+    box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+    transform: translateY(-2px);
+  }
+  .score-card .label {
+    font-family: var(--font-head);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+  }
+  .score-card .value {
+    font-family: var(--font-head);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent);
+  }
+  .score-card .note {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 4px;
+  }
+
+  .bar-chart { margin: 24px 0; }
+  .bar-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  .bar-row .bar-label {
+    width: 160px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text);
+    flex-shrink: 0;
+  }
+  .bar-row .bar-track {
+    flex: 1;
+    height: 28px;
+    background: var(--bg-alt);
+    border-radius: 14px;
+    overflow: hidden;
+    margin: 0 12px;
+  }
+  .bar-row .bar-fill {
+    height: 100%;
+    border-radius: 14px;
+  }
+  .bar-row .bar-val {
+    width: 40px;
+    font-family: var(--font-head);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-align: right;
+  }
+
+  .compare-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin: 24px 0;
+  }
+  .compare-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 24px 20px;
+    border: 1px solid var(--border-light);
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+  .compare-card:hover {
+    box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+    transform: translateY(-2px);
+  }
+  .compare-card.you {
+    border: 2px solid var(--accent);
+    background: #FFF9F5;
+  }
+  .compare-card .comp-name {
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--text);
+    margin-bottom: 14px;
+  }
+  .compare-card .comp-stat {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    padding: 5px 0;
+    border-bottom: 1px solid var(--border-light);
+  }
+  .compare-card .comp-stat:last-child { border-bottom: none; }
+  .compare-card .comp-stat .stat-label { color: var(--text-muted); }
+  .compare-card .comp-stat .stat-val { font-weight: 600; }
+  .stat-val.good { color: var(--green); }
+  .stat-val.mid { color: #b8860b; }
+  .stat-val.low { color: #c44; }
+
+  .kw-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 10px;
+    margin: 24px 0;
+  }
+  .kw-card {
+    background: var(--white);
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    padding: 14px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: box-shadow 0.3s;
+  }
+  .kw-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.05); }
+  .kw-card .kw-term {
+    font-weight: 500;
+    font-size: 13px;
+    color: var(--text);
+  }
+  .kw-card .kw-vol {
+    font-size: 11px;
+    color: var(--text-muted);
+    white-space: nowrap;
+    margin-left: 12px;
+  }
+  .kw-card .kw-vol strong {
+    font-family: var(--font-head);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--accent);
+  }
+
+  .timeline {
+    position: relative;
+    margin: 24px 0;
+    padding-left: 36px;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    bottom: 8px;
+    width: 2px;
+    background: var(--border);
+  }
+  .timeline-item {
+    position: relative;
+    margin-bottom: 32px;
+  }
+  .timeline-item:last-child { margin-bottom: 0; }
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -32px;
+    top: 6px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 3px solid var(--bg);
+    box-shadow: 0 0 0 2px var(--accent);
+  }
+  .timeline-item .week {
+    font-family: var(--font-head);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 4px;
+  }
+  .timeline-item .task {
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--text);
+    margin-bottom: 4px;
+    line-height: 1.3;
+  }
+  .timeline-item .detail {
+    font-size: 14px;
+    color: var(--text-sec);
+    line-height: 1.65;
+  }
+
+  .opp-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    margin: 24px 0;
+  }
+  .opp-card {
+    background: var(--white);
+    border: 1px solid var(--border-light);
+    border-radius: 16px;
+    padding: 28px 24px;
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+  .opp-card:hover {
+    box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+    transform: translateY(-2px);
+  }
+  .opp-card h4 {
+    font-family: var(--font-head);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 8px;
+  }
+  .opp-card p { font-size: 13px; color: var(--text-sec); margin-bottom: 14px; }
+  .opp-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+
+  .revenue-box {
+    background: var(--green);
+    color: white;
+    border-radius: 16px;
+    padding: 48px 40px;
+    text-align: center;
+    margin: 32px 0;
+  }
+  .revenue-box .rev-label {
+    font-family: var(--font-head);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    opacity: 0.7;
+    margin-bottom: 8px;
+  }
+  .revenue-box .rev-amount {
+    font-family: var(--font-head);
+    font-size: clamp(40px, 8vw, 56px);
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 8px;
+    letter-spacing: -0.02em;
+  }
+  .revenue-box .rev-note {
+    font-size: 14px;
+    opacity: 0.7;
+  }
+
+  .cta-box {
+    text-align: center;
+    border: 2px solid var(--accent);
+    border-radius: 16px;
+    padding: 40px 32px;
+    margin: 32px 0;
+  }
+  .cta-box .cta-heading {
+    font-family: var(--font-head);
+    font-size: clamp(20px, 3vw, 28px);
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 8px;
+    line-height: 1.2;
+  }
+  .cta-box .cta-heading em {
+    font-family: var(--font-accent);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--accent);
+  }
+  .cta-box .cta-sub {
+    color: var(--text-muted);
+    margin-bottom: 24px;
+  }
+  .cta-button {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--white);
+    padding: 16px 40px;
+    border-radius: 9999px;
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+  }
+  .cta-button:hover {
+    background: var(--accent-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(196,98,45,0.3);
+  }
+  .cta-or {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: 16px;
+    margin-bottom: 0;
+  }
+  .cta-or a { color: var(--accent); text-decoration: none; }
+
+  .screenshot-frame {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 8px;
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    margin: 16px 0;
+    overflow: hidden;
+  }
+
+  .divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 56px 0;
+  }
+
+  .footer {
+    background: var(--bg);
+    text-align: center;
+    padding: 32px 48px;
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 13px;
+  }
+  .footer a { color: var(--accent); text-decoration: none; }
+
+  @media (max-width: 640px) {
+    .hero { padding: 40px 20px 60px; }
+    .hero h1 { font-size: 32px; }
+    .hero .accent-word { font-size: 32px; }
+    .container { padding: 0 20px; }
+    .meta-bar { flex-direction: column; gap: 8px; }
+    .compare-grid { grid-template-columns: 1fr; }
+    .bar-row .bar-label { width: 100px; font-size: 11px; }
+    .score-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  .icon-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 32px;
+  }
+  @media (max-width: 700px) {
+    .icon-card-grid { grid-template-columns: 1fr; }
+  }
+  .icon-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 36px 28px 32px;
+    text-align: center;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+  .icon-card .material-icons {
+    font-size: 42px;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 16px;
+  }
+  .icon-card h4 {
+    font-family: var(--font-head);
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text);
+    margin: 0 0 12px;
+  }
+  .icon-card p {
+    font-size: 13.5px;
+    color: var(--text-sec);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .logo-showcase {
+    background: var(--bg-alt);
+    border-radius: 16px;
+    padding: 36px;
+    text-align: center;
+    margin: 24px 0;
+  }
+  .logo-showcase img {
+    max-width: 180px;
+    border-radius: 12px;
+    margin: 16px 0;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  }
+  .logo-showcase .caption {
+    font-size: 13px;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-top: 8px;
+  }
+
+</style>
+</head>
+<body>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="page-header-inner">
+    <img class="aspire-logo" src="/assets/aspire-logo.svg" alt="Aspire Digital">
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>KEELER CARPENTRY</h1>
+  <div class="sub">Your business deserves a website that</div>
+  <div class="accent-word">delivers.</div>
+  <div class="body-text">
+    Chad, you've spent 25 years perfecting your craft — building custom kitchens and baths from raw lumber with the kind of joinery most contractors don't even attempt. Your digital presence should reflect that same level of care and precision.
+  </div>
+</div>
+
+<!-- ARC DIVIDER -->
+<div class="hero-arc">
+  <svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,120 C480,0 960,0 1440,120 L1440,120 L0,120 Z" fill="#FAF0E2"/>
+  </svg>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+
+  <div class="meta-bar">
+    <span><strong>Date:</strong> March 28, 2026</span>
+    <span><strong>By:</strong> <a href="https://madebyaspire.com" target="_blank">madebyaspire.com</a></span>
+  </div>
+
+  <!-- 01: THE HONEST PICTURE -->
+  <section>
+    <h2><span class="number">01</span>The Honest Picture</h2>
+
+    <p>Keeler Carpentry isn't your average remodeling contractor. Based in Delaware, Ohio, Chad Keeler has spent over 25 years specializing in fully custom kitchens and bathrooms — and when we say custom, we mean it. Every cabinet starts as raw lumber and gets transformed through traditional joinery and meticulous finish work into something built to last generations. This is old-school craftsmanship applied to modern living spaces, and it's a rare thing to find.</p>
+
+    <p>The business serves a wide footprint across Central Ohio — from Delaware and Sunbury to Upper Arlington, Westerville, New Albany, and Columbus. That reach into affluent suburbs with older homes and high-end renovations is a significant advantage. Homeowners in those areas are exactly the kind of clients who understand the difference between prefab boxes from a big-box store and a kitchen that's been hand-built by a craftsman who's been doing this since before most "remodelers" picked up a hammer.</p>
+
+    <p>Chad's reputation backs it up. Keeler Carpentry is a <strong>BBB Accredited Business with an A+ rating</strong>, has been in business since 2015 (with Chad's personal experience extending well beyond that), and carries a <strong>BuildZoom score of 90</strong>. The BBB review from David T. sums it up well: <em>"Keeler Carpentry does outstanding work with fine finish woodworking. Definitely recommend."</em> On Facebook, the business has 85 followers — modest, but real people who know real work.</p>
+
+    <p>The services list is extensive: custom cabinetry, kitchen and bathroom remodels, room additions, drywall, painting, project management for construction jobs, and even yacht cabinets. That last one tells you something about the caliber of work Chad's capable of — yacht-grade finish carpentry is a whole different level of precision.</p>
+
+    <div class="score-grid">
+      <div class="score-card">
+        <div class="label">Years Experience</div>
+        <div class="value">25+</div>
+        <div class="note">Custom carpentry</div>
+      </div>
+      <div class="score-card">
+        <div class="label">BBB Rating</div>
+        <div class="value">A+</div>
+        <div class="note">Accredited since 2025</div>
+      </div>
+      <div class="score-card">
+        <div class="label">BuildZoom</div>
+        <div class="value">90</div>
+        <div class="note">Out of 100</div>
+      </div>
+      <div class="score-card">
+        <div class="label">Service Area</div>
+        <div class="value">8+</div>
+        <div class="note">Cities across Central OH</div>
+      </div>
+    </div>
+
+    <div class="callout">
+      <strong>The bottom line:</strong> The craftsmanship and reputation are there. The challenge is that most people searching for kitchen remodelers in Delaware, OH will never find Keeler Carpentry online — and that's the gap we're here to close.
+    </div>
+  </section>
+
+  <!-- 02: YOUR SCORECARD -->
+  <section>
+    <h2><span class="number">02</span>Your Digital <em>Scorecard</em></h2>
+
+    <div class="site-screenshot">
+      <h3>Your Current Website</h3>
+      <div class="screenshot-frame">
+        <img src="./keeler-carpentry-screenshot.png" alt="Keeler Carpentry current website" style="width:100%;border-radius:8px;border:1px solid var(--border)">
+      </div>
+      <p style="text-align:center;font-size:12px;color:var(--text-muted);margin-top:8px">Captured March 28, 2026</p>
+    </div>
+
+    <p>Your current website is built on <strong>Google Sites</strong> — a free website builder from Google. Let's be honest about what that means: Google Sites is designed for internal team pages and school projects, not for a premium carpentry business competing for $30,000+ kitchen remodels. Here's how things break down:</p>
+
+    <div class="score-grid">
+      <div class="score-card">
+        <div class="label">Design Quality</div>
+        <div class="value" style="color:#b8860b">C</div>
+        <div class="note">Clean but generic</div>
+      </div>
+      <div class="score-card">
+        <div class="label">Mobile Experience</div>
+        <div class="value" style="color:#b8860b">C+</div>
+        <div class="note">Functional, not optimized</div>
+      </div>
+      <div class="score-card">
+        <div class="label">SEO Readiness</div>
+        <div class="value" style="color:#c44">D</div>
+        <div class="note">Very limited</div>
+      </div>
+      <div class="score-card">
+        <div class="label">Conversion Power</div>
+        <div class="value" style="color:#c44">D</div>
+        <div class="note">Email only — no forms</div>
+      </div>
+    </div>
+
+    <h3>What's Working</h3>
+    <ul>
+      <li><strong>The messaging is strong.</strong> "Built by Hand. Built to Last." is a genuinely compelling tagline that differentiates you from every prefab cabinet installer out there.</li>
+      <li><strong>The copy is well-written.</strong> The site clearly communicates what you do, who you serve, and what sets you apart. That "Is Keeler Carpentry Right for Your Project?" section is smart qualification.</li>
+      <li><strong>SSL is active</strong> and the domain (keelercarpentry.com) is clean and professional.</li>
+      <li><strong>BBB accreditation is mentioned</strong>, which builds trust immediately.</li>
+    </ul>
+
+    <h3>Where the Gaps Are</h3>
+    <ul>
+      <li><strong>Google Sites severely limits SEO.</strong> You can't add custom meta descriptions, structured data (schema markup), or optimize page titles properly. Google basically treats your site as a second-class citizen in search results.</li>
+      <li><strong>No portfolio or gallery.</strong> For a custom carpentry business, this is the single biggest miss. Homeowners making $30K-$80K+ renovation decisions want to SEE the work — before and after shots, detail photography, finished kitchens in real homes.</li>
+      <li><strong>No contact form.</strong> The only way to reach you is via email (Quotes@KeelerCarpentry.com). No phone number on the site. No quote request form. Every friction point costs you leads.</li>
+      <li><strong>No Google Business Profile integration.</strong> Reviews, map listing, and local search signals aren't being leveraged on the website.</li>
+      <li><strong>Single page, no depth.</strong> There's no separate page for kitchens vs. bathrooms, no project case studies, no FAQ, no blog content. Each of those would be a new opportunity to rank for search terms.</li>
+      <li><strong>No analytics tracking.</strong> Google Sites provides zero insight into who's visiting, where they come from, or what they do on the page.</li>
+    </ul>
+
+    <div class="callout">
+      <strong>The honest assessment:</strong> Your website has good bones — the messaging and brand positioning are strong. But the platform is holding you back. Google Sites simply cannot support the kind of SEO, portfolio showcase, and lead capture that a premium carpentry business needs to compete online.
+    </div>
+  </section>
+
+  <!-- 03: HOW YOU STACK UP -->
+  <section>
+    <h2><span class="number">03</span>How You <em>Stack Up</em></h2>
+
+    <p>We looked at who's competing for the same homeowners in your area. Here's how Keeler Carpentry compares to two competitors who are actively winning business online in Central Ohio:</p>
+
+    <div class="compare-grid">
+      <div class="compare-card you">
+        <div class="comp-name">Keeler Carpentry</div>
+        <div class="comp-stat">
+          <span class="stat-label">Website</span>
+          <span class="stat-val low">Google Sites</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">BBB Rating</span>
+          <span class="stat-val good">A+</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Google Reviews</span>
+          <span class="stat-val low">Few</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Portfolio</span>
+          <span class="stat-val low">None on site</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Online Booking</span>
+          <span class="stat-val low">No</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Blog / Content</span>
+          <span class="stat-val low">No</span>
+        </div>
+      </div>
+
+      <div class="compare-card">
+        <div class="comp-name">Steller Construction</div>
+        <div class="comp-stat">
+          <span class="stat-label">Website</span>
+          <span class="stat-val good">Professional</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">BBB Rating</span>
+          <span class="stat-val mid">N/A</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Google Reviews</span>
+          <span class="stat-val good">75+ (4.8)</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Portfolio</span>
+          <span class="stat-val good">83 photos</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Online Booking</span>
+          <span class="stat-val good">Yes</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Blog / Content</span>
+          <span class="stat-val good">Active blog</span>
+        </div>
+      </div>
+
+      <div class="compare-card">
+        <div class="comp-name">Cabinet IQ (Delaware)</div>
+        <div class="comp-stat">
+          <span class="stat-label">Website</span>
+          <span class="stat-val good">Professional</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">BBB Rating</span>
+          <span class="stat-val mid">N/A</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Google Reviews</span>
+          <span class="stat-val good">Many (5-star)</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Portfolio</span>
+          <span class="stat-val good">Full gallery</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Online Booking</span>
+          <span class="stat-val good">Free consult form</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Blog / Content</span>
+          <span class="stat-val good">SEO pages</span>
+        </div>
+      </div>
+    </div>
+
+    <h3>What This Means</h3>
+
+    <p>Your competitors aren't necessarily better craftsmen — but they're significantly better at being found online. Steller Construction has invested heavily in content marketing, professional photography, and review generation. They show up in local searches, they have 83 photos on Yelp alone, and they offer financing — all signals that tell Google (and homeowners) "this is a serious operation."</p>
+
+    <p>Cabinet IQ is a franchise model, but they're running hyper-local SEO pages specifically targeting Delaware, OH. They have a dedicated landing page for your city, a local team member's photo and bio, and consultation forms that convert visitors into leads 24/7.</p>
+
+    <div class="callout">
+      <strong>The opportunity:</strong> You have something neither competitor can claim — 25 years of genuine hand-built craftsmanship and a BBB A+ rating. Your work quality is the differentiator. The problem is purely visibility. A homeowner searching "custom kitchen cabinets Delaware OH" right now is far more likely to find Steller or Cabinet IQ than Keeler Carpentry. That's fixable.
+    </div>
+  </section>
+
+  <!-- 04: WHAT PEOPLE ARE SEARCHING FOR -->
+  <section>
+    <h2><span class="number">04</span>What People Are <em>Searching For</em></h2>
+
+    <p>Central Ohio homeowners are actively searching for exactly what you offer. Here are the terms that matter most — and represent real people looking for a carpenter like you right now:</p>
+
+    <div class="kw-grid">
+      <div class="kw-card">
+        <span class="kw-term">custom kitchen cabinets Delaware OH</span>
+        <span class="kw-vol">Demand: <strong>Medium</strong></span>
+      </div>
+      <div class="kw-card">
+        <span class="kw-term">kitchen remodel Delaware Ohio</span>
+        <span class="kw-vol">Demand: <strong>High</strong></span>
+      </div>
+      <div class="kw-card">
+        <span class="kw-term">custom carpentry near me</span>
+        <span class="kw-vol">Demand: <strong>High</strong></span>
+      </div>
+      <div class="kw-card">
+        <span class="kw-term">bathroom remodel Delaware OH</span>
+        <span class="kw-vol">Demand: <strong>Medium</strong></span>
+      </div>
+      <div class="kw-card">
+        <span class="kw-term">custom cabinetry Columbus Ohio</span>
+        <span class="kw-vol">Demand: <strong>High</strong></span>
+      </div>
+      <div class="kw-card">
+        <span class="kw-term">handmade kitchen cabinets Ohio</span>
+        <span class="kw-vol">Demand: <strong>Low-Med</strong></span>
+      </div>
+      <div class="kw-card">
+        <span class="kw-term">cabinet maker near Delaware OH</span>
+        <span class="kw-vol">Demand: <strong>Medium</strong></span>
+      </div>
+      <div class="kw-card">
+        <span class="kw-term">high-end kitchen remodel Central Ohio</span>
+        <span class="kw-vol">Demand: <strong>Medium</strong></span>
+      </div>
+    </div>
+
+    <h3>Google Autocomplete Reveals Intent</h3>
+    <p>When people start typing "custom kitchen cabinets" into Google, the autocomplete suggestions tell us what's on their mind:</p>
+    <ul>
+      <li>"custom kitchen cabinets <strong>cost</strong>" — they want pricing transparency</li>
+      <li>"custom kitchen cabinets <strong>near me</strong>" — they want local</li>
+      <li>"custom kitchen cabinets vs <strong>semi-custom</strong>" — they're educating themselves</li>
+      <li>"custom kitchen cabinets <strong>before and after</strong>" — they want visual proof</li>
+    </ul>
+
+    <h3>Content Gap Analysis</h3>
+    <p>Your current Google Sites page cannot rank for any of these terms. Here's why:</p>
+    <ul>
+      <li><strong>No dedicated service pages.</strong> A single page can't rank for both "kitchen remodel" and "bathroom remodel" — Google wants focused, in-depth content for each.</li>
+      <li><strong>No location pages.</strong> You serve 8+ cities but have zero location-specific content. A page targeting "custom kitchen cabinets Westerville OH" could rank within weeks.</li>
+      <li><strong>No educational content.</strong> Blog posts answering "How much do custom kitchen cabinets cost in Ohio?" or "Custom vs. semi-custom cabinets: what's the difference?" would capture people early in their research phase.</li>
+      <li><strong>No project galleries with descriptions.</strong> A case study like "Modern Farmhouse Kitchen in Upper Arlington" becomes both portfolio proof AND an SEO asset.</li>
+    </ul>
+
+    <div class="callout">
+      <strong>The takeaway:</strong> The demand is there. Homeowners in your service area are searching for exactly what you build. You just need a website that Google can actually find, index, and serve to those searchers.
+    </div>
+  </section>
+
+  <!-- 05: THE FUTURE OF SEARCH -->
+  <section>
+    <h2><span class="number">05</span>The Future of <em>Search</em></h2>
+
+    <p>Search is changing fast. Google's AI Overviews, voice assistants, and tools like ChatGPT are increasingly how people discover local businesses. Here's what that means for Keeler Carpentry:</p>
+
+    <h3>What AI Search Looks For</h3>
+    <ul>
+      <li><strong>E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness).</strong> Google's quality guidelines now explicitly reward content from people with first-hand experience. Chad's 25 years of hands-on craftsmanship is exactly the kind of "Experience" signal that AI search prioritizes — but only if it's documented on a website that Google can read.</li>
+      <li><strong>Structured data (schema markup).</strong> When someone asks Alexa "who's the best custom cabinet maker in Delaware Ohio?", the answer comes from structured data — JSON-LD markup that tells search engines your business name, location, services, and reviews in a machine-readable format. Your Google Sites page has none of this.</li>
+      <li><strong>Rich, authoritative content.</strong> AI search pulls answers from pages with depth. A 200-word homepage can't compete with a competitor who has 50 pages of project case studies, FAQs, and educational content.</li>
+    </ul>
+
+    <h3>What's Missing</h3>
+    <ul>
+      <li><strong>Zero schema markup.</strong> Google Sites doesn't support LocalBusiness, Service, or Review schema. AI search tools literally cannot "see" your business in structured data.</li>
+      <li><strong>No FAQ content.</strong> Voice search queries like "how long does a custom kitchen remodel take?" need a page with that exact question answered clearly. You don't have one.</li>
+      <li><strong>No review integration.</strong> Your BBB review and any Google reviews aren't connected to your website in a way that search engines can aggregate.</li>
+      <li><strong>No author/expertise signals.</strong> There's no "About Chad" page that demonstrates first-hand expertise — the kind of content AI search is specifically designed to reward.</li>
+    </ul>
+
+    <div class="callout">
+      <strong>Looking ahead:</strong> The businesses that invest in structured data, expertise signals, and rich content now will dominate the next generation of search. For a craftsman with your credentials, this is an enormous advantage waiting to be unlocked.
+    </div>
+  </section>
+
+  <!-- 06: THE OPPORTUNITY -->
+  <section>
+    <h2><span class="number">06</span>Here's What We'd <em>Actually Do</em></h2>
+
+    <p>Based on everything we've found, here are the specific moves that would have the biggest impact for Keeler Carpentry — in priority order:</p>
+
+    <div class="opp-grid">
+      <div class="opp-card">
+        <h4>1. Custom Website with Portfolio Showcase</h4>
+        <p>Replace Google Sites with a professionally built site designed for conversions. Dedicated pages for kitchens, bathrooms, additions, and custom cabinetry. A stunning portfolio gallery with before/after photography that lets your work sell itself. Fast, mobile-first, and built on a platform that supports real SEO.</p>
+        <div class="opp-tags">
+          <span class="tag high">High Impact</span>
+          <span class="tag medium">4-6 Weeks</span>
+        </div>
+      </div>
+
+      <div class="opp-card">
+        <h4>2. Local SEO + Google Business Profile</h4>
+        <p>Optimize your Google Business Profile with professional photos, complete service descriptions, and consistent NAP (name, address, phone) across all directories. Build location-specific landing pages for Delaware, Westerville, Upper Arlington, and New Albany to capture searches in each community.</p>
+        <div class="opp-tags">
+          <span class="tag high">High Impact</span>
+          <span class="tag easy">Quick Win</span>
+        </div>
+      </div>
+
+      <div class="opp-card">
+        <h4>3. Review Generation System</h4>
+        <p>Implement a simple, automated follow-up system that asks happy clients for Google reviews after project completion. A craftsman with 25 years of experience should have 50+ five-star reviews online — each one is a trust signal that both Google and homeowners weigh heavily.</p>
+        <div class="opp-tags">
+          <span class="tag mid-impact">Steady Growth</span>
+          <span class="tag easy">Easy</span>
+        </div>
+      </div>
+
+      <div class="opp-card">
+        <h4>4. Content Strategy: "Built by Hand" Blog</h4>
+        <p>Monthly content showcasing your craft: project deep-dives, "custom vs. prefab" comparisons, process videos, material selection guides. This builds authority with both Google and potential clients — and gives you content to share on social media.</p>
+        <div class="opp-tags">
+          <span class="tag mid-impact">Long-Term SEO</span>
+          <span class="tag medium">Ongoing</span>
+        </div>
+      </div>
+
+      <div class="opp-card">
+        <h4>5. Lead Capture + Quote Request System</h4>
+        <p>Replace the email-only contact method with a smart quote request form that qualifies leads. Collect project type, budget range, timeline, and photos of the space. Integrate with a CRM so no lead falls through the cracks — and you can follow up before a competitor does.</p>
+        <div class="opp-tags">
+          <span class="tag high">High Impact</span>
+          <span class="tag easy">Quick Win</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07: HOW THIS WORKS -->
+  <section>
+    <h2><span class="number">07</span>How This <em>Works</em></h2>
+
+    <p>We know you're busy building kitchens, not websites. Here's how we make this as painless as possible — most clients spend less than 3 hours total on their involvement during the build:</p>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="week">Week 1</div>
+        <div class="task">Discovery + Strategy</div>
+        <div class="detail">A 45-minute conversation about your business, your ideal clients, and your goals. We'll look at your best project photos together and discuss what makes Keeler Carpentry different. You talk — we listen and plan.</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="week">Week 2</div>
+        <div class="task">Design + Content</div>
+        <div class="detail">We design your new site and write all the content — informed by your expertise but handled by our team. You'll review a full mockup and give feedback. We handle professional photo optimization and portfolio curation.</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="week">Weeks 3-4</div>
+        <div class="task">Build + SEO Foundation</div>
+        <div class="detail">Development, schema markup implementation, Google Business Profile optimization, directory listings, and technical SEO. Your site gets built for speed, mobile performance, and search visibility from day one.</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="week">Week 5</div>
+        <div class="task">Launch + Review System</div>
+        <div class="detail">Your new site goes live. We set up the review generation system, connect analytics, and ensure everything is performing. You'll get a simple dashboard showing exactly how your site is doing.</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="week">Ongoing</div>
+        <div class="task">Growth + Support</div>
+        <div class="detail">Monthly content updates, performance reports, and SEO adjustments. We're not a "build it and forget it" shop — we're a long-term partner invested in your growth. When you finish a great project, we help you turn it into a case study that drives more business.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 08: BEYOND THE WEBSITE -->
+  <section>
+    <h2><span class="number">08</span>Beyond the <em>Website</em></h2>
+    <p>A great website is the foundation, but the businesses winning in 2026 are connecting with customers across every digital touchpoint. Here's the full picture for Keeler Carpentry:</p>
+
+    <div class="icon-card-grid">
+
+      <div class="icon-card">
+        <span class="material-icons">location_on</span>
+        <h4>Google Business Profile</h4>
+        <p>Your GBP is the front door for local search. We'd optimize it with professional project photos, complete service categories, regular posts showcasing recent work, and proper business hours — so when someone searches "custom cabinets near me," you show up in the map pack.</p>
+      </div>
+
+      <div class="icon-card">
+        <span class="material-icons">star</span>
+        <h4>Review Generation</h4>
+        <p>You've got an A+ BBB rating but limited Google reviews. A simple post-project text or email flow could generate 3-5 new reviews per month. Within a year, that's 40+ verified reviews — a massive trust signal for both Google rankings and homeowner confidence.</p>
+      </div>
+
+      <div class="icon-card">
+        <span class="material-icons">thumb_up</span>
+        <h4>Social Media Strategy</h4>
+        <p>Your Facebook page (85 followers) has potential but needs consistent content. Process videos of joinery work, before/after reveals, and material selection tips perform exceptionally well for custom carpentry businesses. Instagram and Pinterest are natural fits for visual craftsmanship.</p>
+      </div>
+
+      <div class="icon-card">
+        <span class="material-icons">email</span>
+        <h4>Email Follow-Up</h4>
+        <p>Past clients are your best referral source. A quarterly email newsletter with recent projects, seasonal renovation tips, and a referral incentive keeps you top of mind. When their neighbor mentions wanting a kitchen remodel, your name comes up first.</p>
+      </div>
+
+      <div class="icon-card">
+        <span class="material-icons">calendar_today</span>
+        <h4>Consultation Booking</h4>
+        <p>Replace the email-only contact with an online scheduling tool. Let homeowners book a free consultation directly from your website or Google listing — no phone tag, no missed opportunities. Qualified leads while you're on a job site.</p>
+      </div>
+
+      <div class="icon-card">
+        <span class="material-icons">photo_library</span>
+        <h4>Project Documentation</h4>
+        <p>Every completed kitchen or bath is marketing gold. We'd help establish a simple photo process — a few shots at key milestones — that turns finished projects into case studies, social content, and portfolio pieces that drive future business.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 09: REVENUE IMPACT -->
+  <section>
+    <h2><span class="number">09</span>What This Could <em>Mean</em></h2>
+
+    <p>Let's talk numbers — conservatively. Custom kitchen remodels in Central Ohio typically range from $25,000 to $80,000+. Custom bathroom remodels run $15,000 to $40,000. Here's what improved online visibility could mean for Keeler Carpentry:</p>
+
+    <div class="score-grid">
+      <div class="score-card">
+        <div class="label">Avg. Kitchen Project</div>
+        <div class="value">$45K</div>
+        <div class="note">Custom cabinetry + install</div>
+      </div>
+      <div class="score-card">
+        <div class="label">Avg. Bath Project</div>
+        <div class="value">$25K</div>
+        <div class="note">Custom vanity + remodel</div>
+      </div>
+      <div class="score-card">
+        <div class="label">Current Lead Source</div>
+        <div class="value">Referral</div>
+        <div class="note">Word of mouth only</div>
+      </div>
+      <div class="score-card">
+        <div class="label">Untapped Channel</div>
+        <div class="value">Search</div>
+        <div class="note">Zero organic visibility</div>
+      </div>
+    </div>
+
+    <p>Conservatively, if a professional website and local SEO strategy brought in just <strong>2-3 additional qualified leads per month</strong>, and you closed even a third of those — that's roughly <strong>one additional project per month</strong> from online channels alone.</p>
+
+    <div class="revenue-box">
+      <div class="rev-label">Estimated Additional Annual Revenue</div>
+      <div class="rev-amount">$180K — $350K+</div>
+      <div class="rev-note">Based on 8-12 additional projects per year at average project values. Conservative estimate.</div>
+    </div>
+
+    <p>These aren't fantasy numbers. They're based on what we see with other home services businesses that go from zero online presence to a properly optimized website with local SEO. The demand already exists — you just need to be visible when people search.</p>
+
+    <div class="callout">
+      <strong>Important note:</strong> These projections use conservative assumptions and qualifier ranges. Actual results depend on project mix, closing rate, and market conditions. What we can say with confidence is that the gap between your current online visibility (near zero) and the search demand in your service area represents significant untapped revenue.
+    </div>
+  </section>
+
+  <!-- 10: WHY ASPIRE DIGITAL + CTA -->
+  <section>
+    <h2><span class="number">10</span>Why <em>Aspire Digital</em></h2>
+
+    <p>We're not a big agency that treats every business the same. Aspire Digital works with craftsmen, trades, and service businesses who take pride in their work — and we build digital experiences that reflect that pride. We don't do cookie-cutter templates or generic marketing playbooks.</p>
+
+    <p>What stood out to us about Keeler Carpentry is something you probably take for granted: <strong>you start with raw lumber.</strong> In a world full of contractors slapping together prefab cabinets from a catalog, you're actually building from scratch with traditional joinery. That story — that craftsmanship — deserves a digital presence that matches it. Right now, your Google Sites page is the digital equivalent of a business card stuck to a bulletin board at the hardware store. Your work deserves better than that.</p>
+
+    <p>We'd love to be the team that makes that happen.</p>
+
+    <div class="cta-box">
+      <div class="cta-heading">Let's Build Something <em>Together</em></div>
+      <p class="cta-sub">No pressure, no sales pitch — just a conversation about what's possible for Keeler Carpentry online.</p>
+      <a href="https://madebyaspire.com/book" class="cta-button" target="_blank">Book a Free Strategy Call</a>
+      <p class="cta-or">or email <a href="mailto:Chris@aspiredigital.dev">Chris</a> directly</p>
+    </div>
+  </section>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <p>Prepared by <strong>Aspire Digital</strong> · <a href="https://madebyaspire.com">madebyaspire.com</a></p>
+  <p style="margin-top:8px">Questions? Reach out to <a href="mailto:Chris@aspiredigital.dev">Chris</a> · <a href="mailto:Chris@aspiredigital.dev">Chris@aspiredigital.dev</a></p>
+  <p style="margin-top:12px;font-size:11px;color:var(--text-muted)">&copy; 2026 Aspire Digital &middot; This brief was prepared exclusively for Keeler Carpentry</p>
+</div>
+
+</body>
+</html>
