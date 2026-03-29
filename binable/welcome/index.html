@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BINABLE — Digital Growth Brief | Aspire Digital</title>
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:title" content="BINABLE — Your Digital Growth Opportunity">
+<meta property="og:description" content="We took a deep look at BINABLE's online presence and found some exciting opportunities. Here's what we found.">
+<meta property="og:image" content="https://yoursite.madebyaspire.com/binable/welcome/og-card.png">
+<meta property="og:url" content="https://yoursite.madebyaspire.com/binable/welcome/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="BINABLE — Your Digital Growth Opportunity">
+<meta name="twitter:description" content="A personalized digital review prepared by Aspire Digital.">
+<meta name="twitter:image" content="https://yoursite.madebyaspire.com/binable/welcome/og-card.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FAF0E2; --bg-alt: #F2EDE6; --text: #2C3340; --text-sec: #666666;
+    --text-muted: #999999; --accent: #C4622D; --accent-dark: #B53D00;
+    --border: #E5E5E5; --border-light: #F0F0F0; --green: #4a7b5a;
+    --hero-green: #8FAF8A; --white: #ffffff;
+    --font: 'DM Sans', system-ui, -apple-system, sans-serif;
+    --font-head: 'Montserrat', system-ui, sans-serif;
+    --font-accent: 'Playfair Display', Georgia, serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: var(--font); background: var(--bg); color: var(--text); line-height: 1.7; font-size: 15px; font-weight: 400; -webkit-font-smoothing: antialiased; }
+  ::selection { background: var(--accent); color: #fff; }
+  .page-header { background: var(--white); border-bottom: 1px solid var(--border); padding: 16px 48px; }
+  .page-header-inner { max-width: 900px; margin: 0 auto; display: flex; align-items: center; justify-content: center; }
+  .page-header .aspire-logo { width: 200px; height: auto; }
+  .hero { background: var(--hero-green); text-align: center; padding: 60px 48px 80px; position: relative; }
+  .hero h1 { font-family: var(--font-head); font-weight: 800; font-size: clamp(36px, 6vw, 56px); color: var(--accent); line-height: 1.08; text-transform: uppercase; letter-spacing: -0.02em; margin-bottom: 8px; }
+  .hero .sub { font-family: var(--font-head); font-weight: 600; font-size: clamp(18px, 3vw, 24px); color: #2C3340; margin-bottom: 4px; letter-spacing: -0.01em; }
+  .hero .accent-word { font-family: var(--font-accent); font-style: italic; font-weight: 400; font-size: clamp(36px, 6vw, 56px); color: var(--white); line-height: 1.08; }
+  .hero .body-text { color: var(--white); font-size: 17px; max-width: 540px; margin: 28px auto 0; line-height: 1.7; }
+  .hero-arc { margin-top: -1px; background: var(--hero-green); }
+  .hero-arc svg { display: block; width: 100%; height: 80px; }
+  .container { max-width: 820px; margin: 0 auto; padding: 0 32px; }
+  .meta-bar { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; padding: 32px 0 20px; border-bottom: 1px solid var(--border); margin-bottom: 56px; font-size: 13px; color: var(--text-muted); letter-spacing: 0.3px; }
+  .meta-bar strong { color: var(--text); font-weight: 600; }
+  .meta-bar a { color: var(--accent); text-decoration: none; }
+  section { margin-bottom: 64px; }
+  h2 { font-family: var(--font-head); font-weight: 700; font-size: clamp(24px, 3.5vw, 32px); color: var(--text); line-height: 1.12; letter-spacing: -0.02em; margin-bottom: 8px; }
+  h2 .number { font-family: var(--font); font-size: 12px; font-weight: 600; letter-spacing: 0.15em; color: var(--accent); display: block; margin-bottom: 4px; text-transform: uppercase; }
+  h2 em { font-family: var(--font-accent); font-style: italic; font-weight: 400; color: var(--accent); }
+  h3 { font-family: var(--font-head); font-weight: 600; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin: 32px 0 12px; }
+  p { margin-bottom: 16px; color: var(--text-sec); }
+  p strong { color: var(--text); }
+  ul { margin: 0 0 16px 20px; }
+  li { margin-bottom: 6px; color: var(--text-sec); }
+  li strong { color: var(--text); }
+  .callout { background: var(--bg-alt); border-left: 3px solid var(--accent); padding: 20px 24px; margin: 24px 0; font-size: 0.9rem; border-radius: 0 12px 12px 0; color: var(--text-sec); }
+  .callout strong { color: var(--text); }
+  .tag { display: inline-block; padding: 4px 14px; border-radius: 9999px; font-size: 11px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; }
+  .tag.easy { background: #e8f5e9; color: #2e7d32; }
+  .tag.medium { background: #fff3e0; color: #e65100; }
+  .tag.high { background: var(--accent); color: white; }
+  .tag.mid-impact { background: #e3f2fd; color: #1565c0; }
+  .score-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; margin: 24px 0; }
+  .score-card { background: var(--white); border-radius: 16px; padding: 24px 16px; text-align: center; border: 1px solid var(--border-light); transition: box-shadow 0.3s, transform 0.3s; }
+  .score-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.06); transform: translateY(-2px); }
+  .score-card .label { font-family: var(--font-head); font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .score-card .value { font-family: var(--font-head); font-size: 2rem; font-weight: 700; color: var(--accent); }
+  .score-card .note { font-size: 12px; color: var(--text-muted); margin-top: 4px; }
+  .compare-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin: 24px 0; }
+  .compare-card { background: var(--white); border-radius: 16px; padding: 24px 20px; border: 1px solid var(--border-light); transition: box-shadow 0.3s, transform 0.3s; }
+  .compare-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.06); transform: translateY(-2px); }
+  .compare-card.you { border: 2px solid var(--accent); background: #FFF9F5; }
+  .compare-card .comp-name { font-family: var(--font-head); font-weight: 700; font-size: 14px; color: var(--text); margin-bottom: 14px; }
+  .compare-card .comp-stat { display: flex; justify-content: space-between; font-size: 13px; padding: 5px 0; border-bottom: 1px solid var(--border-light); }
+  .compare-card .comp-stat:last-child { border-bottom: none; }
+  .compare-card .comp-stat .stat-label { color: var(--text-muted); }
+  .compare-card .comp-stat .stat-val { font-weight: 600; }
+  .stat-val.good { color: var(--green); }
+  .stat-val.mid { color: #b8860b; }
+  .stat-val.low { color: #c44; }
+  .kw-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px; margin: 24px 0; }
+  .kw-card { background: var(--white); border: 1px solid var(--border-light); border-radius: 12px; padding: 14px 16px; display: flex; justify-content: space-between; align-items: center; transition: box-shadow 0.3s; }
+  .kw-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.05); }
+  .kw-card .kw-term { font-weight: 500; font-size: 13px; color: var(--text); }
+  .kw-card .kw-vol { font-size: 11px; color: var(--text-muted); white-space: nowrap; margin-left: 12px; }
+  .kw-card .kw-vol strong { font-family: var(--font-head); font-size: 14px; font-weight: 700; color: var(--accent); }
+  .timeline { position: relative; margin: 24px 0; padding-left: 36px; }
+  .timeline::before { content: ''; position: absolute; left: 8px; top: 8px; bottom: 8px; width: 2px; background: var(--border); }
+  .timeline-item { position: relative; margin-bottom: 32px; }
+  .timeline-item:last-child { margin-bottom: 0; }
+  .timeline-item::before { content: ''; position: absolute; left: -32px; top: 6px; width: 14px; height: 14px; border-radius: 50%; background: var(--accent); border: 3px solid var(--bg); box-shadow: 0 0 0 2px var(--accent); }
+  .timeline-item .week { font-family: var(--font-head); font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 4px; }
+  .timeline-item .task { font-family: var(--font-head); font-weight: 700; font-size: 16px; color: var(--text); margin-bottom: 4px; line-height: 1.3; }
+  .timeline-item .detail { font-size: 14px; color: var(--text-sec); line-height: 1.65; }
+  .opp-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin: 24px 0; }
+  .opp-card { background: var(--white); border: 1px solid var(--border-light); border-radius: 16px; padding: 28px 24px; transition: box-shadow 0.3s, transform 0.3s; }
+  .opp-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.06); transform: translateY(-2px); }
+  .opp-card h4 { font-family: var(--font-head); font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+  .opp-card p { font-size: 13px; color: var(--text-sec); margin-bottom: 14px; }
+  .opp-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+  .revenue-box { background: var(--green); color: white; border-radius: 16px; padding: 48px 40px; text-align: center; margin: 32px 0; }
+  .revenue-box .rev-label { font-family: var(--font-head); font-size: 11px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; opacity: 0.7; margin-bottom: 8px; }
+  .revenue-box .rev-amount { font-family: var(--font-head); font-size: clamp(40px, 8vw, 56px); font-weight: 800; color: var(--white); margin-bottom: 8px; letter-spacing: -0.02em; }
+  .revenue-box .rev-note { font-size: 14px; opacity: 0.7; }
+  .cta-box { text-align: center; border: 2px solid var(--accent); border-radius: 16px; padding: 40px 32px; margin: 32px 0; }
+  .cta-box .cta-heading { font-family: var(--font-head); font-size: clamp(20px, 3vw, 28px); font-weight: 700; color: var(--text); margin-bottom: 8px; line-height: 1.2; }
+  .cta-box .cta-heading em { font-family: var(--font-accent); font-style: italic; font-weight: 400; color: var(--accent); }
+  .cta-box .cta-sub { color: var(--text-muted); margin-bottom: 24px; }
+  .cta-button { display: inline-block; background: var(--accent); color: var(--white); padding: 16px 40px; border-radius: 9999px; font-family: var(--font-head); font-weight: 700; font-size: 16px; text-decoration: none; letter-spacing: 0.02em; transition: background 0.3s, transform 0.2s, box-shadow 0.3s; }
+  .cta-button:hover { background: var(--accent-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(196,98,45,0.3); }
+  .cta-or { font-size: 13px; color: var(--text-muted); margin-top: 16px; margin-bottom: 0; }
+  .cta-or a { color: var(--accent); text-decoration: none; }
+  .screenshot-frame { background: var(--white); border-radius: 12px; padding: 8px; border: 1px solid var(--border); box-shadow: 0 4px 20px rgba(0,0,0,0.06); margin: 16px 0; overflow: hidden; }
+  .footer { background: var(--bg); text-align: center; padding: 32px 48px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 13px; }
+  .footer a { color: var(--accent); text-decoration: none; }
+  @media (max-width: 640px) {
+    .hero { padding: 40px 20px 60px; }
+    .hero h1 { font-size: 32px; }
+    .hero .accent-word { font-size: 32px; }
+    .container { padding: 0 20px; }
+    .meta-bar { flex-direction: column; gap: 8px; }
+    .compare-grid { grid-template-columns: 1fr; }
+    .score-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  .icon-card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 32px; }
+  @media (max-width: 700px) { .icon-card-grid { grid-template-columns: 1fr; } }
+  .icon-card { background: #fff; border-radius: 16px; padding: 36px 28px 32px; text-align: center; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+  .icon-card .material-icons { font-size: 42px; color: var(--accent); display: block; margin-bottom: 16px; }
+  .icon-card h4 { font-family: var(--font-head); font-size: 16px; font-weight: 700; color: var(--text); margin: 0 0 12px; }
+  .icon-card p { font-size: 13.5px; color: var(--text-sec); line-height: 1.6; margin: 0; }
+</style>
+</head>
+<body>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="page-header-inner">
+    <img class="aspire-logo" src="/assets/aspire-logo.svg" alt="Aspire Digital">
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>BINABLE</h1>
+  <div class="sub">Your business deserves a website that</div>
+  <div class="accent-word">grows.</div>
+  <div class="body-text">
+    You've built something rare — a store where bargain hunters get incredible deals and every purchase directly funds employment for people with disabilities. That story deserves its own stage, not just a subpage on someone else's website.
+  </div>
+</div>
+
+<!-- ARC DIVIDER -->
+<div class="hero-arc">
+  <svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,120 C480,0 960,0 1440,120 L1440,120 L0,120 Z" fill="#FAF0E2"/>
+  </svg>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+
+  <div class="meta-bar">
+    <span><strong>Date:</strong> March 29, 2026</span>
+    <span><strong>By:</strong> <a href="https://madebyaspire.com" target="_blank">madebyaspire.com</a></span>
+  </div>
+
+  <!-- 01: THE HONEST PICTURE -->
+  <section>
+    <h2><span class="number">01</span>The Honest Picture</h2>
+
+    <p>BINABLE isn't just a discount bin store. It's a mission-driven retail operation run by <strong>The Alpha Group</strong>, a 501(c)(3) nonprofit that has been serving individuals with developmental disabilities across Central Ohio since 1970 — that's over 55 years of impact. The Alpha Group serves more than 500 individuals throughout 11 counties, providing workforce development, supportive living, transportation, and integrated adult day services. BINABLE is the newest and most public-facing expression of that mission.</p>
+
+    <p>The concept is clever and compelling: overstock and returned items from major retailers are placed in bins and priced on a declining scale throughout the week. <strong>Fridays start at $12, and prices drop daily until Thursday when everything is just $1.</strong> Shop early for the best selection, shop late for the deepest discounts. It's a treasure-hunting experience that's become addictive for bargain shoppers across Central Ohio — and every dollar spent directly supports employment opportunities for adults with disabilities.</p>
+
+    <p>The store has already proven its concept. Originally located at 1000 Alpha Drive, BINABLE outgrew its space within the first year and relocated in January 2026 to a <strong>much larger location at 1141 Columbus Pike</strong> — the former American Freight building. The grand re-opening was featured on <strong>NBC4 Columbus</strong>, both on their news broadcast and on Daytime Columbus, bringing significant media attention to the mission. CEO <strong>Liz Owens-Detillion</strong> has been vocal about the strategic vision: increased visibility, more employment opportunities, and a bigger impact.</p>
+
+    <p>The team behind the store is dedicated. Store Manager <strong>Jessica Crist</strong> and Assistant Manager <strong>Zach Sparks</strong> lead a workforce that includes Alpha Group members who are developing real-world retail skills — stocking bins, operating the checkout, assisting customers, and building the confidence that comes from gainful employment. As one employee, Ella G., shared: <em>"As someone who has never had a job before, it has opened my eyes with how to work and converse with others, since socialization is something that I struggle with."</em></p>
+
+    <div class="score-grid">
+      <div class="score-card">
+        <div class="label">Parent Org Founded</div>
+        <div class="value">1970</div>
+        <div class="note">55+ years of service</div>
+      </div>
+      <div class="score-card">
+        <div class="label">Individuals Served</div>
+        <div class="value">500+</div>
+        <div class="note">Across 11 Ohio counties</div>
+      </div>
+      <div class="score-card">
+        <div class="label">Facebook Rating</div>
+        <div class="value">100%</div>
+        <div class="note">6 reviews, all recommend</div>
+      </div>
+      <div class="score-card">
+        <div class="label">Open</div>
+        <div class="value">7 Days</div>
+        <div class="note">Mon-Sat 10-6, Sun 11-5</div>
+      </div>
+    </div>
+
+
+    <h3>How the Daily Pricing Works</h3>
+    <p>BINABLE's pricing model is one of the most compelling aspects of the business — but it requires explanation for first-time visitors. Here's the weekly cycle:</p>
+    <ul>
+      <li><strong>Friday: $12 per item.</strong> Fresh bins arrive with the best selection of the week. Early birds get first pick of name-brand electronics, home goods, toys, kitchen gadgets, and more. This is when the most dedicated treasure hunters show up.</li>
+      <li><strong>Saturday: Prices begin dropping.</strong> The selection is still strong, and the prices start becoming even more attractive as the weekend continues.</li>
+      <li><strong>Sunday through Wednesday: Daily price decreases.</strong> Each day the items in the bins get cheaper. Smart shoppers who know what they want wait for the sweet spot between selection and savings.</li>
+      <li><strong>Thursday: Everything is $1.</strong> The ultimate clearance day. Whatever's left in the bins goes for a dollar. The bins need to be emptied for Friday's new shipment, so the deals are extraordinary — if you're willing to dig.</li>
+    </ul>
+    <p>In addition to the bins, BINABLE also operates a <strong>"Bargain Boutique"</strong> section with specially marked items at significant discounts from retail. These items have fixed prices and the Bargain Boutique items can be returned within 14 days with receipt — bin purchases are final sale. The store also has an <strong>inspection counter</strong> where staff will open and test items before purchase, ensuring customer satisfaction.</p>
+
+    <p>This pricing model creates natural urgency, repeat visits, and a game-like shopping experience that keeps customers coming back week after week. It's also inherently social — people love sharing their $1 Thursday finds on social media.</p>
+
+    <h3>The Mission Differentiator</h3>
+    <p>Here's what makes BINABLE fundamentally different from every other bin store in Ohio: <strong>your purchases directly fund meaningful employment for people with disabilities.</strong> That's not a marketing angle — it's the entire reason the store exists. The Alpha Group didn't open BINABLE to compete in discount retail for profit. They opened it to create jobs. The bargains are a vehicle for impact.</p>
+
+    <p>This mission-driven angle is an enormous competitive advantage that most bin stores simply cannot match. When a customer has the choice between BINABLE and a for-profit bin store with identical products, the social impact story tips the scale. But right now, most potential customers don't know that story exists — because BINABLE doesn't have its own website to tell it.</p>
+
+
+    <h3>The New Location Advantage</h3>
+    <p>BINABLE's January 2026 move to 1141 Columbus Pike — the former American Freight building — was a pivotal moment. The new location on a major commercial corridor offers dramatically better visibility, more square footage for bins and inventory, improved parking, and a storefront that's visible to the thousands of cars that pass daily on US-23/Columbus Pike. This is the busiest commercial corridor in Delaware.</p>
+
+    <p>That physical visibility creates a natural digital marketing moment. People driving by see the BINABLE sign and Google it from their car. They need to find a compelling, informative website — not a nonprofit subpage. A standalone site capitalizes on the new location's drive-by traffic by converting curiosity into first visits.</p>
+
+    <p>The relocation also signals growth and momentum. For press, partners, and corporate sponsors, a business that outgrew its first location within a year and upgraded to a prime commercial space is a success story worth investing in. A professional website tells that story in a way that a subpage on alphagroup.net simply can't.</p>
+
+    <p>The timing is ideal. BINABLE has fresh momentum from the move, NBC4 coverage, and growing social engagement. A website launched now rides that wave rather than trying to create momentum from scratch. Every month without a standalone site is a month of that momentum dissipating instead of compounding.</p>
+
+    <div class="callout">
+      <strong>The bottom line:</strong> BINABLE has a proven concept, a powerful mission, media momentum from NBC4 coverage, a newly expanded location, and a growing community of loyal shoppers. The one thing missing? A standalone digital presence that owns the story, captures search traffic, and converts online curiosity into foot traffic.
+    </div>
+  </section>
+
+  <!-- 02: YOUR SCORECARD -->
+  <section>
+    <h2><span class="number">02</span>Your Digital <em>Scorecard</em></h2>
+
+    <div class="site-screenshot">
+      <h3>Your Current Online Presence</h3>
+      <div class="screenshot-frame">
+        <img src="./binable-screenshot.png" alt="BINABLE current online presence" style="width:100%;border-radius:8px;border:1px solid var(--border)">
+      </div>
+      <p style="text-align:center;font-size:12px;color:var(--text-muted);margin-top:8px">Captured March 29, 2026</p>
+    </div>
+
+    <p>BINABLE doesn't have its own website. What exists today is a <strong>single subpage on alphagroup.net</strong> (the parent nonprofit's website) plus a handful of directory and social listings. Let's grade each component honestly:</p>
+
+    <div class="score-grid">
+      <div class="score-card">
+        <div class="label">Own Website</div>
+        <div class="value" style="color:#c44">None</div>
+        <div class="note">Subpage on parent site</div>
+      </div>
+      <div class="score-card">
+        <div class="label">Google Business</div>
+        <div class="value" style="color:#b8860b">Basic</div>
+        <div class="note">Exists but underoptimized</div>
+      </div>
+      <div class="score-card">
+        <div class="label">Social Media</div>
+        <div class="value" style="color:var(--green)">Active</div>
+        <div class="note">FB, IG, TikTok</div>
+      </div>
+      <div class="score-card">
+        <div class="label">SEO Power</div>
+        <div class="value" style="color:#c44">D</div>
+        <div class="note">No standalone authority</div>
+      </div>
+    </div>
+
+    <h3>What's Working</h3>
+    <ul>
+      <li><strong>Social media is active and engaging.</strong> BINABLE has a Facebook page with 100% recommendation rate (6 reviews), an Instagram presence (@binable_oh), and a TikTok account (@binable_oh). Social video content showing the treasure-hunt shopping experience is exactly the right approach for this type of retail.</li>
+      <li><strong>The Alpha Group subpage has solid content.</strong> The page at alphagroup.net/binable-store/ includes store hours, pricing schedule, team photos, store policies, and links to NBC4 coverage. The copy is well-written and the mission is clear.</li>
+      <li><strong>Media coverage is strong.</strong> Two NBC4 features (news segment + Daytime Columbus) provide powerful third-party validation. The "Equal Opportunities for All" segment is genuinely compelling television.</li>
+      <li><strong>Delaware Area Chamber membership.</strong> Listed under both Retail and Social Services categories — smart dual positioning.</li>
+      <li><strong>Destination Delaware County listing.</strong> Featured on the county's tourism website (visitdelohio.com) under "Things to Do" — which means the county itself sees BINABLE as a destination-worthy attraction.</li>
+    </ul>
+
+
+    <h3>Why the Alpha Group Subpage Falls Short for Retail</h3>
+    <p>The page at alphagroup.net/binable-store/ is a good informational page. But it has structural limitations that hold BINABLE back as a retail brand:</p>
+    <ul>
+      <li><strong>URL structure:</strong> The page lives at alphagroup.net/binable-store/ — which tells Google this is a program page for a nonprofit, not a standalone retail business. Search engines treat subpages very differently from independent domains.</li>
+      <li><strong>Navigation context:</strong> Visitors land on a page surrounded by Alpha Group navigation — workforce development, supportive living, transportation services. For a bargain shopper looking for this week's deals, that context is confusing. They came for bins; they see disability services.</li>
+      <li><strong>No weekly content updates:</strong> A WordPress subpage managed by the parent org can't easily support weekly "what's in the bins" updates, countdown timers to the next drop, or dynamic pricing displays. It's a static page in a dynamic business.</li>
+      <li><strong>Limited analytics:</strong> Traffic to the BINABLE subpage is mixed in with all Alpha Group analytics. You can't easily measure how many people are finding BINABLE specifically, where they're coming from, or what they do after landing on the page.</li>
+      <li><strong>No conversion tracking:</strong> There's no way to know if a website visitor became a store visitor. A standalone site with email capture, Google Analytics events, and UTM-tracked social links would close that loop.</li>
+    </ul>
+
+    <h3>Where the Gaps Are</h3>
+    <ul>
+      <li><strong>No standalone website = no brand authority.</strong> When someone Googles "BINABLE Delaware Ohio," the top result is a subpage on alphagroup.net. That page is controlled by the parent org, can't be independently optimized for SEO, and forces visitors to mentally connect "BINABLE" with "The Alpha Group" — when they should be separate brand experiences.</li>
+      <li><strong>No dedicated domain.</strong> binable.com (or a similar domain) would give the store its own searchable identity, its own SEO authority, and its own brand presence independent of the parent nonprofit.</li>
+      <li><strong>No e-commerce or inventory preview.</strong> Bin stores thrive on the "what's in the bins this week?" excitement. A website with weekly drop previews, featured finds, or even a simple "new bins just dropped" notification system would drive repeat visits.</li>
+      <li><strong>No email/SMS capture.</strong> There's no way for a potential customer to sign up for notifications about new inventory drops, special sales, or events. Every visitor to the Alpha Group subpage who doesn't save the phone number is a lost connection.</li>
+      <li><strong>Limited Google Business optimization.</strong> The profile exists but isn't fully leveraging posts, photos, Q&amp;A, or event promotion — all free tools that drive foot traffic.</li>
+      <li><strong>The social impact story gets buried.</strong> On the Alpha Group site, BINABLE is one of many programs. On its own site, the mission story would be front and center — the first thing a new visitor sees. That story is your biggest competitive advantage, and right now it's buried three clicks deep.</li>
+    </ul>
+
+    <div class="callout">
+      <strong>The honest assessment:</strong> BINABLE is doing many things right — the social media engagement is genuine, the press coverage is excellent, and the in-store experience clearly resonates. But without a standalone website, you're building a brand on borrowed land. The Alpha Group site serves the nonprofit well; BINABLE needs its own home to serve the retail brand and the customers who love it.
+    </div>
+  </section>
+
+  <!-- 03: HOW YOU STACK UP -->
+  <section>
+    <h2><span class="number">03</span>How You <em>Stack Up</em></h2>
+
+    <p>The bin store trend has exploded across Ohio and nationwide. Here's how BINABLE compares to competitors fighting for the same bargain-hunting audience in the Columbus metro area:</p>
+
+    <div class="compare-grid">
+      <div class="compare-card you">
+        <div class="comp-name">BINABLE (Delaware)</div>
+        <div class="comp-stat">
+          <span class="stat-label">Website</span>
+          <span class="stat-val low">Subpage only</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Yelp Reviews</span>
+          <span class="stat-val low">None</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Social Active</span>
+          <span class="stat-val good">FB, IG, TikTok</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Mission Story</span>
+          <span class="stat-val good">Strong (nonprofit)</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Email/SMS List</span>
+          <span class="stat-val low">None</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Weekly Drops</span>
+          <span class="stat-val mid">Social only</span>
+        </div>
+      </div>
+
+      <div class="compare-card">
+        <div class="comp-name">Where Ya Bin (Dublin)</div>
+        <div class="comp-stat">
+          <span class="stat-label">Website</span>
+          <span class="stat-val good">Professional (Wix)</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Yelp Reviews</span>
+          <span class="stat-val low">2.1 stars (26)</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Social Active</span>
+          <span class="stat-val good">FB, IG</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Mission Story</span>
+          <span class="stat-val low">None (for-profit)</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Email/SMS List</span>
+          <span class="stat-val good">Newsletter signup</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Weekly Drops</span>
+          <span class="stat-val good">Website + social</span>
+        </div>
+      </div>
+
+      <div class="compare-card">
+        <div class="comp-name">Bin Mania (Columbus)</div>
+        <div class="comp-stat">
+          <span class="stat-label">Website</span>
+          <span class="stat-val good">Professional</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Yelp Reviews</span>
+          <span class="stat-val good">Active</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Social Active</span>
+          <span class="stat-val good">FB, IG, TikTok</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Mission Story</span>
+          <span class="stat-val low">None (for-profit)</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Email/SMS List</span>
+          <span class="stat-val good">Active</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Weekly Drops</span>
+          <span class="stat-val good">Multi-channel</span>
+        </div>
+      </div>
+    </div>
+
+
+
+    <h3>Shoppers Are Already Talking About You</h3>
+    <p>The social proof already exists. BINABLE's Facebook page has a 100% recommendation rate. The "What Should We Do Today Columbus" Instagram account featured the store and drove significant interest. A local Facebook group discussion about bargain stores in Delaware included multiple positive mentions of BINABLE, with shoppers sharing tips about the best days to visit and what kinds of items to expect.</p>
+
+    <p>This organic word-of-mouth is incredibly valuable — and incredibly fragile. Without a website to capture and amplify these conversations, the buzz remains scattered across social platforms with no way to consolidate it, measure it, or build on it systematically. A website with a review/testimonial section, social media feed integration, and a "Share Your Finds" gallery would turn scattered positive sentiment into a permanent, growing asset.</p>
+
+    <h3>The Bin Store Boom in Central Ohio</h3>
+    <p>The discount bin store concept has exploded across the Columbus metro area in the past two years. What started as a niche liquidation model has become a mainstream shopping trend, driven largely by social media. Here's the competitive landscape you're operating in:</p>
+    <ul>
+      <li><strong>Where Ya Bin (Dublin)</strong> — One of the first bin stores in the Columbus area. Has a professional Wix website with pricing schedule, hours, and location info. However, their 2.1-star Yelp rating reveals serious customer experience issues — complaints about overpricing, poor organization, and inconsistent inventory quality. Their Friday price point is $10 (vs. your $12), dropping to $0.25 on Thursdays.</li>
+      <li><strong>Bin Mania (Columbus)</strong> — A for-profit operation with multiple channels and aggressive marketing. Strong social media game with email/SMS subscriber lists driving repeat traffic. No social mission to speak of.</li>
+      <li><strong>Goodwill Outlet (Columbus)</strong> — The legacy thrift model. Different price structure (by weight) but competing for the same treasure-hunting shopper. Massive brand recognition but no weekly drop excitement.</li>
+      <li><strong>Various popup bin stores</strong> — The Columbus area has seen several pop-up and short-lived bin stores open and close. The market is growing but quality varies wildly. BINABLE's nonprofit backing gives it stability and purpose that popup operations can't match.</li>
+    </ul>
+
+    <h3>What This Means</h3>
+    <p><strong>Where Ya Bin</strong> in Dublin has a professional website with a clear pricing schedule, daily hours, and location information. But here's the thing: they have a 2.1-star rating on Yelp with 26 reviews — meaning their customer experience has serious problems. BINABLE has a 100% recommendation rate. That's a massive advantage, but only if people can discover you and compare.</p>
+
+    <p><strong>Bin Mania</strong> has invested heavily in multi-channel marketing — website, email, SMS, and social. They understand that bin store customers are repeat visitors who want to know what's new each week. Their digital infrastructure is designed to bring people back week after week.</p>
+
+    <p>Here's what's remarkable about your position: <strong>BINABLE is the only bin store in Central Ohio with a genuine social mission.</strong> Every competitor is a for-profit liquidation operation. You're the only one where shopping actually makes a difference in someone's life. That story — told well on a standalone website — is an emotional hook that no competitor can replicate. It turns casual shoppers into loyal advocates.</p>
+
+    <div class="callout">
+      <strong>The opportunity:</strong> Your competitors have better digital infrastructure, but you have a better story — and a better customer experience to back it up. A dedicated BINABLE website that leads with the mission, showcases the treasure-hunting experience, and captures email/SMS subscribers would level the digital playing field while leveraging your strongest asset: purpose.
+    </div>
+  </section>
+
+  <!-- 04: WHAT PEOPLE ARE SEARCHING FOR -->
+  <section>
+    <h2><span class="number">04</span>What People Are <em>Searching For</em></h2>
+
+    <p>Bin stores have become a bona fide shopping trend. The treasure-hunt retail model — driven by TikTok videos and word-of-mouth — is generating significant search demand. Here are the terms that matter for BINABLE:</p>
+
+    <div class="kw-grid">
+      <div class="kw-card">
+        <span class="kw-term">bin store near me</span>
+        <span class="kw-vol">Demand: <strong>High</strong></span>
+      </div>
+      <div class="kw-card">
+        <span class="kw-term">bin store Delaware Ohio</span>
+        <span class="kw-vol">Demand: <strong>Medium</strong></span>
+      </div>
+      <div class="kw-card">
+        <span class="kw-term">discount store Columbus area</span>
+        <span class="kw-vol">Demand: <strong>High</strong></span>
+      </div>
+      <div class="kw-card">
+        <span class="kw-term">overstock bins Ohio</span>
+        <span class="kw-vol">Demand: <strong>Medium</strong></span>
+      </div>
+      <div class="kw-card">
+        <span class="kw-term">BINABLE Delaware OH</span>
+        <span class="kw-vol">Demand: <strong>Low-Med</strong></span>
+      </div>
+      <div class="kw-card">
+        <span class="kw-term">liquidation store near Delaware</span>
+        <span class="kw-vol">Demand: <strong>Medium</strong></span>
+      </div>
+      <div class="kw-card">
+        <span class="kw-term">Amazon return store Ohio</span>
+        <span class="kw-vol">Demand: <strong>High</strong></span>
+      </div>
+      <div class="kw-card">
+        <span class="kw-term">$1 bin store Central Ohio</span>
+        <span class="kw-vol">Demand: <strong>Medium</strong></span>
+      </div>
+    </div>
+
+
+    <h3>Branded vs. Non-Branded Search</h3>
+    <p>There's an important distinction in search marketing between <strong>branded searches</strong> (people who already know your name) and <strong>non-branded searches</strong> (people looking for what you offer but who haven't heard of you yet).</p>
+
+    <p>Right now, BINABLE has growing branded awareness — people see the name on social media, on NBC4, or hear it from friends. But when they Google "BINABLE," they land on a nonprofit website subpage that doesn't fully serve their needs as a shopper. That's a conversion leak.</p>
+
+    <p>For non-branded searches — "bin store near me," "discount shopping Delaware Ohio," "Amazon returns store Central Ohio" — BINABLE has zero visibility. A standalone website would capture both: converting the people who already know about you AND introducing you to the people who don't.</p>
+
+    <h3>The Social Media Search Angle</h3>
+    <p>For bin stores specifically, <strong>TikTok and Instagram have replaced Google as the primary discovery channel</strong> for younger shoppers. People search "bin store haul Ohio" or "BINABLE finds" on TikTok before they ever Google anything. BINABLE already has TikTok and Instagram accounts — but without a website to link to, that social traffic has nowhere to land. No email capture, no weekly schedule, no "share with a friend" mechanism.</p>
+
+    <p>The content that performs best for bin stores on social media is exactly what BINABLE's experience provides: the thrill of the dig, the surprise of finding a name-brand item for $3, the before-and-after reveal of a haul. User-generated content from customers — filming their finds — is free marketing that drives massive foot traffic. But all of that traffic needs somewhere to go between visits.</p>
+
+    <h3>Content Opportunities</h3>
+    <ul>
+      <li><strong>"This Week at BINABLE"</strong> — A weekly landing page or blog post previewing what categories of items just dropped. Creates urgency and a reason to visit the website every Friday.</li>
+      <li><strong>"How BINABLE Works"</strong> — A dedicated explainer page for first-time shoppers. The daily pricing model isn't intuitive; a visual guide (with the pricing ladder already shown on your social) would convert confused searchers into confident first-timers.</li>
+      <li><strong>"Meet the Team"</strong> — Profile the employees, share their stories, show the human impact. This is your strongest content angle and nobody else in the bin store space can match it.</li>
+      <li><strong>"Best Finds of the Week"</strong> — User-submitted or staff-picked highlights. Creates shareable content and gives people FOMO that drives visits.</li>
+      <li><strong>"Shop with Purpose"</strong> — A deep dive into the Alpha Group's mission, how BINABLE creates jobs, and the impact each purchase has. Compelling for press, donors, corporate partners, and values-driven shoppers alike.</li>
+    </ul>
+
+    <div class="callout">
+      <strong>The takeaway:</strong> Search demand for bin stores is strong and growing. But unlike a plumber or a lawyer, bin store discovery is heavily social-media-driven. Your website needs to be a hub that catches traffic from TikTok, Instagram, Google, and word-of-mouth — and converts it into email subscribers, repeat visitors, and brand ambassadors.
+    </div>
+  </section>
+
+  <!-- 05: THE FUTURE OF SEARCH -->
+  <section>
+    <h2><span class="number">05</span>The Future of <em>Search</em></h2>
+
+    <p>The way people discover local retail is evolving fast. Here's what's changing and what it means for BINABLE:</p>
+
+    <h3>Social-First Discovery</h3>
+    <p>For experiential retail like bin stores, <strong>TikTok is the new Google.</strong> A 2025 study found that 40% of Gen Z prefers TikTok and Instagram over Google for local business discovery. Bin store haul videos regularly get hundreds of thousands of views. This is BINABLE's natural environment — the treasure-hunt format is inherently visual and shareable. But social platforms are rented space. Algorithms change. Accounts get suspended. A website is the owned asset that gives all that social activity a permanent, controllable home.</p>
+
+    <h3>AI-Powered Local Recommendations</h3>
+    <p>When someone asks ChatGPT or Google's AI "What are fun things to do in Delaware, Ohio?" or "Where can I find discount shopping near Columbus?", the answer is assembled from structured web data. BINABLE is already listed on Destination Delaware County's tourism site — that's a signal. But without a dedicated website with LocalBusiness schema markup, hours, location data, and rich descriptions, AI tools will reference BINABLE inconsistently or not at all.</p>
+
+    <h3>Google's E-E-A-T for Mission-Driven Businesses</h3>
+    <p>Google's quality framework (Experience, Expertise, Authoritativeness, Trustworthiness) increasingly rewards businesses with genuine community impact. A 501(c)(3) nonprofit operating a retail store with NBC4 coverage, chamber memberships, and a 55-year track record of serving people with disabilities? That's the definition of trustworthy. The Alpha Group's .net domain already has some authority — but a standalone BINABLE site with proper schema and backlinks from NBC4, the chamber, and the tourism board would build its own powerful authority quickly.</p>
+
+
+    <h3>The Local Search Opportunity</h3>
+    <p>Here's a concrete example of what a standalone website would enable. Right now, if you search "things to do in Delaware Ohio," BINABLE might appear via the Destination Delaware County listing — but the click goes to visitdelohio.com, not to your page. If you search "bin store Delaware Ohio," the top results are the Alpha Group subpage and the chamber listing. Neither gives the searcher a complete, engaging experience of what BINABLE is.</p>
+
+    <p>A standalone BINABLE website would rank for all of these terms independently. It would own the search result with a proper title, meta description, and rich snippet. A searcher would see "BINABLE — Delaware's Mission-Driven Bin Store | New Bins Every Friday" instead of "BINABLE Store - The Alpha Group." That difference in how the search result looks directly impacts click-through rates.</p>
+
+    <p>Google also favors websites with fresh content. A site that updates weekly (new inventory posts, featured finds, event announcements) signals to Google that it's active and relevant — boosting rankings over time. The Alpha Group subpage hasn't been meaningfully updated since the relocation announcement.</p>
+
+    <h3>What's Missing</h3>
+    <ul>
+      <li><strong>No standalone structured data.</strong> No LocalBusiness schema for BINABLE specifically — Google sees it as a page on alphagroup.net, not as its own entity.</li>
+      <li><strong>No event markup.</strong> Weekly inventory drops are events. They should have Event schema so Google can surface "New bins at BINABLE this Friday" in search results and Google Maps.</li>
+      <li><strong>No FAQ schema.</strong> Questions like "How does BINABLE work?" and "What day are bins cheapest?" should be answered with structured data that voice assistants can read aloud.</li>
+      <li><strong>No review aggregation.</strong> Facebook reviews aren't connected to Google. A website with proper review schema would bridge that gap.</li>
+    </ul>
+
+    <div class="callout">
+      <strong>Looking ahead:</strong> The businesses that own their digital presence — website, email list, structured data — will thrive regardless of which platform is trending next. Social is powerful but volatile. A website is your permanent storefront in the digital world.
+    </div>
+  </section>
+
+  <!-- 06: THE OPPORTUNITY -->
+  <section>
+    <h2><span class="number">06</span>Here's What We'd <em>Actually Do</em></h2>
+
+    <p>BINABLE has unique needs compared to a typical local business — the website needs to function as a weekly destination, a mission storytelling platform, and a lead capture machine all at once. Here's the plan:</p>
+
+    <div class="opp-grid">
+      <div class="opp-card">
+        <h4>1. Standalone BINABLE Website</h4>
+        <p>Build a vibrant, mobile-first website on its own domain that captures the energy of the in-store experience. Homepage with this week's pricing countdown, a "How It Works" visual guide for first-timers, the mission story front and center, store hours and location with map, and a gallery of finds. Fast, fun, and designed to convert scrollers into shoppers.</p>
+        <div class="opp-tags">
+          <span class="tag high">High Impact</span>
+          <span class="tag medium">4-5 Weeks</span>
+        </div>
+      </div>
+
+      <div class="opp-card">
+        <h4>2. Email &amp; SMS Subscriber System</h4>
+        <p>Implement a "Get Notified When New Bins Drop" signup that collects email and phone number. Send a weekly Friday notification when new inventory arrives. This is the single most effective tool for driving repeat visits — and it creates an owned audience that doesn't depend on any social platform's algorithm.</p>
+        <div class="opp-tags">
+          <span class="tag high">High Impact</span>
+          <span class="tag easy">Quick Win</span>
+        </div>
+      </div>
+
+      <div class="opp-card">
+        <h4>3. Google Business Profile Optimization</h4>
+        <p>Fully optimize the GBP with professional photos of the store and bins, complete business categories, weekly Google Posts announcing new drops, and a Q&amp;A section covering common questions. Set up event posts for special sales. This puts BINABLE in the local map pack for "bin store near me" and "discount store Delaware OH."</p>
+        <div class="opp-tags">
+          <span class="tag high">High Impact</span>
+          <span class="tag easy">Quick Win</span>
+        </div>
+      </div>
+
+      <div class="opp-card">
+        <h4>4. Mission Storytelling Page</h4>
+        <p>Create a dedicated "Our Story" section that tells the Alpha Group's 55-year history, shows the faces of BINABLE employees, shares impact metrics, and explains how every purchase creates opportunity. Include video embeds from the NBC4 features. This page becomes the go-to resource for press, corporate partners, schools planning group visits, and values-driven shoppers.</p>
+        <div class="opp-tags">
+          <span class="tag mid-impact">Brand Building</span>
+          <span class="tag easy">Quick Win</span>
+        </div>
+      </div>
+
+      <div class="opp-card">
+        <h4>5. Social Media Hub + UGC Gallery</h4>
+        <p>Integrate a "Best Finds" gallery fed by customer-submitted photos and social posts. Create a branded hashtag (#BINABLEfinds) and feature the best submissions on the website. This creates a virtuous cycle: customers share their hauls on social, the best ones get featured on the website, which drives more sharing. Free, authentic marketing powered by your own community.</p>
+        <div class="opp-tags">
+          <span class="tag mid-impact">Steady Growth</span>
+          <span class="tag medium">Ongoing</span>
+        </div>
+      </div>
+    </div>
+
+    <h3>Why a Separate Website Matters for BINABLE</h3>
+    <p>We want to address a natural question: "We already have a page on alphagroup.net — why build a separate site?" Three reasons:</p>
+    <ul>
+      <li><strong>Different audiences.</strong> The Alpha Group's website serves donors, families, government agencies, and potential members. BINABLE's website serves bargain shoppers, pallet resellers, and social media-driven visitors. These audiences need completely different experiences.</li>
+      <li><strong>SEO independence.</strong> A subpage inherits the parent site's authority — but it also competes with it. BINABLE on its own domain builds its own search authority for retail-related terms that alphagroup.net will never rank for.</li>
+      <li><strong>Brand identity.</strong> BINABLE has its own logo, its own vibe, its own audience. It deserves its own digital home that reflects that identity — energetic, colorful, deal-focused — while still clearly connecting back to the Alpha Group's mission.</li>
+    </ul>
+  </section>
+
+  <!-- 07: HOW THIS WORKS -->
+  <section>
+    <h2><span class="number">07</span>How This <em>Works</em></h2>
+
+    <p>We know retail operations are busy — especially when you're managing inventory drops, a team, and a store that's open seven days a week. Our process is designed to be efficient and respectful of your time:</p>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="week">Week 1</div>
+        <div class="task">Discovery &amp; Brand Session</div>
+        <div class="detail">A 45-minute sit-down with Jessica, Zach, and any Alpha Group leadership who'd like to participate. We'll discuss the BINABLE brand, the customer experience, the mission, and your goals. We'll photograph the store, the bins, the team, and the daily energy that makes BINABLE special. You show us the vibe — we capture it digitally.</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="week">Week 2</div>
+        <div class="task">Design &amp; Content</div>
+        <div class="detail">We design a site that matches BINABLE's energy — vibrant, fun, and mission-forward. All content is written by our team, inspired by your existing copy and brand voice. We'll create the pricing visual, the "How It Works" guide, and the mission storytelling page. You review and approve.</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="week">Weeks 3-4</div>
+        <div class="task">Build &amp; Integrate</div>
+        <div class="detail">Full development with email/SMS signup integration, Google Business optimization, schema markup, and social media connections. We'll set up the weekly notification system so new drops go out automatically. Mobile-first design that loads fast for shoppers scrolling on their phones.</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="week">Week 5</div>
+        <div class="task">Launch &amp; Activate</div>
+        <div class="detail">Site goes live. We coordinate with your social accounts to announce the launch, set up the first weekly drop notification, and ensure Google is indexing everything properly. In-store signage with QR codes for email signup turns every shopper into a subscriber.</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="week">Ongoing</div>
+        <div class="task">Grow &amp; Optimize</div>
+        <div class="detail">Monthly performance check-ins, content updates, seasonal promotions support, and email list growth tracking. As your subscriber base grows, we'll help with special campaigns — holiday sales, back-to-school events, anniversary celebrations — that drive foot traffic spikes.</div>
+      </div>
+    </div>
+  </section>
+
+
+    <h3>What We'll Need From You</h3>
+    <p>We designed this process to require minimal time from your team. Here's the full list:</p>
+    <ul>
+      <li><strong>One 45-minute discovery session</strong> — at the store, ideally during setup for a Friday drop so we can capture the energy.</li>
+      <li><strong>Photo/video access</strong> — 30 minutes of our photographer capturing the store, bins, team, and shoppers (with permission).</li>
+      <li><strong>Brand assets</strong> — BINABLE logo files, any existing brand guidelines, and the pricing schedule graphics you're already using on social.</li>
+      <li><strong>Feedback on mockup</strong> — a 15-20 minute review of the design before we build.</li>
+      <li><strong>Google Business access</strong> — so we can optimize the profile on your behalf.</li>
+    </ul>
+    <p>Total time commitment from the BINABLE team: <strong>under 3 hours</strong> across the entire engagement.</p>
+
+
+  <!-- 08: BEYOND THE WEBSITE -->
+  <section>
+    <h2><span class="number">08</span>Beyond the <em>Website</em></h2>
+    <p>A website is just the hub. Here's the full ecosystem that would turn BINABLE from a local secret into a regional destination:</p>
+
+    <div class="icon-card-grid">
+
+      <div class="icon-card">
+        <span class="material-icons">location_on</span>
+        <h4>Google Business Profile</h4>
+        <p>Fully optimized with professional store photos, weekly Google Posts for new drops, complete categories, Q&amp;A management, and event posts for special sales. Put BINABLE in the map pack for every "bin store" and "discount store" search in the Columbus metro.</p>
+      </div>
+
+      <div class="icon-card">
+        <span class="material-icons">notifications_active</span>
+        <h4>Weekly Drop Alerts</h4>
+        <p>Email and SMS notifications every Friday morning: "New bins just dropped at BINABLE." Include a teaser of categories (electronics, home goods, toys) to build excitement. This single feature could drive 20-30% more foot traffic on Fridays.</p>
+      </div>
+
+      <div class="icon-card">
+        <span class="material-icons">videocam</span>
+        <h4>Social Video Strategy</h4>
+        <p>Short-form videos are BINABLE's superpower. Bin reveal videos, employee spotlights, customer haul reactions, and "will it work?" product tests. TikTok and Instagram Reels with a consistent posting schedule turn casual followers into weekly shoppers.</p>
+      </div>
+
+      <div class="icon-card">
+        <span class="material-icons">favorite</span>
+        <h4>Mission Marketing</h4>
+        <p>The Alpha Group story is your competitive moat. Monthly impact updates — "This month, BINABLE created 120 hours of employment for team members with disabilities" — give shoppers a reason to choose you over every for-profit competitor, every time.</p>
+      </div>
+
+      <div class="icon-card">
+        <span class="material-icons">groups</span>
+        <h4>Community &amp; Events</h4>
+        <p>Host "BINABLE After Hours" preview events for email subscribers, partner with local schools for field trips, organize seasonal charity drives. Each event generates press, social content, and deepens community loyalty. The new larger space makes this possible.</p>
+      </div>
+
+      <div class="icon-card">
+        <span class="material-icons">handshake</span>
+        <h4>Corporate Partnerships</h4>
+        <p>A professional website with impact metrics makes it easy to approach corporate sponsors. Companies looking for community impact partnerships — especially around disability employment — need a polished digital presentation to share with their leadership teams.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 09: REVENUE IMPACT -->
+  <section>
+    <h2><span class="number">09</span>What This Could <em>Mean</em></h2>
+
+    <p>Bin stores operate on volume — lots of transactions at lower price points. The math is straightforward: more foot traffic equals more revenue. Let's look at what a dedicated digital presence could mean for BINABLE:</p>
+
+    <div class="score-grid">
+      <div class="score-card">
+        <div class="label">Avg. Transaction</div>
+        <div class="value">$15-$30</div>
+        <div class="note">Per visit estimate</div>
+      </div>
+      <div class="score-card">
+        <div class="label">Current Discovery</div>
+        <div class="value">Social</div>
+        <div class="note">+ word of mouth</div>
+      </div>
+      <div class="score-card">
+        <div class="label">Email List</div>
+        <div class="value">0</div>
+        <div class="note">No capture system</div>
+      </div>
+      <div class="score-card">
+        <div class="label">Repeat Visit Rate</div>
+        <div class="value">High</div>
+        <div class="note">Bin stores build habits</div>
+      </div>
+    </div>
+
+    <h3>The Email/SMS Multiplier</h3>
+    <p>The biggest revenue lever for a bin store isn't attracting brand-new customers — it's <strong>getting existing customers to come back more often.</strong> A weekly "New Bins Dropped" notification to an email/SMS list converts at dramatically higher rates than any other marketing channel. Industry data suggests that email marketing generates $36 for every $1 spent — and for a weekly-inventory business like BINABLE, the ROI is even higher because the urgency is built in.</p>
+
+    <p>Conservatively, if a standalone website with email capture builds a subscriber list of <strong>1,000 locals within the first 6 months</strong> (very achievable given your foot traffic and social following), and even 15% of those subscribers make an additional visit per month they otherwise wouldn't have, that's 150 extra visits per month at an average of $20-$25 per visit.</p>
+
+    <div class="revenue-box">
+      <div class="rev-label">Estimated Additional Annual Revenue from Digital Presence</div>
+      <div class="rev-amount">$45K — $90K+</div>
+      <div class="rev-note">From increased foot traffic via email/SMS, Google search, and improved social conversion. Conservative estimate based on 1,000+ subscribers.</div>
+    </div>
+
+    <h3>Beyond Revenue: The Mission Multiplier</h3>
+    <p>More revenue for BINABLE means more employment hours for Alpha Group members. It means the store can hire additional team members with disabilities. It means the Alpha Group's mission reaches further. A professional website doesn't just grow a retail business — it <strong>amplifies the impact of a 55-year-old nonprofit</strong> serving some of the most underserved members of the community.</p>
+
+    <p>And there's a fundraising angle too. A polished BINABLE website with impact metrics, employee stories, and the NBC4 coverage prominently featured becomes a powerful tool for the Alpha Group's development team. Corporate donors and grant-makers want to see tangible, community-facing programs — and BINABLE is exactly that.</p>
+
+
+    <h3>The Community Ripple Effect</h3>
+    <p>BINABLE's impact extends far beyond the store walls. Consider the ripple effects of a thriving, digitally-visible BINABLE:</p>
+    <ul>
+      <li><strong>More foot traffic = more employment hours.</strong> As revenue grows, the store can schedule more shifts, hire additional team members, and provide more training opportunities for Alpha Group members developing workplace skills.</li>
+      <li><strong>Press and media coverage.</strong> A professional digital presence makes it dramatically easier for journalists to find and write about BINABLE. The NBC4 features were great — a website with press kit materials, downloadable photos, and impact statistics makes the next story even easier to produce.</li>
+      <li><strong>Grant and funding leverage.</strong> Nonprofits that can demonstrate community engagement, revenue growth, and measurable impact metrics are more competitive for grants. A website with analytics showing visitor growth, subscriber counts, and community reach becomes part of the Alpha Group's funding narrative.</li>
+      <li><strong>Volunteer and donor pipeline.</strong> Visitors to a BINABLE website who learn about the Alpha Group's mission may become donors, volunteers, or advocates for disability services — even if they initially came just for bargains.</li>
+      <li><strong>Model for replication.</strong> If BINABLE succeeds at scale, the model could be replicated by the Alpha Group in other communities — or become a template for other disability services organizations nationwide. A professional digital presence is essential for that kind of visibility.</li>
+    </ul>
+
+    <div class="callout">
+      <strong>Important note:</strong> Revenue projections use conservative assumptions and ranges. Actual results depend on subscriber growth, marketing execution, and in-store experience. What we can say with confidence is that BINABLE is leaving significant money — and mission impact — on the table by not having a standalone digital presence to capture and nurture its growing audience.
+    </div>
+  </section>
+
+  <!-- 10: WHY ASPIRE DIGITAL + CTA -->
+  <section>
+    <h2><span class="number">10</span>Why <em>Aspire Digital</em></h2>
+
+    <p>Aspire Digital works with local businesses that are great at what they do but haven't had the time or resources to build the digital presence they deserve. BINABLE is a perfect example: the in-store experience is excellent, the mission is powerful, the community response has been overwhelming — and the digital infrastructure hasn't caught up yet.</p>
+
+    <p>What drew us to BINABLE isn't just the retail concept — it's the <strong>purpose behind it.</strong> We've built sites for trades businesses, salons, and restaurants. But a mission-driven retail operation that creates employment for people with disabilities? That's the kind of project our team gets genuinely excited about. The story practically writes itself — it just needs a proper stage.</p>
+
+    <p>We'd approach a BINABLE website differently than a typical retail site. The design needs to be energetic and fun — matching the in-store energy of digging through bins and finding hidden gems. But it also needs moments of depth where the mission story shines through. The employee profiles. The Alpha Group's 55-year history. The NBC4 coverage. The impact numbers. All woven together so that a first-time visitor leaves thinking: "I need to go check this place out — and I feel good about spending my money there."</p>
+
+    <p>We also understand that BINABLE operates within a nonprofit structure, which means budget considerations matter. We'd work with the Alpha Group to find the right scope and investment level — we're not interested in selling you things you don't need.</p>
+
+
+    <p>A few things about how we work:</p>
+    <ul>
+      <li><strong>Nonprofit-friendly pricing.</strong> We understand budget realities for organizations like the Alpha Group. We'll scope the project to deliver maximum impact at a level that works for your organization.</li>
+      <li><strong>You own everything.</strong> Your domain, your website, your email list, your content — all yours, always. If you ever want to move on, everything transfers cleanly.</li>
+      <li><strong>We build for independence.</strong> Our goal is to hand you a website you can maintain with minimal ongoing support. Weekly bin drop posts should be as easy as posting to Facebook.</li>
+      <li><strong>Local team, local commitment.</strong> We're not a remote agency across the country. We're here in Ohio, invested in the communities we serve — much like the Alpha Group itself.</li>
+    </ul>
+
+    <div class="cta-box">
+      <div class="cta-heading">Let's Give BINABLE Its Own <em>Home</em></div>
+      <p class="cta-sub">No pressure, no corporate pitch — just a conversation about building a digital presence that matches the energy and purpose of what you've already created.</p>
+      <a href="https://madebyaspire.com/book" class="cta-button" target="_blank">Book a Free Strategy Call</a>
+      <p class="cta-or">or email <a href="mailto:Chris@aspiredigital.dev">Chris</a> directly</p>
+    </div>
+  </section>
+
+</div>
+
+
+    <p>The bin store industry in Central Ohio is still young — which means the businesses that invest in digital infrastructure now will have a lasting first-mover advantage. BINABLE has something none of the for-profit competitors can manufacture: a genuine, 55-year-old mission that makes every purchase meaningful. That story, told on the right platform, is the kind of competitive moat that lasts.</p>
+
+    <p>Every week that passes without a standalone digital presence is a week of missed email signups, missed Google searches, and missed opportunities to convert social media followers into loyal weekly shoppers. The momentum from the new location, the NBC4 coverage, and the growing community buzz is real — it just needs a digital home to live in.</p>
+
+
+
+<!-- FOOTER -->
+<div class="footer">
+  <p>Prepared by <strong>Aspire Digital</strong> &middot; <a href="https://madebyaspire.com">madebyaspire.com</a></p>
+  <p style="margin-top:8px">Questions? Reach out to <a href="mailto:Chris@aspiredigital.dev">Chris</a> &middot; <a href="mailto:Chris@aspiredigital.dev">Chris@aspiredigital.dev</a></p>
+  <p style="margin-top:12px;font-size:11px;color:var(--text-muted)">&copy; 2026 Aspire Digital &middot; This brief was prepared exclusively for BINABLE by The Alpha Group</p>
+</div>
+
+</body>
+</html>
