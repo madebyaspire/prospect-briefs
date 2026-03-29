@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Office City Express — Digital Growth Brief | Aspire Digital</title>
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<!-- Open Graph / iMessage / SMS preview -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Office City Express — Your Digital Growth Opportunity">
+<meta property="og:description" content="We took a deep look at Office City Express's online presence and found some exciting opportunities. Here's what we found.">
+<meta property="og:image" content="https://yoursite.madebyaspire.com/office-city-express/welcome/og-card.png">
+<meta property="og:url" content="https://yoursite.madebyaspire.com/office-city-express/welcome/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Office City Express — Your Digital Growth Opportunity">
+<meta name="twitter:description" content="A personalized digital review prepared by Aspire Digital.">
+<meta name="twitter:image" content="https://yoursite.madebyaspire.com/office-city-express/welcome/og-card.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FAF0E2;
+    --bg-alt: #F2EDE6;
+    --text: #2C3340;
+    --text-sec: #666666;
+    --text-muted: #999999;
+    --accent: #C4622D;
+    --accent-dark: #B53D00;
+    --border: #E5E5E5;
+    --border-light: #F0F0F0;
+    --green: #4a7b5a;
+    --hero-green: #8FAF8A;
+    --white: #ffffff;
+    --font: 'DM Sans', system-ui, -apple-system, sans-serif;
+    --font-head: 'Montserrat', system-ui, sans-serif;
+    --font-accent: 'Playfair Display', Georgia, serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 15px;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection { background: var(--accent); color: #fff; }
+
+  /* PAGE HEADER */
+  .page-header {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 48px;
+  }
+  .page-header-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .page-header .aspire-logo {
+    width: 200px;
+    height: auto;
+  }
+
+  /* HERO */
+  .hero {
+    background: var(--hero-green);
+    text-align: center;
+    padding: 60px 48px 80px;
+    position: relative;
+  }
+  .hero h1 {
+    font-family: var(--font-head);
+    font-weight: 800;
+    font-size: clamp(36px, 6vw, 56px);
+    color: var(--accent);
+    line-height: 1.08;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+  }
+  .hero .sub {
+    font-family: var(--font-head);
+    font-weight: 600;
+    font-size: clamp(18px, 3vw, 24px);
+    color: #2C3340;
+    margin-bottom: 4px;
+    letter-spacing: -0.01em;
+  }
+  .hero .accent-word {
+    font-family: var(--font-accent);
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(36px, 6vw, 56px);
+    color: var(--white);
+    line-height: 1.08;
+  }
+  .hero .body-text {
+    color: var(--white);
+    font-size: 17px;
+    max-width: 540px;
+    margin: 28px auto 0;
+    line-height: 1.7;
+  }
+
+  /* ARC DIVIDER — matches AD site */
+  .hero-arc {
+    margin-top: -1px;
+    background: var(--hero-green);
+  }
+  .hero-arc svg {
+    display: block;
+    width: 100%;
+    height: 80px;
+  }
+
+  /* CONTAINER */
+  .container {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  /* META BAR */
+  .meta-bar {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 32px 0 20px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 56px;
+    font-size: 13px;
+    color: var(--text-muted);
+    letter-spacing: 0.3px;
+  }
+  .meta-bar strong { color: var(--text); font-weight: 600; }
+  .meta-bar a { color: var(--accent); text-decoration: none; }
+
+  /* SECTIONS */
+  section { margin-bottom: 64px; }
+
+  h2 {
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: clamp(24px, 3.5vw, 32px);
+    color: var(--text);
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+  }
+  h2 .number {
+    font-family: var(--font);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+  }
+  h2 em {
+    font-family: var(--font-accent);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--accent);
+  }
+
+  h3 {
+    font-family: var(--font-head);
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin: 32px 0 12px;
+  }
+
+  p { margin-bottom: 16px; color: var(--text-sec); }
+  p strong { color: var(--text); }
+  ul { margin: 0 0 16px 20px; }
+  li { margin-bottom: 6px; color: var(--text-sec); }
+  li strong { color: var(--text); }
+
+  .paw { font-size: 0.85em; }
+
+  /* CALLOUT */
+  .callout {
+    background: var(--bg-alt);
+    border-left: 3px solid var(--accent);
+    padding: 20px 24px;
+    margin: 24px 0;
+    font-size: 0.9rem;
+    border-radius: 0 12px 12px 0;
+    color: var(--text-sec);
+  }
+  .callout strong { color: var(--text); }
+
+  /* PILL TAGS */
+  .tag {
+    display: inline-block;
+    padding: 4px 14px;
+    border-radius: 9999px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .tag.easy { background: #e8f5e9; color: #2e7d32; }
+  .tag.medium { background: #fff3e0; color: #e65100; }
+  .tag.high { background: var(--accent); color: white; }
+  .tag.mid-impact { background: #e3f2fd; color: #1565c0; }
+
+  /* SCORE CARDS */
+  .score-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 16px;
+    margin: 24px 0;
+  }
+  .score-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 24px 16px;
+    text-align: center;
+    border: 1px solid var(--border-light);
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+  .score-card:hover {
+    box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+    transform: translateY(-2px);
+  }
+  .score-card .label {
+    font-family: var(--font-head);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+  }
+  .score-card .value {
+    font-family: var(--font-head);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent);
+  }
+  .score-card .note {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 4px;
+  }
+
+  /* BAR CHART */
+  .bar-chart { margin: 24px 0; }
+  .bar-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  .bar-row .bar-label {
+    width: 160px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text);
+    flex-shrink: 0;
+  }
+  .bar-row .bar-track {
+    flex: 1;
+    height: 28px;
+    background: var(--bg-alt);
+    border-radius: 14px;
+    overflow: hidden;
+    margin: 0 12px;
+  }
+  .bar-row .bar-fill {
+    height: 100%;
+    border-radius: 14px;
+  }
+  .bar-row .bar-val {
+    width: 40px;
+    font-family: var(--font-head);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-align: right;
+  }
+
+  /* COMPARE CARDS */
+  .compare-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin: 24px 0;
+  }
+  .compare-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 24px 20px;
+    border: 1px solid var(--border-light);
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+  .compare-card:hover {
+    box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+    transform: translateY(-2px);
+  }
+  .compare-card.you {
+    border: 2px solid var(--accent);
+    background: #FFF9F5;
+  }
+  .compare-card .comp-name {
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--text);
+    margin-bottom: 14px;
+  }
+  .compare-card .comp-stat {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    padding: 5px 0;
+    border-bottom: 1px solid var(--border-light);
+  }
+  .compare-card .comp-stat:last-child { border-bottom: none; }
+  .compare-card .comp-stat .stat-label { color: var(--text-muted); }
+  .compare-card .comp-stat .stat-val { font-weight: 600; }
+  .stat-val.good { color: var(--green); }
+  .stat-val.mid { color: #b8860b; }
+  .stat-val.low { color: #c44; }
+
+  /* KEYWORD CARDS */
+  .kw-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 10px;
+    margin: 24px 0;
+  }
+  .kw-card {
+    background: var(--white);
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    padding: 14px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: box-shadow 0.3s;
+  }
+  .kw-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.05); }
+  .kw-card .kw-term {
+    font-weight: 500;
+    font-size: 13px;
+    color: var(--text);
+  }
+  .kw-card .kw-vol {
+    font-size: 11px;
+    color: var(--text-muted);
+    white-space: nowrap;
+    margin-left: 12px;
+  }
+  .kw-card .kw-vol strong {
+    font-family: var(--font-head);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--accent);
+  }
+
+  /* TIMELINE */
+  .timeline {
+    position: relative;
+    margin: 24px 0;
+    padding-left: 36px;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    bottom: 8px;
+    width: 2px;
+    background: var(--border);
+  }
+  .timeline-item {
+    position: relative;
+    margin-bottom: 32px;
+  }
+  .timeline-item:last-child { margin-bottom: 0; }
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -32px;
+    top: 6px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 3px solid var(--bg);
+    box-shadow: 0 0 0 2px var(--accent);
+  }
+  .timeline-item .week {
+    font-family: var(--font-head);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 4px;
+  }
+  .timeline-item .task {
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--text);
+    margin-bottom: 4px;
+    line-height: 1.3;
+  }
+  .timeline-item .detail {
+    font-size: 14px;
+    color: var(--text-sec);
+    line-height: 1.65;
+  }
+
+  /* OPPORTUNITY CARDS */
+  .opp-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    margin: 24px 0;
+  }
+  .opp-card {
+    background: var(--white);
+    border: 1px solid var(--border-light);
+    border-radius: 16px;
+    padding: 28px 24px;
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+  .opp-card:hover {
+    box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+    transform: translateY(-2px);
+  }
+  .opp-card h4 {
+    font-family: var(--font-head);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 8px;
+  }
+  .opp-card p { font-size: 13px; color: var(--text-sec); margin-bottom: 14px; }
+  .opp-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+
+  /* REVENUE BOX */
+  .revenue-box {
+    background: var(--green);
+    color: white;
+    border-radius: 16px;
+    padding: 48px 40px;
+    text-align: center;
+    margin: 32px 0;
+  }
+  .revenue-box .rev-label {
+    font-family: var(--font-head);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    opacity: 0.7;
+    margin-bottom: 8px;
+  }
+  .revenue-box .rev-amount {
+    font-family: var(--font-head);
+    font-size: clamp(40px, 8vw, 56px);
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 8px;
+    letter-spacing: -0.02em;
+  }
+  .revenue-box .rev-note {
+    font-size: 14px;
+    opacity: 0.7;
+  }
+
+  /* LOGO SHOWCASE */
+  .logo-showcase {
+    background: var(--bg-alt);
+    border-radius: 16px;
+    padding: 36px;
+    text-align: center;
+    margin: 24px 0;
+  }
+  .logo-showcase img {
+    max-width: 180px;
+    border-radius: 12px;
+    margin: 16px 0;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  }
+  .logo-showcase .caption {
+    font-size: 13px;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-top: 8px;
+  }
+
+  /* CTA BOX */
+  .cta-box {
+    text-align: center;
+    border: 2px solid var(--accent);
+    border-radius: 16px;
+    padding: 40px 32px;
+    margin: 32px 0;
+  }
+  .cta-box .cta-heading {
+    font-family: var(--font-head);
+    font-size: clamp(20px, 3vw, 28px);
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 8px;
+    line-height: 1.2;
+  }
+  .cta-box .cta-heading em {
+    font-family: var(--font-accent);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--accent);
+  }
+  .cta-box .cta-sub {
+    color: var(--text-muted);
+    margin-bottom: 24px;
+  }
+  .cta-button {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--white);
+    padding: 16px 40px;
+    border-radius: 9999px;
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+  }
+  .cta-button:hover {
+    background: var(--accent-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(196,98,45,0.3);
+  }
+  .cta-or {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: 16px;
+    margin-bottom: 0;
+  }
+  .cta-or a { color: var(--accent); text-decoration: none; }
+
+  /* SCREENSHOT FRAME */
+  .screenshot-frame {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 8px;
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    margin: 16px 0;
+    overflow: hidden;
+  }
+
+  /* DIVIDER */
+  .divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 56px 0;
+  }
+
+  /* FOOTER */
+  .footer {
+    background: var(--bg);
+    text-align: center;
+    padding: 32px 48px;
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 13px;
+  }
+  .footer a { color: var(--accent); text-decoration: none; }
+
+  /* RESPONSIVE */
+  @media (max-width: 640px) {
+    .hero { padding: 40px 20px 60px; }
+    .hero-logo { width: 200px; }
+    .hero h1 { font-size: 32px; }
+    .hero .accent-word { font-size: 32px; }
+    .container { padding: 0 20px; }
+    .meta-bar { flex-direction: column; gap: 8px; }
+    .compare-grid { grid-template-columns: 1fr; }
+    .bar-row .bar-label { width: 100px; font-size: 11px; }
+    .score-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  /* ── Section 08: Beyond the Website — Icon Cards ── */
+  .icon-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 32px;
+  }
+  @media (max-width: 700px) {
+    .icon-card-grid { grid-template-columns: 1fr; }
+  }
+  .icon-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 36px 28px 32px;
+    text-align: center;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+  .icon-card .material-icons {
+    font-size: 42px;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 16px;
+  }
+  .icon-card h4 {
+    font-family: var(--font-head);
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text);
+    margin: 0 0 12px;
+  }
+  .icon-card p {
+    font-size: 13.5px;
+    color: var(--text-sec);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+</style>
+</head>
+<body>
+<div class="page-header"><div class="page-header-inner">
+  <img class="aspire-logo" src="/assets/aspire-logo.svg" alt="Aspire Digital">
+</div></div>
+
+<div class="hero">
+  <h1>OFFICE CITY EXPRESS</h1>
+  <div class="sub">Your business deserves a website that</div>
+  <div class="accent-word">delivers.</div>
+  <div class="body-text">
+    Nearly four decades of serving Central Ohio businesses. A merger that expands your capabilities. Now it's time for a digital presence that matches the momentum.
+  </div>
+</div>
+
+<div class="hero-arc">
+  <svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,120 C480,0 960,0 1440,120 L1440,120 L0,120 Z" fill="#FAF0E2"/>
+  </svg>
+</div>
+
+<div class="container">
+  <div class="meta-bar">
+    <span><strong>Date:</strong> March 29, 2026</span>
+    <span><strong>By:</strong> <a href="https://madebyaspire.com" target="_blank">madebyaspire.com</a></span>
+  </div>
+
+  <!-- 01: THE HONEST PICTURE -->
+  <section>
+    <h2><span class="number">01</span>The Honest Picture</h2>
+
+    <p>Office City Express is a <strong>family-owned office supply and furniture dealer</strong> that has been serving Central Ohio businesses since 1985. Based at <strong>2097 London Road, Suite G, in Delaware, Ohio</strong>, the company carries everything from staples, copy paper, toner, and filing supplies to rubber stamps, imprinted goods, office snacks, janitorial supplies, and safety equipment. Under the leadership of owner <strong>Andrew Ives</strong> and VP of Sales <strong>Michelle Ives</strong>, the business has built its reputation on relationships, personal service, and a deep understanding of what Ohio businesses actually need to run their offices.</p>
+
+    <p>That is not a small thing. In a world where Amazon can deliver office supplies to your door in 24 hours and Office Depot has a location on Sunbury Road, the fact that Office City Express has survived and thrived for <strong>nearly 40 years</strong> says something important about how they treat their customers. They compete on knowing your name, understanding your reorder patterns, and solving problems before they become emergencies.</p>
+
+    <p>And now, something significant has happened: on <strong>March 16, 2026</strong>, Office City Express announced a <strong>strategic merger with FriendsOffice</strong>, a leading Ohio-based office products and workplace solutions provider. This merger brings expanded capabilities including commercial print services, promotional products, and an expanded selection of janitorial and facility supplies. Many familiar Office City Express team members will continue serving customers as part of the combined organization.</p>
+
+    <p>As Andrew Ives himself stated: <em>"For nearly four decades, we have built our business on relationships, service, and local commitment. By joining forces with FriendsOffice, we are able to bring our customers expanded services and greater resources while maintaining the continuity and personal support they expect."</em></p>
+
+    <p>This merger represents a major growth moment for Office City Express and it makes the need for a strong digital presence more urgent than ever. New capabilities need new visibility. Expanded services need a platform to showcase them. And the combined customer base across Columbus, Chillicothe, Marysville, Delaware, and Marion needs a modern, functional website where they can discover what is now possible.</p>
+
+    <div class="score-grid">
+      <div class="score-card">
+        <div class="label">Years in Business</div>
+        <div class="value">39</div>
+        <div class="note">Family-owned since 1985</div>
+      </div>
+      <div class="score-card">
+        <div class="label">Service Area</div>
+        <div class="value">Central OH</div>
+        <div class="note">Columbus, Delaware, Marion +</div>
+      </div>
+      <div class="score-card">
+        <div class="label">2026 Merger</div>
+        <div class="value">FriendsOffice</div>
+        <div class="note">Expanded capabilities</div>
+      </div>
+      <div class="score-card">
+        <div class="label">Chamber Status</div>
+        <div class="value">Active</div>
+        <div class="note">Delaware Area Chamber</div>
+      </div>
+    </div>
+
+    <h3>What Office City Express Actually Offers</h3>
+    <p>The product and service range is much broader than most people realize. Office City Express is a comprehensive workplace solutions provider:</p>
+    <ul>
+      <li><strong>Office supplies:</strong> Paper, toner, ink, filing supplies, binders, writing instruments, desk accessories, and the full range of daily office consumables</li>
+      <li><strong>Office furniture:</strong> Desks, chairs, conference tables, filing cabinets, reception furniture, from individual pieces to full office fit-outs</li>
+      <li><strong>Janitorial and facility supplies:</strong> Cleaning products, trash bags, paper towels, sanitizers, floor care, everything to keep a facility running</li>
+      <li><strong>Safety equipment:</strong> PPE, first aid supplies, safety signage, protective gear, essential for manufacturing, construction, and warehouse environments</li>
+      <li><strong>Imprinted goods and rubber stamps:</strong> Custom-branded items, stamps, and promotional products</li>
+      <li><strong>Office snacks and breakroom supplies:</strong> Coffee, water, snacks, cups, plates, keeping the breakroom stocked</li>
+      <li><strong>Technology:</strong> Printers, cables, chargers, tech accessories, the hardware that keeps offices connected</li>
+    </ul>
+    <p>With the FriendsOffice merger, this list now expands to include <strong>commercial print services</strong> and a broader range of <strong>promotional products</strong>, capabilities that position the combined company as a true one-stop workplace solutions provider.</p>
+
+    <h3>The Ives Family Legacy</h3>
+    <p>Family-owned businesses do not survive for 39 years by accident. The Ives family has navigated the rise of big-box office stores, the Amazon revolution, the shift to remote work, and the post-pandemic office transformation. Each of these disruptions eliminated competitors. Office City Express adapted and survived because of something the big players cannot replicate: <strong>genuine relationships with the businesses they serve.</strong></p>
+    <p>That said, the digital landscape has fundamentally changed how B2B buyers discover and evaluate suppliers. Even the most loyal customers sometimes Google "office supplies Delaware OH" and right now, what they find is not Office City Express.</p>
+
+    <div class="callout">
+      <strong>The bottom line:</strong> Office City Express has the products, the relationships, the history, and now through the FriendsOffice merger the expanded capabilities to serve Central Ohio businesses better than ever. The gap is digital. The website is not functioning properly, the online presence is thin, and potential customers who search cannot find what Office City Express actually offers.
+    </div>
+  </section>
+
+  <!-- 02: YOUR SCORECARD -->
+  <section>
+    <h2><span class="number">02</span>Your Digital <em>Scorecard</em></h2>
+
+    <div class="site-screenshot">
+      <h3>Your Current Website</h3>
+      <div class="screenshot-frame">
+        <img src="./office-city-express-screenshot.png" alt="Office City Express current website" style="width:100%;border-radius:8px;border:1px solid var(--border)">
+      </div>
+      <p style="text-align:center;font-size:12px;color:var(--text-muted);margin-top:8px">Captured March 29, 2026</p>
+    </div>
+
+    <p>Office City Express has a website at officecityexpress.com but there is a critical problem. <strong>The site is blocked by a bot challenge page</strong> that requires visitors to solve a math problem before they can access any content. This means search engines cannot crawl the site, and many customers, especially those on mobile or using assistive technology, may never get past the front door.</p>
+
+    <div class="score-grid">
+      <div class="score-card">
+        <div class="label">Website</div>
+        <div class="value" style="color:#b8860b">Blocked</div>
+        <div class="note">Bot challenge blocks access</div>
+      </div>
+      <div class="score-card">
+        <div class="label">Google Business</div>
+        <div class="value" style="color:#b8860b">Basic</div>
+        <div class="note">Exists but underoptimized</div>
+      </div>
+      <div class="score-card">
+        <div class="label">Yelp</div>
+        <div class="value" style="color:#c44">Unclaimed</div>
+        <div class="note">No reviews, no photos</div>
+      </div>
+      <div class="score-card">
+        <div class="label">SEO</div>
+        <div class="value" style="color:#c44">Poor</div>
+        <div class="note">Cannot be crawled</div>
+      </div>
+    </div>
+
+    <h3>The Bot Challenge Problem</h3>
+    <p>When someone visits officecityexpress.com, they see a math challenge ("2 + 3 = ?") and a button that says "I am human." This is a security measure but it creates several serious problems:</p>
+    <ul>
+      <li><strong>Google cannot index the site.</strong> Search engine bots cannot solve math problems, so they see an empty challenge page instead of your products and services. This means officecityexpress.com effectively does not exist in Google search results.</li>
+      <li><strong>Social media previews are broken.</strong> When someone shares your website link on Facebook, LinkedIn, or in a text message, the preview shows "Hey we just need to prove you are human" instead of your business name and description.</li>
+      <li><strong>Mobile users may bounce.</strong> A captcha-like challenge on a phone screen is friction that many users will not push through, especially if they are comparison shopping and have other options.</li>
+      <li><strong>Accessibility issues.</strong> Screen readers and assistive technology may struggle with the challenge, potentially making the site inaccessible to users with disabilities.</li>
+    </ul>
+
+    <h3>What We Found Beyond the Challenge</h3>
+    <p>Based on search engine snippets and cached data, the website behind the challenge appears to be a <strong>FriendsOffice-powered e-commerce platform</strong> (consistent with the recent merger). The snippets reference product categories including office supplies, furniture, toner, and filing supplies. The site has individual product pages with descriptions and pricing. However, the bot challenge means none of this content is accessible to search engines or easily accessible to customers.</p>
+
+    <h3>Other Online Presence</h3>
+    <ul>
+      <li><strong>Yelp (unclaimed):</strong> An auto-generated Yelp page exists at 149 Johnson Drive, Delaware, OH. It is unclaimed, has no photos, no reviews, and no business description. The "Unclaimed" badge signals to customers that the business may be inactive or does not care about its online reputation.</li>
+      <li><strong>Facebook page:</strong> Office City Express has a Facebook presence linked from the Chamber listing. Social media provides some visibility but cannot replace a functional website for B2B customers comparing suppliers.</li>
+      <li><strong>Chamber listing:</strong> The Delaware Area Chamber listing is actually one of the most informative pages about the business. It includes the address, two phone numbers, fax, hours, categories, and contact person. This directory listing should not be the primary source of business information.</li>
+      <li><strong>MapQuest listing:</strong> A basic auto-generated listing describes Office City Express as "a professional office supply store" which is useful but minimal.</li>
+    </ul>
+
+    <h3>The Address Discrepancy</h3>
+    <p>Different online sources list different addresses for Office City Express: <strong>2097 London Road, Suite G</strong> (Chamber listing) and <strong>149 Johnson Drive</strong> (Yelp, MapQuest). This inconsistency confuses both customers and search engines. NAP (Name, Address, Phone) consistency is one of the most important factors in local SEO and discrepancies actively hurt search rankings.</p>
+
+    <div class="callout">
+      <strong>The honest assessment:</strong> Office City Express has a website, but it is effectively invisible, both to search engines and to many human visitors. The bot challenge, unclaimed Yelp listing, address inconsistencies, and thin online presence create a situation where a 39-year-old business with a rich product catalog and a major merger story simply does not show up when potential customers search. This is fixable.
+    </div>
+  </section>
+
+  <!-- 03: HOW YOU STACK UP -->
+  <section>
+    <h2><span class="number">03</span>How You <em>Stack Up</em></h2>
+
+    <p>Office City Express competes in a market with both national chains and e-commerce giants. The competitive landscape tells a clear story: the businesses that survive in office supplies are those that offer something Amazon and Office Depot cannot.</p>
+
+    <div class="compare-grid">
+      <div class="compare-card you">
+        <div class="comp-name">Office City Express</div>
+        <div class="comp-stat"><span class="stat-label">Website</span><span class="stat-val low">Blocked</span></div>
+        <div class="comp-stat"><span class="stat-label">Google Reviews</span><span class="stat-val low">None visible</span></div>
+        <div class="comp-stat"><span class="stat-label">Online Ordering</span><span class="stat-val mid">Behind challenge</span></div>
+        <div class="comp-stat"><span class="stat-label">Delivery</span><span class="stat-val good">Local delivery</span></div>
+        <div class="comp-stat"><span class="stat-label">Service</span><span class="stat-val good">Personal, local</span></div>
+        <div class="comp-stat"><span class="stat-label">Product Range</span><span class="stat-val good">Full catalog + furniture</span></div>
+      </div>
+      <div class="compare-card">
+        <div class="comp-name">OfficeMax / Office Depot</div>
+        <div class="comp-stat"><span class="stat-label">Website</span><span class="stat-val good">Professional</span></div>
+        <div class="comp-stat"><span class="stat-label">Google Reviews</span><span class="stat-val good">4.6 stars (5)</span></div>
+        <div class="comp-stat"><span class="stat-label">Online Ordering</span><span class="stat-val good">Full e-commerce</span></div>
+        <div class="comp-stat"><span class="stat-label">Delivery</span><span class="stat-val good">Same-day available</span></div>
+        <div class="comp-stat"><span class="stat-label">Service</span><span class="stat-val mid">Corporate retail</span></div>
+        <div class="comp-stat"><span class="stat-label">Product Range</span><span class="stat-val good">Massive + tech services</span></div>
+      </div>
+      <div class="compare-card">
+        <div class="comp-name">Amazon Business</div>
+        <div class="comp-stat"><span class="stat-label">Website</span><span class="stat-val good">World-class</span></div>
+        <div class="comp-stat"><span class="stat-label">Google Reviews</span><span class="stat-val good">N/A (brand)</span></div>
+        <div class="comp-stat"><span class="stat-label">Online Ordering</span><span class="stat-val good">Best-in-class</span></div>
+        <div class="comp-stat"><span class="stat-label">Delivery</span><span class="stat-val good">Next-day / same-day</span></div>
+        <div class="comp-stat"><span class="stat-label">Service</span><span class="stat-val low">No personal service</span></div>
+        <div class="comp-stat"><span class="stat-label">Product Range</span><span class="stat-val good">Unlimited</span></div>
+      </div>
+    </div>
+
+    <h3>Where Office City Express Wins</h3>
+    <p>The independent office supply dealer has advantages that national chains and e-commerce platforms structurally cannot match:</p>
+    <ul>
+      <li><strong>Relationship-based selling.</strong> Michelle Ives knows her customers reorder patterns, preferred brands, and budget constraints. She can proactively suggest alternatives when a product is discontinued and negotiate pricing for large orders. Amazon's algorithm cannot replicate this.</li>
+      <li><strong>Local delivery with personal service.</strong> Office City Express does not just drop boxes at the door. They deliver to the desk, stock the supply closet, and check in on what is running low. For businesses that value this white-glove approach, it is worth paying a small premium.</li>
+      <li><strong>Furniture consultation.</strong> Buying office furniture online is risky because you cannot sit in a chair on Amazon. Office City Express provides in-person consultation, space planning assistance, and delivery/setup for furniture projects. This is a high-margin service that e-commerce cannot easily replicate.</li>
+      <li><strong>Combined capabilities.</strong> Post-merger with FriendsOffice, the company now offers office supplies, furniture, janitorial/facility supplies, safety equipment, commercial print services, and promotional products, all from one vendor. For an office manager who currently juggles five different suppliers, this consolidation is genuinely valuable.</li>
+    </ul>
+
+    <h3>The OfficeMax Challenge</h3>
+    <p>OfficeMax at 1000 Sunbury Road in Delaware is the most visible local competitor. They have a professional website, 4.6-star Google reviews, in-store pickup, same-day delivery options, printing services, and tech support. Their Yelp listing is claimed, has photos, and prominently displays their services.</p>
+    <p>Office City Express has advantages over OfficeMax: personal service, furniture expertise, and now broader capabilities through FriendsOffice. But <strong>none of these advantages are visible online.</strong> A business owner comparing options sees a polished OfficeMax presence and an Office City Express hidden behind a bot challenge with no reviews.</p>
+
+    <h3>The Amazon Business Threat</h3>
+    <p>Amazon Business is the existential threat to every office supply dealer. It offers unlimited selection, competitive pricing, next-day delivery, and purchase approval workflows for organizations. <strong>But it does not offer relationships, local service, furniture consultation, or the ability to consolidate supplies, janitorial, print, and promotional products under one account manager.</strong></p>
+    <p>The independent dealers who are thriving in 2026 are those who have embraced digital while doubling down on the human touch that Amazon cannot provide. Office City Express has the human touch dialed in. The digital piece is what is missing.</p>
+
+    <div class="callout">
+      <strong>The competitive reality:</strong> Office City Express does not need to beat Amazon on price or Office Depot on selection. It needs to <strong>be findable</strong> by the businesses that would prefer a local, relationship-driven supplier, and then clearly communicate the expanded value proposition that the FriendsOffice merger enables.
+    </div>
+  </section>
+
+  <!-- 04: WHAT PEOPLE ARE SEARCHING FOR -->
+  <section>
+    <h2><span class="number">04</span>What People Are <em>Searching For</em></h2>
+
+    <p>B2B office supply searches reveal a market of buyers who are actively looking for alternatives to big-box retailers and Amazon:</p>
+
+    <div class="kw-grid">
+      <div class="kw-card"><span class="kw-term">office supplies Delaware Ohio</span><span class="kw-vol">Demand: <strong>Medium</strong></span></div>
+      <div class="kw-card"><span class="kw-term">office furniture Delaware OH</span><span class="kw-vol">Demand: <strong>Medium</strong></span></div>
+      <div class="kw-card"><span class="kw-term">office supply delivery Columbus</span><span class="kw-vol">Demand: <strong>High</strong></span></div>
+      <div class="kw-card"><span class="kw-term">janitorial supplies central Ohio</span><span class="kw-vol">Demand: <strong>Medium</strong></span></div>
+      <div class="kw-card"><span class="kw-term">bulk office supplies Ohio</span><span class="kw-vol">Demand: <strong>Medium</strong></span></div>
+      <div class="kw-card"><span class="kw-term">office supply store near me</span><span class="kw-vol">Demand: <strong>Very High</strong></span></div>
+      <div class="kw-card"><span class="kw-term">commercial cleaning supplies Delaware</span><span class="kw-vol">Demand: <strong>Low-Med</strong></span></div>
+      <div class="kw-card"><span class="kw-term">office chair dealer Columbus Ohio</span><span class="kw-vol">Demand: <strong>Low-Med</strong></span></div>
+    </div>
+
+    <h3>The B2B Search Journey</h3>
+    <p>Office supply purchasing follows a different pattern than consumer shopping. Understanding this journey reveals where Office City Express is losing opportunities:</p>
+    <ul>
+      <li><strong>The dissatisfied switcher.</strong> An office manager frustrated with Amazon's inconsistent quality or Office Depot's impersonal service Googles "local office supply company Delaware Ohio." They are actively seeking what Office City Express offers but cannot find it.</li>
+      <li><strong>The new business setup.</strong> A company opening an office in Delaware County's growing commercial market needs to furnish and stock an entire workspace. They search for "office furniture and supplies Delaware OH" and find OfficeMax. Office City Express's furniture consultation service, a perfect fit, is invisible.</li>
+      <li><strong>The facility manager.</strong> A property manager responsible for janitorial supplies, safety equipment, and breakroom stocking searches for "facility supplies central Ohio." With the FriendsOffice merger, Office City Express can now serve this entire need but the search results do not reflect it.</li>
+      <li><strong>The reorder researcher.</strong> Even existing customers sometimes check pricing before reordering. If they Google your name and hit a bot challenge page, it creates doubt about whether the business is still active.</li>
+    </ul>
+
+    <h3>Content Opportunities</h3>
+    <p>Beyond product pages, there are content opportunities that would drive organic search traffic and position Office City Express as an authority:</p>
+    <ul>
+      <li><strong>"Ergonomic office setup guide for Ohio businesses"</strong> targets the growing interest in workplace wellness and positions your furniture expertise</li>
+      <li><strong>"Complete office move checklist: supplies, furniture, and facility needs"</strong> captures businesses relocating to Delaware County</li>
+      <li><strong>"Why local office supply delivery beats Amazon for Central Ohio businesses"</strong> directly addresses the comparison every buyer makes</li>
+      <li><strong>"The true cost of office supplies: bulk purchasing vs. retail"</strong> educational content that drives B2B decision-makers to your site</li>
+    </ul>
+
+    <div class="callout">
+      <strong>The search opportunity:</strong> Every day, Central Ohio businesses search for the exact products and services Office City Express provides. The bot challenge means your website is invisible to these searches. Fixing this single issue, making the site crawlable and search-engine-friendly, would unlock a steady stream of new business inquiries.
+    </div>
+  </section>
+
+  <!-- 05: THE FUTURE OF SEARCH -->
+  <section>
+    <h2><span class="number">05</span>The Future of <em>Search</em></h2>
+
+    <p>The way businesses find suppliers is changing fast. Here is what matters for Office City Express in 2026 and beyond:</p>
+
+    <h3>AI-Powered Procurement</h3>
+    <p>More businesses are using AI tools to research and compare suppliers. When a procurement manager asks ChatGPT or Copilot, "Who are the best office supply companies in Central Ohio?", the AI pulls from structured web data: company websites, Google Business Profiles, review platforms, and industry directories. Without a crawlable website and rich online content, Office City Express will not appear in any AI-generated recommendation.</p>
+    <p>This is not a future scenario. It is happening now. AI-assisted procurement is growing rapidly in the B2B space, and the companies that show up in these recommendations have a significant first-mover advantage.</p>
+
+    <h3>Voice Search and Mobile Discovery</h3>
+    <p>"Hey Google, find an office supply store near me" is a query that is growing in the B2B context as mobile becomes the primary research device even for business decisions. These queries rely on Google Business Profiles with complete, accurate information and websites with proper schema markup. Office City Express's current setup would not surface in voice search results.</p>
+
+    <h3>The Local SEO Imperative</h3>
+    <p>Google's local search algorithm rewards businesses with three things: <strong>relevance</strong> (does your content match the search?), <strong>proximity</strong> (are you near the searcher?), and <strong>prominence</strong> (do you have reviews, citations, and a strong web presence?). Office City Express has proximity in its favor. But relevance is undermined by an uncrawlable website, and prominence is undermined by zero reviews and inconsistent address listings.</p>
+
+    <h3>E-E-A-T and B2B Authority</h3>
+    <p>Google evaluates content for Experience, Expertise, Authoritativeness, and Trustworthiness (E-E-A-T). A 39-year-old family-owned office supply company with deep industry expertise has natural E-E-A-T authority but it needs to be <strong>demonstrated</strong> online through content, case studies, client testimonials, and a professional web presence. The current bot challenge page communicates none of this authority to search engines.</p>
+
+    <h3>The Merger Opportunity</h3>
+    <p>The FriendsOffice merger is actually a perfect moment for a digital reset. Rather than patching the existing website, this is an opportunity to launch a clean, modern web presence that tells the combined story: 39 years of Office City Express relationships plus FriendsOffice's expanded capabilities. This narrative of local heritage meets expanded capability is exactly the kind of story that resonates with B2B buyers who want the best of both worlds.</p>
+
+    <div class="callout">
+      <strong>Looking ahead:</strong> B2B purchasing is becoming digital-first. The businesses that will win are those that combine the personal touch of local service with the convenience and discoverability of a modern digital presence. Office City Express has the personal touch. The digital presence is the missing piece.
+    </div>
+  </section>
+
+  <!-- 06: THE OPPORTUNITY -->
+  <section>
+    <h2><span class="number">06</span>Here's What We'd <em>Actually Do</em></h2>
+
+    <p>The FriendsOffice merger creates a natural moment to launch a refreshed digital presence. Here is a focused plan to make Office City Express visible, credible, and conversion-ready online:</p>
+
+    <div class="opp-grid">
+      <div class="opp-card">
+        <h4>1. Professional Website Build</h4>
+        <p>Design and develop a clean, modern website that immediately communicates what Office City Express offers: office supplies, furniture, janitorial supplies, safety equipment, print services, and promotional products. Clear service categories, a dedicated furniture consultation page, local delivery information, and prominent contact CTAs. Most importantly: no bot challenges blocking access. Search engine crawlable, mobile-friendly, and fast-loading.</p>
+        <div class="opp-tags"><span class="tag high">High Impact</span><span class="tag medium">4-5 Weeks</span></div>
+      </div>
+      <div class="opp-card">
+        <h4>2. Google Business Profile Overhaul</h4>
+        <p>Claim and verify the Google Business Profile with the correct address, complete category list (Office Supply Store, Office Furniture Store, Janitorial Equipment Supplier), professional photos of the showroom and delivery team, updated hours, and the new website URL. Fix the address inconsistency between London Road and Johnson Drive. Weekly Google Posts showcasing product deals, furniture arrivals, and the FriendsOffice partnership.</p>
+        <div class="opp-tags"><span class="tag high">High Impact</span><span class="tag easy">Quick Win</span></div>
+      </div>
+      <div class="opp-card">
+        <h4>3. NAP Consistency Cleanup</h4>
+        <p>Audit and correct the business name, address, and phone number across all online directories: Yelp (claim the listing), MapQuest, Yellow Pages, BBB, industry directories. Ensure every listing uses the same address, phone number, and business name. This directly improves local search rankings and eliminates customer confusion.</p>
+        <div class="opp-tags"><span class="tag mid-impact">Foundation</span><span class="tag easy">Quick Win</span></div>
+      </div>
+      <div class="opp-card">
+        <h4>4. Merger Announcement Content</h4>
+        <p>Create a dedicated "Office City Express + FriendsOffice" page that tells the merger story, explains expanded capabilities, and reassures existing customers. Blog post about the combined offering. Email announcement to existing customers with the new website link. This content also serves as a press/PR asset that generates backlinks from Chamber of Commerce sites and industry publications.</p>
+        <div class="opp-tags"><span class="tag mid-impact">Brand Building</span><span class="tag easy">Quick Win</span></div>
+      </div>
+      <div class="opp-card">
+        <h4>5. Review Generation Campaign</h4>
+        <p>Implement a systematic review collection process. After deliveries, send a follow-up email with a direct Google review link. Provide Michelle with a simple text template she can send to long-term customers. Target: 15-20 reviews in the first 6 months. Even a handful of genuine reviews from local businesses would significantly boost trust and search visibility.</p>
+        <div class="opp-tags"><span class="tag high">High Impact</span><span class="tag easy">Quick Win</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07: HOW THIS WORKS -->
+  <section>
+    <h2><span class="number">07</span>How This <em>Works</em></h2>
+
+    <p>We would approach Office City Express's digital refresh in a way that is practical, efficient, and respects the fact that Andrew and Michelle are running a business, not a tech startup:</p>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="week">Week 1</div>
+        <div class="task">Discovery and Strategy</div>
+        <div class="detail">A 30-45 minute conversation with Andrew and Michelle about the business: the FriendsOffice merger details, key products and services, target customers, delivery areas, and the story they want to tell. We photograph the showroom, delivery vehicles, team, and any furniture displays. We audit all existing online listings and document the inconsistencies to fix.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="week">Week 2</div>
+        <div class="task">Design and Content</div>
+        <div class="detail">We design a clean, conversion-focused website with service category pages, a furniture consultation CTA, delivery area map, and the merger story. Content is written by our team, specific to Office City Express and not generic office supply copy. We present the design for your review and feedback.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="week">Weeks 3-4</div>
+        <div class="task">Build and Optimize</div>
+        <div class="detail">Full website development with local SEO optimization, schema markup for LocalBusiness, mobile responsiveness, and fast load times. Google Business Profile optimization. Yelp claiming and setup. NAP consistency cleanup across all directories. Review generation system setup including email templates and QR cards for deliveries.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="week">Week 5</div>
+        <div class="task">Launch and Announce</div>
+        <div class="detail">New website goes live on officecityexpress.com (or a new domain if preferred). Merger announcement published. Google Business Profile published with photos and updated information. Review collection begins with existing customers. Chamber listing updated with new website URL.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="week">Ongoing</div>
+        <div class="task">Monitor and Grow</div>
+        <div class="detail">Monthly reporting on search rankings, website traffic, and inquiry volume. Quarterly content updates highlighting new products, seasonal promotions, and client success stories. Google Posts with weekly deals and arrivals. Review monitoring and response management.</div>
+      </div>
+    </div>
+
+    <h3>What We Will Need From You</h3>
+    <ul>
+      <li><strong>One 30-45 minute conversation</strong> with Andrew and/or Michelle</li>
+      <li><strong>Access to your product catalog</strong> or a summary of key product categories and brands</li>
+      <li><strong>30 minutes to review</strong> the design mockup before build</li>
+      <li><strong>Address clarification:</strong> Is the current location 2097 London Road, Suite G or 149 Johnson Drive? (We will update all listings to match.)</li>
+      <li><strong>5-10 customer names</strong> who might leave a Google review if asked</li>
+    </ul>
+    <p>Total time commitment: <strong>under 2 hours</strong> across the entire project.</p>
+  </section>
+
+  <!-- 08: BEYOND THE WEBSITE -->
+  <section>
+    <h2><span class="number">08</span>Beyond the <em>Website</em></h2>
+    <p>A website is the foundation. Here is the full digital ecosystem that would maximize Office City Express's growth potential, especially post-merger:</p>
+
+    <div class="icon-card-grid">
+      <div class="icon-card">
+        <span class="material-icons">location_on</span>
+        <h4>Google Business Profile</h4>
+        <p>Fully optimized GBP with professional showroom photos, complete service categories, weekly Google Posts featuring product deals and new arrivals. The number one driver of local "near me" searches for office supplies and currently underutilized.</p>
+      </div>
+      <div class="icon-card">
+        <span class="material-icons">local_shipping</span>
+        <h4>Delivery Area Marketing</h4>
+        <p>Dedicated landing pages for each city you serve: Delaware, Columbus, Marion, Marysville, Chillicothe. Each page optimized for "[city] office supply delivery" searches, capturing businesses that want local service but are not in your immediate area.</p>
+      </div>
+      <div class="icon-card">
+        <span class="material-icons">email</span>
+        <h4>Email Marketing</h4>
+        <p>Monthly newsletters to existing customers featuring deals, new products, and the merger story. Automated reorder reminders based on typical purchase cycles. A channel you own that does not depend on Google's algorithm.</p>
+      </div>
+      <div class="icon-card">
+        <span class="material-icons">star</span>
+        <h4>Review Generation</h4>
+        <p>Systematic Google review collection from happy customers. Post-delivery follow-up emails with review links. Target: 25+ reviews in year one. Reviews are the number one trust signal for B2B buyers comparing local suppliers.</p>
+      </div>
+      <div class="icon-card">
+        <span class="material-icons">chair</span>
+        <h4>Furniture Showcase</h4>
+        <p>A dedicated furniture gallery on the website with photos, categories, and a "Request Consultation" CTA. Office furniture is a high-margin category where personal service beats e-commerce. Give buyers a reason to start the conversation.</p>
+      </div>
+      <div class="icon-card">
+        <span class="material-icons">handshake</span>
+        <h4>Partner / Merger Story</h4>
+        <p>Content marketing around the FriendsOffice partnership: what is new, what is expanded, why it matters for customers. This generates press coverage, backlinks from Chamber sites, and positions the company as growing and investing.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 09: REVENUE IMPACT -->
+  <section>
+    <h2><span class="number">09</span>What This Could <em>Mean</em></h2>
+
+    <p>B2B office supply relationships are high-value and long-lasting. A single business customer typically stays with their office supply vendor for <strong>3-7 years</strong>, with average monthly spending that grows over time as trust builds. Here is the revenue lens:</p>
+
+    <div class="score-grid">
+      <div class="score-card">
+        <div class="label">Avg. B2B Customer</div>
+        <div class="value">$500-$2K</div>
+        <div class="note">Monthly spend</div>
+      </div>
+      <div class="score-card">
+        <div class="label">Customer Lifetime</div>
+        <div class="value">3-7 yrs</div>
+        <div class="note">B2B retention</div>
+      </div>
+      <div class="score-card">
+        <div class="label">Customer LTV</div>
+        <div class="value">$18K-$168K</div>
+        <div class="note">Per business customer</div>
+      </div>
+      <div class="score-card">
+        <div class="label">Furniture Projects</div>
+        <div class="value">$5K-$50K+</div>
+        <div class="note">Per project</div>
+      </div>
+    </div>
+
+    <h3>Conservative Growth Scenarios</h3>
+    <p>A functional website, optimized Google presence, and review generation campaign would conservatively drive new business inquiries. Here is what even modest growth looks like:</p>
+    <ul>
+      <li><strong>3-5 new B2B accounts per month</strong> from organic search visibility. These are businesses that currently go to OfficeMax or Amazon because they cannot find Office City Express online.</li>
+      <li><strong>1-2 furniture consultation requests per month</strong> from the dedicated furniture page. These are high-margin projects averaging $10,000-$25,000 each.</li>
+      <li><strong>Reduced customer churn</strong> as existing customers can easily access their account, place reorders, and see the expanded service catalog online.</li>
+      <li><strong>Merger cross-sell opportunities</strong> as existing Office City Express customers discover FriendsOffice capabilities (print, promo products) through the new website.</li>
+    </ul>
+
+    <div class="revenue-box">
+      <div class="rev-label">Estimated Additional Annual Revenue from Digital Presence</div>
+      <div class="rev-amount">$150K - $400K+</div>
+      <div class="rev-note">From new B2B customer acquisition, furniture consultation conversions, merger cross-selling, and reduced churn. Conservative estimate based on 3-5 new accounts per month with average annual spend of $6,000-$24,000.</div>
+    </div>
+
+    <h3>The Merger Multiplier</h3>
+    <p>The FriendsOffice merger does not just add new capabilities. It creates <strong>cross-sell opportunities with every existing customer.</strong> An Office City Express customer who currently buys supplies might not know you now offer commercial print services. A FriendsOffice customer in Chillicothe might not know you have a furniture showroom in Delaware. A modern website that showcases the full combined offering turns every existing relationship into a growth opportunity.</p>
+
+    <div class="callout">
+      <strong>Important note:</strong> Revenue projections use conservative assumptions based on industry averages for independent B2B office supply dealers. Actual results depend on pricing, service quality, and market execution. The core insight is directional: Office City Express is leaving significant revenue on the table by being functionally invisible online during a period of expanded capability.
+    </div>
+  </section>
+
+  <!-- 10: WHY ASPIRE DIGITAL + CTA -->
+  <section>
+    <h2><span class="number">10</span>Why <em>Aspire Digital</em></h2>
+
+    <p>Aspire Digital builds websites and digital strategy for locally owned businesses that compete against national brands. Office City Express is exactly the kind of business we love working with: a family operation with deep expertise, loyal customers, and a real competitive advantage that just needs the digital piece to unlock its full potential.</p>
+
+    <p>We understand the B2B office supply market because we have worked with businesses across Central Ohio who face the same challenge: <strong>how do you compete with Amazon and national chains without becoming Amazon?</strong> The answer is always the same. You do not compete on their terms. You compete on relationships, expertise, and local service. But you need to be <strong>findable</strong> first.</p>
+
+    <p>The timing could not be better. The FriendsOffice merger gives Office City Express an expanded story to tell and expanded capabilities to showcase. A new website is not just a technical fix. It is the public-facing expression of a company that is growing, investing, and evolving while staying true to the family values that built the business over 39 years.</p>
+
+    <p>We would build something Andrew and Michelle are proud to send to a prospect. Something that answers the question "Why should I buy from Office City Express instead of Amazon?" within 30 seconds of landing on the homepage. Something that makes the phone ring.</p>
+
+    <ul>
+      <li><strong>B2B experience.</strong> We understand the longer sales cycles, the relationship-building, and the trust-building that B2B marketing requires. This is not a consumer website. It is a business development tool.</li>
+      <li><strong>You own everything.</strong> Your domain, your website, your content, your customer data. No vendor lock-in, no monthly platform fees beyond hosting.</li>
+      <li><strong>Ohio-based team.</strong> We are in Ohio, serving Ohio businesses. We understand the market, the competition, and what works locally.</li>
+      <li><strong>Built for operators, not tech people.</strong> Michelle does not need to learn a CMS or manage a dashboard. The website works for the business, not the other way around.</li>
+    </ul>
+
+    <div class="cta-box">
+      <div class="cta-heading">Let's Make the Next 40 Years <em>Digital</em></div>
+      <p class="cta-sub">No pressure, no jargon. Just a conversation about building a web presence that matches what Office City Express actually is: Central Ohio's most experienced office solutions partner.</p>
+      <a href="https://madebyaspire.com/book" class="cta-button" target="_blank">Book a Free Strategy Call</a>
+      <p class="cta-or">or email <a href="mailto:Chris@aspiredigital.dev">Chris</a> directly</p>
+    </div>
+  </section>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <p>Prepared by <strong>Aspire Digital</strong> &middot; <a href="https://madebyaspire.com">madebyaspire.com</a></p>
+  <p style="margin-top:8px">Questions? Reach out to <a href="mailto:Chris@aspiredigital.dev">Chris</a> &middot; <a href="mailto:Chris@aspiredigital.dev">Chris@aspiredigital.dev</a></p>
+  <p style="margin-top:12px;font-size:11px;color:var(--text-muted)">&copy; 2026 Aspire Digital &middot; This brief was prepared exclusively for Office City Express</p>
+</div>
+
+</body>
+</html>
