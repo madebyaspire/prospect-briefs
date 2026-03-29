@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blue Church Surveys — Digital Growth Brief | Aspire Digital</title>
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Blue Church Surveys — Your Digital Growth Opportunity">
+<meta property="og:description" content="We took a deep look at Blue Church Surveys' online presence and found some exciting opportunities. Here's what we found.">
+<meta property="og:image" content="https://yoursite.madebyaspire.com/blue-church-surveys/welcome/og-card.png">
+<meta property="og:url" content="https://yoursite.madebyaspire.com/blue-church-surveys/welcome/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Blue Church Surveys — Your Digital Growth Opportunity">
+<meta name="twitter:description" content="A personalized digital review prepared by Aspire Digital.">
+<meta name="twitter:image" content="https://yoursite.madebyaspire.com/blue-church-surveys/welcome/og-card.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FAF0E2; --bg-alt: #F2EDE6; --text: #2C3340; --text-sec: #666666;
+    --text-muted: #999999; --accent: #C4622D; --accent-dark: #B53D00;
+    --border: #E5E5E5; --border-light: #F0F0F0; --green: #4a7b5a;
+    --hero-green: #8FAF8A; --white: #ffffff;
+    --font: 'DM Sans', system-ui, -apple-system, sans-serif;
+    --font-head: 'Montserrat', system-ui, sans-serif;
+    --font-accent: 'Playfair Display', Georgia, serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: var(--font); background: var(--bg); color: var(--text); line-height: 1.7; font-size: 15px; font-weight: 400; -webkit-font-smoothing: antialiased; }
+  ::selection { background: var(--accent); color: #fff; }
+  .page-header { background: var(--white); border-bottom: 1px solid var(--border); padding: 16px 48px; }
+  .page-header-inner { max-width: 900px; margin: 0 auto; display: flex; align-items: center; justify-content: center; }
+  .page-header .aspire-logo { width: 200px; height: auto; }
+  .hero { background: var(--hero-green); text-align: center; padding: 60px 48px 80px; position: relative; }
+  .hero h1 { font-family: var(--font-head); font-weight: 800; font-size: clamp(36px, 6vw, 56px); color: var(--accent); line-height: 1.08; text-transform: uppercase; letter-spacing: -0.02em; margin-bottom: 8px; }
+  .hero .sub { font-family: var(--font-head); font-weight: 600; font-size: clamp(18px, 3vw, 24px); color: #2C3340; margin-bottom: 4px; letter-spacing: -0.01em; }
+  .hero .accent-word { font-family: var(--font-accent); font-style: italic; font-weight: 400; font-size: clamp(36px, 6vw, 56px); color: var(--white); line-height: 1.08; }
+  .hero .body-text { color: var(--white); font-size: 17px; max-width: 540px; margin: 28px auto 0; line-height: 1.7; }
+  .hero-arc { margin-top: -1px; background: var(--hero-green); }
+  .hero-arc svg { display: block; width: 100%; height: 80px; }
+  .container { max-width: 820px; margin: 0 auto; padding: 0 32px; }
+  .meta-bar { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; padding: 32px 0 20px; border-bottom: 1px solid var(--border); margin-bottom: 56px; font-size: 13px; color: var(--text-muted); letter-spacing: 0.3px; }
+  .meta-bar strong { color: var(--text); font-weight: 600; }
+  .meta-bar a { color: var(--accent); text-decoration: none; }
+  section { margin-bottom: 64px; }
+  h2 { font-family: var(--font-head); font-weight: 700; font-size: clamp(24px, 3.5vw, 32px); color: var(--text); line-height: 1.12; letter-spacing: -0.02em; margin-bottom: 8px; }
+  h2 .number { font-family: var(--font); font-size: 12px; font-weight: 600; letter-spacing: 0.15em; color: var(--accent); display: block; margin-bottom: 4px; text-transform: uppercase; }
+  h2 em { font-family: var(--font-accent); font-style: italic; font-weight: 400; color: var(--accent); }
+  h3 { font-family: var(--font-head); font-weight: 600; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin: 32px 0 12px; }
+  p { margin-bottom: 16px; color: var(--text-sec); }
+  p strong { color: var(--text); }
+  ul { margin: 0 0 16px 20px; }
+  li { margin-bottom: 6px; color: var(--text-sec); }
+  li strong { color: var(--text); }
+  .callout { background: var(--bg-alt); border-left: 3px solid var(--accent); padding: 20px 24px; margin: 24px 0; font-size: 0.9rem; border-radius: 0 12px 12px 0; color: var(--text-sec); }
+  .callout strong { color: var(--text); }
+  .tag { display: inline-block; padding: 4px 14px; border-radius: 9999px; font-size: 11px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; }
+  .tag.easy { background: #e8f5e9; color: #2e7d32; }
+  .tag.medium { background: #fff3e0; color: #e65100; }
+  .tag.high { background: var(--accent); color: white; }
+  .tag.mid-impact { background: #e3f2fd; color: #1565c0; }
+  .score-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; margin: 24px 0; }
+  .score-card { background: var(--white); border-radius: 16px; padding: 24px 16px; text-align: center; border: 1px solid var(--border-light); transition: box-shadow 0.3s, transform 0.3s; }
+  .score-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.06); transform: translateY(-2px); }
+  .score-card .label { font-family: var(--font-head); font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .score-card .value { font-family: var(--font-head); font-size: 2rem; font-weight: 700; color: var(--accent); }
+  .score-card .note { font-size: 12px; color: var(--text-muted); margin-top: 4px; }
+  .compare-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin: 24px 0; }
+  .compare-card { background: var(--white); border-radius: 16px; padding: 24px 20px; border: 1px solid var(--border-light); transition: box-shadow 0.3s, transform 0.3s; }
+  .compare-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.06); transform: translateY(-2px); }
+  .compare-card.you { border: 2px solid var(--accent); background: #FFF9F5; }
+  .compare-card .comp-name { font-family: var(--font-head); font-weight: 700; font-size: 14px; color: var(--text); margin-bottom: 14px; }
+  .compare-card .comp-stat { display: flex; justify-content: space-between; font-size: 13px; padding: 5px 0; border-bottom: 1px solid var(--border-light); }
+  .compare-card .comp-stat:last-child { border-bottom: none; }
+  .compare-card .comp-stat .stat-label { color: var(--text-muted); }
+  .compare-card .comp-stat .stat-val { font-weight: 600; }
+  .stat-val.good { color: var(--green); }
+  .stat-val.mid { color: #b8860b; }
+  .stat-val.low { color: #c44; }
+  .kw-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px; margin: 24px 0; }
+  .kw-card { background: var(--white); border: 1px solid var(--border-light); border-radius: 12px; padding: 14px 16px; display: flex; justify-content: space-between; align-items: center; transition: box-shadow 0.3s; }
+  .kw-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.05); }
+  .kw-card .kw-term { font-weight: 500; font-size: 13px; color: var(--text); }
+  .kw-card .kw-vol { font-size: 11px; color: var(--text-muted); white-space: nowrap; margin-left: 12px; }
+  .kw-card .kw-vol strong { font-family: var(--font-head); font-size: 14px; font-weight: 700; color: var(--accent); }
+  .timeline { position: relative; margin: 24px 0; padding-left: 36px; }
+  .timeline::before { content: ''; position: absolute; left: 8px; top: 8px; bottom: 8px; width: 2px; background: var(--border); }
+  .timeline-item { position: relative; margin-bottom: 32px; }
+  .timeline-item:last-child { margin-bottom: 0; }
+  .timeline-item::before { content: ''; position: absolute; left: -32px; top: 6px; width: 14px; height: 14px; border-radius: 50%; background: var(--accent); border: 3px solid var(--bg); box-shadow: 0 0 0 2px var(--accent); }
+  .timeline-item .week { font-family: var(--font-head); font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 4px; }
+  .timeline-item .task { font-family: var(--font-head); font-weight: 700; font-size: 16px; color: var(--text); margin-bottom: 4px; line-height: 1.3; }
+  .timeline-item .detail { font-size: 14px; color: var(--text-sec); line-height: 1.65; }
+  .opp-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin: 24px 0; }
+  .opp-card { background: var(--white); border: 1px solid var(--border-light); border-radius: 16px; padding: 28px 24px; transition: box-shadow 0.3s, transform 0.3s; }
+  .opp-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.06); transform: translateY(-2px); }
+  .opp-card h4 { font-family: var(--font-head); font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+  .opp-card p { font-size: 13px; color: var(--text-sec); margin-bottom: 14px; }
+  .opp-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+  .revenue-box { background: var(--green); color: white; border-radius: 16px; padding: 48px 40px; text-align: center; margin: 32px 0; }
+  .revenue-box .rev-label { font-family: var(--font-head); font-size: 11px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; opacity: 0.7; margin-bottom: 8px; }
+  .revenue-box .rev-amount { font-family: var(--font-head); font-size: clamp(40px, 8vw, 56px); font-weight: 800; color: var(--white); margin-bottom: 8px; letter-spacing: -0.02em; }
+  .revenue-box .rev-note { font-size: 14px; opacity: 0.7; }
+  .cta-box { text-align: center; border: 2px solid var(--accent); border-radius: 16px; padding: 40px 32px; margin: 32px 0; }
+  .cta-box .cta-heading { font-family: var(--font-head); font-size: clamp(20px, 3vw, 28px); font-weight: 700; color: var(--text); margin-bottom: 8px; line-height: 1.2; }
+  .cta-box .cta-heading em { font-family: var(--font-accent); font-style: italic; font-weight: 400; color: var(--accent); }
+  .cta-box .cta-sub { color: var(--text-muted); margin-bottom: 24px; }
+  .cta-button { display: inline-block; background: var(--accent); color: var(--white); padding: 16px 40px; border-radius: 9999px; font-family: var(--font-head); font-weight: 700; font-size: 16px; text-decoration: none; letter-spacing: 0.02em; transition: background 0.3s, transform 0.2s, box-shadow 0.3s; }
+  .cta-button:hover { background: var(--accent-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(196,98,45,0.3); }
+  .cta-or { font-size: 13px; color: var(--text-muted); margin-top: 16px; margin-bottom: 0; }
+  .cta-or a { color: var(--accent); text-decoration: none; }
+  .screenshot-frame { background: var(--white); border-radius: 12px; padding: 8px; border: 1px solid var(--border); box-shadow: 0 4px 20px rgba(0,0,0,0.06); margin: 16px 0; overflow: hidden; }
+  .divider { border: none; border-top: 1px solid var(--border); margin: 56px 0; }
+  .footer { background: var(--bg); text-align: center; padding: 32px 48px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 13px; }
+  .footer a { color: var(--accent); text-decoration: none; }
+  @media (max-width: 640px) {
+    .hero { padding: 40px 20px 60px; }
+    .hero h1 { font-size: 32px; }
+    .hero .accent-word { font-size: 32px; }
+    .container { padding: 0 20px; }
+    .meta-bar { flex-direction: column; gap: 8px; }
+    .compare-grid { grid-template-columns: 1fr; }
+    .bar-row .bar-label { width: 100px; font-size: 11px; }
+    .score-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  .icon-card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 32px; }
+  @media (max-width: 700px) { .icon-card-grid { grid-template-columns: 1fr; } }
+  .icon-card { background: #fff; border-radius: 16px; padding: 36px 28px 32px; text-align: center; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+  .icon-card .material-icons { font-size: 42px; color: var(--accent); display: block; margin-bottom: 16px; }
+  .icon-card h4 { font-family: var(--font-head); font-size: 16px; font-weight: 700; color: var(--text); margin: 0 0 12px; }
+  .icon-card p { font-size: 13.5px; color: var(--text-sec); line-height: 1.6; margin: 0; }
+</style>
+</head>
+<body>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="page-header-inner">
+    <img class="aspire-logo" src="/assets/aspire-logo.svg" alt="Aspire Digital">
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>BLUE CHURCH SURVEYS</h1>
+  <div class="sub">Your business deserves a website that</div>
+  <div class="accent-word">converts.</div>
+  <div class="body-text">
+    Steven, with over 40 years of surveying experience and credentials from Woolpert to Sands Decker, your expertise is the real deal. A professional online presence would finally let the rest of Central Ohio know that too.
+  </div>
+</div>
+
+<!-- ARC DIVIDER -->
+<div class="hero-arc">
+  <svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,120 C480,0 960,0 1440,120 L1440,120 L0,120 Z" fill="#FAF0E2"/>
+  </svg>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+
+  <div class="meta-bar">
+    <span><strong>Date:</strong> March 29, 2026</span>
+    <span><strong>By:</strong> <a href="https://madebyaspire.com" target="_blank">madebyaspire.com</a></span>
+  </div>
+
+  <!-- 01: THE HONEST PICTURE -->
+  <section>
+    <h2><span class="number">01</span>The Honest Picture</h2>
+
+    <p>Blue Church Surveys is a property surveying firm based in Marengo, Ohio, serving the Delaware County area and beyond. The company is owned and operated by <strong>Steven Newell, PS</strong> (Professional Surveyor) — a surveyor with a career that stretches back over four decades. That kind of tenure in the surveying profession is genuinely rare, and it represents a depth of knowledge about Central Ohio's property landscape that simply can't be replicated by a newcomer.</p>
+
+    <p>Steven's professional background is impressive. He spent <strong>30 years at Woolpert</strong>, one of the most respected architecture, engineering, and geospatial firms in the country. After that, he served as a Project Manager at SAM Companies and then as a Survey Manager at Sands Decker — both well-known firms in the Ohio engineering and surveying space. He founded Blue Church Surveys in 2014 and has been running it as an independent operation since, bringing all that institutional knowledge to bear for individual homeowners, builders, and developers in the region.</p>
+
+    <p>The firm is a member of both the <strong>Delaware Area Chamber of Commerce</strong> and the <strong>Morrow County Chamber of Commerce</strong>, which signals active community engagement across multiple counties. The chamber listings categorize Blue Church under Engineers/Surveyors and Construction — and the service description, while brief, is clear: property survey services.</p>
+
+    <p>Blue Church Surveys offers the full range of what property owners and developers need: boundary surveys, lot splits, topographic surveys, construction staking, ALTA surveys, and more. With an Ohio State University education and decades of field experience spanning residential, commercial, and government projects, Steven brings a level of expertise that most solo surveying operations simply don't have.</p>
+
+    <div class="score-grid">
+      <div class="score-card">
+        <div class="label">Years Experience</div>
+        <div class="value">40+</div>
+        <div class="note">Professional surveying</div>
+      </div>
+      <div class="score-card">
+        <div class="label">Founded</div>
+        <div class="value">2014</div>
+        <div class="note">Independent practice</div>
+      </div>
+      <div class="score-card">
+        <div class="label">Chamber Memberships</div>
+        <div class="value">2</div>
+        <div class="note">Delaware + Morrow County</div>
+      </div>
+      <div class="score-card">
+        <div class="label">Education</div>
+        <div class="value">OSU</div>
+        <div class="note">The Ohio State University</div>
+      </div>
+    </div>
+
+
+    <h3>The Delaware County Advantage</h3>
+    <p>Delaware County isn't just any market — it's one of the fastest-growing counties in Ohio and consistently ranks among the wealthiest. The county's population has been steadily increasing, driving new home construction, commercial development, and the kind of property transactions that generate survey demand.</p>
+
+    <p>New subdivisions going in around Sunbury, Powell, and Lewis Center. Rural parcels being split for development. Existing homeowners adding fences, pools, and additions that require boundary verification. Commercial developments needing ALTA surveys for financing. All of this activity needs surveyors — and the supply of experienced, locally-based Professional Surveyors is limited.</p>
+
+    <p>Your position in Marengo gives you coverage of both Delaware County and Morrow County — plus easy reach into Marion and Knox counties. That multi-county service area, combined with the growth dynamics of Delaware County, creates a market opportunity that a well-positioned surveying firm could capture for years to come.</p>
+
+    <p>The question isn't whether the demand is there. It is. The question is whether potential clients can find you when they need you. Right now, the answer is no.</p>
+
+    <div class="callout">
+      <strong>The bottom line:</strong> Blue Church Surveys has world-class credentials behind it. The challenge? Almost nobody can find you online. Right now, your digital presence consists of two chamber directory listings and a couple of data-aggregator pages. For a business that relies on local trust and discoverability, that's a significant gap — and a massive opportunity.
+    </div>
+  </section>
+
+
+    <h3>Services We've Identified</h3>
+    <p>Based on our research and industry knowledge, here's the full scope of what Blue Church Surveys likely offers — the kind of services a website should showcase:</p>
+    <ul>
+      <li><strong>Boundary Surveys</strong> — Establishing or re-establishing property corners and lines. Essential for real estate transactions, neighbor disputes, and construction planning. Typical cost in Ohio: $1,000-$2,500 for residential parcels.</li>
+      <li><strong>Lot Splits &amp; Subdivisions</strong> — Dividing a parcel into two or more lots, including plat preparation and county filing. Required for land development and estate divisions.</li>
+      <li><strong>Topographic Surveys</strong> — Mapping terrain features, elevations, and utilities. Critical for architects, engineers, and builders planning new construction.</li>
+      <li><strong>ALTA/NSPS Surveys</strong> — The gold standard for commercial real estate transactions. Requires precise coordination with title companies and lenders.</li>
+      <li><strong>Flood Elevation Certificates (FEMA)</strong> — Determining whether structures are in a flood zone. Required for insurance and mortgage purposes.</li>
+      <li><strong>Construction Staking</strong> — Translating architectural plans into physical markers on the ground so builders know exactly where to dig, pour, and frame.</li>
+      <li><strong>Mortgage Location Surveys</strong> — Verifying that improvements are within property boundaries. Often required by lenders during real estate closings.</li>
+    </ul>
+
+    <p>Each of these services represents a distinct search query, a distinct customer need, and a distinct page on your future website. That's seven opportunities to be found online — and right now, you're capturing zero of them.</p>
+
+  <!-- 02: YOUR SCORECARD -->
+  <section>
+    <h2><span class="number">02</span>Your Digital <em>Scorecard</em></h2>
+
+    <div class="site-screenshot">
+      <h3>Your Current Online Presence</h3>
+      <div class="screenshot-frame">
+        <img src="./blue-church-surveys-screenshot.png" alt="Blue Church Surveys current online presence" style="width:100%;border-radius:8px;border:1px solid var(--border)">
+      </div>
+      <p style="text-align:center;font-size:12px;color:var(--text-muted);margin-top:8px">Captured March 29, 2026</p>
+    </div>
+
+    <p>Let's be direct: <strong>Blue Church Surveys has no website.</strong> Your entire online footprint is a handful of directory listings — the Delaware Area Chamber page, a Morrow County Chamber listing, a MapQuest entry, and a SignalHire profile. That's it. Here's what the digital scorecard looks like:</p>
+
+    <div class="score-grid">
+      <div class="score-card">
+        <div class="label">Website</div>
+        <div class="value" style="color:#c44">None</div>
+        <div class="note">Zero web presence</div>
+      </div>
+      <div class="score-card">
+        <div class="label">Google Business</div>
+        <div class="value" style="color:#c44">None</div>
+        <div class="note">Not listed</div>
+      </div>
+      <div class="score-card">
+        <div class="label">Online Reviews</div>
+        <div class="value" style="color:#c44">0</div>
+        <div class="note">No reviews anywhere</div>
+      </div>
+      <div class="score-card">
+        <div class="label">Social Media</div>
+        <div class="value" style="color:#c44">None</div>
+        <div class="note">No profiles found</div>
+      </div>
+    </div>
+
+    <h3>What This Means in Practice</h3>
+    <ul>
+      <li><strong>You are invisible on Google.</strong> When someone in Delaware, Morrow, or surrounding counties searches "land surveyor near me," Blue Church Surveys does not appear. Not in the map pack, not in organic results, not anywhere.</li>
+      <li><strong>No way to verify your credentials.</strong> A homeowner who hears your name through a referral has nowhere to go to confirm your qualifications, see past work, or read reviews. In 2026, that's a trust barrier — even for referral-based businesses.</li>
+      <li><strong>No way to request a quote online.</strong> The only contact method is a phone number on chamber listings. No email form, no quote request, no way for someone to reach out at 9 PM when they're researching surveyors from their couch.</li>
+      <li><strong>Your competitors are winning the digital space by default.</strong> Not because they're better surveyors — but because they showed up online and you haven't.</li>
+    </ul>
+
+
+    <h3>Why a Website Matters Specifically for Surveyors</h3>
+    <p>Surveying is a trust-based profession. When someone hires a surveyor, they're relying on that person's accuracy to determine legal property boundaries — boundaries that affect real estate transactions worth hundreds of thousands of dollars, fence placements that could spark neighbor disputes, and construction foundations that must be precisely positioned.</p>
+
+    <p>For that reason, <strong>credentials matter enormously</strong> in this industry. A Professional Surveyor (PS) designation, an Ohio State education, 30 years at Woolpert — these are exactly the kind of trust signals that close deals. But in 2026, people verify those credentials online. They Google the business name. They look for a website. They check Google Reviews. When they find nothing — even if the referral was strong — doubt creeps in.</p>
+
+    <p>A survey from Angi found that <strong>97% of consumers searched online for a local business in the past year</strong>, and 82% read online reviews for local businesses. For a profession where trust and accuracy are everything, being invisible online is a liability you don't need.</p>
+
+    <h3>What's Working</h3>
+    <ul>
+      <li><strong>Chamber memberships are smart.</strong> Being listed in both Delaware and Morrow County chambers gives you some discoverability and credibility signals.</li>
+      <li><strong>Your reputation precedes you.</strong> A 40-year career at top-tier firms speaks volumes — you just need a platform to tell that story.</li>
+      <li><strong>The business name is distinctive.</strong> "Blue Church Surveys" is memorable, brandable, and easy to search for. If you had a website, it would rank instantly for your own name.</li>
+    </ul>
+
+    <div class="callout">
+      <strong>The honest assessment:</strong> This isn't a case of a bad website that needs fixing — it's a blank canvas. And frankly, that's an opportunity. There are no bad habits to undo, no outdated design to replace. We'd be building from a clean foundation with one of the strongest professional backstories in the area.
+    </div>
+  </section>
+
+  <!-- 03: HOW YOU STACK UP -->
+  <section>
+    <h2><span class="number">03</span>How You <em>Stack Up</em></h2>
+
+    <p>We looked at who's capturing the surveying business in your service area right now. Here's where Blue Church Surveys stands relative to competitors who are actively winning online:</p>
+
+    <div class="compare-grid">
+      <div class="compare-card you">
+        <div class="comp-name">Blue Church Surveys</div>
+        <div class="comp-stat">
+          <span class="stat-label">Website</span>
+          <span class="stat-val low">None</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Google Reviews</span>
+          <span class="stat-val low">0</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Online Quoting</span>
+          <span class="stat-val low">No</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Service Pages</span>
+          <span class="stat-val low">None</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Credentials Shown</span>
+          <span class="stat-val low">Chamber only</span>
+        </div>
+      </div>
+
+      <div class="compare-card">
+        <div class="comp-name">Pro Boundary Land Surveyors</div>
+        <div class="comp-stat">
+          <span class="stat-label">Website</span>
+          <span class="stat-val good">Professional</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Google Reviews</span>
+          <span class="stat-val good">Active</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Online Quoting</span>
+          <span class="stat-val good">Quote form</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Service Pages</span>
+          <span class="stat-val good">Boundary, Topo, ALTA</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Credentials Shown</span>
+          <span class="stat-val good">Full bio + photo</span>
+        </div>
+      </div>
+
+      <div class="compare-card">
+        <div class="comp-name">Willis Engineering &amp; Surveying</div>
+        <div class="comp-stat">
+          <span class="stat-label">Website</span>
+          <span class="stat-val good">Professional</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Google Reviews</span>
+          <span class="stat-val good">Active</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Online Quoting</span>
+          <span class="stat-val good">Contact form</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Service Pages</span>
+          <span class="stat-val good">9 service types</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Credentials Shown</span>
+          <span class="stat-val good">25+ years highlighted</span>
+        </div>
+      </div>
+    </div>
+
+    <h3>What This Means</h3>
+
+    <p><strong>Pro Boundary Land Surveyors</strong>, based in Westerville (just south of Delaware), is family-owned and has been operating since 2005. Their owner, Timothy Stadt, has 20 years of experience — roughly half of yours. But they have a clean, professional website with dedicated pages for boundary surveys, topographic surveys, and ALTA surveys. They have a prominent quote request form, a personal bio with a professional headshot, and active review profiles. They show up when people search.</p>
+
+    <p><strong>Willis Engineering &amp; Surveying</strong> in Columbus has been in business for over 25 years and takes a comprehensive approach — offering nine distinct survey service types, each with its own page on their website. They've invested in content that educates potential clients about what each survey type involves and why it matters. That content does double duty: it builds trust AND ranks in search engines.</p>
+
+    <div class="callout">
+      <strong>The opportunity:</strong> You have more experience than either competitor. Your career spans Woolpert, SAM, and Sands Decker — firms that Pro Boundary and Willis can't match on their resumes. The only thing they have that you don't is a website and Google presence. That's entirely fixable, and when you have it, your credentials will speak louder than theirs.
+    </div>
+  </section>
+
+  <!-- 04: WHAT PEOPLE ARE SEARCHING FOR -->
+  <section>
+    <h2><span class="number">04</span>What People Are <em>Searching For</em></h2>
+
+    <p>People in your service area are actively searching for surveyors — and right now, every single one of those searches goes to your competitors. Here are the terms that matter most:</p>
+
+    <div class="kw-grid">
+      <div class="kw-card">
+        <span class="kw-term">land surveyor near me</span>
+        <span class="kw-vol">Demand: <strong>High</strong></span>
+      </div>
+      <div class="kw-card">
+        <span class="kw-term">property survey Delaware Ohio</span>
+        <span class="kw-vol">Demand: <strong>Medium</strong></span>
+
+
+    <h3>A Closer Look at How Competitors Win Online</h3>
+    <p>Let's break down specifically what makes Pro Boundary and Willis effective online — and what you can learn from (and surpass) their approach:</p>
+
+    <p><strong>Pro Boundary's Website</strong> is built on Weebly — a simple, affordable platform. It's not fancy. But it has three things that matter: (1) a clear list of services with individual pages, (2) a prominent "Request a Quote" button on every page, and (3) a personal photo and bio of the owner, Timothy Stadt. That human element — putting a face and a story to the business — is incredibly effective for a trust-based service like surveying. Your story is objectively more compelling than his. You just need a place to tell it.</p>
+
+    <p><strong>Willis Engineering's Website</strong> takes a content-heavy approach. They have nine distinct service pages, each one explaining what the survey type involves, who needs it, and why it matters. This isn't just good for visitors — it's SEO gold. Each page ranks for different search terms, creating multiple pathways for potential clients to find them. Their "Land Surveying Process &amp; Procedures" section educates visitors while building authority. It's a template you could execute even better, given your deeper experience.</p>
+
+    <p><strong>Even Patridge Surveying</strong> — with a website that looks like it was built in 2003 using HTML tables — still appears in search results. Their site has no responsive design, no modern styling, and no contact form. But it exists, and that alone gives them an advantage over Blue Church Surveys. That's how low the bar is in this market. A professionally built site would leapfrog every local competitor immediately.</p>
+
+    <h3>The Competitive Landscape in Numbers</h3>
+    <p>According to the BBB, there are <strong>428 land surveyor results</strong> listed near Delaware, OH. But that number is misleading — the vast majority are large engineering firms based in Columbus or beyond. For homeowners specifically searching for a local surveyor in Delaware or Morrow County, the competition is remarkably thin:</p>
+    <ul>
+      <li><strong>Angi lists 17 verified reviews</strong> for land surveying services in the Delaware, OH area — that's across all providers combined. This is not a crowded market online.</li>
+      <li><strong>Yelp shows very few results</strong> specific to Delaware County. Pro Boundary in Westerville and Scioto Land Surveying are the closest with meaningful listings.</li>
+      <li><strong>Patridge Surveying in Powell</strong> has an outdated, table-based website that looks like it was built in the early 2000s — yet they still show up in searches because they have a website at all. That's how low the bar is.</li>
+    </ul>
+
+    <p>This means a well-built, modern website for Blue Church Surveys wouldn't just compete — it would likely <strong>dominate local search results</strong> within the first few months. The competition simply isn't investing in digital, which creates a wide-open lane for whoever does.</p>
+
+      </div>
+      <div class="kw-card">
+        <span class="kw-term">boundary survey cost Ohio</span>
+        <span class="kw-vol">Demand: <strong>High</strong></span>
+      </div>
+      <div class="kw-card">
+        <span class="kw-term">lot split survey Delaware County</span>
+        <span class="kw-vol">Demand: <strong>Medium</strong></span>
+      </div>
+      <div class="kw-card">
+        <span class="kw-term">land surveyor Morrow County OH</span>
+        <span class="kw-vol">Demand: <strong>Low-Med</strong></span>
+      </div>
+      <div class="kw-card">
+        <span class="kw-term">ALTA survey Central Ohio</span>
+        <span class="kw-vol">Demand: <strong>Medium</strong></span>
+      </div>
+      <div class="kw-card">
+        <span class="kw-term">property line survey Marengo OH</span>
+        <span class="kw-vol">Demand: <strong>Low</strong></span>
+      </div>
+      <div class="kw-card">
+        <span class="kw-term">topographic survey Columbus area</span>
+        <span class="kw-vol">Demand: <strong>Medium</strong></span>
+      </div>
+    </div>
+
+    <h3>What People Are Really Asking</h3>
+    <p>Google's "People Also Ask" section reveals the questions homeowners and builders have when they need a surveyor:</p>
+    <ul>
+      <li><strong>"How much does a property survey cost in Ohio?"</strong> — The national average is $2,300, with boundary surveys for parcels under 5 acres running $1,000-$2,500. People want pricing transparency before they call.</li>
+      <li><strong>"Do I need a survey before building a fence?"</strong> — A hugely common trigger for residential surveys. Someone planning a fence, addition, or pool often discovers they need a survey first.</li>
+      <li><strong>"How long does a land survey take?"</strong> — Typical turnaround is 2-6 weeks. Homeowners want to know what to expect.</li>
+      <li><strong>"What's the difference between a boundary survey and a mortgage survey?"</strong> — Educational content opportunity that builds trust and ranks well.</li>
+    </ul>
+
+
+    <h3>Seasonal Search Patterns</h3>
+    <p>Survey demand follows predictable seasonal patterns that a content strategy can capitalize on:</p>
+    <ul>
+      <li><strong>Spring (March-May):</strong> Highest demand. Homeowners start fence, addition, and pool projects. New construction breaks ground. Real estate transactions peak. Search volume for "property survey" and "land surveyor near me" spikes significantly.</li>
+      <li><strong>Summer (June-August):</strong> Sustained demand from active construction season and real estate closings. ALTA surveys for commercial transactions stay steady.</li>
+      <li><strong>Fall (September-November):</strong> Lot splits and subdivision work often happen in fall as developers prepare for spring construction. Flood elevation certificates see steady demand.</li>
+      <li><strong>Winter (December-February):</strong> Lower demand, but this is when builders and developers plan next year's projects. Educational content performs well as people research during downtime.</li>
+    </ul>
+    <p>A website with seasonal content — blog posts timed to spring survey demand, for example — captures people at exactly the right moment in their decision-making process.</p>
+
+    <h3>Content Gap Analysis</h3>
+    <p>Without a website, you cannot rank for any search term. But here's what a targeted content strategy could capture:</p>
+    <ul>
+      <li><strong>Service-specific pages</strong> for boundary surveys, lot splits, topographic surveys, ALTA surveys, and flood elevation certificates — each targeting distinct search queries.</li>
+      <li><strong>Location pages</strong> for Delaware County, Morrow County, Marion County, and Knox County — every county you serve becomes a searchable landing page.</li>
+      <li><strong>FAQ and educational content</strong> answering the questions above — "How Much Does a Survey Cost in Ohio?" could become a top-ranking blog post within months.</li>
+      <li><strong>Project case studies</strong> demonstrating your expertise on complex surveys — builds both trust and SEO authority simultaneously.</li>
+    </ul>
+
+    <div class="callout">
+      <strong>The takeaway:</strong> There are 428 land surveyor results listed on BBB near Delaware, OH — but the vast majority are large firms or distant companies. A well-optimized local surveyor website serving Delaware and Morrow counties would have very low competition for hyper-local search terms. This is low-hanging fruit.
+    </div>
+  </section>
+
+  <!-- 05: THE FUTURE OF SEARCH -->
+  <section>
+    <h2><span class="number">05</span>The Future of <em>Search</em></h2>
+
+    <p>The way people find local service providers is shifting rapidly. AI-powered search (Google AI Overviews, ChatGPT, voice assistants) is increasingly how homeowners and builders discover professionals. Here's what that means for Blue Church Surveys:</p>
+
+    <h3>What AI Search Looks For</h3>
+    <ul>
+      <li><strong>E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness).</strong> Google's quality framework now explicitly prioritizes content from people with demonstrated experience. Your 40+ year career spanning Woolpert, SAM Companies, and Sands Decker is the definition of E-E-A-T — but only if that experience is documented on a website Google can read and index.</li>
+      <li><strong>Structured data (schema markup).</strong> When someone asks their phone "find me a property surveyor in Delaware, Ohio," the answer is pulled from structured data — LocalBusiness and ProfessionalService schema that tells search engines exactly what you do, where you're located, and how to contact you. Without a website, you have zero structured data.</li>
+      <li><strong>Professional credentials.</strong> AI search heavily weights professional licensing and certifications. Your PS designation is a powerful trust signal — if it's on a website that search engines can access.</li>
+    </ul>
+
+    <h3>What's Missing</h3>
+    <ul>
+      <li><strong>No web presence at all.</strong> AI search tools can't recommend a business they can't find. When ChatGPT or Google's AI Overview answers "Who's the best surveyor in Delaware County, Ohio?", Blue Church Surveys isn't even in the running.</li>
+      <li><strong>No structured data.</strong> No LocalBusiness schema, no Service schema, no professional credential markup. Invisible to machine-readable search.</li>
+      <li><strong>No educational content.</strong> Voice queries like "How much does a boundary survey cost in Delaware, Ohio?" need a page with that answer. That page doesn't exist yet.</li>
+      <li><strong>No review signals.</strong> AI search heavily weights review count and quality. Zero reviews means zero social proof in the AI's assessment.</li>
+    </ul>
+
+    <div class="callout">
+      <strong>Looking ahead:</strong> The surveyors who establish authoritative web presences now — with structured data, credentials, and educational content — will be the ones AI search recommends for years to come. Getting in early matters, and for a surveyor with your credentials, the barrier to becoming the authoritative voice in your area is remarkably low.
+    </div>
+  </section>
+
+
+    <h3>Voice Search Is Especially Relevant for Surveyors</h3>
+    <p>Think about how people actually look for surveyors. Often it's in the middle of a real estate transaction, a construction project, or a property dispute. They're busy. They're stressed. They pick up their phone and say: <strong>"Hey Google, find me a property surveyor near Delaware, Ohio."</strong></p>
+
+    <p>Voice search results are even more concentrated than traditional search — typically only 1-3 results are read aloud. Without a website, without a Google Business Profile, without structured data, Blue Church Surveys cannot appear in those results. Period.</p>
+
+    <p>The businesses that invest in these signals now will have a compounding advantage over the next 3-5 years as AI and voice search become the default way people find local services. For a surveyor with your credentials, the investment required is modest — the return is significant.</p>
+
+  <!-- 06: THE OPPORTUNITY -->
+  <section>
+    <h2><span class="number">06</span>Here's What We'd <em>Actually Do</em></h2>
+
+    <p>Starting from zero is actually an advantage — we get to build everything right from the start, with no bad habits or outdated platforms to work around. Here are the specific moves we'd make for Blue Church Surveys:</p>
+
+    <div class="opp-grid">
+      <div class="opp-card">
+        <h4>1. Professional Website with Service Pages</h4>
+        <p>Build a clean, fast, mobile-first website with dedicated pages for each survey type: boundary surveys, lot splits, topographic surveys, ALTA surveys, flood elevation certificates, and construction staking. Each page explains what the service is, who needs it, and how to get started — building trust while capturing search traffic.</p>
+        <div class="opp-tags">
+          <span class="tag high">High Impact</span>
+          <span class="tag medium">4-5 Weeks</span>
+        </div>
+      </div>
+
+      <div class="opp-card">
+        <h4>2. Google Business Profile Setup</h4>
+        <p>Create and fully optimize your Google Business Profile from scratch. Service area configuration covering Delaware, Morrow, Marion, and Knox counties. Professional photo, complete service categories, business hours, and a direct quote request link. This alone puts you in the local map pack when people search "surveyor near me."</p>
+        <div class="opp-tags">
+          <span class="tag high">High Impact</span>
+          <span class="tag easy">Quick Win</span>
+        </div>
+      </div>
+
+      <div class="opp-card">
+        <h4>3. Credentials &amp; Authority Page</h4>
+        <p>Build a compelling "About Steven Newell" page that tells the story of 40+ years in surveying — from Ohio State to Woolpert to founding Blue Church. This isn't vanity; it's the single most important trust signal for AI search, potential clients, and referral partners. Your resume is your competitive advantage.</p>
+        <div class="opp-tags">
+          <span class="tag high">High Impact</span>
+          <span class="tag easy">Quick Win</span>
+        </div>
+      </div>
+
+      <div class="opp-card">
+        <h4>4. Quote Request &amp; Lead Capture System</h4>
+        <p>Implement a smart quote request form that collects property address, survey type needed, parcel size, and timeline. Leads go directly to your email or phone with all the info you need to provide an accurate estimate. Available 24/7 — capturing inquiries while you're in the field.</p>
+        <div class="opp-tags">
+          <span class="tag mid-impact">Steady Growth</span>
+          <span class="tag easy">Easy</span>
+        </div>
+      </div>
+
+      <div class="opp-card">
+        <h4>5. Local SEO + Directory Consistency</h4>
+        <p>Ensure your business name, address, and phone number are consistent across all directories — Google, Bing, Apple Maps, BBB, Yelp, Angi, and more. Build location-specific content for Delaware County, Morrow County, and surrounding areas. This creates a network of trust signals that tells Google you're a real, established business.</p>
+        <div class="opp-tags">
+          <span class="tag mid-impact">Long-Term SEO</span>
+          <span class="tag medium">Ongoing</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+    <h3>Why These Five Moves Matter Most</h3>
+    <p>We deliberately kept this to five recommendations — not fifteen — because we believe in focus. Every item above directly addresses the core problem: <strong>Blue Church Surveys is invisible online despite having best-in-class credentials.</strong> These five moves fix that systematically:</p>
+    <ul>
+      <li><strong>The website</strong> is your digital storefront — it establishes that you exist, what you offer, and why you're qualified.</li>
+      <li><strong>Google Business Profile</strong> puts you on the map — literally. It's how people find local services in 2026.</li>
+      <li><strong>The credentials page</strong> is your competitive moat. No one else in the area can match 40+ years at Woolpert, SAM, and Sands Decker.</li>
+      <li><strong>Lead capture</strong> turns visitors into clients while you're in the field. It works 24/7 without you lifting a finger.</li>
+      <li><strong>Local SEO</strong> ensures that the investment compounds over time — every month you're online, you become harder for competitors to displace.</li>
+    </ul>
+    <p>This isn't about doing everything at once. It's about doing the right things in the right order, and each one building on the last.</p>
+
+
+  <!-- 07: HOW THIS WORKS -->
+  <section>
+    <h2><span class="number">07</span>How This <em>Works</em></h2>
+
+    <p>We know you're busy in the field — not sitting at a desk. Our process is designed to take as little of your time as possible while building something that works hard for your business around the clock:</p>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="week">Week 1</div>
+        <div class="task">Discovery &amp; Strategy</div>
+        <div class="detail">A 45-minute conversation about your business, your ideal clients, your service area, and your goals. We'll discuss which survey types drive the most revenue, what makes your approach different, and what kind of clients you want more of. You talk — we listen and plan.</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="week">Week 2</div>
+        <div class="task">Design &amp; Content Creation</div>
+        <div class="detail">We design your site and write all the content — informed by your expertise but handled entirely by our team. You'll review a full mockup, give feedback, and we'll refine. We'll also draft your professional bio and service descriptions for your approval.</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="week">Weeks 3-4</div>
+        <div class="task">Build, SEO &amp; Google Business Setup</div>
+        <div class="detail">Full website development with schema markup, Google Business Profile creation and optimization, directory submissions, and technical SEO. Your site gets built for speed, mobile performance, and local search dominance from day one.</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="week">Week 5</div>
+        <div class="task">Launch &amp; Review Foundation</div>
+        <div class="detail">Your new site goes live. We connect analytics, set up a simple review request system for past clients, and ensure everything is performing. You'll get a dashboard showing visits, quote requests, and search rankings.</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="week">Ongoing</div>
+        <div class="task">Growth &amp; Optimization</div>
+        <div class="detail">Monthly performance reviews, content updates, and SEO adjustments. As you complete projects, we'll help you build case studies and request reviews — creating a snowball effect of growing authority and visibility.</div>
+      </div>
+    </div>
+  </section>
+
+
+    <h3>What We'll Need From You</h3>
+    <p>Honestly? Not much. Here's the full list of what we'd ask for over the entire engagement:</p>
+    <ul>
+      <li><strong>One 45-minute conversation</strong> — to understand your business, services, and goals</li>
+      <li><strong>A professional headshot</strong> — doesn't need to be studio quality. A clean, well-lit photo in the field works great for a surveyor.</li>
+      <li><strong>Access to your phone/email</strong> — for Google Business Profile verification (a one-time PIN)</li>
+      <li><strong>Feedback on the mockup</strong> — a 15-20 minute review of the design before we build</li>
+      <li><strong>5-10 past client contacts</strong> — so we can kickstart your review generation after launch</li>
+    </ul>
+    <p>Total time commitment: <strong>under 3 hours</strong> across the entire project. Everything else — writing, design, development, SEO, directory submissions — is handled by our team.</p>
+
+  <!-- 08: BEYOND THE WEBSITE -->
+  <section>
+    <h2><span class="number">08</span>Beyond the <em>Website</em></h2>
+    <p>A website is the foundation, but the full digital picture for a surveying firm includes multiple touchpoints that build trust, generate leads, and keep your pipeline full:</p>
+
+
+    <h3>The Power of Google Business Profile for Surveyors</h3>
+    <p>Let's talk specifics about why Google Business Profile is so critical for a surveying business. When someone searches "land surveyor near me" or "property survey Delaware Ohio," Google shows a map pack — three businesses with their location, rating, hours, and a link to call or get directions. This map pack appears above organic search results and captures the majority of clicks.</p>
+
+    <p>Without a Google Business Profile, you cannot appear in the map pack. Full stop. Creating and optimizing one is the single fastest path from invisible to discoverable. And for a service-area business like yours — where clients don't come to you, you go to them — Google's service-area configuration lets you appear in searches across multiple counties without revealing your home address.</p>
+
+    <div class="icon-card-grid">
+
+      <div class="icon-card">
+        <span class="material-icons">location_on</span>
+        <h4>Google Business Profile</h4>
+        <p>Your GBP will be the single highest-impact asset after the website itself. A fully optimized profile with service area coverage, categories, photos, and business hours puts you in the local map pack — where most people look first when searching for a surveyor.</p>
+      </div>
+
+      <div class="icon-card">
+        <span class="material-icons">star</span>
+        <h4>Review Generation</h4>
+        <p>After 10+ years in business, you've served hundreds of clients. A simple post-project email or text asking for a Google review could generate 3-5 reviews per month. Within six months, that's 20+ reviews — enough to dominate local search trust signals.</p>
+      </div>
+
+      <div class="icon-card">
+        <span class="material-icons">groups</span>
+        <h4>Referral Network</h4>
+        <p>Real estate agents, title companies, builders, and fence contractors are natural referral partners. A professional website with a "For Professionals" page makes it easy for referral partners to send clients your way with confidence.</p>
+      </div>
+
+      <div class="icon-card">
+        <span class="material-icons">email</span>
+        <h4>Email Follow-Up</h4>
+        <p>A simple quarterly email to past clients and referral partners keeps you top of mind. Include seasonal reminders ("Spring is fence-building season — surveys booking fast") and local market insights that position you as the area expert.</p>
+      </div>
+
+      <div class="icon-card">
+        <span class="material-icons">request_quote</span>
+        <h4>Online Quote Requests</h4>
+        <p>A smart form that collects property address, parcel size, and survey type lets you provide accurate estimates quickly. Leads come in while you're on the job site — no missed phone calls, no voicemail tag.</p>
+      </div>
+
+      <div class="icon-card">
+        <span class="material-icons">map</span>
+        <h4>Service Area Pages</h4>
+        <p>Dedicated pages for Delaware County, Morrow County, Marion County, and Knox County create multiple entry points for local search. Each page targets county-specific search terms and establishes you as the go-to surveyor for that area.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 09: REVENUE IMPACT -->
+  <section>
+    <h2><span class="number">09</span>What This Could <em>Mean</em></h2>
+
+    <p>Land surveying in Ohio is a steady, well-paying business. Boundary surveys for residential parcels under 5 acres typically run $1,000-$2,500. Lot splits range $1,200-$3,000. ALTA surveys for commercial transactions are higher. Let's look at what improved visibility could mean for Blue Church Surveys:</p>
+
+    <div class="score-grid">
+      <div class="score-card">
+        <div class="label">Avg. Boundary Survey</div>
+        <div class="value">$1,750</div>
+        <div class="note">Residential parcels</div>
+      </div>
+      <div class="score-card">
+        <div class="label">Avg. Lot Split</div>
+        <div class="value">$2,100</div>
+        <div class="note">Includes plat prep</div>
+      </div>
+      <div class="score-card">
+        <div class="label">Current Web Leads</div>
+        <div class="value">0</div>
+        <div class="note">No online presence</div>
+      </div>
+      <div class="score-card">
+        <div class="label">Market Competition</div>
+        <div class="value">Low</div>
+        <div class="note">Few local competitors</div>
+      </div>
+    </div>
+
+    <p>Conservatively, a professional website with Google Business optimization could bring in <strong>3-5 new quote requests per month</strong> from online search alone. If you close even half of those — that's roughly <strong>2-3 additional projects per month</strong> from a channel that currently produces zero.</p>
+
+
+    <h3>The Real Estate Angle</h3>
+    <p>Delaware County is one of the fastest-growing counties in Ohio. New home construction, lot splits for development, boundary disputes as neighborhoods densify — all of these drive survey demand. And with remote work keeping people in suburban and rural areas, the trend isn't slowing down. Title companies, real estate agents, and builders in the area all need reliable surveyors they can refer clients to. A professional website makes you the obvious choice for those referrals.</p>
+
+    <div class="revenue-box">
+      <div class="rev-label">Estimated Additional Annual Revenue</div>
+      <div class="rev-amount">$50K — $90K+</div>
+      <div class="rev-note">Based on 20-35 additional projects per year at average survey values. Conservative estimate.</div>
+    </div>
+
+    <p>For a solo or small-team surveying operation, that kind of incremental revenue — with zero cold-calling — is transformative. And unlike advertising, a website and Google presence are assets that compound over time. Every review, every ranking improvement, every new page of content makes the next lead cheaper and easier to win.</p>
+
+
+    <h3>Beyond Revenue: The Referral Multiplier</h3>
+    <p>There's a second-order effect of having a professional web presence that's hard to quantify but enormously valuable: <strong>it makes referrals more effective</strong>. Right now, when a builder or real estate agent recommends Blue Church Surveys, the person they're referring has nowhere to go to learn more. They can't check your credentials, see your work, or read reviews. Some percentage of those referrals simply don't convert because the prospect can't verify what they've been told.</p>
+
+    <p>With a professional website, every referral becomes a higher-quality lead. The builder says "Call Steve at Blue Church Surveys," the homeowner Googles you, finds a polished site with 40 years of credentials and glowing reviews, and they're already sold before they pick up the phone. <strong>You don't just gain new leads from search — you convert more of the referral leads you're already getting.</strong></p>
+
+    <div class="callout">
+      <strong>Important note:</strong> These projections use conservative assumptions and ranges. Actual results depend on project mix, capacity, and market conditions. What we can say with confidence is that going from zero online visibility to a properly optimized presence in a low-competition market represents significant untapped revenue.
+    </div>
+  </section>
+
+
+    <p>The surveying industry in Central Ohio is at an inflection point. The surveyors who establish strong digital presences now — while most competitors still rely solely on word-of-mouth — will capture a disproportionate share of the growing market. With your experience, your credentials, and the right digital foundation, Blue Church Surveys is positioned to be one of those winners.</p>
+
+  <!-- 10: WHY ASPIRE DIGITAL + CTA -->
+  <section>
+    <h2><span class="number">10</span>Why <em>Aspire Digital</em></h2>
+
+    <p>We're not a big agency that treats every business the same. Aspire Digital works with skilled professionals and local service businesses who are great at what they do — but haven't had the time or the know-how to build a proper digital presence. That's exactly what we see with Blue Church Surveys.</p>
+
+    <p>What stood out to us about your business is the depth of experience behind it. <strong>Forty years spanning Woolpert, SAM, Sands Decker, and now your own firm</strong> — that's a career most surveyors would envy. The fact that you've been quietly doing excellent work without any web presence tells us two things: first, your referral network is strong (you've survived 10+ years on word-of-mouth alone), and second, the upside of adding online visibility to that foundation is enormous.</p>
+
+    <p>You don't need to become a marketing expert. You need a partner who understands your business well enough to translate your expertise into a digital presence that works while you're in the field. That's what we do.</p>
+
+
+    <p>We've worked with trades and professional services businesses throughout Ohio, and we understand the unique dynamics of your industry. Surveyors don't need flashy animated websites or social media viral campaigns. You need a clean, authoritative web presence that:</p>
+    <ul>
+      <li><strong>Shows up</strong> when someone searches for a surveyor in your area</li>
+      <li><strong>Communicates credibility</strong> through your credentials and experience</li>
+      <li><strong>Makes it easy</strong> to request a quote without phone tag</li>
+      <li><strong>Builds over time</strong> as reviews and content accumulate</li>
+    </ul>
+
+    
+<p>That's exactly what we build. No unnecessary complexity. No ongoing obligations you don't want. Just a digital presence that matches the caliber of work you've been doing for four decades.</p>
+
+
+    <p>We're not in the business of selling websites. We're in the business of helping skilled professionals like you get found by the people who already need what you offer. The craftsmanship is yours — we just make sure the world can see it.</p>
+
+    <p>A few things about how we work that matter:</p>
+    <ul>
+      <li><strong>No long-term contracts.</strong> We earn your business every month. If it's not working, you're not locked in.</li>
+      <li><strong>You own everything.</strong> Your website, your domain, your content, your Google Business Profile — it's all yours, always.</li>
+      <li><strong>Transparent pricing.</strong> We'll tell you exactly what it costs upfront. No hidden fees, no surprise invoices.</li>
+      <li><strong>We understand trades and professional services.</strong> We don't try to turn surveyors into influencers. We build practical, effective digital tools that generate real business.</li>
+    </ul>
+
+    <div class="cta-box">
+      <div class="cta-heading">Let's Put Blue Church on the <em>Map</em></div>
+      <p class="cta-sub">No pressure, no sales pitch — just a straightforward conversation about getting your business the visibility it deserves.</p>
+      <a href="https://madebyaspire.com/book" class="cta-button" target="_blank">Book a Free Strategy Call</a>
+      <p class="cta-or">or email <a href="mailto:Chris@aspiredigital.dev">Chris</a> directly</p>
+    </div>
+  </section>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <p>Prepared by <strong>Aspire Digital</strong> &middot; <a href="https://madebyaspire.com">madebyaspire.com</a></p>
+  <p style="margin-top:8px">Questions? Reach out to <a href="mailto:Chris@aspiredigital.dev">Chris</a> &middot; <a href="mailto:Chris@aspiredigital.dev">Chris@aspiredigital.dev</a></p>
+  <p style="margin-top:12px;font-size:11px;color:var(--text-muted)">&copy; 2026 Aspire Digital &middot; This brief was prepared exclusively for Blue Church Surveys</p>
+</div>
+
+</body>
+</html>
