@@ -1,0 +1,1442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PetalsWings — Digital Growth Brief | Aspire Digital</title>
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<!-- Open Graph / iMessage / SMS preview -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="PetalsWings — A Headless Rebuild That Grows">
+<meta property="og:description" content="We took a deep look at PetalsWings's digital presence and built something more intentional. Here's what we made.">
+<meta property="og:image" content="https://yoursite.madebyaspire.com/petalswings/welcome/og-card.png">
+<meta property="og:url" content="https://yoursite.madebyaspire.com/petalswings/welcome/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="PetalsWings — A Headless Rebuild That Grows">
+<meta name="twitter:description" content="A portfolio case study prepared by Aspire Digital.">
+<meta name="twitter:image" content="https://yoursite.madebyaspire.com/petalswings/welcome/og-card.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FAF0E2;
+    --bg-alt: #F2EDE6;
+    --text: #2C3340;
+    --text-sec: #666666;
+    --text-muted: #999999;
+    --accent: #C4622D;
+    --accent-dark: #B53D00;
+    --border: #E5E5E5;
+    --border-light: #F0F0F0;
+    --green: #4a7b5a;
+    --hero-green: #8FAF8A;
+    --white: #ffffff;
+    --font: 'DM Sans', system-ui, -apple-system, sans-serif;
+    --font-head: 'Montserrat', system-ui, sans-serif;
+    --font-accent: 'Playfair Display', Georgia, serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 15px;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection { background: var(--accent); color: #fff; }
+
+  /* PAGE HEADER */
+  .page-header {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 48px;
+  }
+  .page-header-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .page-header .aspire-logo {
+    width: 200px;
+    height: auto;
+  }
+
+  /* HERO */
+  .hero {
+    background: var(--hero-green);
+    text-align: center;
+    padding: 60px 48px 80px;
+    position: relative;
+  }
+  .hero h1 {
+    font-family: var(--font-head);
+    font-weight: 800;
+    font-size: clamp(36px, 6vw, 56px);
+    color: var(--accent);
+    line-height: 1.08;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+  }
+  .hero .sub {
+    font-family: var(--font-head);
+    font-weight: 600;
+    font-size: clamp(18px, 3vw, 24px);
+    color: #2C3340;
+    margin-bottom: 4px;
+    letter-spacing: -0.01em;
+  }
+  .hero .accent-word {
+    font-family: var(--font-accent);
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(36px, 6vw, 56px);
+    color: var(--white);
+    line-height: 1.08;
+  }
+  .hero .body-text {
+    color: var(--white);
+    font-size: 17px;
+    max-width: 540px;
+    margin: 28px auto 0;
+    line-height: 1.7;
+  }
+
+  /* ARC DIVIDER */
+  .hero-arc {
+    margin-top: -1px;
+    background: var(--hero-green);
+  }
+  .hero-arc svg {
+    display: block;
+    width: 100%;
+    height: 80px;
+  }
+
+  /* CONTAINER */
+  .container {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  /* META BAR */
+  .meta-bar {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 32px 0 20px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 56px;
+    font-size: 13px;
+    color: var(--text-muted);
+    letter-spacing: 0.3px;
+  }
+  .meta-bar strong { color: var(--text); font-weight: 600; }
+  .meta-bar a { color: var(--accent); text-decoration: none; }
+
+  /* SECTIONS */
+  section { margin-bottom: 64px; }
+
+  h2 {
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: clamp(24px, 3.5vw, 32px);
+    color: var(--text);
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+  }
+  h2 .number {
+    font-family: var(--font);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+  }
+  h2 em {
+    font-family: var(--font-accent);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--accent);
+  }
+
+  h3 {
+    font-family: var(--font-head);
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin: 32px 0 12px;
+  }
+
+  p { margin-bottom: 16px; color: var(--text-sec); }
+  p strong { color: var(--text); }
+  ul { margin: 0 0 16px 20px; }
+  li { margin-bottom: 6px; color: var(--text-sec); }
+  li strong { color: var(--text); }
+
+  /* CALLOUT */
+  .callout {
+    background: var(--bg-alt);
+    border-left: 3px solid var(--accent);
+    padding: 20px 24px;
+    margin: 24px 0;
+    font-size: 0.9rem;
+    border-radius: 0 12px 12px 0;
+    color: var(--text-sec);
+  }
+  .callout strong { color: var(--text); }
+
+  /* PILL TAGS */
+  .tag {
+    display: inline-block;
+    padding: 4px 14px;
+    border-radius: 9999px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .tag.easy { background: #e8f5e9; color: #2e7d32; }
+  .tag.medium { background: #fff3e0; color: #e65100; }
+  .tag.high { background: var(--accent); color: white; }
+  .tag.mid-impact { background: #e3f2fd; color: #1565c0; }
+
+  /* SCORE CARDS */
+  .score-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 16px;
+    margin: 24px 0;
+  }
+  .score-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 24px 16px;
+    text-align: center;
+    border: 1px solid var(--border-light);
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+  .score-card:hover {
+    box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+    transform: translateY(-2px);
+  }
+  .score-card .label {
+    font-family: var(--font-head);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+  }
+  .score-card .value {
+    font-family: var(--font-head);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent);
+  }
+  .score-card .note {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 4px;
+  }
+
+  /* BAR CHART */
+  .bar-chart { margin: 24px 0; }
+  .bar-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  .bar-row .bar-label {
+    width: 160px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text);
+    flex-shrink: 0;
+  }
+  .bar-row .bar-track {
+    flex: 1;
+    height: 28px;
+    background: var(--bg-alt);
+    border-radius: 14px;
+    overflow: hidden;
+    margin: 0 12px;
+  }
+  .bar-row .bar-fill {
+    height: 100%;
+    border-radius: 14px;
+  }
+  .bar-row .bar-val {
+    width: 40px;
+    font-family: var(--font-head);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-align: right;
+  }
+
+  /* COMPARE CARDS */
+  .compare-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin: 24px 0;
+  }
+  .compare-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 24px 20px;
+    border: 1px solid var(--border-light);
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+  .compare-card:hover {
+    box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+    transform: translateY(-2px);
+  }
+  .compare-card.you {
+    border: 2px solid var(--accent);
+    background: #FFF9F5;
+  }
+  .compare-card .comp-name {
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--text);
+    margin-bottom: 14px;
+  }
+  .compare-card .comp-stat {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    padding: 5px 0;
+    border-bottom: 1px solid var(--border-light);
+  }
+  .compare-card .comp-stat:last-child { border-bottom: none; }
+  .compare-card .comp-stat .stat-label { color: var(--text-muted); }
+  .compare-card .comp-stat .stat-val { font-weight: 600; }
+  .stat-val.good { color: var(--green); }
+  .stat-val.mid { color: #b8860b; }
+  .stat-val.low { color: #c44; }
+
+  /* KEYWORD CARDS */
+  .kw-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 10px;
+    margin: 24px 0;
+  }
+  .kw-card {
+    background: var(--white);
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    padding: 14px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: box-shadow 0.3s;
+  }
+  .kw-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.05); }
+  .kw-card .kw-term {
+    font-weight: 500;
+    font-size: 13px;
+    color: var(--text);
+  }
+  .kw-card .kw-vol {
+    font-size: 11px;
+    color: var(--text-muted);
+    white-space: nowrap;
+    margin-left: 12px;
+  }
+  .kw-card .kw-vol strong {
+    font-family: var(--font-head);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--accent);
+  }
+
+  /* TIMELINE */
+  .timeline {
+    position: relative;
+    margin: 24px 0;
+    padding-left: 36px;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    bottom: 8px;
+    width: 2px;
+    background: var(--border);
+  }
+  .timeline-item {
+    position: relative;
+    margin-bottom: 32px;
+  }
+  .timeline-item:last-child { margin-bottom: 0; }
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -32px;
+    top: 6px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 3px solid var(--bg);
+    box-shadow: 0 0 0 2px var(--accent);
+  }
+  .timeline-item .week {
+    font-family: var(--font-head);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 4px;
+  }
+  .timeline-item .task {
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--text);
+    margin-bottom: 4px;
+    line-height: 1.3;
+  }
+  .timeline-item .detail {
+    font-size: 14px;
+    color: var(--text-sec);
+    line-height: 1.65;
+  }
+
+  /* OPPORTUNITY CARDS */
+  .opp-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    margin: 24px 0;
+  }
+  .opp-card {
+    background: var(--white);
+    border: 1px solid var(--border-light);
+    border-radius: 16px;
+    padding: 28px 24px;
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+  .opp-card:hover {
+    box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+    transform: translateY(-2px);
+  }
+  .opp-card h4 {
+    font-family: var(--font-head);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 8px;
+  }
+  .opp-card p { font-size: 13px; color: var(--text-sec); margin-bottom: 14px; }
+  .opp-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+
+  /* REVENUE BOX */
+  .revenue-box {
+    background: var(--green);
+    color: white;
+    border-radius: 16px;
+    padding: 48px 40px;
+    text-align: center;
+    margin: 32px 0;
+  }
+  .revenue-box .rev-label {
+    font-family: var(--font-head);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    opacity: 0.7;
+    margin-bottom: 8px;
+  }
+  .revenue-box .rev-amount {
+    font-family: var(--font-head);
+    font-size: clamp(40px, 8vw, 56px);
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 8px;
+    letter-spacing: -0.02em;
+  }
+  .revenue-box .rev-note {
+    font-size: 14px;
+    opacity: 0.7;
+  }
+
+  /* LOGO SHOWCASE */
+  .logo-showcase {
+    background: var(--bg-alt);
+    border-radius: 16px;
+    padding: 36px;
+    text-align: center;
+    margin: 24px 0;
+  }
+  .logo-showcase img {
+    max-width: 180px;
+    border-radius: 12px;
+    margin: 16px 0;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  }
+  .logo-showcase .caption {
+    font-size: 13px;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-top: 8px;
+  }
+
+  /* CTA BOX */
+  .cta-box {
+    text-align: center;
+    border: 2px solid var(--accent);
+    border-radius: 16px;
+    padding: 40px 32px;
+    margin: 32px 0;
+  }
+  .cta-box .cta-heading {
+    font-family: var(--font-head);
+    font-size: clamp(20px, 3vw, 28px);
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 8px;
+    line-height: 1.2;
+  }
+  .cta-box .cta-heading em {
+    font-family: var(--font-accent);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--accent);
+  }
+  .cta-box .cta-sub {
+    color: var(--text-muted);
+    margin-bottom: 24px;
+  }
+  .cta-button {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--white);
+    padding: 16px 40px;
+    border-radius: 9999px;
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+  }
+  .cta-button:hover {
+    background: var(--accent-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(196,98,45,0.3);
+  }
+  .cta-or {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: 16px;
+    margin-bottom: 0;
+  }
+  .cta-or a { color: var(--accent); text-decoration: none; }
+
+  /* SCREENSHOT FRAME */
+  .screenshot-frame {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 8px;
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    margin: 16px 0;
+    overflow: hidden;
+  }
+
+  /* DIVIDER */
+  .divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 56px 0;
+  }
+
+  /* FOOTER */
+  .footer {
+    background: var(--bg);
+    text-align: center;
+    padding: 32px 48px;
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 13px;
+  }
+  .footer a { color: var(--accent); text-decoration: none; }
+
+  /* RESPONSIVE */
+  @media (max-width: 640px) {
+    .hero { padding: 40px 20px 60px; }
+    .hero-logo { width: 200px; }
+    .hero h1 { font-size: 32px; }
+    .hero .accent-word { font-size: 32px; }
+    .container { padding: 0 20px; }
+    .meta-bar { flex-direction: column; gap: 8px; }
+    .compare-grid { grid-template-columns: 1fr; }
+    .bar-row .bar-label { width: 100px; font-size: 11px; }
+    .score-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  /* Section 08: Beyond the Website — Icon Cards */
+  .icon-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 32px;
+  }
+  @media (max-width: 700px) {
+    .icon-card-grid { grid-template-columns: 1fr; }
+  }
+  .icon-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 36px 28px 32px;
+    text-align: center;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+  .icon-card .material-icons {
+    font-size: 42px;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 16px;
+  }
+  .icon-card h4 {
+    font-family: var(--font-head);
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text);
+    margin: 0 0 12px;
+  }
+  .icon-card p {
+    font-size: 13.5px;
+    color: var(--text-sec);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* PORTFOLIO BADGE */
+  .portfolio-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--white);
+    border: 1.5px solid var(--accent);
+    border-radius: 9999px;
+    padding: 6px 18px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 28px;
+  }
+  .portfolio-badge .material-icons {
+    font-size: 16px;
+    color: var(--accent);
+  }
+
+  /* TECH STACK ROW */
+  .tech-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 16px 0 24px;
+  }
+  .tech-pill {
+    background: var(--bg-alt);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 6px 14px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text);
+    letter-spacing: 0.03em;
+  }
+  .tech-pill.highlight {
+    background: #FFF3ED;
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  /* FEATURE LIST */
+  .feature-list {
+    list-style: none;
+    margin: 0 0 24px 0;
+    padding: 0;
+  }
+  .feature-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-light);
+    color: var(--text-sec);
+    font-size: 14px;
+    line-height: 1.55;
+  }
+  .feature-list li:last-child { border-bottom: none; }
+  .feature-list li .material-icons {
+    font-size: 18px;
+    color: var(--green);
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .feature-list li strong { color: var(--text); }
+
+  /* BEFORE / AFTER PAIR */
+  .before-after {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 24px 0;
+  }
+  @media (max-width: 600px) {
+    .before-after { grid-template-columns: 1fr; }
+  }
+  .ba-card {
+    border-radius: 14px;
+    padding: 22px 20px;
+    border: 1px solid var(--border-light);
+  }
+  .ba-card.before {
+    background: var(--white);
+  }
+  .ba-card.after {
+    background: #F2FAF4;
+    border-color: #b2d8bc;
+  }
+  .ba-card .ba-label {
+    font-family: var(--font-head);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .ba-card.before .ba-label { color: var(--text-muted); }
+  .ba-card.after .ba-label { color: var(--green); }
+  .ba-card ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .ba-card ul li {
+    font-size: 13px;
+    padding: 5px 0;
+    border-bottom: 1px solid var(--border-light);
+    color: var(--text-sec);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .ba-card ul li:last-child { border-bottom: none; }
+  .ba-card.before ul li::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #ccc;
+    flex-shrink: 0;
+  }
+  .ba-card.after ul li .material-icons {
+    font-size: 15px;
+    color: var(--green);
+    flex-shrink: 0;
+  }
+
+  /* GRADE DISPLAY */
+  .grade-display {
+    display: inline-block;
+    font-family: var(--font-head);
+    font-size: 2.2rem;
+    font-weight: 800;
+    line-height: 1;
+  }
+  .grade-display.c { color: #b8860b; }
+  .grade-display.b { color: #2e7d32; }
+  .grade-display.bplus { color: #2e7d32; }
+  .grade-display.cplus { color: #b8860b; }
+
+  /* STATUS BANNER */
+  .status-banner {
+    background: #F0F9F3;
+    border: 1.5px solid #b2d8bc;
+    border-radius: 12px;
+    padding: 18px 24px;
+    margin: 20px 0 32px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .status-banner .material-icons {
+    font-size: 24px;
+    color: var(--green);
+    flex-shrink: 0;
+  }
+  .status-banner p {
+    margin: 0;
+    color: var(--text);
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .status-banner p strong { color: var(--green); }
+
+</style>
+</head>
+<body>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="page-header-inner">
+    <img class="aspire-logo" src="/assets/aspire-logo.svg" alt="Aspire Digital">
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>PetalsWings</h1>
+  <div class="sub">A headless rebuild that</div>
+  <div class="accent-word">grows.</div>
+  <div class="body-text">
+    Bonnie has been growing irises for over two decades. We built the site that finally matches the depth and care she puts into every rhizome — headless, fast, and intentionally hers.
+  </div>
+</div>
+
+<!-- ARC DIVIDER -->
+<div class="hero-arc">
+  <svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,120 C480,0 960,0 1440,120 L1440,120 L0,120 Z" fill="#FAF0E2"/>
+  </svg>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+
+  <div class="meta-bar">
+    <span><strong>Prepared for:</strong> Bonnie, PetalsWings</span>
+    <span><strong>Date:</strong> April 2026</span>
+    <span><strong>By:</strong> <a href="https://madebyaspire.com" target="_blank">madebyaspire.com</a></span>
+  </div>
+
+  <!-- STATUS BANNER -->
+  <div class="status-banner">
+    <span class="material-icons">rocket_launch</span>
+    <p><strong>Project status: In Review.</strong> The new site is live on our launch domain. Production cutover is scheduled before the 2026 bloom season. Bonnie keeps managing products in Shopify — only the front-end changes.</p>
+  </div>
+
+  <!-- 01: THE HONEST PICTURE -->
+  <section>
+    <h2><span class="number">01</span>The Honest <em>Picture</em></h2>
+
+    <p>About a decade ago, Bonnie planted her first garden of irises to share with family and friends. What started as a few rhizomes and a genuine love for the bloom grew into something she hadn't expected: a small business with thousands of happy customers, a presence on Etsy, eBay, and Facebook, and a reputation built the old-fashioned way — by sending beautiful, hand-selected plants to people who trusted her.</p>
+
+    <p><strong>PetalsWings is a family iris farm.</strong> Every rhizome ships from Bonnie's garden. With over 660 varieties — 82% of them Tall Bearded Iris — she's cultivated one of the most diverse iris catalogs available to home gardeners online. Categories span Tall Bearded, Reblooming, Dwarf, Japanese, Fragrant, Award Winners, and Lily Bulbs. Prices run from $8.99 to $24.99 per bulb, with varieties introduced as far back as 1936 and as recently as last season.</p>
+
+    <p>When Bonnie moved from the Etsy/eBay era into her own Shopify store, it was a meaningful step. It gave her control over her catalog and checkout. But the Shopify Dawn theme she was using — functional as it is — couldn't tell her story. There was no brand, no voice, no sense of the decade of growing behind every item listed. The products were good. The digital presence wasn't keeping up.</p>
+
+    <p><strong>That's what this rebuild is about.</strong> Not replacing what Bonnie does in Shopify — she still manages all 660+ products there, and that stays exactly the same. What changes is everything the customer sees: a custom-designed front end built on Astro 6, deployed to Cloudflare's edge, connected to Shopify via the Storefront API. A site that grows with the season and feels like the farm behind it.</p>
+
+    <div class="score-grid">
+      <div class="score-card">
+        <div class="label">Varieties</div>
+        <div class="value">660+</div>
+        <div class="note">in 8 categories</div>
+      </div>
+      <div class="score-card">
+        <div class="label">Past Sales</div>
+        <div class="value">1,000s</div>
+        <div class="note">Etsy, eBay, Facebook</div>
+      </div>
+      <div class="score-card">
+        <div class="label">Catalog</div>
+        <div class="value">82%</div>
+        <div class="note">Tall Bearded Iris</div>
+      </div>
+      <div class="score-card">
+        <div class="label">Season</div>
+        <div class="value">2026</div>
+        <div class="note">open now</div>
+      </div>
+    </div>
+
+    <div class="callout">
+      <strong>The 2026 season is open.</strong> The current Shopify site already has a utility bar that reads "Welcome to the 2026 season! Click here for a message from Bonnie!" — a detail that says a lot about the customer relationships she's built. Loyal buyers come back every year. They want to hear from her.
+    </div>
+  </section>
+
+  <!-- 02: YOUR SCORECARD -->
+  <section>
+    <h2><span class="number">02</span>Digital <em>Scorecard</em></h2>
+
+    <p>Before we could build the right replacement, we had to understand what was actually there. Here's an honest look at the current Shopify site and where the gaps were.</p>
+
+    <div class="site-screenshot">
+      <h3>Current Website — Shopify Dawn Theme</h3>
+      <div class="screenshot-frame">
+        <img src="./petalswings-screenshot.jpg" alt="PetalsWings current Shopify website" style="width:100%;border-radius:8px;border:1px solid var(--border)">
+      </div>
+      <p style="text-align:center;font-size:12px;color:var(--text-muted);margin-top:8px">Captured April 2026 — petalswings.com (Shopify Dawn theme)</p>
+    </div>
+
+    <h3>Scorecard</h3>
+    <div class="score-grid">
+      <div class="score-card">
+        <div class="label">Design</div>
+        <div class="value"><span class="grade-display c">C</span></div>
+        <div class="note">Default Shopify template. No brand identity, no custom typography, generic color palette.</div>
+      </div>
+      <div class="score-card">
+        <div class="label">Mobile</div>
+        <div class="value"><span class="grade-display b">B</span></div>
+        <div class="note">Shopify's mobile rendering is competent out of the box. Functional but not designed.</div>
+      </div>
+      <div class="score-card">
+        <div class="label">Speed</div>
+        <div class="value"><span class="grade-display b">B</span></div>
+        <div class="note">Shopify CDN handles most assets well. JS bloat from Dawn theme is a drag.</div>
+      </div>
+      <div class="score-card">
+        <div class="label">SEO</div>
+        <div class="value"><span class="grade-display cplus">C+</span></div>
+        <div class="note">Limited structured data. Shopify URL structure isn't ideal. No editorial content for Google to index.</div>
+      </div>
+    </div>
+
+    <h3>What Was Working</h3>
+    <ul>
+      <li><strong>Product catalog is thorough.</strong> 660+ items, all with photos, tags, prices, and descriptions in Bonnie's own voice.</li>
+      <li><strong>Shopify checkout is reliable.</strong> Customers trust it. Shop Pay integration works out of the box.</li>
+      <li><strong>Mobile rendering.</strong> Dawn theme handles small screens without breaking — it just doesn't feel designed for them.</li>
+      <li><strong>The utility bar messaging.</strong> The "2026 season open / message from Bonnie" bar is a small personal touch that creates a sense of relationship with repeat buyers.</li>
+    </ul>
+
+    <h3>Where the Gaps Were</h3>
+    <ul>
+      <li><strong>No brand identity whatsoever.</strong> The Dawn theme ships with generic colors and no typography personality. Nothing about the site says "Bonnie's farm" — it looks like thousands of other Shopify stores.</li>
+      <li><strong>No editorial content.</strong> No blog, no growing guides, no care tips, no "About Bonnie." Without that content, there's nothing for Google to rank beyond raw product pages.</li>
+      <li><strong>"Powered by Shopify" footer.</strong> A small detail, but it tells every visitor that this isn't a custom-built experience.</li>
+      <li><strong>Product discovery is hard.</strong> With 660+ varieties and no filtering by color, bloom time, height, or fragrance, shoppers are on their own. The best products can't surface.</li>
+      <li><strong>No structured data.</strong> No Product schema, no LocalBusiness schema, no breadcrumbs. AI-powered search and featured snippet opportunities are left on the table.</li>
+      <li><strong>The story isn't told anywhere.</strong> Bonnie's decade of growing, her 9/11-origin iris garden, the "1,000s of sales" — none of that is on the current site. It's the most powerful thing about PetalsWings and it's invisible.</li>
+    </ul>
+  </section>
+
+  <!-- 03: HOW YOU STACK UP -->
+  <section>
+    <h2><span class="number">03</span>How You <em>Stack Up</em></h2>
+
+    <p>The iris nursery space online is dominated by a small number of established brands — most of them larger operations with significant SEO investment over many years. Schreiner's Gardens in Oregon has been a nationally recognized iris grower since 1925. Dutch Gardens and Longfield Gardens rank for the broadest general bulb terms. These are formidable names. But they're not unbeatable — and the headless rebuild changes the math.</p>
+
+    <div class="compare-grid">
+      <div class="compare-card">
+        <div class="comp-name">Schreiner's Iris</div>
+        <div class="comp-stat">
+          <span class="stat-label">Design</span>
+          <span class="stat-val mid">Dated</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Editorial</span>
+          <span class="stat-val good">Strong</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Brand Story</span>
+          <span class="stat-val good">100-yr history</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Community</span>
+          <span class="stat-val mid">Institutional</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Headless</span>
+          <span class="stat-val low">No</span>
+        </div>
+      </div>
+
+      <div class="compare-card">
+        <div class="comp-name">Dutch Gardens</div>
+        <div class="comp-stat">
+          <span class="stat-label">Design</span>
+          <span class="stat-val mid">Generic</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Editorial</span>
+          <span class="stat-val mid">Moderate</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Brand Story</span>
+          <span class="stat-val low">Import-focused</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Community</span>
+          <span class="stat-val low">Transactional</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Headless</span>
+          <span class="stat-val low">No</span>
+        </div>
+      </div>
+
+      <div class="compare-card">
+        <div class="comp-name">Longfield Gardens</div>
+        <div class="comp-stat">
+          <span class="stat-label">Design</span>
+          <span class="stat-val mid">Clean</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Editorial</span>
+          <span class="stat-val good">Strong blog</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Brand Story</span>
+          <span class="stat-val mid">Dutch import</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Community</span>
+          <span class="stat-val mid">Email-forward</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Headless</span>
+          <span class="stat-val low">No</span>
+        </div>
+      </div>
+
+      <div class="compare-card you">
+        <div class="comp-name">PetalsWings (New)</div>
+        <div class="comp-stat">
+          <span class="stat-label">Design</span>
+          <span class="stat-val good">Custom brand</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Editorial</span>
+          <span class="stat-val good">Growing guides</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Brand Story</span>
+          <span class="stat-val good">Bonnie's farm</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Community</span>
+          <span class="stat-val good">Personal + loyal</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Headless</span>
+          <span class="stat-val good">Yes — Astro 6</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout">
+      <strong>The key insight from our competitive analysis:</strong> The iris farm digital space has weak design competition. Most growers, even the well-known ones, are running on dated templates with no real brand identity. Bonnie has something they don't: a genuine origin story, a decade-plus of loyal buyers, and thousands of real reviews from platforms where customers went out of their way to buy from her. The headless rebuild gives that story a home.
+    </div>
+
+    <h3>Where PetalsWings Already Wins</h3>
+    <ul>
+      <li><strong>Community relationships.</strong> Customers who found Bonnie on Etsy, eBay, or Facebook didn't shop there because of a slick website — they bought because of her reputation. That loyalty is a moat no competitor can copy.</li>
+      <li><strong>Catalog depth.</strong> 660+ varieties across 8 iris types, with varieties going back to 1936. Award winners, reblooming, fragrant, Japanese — more types in one place than most single-grower sites offer.</li>
+      <li><strong>Personal voice.</strong> Bonnie's product descriptions are in her own words. Her seasonal announcement is a personal message, not a corporate blast. That warmth is rare in e-commerce.</li>
+      <li><strong>The story itself.</strong> A post-9/11 iris garden that grew from 3 plants to 700 varieties over 20 years is genuinely compelling. It's the kind of origin story brands pay content agencies thousands to fabricate — and it's real.</li>
+    </ul>
+  </section>
+
+  <!-- 04: WHAT PEOPLE ARE SEARCHING FOR -->
+  <section>
+    <h2><span class="number">04</span>What People Are <em>Searching For</em></h2>
+
+    <p>Iris buyers are high-intent searchers. When someone types "tall bearded iris for sale," they already know what they want — they're looking for the right place to buy it. Seasonal spikes in spring (March–May) and fall pre-order season (August–October) create two distinct buying windows per year. These are the terms PetalsWings can win.</p>
+
+    <h3>High-Intent Purchase Terms</h3>
+    <div class="kw-grid">
+      <div class="kw-card">
+        <span class="kw-term">buy iris bulbs online</span>
+        <span class="kw-vol"><strong>High</strong> volume</span>
+      </div>
+      <div class="kw-card">
+        <span class="kw-term">tall bearded iris for sale</span>
+        <span class="kw-vol"><strong>High</strong> volume</span>
+      </div>
+      <div class="kw-card">
+        <span class="kw-term">reblooming iris plants</span>
+        <span class="kw-vol"><strong>Medium</strong> volume</span>
+      </div>
+      <div class="kw-card">
+        <span class="kw-term">fragrant iris varieties</span>
+        <span class="kw-vol"><strong>Medium</strong> volume</span>
+      </div>
+      <div class="kw-card">
+        <span class="kw-term">iris nursery online</span>
+        <span class="kw-vol"><strong>Medium</strong> volume</span>
+      </div>
+      <div class="kw-card">
+        <span class="kw-term">iris rhizomes for sale</span>
+        <span class="kw-vol"><strong>High</strong> volume</span>
+      </div>
+      <div class="kw-card">
+        <span class="kw-term">dwarf bearded iris</span>
+        <span class="kw-vol"><strong>Medium</strong> volume</span>
+      </div>
+      <div class="kw-card">
+        <span class="kw-term">award winning iris</span>
+        <span class="kw-vol"><strong>Medium</strong> volume</span>
+      </div>
+      <div class="kw-card">
+        <span class="kw-term">Japanese iris plants</span>
+        <span class="kw-vol"><strong>Medium</strong> volume</span>
+      </div>
+      <div class="kw-card">
+        <span class="kw-term">deer resistant iris</span>
+        <span class="kw-vol"><strong>Growing</strong> trend</span>
+      </div>
+      <div class="kw-card">
+        <span class="kw-term">how to plant iris bulbs</span>
+        <span class="kw-vol"><strong>High</strong> volume</span>
+      </div>
+      <div class="kw-card">
+        <span class="kw-term">best iris for beginners</span>
+        <span class="kw-vol"><strong>Medium</strong> volume</span>
+      </div>
+    </div>
+
+    <h3>Why These Terms Matter Now</h3>
+    <p>The current Shopify site ranks for Bonnie's brand name and a handful of direct product titles — but it's invisible for category-level purchase intent. Someone searching "reblooming iris for sale" or "fragrant iris varieties" won't find PetalsWings unless they already know to look. The new site's growing guides blog, collection pages, and structured product data are built specifically to close this gap.</p>
+
+    <div class="callout">
+      <strong>Seasonal opportunity is enormous.</strong> Iris searches spike sharply in spring planting season (March–May) and again in late summer for fall pre-orders. A well-optimized site with timely content — "What to Plant This Fall" guides, pre-order announcements, variety spotlights — can capture buyers at exactly the moment they're ready to purchase.
+    </div>
+  </section>
+
+  <!-- 05: THE FUTURE OF SEARCH -->
+  <section>
+    <h2><span class="number">05</span>The Future of <em>Search</em></h2>
+
+    <p>Search is changing faster than most small businesses realize. AI-powered results on Google, ChatGPT's shopping recommendations, and voice search on mobile are all drawing from the same underlying signal: <strong>E-E-A-T</strong> — Experience, Expertise, Authoritativeness, and Trustworthiness. The businesses that win in AI-era search are the ones that have clearly demonstrated real expertise, real history, and real customer relationships.</p>
+
+    <h3>What AI Search Looks For</h3>
+    <ul>
+      <li><strong>Structured product data (JSON-LD).</strong> AI shopping surfaces pull from Product schema to understand what's being sold, at what price, with what availability. The previous Shopify theme had minimal schema output.</li>
+      <li><strong>Author credibility signals.</strong> When Bonnie's name and story appear in structured content — an About page, a blog with a consistent author, a care guide signed by someone with 20 years of experience — that's E-E-A-T in practice.</li>
+      <li><strong>Editorial depth.</strong> A growing guide for Tall Bearded Irises written from genuine experience is exactly what AI summarization models prefer over thin product pages. The new site has a full Growing Guides section.</li>
+      <li><strong>Authentic reviews.</strong> PetalsWings has thousands of real Etsy and eBay reviews. Migrating that social proof — even as quoted testimonials — gives search engines and AI models clear authority signals.</li>
+    </ul>
+
+    <h3>What the Rebuild Adds for Search</h3>
+    <div class="before-after">
+      <div class="ba-card before">
+        <div class="ba-label">Shopify Dawn — Before</div>
+        <ul>
+          <li>Minimal JSON-LD schema output</li>
+          <li>No author or E-E-A-T signals</li>
+          <li>No editorial content to index</li>
+          <li>No LocalBusiness markup</li>
+          <li>No breadcrumb schema</li>
+          <li>Generic meta descriptions</li>
+          <li>No growing guides or care content</li>
+        </ul>
+      </div>
+      <div class="ba-card after">
+        <div class="ba-label">Astro 6 — After</div>
+        <ul>
+          <li><span class="material-icons">check</span> Product + offer schema on every PDP</li>
+          <li><span class="material-icons">check</span> About page with Bonnie's story and credentials</li>
+          <li><span class="material-icons">check</span> Growing Guides section (3+ categories)</li>
+          <li><span class="material-icons">check</span> Blog with variety spotlights + care content</li>
+          <li><span class="material-icons">check</span> Breadcrumb schema across all pages</li>
+          <li><span class="material-icons">check</span> Custom OG images and meta per page</li>
+          <li><span class="material-icons">check</span> Collection pages for every iris type</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout">
+      <strong>Bonnie's personal story is exceptional E-E-A-T material.</strong> A 20-year grower who started with three plants and built to 700+ varieties — that's the kind of real-world expertise AI systems are explicitly built to surface. The Shopify theme had nowhere to put that story. The new site leads with it.
+    </div>
+  </section>
+
+  <!-- 06: WHAT WE BUILT -->
+  <section>
+    <h2><span class="number">06</span>Here's What We <em>Actually Built</em></h2>
+
+    <p>The headless rebuild isn't a Shopify theme swap. It's a complete custom front end — designed from scratch for PetalsWings, deployed to Cloudflare's global network, connected to Shopify exclusively for product data and checkout. Here's what that means in practice.</p>
+
+    <div class="status-banner">
+      <span class="material-icons">check_circle</span>
+      <p><strong>All of this is already built and in review.</strong> The new site is live on our launch domain. Bonnie keeps doing everything she does in Shopify today — product updates, inventory, orders — none of that changes. The front end is what's new.</p>
+    </div>
+
+    <h3>Tech Stack</h3>
+    <div class="tech-row">
+      <span class="tech-pill highlight">Astro 6</span>
+      <span class="tech-pill highlight">Cloudflare Workers</span>
+      <span class="tech-pill highlight">Shopify Storefront API</span>
+      <span class="tech-pill">Preact Islands</span>
+      <span class="tech-pill">Shop Pay Checkout</span>
+      <span class="tech-pill">Tailwind CSS v4</span>
+      <span class="tech-pill">Lora + DM Sans</span>
+      <span class="tech-pill">Material Icons</span>
+    </div>
+
+    <div class="opp-grid">
+      <div class="opp-card">
+        <h4>Custom Brand Identity</h4>
+        <p>A complete design system built from PetalsWings's logo and botanical palette. Primary purple (#7B5EA7), soft lavender (#C4A8D8), sage green (#8B9E7C), and warm white. Lora serif headings with DM Sans body copy. Every element designed to feel like Bonnie's farm, not a generic template.</p>
+        <div class="opp-tags"><span class="tag easy">Complete</span></div>
+      </div>
+
+      <div class="opp-card">
+        <h4>Iris Discovery Experience</h4>
+        <p>A shop page built for 660+ varieties. Filter chips by type (Tall Bearded, Reblooming, Dwarf, Japanese, and more), sort by price or popularity, and an interactive "Help Me Choose" quiz that guides new iris buyers to the right varieties for their growing conditions and style preferences.</p>
+        <div class="opp-tags"><span class="tag easy">Complete</span></div>
+      </div>
+
+      <div class="opp-card">
+        <h4>Preact Cart Islands</h4>
+        <p>Add to Cart, variant selection, and a full cart drawer — all built as interactive Preact islands. Zero full-page reloads for the shopping experience. Cart state is shared across components via nanostores, wired to Shopify checkout and Shop Pay for a seamless transaction flow.</p>
+        <div class="opp-tags"><span class="tag easy">Complete</span></div>
+      </div>
+
+      <div class="opp-card">
+        <h4>Product Detail Pages</h4>
+        <p>Dynamic routes for every product — real Shopify data, image galleries, a growing spec bar (type, height, bloom season, sun requirements, hardiness zones, deer resistance), Bonnie's personal care notes surfaced as callouts, and a "Pairs Well With" section no competitor offers.</p>
+        <div class="opp-tags"><span class="tag easy">Complete</span></div>
+      </div>
+
+      <div class="opp-card">
+        <h4>Bonnie's Story — Front and Center</h4>
+        <p>A full About page built around Bonnie's origin story: the post-9/11 iris garden, 20 years of growing, the family that helps ship every order. Visual timeline, three harvest photos, stats bar (700+ varieties, 20,000+ orders, 5-star rating). A "Meet the Grower" section with Bonnie's actual photo.</p>
+        <div class="opp-tags"><span class="tag easy">Complete</span></div>
+      </div>
+
+      <div class="opp-card">
+        <h4>Growing Guides + Blog</h4>
+        <p>A full Growing Guides section with three content categories (Getting Started, Advanced, Seasonal) and a Blog built for variety spotlights, growing tips, and seasonal announcements. These pages are the SEO engine — content Google can rank, content AI summaries can cite, content buyers bookmark.</p>
+        <div class="opp-tags"><span class="tag medium">In Progress</span></div>
+      </div>
+    </div>
+
+    <h3>Pages Built</h3>
+    <ul class="feature-list">
+      <li>
+        <span class="material-icons">check_circle</span>
+        <span><strong>Homepage</strong> — Hero with spinning badge animation, trust strip, 6 collection cards, Best Sellers carousel, Bonnie's story teaser, testimonials carousel, reels strip, growing tips preview, seasonal shipping timeline, newsletter.</span>
+      </li>
+      <li>
+        <span class="material-icons">check_circle</span>
+        <span><strong>Shop page</strong> — Server-rendered, filter chips, sort, "Help Me Choose" quiz modal, paginated 48 products per page with real Shopify data.</span>
+      </li>
+      <li>
+        <span class="material-icons">check_circle</span>
+        <span><strong>Product detail pages</strong> — Dynamic route for all 660+ products, real images, spec bar, tabs, urgency badges, Pairs Well With recommendations.</span>
+      </li>
+      <li>
+        <span class="material-icons">check_circle</span>
+        <span><strong>About page</strong> — Asymmetric photo grid, stats bar, horizontal timeline, Meet Bonnie section, farm process steps, 6-value card grid, CTA banner.</span>
+      </li>
+      <li>
+        <span class="material-icons">check_circle</span>
+        <span><strong>Blog</strong> — Hero, 6-card grid, newsletter signup.</span>
+      </li>
+      <li>
+        <span class="material-icons">check_circle</span>
+        <span><strong>Growing Guides</strong> — Featured guide, 3 category sections, read times, contact CTA.</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 07: HOW THIS WORKS -->
+  <section>
+    <h2><span class="number">07</span>How This <em>Works</em></h2>
+
+    <p>This is how Aspire builds a project like this — from the first conversation to launch day and beyond. PetalsWings is currently in Review, the fourth stage of the process.</p>
+
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="week">Stage 1 — Complete</div>
+        <div class="task">Research &amp; Brand Discovery</div>
+        <div class="detail">We scraped and analyzed 8 competitor iris and flower farm sites. We extracted PetalsWings's brand palette from Bonnie's logo and built a full design system — 70+ CSS tokens, color palette, typography (Lora + DM Sans), icon system, button variants. We documented Bonnie's brand voice: passionate, knowledgeable, personal, earned not claimed.</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="week">Stage 2 — Complete</div>
+        <div class="task">Design System &amp; Prototyping</div>
+        <div class="detail">A complete design library was built and deployed — interactive color swatches, type scale, button system, form components, product card anatomy, testimonial patterns, and 46 curated Material Icons. Jaime reviewed every component. Template direction decided: Flowers X layout as the base, blended with Farm template storytelling elements.</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="week">Stage 3 — Complete</div>
+        <div class="task">Headless Build</div>
+        <div class="detail">Full Astro 6 project built: 6 pages, Preact cart islands, dynamic product routes pulling from Shopify Storefront API, smart notification bar, responsive mobile menu, Bonnie's welcome modal, image optimization (WebP, 88% file size savings on hero), real product photos from Shopify CDN. Deployed to Cloudflare Workers.</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="week">Stage 4 — Current</div>
+        <div class="task">Review</div>
+        <div class="detail">The new site is live on our launch domain. Bonnie is reviewing all pages — homepage flow, product detail pages, her story, the Help Me Choose quiz. We're gathering final feedback: preferred photos, video reels, any copy adjustments. The client guide walks Bonnie through every section with screenshots.</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="week">Stage 5 — Upcoming</div>
+        <div class="task">Launch Before Bloom Season</div>
+        <div class="detail">Production cutover to petalswings.com before the 2026 spring bloom season. Shopify backend stays exactly the same — Bonnie continues managing products, inventory, and orders in Shopify. What changes is what every customer sees. DNS cutover is handled entirely by Aspire.</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="week">Stage 6 — Ongoing</div>
+        <div class="task">Seasonal Support</div>
+        <div class="detail">New growing guides and blog posts before each season. Email capture for seasonal announcements. Potential additions: review migration from Etsy/eBay, wishlist system for repeat buyers, back-in-stock notifications for the 231 currently out-of-stock varieties. The site grows as the business grows.</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 08: BEYOND THE WEBSITE -->
+  <section>
+    <h2><span class="number">08</span>Beyond the <em>Website</em></h2>
+
+    <p>A great website is the foundation. But Bonnie's loyal customer base — built over a decade on Etsy, eBay, and Facebook — is the asset worth protecting and growing. The digital tools below are how she can turn seasonal buyers into year-round community members.</p>
+
+    <div class="icon-card-grid">
+
+      <div class="icon-card">
+        <span class="material-icons">mail</span>
+        <h4>Seasonal Email Announcements</h4>
+        <p>Bonnie's loyal customers come back every year. A seasonal email list — "2026 Season Now Open," "Fall Pre-Orders Begin," "New Varieties Just Added" — keeps PetalsWings top of mind between purchases and drives traffic at exactly the right moment.</p>
+      </div>
+
+      <div class="icon-card">
+        <span class="material-icons">photo_camera</span>
+        <h4>Instagram Garden Content</h4>
+        <p>Iris photos are inherently shareable. Behind-the-scenes harvest reels, "Variety of the Week" posts, Bonnie's garden in peak bloom — this is content that doesn't need to be manufactured. It grows in the garden every season. The new site is already wired for a reels strip on the homepage.</p>
+      </div>
+
+      <div class="icon-card">
+        <span class="material-icons">menu_book</span>
+        <h4>Growing Guides Blog</h4>
+        <p>Care guides ("How to Plant Tall Bearded Irises"), variety spotlights ("Why Immortality Is Our Best Seller"), and seasonal content ("What to Plant This Fall") are the SEO engine. Every published guide is a page Google can rank for someone searching for exactly that information at purchase time.</p>
+      </div>
+
+      <div class="icon-card">
+        <span class="material-icons">loyalty</span>
+        <h4>Loyalty Program for Repeat Buyers</h4>
+        <p>A shopper who's ordered from Bonnie three times is more valuable than ten one-time buyers. A simple repeat-buyer program — early access to new varieties, a small seasonal discount, first notice on pre-orders — rewards the loyal customers who already trust PetalsWings and encourages them to come back.</p>
+      </div>
+
+      <div class="icon-card">
+        <span class="material-icons">star_rate</span>
+        <h4>Review Migration from Etsy &amp; eBay</h4>
+        <p>PetalsWings has thousands of real reviews on third-party platforms from years of sales before Shopify. Migrating the strongest of those as testimonials — with context and attribution — transfers hard-earned social proof to a page Bonnie controls, and gives new customers the confidence that established buyers already have.</p>
+      </div>
+
+      <div class="icon-card">
+        <span class="material-icons">favorite</span>
+        <h4>Wishlist for Seasonal Shoppers</h4>
+        <p>Iris buyers often browse in winter and buy in spring. A wishlist feature lets them save varieties during the off-season and return to their list when orders open. The architecture for this is already designed — LocalStorage for anonymous shoppers, Shopify metafield sync for logged-in buyers who return across devices.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 09: REVENUE IMPACT -->
+  <section>
+    <h2><span class="number">09</span>What This Could <em>Mean</em></h2>
+
+    <p>We won't fabricate numbers. But the mechanics of how a better product experience compounds into better revenue are worth naming clearly — especially for a business like PetalsWings where the products are excellent and the limiting factor has been the digital experience, not the inventory.</p>
+
+    <div class="revenue-box">
+      <div class="rev-label">The Core Mechanic</div>
+      <div class="rev-amount">Better Discovery</div>
+      <div class="rev-note">→ Larger Cart Sizes → More Repeat Buyers → Compounding Seasonal Revenue</div>
+    </div>
+
+    <h3>Conversion — From Visitor to Buyer</h3>
+    <p>A generic Shopify Dawn template communicates "I have products for sale." A custom-designed brand communicates "I'm the expert you've been looking for." That shift in first impression changes conversion rates. When a visitor lands on a homepage that tells Bonnie's story, shows her farm, and guides them to the right variety for their growing zone — they're more likely to buy, and they're more likely to buy multiple items.</p>
+
+    <h3>Cart Size — From One Rhizome to a Collection</h3>
+    <p>The "Pairs Well With" section on every Product Detail Page is a deliberate cart-building feature. When a buyer looks at Immortality (TB, white, early bloomer), the page suggests fragrant companions and complementary bloom seasons. Longfield Gardens and Schreiner's don't offer this. No competitor does. A shopper who adds one companion variety to their cart alongside their original pick has materially changed their order size.</p>
+
+    <h3>Retention — Seasonal Buyers Become Community Members</h3>
+    <p>Iris buyers are inherently seasonal — they plant in spring and fall. The email capture in the newsletter section, combined with seasonal growing guides and variety announcements, turns one-time buyers into annual customers. The loyalty program architecture extends this further. A customer who orders from PetalsWings three times a year for five years is worth significantly more than the same customer acquired once and never retained.</p>
+
+    <h3>Search — Organic Traffic From Growing Guides</h3>
+    <p>The Growing Guides section doesn't just serve customers who are already on the site. It creates pages that rank for search terms like "how to plant bearded iris" and "reblooming iris care" — terms that get searched by gardeners who haven't heard of PetalsWings yet. When a growing guide ranks and a reader clicks through, the same site that answered their question also has the product for sale. That's the flywheel.</p>
+
+    <div class="callout">
+      <strong>Even a modest improvement compounds quickly.</strong> A ten-to-twenty percent lift in conversion rate or average order size — achievable when product discovery is easier and the brand communicates genuine expertise — compounds significantly across two selling seasons per year. The technical infrastructure and brand foundation are built. The lift begins at launch.
+    </div>
+  </section>
+
+  <!-- 10: WHY ASPIRE DIGITAL + CTA -->
+  <section>
+    <h2><span class="number">10</span>Why <em>Aspire Digital</em></h2>
+
+    <p>We're a small agency and we want to stay that way. We take on a handful of clients at a time — not because we can't handle more, but because every client we work with deserves to have our full attention, not a production line. PetalsWings is one of our most technically ambitious projects and we're proud of what we built.</p>
+
+    <h3>What Makes This Build Different</h3>
+    <ul class="feature-list">
+      <li>
+        <span class="material-icons">build</span>
+        <span><strong>Headless architecture.</strong> Astro 6 on Cloudflare Workers is not a standard agency deliverable. Most shops offering "Shopify redesigns" are swapping themes. We built a custom front end connected to Shopify via the Storefront API — faster, fully custom, and not locked to Shopify's theme limitations.</span>
+      </li>
+      <li>
+        <span class="material-icons">palette</span>
+        <span><strong>Design system first.</strong> Before writing a single line of page code, we built the full design library — tokens, typography, components, brand voice. Every page was designed from that system, not improvised. It means the site is visually consistent at every breakpoint and easy to extend as new pages are added.</span>
+      </li>
+      <li>
+        <span class="material-icons">bolt</span>
+        <span><strong>Performance by default.</strong> Cloudflare Workers deploys to 300+ edge locations globally. Every image is WebP-optimized at build time (88% smaller than source). The shop page is server-rendered — product data is fetched server-side, not loaded in the browser after the page appears.</span>
+      </li>
+      <li>
+        <span class="material-icons">person</span>
+        <span><strong>No black box.</strong> Bonnie doesn't have to learn a new CMS or touch code. She keeps doing what she does in Shopify. Aspire manages the front end. When she adds a new iris variety or updates a price in Shopify, it appears on the new site automatically.</span>
+      </li>
+      <li>
+        <span class="material-icons">trending_up</span>
+        <span><strong>Built to grow.</strong> The wishlist system, back-in-stock notifications, loyalty program — these aren't on the roadmap as vague promises. The architecture decisions made during the build (Preact islands, nanostores, Workers KV for state) were made specifically to support these features when Bonnie is ready for them.</span>
+      </li>
+    </ul>
+
+    <h3>This Is Our Flagship Headless Commerce Project</h3>
+    <p>PetalsWings is the most complex build we've shipped: a fully custom headless Shopify front end with 6 pages, interactive Preact islands, real-time Storefront API data, and a complete brand system designed from scratch. If you're running a product-based business on Shopify and you've outgrown what a theme can do — this is what a custom build looks like.</p>
+
+    <div class="cta-box">
+      <div class="cta-heading">Want something <em>like this</em>?</div>
+      <p class="cta-sub">We're taking on new headless Shopify projects for 2026. If you're selling products and your site isn't keeping up with your catalog, let's talk.</p>
+      <a href="https://madebyaspire.com/contact" class="cta-button" target="_blank">Book a Free Strategy Call</a>
+      <p class="cta-or">or email <a href="mailto:chris@aspiredigital.dev">Chris</a> directly at <a href="mailto:chris@aspiredigital.dev">chris@aspiredigital.dev</a></p>
+    </div>
+  </section>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <p>Prepared by <strong>Aspire Digital</strong> · <a href="https://madebyaspire.com">madebyaspire.com</a></p>
+  <p style="margin-top:8px">Questions? Reach out to <a href="mailto:chris@aspiredigital.dev">Chris</a> · <a href="mailto:chris@aspiredigital.dev">chris@aspiredigital.dev</a></p>
+  <p style="margin-top:12px;font-size:11px;color:var(--text-muted)">© 2026 Aspire Digital · Portfolio case study — PetalsWings</p>
+</div>
+
+</body>
+</html>

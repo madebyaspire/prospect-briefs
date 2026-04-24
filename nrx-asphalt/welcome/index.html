@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NRX Asphalt — Portfolio Case Study | Aspire Digital</title>
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<!-- Open Graph / iMessage / SMS preview -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="NRX Asphalt — Built Tough. Done Right.">
+<meta property="og:description" content="How Aspire Digital built a credible digital presence for NRX Asphalt — a 30-year paving institution in central Ohio.">
+<meta property="og:image" content="https://yoursite.madebyaspire.com/nrx-asphalt/welcome/og-card.png">
+<meta property="og:url" content="https://yoursite.madebyaspire.com/nrx-asphalt/welcome/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="NRX Asphalt — Built Tough. Done Right.">
+<meta name="twitter:description" content="A portfolio case study prepared by Aspire Digital.">
+<meta name="twitter:image" content="https://yoursite.madebyaspire.com/nrx-asphalt/welcome/og-card.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FAF0E2;
+    --bg-alt: #F2EDE6;
+    --text: #2C3340;
+    --text-sec: #666666;
+    --text-muted: #999999;
+    --accent: #C4622D;
+    --accent-dark: #B53D00;
+    --border: #E5E5E5;
+    --border-light: #F0F0F0;
+    --green: #4a7b5a;
+    --hero-green: #8FAF8A;
+    --white: #ffffff;
+    --font: 'DM Sans', system-ui, -apple-system, sans-serif;
+    --font-head: 'Montserrat', system-ui, sans-serif;
+    --font-accent: 'Playfair Display', Georgia, serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 15px;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection { background: var(--accent); color: #fff; }
+
+  /* PAGE HEADER */
+  .page-header {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 48px;
+  }
+  .page-header-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .page-header .aspire-logo {
+    width: 200px;
+    height: auto;
+  }
+
+  /* HERO */
+  .hero {
+    background: var(--hero-green);
+    text-align: center;
+    padding: 60px 48px 80px;
+    position: relative;
+  }
+  .hero h1 {
+    font-family: var(--font-head);
+    font-weight: 800;
+    font-size: clamp(36px, 6vw, 56px);
+    color: var(--accent);
+    line-height: 1.08;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+  }
+  .hero .sub {
+    font-family: var(--font-head);
+    font-weight: 600;
+    font-size: clamp(18px, 3vw, 24px);
+    color: #2C3340;
+    margin-bottom: 4px;
+    letter-spacing: -0.01em;
+  }
+  .hero .accent-word {
+    font-family: var(--font-accent);
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(36px, 6vw, 56px);
+    color: var(--white);
+    line-height: 1.08;
+  }
+  .hero .body-text {
+    color: var(--white);
+    font-size: 17px;
+    max-width: 540px;
+    margin: 28px auto 0;
+    line-height: 1.7;
+  }
+
+  /* ARC DIVIDER */
+  .hero-arc {
+    margin-top: -1px;
+    background: var(--hero-green);
+  }
+  .hero-arc svg {
+    display: block;
+    width: 100%;
+    height: 80px;
+  }
+
+  /* CONTAINER */
+  .container {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  /* META BAR */
+  .meta-bar {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 32px 0 20px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 56px;
+    font-size: 13px;
+    color: var(--text-muted);
+    letter-spacing: 0.3px;
+  }
+  .meta-bar strong { color: var(--text); font-weight: 600; }
+  .meta-bar a { color: var(--accent); text-decoration: none; }
+
+  /* SECTIONS */
+  section { margin-bottom: 64px; }
+
+  h2 {
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: clamp(24px, 3.5vw, 32px);
+    color: var(--text);
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+  }
+  h2 .number {
+    font-family: var(--font);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+  }
+  h2 em {
+    font-family: var(--font-accent);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--accent);
+  }
+
+  h3 {
+    font-family: var(--font-head);
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin: 32px 0 12px;
+  }
+
+  p { margin-bottom: 16px; color: var(--text-sec); }
+  p strong { color: var(--text); }
+  ul { margin: 0 0 16px 20px; }
+  li { margin-bottom: 6px; color: var(--text-sec); }
+  li strong { color: var(--text); }
+
+  /* CALLOUT */
+  .callout {
+    background: var(--bg-alt);
+    border-left: 3px solid var(--accent);
+    padding: 20px 24px;
+    margin: 24px 0;
+    font-size: 0.9rem;
+    border-radius: 0 12px 12px 0;
+    color: var(--text-sec);
+  }
+  .callout strong { color: var(--text); }
+
+  /* PILL TAGS */
+  .tag {
+    display: inline-block;
+    padding: 4px 14px;
+    border-radius: 9999px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .tag.easy { background: #e8f5e9; color: #2e7d32; }
+  .tag.medium { background: #fff3e0; color: #e65100; }
+  .tag.high { background: var(--accent); color: white; }
+  .tag.mid-impact { background: #e3f2fd; color: #1565c0; }
+
+  /* SCORE CARDS */
+  .score-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 16px;
+    margin: 24px 0;
+  }
+  .score-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 24px 16px;
+    text-align: center;
+    border: 1px solid var(--border-light);
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+  .score-card:hover {
+    box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+    transform: translateY(-2px);
+  }
+  .score-card .label {
+    font-family: var(--font-head);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+  }
+  .score-card .value {
+    font-family: var(--font-head);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent);
+  }
+  .score-card .note {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 4px;
+  }
+
+  /* BAR CHART */
+  .bar-chart { margin: 24px 0; }
+  .bar-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  .bar-row .bar-label {
+    width: 160px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text);
+    flex-shrink: 0;
+  }
+  .bar-row .bar-track {
+    flex: 1;
+    height: 28px;
+    background: var(--bg-alt);
+    border-radius: 14px;
+    overflow: hidden;
+    margin: 0 12px;
+  }
+  .bar-row .bar-fill {
+    height: 100%;
+    border-radius: 14px;
+  }
+  .bar-row .bar-val {
+    width: 40px;
+    font-family: var(--font-head);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-align: right;
+  }
+
+  /* COMPARE CARDS */
+  .compare-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin: 24px 0;
+  }
+  .compare-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 24px 20px;
+    border: 1px solid var(--border-light);
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+  .compare-card:hover {
+    box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+    transform: translateY(-2px);
+  }
+  .compare-card.you {
+    border: 2px solid var(--accent);
+    background: #FFF9F5;
+  }
+  .compare-card .comp-name {
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--text);
+    margin-bottom: 14px;
+  }
+  .compare-card .comp-stat {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    padding: 5px 0;
+    border-bottom: 1px solid var(--border-light);
+  }
+  .compare-card .comp-stat:last-child { border-bottom: none; }
+  .compare-card .comp-stat .stat-label { color: var(--text-muted); }
+  .compare-card .comp-stat .stat-val { font-weight: 600; }
+  .stat-val.good { color: var(--green); }
+  .stat-val.mid { color: #b8860b; }
+  .stat-val.low { color: #c44; }
+
+  /* KEYWORD CARDS */
+  .kw-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 10px;
+    margin: 24px 0;
+  }
+  .kw-card {
+    background: var(--white);
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    padding: 14px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: box-shadow 0.3s;
+  }
+  .kw-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.05); }
+  .kw-card .kw-term {
+    font-weight: 500;
+    font-size: 13px;
+    color: var(--text);
+  }
+  .kw-card .kw-vol {
+    font-size: 11px;
+    color: var(--text-muted);
+    white-space: nowrap;
+    margin-left: 12px;
+  }
+  .kw-card .kw-vol strong {
+    font-family: var(--font-head);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--accent);
+  }
+
+  /* TIMELINE */
+  .timeline {
+    position: relative;
+    margin: 24px 0;
+    padding-left: 36px;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    bottom: 8px;
+    width: 2px;
+    background: var(--border);
+  }
+  .timeline-item {
+    position: relative;
+    margin-bottom: 32px;
+  }
+  .timeline-item:last-child { margin-bottom: 0; }
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -32px;
+    top: 6px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 3px solid var(--bg);
+    box-shadow: 0 0 0 2px var(--accent);
+  }
+  .timeline-item .week {
+    font-family: var(--font-head);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 4px;
+  }
+  .timeline-item .task {
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--text);
+    margin-bottom: 4px;
+    line-height: 1.3;
+  }
+  .timeline-item .detail {
+    font-size: 14px;
+    color: var(--text-sec);
+    line-height: 1.65;
+  }
+
+  /* OPPORTUNITY CARDS */
+  .opp-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    margin: 24px 0;
+  }
+  .opp-card {
+    background: var(--white);
+    border: 1px solid var(--border-light);
+    border-radius: 16px;
+    padding: 28px 24px;
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+  .opp-card:hover {
+    box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+    transform: translateY(-2px);
+  }
+  .opp-card h4 {
+    font-family: var(--font-head);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 8px;
+  }
+  .opp-card p { font-size: 13px; color: var(--text-sec); margin-bottom: 14px; }
+  .opp-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+
+  /* REVENUE BOX */
+  .revenue-box {
+    background: var(--green);
+    color: white;
+    border-radius: 16px;
+    padding: 48px 40px;
+    text-align: center;
+    margin: 32px 0;
+  }
+  .revenue-box .rev-label {
+    font-family: var(--font-head);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    opacity: 0.7;
+    margin-bottom: 8px;
+  }
+  .revenue-box .rev-amount {
+    font-family: var(--font-head);
+    font-size: clamp(40px, 8vw, 56px);
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 8px;
+    letter-spacing: -0.02em;
+  }
+  .revenue-box .rev-note {
+    font-size: 14px;
+    opacity: 0.7;
+  }
+
+  /* SCREENSHOT FRAME */
+  .screenshot-frame {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 8px;
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    margin: 16px 0;
+    overflow: hidden;
+  }
+
+  /* DIVIDER */
+  .divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 56px 0;
+  }
+
+  /* FOOTER */
+  .footer {
+    background: var(--bg);
+    text-align: center;
+    padding: 32px 48px;
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 13px;
+  }
+  .footer a { color: var(--accent); text-decoration: none; }
+
+  /* RESPONSIVE */
+  @media (max-width: 640px) {
+    .hero { padding: 40px 20px 60px; }
+    .hero h1 { font-size: 32px; }
+    .hero .accent-word { font-size: 32px; }
+    .container { padding: 0 20px; }
+    .meta-bar { flex-direction: column; gap: 8px; }
+    .compare-grid { grid-template-columns: 1fr; }
+    .bar-row .bar-label { width: 100px; font-size: 11px; }
+    .score-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  /* SECTION 08: Beyond the Website — Icon Cards */
+  .icon-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 32px;
+  }
+  @media (max-width: 700px) {
+    .icon-card-grid { grid-template-columns: 1fr; }
+  }
+  .icon-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 36px 28px 32px;
+    text-align: center;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+  .icon-card .material-icons {
+    font-size: 42px;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 16px;
+  }
+  .icon-card h4 {
+    font-family: var(--font-head);
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text);
+    margin: 0 0 12px;
+  }
+  .icon-card p {
+    font-size: 13.5px;
+    color: var(--text-sec);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* PHASE BADGE */
+  .phase-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--accent);
+    color: white;
+    font-family: var(--font-head);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border-radius: 9999px;
+    margin-bottom: 20px;
+  }
+  .phase-badge .material-icons {
+    font-size: 14px;
+  }
+
+  /* DELIVERABLE LIST */
+  .deliverable-list {
+    list-style: none;
+    margin: 0 0 24px 0;
+    padding: 0;
+  }
+  .deliverable-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-light);
+    color: var(--text-sec);
+    font-size: 14px;
+  }
+  .deliverable-list li:last-child { border-bottom: none; }
+  .deliverable-list li .material-icons {
+    font-size: 18px;
+    color: var(--green);
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .deliverable-list li strong { color: var(--text); }
+
+  /* NEXT PHASE LIST */
+  .next-list {
+    list-style: none;
+    margin: 0 0 24px 0;
+    padding: 0;
+  }
+  .next-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-light);
+    color: var(--text-sec);
+    font-size: 14px;
+  }
+  .next-list li:last-child { border-bottom: none; }
+  .next-list li .material-icons {
+    font-size: 18px;
+    color: var(--accent);
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .next-list li strong { color: var(--text); }
+
+  /* CTA BOX */
+  .cta-box {
+    text-align: center;
+    border: 2px solid var(--accent);
+    border-radius: 16px;
+    padding: 40px 32px;
+    margin: 32px 0;
+  }
+  .cta-box .cta-heading {
+    font-family: var(--font-head);
+    font-size: clamp(20px, 3vw, 28px);
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 8px;
+    line-height: 1.2;
+  }
+  .cta-box .cta-heading em {
+    font-family: var(--font-accent);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--accent);
+  }
+  .cta-box .cta-sub {
+    color: var(--text-muted);
+    margin-bottom: 24px;
+  }
+  .cta-button {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--white);
+    padding: 16px 40px;
+    border-radius: 9999px;
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+  }
+  .cta-button:hover {
+    background: var(--accent-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(196,98,45,0.3);
+  }
+  .cta-or {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: 16px;
+    margin-bottom: 0;
+  }
+  .cta-or a { color: var(--accent); text-decoration: none; }
+
+</style>
+</head>
+<body>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="page-header-inner">
+    <img class="aspire-logo" src="/assets/aspire-logo.svg" alt="Aspire Digital">
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>NRX Asphalt</h1>
+  <div class="sub">A digital foundation that</div>
+  <div class="accent-word">delivers.</div>
+  <div class="body-text">
+    Thirty years of hard work, Christian integrity, and a crew that means it when they say "Done Right." This is how Aspire Digital built a website worthy of that reputation — and what comes next.
+  </div>
+</div>
+
+<!-- ARC DIVIDER -->
+<div class="hero-arc">
+  <svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,120 C480,0 960,0 1440,120 L1440,120 L0,120 Z" fill="#FAF0E2"/>
+  </svg>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+
+  <div class="meta-bar">
+    <span><strong>Client:</strong> NRX Asphalt · Delaware, Ohio</span>
+    <span><strong>Date:</strong> April 2026</span>
+    <span><strong>By:</strong> <a href="https://madebyaspire.com" target="_blank">madebyaspire.com</a></span>
+  </div>
+
+  <!-- 01: THE HONEST PICTURE -->
+  <section>
+    <h2><span class="number">01</span>The Honest <em>Picture</em></h2>
+
+    <p>
+      <strong>Tex Heyman didn't build NRX Asphalt on marketing.</strong> He built it on showing up, doing the work right, and letting his reputation speak for itself — the way contractors did it for generations. Over 30 years, NRX has grown into a full-service paving operation that handles everything from highway road work and parking lot construction to milling, site preparation, and precise striping. That's not a small business. That's an institution.
+    </p>
+
+    <p>
+      The company operates with a team of 11 to 50 people depending on season, serving central Ohio with a full roster of commercial and public-sector capabilities. The NRX tagline — <strong>"Built Tough. Done Right."</strong> — is not marketing copy. It's a statement of operating philosophy, shaped by Christian values and a founder who still puts craftsmanship above speed. That's rare in any trade, and rarer still in heavy construction.
+    </p>
+
+    <p>
+      What NRX didn't have, until recently, was a digital presence that matched the quality of their physical work. Their old web footprint was thin — the kind of placeholder site that doesn't communicate the scale of what they actually do. Commercial property managers, municipal procurement offices, and general contractors searching for a paving partner online would find a company that looked smaller than it is. The reputation was real. The digital signal wasn't there to back it up.
+    </p>
+
+    <p>
+      That's the gap Aspire Digital was asked to close. Phase 1 is complete: a full 9-page website, live at nrxasphalt.com, built to credibly represent what NRX has earned over three decades. Phase 2 — an Astro 6 rebuild with structured data, project case studies, and full performance optimization — is in planning.
+    </p>
+
+    <div class="score-grid">
+      <div class="score-card">
+        <div class="label">Experience</div>
+        <div class="value">30+</div>
+        <div class="note">years in construction</div>
+      </div>
+      <div class="score-card">
+        <div class="label">Service Lines</div>
+        <div class="value">6</div>
+        <div class="note">full-service offerings</div>
+      </div>
+      <div class="score-card">
+        <div class="label">Pages Built</div>
+        <div class="value">9</div>
+        <div class="note">Phase 1 deliverable</div>
+      </div>
+      <div class="score-card">
+        <div class="label">Quote Form</div>
+        <div class="value">Live</div>
+        <div class="note">working lead capture</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02: YOUR SCORECARD -->
+  <section>
+    <h2><span class="number">02</span>The Digital <em>Scorecard</em></h2>
+
+    <p>
+      Phase 1 of nrxasphalt.com is live and functional. Here's an honest assessment of where the site stands today — what was accomplished in Phase 1, and where the known gaps are heading into Phase 2.
+    </p>
+
+    <div class="site-screenshot">
+      <h3>The Live Site — nrxasphalt.com</h3>
+      <div class="screenshot-frame">
+        <img src="./nrx-asphalt-screenshot.jpg" alt="NRX Asphalt current website" style="width:100%;border-radius:8px;border:1px solid var(--border)">
+      </div>
+      <p style="text-align:center;font-size:12px;color:var(--text-muted);margin-top:8px">nrxasphalt.com — Phase 1 HTML/CSS site, April 2026</p>
+    </div>
+
+    <div class="score-grid">
+      <div class="score-card">
+        <div class="label">Design Quality</div>
+        <div class="value">B</div>
+        <div class="note">Clean, professional, readable</div>
+      </div>
+      <div class="score-card">
+        <div class="label">Mobile</div>
+        <div class="value">B+</div>
+        <div class="note">Responsive, usable on phone</div>
+      </div>
+      <div class="score-card">
+        <div class="label">Speed</div>
+        <div class="value">A</div>
+        <div class="note">Simple HTML = fast loads</div>
+      </div>
+      <div class="score-card">
+        <div class="label">SEO Depth</div>
+        <div class="value">C</div>
+        <div class="note">No schema markup yet</div>
+      </div>
+    </div>
+
+    <h3>What's Working</h3>
+    <ul>
+      <li><strong>Credible and professional.</strong> The site looks like a real commercial contractor — not a placeholder. That alone is a meaningful upgrade from where NRX started.</li>
+      <li><strong>Full service coverage.</strong> All six service lines have dedicated content: parking lot paving, highway and road work, milling and reclamation, site preparation, repairs and patching, and striping and marking.</li>
+      <li><strong>Working quote request form.</strong> Visitors can submit a project inquiry directly from the site. This is active lead generation, not just a brochure.</li>
+      <li><strong>Equipment showcase.</strong> NRX's fleet is a credibility signal for commercial clients. The site surfaces it. A general contractor evaluating vendors wants to know the equipment exists.</li>
+      <li><strong>Safety and service area pages.</strong> These are often afterthoughts on contractor sites. Having them dedicated signals operational seriousness — important for public-sector and commercial procurement.</li>
+      <li><strong>Fast load times.</strong> Clean HTML with no heavy JavaScript frameworks means the site loads quickly on any connection. Rural job sites with spotty LTE can still pull up the page.</li>
+    </ul>
+
+    <h3>Where the Gaps Are</h3>
+    <ul>
+      <li><strong>No structured data (schema markup).</strong> Search engines can't automatically extract service types, location, or contact info. This limits AI search visibility and rich result eligibility. Phase 2 addresses this directly.</li>
+      <li><strong>Limited visual differentiation.</strong> The design is functional but not distinct. A Phase 2 rebuild with Aspire's design token system will give NRX a visual identity that matches the quality of their work.</li>
+      <li><strong>No project case studies.</strong> Commercial paving decisions are big-ticket. Buyers want proof. A gallery of completed work with project context (scale, type, location) is a significant conversion lever that Phase 2 will add.</li>
+      <li><strong>No Google reviews present yet.</strong> The site can't surface social proof it doesn't have. Building the review pipeline is the most urgent parallel workstream.</li>
+      <li><strong>Basic SEO architecture.</strong> Meta descriptions, title tag structure, and heading hierarchy are in place, but there's no local SEO targeting, no FAQ schema, and no service-area landing pages for surrounding communities.</li>
+    </ul>
+
+    <div class="callout">
+      <strong>Important context:</strong> These gaps are known and planned for. Phase 1 was scoped to get NRX online with a credible, functional presence quickly. Phase 2 is where structured data, visual polish, and conversion optimization come in. The foundation is solid — the next build goes on top of it.
+    </div>
+  </section>
+
+  <!-- 03: HOW YOU STACK UP -->
+  <section>
+    <h2><span class="number">03</span>How NRX <em>Stacks Up</em></h2>
+
+    <p>
+      The primary competitor identified in the Delaware, Ohio area is <strong>Professional Pavement Services</strong> — a local paving company with an established Google presence. Here's the honest side-by-side.
+    </p>
+
+    <h3>Online Presence Comparison</h3>
+    <div class="compare-grid">
+      <div class="compare-card you">
+        <div class="comp-name">NRX Asphalt</div>
+        <div class="comp-stat">
+          <span class="stat-label">Google Reviews</span>
+          <span class="stat-val low">Building</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Website Quality</span>
+          <span class="stat-val mid">B (Phase 1)</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Service Pages</span>
+          <span class="stat-val good">6 dedicated</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Schema Markup</span>
+          <span class="stat-val low">None yet</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Values Story</span>
+          <span class="stat-val good">Strong</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Quote Form</span>
+          <span class="stat-val good">Live</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Founder Credibility</span>
+          <span class="stat-val good">30+ years</span>
+        </div>
+      </div>
+      <div class="compare-card">
+        <div class="comp-name">Professional Pavement Services</div>
+        <div class="comp-stat">
+          <span class="stat-label">Google Reviews</span>
+          <span class="stat-val good">4.8 / 36</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Website Quality</span>
+          <span class="stat-val mid">Functional</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Service Pages</span>
+          <span class="stat-val mid">Basic</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Schema Markup</span>
+          <span class="stat-val mid">Partial</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Values Story</span>
+          <span class="stat-val low">Not present</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Quote Form</span>
+          <span class="stat-val mid">Contact only</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Founder Credibility</span>
+          <span class="stat-val mid">Not surfaced</span>
+        </div>
+      </div>
+    </div>
+
+    <h3>The Real Competitive Picture</h3>
+    <p>
+      Professional Pavement Services has one clear advantage: <strong>36 Google reviews at 4.8 stars.</strong> In local search, that's visible social proof that NRX currently can't match. When a property manager Googles "asphalt contractor Delaware Ohio," seeing 36 reviews next to a competitor's listing is a meaningful signal — even if NRX's actual work quality is equal or superior.
+    </p>
+    <p>
+      However, NRX has structural advantages that are harder to build and easier to communicate once the digital infrastructure catches up. <strong>Thirty years of experience, a full commercial service roster including highway work, a dedicated equipment fleet, and a founder whose values are genuinely part of the brand</strong> — these are differentiation points that Professional Pavement Services doesn't have and can't manufacture. The gap is not in quality or capability. It's in visibility. And visibility is exactly what Phase 2 is designed to close.
+    </p>
+
+    <div class="callout">
+      <strong>The most urgent near-term action:</strong> Building the Google review pipeline. A systematic approach to asking satisfied clients for reviews — even just 15 to 20 of them — would shift the competitive picture significantly within 90 days.
+    </div>
+
+    <h3>Where NRX Wins Outright</h3>
+    <div class="bar-chart">
+      <div class="bar-row">
+        <span class="bar-label">Highway Work</span>
+        <div class="bar-track"><div class="bar-fill" style="width:90%;background:var(--green)"></div></div>
+        <span class="bar-val" style="color:var(--green)">NRX</span>
+      </div>
+      <div class="bar-row">
+        <span class="bar-label">Founder Story</span>
+        <div class="bar-track"><div class="bar-fill" style="width:95%;background:var(--green)"></div></div>
+        <span class="bar-val" style="color:var(--green)">NRX</span>
+      </div>
+      <div class="bar-row">
+        <span class="bar-label">Values Clarity</span>
+        <div class="bar-track"><div class="bar-fill" style="width:85%;background:var(--green)"></div></div>
+        <span class="bar-val" style="color:var(--green)">NRX</span>
+      </div>
+      <div class="bar-row">
+        <span class="bar-label">Service Depth</span>
+        <div class="bar-track"><div class="bar-fill" style="width:88%;background:var(--green)"></div></div>
+        <span class="bar-val" style="color:var(--green)">NRX</span>
+      </div>
+      <div class="bar-row">
+        <span class="bar-label">Google Reviews</span>
+        <div class="bar-track"><div class="bar-fill" style="width:20%;background:var(--accent)"></div></div>
+        <span class="bar-val" style="color:var(--accent)">Gap</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04: WHAT PEOPLE ARE SEARCHING FOR -->
+  <section>
+    <h2><span class="number">04</span>What People Are <em>Searching For</em></h2>
+
+    <p>
+      Commercial paving searches are high-intent. The people typing these queries are not browsing — they have a project, a parking lot that needs work, or a procurement deadline. Local and regional terms dominate, and the window to capture them is narrow. Here are the most relevant keyword clusters for NRX.
+    </p>
+
+    <h3>High-Priority Local Terms</h3>
+    <div class="kw-grid">
+      <div class="kw-card">
+        <span class="kw-term">asphalt contractor delaware ohio</span>
+        <span class="kw-vol"><strong>High</strong> intent</span>
+      </div>
+      <div class="kw-card">
+        <span class="kw-term">parking lot paving ohio</span>
+        <span class="kw-vol"><strong>High</strong> intent</span>
+      </div>
+      <div class="kw-card">
+        <span class="kw-term">commercial paving contractor central ohio</span>
+        <span class="kw-vol"><strong>High</strong> intent</span>
+      </div>
+      <div class="kw-card">
+        <span class="kw-term">highway paving company ohio</span>
+        <span class="kw-vol"><strong>Med</strong> intent</span>
+      </div>
+      <div class="kw-card">
+        <span class="kw-term">asphalt milling delaware county</span>
+        <span class="kw-vol"><strong>Med</strong> intent</span>
+      </div>
+      <div class="kw-card">
+        <span class="kw-term">paving contractor near me</span>
+        <span class="kw-vol"><strong>High</strong> local</span>
+      </div>
+    </div>
+
+    <h3>Service-Specific Searches</h3>
+    <div class="kw-grid">
+      <div class="kw-card">
+        <span class="kw-term">parking lot striping ohio</span>
+        <span class="kw-vol"><strong>Med</strong> intent</span>
+      </div>
+      <div class="kw-card">
+        <span class="kw-term">asphalt patching repair central ohio</span>
+        <span class="kw-vol"><strong>Med</strong> intent</span>
+      </div>
+      <div class="kw-card">
+        <span class="kw-term">site preparation grading ohio contractor</span>
+        <span class="kw-vol"><strong>Med</strong> intent</span>
+      </div>
+      <div class="kw-card">
+        <span class="kw-term">asphalt reclamation services ohio</span>
+        <span class="kw-vol"><strong>Low-Med</strong></span>
+      </div>
+      <div class="kw-card">
+        <span class="kw-term">commercial parking lot repair quote</span>
+        <span class="kw-vol"><strong>High</strong> intent</span>
+      </div>
+      <div class="kw-card">
+        <span class="kw-term">road paving company delaware ohio</span>
+        <span class="kw-vol"><strong>High</strong> local</span>
+      </div>
+    </div>
+
+    <h3>Why These Terms Matter for NRX</h3>
+    <p>
+      Most of NRX's business comes through relationships and referrals — the way it's always worked in heavy construction. But <strong>commercial property managers, municipal project coordinators, and general contractors increasingly vet vendors online before making a call.</strong> Even if a warm referral sends someone to NRX, the first thing they do is Google the company name. A strong website with keyword coverage means NRX shows up well when that happens — and also means new clients who don't have a referral can find them organically.
+    </p>
+    <p>
+      Phase 2's structured data and service-area landing page work is designed specifically to capture these searches — not just for Delaware, Ohio but for the surrounding communities where NRX actively operates.
+    </p>
+  </section>
+
+  <!-- 05: THE FUTURE OF SEARCH -->
+  <section>
+    <h2><span class="number">05</span>The Future of <em>Search</em></h2>
+
+    <p>
+      Search is no longer just Google's ten blue links. AI-powered answers, voice queries, and "zero-click" results increasingly shape how buyers find contractors before they ever visit a website. Here's where NRX stands — and where Phase 2 needs to take the site.
+    </p>
+
+    <h3>Phase 1 Search Readiness</h3>
+    <p>
+      The current HTML site has solid page-level basics: title tags, meta descriptions, and readable heading structure. But it has <strong>no structured data markup</strong> — no JSON-LD schema that tells search engines (and AI systems like Google's SGE or ChatGPT) what kind of business NRX is, what services they offer, where they operate, or how to contact them. This is the most significant technical gap.
+    </p>
+
+    <div class="callout">
+      <strong>Why schema markup matters now more than ever:</strong> When someone asks Google's AI Overview "who does commercial parking lot paving near Delaware, Ohio," the AI synthesizes answers from pages with structured data it can parse. A business without schema markup is invisible to these AI-generated answers — even if it has a perfectly readable website. Phase 2 fixes this directly.
+    </div>
+
+    <h3>What Phase 2 Will Add</h3>
+    <ul>
+      <li><strong>LocalBusiness schema</strong> — Confirms NRX's name, address, phone, and service area to all search engines and AI systems</li>
+      <li><strong>Service schema</strong> — Tags each of NRX's six service lines in a machine-readable format that powers rich search results</li>
+      <li><strong>Review schema</strong> — Once reviews are collected, surfaces star ratings directly in search results</li>
+      <li><strong>FAQ schema</strong> — Common contractor questions ("Do you do residential work?" "What areas do you serve?") answered in structured format for featured snippet eligibility</li>
+      <li><strong>BreadcrumbList schema</strong> — Helps search engines understand the site's hierarchy and surface the right page for each query</li>
+    </ul>
+
+    <h3>Voice Search and "Near Me" Queries</h3>
+    <p>
+      Voice search queries — "Hey Google, find me an asphalt contractor near me" — are growing among field-based buyers. A site manager standing in a parking lot doesn't type. They ask. Responding to voice queries requires clean local business data, clear service descriptions, and schema markup. All three are Phase 2 deliverables.
+    </p>
+
+    <h3>E-E-A-T Positioning (Experience, Expertise, Authoritativeness, Trust)</h3>
+    <p>
+      NRX has extraordinary E-E-A-T raw material: 30 years of experience, a named founder with a personal values story, safety certifications, and real project history. The problem is that none of this is currently surfaced in formats that search algorithms recognize. Phase 2 will explicitly build the content structures — About page depth, team credentials, project case study pages, and safety documentation — that communicate E-E-A-T to search engines.
+    </p>
+  </section>
+
+  <!-- 06: WHAT WE BUILT / WHAT'S NEXT -->
+  <section>
+    <h2><span class="number">06</span>What We Built — and <em>What's Next</em></h2>
+
+    <div class="phase-badge">
+      <span class="material-icons">check_circle</span>
+      Phase 1 Complete
+    </div>
+
+    <p>
+      Phase 1 delivered a full multi-page HTML/CSS website that replaced NRX's prior digital footprint with a credible, professional online presence. Here's what shipped:
+    </p>
+
+    <ul class="deliverable-list">
+      <li>
+        <span class="material-icons">check_circle</span>
+        <span><strong>Home page</strong> — Core messaging, services overview, call-to-action, values positioning with "Built Tough. Done Right."</span>
+      </li>
+      <li>
+        <span class="material-icons">check_circle</span>
+        <span><strong>About page</strong> — Tex Heyman's story, 30+ years of experience, Christian values, team and company background</span>
+      </li>
+      <li>
+        <span class="material-icons">check_circle</span>
+        <span><strong>Services page</strong> — Overview of all six service lines with detail and differentiation</span>
+      </li>
+      <li>
+        <span class="material-icons">check_circle</span>
+        <span><strong>6 service detail pages</strong> — Parking lot paving, highway and road work, milling and reclamation, site preparation, repairs and patching, striping and marking</span>
+      </li>
+      <li>
+        <span class="material-icons">check_circle</span>
+        <span><strong>Equipment page</strong> — Fleet showcase for commercial credibility, demonstrating operational scale</span>
+      </li>
+      <li>
+        <span class="material-icons">check_circle</span>
+        <span><strong>Safety page</strong> — Safety commitment documentation for public-sector and commercial procurement vetting</span>
+      </li>
+      <li>
+        <span class="material-icons">check_circle</span>
+        <span><strong>Service areas page</strong> — Geographic coverage map and community listing for local SEO support</span>
+      </li>
+      <li>
+        <span class="material-icons">check_circle</span>
+        <span><strong>Projects page</strong> — Foundational project gallery structure ready for photo content</span>
+      </li>
+      <li>
+        <span class="material-icons">check_circle</span>
+        <span><strong>Contact page with working quote form</strong> — Live lead capture that routes project inquiries directly to the NRX team</span>
+      </li>
+      <li>
+        <span class="material-icons">check_circle</span>
+        <span><strong>Feedback page</strong> — Internal feedback routing for client satisfaction tracking</span>
+      </li>
+      <li>
+        <span class="material-icons">check_circle</span>
+        <span><strong>Responsive design</strong> — Site renders correctly on desktop, tablet, and mobile</span>
+      </li>
+    </ul>
+
+    <div class="phase-badge" style="background:var(--text);">
+      <span class="material-icons">schedule</span>
+      Phase 2 — In Planning
+    </div>
+
+    <p>
+      Phase 2 is a full rebuild of nrxasphalt.com using Astro 6 on Cloudflare Workers — the same modern stack Aspire uses for every new client site. The goal is to take the credible Phase 1 foundation and transform it into a high-performance, search-optimized, visually differentiated website that works as hard as NRX's crew.
+    </p>
+
+    <ul class="next-list">
+      <li>
+        <span class="material-icons">arrow_forward</span>
+        <span><strong>Astro 6 rebuild</strong> — Component-based architecture with design tokens; faster builds, easier updates, better performance baseline</span>
+      </li>
+      <li>
+        <span class="material-icons">arrow_forward</span>
+        <span><strong>Structured data (schema markup)</strong> — LocalBusiness, Service, Review, and FAQ schema for AI search visibility and rich results</span>
+      </li>
+      <li>
+        <span class="material-icons">arrow_forward</span>
+        <span><strong>Project case studies section</strong> — Photo-forward project stories with scale, type, and location context for commercial conversion</span>
+      </li>
+      <li>
+        <span class="material-icons">arrow_forward</span>
+        <span><strong>Visual identity upgrade</strong> — Brand design tokens, stronger typography, photography-led layout that reflects the quality of the work</span>
+      </li>
+      <li>
+        <span class="material-icons">arrow_forward</span>
+        <span><strong>Performance optimization</strong> — WebP/AVIF image optimization, lazy loading, Lighthouse score targets above 90 across all categories</span>
+      </li>
+      <li>
+        <span class="material-icons">arrow_forward</span>
+        <span><strong>Service area landing pages</strong> — Dedicated pages for surrounding communities to capture hyperlocal search traffic</span>
+      </li>
+      <li>
+        <span class="material-icons">arrow_forward</span>
+        <span><strong>NRX Development integration</strong> — As Tex expands into broader construction and development, the site architecture will accommodate NRX Development alongside NRX Asphalt without a full rebuild</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 07: HOW THIS WORKS -->
+  <section>
+    <h2><span class="number">07</span>How This <em>Works</em></h2>
+
+    <p>
+      Aspire Digital runs a three-stage pipeline for every client website. Here's where NRX sits today and how the road to Phase 2 looks.
+    </p>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="week">Phase 1 — Complete</div>
+        <div class="task">Discovery &amp; Initial Build</div>
+        <div class="detail">Brand profile established. NRX values, services, and positioning documented. Full 9-page HTML/CSS site designed and built. Quote form wired and live. Deployed to nrxasphalt.com.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="week">Now — Active</div>
+        <div class="task">Phase 2 Scoping</div>
+        <div class="detail">Requirements for Astro 6 rebuild being defined. Photography needs identified. Structured data architecture mapped. Service area keyword strategy finalized. NRX Development expansion scope discussed.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="week">Phase 2 — Upcoming</div>
+        <div class="task">Astro 6 Rebuild</div>
+        <div class="detail">Full rebuild on Aspire's modern stack. Design tokens applied. Component library implemented. Schema markup added across all pages. Project case studies section built. Performance optimization completed.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="week">Post-Rebuild</div>
+        <div class="task">UAT &amp; Launch</div>
+        <div class="detail">Tex reviews the rebuilt site on a staging URL before anything goes live. Aspire runs quality checks, performance audits, and link verification. When approved, the new site replaces Phase 1 with zero downtime.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="week">Ongoing</div>
+        <div class="task">Care &amp; Continuous Improvement</div>
+        <div class="detail">New project photos added as work is completed. Reviews surfaced as they're collected. Service area pages expanded. NRX Development content integrated when ready. The site grows as the business grows.</div>
+      </div>
+    </div>
+
+    <div class="callout">
+      <strong>No downtime, no surprises.</strong> Phase 2 is built alongside the live Phase 1 site. NRX never goes dark. The new site only goes live after Tex has reviewed and approved it on a private staging URL. That's how Aspire always works.
+    </div>
+  </section>
+
+  <!-- 08: BEYOND THE WEBSITE -->
+  <section>
+    <h2><span class="number">08</span>Beyond the <em>Website</em></h2>
+
+    <p>
+      A great website is the hub — but the digital ecosystem around it determines how much traffic reaches it, how much trust it builds, and how many qualified leads it converts. Here are the six highest-leverage moves for NRX alongside the Phase 2 rebuild.
+    </p>
+
+    <div class="icon-card-grid">
+
+      <div class="icon-card">
+        <span class="material-icons">location_on</span>
+        <h4>Google Business Profile</h4>
+        <p>NRX needs a fully claimed and optimized Google Business Profile with accurate NAP data, service categories, photos, and service area settings. This is the most direct path to appearing in local "near me" searches and Google Maps results — often more visible than the website itself for local queries.</p>
+      </div>
+
+      <div class="icon-card">
+        <span class="material-icons">star</span>
+        <h4>Review Collection Strategy</h4>
+        <p>Professional Pavement Services has 36 reviews at 4.8 stars. That's the benchmark to beat. A simple, systematic process — a follow-up text or email to every satisfied client asking for a Google review — can close this gap within 90 days. Past clients are often willing to leave a review when asked directly and promptly after a completed job.</p>
+      </div>
+
+      <div class="icon-card">
+        <span class="material-icons">business_center</span>
+        <h4>LinkedIn for B2B Credibility</h4>
+        <p>Commercial property managers, general contractors, and municipal procurement staff use LinkedIn. An NRX company page with project photos, Tex's professional profile, and occasional project updates positions NRX as a serious commercial-grade operation — not just a local residential paving crew. The B2B credibility signal is disproportionate to the effort required.</p>
+      </div>
+
+      <div class="icon-card">
+        <span class="material-icons">photo_camera</span>
+        <h4>Project Photo Documentation</h4>
+        <p>Every completed job is a portfolio asset. A habit of capturing before/after photos on every parking lot, road section, or milling project builds a library that powers the Phase 2 case studies section, feeds the Google Business Profile, and provides social content. Phone photos are sufficient — the consistency matters more than the equipment.</p>
+      </div>
+
+      <div class="icon-card">
+        <span class="material-icons">verified_user</span>
+        <h4>Safety Certification Display</h4>
+        <p>Commercial and public-sector contracts often require proof of safety programs, insurance, and certifications before a vendor is approved. Surfacing NRX's safety credentials clearly — on the website, in the GBP profile, and in any RFP response materials — removes a friction point that can delay or derail commercial opportunities.</p>
+      </div>
+
+      <div class="icon-card">
+        <span class="material-icons">map</span>
+        <h4>Service Area Targeting</h4>
+        <p>NRX operates across a meaningful geographic footprint in central Ohio — not just Delaware city. Service area landing pages for surrounding communities (Marion, Marysville, Powell, Dublin, and others) allow the website to capture hyperlocal searches in each market. This is a Phase 2 deliverable but the keyword research can start now.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 09: REVENUE IMPACT -->
+  <section>
+    <h2><span class="number">09</span>What This Could <em>Mean</em></h2>
+
+    <p>
+      Commercial paving is not a low-ticket business. A single parking lot resurfacing project for a mid-size commercial property can run from $30,000 to $150,000. A highway or road work contract may be multiples of that. The math on website ROI for a contractor at NRX's scale is straightforward and remarkable.
+    </p>
+
+    <div class="revenue-box">
+      <div class="rev-label">One Web-Sourced Commercial Contract</div>
+      <div class="rev-amount">$50K – $500K+</div>
+      <div class="rev-note">A single qualified lead from the website can justify years of digital investment</div>
+    </div>
+
+    <h3>The Contractor's ROI Equation</h3>
+    <p>
+      Most industries require hundreds or thousands of customer acquisitions to justify meaningful marketing investment. Contractors aren't most industries. <strong>One new commercial paving contract discovered via a Google search can generate more revenue than three years of website and SEO investment combined.</strong> This is the extraordinary math that makes digital infrastructure so valuable for trade businesses.
+    </p>
+
+    <p>
+      Consider the realistic scenario: a commercial property management firm in Delaware County is resurfacing three parking lots this summer. They don't have an established paving vendor. They Google "commercial asphalt contractor delaware ohio." NRX shows up with a professional site, six service-specific pages, a quote form, and — after Phase 2 — structured data that confirms their service area and capabilities. They submit a quote request. That one interaction, if it converts, is worth $75,000 to $200,000 in revenue.
+    </p>
+
+    <p>
+      <strong>The question for NRX is not whether a website is worth the investment. It's how much business is currently walking past the front door because the digital signal isn't strong enough to stop them.</strong>
+    </p>
+
+    <h3>Beyond Direct Revenue</h3>
+    <ul>
+      <li><strong>Procurement qualification.</strong> Many commercial and public-sector contracts require vendors to have a professional web presence as part of basic qualification. A strong site is table stakes for being considered.</li>
+      <li><strong>Referral reinforcement.</strong> When someone receives a referral for NRX, the next thing they do is Google the company. A credible site converts warm referrals into calls at higher rates than a thin or outdated web presence.</li>
+      <li><strong>NRX Development positioning.</strong> As Tex expands into broader construction and development, a professional digital presence signals to development partners, investors, and municipalities that NRX is a serious institutional player — not just a paving crew.</li>
+      <li><strong>Hiring.</strong> Trade talent is competitive. Skilled operators and project managers evaluate employers online. A company with a professional website that tells a compelling story about values and quality of work attracts better candidates.</li>
+    </ul>
+
+    <div class="callout">
+      <strong>The honest framing:</strong> No one can guarantee that a website produces a specific number of leads. What Aspire can guarantee is that every dollar NRX invests in Phase 2 makes it easier for the right commercial client — one with a real project and real budget — to find NRX, trust NRX, and reach out. The site is not a cost. It's a sales tool that works around the clock.
+    </div>
+  </section>
+
+  <!-- 10: WHY ASPIRE DIGITAL + CTA -->
+  <section>
+    <h2><span class="number">10</span>Why <em>Aspire Digital</em></h2>
+
+    <p>
+      Aspire Digital builds websites for small businesses that work as hard as their owners do. Not template sites. Not agency fluff. Custom digital work built to a craftsman's standard — the same one Tex holds his crew to on every job.
+    </p>
+
+    <h3>How We Work</h3>
+    <ul>
+      <li><strong>We learn the business first.</strong> Before we write a line of code, we understand what the company does, who they serve, and what makes them different. For NRX, that meant understanding the 30-year history, the values, and the scope of commercial work before designing a single page.</li>
+      <li><strong>We build for durability.</strong> Phase 2's Astro 6 stack isn't a trend — it's the most performant, maintainable architecture available for small-business websites in 2026. The site we build this year should still be fast, accessible, and easy to update in 2030.</li>
+      <li><strong>We don't disappear after launch.</strong> The sites we build are living things. As NRX adds projects, expands services, or branches into NRX Development, the website evolves with it. We're a long-term partner, not a one-time vendor.</li>
+      <li><strong>We do the technical work so owners don't have to.</strong> Tex runs a paving operation. He shouldn't need to think about schema markup, Lighthouse scores, or Cloudflare configurations. That's our job. His job is the work. Ours is making sure the world can find it.</li>
+    </ul>
+
+    <h3>What We've Built for Trade and Service Businesses</h3>
+    <p>
+      NRX is part of a portfolio of service businesses and contractors that Aspire Digital has built credible digital foundations for. We understand the specific challenges of trade business marketing: the need for local search visibility, the importance of project proof, the commercial B2B trust signals that matter to procurement decision-makers, and the plain fact that most trade business owners don't have time to manage their own digital presence. We handle all of it.
+    </p>
+
+    <div class="cta-box">
+      <div class="cta-heading">Want a website that works as <em>hard as your crew?</em></div>
+      <p class="cta-sub">
+        Let's talk about Phase 2 for NRX Asphalt — and what a rebuilt, fully optimized site could do for your commercial pipeline.
+      </p>
+      <a href="https://madebyaspire.com/contact" class="cta-button" target="_blank">Schedule a Strategy Call</a>
+      <p class="cta-or">or email <a href="mailto:chris@aspiredigital.dev">Chris</a> directly at <a href="mailto:chris@aspiredigital.dev">chris@aspiredigital.dev</a></p>
+    </div>
+  </section>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <p>Prepared by <strong>Aspire Digital</strong> · <a href="https://madebyaspire.com">madebyaspire.com</a></p>
+  <p style="margin-top:8px">Questions? Reach out to <a href="mailto:chris@aspiredigital.dev">Chris</a> · <a href="mailto:chris@aspiredigital.dev">chris@aspiredigital.dev</a></p>
+  <p style="margin-top:12px;font-size:11px;color:var(--text-muted)">© 2026 Aspire Digital · Portfolio case study for NRX Asphalt</p>
+</div>
+
+</body>
+</html>

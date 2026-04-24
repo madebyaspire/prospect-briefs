@@ -1,0 +1,1355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Photos by B4 — Portfolio Case Study | Aspire Digital</title>
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<!-- Open Graph / iMessage / SMS preview -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Photos by B4 — The Website We Built">
+<meta property="og:description" content="A full Astro 6 site for Betsy Belote's sports, senior, and family photography business in Delaware, Ohio — built by Aspire Digital.">
+<meta property="og:image" content="https://yoursite.madebyaspire.com/photosbyb4/welcome/og-card.png">
+<meta property="og:url" content="https://yoursite.madebyaspire.com/photosbyb4/welcome/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Photos by B4 — The Website We Built">
+<meta name="twitter:description" content="A portfolio case study prepared by Aspire Digital.">
+<meta name="twitter:image" content="https://yoursite.madebyaspire.com/photosbyb4/welcome/og-card.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FAF0E2;
+    --bg-alt: #F2EDE6;
+    --text: #2C3340;
+    --text-sec: #666666;
+    --text-muted: #999999;
+    --accent: #C4622D;
+    --accent-dark: #B53D00;
+    --border: #E5E5E5;
+    --border-light: #F0F0F0;
+    --green: #4a7b5a;
+    --hero-green: #8FAF8A;
+    --white: #ffffff;
+    --font: 'DM Sans', system-ui, -apple-system, sans-serif;
+    --font-head: 'Montserrat', system-ui, sans-serif;
+    --font-accent: 'Playfair Display', Georgia, serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 15px;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection { background: var(--accent); color: #fff; }
+
+  /* PAGE HEADER */
+  .page-header {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 48px;
+  }
+  .page-header-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .page-header .aspire-logo {
+    width: 200px;
+    height: auto;
+  }
+
+  /* HERO */
+  .hero {
+    background: var(--hero-green);
+    text-align: center;
+    padding: 60px 48px 80px;
+    position: relative;
+  }
+  .hero h1 {
+    font-family: var(--font-head);
+    font-weight: 800;
+    font-size: clamp(36px, 6vw, 56px);
+    color: var(--accent);
+    line-height: 1.08;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+  }
+  .hero .sub {
+    font-family: var(--font-head);
+    font-weight: 600;
+    font-size: clamp(18px, 3vw, 24px);
+    color: #2C3340;
+    margin-bottom: 4px;
+    letter-spacing: -0.01em;
+  }
+  .hero .accent-word {
+    font-family: var(--font-accent);
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(36px, 6vw, 56px);
+    color: var(--white);
+    line-height: 1.08;
+  }
+  .hero .body-text {
+    color: var(--white);
+    font-size: 17px;
+    max-width: 540px;
+    margin: 28px auto 0;
+    line-height: 1.7;
+  }
+
+  /* ARC DIVIDER */
+  .hero-arc {
+    margin-top: -1px;
+    background: var(--hero-green);
+  }
+  .hero-arc svg {
+    display: block;
+    width: 100%;
+    height: 80px;
+  }
+
+  /* CONTAINER */
+  .container {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  /* META BAR */
+  .meta-bar {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 32px 0 20px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 56px;
+    font-size: 13px;
+    color: var(--text-muted);
+    letter-spacing: 0.3px;
+  }
+  .meta-bar strong { color: var(--text); font-weight: 600; }
+  .meta-bar a { color: var(--accent); text-decoration: none; }
+
+  /* SECTIONS */
+  section { margin-bottom: 64px; }
+
+  h2 {
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: clamp(24px, 3.5vw, 32px);
+    color: var(--text);
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+  }
+  h2 .number {
+    font-family: var(--font);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+  }
+  h2 em {
+    font-family: var(--font-accent);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--accent);
+  }
+
+  h3 {
+    font-family: var(--font-head);
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin: 32px 0 12px;
+  }
+
+  p { margin-bottom: 16px; color: var(--text-sec); }
+  p strong { color: var(--text); }
+  ul { margin: 0 0 16px 20px; }
+  li { margin-bottom: 6px; color: var(--text-sec); }
+  li strong { color: var(--text); }
+
+  /* CALLOUT */
+  .callout {
+    background: var(--bg-alt);
+    border-left: 3px solid var(--accent);
+    padding: 20px 24px;
+    margin: 24px 0;
+    font-size: 0.9rem;
+    border-radius: 0 12px 12px 0;
+    color: var(--text-sec);
+  }
+  .callout strong { color: var(--text); }
+
+  /* PILL TAGS */
+  .tag {
+    display: inline-block;
+    padding: 4px 14px;
+    border-radius: 9999px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .tag.easy { background: #e8f5e9; color: #2e7d32; }
+  .tag.medium { background: #fff3e0; color: #e65100; }
+  .tag.high { background: var(--accent); color: white; }
+  .tag.mid-impact { background: #e3f2fd; color: #1565c0; }
+
+  /* SCORE CARDS */
+  .score-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 16px;
+    margin: 24px 0;
+  }
+  .score-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 24px 16px;
+    text-align: center;
+    border: 1px solid var(--border-light);
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+  .score-card:hover {
+    box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+    transform: translateY(-2px);
+  }
+  .score-card .label {
+    font-family: var(--font-head);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+  }
+  .score-card .value {
+    font-family: var(--font-head);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent);
+  }
+  .score-card .note {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 4px;
+  }
+
+  /* BAR CHART */
+  .bar-chart { margin: 24px 0; }
+  .bar-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  .bar-row .bar-label {
+    width: 160px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text);
+    flex-shrink: 0;
+  }
+  .bar-row .bar-track {
+    flex: 1;
+    height: 28px;
+    background: var(--bg-alt);
+    border-radius: 14px;
+    overflow: hidden;
+    margin: 0 12px;
+  }
+  .bar-row .bar-fill {
+    height: 100%;
+    border-radius: 14px;
+  }
+  .bar-row .bar-val {
+    width: 40px;
+    font-family: var(--font-head);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-align: right;
+  }
+
+  /* COMPARE CARDS */
+  .compare-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin: 24px 0;
+  }
+  .compare-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 24px 20px;
+    border: 1px solid var(--border-light);
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+  .compare-card:hover {
+    box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+    transform: translateY(-2px);
+  }
+  .compare-card.you {
+    border: 2px solid var(--accent);
+    background: #FFF9F5;
+  }
+  .compare-card .comp-name {
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--text);
+    margin-bottom: 14px;
+  }
+  .compare-card .comp-stat {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    padding: 5px 0;
+    border-bottom: 1px solid var(--border-light);
+  }
+  .compare-card .comp-stat:last-child { border-bottom: none; }
+  .compare-card .comp-stat .stat-label { color: var(--text-muted); }
+  .compare-card .comp-stat .stat-val { font-weight: 600; }
+  .stat-val.good { color: var(--green); }
+  .stat-val.mid { color: #b8860b; }
+  .stat-val.low { color: #c44; }
+
+  /* KEYWORD CARDS */
+  .kw-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 10px;
+    margin: 24px 0;
+  }
+  .kw-card {
+    background: var(--white);
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    padding: 14px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: box-shadow 0.3s;
+  }
+  .kw-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.05); }
+  .kw-card .kw-term {
+    font-weight: 500;
+    font-size: 13px;
+    color: var(--text);
+  }
+  .kw-card .kw-vol {
+    font-size: 11px;
+    color: var(--text-muted);
+    white-space: nowrap;
+    margin-left: 12px;
+  }
+  .kw-card .kw-vol strong {
+    font-family: var(--font-head);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--accent);
+  }
+
+  /* TIMELINE */
+  .timeline {
+    position: relative;
+    margin: 24px 0;
+    padding-left: 36px;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    bottom: 8px;
+    width: 2px;
+    background: var(--border);
+  }
+  .timeline-item {
+    position: relative;
+    margin-bottom: 32px;
+  }
+  .timeline-item:last-child { margin-bottom: 0; }
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -32px;
+    top: 6px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 3px solid var(--bg);
+    box-shadow: 0 0 0 2px var(--accent);
+  }
+  .timeline-item .week {
+    font-family: var(--font-head);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 4px;
+  }
+  .timeline-item .task {
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--text);
+    margin-bottom: 4px;
+    line-height: 1.3;
+  }
+  .timeline-item .detail {
+    font-size: 14px;
+    color: var(--text-sec);
+    line-height: 1.65;
+  }
+
+  /* OPPORTUNITY CARDS */
+  .opp-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    margin: 24px 0;
+  }
+  .opp-card {
+    background: var(--white);
+    border: 1px solid var(--border-light);
+    border-radius: 16px;
+    padding: 28px 24px;
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+  .opp-card:hover {
+    box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+    transform: translateY(-2px);
+  }
+  .opp-card h4 {
+    font-family: var(--font-head);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 8px;
+  }
+  .opp-card p { font-size: 13px; color: var(--text-sec); margin-bottom: 14px; }
+  .opp-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+
+  /* REVENUE BOX */
+  .revenue-box {
+    background: var(--green);
+    color: white;
+    border-radius: 16px;
+    padding: 48px 40px;
+    text-align: center;
+    margin: 32px 0;
+  }
+  .revenue-box .rev-label {
+    font-family: var(--font-head);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    opacity: 0.7;
+    margin-bottom: 8px;
+  }
+  .revenue-box .rev-amount {
+    font-family: var(--font-head);
+    font-size: clamp(40px, 8vw, 56px);
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 8px;
+    letter-spacing: -0.02em;
+  }
+  .revenue-box .rev-note {
+    font-size: 14px;
+    opacity: 0.7;
+  }
+
+  /* LOGO SHOWCASE */
+  .logo-showcase {
+    background: var(--bg-alt);
+    border-radius: 16px;
+    padding: 36px;
+    text-align: center;
+    margin: 24px 0;
+  }
+  .logo-showcase img {
+    max-width: 180px;
+    border-radius: 12px;
+    margin: 16px 0;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  }
+  .logo-showcase .caption {
+    font-size: 13px;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-top: 8px;
+  }
+
+  /* CTA BOX */
+  .cta-box {
+    text-align: center;
+    border: 2px solid var(--accent);
+    border-radius: 16px;
+    padding: 40px 32px;
+    margin: 32px 0;
+  }
+  .cta-box .cta-heading {
+    font-family: var(--font-head);
+    font-size: clamp(20px, 3vw, 28px);
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 8px;
+    line-height: 1.2;
+  }
+  .cta-box .cta-heading em {
+    font-family: var(--font-accent);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--accent);
+  }
+  .cta-box .cta-sub {
+    color: var(--text-muted);
+    margin-bottom: 24px;
+  }
+  .cta-button {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--white);
+    padding: 16px 40px;
+    border-radius: 9999px;
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+  }
+  .cta-button:hover {
+    background: var(--accent-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(196,98,45,0.3);
+  }
+  .cta-or {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: 16px;
+    margin-bottom: 0;
+  }
+  .cta-or a { color: var(--accent); text-decoration: none; }
+
+  /* SCREENSHOT FRAME */
+  .screenshot-frame {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 8px;
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    margin: 16px 0;
+    overflow: hidden;
+  }
+
+  /* DIVIDER */
+  .divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 56px 0;
+  }
+
+  /* FOOTER */
+  .footer {
+    background: var(--bg);
+    text-align: center;
+    padding: 32px 48px;
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 13px;
+  }
+  .footer a { color: var(--accent); text-decoration: none; }
+
+  /* BUILD FEATURE LIST */
+  .build-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin: 24px 0;
+  }
+  .build-item {
+    background: var(--white);
+    border-radius: 14px;
+    padding: 22px 20px;
+    border: 1px solid var(--border-light);
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+  .build-item .material-icons {
+    font-size: 24px;
+    color: var(--accent);
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .build-item .build-label {
+    font-family: var(--font-head);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+  .build-item .build-desc {
+    font-size: 12.5px;
+    color: var(--text-sec);
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  /* REVIEW CARDS */
+  .review-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin: 24px 0;
+  }
+  .review-card {
+    background: var(--white);
+    border-radius: 14px;
+    padding: 20px 18px;
+    border: 1px solid var(--border-light);
+  }
+  .review-card .stars {
+    color: var(--accent);
+    font-size: 14px;
+    margin-bottom: 8px;
+    letter-spacing: 2px;
+  }
+  .review-card .review-text {
+    font-size: 13.5px;
+    color: var(--text-sec);
+    font-style: italic;
+    margin-bottom: 10px;
+    line-height: 1.55;
+  }
+  .review-card .reviewer {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-muted);
+    font-style: normal;
+  }
+
+  /* ── Section 08: Beyond the Website — Icon Cards ── */
+  .icon-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 32px;
+  }
+  @media (max-width: 700px) {
+    .icon-card-grid { grid-template-columns: 1fr; }
+  }
+  .icon-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 36px 28px 32px;
+    text-align: center;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+  .icon-card .material-icons {
+    font-size: 42px;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 16px;
+  }
+  .icon-card h4 {
+    font-family: var(--font-head);
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text);
+    margin: 0 0 12px;
+  }
+  .icon-card p {
+    font-size: 13.5px;
+    color: var(--text-sec);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 640px) {
+    .hero { padding: 40px 20px 60px; }
+    .hero h1 { font-size: 32px; }
+    .hero .accent-word { font-size: 32px; }
+    .container { padding: 0 20px; }
+    .meta-bar { flex-direction: column; gap: 8px; }
+    .compare-grid { grid-template-columns: 1fr; }
+    .bar-row .bar-label { width: 100px; font-size: 11px; }
+    .score-grid { grid-template-columns: repeat(2, 1fr); }
+    .build-grid { grid-template-columns: 1fr; }
+    .review-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="page-header-inner">
+    <img class="aspire-logo" src="/assets/aspire-logo.svg" alt="Aspire Digital">
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>Photos by B4</h1>
+  <div class="sub">The website we built</div>
+  <div class="accent-word">converts.</div>
+  <div class="body-text">
+    Betsy Belote is a natural behind the lens — she captures kids mid-sprint, seniors in the golden hour, and family moments that people frame and keep forever. What she needed was a site worthy of that work. Here's what we built, why we built it the way we did, and what it means for her business.
+  </div>
+</div>
+
+<!-- ARC DIVIDER -->
+<div class="hero-arc">
+  <svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,120 C480,0 960,0 1440,120 L1440,120 L0,120 Z" fill="#FAF0E2"/>
+  </svg>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+
+  <div class="meta-bar">
+    <span><strong>Client:</strong> Photos by B4 · Betsy Belote · Delaware, Ohio</span>
+    <span><strong>Date:</strong> April 2026</span>
+    <span><strong>By:</strong> <a href="https://madebyaspire.com" target="_blank">madebyaspire.com</a></span>
+  </div>
+
+  <!-- 01: THE HONEST PICTURE -->
+  <section>
+    <h2><span class="number">01</span>Betsy's <em>Story</em></h2>
+
+    <p><strong>Betsy Belote has been photographing the people of Delaware, Ohio for years</strong> — and the evidence is in the work itself. Her gallery holds over 140 images spanning three core disciplines: youth and varsity sports, senior portraits, and family sessions. That range matters. It means she's not a one-season shooter waiting for graduation weekend. She's out on sidelines in the fall, in open fields for golden-hour portraits in spring, and on back porches with families year-round.</p>
+
+    <p>Sports photography is her deepest catalog — 65 images covering baseball, basketball, soccer, volleyball, and more. She captures athletes at the peak of motion: the swing follow-through, the block at the net, the steal. These aren't posed setups. They're real moments from real games, and they're exactly what parents and athletes want to remember. Her senior portrait work (25 images) shows the same instinct — natural poses, genuine smiles, locations that feel personal rather than generic studio backdrops. And her family sessions (45 images) reflect the kind of ease that only comes from a photographer who makes people feel comfortable before the shutter clicks.</p>
+
+    <p>What Betsy didn't have before working with Aspire was a website that matched the quality of her work. Her photography speaks for itself — but people searching "family photographer Delaware Ohio" or "senior portraits central Ohio" were landing on a digital presence that undersold what she actually does. Her social channels — Instagram and TikTok at <strong>@photosby_b_4</strong>, plus an active Facebook presence — showed engagement and real community. The question was how to channel that energy into a site that converts visitors into booked sessions.</p>
+
+    <p>The real-world reviews tell you everything you need to know about how Betsy's clients feel about her work:</p>
+
+    <div class="review-grid">
+      <div class="review-card">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">"Highly recommend! Betsy is easy to work with."</p>
+        <span class="reviewer">— Jason S.</span>
+      </div>
+      <div class="review-card">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">"These are amazing!"</p>
+        <span class="reviewer">— Mary D.</span>
+      </div>
+      <div class="review-card">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">"I love them so much."</p>
+        <span class="reviewer">— Jessica M.</span>
+      </div>
+      <div class="review-card">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">"You've got some real talent here."</p>
+        <span class="reviewer">— Elizabeth H.</span>
+      </div>
+    </div>
+
+    <div class="score-grid">
+      <div class="score-card">
+        <div class="label">Gallery Depth</div>
+        <div class="value">140+</div>
+        <div class="note">Published photos</div>
+      </div>
+      <div class="score-card">
+        <div class="label">Session Types</div>
+        <div class="value">3</div>
+        <div class="note">Sports · Senior · Family</div>
+      </div>
+      <div class="score-card">
+        <div class="label">Pricing Tiers</div>
+        <div class="value">3</div>
+        <div class="note">Bronze · Silver · Gold</div>
+      </div>
+      <div class="score-card">
+        <div class="label">Social Channels</div>
+        <div class="value">3</div>
+        <div class="note">Instagram · TikTok · Facebook</div>
+      </div>
+    </div>
+
+    <div class="callout">
+      <strong>The opportunity was clear:</strong> Betsy already had the talent, the reputation, and the social proof. She needed a website that presented her work at the quality level it deserved — and that gave potential clients a clear, frictionless path from "I found her online" to "I booked a session."
+    </div>
+  </section>
+
+  <!-- 02: DIGITAL SCORECARD -->
+  <section>
+    <h2><span class="number">02</span>The Site We <em>Built</em> — Scorecard</h2>
+
+    <p>When Aspire takes on a project, we measure ourselves against the same standards we'd apply to any business. Here's how <strong>photosbyb4.com</strong> scores on the dimensions that matter for a local photography business.</p>
+
+    <h3>Live Site Screenshot</h3>
+    <div class="screenshot-frame">
+      <img src="./photosbyb4-screenshot.jpg" alt="Photos by B4 website — photosbyb4.com" style="width:100%;border-radius:8px;">
+    </div>
+    <p style="text-align:center;font-size:12px;color:var(--text-muted);margin-top:8px;">photosbyb4.com — live on production · Astro 6 on Cloudflare Workers</p>
+
+    <h3>Technical Quality</h3>
+    <div class="score-grid">
+      <div class="score-card">
+        <div class="label">Performance</div>
+        <div class="value" style="font-size:1.4rem;">High</div>
+        <div class="note">WebP images · Edge delivery</div>
+      </div>
+      <div class="score-card">
+        <div class="label">Accessibility</div>
+        <div class="value" style="font-size:1.4rem;">Strong</div>
+        <div class="note">Alt text · Semantic HTML</div>
+      </div>
+      <div class="score-card">
+        <div class="label">Mobile</div>
+        <div class="value" style="font-size:1.4rem;">Full</div>
+        <div class="note">375px → 1440px tested</div>
+      </div>
+      <div class="score-card">
+        <div class="label">SEO Foundation</div>
+        <div class="value" style="font-size:1.4rem;">Solid</div>
+        <div class="note">JSON-LD · GA4 · Sitemap</div>
+      </div>
+    </div>
+
+    <h3>What We Built Right</h3>
+    <ul>
+      <li><strong>140+ WebP-optimized images</strong> — every photo converted from source format, lazy-loaded below the fold, sized correctly for each breakpoint. The gallery is visually rich without punishing load time.</li>
+      <li><strong>Gallery lightbox with category filters</strong> — visitors can browse All, Sports, Senior Portraits, or Family photos without leaving the page. The lightbox opens full-screen with keyboard navigation and proper focus management.</li>
+      <li><strong>Pricing tabs across 9 packages</strong> — three session types (Sports, Senior, Family) × three tiers (Bronze $100–200, Silver $150–225, Gold $200–300) presented in a tabbed interface. No pricing confusion, no "DM for rates."</li>
+      <li><strong>Floating Book CTA</strong> — a persistent booking prompt that follows the user down the page without being intrusive. Present everywhere, never annoying.</li>
+      <li><strong>JSON-LD structured data</strong> — LocalBusiness and Photographer schema on every page so search engines and AI tools can reliably extract Betsy's name, service area, services offered, and contact information.</li>
+      <li><strong>GA4 analytics</strong> — Betsy can see which pages get traffic, which gallery categories get the most views, and where visitors are dropping off. Real data for real decisions.</li>
+      <li><strong>Fade-in scroll animations</strong> — CSS-native scroll-driven animations that respect <code>prefers-reduced-motion</code>. No JavaScript animation library, no jank, no accessibility concerns.</li>
+      <li><strong>Hero parallax</strong> — the landing section uses a subtle parallax layer that adds depth without overwhelming the photography that's the actual product.</li>
+    </ul>
+
+    <h3>The Stack Choice — Why It Matters</h3>
+    <p>We built photosbyb4.com on <strong>Astro 6 deployed to Cloudflare Workers</strong>. That's not an arbitrary choice. Astro ships zero JavaScript by default — the pages are rendered server-side and delivered as fast, static HTML. Cloudflare Workers run at the edge, meaning the site loads from a server geographically close to the visitor no matter where they are. For a local photographer competing on search, every millisecond of page load speed is a ranking factor. We built the fastest version of this site that's possible.</p>
+  </section>
+
+  <!-- 03: HOW YOU STACK UP -->
+  <section>
+    <h2><span class="number">03</span>How Betsy <em>Stacks Up</em></h2>
+
+    <p>Delaware, Ohio has a modest but competitive photography market. The clearest direct competitor we found was <strong>Exactly You Boudoir</strong> — a professional photography studio in Delaware with a 5.0-star Google rating across 53 reviews. They're polished, review-rich, and have strong local authority. Here's how Photos by B4 compares across the dimensions that drive local discovery and booking decisions.</p>
+
+    <div class="compare-grid">
+      <div class="compare-card you">
+        <div class="comp-name">Photos by B4</div>
+        <div class="comp-stat">
+          <span class="stat-label">Website</span>
+          <span class="stat-val good">Custom Astro 6</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Portfolio depth</span>
+          <span class="stat-val good">140+ photos</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Pricing shown</span>
+          <span class="stat-val good">Yes — 9 packages</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Session types</span>
+          <span class="stat-val good">3 (Sports/Senior/Family)</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Structured data</span>
+          <span class="stat-val good">JSON-LD live</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Gallery filters</span>
+          <span class="stat-val good">Category tabs</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Social presence</span>
+          <span class="stat-val good">IG + TikTok + FB</span>
+        </div>
+      </div>
+
+      <div class="compare-card">
+        <div class="comp-name">Exactly You Boudoir</div>
+        <div class="comp-stat">
+          <span class="stat-label">Website</span>
+          <span class="stat-val mid">Standard CMS</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Portfolio depth</span>
+          <span class="stat-val mid">Moderate</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Pricing shown</span>
+          <span class="stat-val mid">Partial</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Session types</span>
+          <span class="stat-val mid">Specialized (boudoir)</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Structured data</span>
+          <span class="stat-val mid">Basic or none</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Gallery filters</span>
+          <span class="stat-val low">Not present</span>
+        </div>
+        <div class="comp-stat">
+          <span class="stat-label">Google Reviews</span>
+          <span class="stat-val good">5.0 · 53 reviews</span>
+        </div>
+      </div>
+    </div>
+
+    <h3>Where the Competition Has an Edge</h3>
+    <p><strong>53 verified Google reviews at 5.0 stars</strong> is a formidable review profile. Review count is a direct ranking signal for local SEO — Google interprets volume as a signal of sustained quality and business longevity. Betsy's work quality is clearly 5-star territory based on what her clients say. The gap is purely in the number of formal reviews captured. That's fixable, and closing it is a high-priority growth move.</p>
+
+    <h3>Where Betsy Has a Clear Advantage</h3>
+    <p>Photos by B4 is the only Delaware-area photographer with <strong>transparent, tiered pricing published online</strong>. This is a conversion differentiator that most photographers actively avoid out of fear of losing negotiating room. The data doesn't support that fear — pricing transparency reduces inquiry friction and pre-qualifies leads. A parent searching for sports photography who sees Bronze at $100–200 knows immediately whether they're in range. That's fewer emails to answer and better-matched clients arriving in the booking flow.</p>
+
+    <div class="callout">
+      <strong>Bottom line:</strong> Photos by B4 wins on portfolio depth, pricing clarity, site performance, and session variety. The one area to close is Google review volume — and the Aspire-built site is already the right foundation for doing exactly that.
+    </div>
+  </section>
+
+  <!-- 04: WHAT PEOPLE SEARCH FOR -->
+  <section>
+    <h2><span class="number">04</span>What People Are <em>Searching For</em></h2>
+
+    <p>Local photography search follows a predictable pattern: parents, athletes, and families use highly specific queries. They know what they want — they're looking for the right person in the right place. The keywords below represent the queries that bring <strong>high-intent, ready-to-book visitors</strong> directly to photosbyb4.com.</p>
+
+    <h3>Primary Search Terms</h3>
+    <div class="kw-grid">
+      <div class="kw-card">
+        <span class="kw-term">family photographer delaware ohio</span>
+        <span class="kw-vol"><strong>High</strong> local intent</span>
+      </div>
+      <div class="kw-card">
+        <span class="kw-term">senior portraits delaware ohio</span>
+        <span class="kw-vol"><strong>High</strong> seasonal</span>
+      </div>
+      <div class="kw-card">
+        <span class="kw-term">sports photographer central ohio</span>
+        <span class="kw-vol"><strong>Med–High</strong> regional</span>
+      </div>
+      <div class="kw-card">
+        <span class="kw-term">senior photos near delaware ohio</span>
+        <span class="kw-vol"><strong>High</strong> intent</span>
+      </div>
+      <div class="kw-card">
+        <span class="kw-term">youth sports photography ohio</span>
+        <span class="kw-vol"><strong>Medium</strong> volume</span>
+      </div>
+      <div class="kw-card">
+        <span class="kw-term">baseball photographer delaware oh</span>
+        <span class="kw-vol"><strong>Medium</strong> specific</span>
+      </div>
+      <div class="kw-card">
+        <span class="kw-term">family photos central ohio</span>
+        <span class="kw-vol"><strong>Medium</strong> broad</span>
+      </div>
+      <div class="kw-card">
+        <span class="kw-term">photosbyb4 betsy belote</span>
+        <span class="kw-vol"><strong>Low</strong> branded</span>
+      </div>
+    </div>
+
+    <h3>How the Site is Positioned for These Terms</h3>
+    <p>The Aspire-built site targets these keywords through a combination of on-page signals: <strong>page titles and meta descriptions</strong> written with local terms embedded, <strong>JSON-LD LocalBusiness schema</strong> that explicitly declares Delaware, Ohio as the service area, <strong>structured heading hierarchy</strong> (H1 → H2 → H3) that signals topical relevance to crawlers, and <strong>image alt text</strong> on every one of the 140+ gallery photos describing the subject and sport.</p>
+
+    <p>The gallery category structure — Sports, Senior Portraits, Family — mirrors exactly how people search. Someone landing on the Sports gallery category sees 65 photos of exactly what they came to find, with a booking CTA persistent in view the entire time. The site architecture is designed around the search intent, not around what's convenient to build.</p>
+
+    <h3>The Seasonal Opportunity</h3>
+    <p>Senior portrait searches spike in early spring (January–April) as juniors start planning fall senior sessions, and again in late summer (July–September) as the school year begins. Sports photography peaks in fall (August–November) and spring (March–May). Family photography has a strong fall push (September–November) driven by holiday card season. The site is ready to capture all three windows — but a Google Business Profile content calendar tied to these seasonal peaks would amplify organic reach significantly during each spike.</p>
+
+    <div class="callout">
+      <strong>Local SEO signal strength:</strong> The combination of Cloudflare edge delivery (fast load = lower bounce rate), JSON-LD structured data (machine-readable signals), and topically organized gallery content gives photosbyb4.com a technically strong foundation for local search ranking. The next lever is <strong>Google review volume</strong> to match the quality signals already in place.
+    </div>
+  </section>
+
+  <!-- 05: THE FUTURE OF SEARCH -->
+  <section>
+    <h2><span class="number">05</span>The Future of <em>Search</em></h2>
+
+    <p>Search is changing faster than most businesses realize. In 2025 and 2026, the question isn't just "does Google rank my site?" — it's "does Google's AI Overview cite my business?" and "does ChatGPT recommend me when someone asks for a photographer in Delaware, Ohio?" The answers depend on signals called <strong>E-E-A-T: Experience, Expertise, Authoritativeness, and Trustworthiness</strong>. Here's how photosbyb4.com scores against each.</p>
+
+    <h3>E-E-A-T Assessment</h3>
+
+    <div class="build-grid">
+      <div class="build-item">
+        <span class="material-icons">verified</span>
+        <div>
+          <div class="build-label">Experience — Strong</div>
+          <p class="build-desc">140+ real photos from real sessions are the most powerful experience signal a photographer can have. Every image is evidence of work done. No stock, no mock-ups.</p>
+        </div>
+      </div>
+      <div class="build-item">
+        <span class="material-icons">school</span>
+        <div>
+          <div class="build-label">Expertise — Demonstrated</div>
+          <p class="build-desc">Three distinct disciplines (Sports, Senior, Family) with organized gallery depth per category show range and competence. The site structure itself communicates mastery.</p>
+        </div>
+      </div>
+      <div class="build-item">
+        <span class="material-icons">thumb_up</span>
+        <div>
+          <div class="build-label">Authoritativeness — Growing</div>
+          <p class="build-desc">Real reviews from named clients, active social presence, and a professional website build the authority picture. Review growth will compound this signal over time.</p>
+        </div>
+      </div>
+      <div class="build-item">
+        <span class="material-icons">lock</span>
+        <div>
+          <div class="build-label">Trustworthiness — Built In</div>
+          <p class="build-desc">Privacy policy, terms of service, transparent pricing, and structured JSON-LD data create the technical trust signals that search engines measure. These are live on the site now.</p>
+        </div>
+      </div>
+    </div>
+
+    <h3>AI Search Readiness</h3>
+    <p>When someone asks ChatGPT or Google's AI Overview "who's a good sports photographer in Delaware, Ohio?" the AI system pulls from indexed, structured content. The JSON-LD schema we built into photosbyb4.com explicitly declares: <strong>business name, business type (Photographer), service area (Delaware, Ohio), services offered, and contact information.</strong> That structured data is what AI extraction systems need to confidently cite a business.</p>
+
+    <p>The 140+ WebP images with descriptive alt text also contribute here — Google's image search and AI understanding of visual content relies on alt text as the primary text signal. "Senior portrait, young woman, golden hour, Delaware Ohio" is how a photograph becomes searchable by intent, not just filename.</p>
+
+    <h3>Voice Search Fit</h3>
+    <p>Voice queries are conversational: "Hey Siri, find a photographer for senior pictures near me" or "OK Google, who does family photos in Delaware Ohio?" The site's geo-tagged schema, local service area declarations, and Google Business Profile (GBP) connection are exactly what voice assistants draw on. The FAQ page we built provides the question-and-answer format that voice assistants prefer for direct answer pulls.</p>
+
+    <div class="callout">
+      <strong>What we built in:</strong> JSON-LD structured data (LocalBusiness + Photographer schema), semantic HTML with proper heading hierarchy, privacy policy and terms pages (trust signals), GA4 analytics integration, sitemap.xml for crawl completeness, and WebP-optimized images with descriptive alt text on every gallery photo. The AI search foundation is already in the site — it's not a future to-do, it's shipped.
+    </div>
+  </section>
+
+  <!-- 06: WHAT WE BUILT -->
+  <section>
+    <h2><span class="number">06</span>Here's What We <em>Actually Built</em></h2>
+
+    <p>Aspire built photosbyb4.com from the ground up — no page builders, no templates, no shortcuts. Every component was designed for Betsy's specific business needs. Here's the full scope of what went into the site:</p>
+
+    <h3>Pages — Five Fully Built, Each With a Job</h3>
+
+    <div class="opp-grid">
+      <div class="opp-card">
+        <h4>Homepage (index)</h4>
+        <p>Hero section with parallax, featured gallery preview, session type introduction, pricing tier overview, testimonials, and floating Book CTA. First impression, conversion engine.</p>
+        <div class="opp-tags">
+          <span class="tag high">Hero parallax</span>
+          <span class="tag easy">Floating CTA</span>
+        </div>
+      </div>
+      <div class="opp-card">
+        <h4>Gallery</h4>
+        <p>140+ photos organized into four categories: Family, Sports, Senior Portraits, and Behind the Lens. Tab-filter navigation, lightbox viewer with keyboard support, lazy loading for performance.</p>
+        <div class="opp-tags">
+          <span class="tag high">Lightbox</span>
+          <span class="tag easy">Category filters</span>
+        </div>
+      </div>
+      <div class="opp-card">
+        <h4>FAQ</h4>
+        <p>Answers to common pre-booking questions — session length, what to wear, delivery timeline, print options. Reduces back-and-forth, pre-qualifies leads, and provides AI-citation-ready Q&amp;A content.</p>
+        <div class="opp-tags">
+          <span class="tag mid-impact">Voice search</span>
+          <span class="tag easy">Conversion</span>
+        </div>
+      </div>
+      <div class="opp-card">
+        <h4>Privacy Policy</h4>
+        <p>Full privacy policy — a legal requirement and a trust signal for both visitors and search engines. Establishes that photosbyb4.com handles user data responsibly.</p>
+        <div class="opp-tags">
+          <span class="tag easy">Trust signal</span>
+        </div>
+      </div>
+      <div class="opp-card">
+        <h4>Terms of Service</h4>
+        <p>Client agreement terms covering session booking, cancellation, image delivery, and usage rights. Protects Betsy legally and sets clear expectations before a session is booked.</p>
+        <div class="opp-tags">
+          <span class="tag easy">Legal protection</span>
+        </div>
+      </div>
+    </div>
+
+    <h3>The Gallery — 140+ Images, Zero Compromises</h3>
+    <p>A photography website lives and dies by its gallery. We built the gallery component from scratch with a few non-negotiable requirements: <strong>fast load time, no layout shift, filterable by category, and lightbox viewing that doesn't steal focus from the photos.</strong></p>
+    <ul>
+      <li><strong>WebP conversion:</strong> every source image converted to WebP format at the appropriate size for each breakpoint. Smaller files, faster loads, same visual quality</li>
+      <li><strong>Lazy loading:</strong> only images in the viewport load on arrival. Scroll-based loading means the initial page weight is a fraction of the full gallery</li>
+      <li><strong>Category tabs:</strong> Family (45), Sports (65), Senior Portraits (25), Behind the Lens (8) — filterable without page reload</li>
+      <li><strong>Lightbox:</strong> click any photo to open full-screen. Previous/next navigation. Click outside or press Escape to close. Keyboard accessible throughout</li>
+    </ul>
+
+    <h3>Pricing — 9 Packages, Zero Confusion</h3>
+    <p>We built a tabbed pricing interface covering three session types and three tiers each:</p>
+    <div class="bar-chart">
+      <div class="bar-row">
+        <span class="bar-label">Bronze (entry)</span>
+        <div class="bar-track"><div class="bar-fill" style="width:45%;background:var(--accent);"></div></div>
+        <span class="bar-val">$100–200</span>
+      </div>
+      <div class="bar-row">
+        <span class="bar-label">Silver (mid)</span>
+        <div class="bar-track"><div class="bar-fill" style="width:65%;background:var(--green);"></div></div>
+        <span class="bar-val">$150–225</span>
+      </div>
+      <div class="bar-row">
+        <span class="bar-label">Gold (premium)</span>
+        <div class="bar-track"><div class="bar-fill" style="width:85%;background:#2C3340;"></div></div>
+        <span class="bar-val">$200–300</span>
+      </div>
+    </div>
+    <p>Pricing applies across Sports, Senior Portrait, and Family sessions — each with its own tab. The result is a pricing section that answers "how much does this cost?" without Betsy having to respond to an inquiry email first. That's a conversion multiplier built directly into the site structure.</p>
+
+    <h3>Technical Build Details</h3>
+    <div class="build-grid">
+      <div class="build-item">
+        <span class="material-icons">bolt</span>
+        <div>
+          <div class="build-label">Astro 6 Framework</div>
+          <p class="build-desc">Zero-JS by default. Pages render server-side and ship as fast HTML. No React overhead, no hydration delay.</p>
+        </div>
+      </div>
+      <div class="build-item">
+        <span class="material-icons">public</span>
+        <div>
+          <div class="build-label">Cloudflare Workers</div>
+          <p class="build-desc">Edge deployment — the site runs close to the visitor geographically. Faster TTFB, better Core Web Vitals, better rankings.</p>
+        </div>
+      </div>
+      <div class="build-item">
+        <span class="material-icons">image</span>
+        <div>
+          <div class="build-label">WebP/AVIF Images</div>
+          <p class="build-desc">Sharp-based build-time optimization. Every photo at the right format, the right size, the right compression ratio.</p>
+        </div>
+      </div>
+      <div class="build-item">
+        <span class="material-icons">code</span>
+        <div>
+          <div class="build-label">JSON-LD Schema</div>
+          <p class="build-desc">LocalBusiness + Photographer structured data on every page. AI and search engines can reliably extract Betsy's business details.</p>
+        </div>
+      </div>
+      <div class="build-item">
+        <span class="material-icons">analytics</span>
+        <div>
+          <div class="build-label">GA4 Analytics</div>
+          <p class="build-desc">Real-time traffic, page performance, gallery engagement, and booking funnel data. Betsy sees exactly what's working.</p>
+        </div>
+      </div>
+      <div class="build-item">
+        <span class="material-icons">animation</span>
+        <div>
+          <div class="build-label">Scroll Animations</div>
+          <p class="build-desc">CSS-native scroll-driven fade-ins that honor prefers-reduced-motion. Polished feel, no JavaScript animation library.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07: HOW THIS WORKS -->
+  <section>
+    <h2><span class="number">07</span>How This <em>Works</em></h2>
+
+    <p>Aspire doesn't hand clients a template and call it done. Every site goes through a structured build process that ensures the finished product is grounded in the business, not just the design trend of the month. Here's how we worked with Betsy from first conversation to live site.</p>
+
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="week">Phase 1</div>
+        <div class="task">Discovery</div>
+        <div class="detail">We learn the business before we touch a design file. Who are Betsy's clients? Which session types drive the most revenue? What does booking friction look like today? What do competitors do that she doesn't, and vice versa? The answers shape every decision downstream.</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="week">Phase 2</div>
+        <div class="task">Brand &amp; Strategy</div>
+        <div class="detail">Site architecture, content hierarchy, and visual direction locked before any code is written. For photosbyb4.com, the central decision was gallery-first: the work is the proof, so the gallery had to be fast, beautiful, and easy to navigate by category. Pricing transparency was a deliberate strategy — most photographers hide rates, which creates inquiry friction. We published them.</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="week">Phase 3</div>
+        <div class="task">Build</div>
+        <div class="detail">Five pages built in Astro 6, deployed to Cloudflare Workers. Gallery lightbox built from scratch. Pricing tab component built from scratch. 140+ images batch-processed to WebP. JSON-LD schema written for every page. GA4 integrated. Scroll animations wired. Every page tested at 375px, 768px, 1024px, and 1440px. Accessibility checked: alt text on every image, keyboard navigation throughout, no empty buttons.</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="week">Phase 4</div>
+        <div class="task">Review</div>
+        <div class="detail">Betsy reviewed the studio build — the internal preview URL where she could see the live site before it went public. Feedback was gathered and applied in one focused revision pass. No phone-tag, no email chains, no "can you send me a screenshot" — she saw the real thing, in the browser, on her phone and desktop.</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="week">Phase 5</div>
+        <div class="task">Live</div>
+        <div class="detail">DNS cutover to photosbyb4.com. Deploy validation confirmed: 200 status codes across all pages, no broken links, no .workers.dev URLs in the HTML, all images resolving. Sitemap submitted. GA4 receiving live data. Site is actively indexed and discoverable. Betsy's work is now findable by every parent, athlete, and family searching for a photographer in Delaware, Ohio.</div>
+      </div>
+
+    </div>
+
+    <div class="callout">
+      <strong>What Aspire never does:</strong> ship a template with the client's name swapped in, deploy without verifying the live URL, or hand off without analytics in place. Every site we build is the kind of work we'd put in our own portfolio — because we do.
+    </div>
+  </section>
+
+  <!-- 08: BEYOND THE WEBSITE -->
+  <section>
+    <h2><span class="number">08</span>Beyond the <em>Website</em></h2>
+
+    <p>A great website is the foundation. It's where discovery turns into booking. But Betsy's business growth doesn't stop at the browser tab — there are six channels beyond the site that, when combined with what we've already built, create a full flywheel: search finds her, the site converts, social builds trust, reviews compound authority, and email keeps existing clients returning.</p>
+
+    <div class="icon-card-grid">
+
+      <div class="icon-card">
+        <span class="material-icons">location_on</span>
+        <h4>Google Business Profile</h4>
+        <p>A fully optimized GBP is the single highest-ROI move for a local service business. Category: Photographer. Services: Sports Photography, Senior Portraits, Family Photography. Service area: Delaware, Marion, Marysville, Powell, Westerville. Weekly photo posts from recent sessions. Q&amp;A section populated. Booking link connected to the site. A complete GBP ties the site's organic rankings to local pack visibility — the map results above the organic links that dominate mobile search.</p>
+      </div>
+
+      <div class="icon-card">
+        <span class="material-icons">star</span>
+        <h4>Review Growth Strategy</h4>
+        <p>Betsy's clients are clearly happy — "I love them so much" and "you've got some real talent here" are not responses people give photographers they're lukewarm about. The gap is systematic review capture. A simple post-delivery email — "Love your photos? A Google review means everything to a small business like mine" — with a direct link to the review form converts client enthusiasm into public authority. Target: 25+ reviews in year one. That's the threshold where Google's local algorithm starts treating review count as a meaningful signal.</p>
+      </div>
+
+      <div class="icon-card">
+        <span class="material-icons">photo_camera</span>
+        <h4>Instagram &amp; TikTok Content</h4>
+        <p>Betsy is already on Instagram and TikTok (@photosby_b_4) and Facebook. The next level is a consistent content rhythm: three content pillars — (1) final image reveals ("his senior portraits came out incredible"), (2) behind-the-lens process ("how I shoot golden hour sports"), and (3) engagement content ("what sport should I photograph next?"). TikTok is particularly valuable for youth sports photography — the parents watching their kids' highlight reels are exactly the audience that books portrait sessions.</p>
+      </div>
+
+      <div class="icon-card">
+        <span class="material-icons">collections</span>
+        <h4>Print Package Upsells</h4>
+        <p>The site sells session packages — but there's a natural upsell path that most photographers leave on the table. Canvas prints, framed portraits, photo books, and card packages can be offered after delivery when clients are at peak emotional satisfaction with their images. A simple post-delivery email sequence: "Your photos are ready — here are some ways to make them permanent." Print upsells can meaningfully increase per-client revenue without requiring any additional shooting.</p>
+      </div>
+
+      <div class="icon-card">
+        <span class="material-icons">email</span>
+        <h4>Email Follow-Up Sequences</h4>
+        <p>Every client Betsy photographs is a potential repeat client and referral source. An email list with a simple annual sequence — sports season reminder in August, senior portrait early-bird in January, family holiday session in September — keeps Photos by B4 top of mind when booking decisions get made. The site's contact form and booking flow already capture email addresses. The infrastructure is there; the sequences just need to be built.</p>
+      </div>
+
+      <div class="icon-card">
+        <span class="material-icons">group</span>
+        <h4>Referral Program</h4>
+        <p>Betsy's strongest sales channel is already word of mouth — the reviews prove it. A structured referral program formalizes what's happening organically: "Refer a friend who books a session and get a free 5x7 print." Low cost, high conversion rate, reaches exactly the right audience (parents in the same youth sports leagues, friends planning family photos, classmates of seniors who just got their portraits done). The site already has the booking infrastructure to track referred sessions.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 09: REVENUE IMPACT -->
+  <section>
+    <h2><span class="number">09</span>What This Could <em>Mean</em></h2>
+
+    <p>We don't fabricate growth projections. But we can look at what already exists — Betsy's pricing, her session types, her geographic market — and do honest math on what web-driven discovery is worth.</p>
+
+    <h3>The Conservative Case</h3>
+    <p>A local photographer who ranks for "family photographer Delaware Ohio" and converts visitors at even a modest rate generates real revenue from organic search alone. Consider the math at Bronze tier — the entry point where pricing friction is lowest:</p>
+
+    <div class="revenue-box">
+      <div class="rev-label">2–3 additional bookings per month from web discovery</div>
+      <div class="rev-amount">$300–600/mo</div>
+      <div class="rev-note">At Bronze tier average ($100–200 per session) · Conservative baseline</div>
+    </div>
+
+    <p>That's the floor — Bronze tier, minimum bookings. Move up to Silver ($150–225) or Gold ($200–300) and the same two bookings produce $300–600 per session. Add the seasonality spikes — senior portrait season in spring, sports season in fall — and the monthly averages compound significantly during peak periods.</p>
+
+    <h3>The Compounding Effect</h3>
+    <p>Photography revenue compounds in ways that most service businesses don't. A family that books a session when their kids are in youth sports comes back for senior portraits in four years. They refer other parents at school events and games. Senior portrait clients refer their classmates. The initial booking from a web search isn't a one-time transaction — it's the start of a client relationship that can span years and generate multiple sessions and print orders.</p>
+
+    <div class="score-grid">
+      <div class="score-card">
+        <div class="label">Bronze Session Range</div>
+        <div class="value" style="font-size:1.2rem;">$100–200</div>
+        <div class="note">Entry tier · accessible</div>
+      </div>
+      <div class="score-card">
+        <div class="label">Silver Session Range</div>
+        <div class="value" style="font-size:1.2rem;">$150–225</div>
+        <div class="note">Mid tier · most popular</div>
+      </div>
+      <div class="score-card">
+        <div class="label">Gold Session Range</div>
+        <div class="value" style="font-size:1.2rem;">$200–300</div>
+        <div class="note">Premium · full package</div>
+      </div>
+      <div class="score-card">
+        <div class="label">Session × Packages</div>
+        <div class="value">9</div>
+        <div class="note">3 tiers × 3 session types</div>
+      </div>
+    </div>
+
+    <h3>The Pricing Transparency Multiplier</h3>
+    <p>Publishing tiered pricing isn't just a UX convenience — it's a revenue optimization. When a potential client arrives on the site and immediately understands that a Bronze family session starts at $100, the barrier to inquiry drops dramatically. They're not waiting to find out if Betsy is "out of their budget." They know. The clients who do reach out are pre-qualified: they've seen the prices and they're in. That's a higher conversion rate on inquiries, and less of Betsy's time spent on leads that were never going to book.</p>
+
+    <div class="callout">
+      <strong>The honest summary:</strong> photosbyb4.com is built to convert. Every structural decision — gallery depth, pricing transparency, floating booking CTA, FAQ pre-qualification, fast load time — is oriented toward turning a visitor into a booked session. The revenue isn't speculative. It's the natural result of giving great photography the digital presence it deserves.
+    </div>
+  </section>
+
+  <!-- 10: WHY ASPIRE + CTA -->
+  <section>
+    <h2><span class="number">10</span>Why <em>Aspire Digital</em></h2>
+
+    <p>We're a small agency that works with small businesses — and we mean that in the best possible way. Our clients aren't line items in a portfolio of hundreds. Betsy's site got the same level of attention and craft that we'd give any project, because we believe that the work we do for a Delaware photographer is as important as anything we'd build for a company ten times the size.</p>
+
+    <h3>What Makes Aspire Different</h3>
+    <ul>
+      <li><strong>We build for performance, not just looks.</strong> photosbyb4.com runs on Astro 6 and Cloudflare Workers because that's the fastest, most maintainable stack available for a site this size. We don't default to page builders because they're convenient — we use the right tool for the job.</li>
+      <li><strong>We don't hand off templates.</strong> Every component on Betsy's site was written for Betsy's site. The gallery lightbox, the pricing tabs, the floating CTA — none of these came from a library we slotted in. They were designed around her specific content and booking flow.</li>
+      <li><strong>We build for AI and search from day one.</strong> JSON-LD, semantic HTML, descriptive alt text, sitemap, GA4 — these aren't afterthoughts we add at launch. They're in the build from the first commit.</li>
+      <li><strong>We care about the work because the portfolio is the proof.</strong> We put photosbyb4.com in our portfolio because we're proud of what we built. That means the standard was high from the start.</li>
+    </ul>
+
+    <h3>The Aspire Portfolio</h3>
+    <p>Photos by B4 joins a portfolio of local business sites built on the same stack and the same standard — Tee's Flooring, Keeler Carpentry, B Clean Carpet, Patina Salon, PetalsWings, and others across Ohio. Every project has the same commitment: give the client's work the online presence it deserves, and make sure that presence converts.</p>
+
+    <div class="cta-box">
+      <div class="cta-heading">Want work <em>like this</em> for your business?</div>
+      <p class="cta-sub">We'd love to hear about what you're building and whether Aspire is the right fit to help you build it online.</p>
+      <a href="https://madebyaspire.com/contact" class="cta-button" target="_blank">Start the Conversation</a>
+      <p class="cta-or">or email <a href="mailto:Chris@aspiredigital.dev">Chris</a> directly at <a href="mailto:Chris@aspiredigital.dev">Chris@aspiredigital.dev</a></p>
+    </div>
+  </section>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <p>Prepared by <strong>Aspire Digital</strong> · <a href="https://madebyaspire.com">madebyaspire.com</a></p>
+  <p style="margin-top:8px">Questions? Reach out to <a href="mailto:Chris@aspiredigital.dev">Chris</a> · <a href="mailto:Chris@aspiredigital.dev">Chris@aspiredigital.dev</a></p>
+  <p style="margin-top:12px;font-size:11px;color:var(--text-muted)">© 2026 Aspire Digital · Portfolio case study — Photos by B4 · photosbyb4.com</p>
+</div>
+
+</body>
+</html>
