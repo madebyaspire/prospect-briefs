@@ -4,7 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Modern Maid — Digital Growth Brief | Aspire Digital</title>
-<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="icon" type="image/svg+xml" href="./favicon.svg">
+<!-- Open Graph / iMessage / SMS preview -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="The Modern Maid — Your Digital Growth Opportunity">
 <meta property="og:description" content="We took a deep look at The Modern Maid's online presence and found some exciting opportunities. Here's what we found.">
@@ -16,1108 +17,1783 @@
 <meta name="twitter:image" content="https://yoursite.madebyaspire.com/modern-maid/welcome/og-card.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Serif+Display:ital@0;1&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Unbounded:wght@400;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0" rel="stylesheet">
 <style>
-  :root {
-    --bg: #FAF0E2;
-    --bg-alt: #F2EDE6;
-    --text: #2C3340;
-    --text-sec: #666666;
-    --text-muted: #999999;
-    --accent: #C4622D;
-    --accent-dark: #B53D00;
-    --border: #E5E5E5;
-    --border-light: #F0F0F0;
-    --green: #4a7b5a;
-    --hero-green: #8FAF8A;
-    --white: #ffffff;
-    --font: 'DM Sans', system-ui, -apple-system, sans-serif;
-    --font-head: 'Montserrat', system-ui, sans-serif;
-    --font-accent: 'Playfair Display', Georgia, serif;
-  }
+/* ── TOKENS ── */
+:root{
+  --bg:#FAF0E2; --bg-alt:#F2EDE6; --bg-night:#1A1F28;
+  --accent:#C4622D; --accent-dk:#A34E1A;
+  --green:#4A7B5A; --sage:#8FAF8A;
+  --charcoal:#2C3340;
+  --text:#2C3340; --text-sec:#5A6072; --text-muted:#888E97;
+  --border:rgba(44,51,64,.13); --border-lt:rgba(44,51,64,.07);
+  --white:#fff;
+  --r-sm:6px; --r-md:10px; --r-lg:16px; --r-xl:22px; --r-full:999px;
+  --sh-sm:0 1px 4px rgba(0,0,0,.07); --sh-md:0 4px 16px rgba(0,0,0,.1);
+  --f-d:"DM Serif Display",Georgia,serif;
+  --f-a:"EB Garamond",Georgia,serif;
+  --f-n:"Unbounded",-apple-system,system-ui,sans-serif;
+  --f-b:"DM Sans",-apple-system,system-ui,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{font-size:17px;-webkit-font-smoothing:antialiased;scroll-behavior:smooth;scroll-padding-top:80px;}
+body{font-family:var(--f-b);font-size:16px;line-height:1.75;background:var(--bg-night);color:var(--text);}
+img{max-width:100%;display:block;}
+::selection{background:var(--accent);color:#fff;}
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+/* ── TOPBAR ── */
+.topbar{position:fixed;top:0;left:0;right:0;z-index:200;height:58px;background:var(--white);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.875rem;padding:0 2rem;box-shadow:0 1px 0 var(--border);}
+.topbar__logo{height:22px;flex-shrink:0;}
+.topbar__sep{width:1px;height:20px;background:var(--border);flex-shrink:0;}
+.topbar__label{font-family:var(--f-b);font-size:.9375rem;font-weight:600;color:var(--text-sec);}
+.topbar__badge{margin-left:auto;font-family:var(--f-n);font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--white);background:var(--accent);padding:4px 12px;border-radius:var(--r-full);max-width:50%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 
-  body {
-    font-family: var(--font);
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.7;
-    font-size: 15px;
-    font-weight: 400;
-    -webkit-font-smoothing: antialiased;
-  }
+/* ── HERO ── */
+.hero{padding-top:58px;background:var(--bg-night);padding-bottom:0;}
+.hero__inner{max-width:960px;margin:0 auto;padding:5rem 2rem 5.5rem;display:grid;grid-template-columns:1.35fr 1fr;grid-template-rows:auto auto;gap:1.5rem 3.5rem;align-items:start;}
+.hero__top{grid-column:1/-1;padding-bottom:.5rem;}
+.hero__top .hero__h1{font-size:clamp(3rem,6.5vw,5.25rem);}
+.hero__text{min-width:0;}
+.hero__h1{overflow-wrap:anywhere;word-break:break-word;hyphens:auto;}
+.hero__eyebrow{font-family:var(--f-n);font-size:.75rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:1.25rem;display:flex;align-items:center;gap:.625rem;}
+.hero__eyebrow-dot{width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;}
+.hero__h1{font-family:var(--f-d);font-style:italic;font-size:clamp(2.5rem,5.5vw,4.25rem);font-weight:400;color:var(--bg);line-height:1.05;margin-bottom:1rem;}
+.hero__h1 em{font-style:italic;color:var(--accent);font-family:var(--f-d);}
+.hero__sub{font-family:var(--f-b);font-size:1.125rem;color:rgba(250,240,226,.72);line-height:1.65;margin-bottom:0;max-width:480px;}
+.hero__meta{display:flex;flex-direction:column;gap:1.25rem;padding:.25rem 0 .25rem 2rem;border-left:1px solid rgba(255,255,255,.1);margin-top:2rem;}
+.hero__meta-item dt{font-family:var(--f-n);font-size:.6875rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(250,240,226,.3);margin-bottom:.35rem;}
+.hero__meta-item dd{font-family:var(--f-b);font-size:.9375rem;font-weight:500;color:var(--bg);}
+.hero__meta-item dd.fill{font-family:var(--f-a);font-style:italic;font-size:1.25rem;color:var(--sage);}
+.hero__meta-item a{color:inherit;text-decoration:none;border-bottom:1px solid rgba(143,175,138,.4);padding-bottom:1px;}
 
-  ::selection { background: var(--accent); color: #fff; }
+/* ── ACCENT STRIPE ── */
+.accent-stripe{height:3px;background:linear-gradient(to right,var(--accent),#A34E1A);}
 
-  /* PAGE HEADER */
-  .page-header {
-    background: var(--white);
-    border-bottom: 1px solid var(--border);
-    padding: 16px 48px;
-  }
-  .page-header-inner {
-    max-width: 900px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 32px;
-  }
-  .page-header .aspire-logo {
-    width: 200px;
-    height: auto;
-  }
-  .page-header .divider {
-    width: 1px;
-    height: 48px;
-    background: var(--border);
-    margin: 0;
-  }
-  .page-header .tees-logo {
-    height: 70px;
-    width: auto;
-    border-radius: 8px;
-  }
+/* ── SECTION GROUPS ── */
+.sec-group{padding:5rem 2rem;}
+.sec-group--dark{background:var(--bg-night);}
+.sec-group--cream{background:var(--bg);}
+.sec-group--alt{background:var(--bg-alt);}
+.sec-group__in{max-width:860px;margin:0 auto;}
 
-  /* HERO */
-  .hero {
-    background: var(--hero-green);
-    text-align: center;
-    padding: 60px 48px 80px;
-    position: relative;
-  }
-  .hero h1 {
-    font-family: var(--font-head);
-    font-weight: 800;
-    font-size: clamp(36px, 6vw, 56px);
-    color: var(--accent);
-    line-height: 1.08;
-    text-transform: uppercase;
-    letter-spacing: -0.02em;
-    margin-bottom: 8px;
-  }
-  .hero .sub {
-    font-family: var(--font-head);
-    font-weight: 600;
-    font-size: clamp(18px, 3vw, 24px);
-    color: #2C3340;
-    margin-bottom: 4px;
-    letter-spacing: -0.01em;
-  }
-  .hero .accent-word {
-    font-family: var(--font-accent);
-    font-style: italic;
-    font-weight: 400;
-    font-size: clamp(36px, 6vw, 56px);
-    color: var(--white);
-    line-height: 1.08;
-  }
-  .hero .body-text {
-    color: var(--white);
-    font-size: 17px;
-    max-width: 540px;
-    margin: 28px auto 0;
-    line-height: 1.7;
-  }
+.sec-badge{display:inline-flex;align-items:center;gap:10px;padding:5px 18px 5px 5px;border-radius:var(--r-full);margin-bottom:1.75rem;}
+.sec-group--cream .sec-badge,.sec-group--alt .sec-badge{background:var(--bg);border:1px solid var(--border);box-shadow:var(--sh-sm);}
+.sec-group--dark .sec-badge{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);}
+.sec-badge__icon{width:30px;height:30px;border-radius:50%;background:var(--green);color:var(--white);display:grid;place-items:center;flex-shrink:0;}
+.sec-badge__icon svg{width:12px;height:12px;fill:none;stroke:#fff;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;}
+.sec-badge__label{font-family:var(--f-n);font-size:.6875rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;}
+.sec-group--cream .sec-badge__label,.sec-group--alt .sec-badge__label{color:var(--text-sec);}
+.sec-group--dark .sec-badge__label{color:rgba(250,240,226,.55);}
 
-  /* ARC DIVIDER — matches AD site */
-  .hero-arc {
-    margin-top: -1px;
-    background: var(--hero-green);
-  }
-  .hero-arc svg {
-    display: block;
-    width: 100%;
-    height: 80px;
-  }
+/* ── SECTION HEADINGS (big italic number + title pattern) ── */
+.sec-head{display:grid;grid-template-columns:auto 1fr;column-gap:1.75rem;align-items:baseline;margin-bottom:2.5rem;}
+.sec-head__num{font-family:var(--f-d);font-style:italic;font-size:clamp(3rem,5vw,4.5rem);font-weight:400;line-height:1;color:var(--accent);}
+.sec-head__body{display:flex;flex-direction:column;gap:.5rem;}
+.sec-head__title{font-family:var(--f-d);font-style:italic;font-size:clamp(1.75rem,3vw,2.5rem);font-weight:400;line-height:1.15;margin:0;}
+.sec-group--cream .sec-head__title,.sec-group--alt .sec-head__title{color:var(--charcoal);}
+.sec-group--dark .sec-head__title{color:var(--bg);}
+.sec-head__title em{font-style:italic;color:var(--accent);}
+.sec-group--dark .sec-head__title em{color:var(--accent);}
+.sec-head__sub{font-family:var(--f-b);font-size:1rem;line-height:1.65;}
+.sec-group--cream .sec-head__sub,.sec-group--alt .sec-head__sub{color:var(--text-sec);}
+.sec-group--dark .sec-head__sub{color:rgba(250,240,226,.5);}
 
-  /* CONTAINER */
-  .container {
-    max-width: 820px;
-    margin: 0 auto;
-    padding: 0 32px;
-  }
+/* ── PROSE ── */
+.prose p{margin-bottom:1rem;line-height:1.8;}
+.sec-group--cream .prose p,.sec-group--alt .prose p{color:var(--text-sec);}
+.sec-group--dark .prose p{color:rgba(250,240,226,.82);}
+.prose p:last-child{margin-bottom:0;}
+.prose strong{font-weight:600;}
+.sec-group--cream .prose strong,.sec-group--alt .prose strong{color:var(--charcoal);}
+.sec-group--dark .prose strong{color:var(--bg);}
+.prose em{font-family:var(--f-a);font-style:italic;}
+.prose ul{list-style:none;padding:0;margin:1rem 0;display:flex;flex-direction:column;gap:.625rem;}
+.prose ul li{position:relative;padding-left:1.375rem;line-height:1.75;}
+.prose ul li::before{content:'';position:absolute;left:.35rem;top:.75em;width:5px;height:5px;border-radius:50%;background:var(--green);}
+.sec-group--cream .prose ul li,.sec-group--alt .prose ul li{color:var(--text-sec);}
+.sec-group--dark .prose ul li{color:rgba(250,240,226,.78);}
 
-  /* META BAR */
-  .meta-bar {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 16px;
-    padding: 32px 0 20px;
-    border-bottom: 1px solid var(--border);
-    margin-bottom: 56px;
-    font-size: 13px;
-    color: var(--text-muted);
-    letter-spacing: 0.3px;
-  }
-  .meta-bar strong { color: var(--text); font-weight: 600; }
-  .meta-bar a { color: var(--accent); text-decoration: none; }
+/* ── SUB-HEADING (h3 inside sections) ── */
+.sub-head{font-family:var(--f-n);font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin:2.5rem 0 1rem;display:flex;align-items:center;gap:.5rem;}
+.sec-group--cream .sub-head,.sec-group--alt .sub-head{color:var(--text-sec);}
+.sec-group--dark .sub-head{color:rgba(250,240,226,.4);}
+.sub-head::before{content:'';display:block;width:20px;height:1px;background:currentColor;opacity:.6;}
 
-  /* SECTIONS */
-  section { margin-bottom: 64px; }
+/* ── SCREENSHOT FRAME ── */
+.screenshot-frame{background:var(--white);border-radius:var(--r-lg);padding:8px;border:1px solid var(--border);box-shadow:var(--sh-md);margin:1.5rem 0;overflow:hidden;}
+.sec-group--dark .screenshot-frame{background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.08);}
+.screenshot-frame img{width:100%;border-radius:10px;display:block;}
+.screenshot-caption{text-align:center;font-family:var(--f-n);font-size:.6875rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--text-muted);margin-top:.75rem;}
+.sec-group--dark .screenshot-caption{color:rgba(250,240,226,.35);}
 
-  h2 {
-    font-family: var(--font-head);
-    font-weight: 700;
-    font-size: clamp(24px, 3.5vw, 32px);
-    color: var(--text);
-    line-height: 1.12;
-    letter-spacing: -0.02em;
-    margin-bottom: 8px;
-  }
-  h2 .number {
-    font-family: var(--font);
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.15em;
-    color: var(--accent);
-    display: block;
-    margin-bottom: 4px;
-    text-transform: uppercase;
-  }
-  h2 em {
-    font-family: var(--font-accent);
-    font-style: italic;
-    font-weight: 400;
-    color: var(--accent);
-  }
+/* ── SCORE CARDS ── */
+.score-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:1rem;margin:1.5rem 0;}
+.score-card{min-width:0;border-radius:var(--r-lg);padding:1.5rem 1.25rem;text-align:center;}
+.sec-group--cream .score-card,.sec-group--alt .score-card{background:var(--white);border:1px solid var(--border-lt);box-shadow:var(--sh-sm);}
+.sec-group--dark .score-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);}
+.score-card__label{font-family:var(--f-n);font-size:.625rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--text-muted);margin-bottom:.5rem;overflow-wrap:anywhere;}
+.sec-group--dark .score-card__label{color:rgba(250,240,226,.4);}
+.score-card__value{font-family:var(--f-n);font-size:clamp(1.75rem,2.75vw,2.5rem);font-weight:700;color:var(--accent);line-height:1;overflow-wrap:anywhere;word-break:break-word;hyphens:auto;letter-spacing:-.02em;}
+.score-card__note{font-family:var(--f-b);font-size:.875rem;color:var(--text-muted);margin-top:.5rem;}
+.sec-group--dark .score-card__note{color:rgba(250,240,226,.4);}
 
-  h3 {
-    font-family: var(--font-head);
-    font-weight: 600;
-    font-size: 13px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--text-muted);
-    margin: 32px 0 12px;
-  }
+/* ── BAR CHART ── */
+.bar-chart{margin:1.5rem 0;display:flex;flex-direction:column;gap:.875rem;}
+.bar-row{display:flex;align-items:center;gap:.875rem;}
+.bar-row__label{width:160px;font-size:.875rem;font-weight:500;flex-shrink:0;}
+.sec-group--cream .bar-row__label,.sec-group--alt .bar-row__label{color:var(--charcoal);}
+.sec-group--dark .bar-row__label{color:rgba(250,240,226,.8);}
+.bar-row__track{flex:1;height:26px;border-radius:13px;position:relative;overflow:visible;}
+.sec-group--cream .bar-row__track,.sec-group--alt .bar-row__track{background:var(--bg-alt);}
+.sec-group--dark .bar-row__track{background:rgba(255,255,255,.06);}
+.bar-row__fill{height:100%;border-radius:13px;background:var(--accent);max-width:100%;overflow:hidden;}
+.bar-row__fill--green{background:var(--green);}
+.bar-row__cmp{position:absolute;top:-3px;bottom:-3px;width:2px;background:rgba(250,240,226,.32);border-radius:1px;}
+.bar-chart__legend{display:flex;gap:1.25rem;margin-bottom:.75rem;font-family:var(--f-n);font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;}
+.bar-chart__legend-item--you{display:flex;align-items:center;gap:.375rem;color:var(--accent);}
+.bar-chart__legend-item--you::before{content:'';width:16px;height:3px;background:var(--accent);border-radius:2px;flex-shrink:0;}
+.bar-chart__legend-item--cmp{display:flex;align-items:center;gap:.375rem;color:rgba(250,240,226,.38);}
+.bar-chart__legend-item--cmp::before{content:'';width:2px;height:12px;background:rgba(250,240,226,.38);border-radius:1px;flex-shrink:0;}
+.bar-row__val{width:auto;min-width:72px;font-family:var(--f-n);font-size:.75rem;font-weight:700;text-align:right;}
+.bar-row__cmp-val{font-family:var(--f-b);font-size:.625rem;font-weight:400;display:block;opacity:.5;}
+.kw-table-wrap{background:var(--bg)!important;border:1px solid rgba(44,51,64,.12)!important;border-radius:var(--r-lg);padding:1rem;margin:1.5rem 0;}
+.kw-table-wrap .kw-table{border-color:rgba(44,51,64,.08);}
+.kw-table-wrap .kw-row{border-bottom-color:rgba(44,51,64,.06);}
+.kw-table-wrap .kw-row--hot{background:rgba(196,98,45,.05);}
+.kw-table-wrap .kw-row__rank{color:var(--text-muted);}
+.kw-table-wrap .kw-row__term{color:var(--charcoal);}
+.kw-table-wrap .kw-row__vol{color:var(--accent);}
+.sec-group--cream .bar-row__val,.sec-group--alt .bar-row__val{color:var(--text-sec);}
+.sec-group--dark .bar-row__val{color:rgba(250,240,226,.65);}
 
-  p { margin-bottom: 16px; color: var(--text-sec); }
-  p strong { color: var(--text); }
-  ul { margin: 0 0 16px 20px; }
-  li { margin-bottom: 6px; color: var(--text-sec); }
-  li strong { color: var(--text); }
+/* ── STACK SPLIT (where they lead / the digital gap) ── */
+.stack-split{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(44,51,64,.08);border-radius:var(--r-xl);overflow:hidden;margin:1.5rem 0;}
+.stack-split__side{padding:2rem 1.75rem;display:flex;flex-direction:column;gap:1.5rem;}
+.stack-split__side--win{background:rgba(74,123,90,.06);}
+.stack-split__side--gap{background:rgba(196,98,45,.04);}
+.stack-split__badge{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:4px 12px;border-radius:var(--r-full);display:inline-block;width:fit-content;}
+.stack-split__side--win .stack-split__badge{background:rgba(74,123,90,.15);color:var(--green);}
+.stack-split__side--gap .stack-split__badge{background:rgba(196,98,45,.1);color:var(--accent-dk);}
+.stack-split__stat{display:flex;flex-direction:column;gap:.25rem;}
+.stack-split__num{font-family:var(--f-n);font-weight:700;font-size:clamp(1.125rem,1.875vw,1.5rem);line-height:1.1;}
+.stack-split__side--win .stack-split__num{color:var(--green);}
+.stack-split__side--gap .stack-split__num{color:var(--accent);}
+.stack-split__cmp{font-size:.65em;opacity:.55;font-style:normal;}
+.stack-split__label{font-family:var(--f-b);font-weight:700;font-size:.875rem;color:var(--charcoal);}
+.stack-split__note{font-size:.875rem;line-height:1.5;color:var(--text-muted);}
 
-  .paw { font-size: 0.85em; }
+/* ── COMPARE CARDS ── */
+.compare-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin:1.5rem 0;}
+.compare-card{border-radius:var(--r-lg);padding:1.5rem 1.25rem;}
+.sec-group--cream .compare-card,.sec-group--alt .compare-card{background:var(--white);border:1px solid var(--border-lt);box-shadow:var(--sh-sm);}
+.sec-group--dark .compare-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);}
+.compare-card--you{border:2px solid var(--accent)!important;background:rgba(196,98,45,.06)!important;}
+.compare-card{min-width:0;}
+.compare-card__name{font-family:var(--f-d);font-style:italic;font-size:1.25rem;font-weight:400;margin-bottom:.875rem;line-height:1.2;overflow-wrap:anywhere;}
+.sec-group--cream .compare-card__name,.sec-group--alt .compare-card__name{color:var(--charcoal);}
+.sec-group--dark .compare-card__name{color:var(--bg);}
+.compare-card__stat{display:flex;justify-content:space-between;padding:.35rem 0;font-size:.875rem;border-bottom:1px solid var(--border-lt);}
+.sec-group--dark .compare-card__stat{border-bottom-color:rgba(255,255,255,.06);}
+.compare-card__stat:last-child{border-bottom:none;}
+.compare-card__stat-label{color:var(--text-muted);}
+.sec-group--dark .compare-card__stat-label{color:rgba(250,240,226,.35);}
+.compare-card__stat-val{font-weight:600;}
+.sec-group--cream .compare-card__stat-val,.sec-group--alt .compare-card__stat-val{color:var(--charcoal);}
+.sec-group--dark .compare-card__stat-val{color:rgba(250,240,226,.85);}
+.compare-card__stat-val--good{color:var(--green)!important;}
+.compare-card__stat-val--mid{color:#B8860B!important;}
+.compare-card__stat-val--low{color:var(--accent)!important;}
 
-  /* CALLOUT */
-  .callout {
-    background: var(--bg-alt);
-    border-left: 3px solid var(--accent);
-    padding: 20px 24px;
-    margin: 24px 0;
-    font-size: 0.9rem;
-    border-radius: 0 12px 12px 0;
-    color: var(--text-sec);
-  }
-  .callout strong { color: var(--text); }
+/* ── KEYWORD CARDS ── */
+.kw-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:.625rem;margin:1.5rem 0;}
+.kw-card{border-radius:var(--r-md);padding:.875rem 1rem;display:flex;justify-content:space-between;align-items:center;}
+.sec-group--cream .kw-card,.sec-group--alt .kw-card{background:var(--white);border:1px solid var(--border-lt);}
+.sec-group--dark .kw-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);}
+.kw-card{min-width:0;}
+.kw-card__term{font-weight:500;font-size:.875rem;overflow-wrap:anywhere;min-width:0;}
+.sec-group--cream .kw-card__term,.sec-group--alt .kw-card__term{color:var(--charcoal);}
+.sec-group--dark .kw-card__term{color:rgba(250,240,226,.85);}
+.kw-card__vol{font-family:var(--f-n);font-size:.625rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text-muted);white-space:nowrap;margin-left:.75rem;}
+.sec-group--dark .kw-card__vol{color:rgba(250,240,226,.4);}
+.kw-card__vol strong{font-family:var(--f-n);font-size:.875rem;font-weight:700;color:var(--accent);letter-spacing:0;}
+.kw-card--hot{border-color:rgba(196,98,45,.3)!important;background:rgba(196,98,45,.06)!important;}
 
-  /* PILL TAGS */
-  .tag {
-    display: inline-block;
-    padding: 4px 14px;
-    border-radius: 9999px;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-  }
-  .tag.easy { background: #e8f5e9; color: #2e7d32; }
-  .tag.medium { background: #fff3e0; color: #e65100; }
-  .tag.high { background: var(--accent); color: white; }
-  .tag.mid-impact { background: #e3f2fd; color: #1565c0; }
+/* ── PILL TAGS ── */
+.tag{display:inline-block;padding:3px 10px;border-radius:var(--r-full);font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;}
+.tag--easy{background:rgba(74,123,90,.15);color:var(--green);}
+.tag--medium{background:rgba(184,134,11,.12);color:#B8860B;}
+.tag--high{background:var(--accent);color:#fff;}
+.tag--mid-impact{background:rgba(74,123,90,.12);color:var(--green);}
 
-  /* SCORE CARDS */
-  .score-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 16px;
-    margin: 24px 0;
-  }
-  .score-card {
-    background: var(--white);
-    border-radius: 16px;
-    padding: 24px 16px;
-    text-align: center;
-    border: 1px solid var(--border-light);
-    transition: box-shadow 0.3s, transform 0.3s;
-  }
-  .score-card:hover {
-    box-shadow: 0 8px 32px rgba(0,0,0,0.06);
-    transform: translateY(-2px);
-  }
-  .score-card .label {
-    font-family: var(--font-head);
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--text-muted);
-    margin-bottom: 8px;
-  }
-  .score-card .value {
-    font-family: var(--font-head);
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--accent);
-  }
-  .score-card .note {
-    font-size: 12px;
-    color: var(--text-muted);
-    margin-top: 4px;
-  }
+/* ── OPPORTUNITY CARDS (matching website-reveal page-row) ── */
+/* padding-left indents the list past the section's "06" number so the nested 01/02/03/04 sit subordinate to the section heading */
+.opp-list{display:flex;flex-direction:column;margin:1.5rem 0;padding-left:clamp(2.5rem,6vw,6.25rem);}
+.opp-row{display:grid;grid-template-columns:68px 1fr;grid-template-rows:auto auto;column-gap:1.5rem;row-gap:.5rem;padding:2rem 0;border-top:1px solid var(--border);}
+.sec-group--dark .opp-row{border-top-color:rgba(255,255,255,.08);}
+.opp-row:last-child{border-bottom:1px solid var(--border);}
+.sec-group--dark .opp-row:last-child{border-bottom-color:rgba(255,255,255,.08);}
+.opp-row__num{grid-row:1/3;font-family:var(--f-d);font-style:italic;font-size:clamp(1.75rem,2.75vw,2.5rem);font-weight:400;color:var(--accent);line-height:1;opacity:.85;}
+.opp-row__title{font-family:var(--f-d);font-style:italic;font-size:clamp(1.125rem,1.8vw,1.4375rem);font-weight:400;line-height:1.2;align-self:end;overflow-wrap:anywhere;}
+.sec-group--cream .opp-row__title,.sec-group--alt .opp-row__title{color:var(--charcoal);}
+.sec-group--dark .opp-row__title{color:var(--bg);}
+.opp-row__desc{font-size:.9375rem;line-height:1.7;}
+.sec-group--cream .opp-row__desc,.sec-group--alt .opp-row__desc{color:var(--text-sec);}
+.sec-group--dark .opp-row__desc{color:rgba(250,240,226,.75);}
+.opp-row__tags{grid-column:1/-1;display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.5rem;}
 
-  /* BAR CHART */
-  .bar-chart { margin: 24px 0; }
-  .bar-row {
-    display: flex;
-    align-items: center;
-    margin-bottom: 12px;
-  }
-  .bar-row .bar-label {
-    width: 160px;
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--text);
-    flex-shrink: 0;
-  }
-  .bar-row .bar-track {
-    flex: 1;
-    height: 28px;
-    background: var(--bg-alt);
-    border-radius: 14px;
-    overflow: hidden;
-    margin: 0 12px;
-  }
-  .bar-row .bar-fill {
-    height: 100%;
-    border-radius: 14px;
-  }
-  .bar-row .bar-val {
-    width: 40px;
-    font-family: var(--font-head);
-    font-size: 13px;
-    font-weight: 700;
-    color: var(--text-muted);
-    text-align: right;
-  }
+/* ── TIMELINE (website-reveal action-item style) ── */
+.timeline{display:flex;flex-direction:column;margin:1.5rem 0;}
+.timeline-item{display:flex;gap:1rem;padding:1.25rem 0;border-top:1px solid var(--border);}
+.sec-group--dark .timeline-item{border-top-color:rgba(255,255,255,.07);}
+.timeline-item:first-child{border-top:none;padding-top:0;}
+.timeline-item__num{font-family:var(--f-n);font-size:.6875rem;font-weight:700;color:var(--accent);min-width:3rem;padding-top:.3em;flex-shrink:0;letter-spacing:.08em;text-transform:uppercase;}
+.timeline-item__body{flex:1;}
+.timeline-item__title{font-family:var(--f-d);font-style:italic;font-size:clamp(1.1rem,1.6vw,1.25rem);font-weight:400;margin-bottom:.35rem;line-height:1.2;overflow-wrap:anywhere;}
+.sec-group--cream .timeline-item__title,.sec-group--alt .timeline-item__title{color:var(--charcoal);}
+.sec-group--dark .timeline-item__title{color:rgba(250,240,226,.92);}
+.timeline-item__detail{font-size:.9375rem;line-height:1.65;}
+.sec-group--cream .timeline-item__detail,.sec-group--alt .timeline-item__detail{color:var(--text-sec);}
+.sec-group--dark .timeline-item__detail{color:rgba(250,240,226,.6);}
 
-  /* COMPARE CARDS */
-  .compare-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 16px;
-    margin: 24px 0;
-  }
-  .compare-card {
-    background: var(--white);
-    border-radius: 16px;
-    padding: 24px 20px;
-    border: 1px solid var(--border-light);
-    transition: box-shadow 0.3s, transform 0.3s;
-  }
-  .compare-card:hover {
-    box-shadow: 0 8px 32px rgba(0,0,0,0.06);
-    transform: translateY(-2px);
-  }
-  .compare-card.you {
-    border: 2px solid var(--accent);
-    background: #FFF9F5;
-  }
-  .compare-card .comp-name {
-    font-family: var(--font-head);
-    font-weight: 700;
-    font-size: 14px;
-    color: var(--text);
-    margin-bottom: 14px;
-  }
-  .compare-card .comp-stat {
-    display: flex;
-    justify-content: space-between;
-    font-size: 13px;
-    padding: 5px 0;
-    border-bottom: 1px solid var(--border-light);
-  }
-  .compare-card .comp-stat:last-child { border-bottom: none; }
-  .compare-card .comp-stat .stat-label { color: var(--text-muted); }
-  .compare-card .comp-stat .stat-val { font-weight: 600; }
-  .stat-val.good { color: var(--green); }
-  .stat-val.mid { color: #b8860b; }
-  .stat-val.low { color: #c44; }
+/* ── REVENUE BOX (legacy, kept for backward compat) ── */
+.revenue-box{background:var(--green);color:#fff;border-radius:var(--r-xl);padding:3rem 2.5rem;text-align:center;margin:2rem 0;}
+.revenue-box__label{font-family:var(--f-n);font-size:.6875rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;opacity:.7;margin-bottom:.625rem;}
+.revenue-box__amount{font-family:var(--f-d);font-style:italic;font-size:clamp(2.75rem,7vw,4.5rem);font-weight:400;line-height:1;margin-bottom:.5rem;overflow-wrap:anywhere;}
+.revenue-box__note{font-family:var(--f-a);font-style:italic;font-size:1rem;opacity:.82;max-width:500px;margin:0 auto;line-height:1.55;}
 
-  /* KEYWORD CARDS */
-  .kw-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 10px;
-    margin: 24px 0;
-  }
-  .kw-card {
-    background: var(--white);
-    border: 1px solid var(--border-light);
-    border-radius: 12px;
-    padding: 14px 16px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: box-shadow 0.3s;
-  }
-  .kw-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.05); }
-  .kw-card .kw-term {
-    font-weight: 500;
-    font-size: 13px;
-    color: var(--text);
-  }
-  .kw-card .kw-vol {
-    font-size: 11px;
-    color: var(--text-muted);
-    white-space: nowrap;
-    margin-left: 12px;
-  }
-  .kw-card .kw-vol strong {
-    font-family: var(--font-head);
-    font-size: 14px;
-    font-weight: 700;
-    color: var(--accent);
-  }
+/* ── REVENUE VARIANT A — THE MATH (funnel calculation chain) ── */
+.funnel-chain{display:flex;align-items:stretch;margin:0 0 2rem;flex-wrap:wrap;}
+.funnel-step{flex:1;min-width:120px;position:relative;padding:1.75rem 1.25rem 1.5rem;border:1px solid var(--border);border-right:none;background:var(--white);}
+.funnel-step:first-child{border-radius:var(--r-lg) 0 0 var(--r-lg);}
+.funnel-step:last-child{border-right:1px solid var(--border);border-radius:0 var(--r-lg) var(--r-lg) 0;}
+.funnel-step__operator{position:absolute;right:-14px;top:50%;transform:translateY(-50%);width:26px;height:26px;border-radius:50%;background:var(--bg-alt);border:1px solid var(--border);display:grid;place-items:center;z-index:2;font-family:var(--f-n);font-size:.5rem;font-weight:700;color:var(--text-muted);}
+.funnel-step__label{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);margin-bottom:.625rem;}
+.funnel-step__val{font-family:var(--f-d);font-style:italic;font-size:clamp(1.5rem,2.5vw,2rem);color:var(--charcoal);line-height:1;margin-bottom:.25rem;}
+.funnel-step__sub{font-size:.75rem;color:var(--text-muted);line-height:1.4;}
+.funnel-result{background:var(--accent);border-radius:var(--r-xl);padding:2.75rem 3rem;text-align:center;display:flex;align-items:center;justify-content:center;gap:3rem;margin-bottom:1.5rem;flex-wrap:wrap;}
+.funnel-result__period{text-align:center;}
+.funnel-result__amt{font-family:var(--f-d);font-style:italic;font-size:clamp(2.5rem,5vw,4rem);font-weight:400;color:#fff;line-height:1;margin-bottom:.375rem;overflow-wrap:anywhere;}
+.funnel-result__period-label{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.55);}
+.funnel-result__divider{width:1px;height:60px;background:rgba(255,255,255,.2);}
+.funnel-note{padding:1.25rem 1.5rem;border-radius:var(--r-md);background:var(--bg-alt);border-left:3px solid var(--border);}
+.funnel-note p{font-size:.875rem;color:var(--text-muted);line-height:1.6;}
+.funnel-note strong{color:var(--text-sec);font-weight:600;}
 
-  /* TIMELINE */
-  .timeline {
-    position: relative;
-    margin: 24px 0;
-    padding-left: 36px;
-  }
-  .timeline::before {
-    content: '';
-    position: absolute;
-    left: 8px;
-    top: 8px;
-    bottom: 8px;
-    width: 2px;
-    background: var(--border);
-  }
-  .timeline-item {
-    position: relative;
-    margin-bottom: 32px;
-  }
-  .timeline-item:last-child { margin-bottom: 0; }
-  .timeline-item::before {
-    content: '';
-    position: absolute;
-    left: -32px;
-    top: 6px;
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    background: var(--accent);
-    border: 3px solid var(--bg);
-    box-shadow: 0 0 0 2px var(--accent);
-  }
-  .timeline-item .week {
-    font-family: var(--font-head);
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 4px;
-  }
-  .timeline-item .task {
-    font-family: var(--font-head);
-    font-weight: 700;
-    font-size: 16px;
-    color: var(--text);
-    margin-bottom: 4px;
-    line-height: 1.3;
-  }
-  .timeline-item .detail {
-    font-size: 14px;
-    color: var(--text-sec);
-    line-height: 1.65;
-  }
+/* ── REVENUE VARIANT B — THE GAP (before/after split) ── */
+.gap-wrap{display:grid;grid-template-columns:1fr 1fr;border-radius:var(--r-xl);overflow:hidden;margin-bottom:1.5rem;min-height:340px;}
+.gap-now{background:#222830;padding:3rem 2.75rem;display:flex;flex-direction:column;justify-content:space-between;position:relative;}
+.gap-now::after{content:'';position:absolute;inset:0;background:repeating-linear-gradient(-45deg,transparent,transparent 12px,rgba(255,255,255,.012) 12px,rgba(255,255,255,.012) 13px);pointer-events:none;}
+.gap-now__eyebrow,.gap-after__eyebrow{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;margin-bottom:1.5rem;}
+.gap-now__eyebrow{color:rgba(250,240,226,.25);}
+.gap-after__eyebrow{color:rgba(250,240,226,.5);}
+.gap-now__headline{font-family:var(--f-d);font-style:italic;font-size:clamp(1rem,1.8vw,1.375rem);line-height:1.35;color:rgba(250,240,226,.45);flex:1;margin-bottom:1.5rem;}
+.gap-after__headline{font-family:var(--f-d);font-style:italic;font-size:clamp(1rem,1.8vw,1.375rem);line-height:1.35;color:rgba(250,240,226,.92);flex:1;margin-bottom:1.5rem;}
+.gap-now__num{font-family:var(--f-d);font-style:italic;font-size:clamp(2rem,4vw,3.25rem);line-height:1;color:rgba(250,240,226,.18);overflow-wrap:anywhere;}
+.gap-now__sublabel,.gap-after__sublabel{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-top:.5rem;}
+.gap-now__sublabel{color:rgba(250,240,226,.15);}
+.gap-after{background:var(--green-dk);padding:3rem 2.75rem;display:flex;flex-direction:column;justify-content:space-between;}
+.gap-after__num{font-family:var(--f-d);font-style:italic;font-size:clamp(2rem,4vw,3.25rem);line-height:1;color:var(--sage);overflow-wrap:anywhere;}
+.gap-after__sublabel{color:rgba(250,240,226,.4);}
+.gap-bridge{background:var(--bg-alt);border-radius:var(--r-lg);padding:1.5rem 2rem;display:flex;align-items:center;gap:1.5rem;margin-bottom:1.5rem;}
+.gap-bridge__line{flex:1;height:1px;background:var(--border);}
+.gap-bridge__text{font-size:1.0625rem;font-weight:500;color:var(--text-sec);white-space:nowrap;}
+.gap-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;}
+.gap-metric{text-align:center;padding:1.25rem 1rem;}
+.gap-metric__val{font-family:var(--f-d);font-style:italic;font-size:1.75rem;color:var(--accent);line-height:1;margin-bottom:.375rem;}
+.gap-metric__label{font-size:.8125rem;color:var(--text-sec);}
 
-  /* OPPORTUNITY CARDS */
-  .opp-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 16px;
-    margin: 24px 0;
-  }
-  .opp-card {
-    background: var(--white);
-    border: 1px solid var(--border-light);
-    border-radius: 16px;
-    padding: 28px 24px;
-    transition: box-shadow 0.3s, transform 0.3s;
-  }
-  .opp-card:hover {
-    box-shadow: 0 8px 32px rgba(0,0,0,0.06);
-    transform: translateY(-2px);
-  }
-  .opp-card h4 {
-    font-family: var(--font-head);
-    font-size: 15px;
-    font-weight: 700;
-    color: var(--text);
-    margin-bottom: 8px;
-  }
-  .opp-card p { font-size: 13px; color: var(--text-sec); margin-bottom: 14px; }
-  .opp-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+/* ── REVENUE VARIANT C — THE RANGE (conservative/moderate/optimistic) ── */
+.range-hero{text-align:center;padding:2.5rem 2rem 2rem;margin-bottom:2rem;}
+.range-hero__sub{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(250,240,226,.3);margin-bottom:1.25rem;}
+.range-hero__num{font-family:var(--f-d);font-style:italic;font-size:clamp(4rem,8vw,6.5rem);font-weight:400;color:var(--accent);line-height:1;margin-bottom:.5rem;overflow-wrap:anywhere;}
+.range-hero__label{font-size:1.125rem;color:rgba(250,240,226,.6);margin-bottom:.5rem;}
+.range-hero__note{font-size:.875rem;color:rgba(250,240,226,.28);max-width:480px;margin:0 auto;line-height:1.6;}
+.range-scenarios{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-bottom:1.5rem;}
+.range-card{border-radius:var(--r-xl);padding:2rem 1.75rem;}
+.range-card--conservative{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);}
+.range-card--moderate{background:rgba(196,98,45,.12);border:1px solid rgba(196,98,45,.2);}
+.range-card--optimistic{background:rgba(74,123,90,.15);border:1px solid rgba(74,123,90,.25);}
+.range-card__tier{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;margin-bottom:1rem;}
+.range-card--conservative .range-card__tier{color:rgba(250,240,226,.3);}
+.range-card--moderate .range-card__tier{color:rgba(196,98,45,.8);}
+.range-card--optimistic .range-card__tier{color:var(--sage);}
+.range-card__amt{font-family:var(--f-d);font-style:italic;font-size:clamp(1.75rem,2.5vw,2.25rem);line-height:1;margin-bottom:.75rem;overflow-wrap:anywhere;}
+.range-card--conservative .range-card__amt{color:rgba(250,240,226,.5);}
+.range-card--moderate .range-card__amt{color:var(--bg);}
+.range-card--optimistic .range-card__amt{color:var(--sage);}
+.range-card__period{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;display:block;margin-bottom:1.25rem;}
+.range-card--conservative .range-card__period{color:rgba(250,240,226,.2);}
+.range-card--moderate .range-card__period{color:rgba(250,240,226,.4);}
+.range-card--optimistic .range-card__period{color:rgba(143,180,138,.5);}
+.range-card__desc{font-size:.8125rem;line-height:1.65;}
+.range-card--conservative .range-card__desc{color:rgba(250,240,226,.38);}
+.range-card--moderate .range-card__desc{color:rgba(250,240,226,.72);}
+.range-card--optimistic .range-card__desc{color:rgba(250,240,226,.72);}
+.range-bar-wrap{background:rgba(255,255,255,.05);border-radius:var(--r-full);height:6px;margin-top:1.25rem;overflow:hidden;}
+.range-bar{height:100%;border-radius:var(--r-full);}
+.range-card--conservative .range-bar{width:35%;background:rgba(255,255,255,.2);}
+.range-card--moderate .range-bar{width:62%;background:var(--accent);}
+.range-card--optimistic .range-bar{width:100%;background:var(--green);}
+.range-callout{border-radius:var(--r-lg);padding:1.5rem 2rem;background:rgba(250,240,226,.04);border:1px solid rgba(250,240,226,.06);display:flex;align-items:center;gap:1.5rem;}
+.range-callout__icon{width:36px;height:36px;border-radius:50%;background:rgba(196,98,45,.15);display:grid;place-items:center;flex-shrink:0;}
+.range-callout__icon svg{width:16px;height:16px;stroke:var(--accent);stroke-width:2;fill:none;}
+.range-callout__text{font-size:1rem;color:rgba(250,240,226,.55);line-height:1.55;}
+.range-callout__text strong{font-style:normal;font-weight:600;color:rgba(250,240,226,.82);}
 
-  /* REVENUE BOX */
-  .revenue-box {
-    background: var(--green);
-    color: white;
-    border-radius: 16px;
-    padding: 48px 40px;
-    text-align: center;
-    margin: 32px 0;
-  }
-  .revenue-box .rev-label {
-    font-family: var(--font-head);
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    opacity: 0.7;
-    margin-bottom: 8px;
-  }
-  .revenue-box .rev-amount {
-    font-family: var(--font-head);
-    font-size: clamp(40px, 8vw, 56px);
-    font-weight: 800;
-    color: var(--white);
-    margin-bottom: 8px;
-    letter-spacing: -0.02em;
-  }
-  .revenue-box .rev-note {
-    font-size: 14px;
-    opacity: 0.7;
-  }
+/* ── REVENUE VARIANT D — WHAT IT MEANS (human translation) ── */
+.meaning-anchor{text-align:center;margin-bottom:3rem;padding:2.5rem 2rem;border-bottom:1px solid var(--border);}
+.meaning-anchor__label{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--text-muted);margin-bottom:1.25rem;}
+.meaning-anchor__num{font-family:var(--f-d);font-style:italic;font-size:clamp(4rem,7vw,5.5rem);font-weight:400;color:var(--accent);line-height:1;margin-bottom:.5rem;overflow-wrap:anywhere;}
+.meaning-anchor__period{font-size:1.25rem;color:var(--text-sec);}
+.meaning-anchor__note{font-size:.875rem;color:var(--text-muted);margin-top:.75rem;}
+.meaning-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--r-xl);overflow:hidden;margin-bottom:1.5rem;}
+.meaning-item{background:var(--white);padding:2.5rem 2rem;display:flex;flex-direction:column;gap:.875rem;}
+.meaning-item__ico{width:44px;height:44px;border-radius:var(--r-md);background:rgba(196,98,45,.1);display:grid;place-items:center;}
+.meaning-item__ico svg{width:20px;height:20px;stroke:var(--accent-dk);stroke-width:1.75;fill:none;}
+.meaning-item__num{font-family:var(--f-d);font-style:italic;font-size:clamp(1.75rem,3vw,2.5rem);color:var(--charcoal);line-height:1;overflow-wrap:anywhere;}
+.meaning-item__num em{color:var(--accent);}
+.meaning-item__label{font-size:.9375rem;font-weight:600;color:var(--charcoal);}
+.meaning-item__sub{font-size:.875rem;color:var(--text-sec);line-height:1.6;}
+.meaning-close{background:var(--charcoal);border-radius:var(--r-xl);padding:2.5rem;display:flex;align-items:center;gap:2rem;flex-wrap:wrap;}
+.meaning-close__quote{font-family:var(--f-a);font-style:italic;font-size:1.25rem;line-height:1.55;color:rgba(250,240,226,.75);flex:1;min-width:200px;}
+.meaning-close__quote em{color:var(--accent);}
+.meaning-close__aside{flex-shrink:0;width:130px;text-align:center;}
+.meaning-close__aside-num{font-family:var(--f-d);font-style:italic;font-size:2.25rem;color:var(--accent);line-height:1;margin-bottom:.25rem;}
+.meaning-close__aside-label{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(250,240,226,.25);}
 
-  /* LOGO SHOWCASE */
-  .logo-showcase {
-    background: var(--bg-alt);
-    border-radius: 16px;
-    padding: 36px;
-    text-align: center;
-    margin: 24px 0;
-  }
-  .logo-showcase img {
-    max-width: 180px;
-    border-radius: 12px;
-    margin: 16px 0;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-  }
-  .logo-showcase .caption {
-    font-size: 13px;
-    color: var(--text-muted);
-    font-style: italic;
-    margin-top: 8px;
-  }
+/* ── REVIEW / TESTIMONIAL CARDS ── */
+.review-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem;margin:1.5rem 0;}
+.review-card{border-radius:var(--r-lg);padding:1.5rem 1.5rem 1.25rem;display:flex;flex-direction:column;gap:.875rem;}
+.sec-group--cream .review-card,.sec-group--alt .review-card{background:var(--white);border:1px solid var(--border-lt);box-shadow:var(--sh-sm);}
+.sec-group--dark .review-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);}
+.review-card__stars{color:var(--accent);font-size:1rem;letter-spacing:.2em;line-height:1;}
+.review-card__quote{font-family:var(--f-a);font-style:italic;font-size:1.0625rem;line-height:1.55;margin:0;}
+.sec-group--cream .review-card__quote,.sec-group--alt .review-card__quote{color:var(--charcoal);}
+.sec-group--dark .review-card__quote{color:rgba(250,240,226,.92);}
+.review-card__by{font-family:var(--f-b);font-size:.8125rem;font-weight:500;color:var(--text-muted);margin-top:auto;}
+.sec-group--dark .review-card__by{color:rgba(250,240,226,.45);}
 
-  /* CTA BOX */
-  .cta-box {
-    text-align: center;
-    border: 2px solid var(--accent);
-    border-radius: 16px;
-    padding: 40px 32px;
-    margin: 32px 0;
-  }
-  .cta-box .cta-heading {
-    font-family: var(--font-head);
-    font-size: clamp(20px, 3vw, 28px);
-    font-weight: 700;
-    color: var(--text);
-    margin-bottom: 8px;
-    line-height: 1.2;
-  }
-  .cta-box .cta-heading em {
-    font-family: var(--font-accent);
-    font-style: italic;
-    font-weight: 400;
-    color: var(--accent);
-  }
-  .cta-box .cta-sub {
-    color: var(--text-muted);
-    margin-bottom: 0;
-  }
+/* ── BUILD / E-E-A-T GRID (icon + body cards) ── */
+.build-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin:1.5rem 0;}
+.build-item{display:flex;gap:.875rem;padding:1.25rem 1.25rem 1.375rem;border-radius:var(--r-lg);align-items:flex-start;}
+.sec-group--cream .build-item,.sec-group--alt .build-item{background:var(--white);border:1px solid var(--border-lt);box-shadow:var(--sh-sm);}
+.sec-group--dark .build-item{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);}
+.build-item__ico{width:32px;height:32px;border-radius:50%;background:rgba(196,98,45,.12);color:var(--accent);display:grid;place-items:center;flex-shrink:0;}
+.build-item__ico .material-symbols-outlined{font-size:18px;}
+.sec-group--dark .build-item__ico{background:rgba(196,98,45,.2);color:#E09360;}
+.build-item__body{flex:1;min-width:0;}
+.build-item__label{font-family:var(--f-b);font-weight:700;font-size:.9375rem;margin-bottom:.3rem;line-height:1.3;}
+.sec-group--cream .build-item__label,.sec-group--alt .build-item__label{color:var(--charcoal);}
+.sec-group--dark .build-item__label{color:var(--bg);}
+.build-item__desc{font-size:.875rem;line-height:1.6;}
+.sec-group--cream .build-item__desc,.sec-group--alt .build-item__desc{color:var(--text-sec);}
+.sec-group--dark .build-item__desc{color:rgba(250,240,226,.7);}
 
-  /* DIVIDER */
-  .divider {
-    border: none;
-    border-top: 1px solid var(--border);
-    margin: 56px 0;
-  }
+/* ── OPPORTUNITY CALLOUT (labeled block with accent border) ── */
+.opp-callout{border-left:3px solid var(--accent);border-radius:0 var(--r-md) var(--r-md) 0;padding:1.25rem 1.5rem;margin:2rem 0;font-size:.9375rem;line-height:1.7;}
+.sec-group--cream .opp-callout,.sec-group--alt .opp-callout{background:var(--bg-alt);color:var(--text-sec);}
+.sec-group--dark .opp-callout{background:rgba(250,240,226,.04);color:rgba(250,240,226,.82);}
+.opp-callout strong{font-weight:600;}
+.sec-group--cream .opp-callout strong,.sec-group--alt .opp-callout strong{color:var(--charcoal);}
+.sec-group--dark .opp-callout strong{color:var(--bg);}
 
-  /* FOOTER */
-  .footer {
-    background: var(--bg);
-    text-align: center;
-    padding: 32px 48px;
-    border-top: 1px solid var(--border);
-    color: var(--text-muted);
-    font-size: 13px;
-  }
-  .footer a { color: var(--accent); text-decoration: none; }
+/* ── SCORE CARD VARIANT for word values (High, Strong, Full) ── */
+.score-card__value--word{font-size:clamp(1.5rem,2vw,1.875rem);font-weight:700;font-family:var(--f-b);font-style:normal;letter-spacing:-.01em;}
+.grade-legend{margin:1rem 0 2.5rem;}
+.grade-legend__label{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);margin-bottom:.5rem;}
+.grade-legend__items{display:flex;background:var(--white);border:1px solid rgba(44,51,64,.12);border-radius:10px;box-shadow:0 1px 4px rgba(44,51,64,.07);overflow:hidden;}
+.grade-legend__item{flex:1;padding:.875rem 1rem;border-right:1px solid rgba(44,51,64,.1);}
+.grade-legend__item:last-child{border-right:none;}
+.grade-legend__dots{font-size:.55rem;letter-spacing:.15em;line-height:1;margin-bottom:.3rem;}
+.grade-legend__grade{font-family:var(--f-n);font-size:.6875rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-bottom:.25rem;}
+.grade-legend__def{font-family:var(--f-b);font-size:.7rem;color:var(--text-muted);line-height:1.4;}
+.grade-legend__item--strong{border-top:3px solid #1B7A6E;}.grade-legend__item--strong .grade-legend__grade,.grade-legend__item--strong .grade-legend__dots{color:#1B7A6E;}
+.grade-legend__item--fair{border-top:3px solid #8B7200;}.grade-legend__item--fair .grade-legend__grade,.grade-legend__item--fair .grade-legend__dots{color:#8B7200;}
+.grade-legend__item--weak{border-top:3px solid #B85C00;}.grade-legend__item--weak .grade-legend__grade,.grade-legend__item--weak .grade-legend__dots{color:#B85C00;}
+.grade-legend__item--poor{border-top:3px solid #8B1A1A;}.grade-legend__item--poor .grade-legend__grade,.grade-legend__item--poor .grade-legend__dots{color:#8B1A1A;}
 
-  /* RESPONSIVE */
-  @media (max-width: 640px) {
-    .hero { padding: 40px 20px 60px; }
-    .hero-logo { width: 200px; }
-    .hero h1 { font-size: 32px; }
-    .hero .accent-word { font-size: 32px; }
-    .container { padding: 0 20px; }
-    .meta-bar { flex-direction: column; gap: 8px; }
-    .compare-grid { grid-template-columns: 1fr; }
-    .bar-row .bar-label { width: 100px; font-size: 11px; }
-    .score-grid { grid-template-columns: repeat(2, 1fr); }
-  }
+/* ── CALLOUT (secondary emphasis) ── */
+.callout{border-radius:var(--r-md);padding:1.25rem 1.5rem;margin:1.5rem 0;font-size:.9375rem;line-height:1.7;border-left:3px solid var(--accent);}
+.sec-group--cream .callout,.sec-group--alt .callout{background:var(--white);color:var(--text-sec);box-shadow:var(--sh-sm);}
+.sec-group--dark .callout{background:rgba(250,240,226,.04);color:rgba(250,240,226,.75);border-left-color:var(--accent);}
+.callout strong{font-weight:600;}
+.sec-group--cream .callout strong,.sec-group--alt .callout strong{color:var(--charcoal);}
+.sec-group--dark .callout strong{color:var(--bg);}
+
+/* ── PILL BUTTON (from website-reveal) ── */
+.btn-pill{position:relative;overflow:hidden;isolation:isolate;display:inline-flex;align-items:center;border-radius:var(--r-full);text-decoration:none;cursor:pointer;border:1.5px solid;font-family:var(--f-b);font-weight:600;}
+.btn-pill__fill{position:absolute;top:4px;bottom:4px;right:4px;border-radius:var(--r-full);transition:left .65s cubic-bezier(.22,1,.36,1);}
+.btn-pill__label{position:relative;z-index:1;}
+.btn-pill__arrow{position:relative;z-index:1;border-radius:50%;display:grid;place-items:center;flex-shrink:0;transition:transform .2s;}
+.btn-pill:hover .btn-pill__arrow{transform:translateX(3px);}
+.btn-pill--cream{background:#FAF0E2;color:var(--accent);border-color:#FAF0E2;padding:5px 5px 5px 26px;min-height:56px;font-size:1rem;}
+.btn-pill--cream .btn-pill__fill{background:var(--white);left:calc(100% - 48px);}
+.btn-pill--cream:hover .btn-pill__fill{left:4px;}
+.btn-pill--cream .btn-pill__label{color:var(--accent);}
+.btn-pill--cream .btn-pill__arrow{width:44px;height:44px;background:rgba(196,98,45,.14);color:var(--accent);margin-left:18px;font-size:1rem;}
+
+/* ── CTA BOX (closing section) ── */
+.cta-box{text-align:center;border-radius:var(--r-xl);padding:3rem 2.5rem;margin:2rem 0;}
+.sec-group--cream .cta-box,.sec-group--alt .cta-box{background:var(--bg-night);color:var(--bg);}
+.sec-group--dark .cta-box{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);}
+.cta-box__eyebrow{font-family:var(--f-n);font-size:.6875rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:1rem;}
+.cta-box__heading{font-family:var(--f-d);font-style:italic;font-size:clamp(1.75rem,3vw,2.5rem);font-weight:400;line-height:1.15;margin-bottom:.75rem;color:var(--bg);overflow-wrap:anywhere;}
+.sec-group--dark .cta-box__heading{color:var(--bg);}
+.cta-box__heading em{color:var(--accent);}
+.cta-box__sub{font-size:1.0625rem;color:rgba(250,240,226,.55);margin-bottom:2rem;max-width:500px;margin-left:auto;margin-right:auto;line-height:1.55;}
+.cta-box__secondary{font-size:.875rem;color:rgba(250,240,226,.45);margin-top:1.25rem;}
+.cta-box__secondary a{color:var(--sage);text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(143,175,138,.35);}
+
+/* ── FOOTER (standard Aspire doc footer) ── */
+.guide-footer{background:var(--charcoal);border-top:1px solid rgba(250,240,226,.08);padding:4rem 3rem 3rem;display:flex;flex-direction:column;align-items:center;gap:1.5rem;text-align:center;}
+.guide-footer__heading{font-family:var(--f-d);font-style:italic;font-size:1.375rem;color:rgba(250,240,226,.82);margin-bottom:.25rem;line-height:1.2;}
+.guide-footer__sub{font-family:var(--f-a);font-style:italic;font-size:.9375rem;color:rgba(250,240,226,.35);margin-bottom:.5rem;}
+.footer-contacts{display:grid;grid-template-columns:1fr 1fr;gap:1rem;width:100%;max-width:640px;}
+.footer-contact{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.07);border-left:3px solid var(--green);border-radius:var(--r-lg);padding:1.5rem 1.75rem;text-align:left;}
+.footer-contact__name{font-family:var(--f-b);font-weight:700;font-size:1.0625rem;color:rgba(250,240,226,.92);margin-bottom:.3rem;}
+.footer-contact__role{font-size:.9375rem;color:rgba(250,240,226,.38);margin-bottom:1rem;}
+.footer-contact__links{display:flex;flex-direction:column;gap:.3rem;}
+.footer-contact__links a{font-size:.9375rem;color:rgba(250,240,226,.65);text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(250,240,226,.25);transition:color .18s,text-decoration-color .18s;}
+.footer-contact__links a:hover{color:rgba(250,240,226,.92);text-decoration-color:rgba(250,240,226,.55);}
+.footer-social{width:100%;max-width:640px;text-align:center;}
+.footer-social__label{font-family:var(--f-b);font-size:.9375rem;font-weight:600;color:rgba(250,240,226,.4);margin-bottom:1rem;}
+.footer-social__icons{display:flex;gap:.875rem;justify-content:center;}
+.footer-social__link{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);display:grid;place-items:center;color:rgba(250,240,226,.5);transition:background .2s,color .2s;}
+.footer-social__link:hover{background:var(--accent);color:#fff;}
+.footer-social__link svg{width:16px;height:16px;fill:currentColor;}
+.guide-footer__tagline{font-family:var(--f-a);font-style:italic;font-size:.875rem;color:rgba(250,240,226,.22);letter-spacing:.01em;margin-top:.5rem;}
+
+/* ── PLAN GRID (2-col border-divided grid — legacy, kept for backward compat) ── */
+.plan-grid{display:grid;grid-template-columns:1fr 1fr;margin:2rem -2.5rem 0;}
+.plan-item{padding:2.5rem 2.5rem;border-top:1px solid var(--border);display:flex;flex-direction:column;gap:.625rem;}
+.plan-item:nth-child(odd){border-right:1px solid var(--border);}
+.plan-item__num{font-family:var(--f-n);font-size:.6875rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);line-height:1;margin-bottom:.375rem;}
+.plan-item__title{font-family:var(--f-d);font-style:normal;font-size:clamp(1.375rem,2.2vw,1.875rem);font-weight:400;line-height:1.15;margin:0;}
+.sec-group--cream .plan-item__title,.sec-group--alt .plan-item__title{color:var(--charcoal);}
+.sec-group--dark .plan-item__title{color:var(--bg);}
+.plan-item__desc{font-size:.9375rem;line-height:1.72;flex:1;}
+.sec-group--cream .plan-item__desc,.sec-group--alt .plan-item__desc{color:var(--text-sec);}
+.sec-group--dark .plan-item__desc{color:rgba(250,240,226,.75);}
+.plan-item__tag{margin-top:.875rem;}
+.tag--outline{background:transparent;border:1.5px solid rgba(196,98,45,.45);color:var(--accent-dk);}
+.sec-group--dark .tag--outline{border-color:rgba(196,98,45,.45);color:#E09360;}
+
+/* ── PHASE ROADMAP (Quick Win / Month 1 / Month 2+ — "Here's What We'd Actually Do") ── */
+.phase-roadmap{margin:2rem 0 0;display:flex;flex-direction:column;gap:1.75rem;}
+.phase-header{display:flex;align-items:center;gap:.75rem;margin-bottom:.875rem;}
+.phase-label{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:4px 14px;border-radius:var(--r-full);white-space:nowrap;}
+.phase-label--quick{background:rgba(196,98,45,.1);color:var(--accent-dk);}
+.phase-label--m1{background:rgba(74,123,90,.1);color:#3D6B4A;}
+.phase-label--m2{background:rgba(44,51,64,.07);color:var(--text-sec);}
+.phase-divider{flex:1;height:1px;background:var(--border-light);}
+.phase-note{font-family:var(--f-b);font-size:.75rem;font-weight:600;color:var(--text-sec);white-space:nowrap;background:var(--bg-alt);border:1px solid var(--border);border-radius:var(--r-full);padding:3px 12px;}
+.phase-items{display:grid;grid-template-columns:1fr;gap:.625rem;}
+.phase-items--grid{grid-template-columns:1fr 1fr;}
+.phase-item{padding:1.25rem 1.5rem;border-radius:var(--r-lg);background:var(--white);border:1px solid var(--border-light);display:flex;flex-direction:column;gap:.5rem;}
+.phase-item__title{font-family:var(--f-b);font-weight:700;font-size:.9375rem;color:var(--charcoal);line-height:1.25;margin:0;}
+.phase-item__desc{font-size:.875rem;color:var(--text-sec);line-height:1.65;margin:0;flex:1;}
+
+/* ── TEAM CARDS (Why Aspire — Option A) ── */
+.team-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:2.5rem;}
+.team-card{border-radius:var(--r-xl);overflow:hidden;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);}
+.team-card__photo{aspect-ratio:3/4;overflow:hidden;position:relative;}
+.team-card__photo img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;transition:transform .5s cubic-bezier(.22,1,.36,1);}
+.team-card:hover .team-card__photo img{transform:scale(1.04);}
+.team-card__tint{position:absolute;inset:0;background:linear-gradient(to bottom,transparent 30%,rgba(20,24,32,.55) 65%,rgba(20,24,32,.92) 100%);}
+.team-card__overlay{position:absolute;bottom:0;left:0;right:0;padding:1.5rem 1.75rem 1.75rem;display:flex;flex-direction:column;gap:.375rem;}
+.team-card__socials{position:absolute;top:1.25rem;right:1.25rem;display:flex;gap:.625rem;}
+.team-card__social-btn{width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,.35);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.15);display:grid;place-items:center;color:rgba(250,240,226,.75);transition:background .2s,color .2s;}
+.team-card__social-btn:hover{background:var(--accent);color:#fff;border-color:var(--accent);}
+.team-card__social-btn svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+.team-card__role{font-family:var(--f-b);font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.55);margin:0;}
+.team-card__name{font-family:var(--f-d);font-size:clamp(28px,3.5vw,48px);font-weight:400;line-height:1;letter-spacing:-.02em;color:#fff;margin:0;}
+.team-card__body{padding:1.5rem 1.75rem 1.875rem;}
+.team-card__bio{font-size:.9375rem;line-height:1.65;color:rgba(250,240,226,.6);}
+.team-card__links{display:flex;flex-direction:column;gap:.3rem;margin-top:1.125rem;}
+.team-card__links a{font-size:.875rem;color:rgba(250,240,226,.5);text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(250,240,226,.2);}
+.team-promise{background:rgba(196,98,45,.08);border:1px solid rgba(196,98,45,.15);border-left:3px solid var(--accent);border-radius:0 var(--r-lg) var(--r-lg) 0;padding:1.5rem 2rem;margin-bottom:2.5rem;}
+.team-promise__text{font-family:var(--f-a);font-style:italic;font-size:1.125rem;color:rgba(250,240,226,.82);line-height:1.6;}
+.team-promise__text strong{font-style:normal;font-weight:600;color:var(--bg);}
+.why-values{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.07);border-radius:var(--r-xl);overflow:hidden;margin:2rem 0;}
+.why-val{background:rgba(255,255,255,.03);padding:1.625rem 1.5rem;display:flex;flex-direction:column;gap:.5rem;}
+.why-val__icon{width:34px;height:34px;border-radius:var(--r-md);background:rgba(196,98,45,.14);display:grid;place-items:center;flex-shrink:0;}
+.why-val__icon .material-symbols-outlined{font-size:17px;color:#E09360;}
+.why-val__label{font-family:var(--f-b);font-weight:700;font-size:.9375rem;color:rgba(250,240,226,.88);line-height:1.2;}
+.why-val__desc{font-size:.875rem;color:rgba(250,240,226,.48);line-height:1.55;margin:0;}
+.why-reviews{margin-top:2.5rem;}
+.why-reviews__label{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(250,240,226,.25);margin-bottom:1rem;}
+
+/* ── CTA STATS ROW ── */
+.cta-stats{display:flex;align-items:center;justify-content:center;gap:1.5rem;margin-bottom:2rem;flex-wrap:wrap;}
+.cta-stat{text-align:center;min-width:0;}
+.cta-stat--divider{width:1px;height:32px;background:rgba(250,240,226,.15);flex-shrink:0;}
+.cta-stat__num{display:block;font-family:var(--f-d);font-style:italic;font-size:1.5rem;color:var(--bg);line-height:1;margin-bottom:.25rem;}
+.cta-stat__label{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(250,240,226,.35);}
+
+/* ── BEYOND STRIP (compact 4-cell) ── */
+.beyond-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.07);border-radius:var(--r-xl);overflow:hidden;margin:1.5rem 0;}
+.beyond-item{background:rgba(255,255,255,.025);padding:1.75rem 1.5rem;display:flex;flex-direction:column;gap:.625rem;}
+.beyond-item__ico{width:36px;height:36px;border-radius:var(--r-md);background:rgba(196,98,45,.15);display:grid;place-items:center;flex-shrink:0;}
+.beyond-item__ico .material-symbols-outlined{font-size:18px;color:#E09360;}
+.beyond-item__label{font-family:var(--f-b);font-weight:700;font-size:.9375rem;color:var(--bg);line-height:1.2;}
+.beyond-item__desc{font-size:.875rem;color:rgba(250,240,226,.52);line-height:1.55;}
+
+/* ── CTA PROCESS LINE ── */
+.cta-process{font-size:.875rem;color:rgba(250,240,226,.38);margin-bottom:1.75rem;letter-spacing:.01em;}
+.cta-process strong{color:rgba(250,240,226,.65);font-weight:600;}
+
+/* ── CTA STEPS (1 / 2 / 3 numbered flow) ── */
+.cta-steps{display:flex;flex-direction:column;gap:.625rem;margin:1.5rem auto 2rem;max-width:400px;text-align:left;}
+.cta-step{display:flex;gap:.875rem;align-items:flex-start;}
+.cta-step__num{width:26px;height:26px;border-radius:50%;background:rgba(196,98,45,.2);border:1px solid rgba(196,98,45,.35);color:#E09360;font-family:var(--f-n);font-size:.5625rem;font-weight:700;display:grid;place-items:center;flex-shrink:0;margin-top:.175rem;}
+.cta-step__label{display:block;font-family:var(--f-b);font-weight:700;font-size:.9375rem;color:var(--bg);line-height:1.3;margin-bottom:.2rem;}
+.cta-step__desc{font-size:.8125rem;color:rgba(250,240,226,.42);line-height:1.5;margin:0;}
+
+/* ── OVERFLOW FIX — long placeholder strings ── */
+.funnel-step__val,.funnel-result__amt,.revenue-box__amt,.gap-now__num,.gap-after__num,.range-hero__num,.meaning-anchor__num,.score-card__value,.meaning-item__num,.meaning-close__aside-num{overflow-wrap:anywhere;word-break:break-word;}
+.funnel-step,.gap-metric,.meaning-item,.build-item__body{min-width:0;overflow:hidden;}
+
+/* ── HERO OPPORTUNITY CARD ── */
+.hero__opp-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:var(--r-xl);padding:2.5rem 2rem;text-align:center;display:flex;flex-direction:column;align-items:center;gap:.75rem;}
+.hero__opp-label{font-family:var(--f-n);font-size:.625rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(250,240,226,.32);}
+.hero__opp-num{font-family:var(--f-d);font-style:italic;font-size:clamp(2.5rem,5vw,3.75rem);font-weight:400;line-height:1;color:var(--bg);overflow-wrap:anywhere;}
+.hero__opp-denom{font-family:var(--f-n);font-size:.625rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(250,240,226,.22);margin-top:-.25rem;}
+.hero__opp-badge{font-family:var(--f-b);font-size:.8125rem;font-weight:600;padding:5px 16px;border-radius:var(--r-full);background:rgba(196,98,45,.15);color:#E09360;}
+.hero__opp-badge--high{background:rgba(126,200,150,.12);color:#7EC896;}
+.hero__opp-desc{font-family:var(--f-b);font-size:.875rem;color:rgba(250,240,226,.35);line-height:1.55;max-width:220px;text-align:center;}
+
+/* ── QUICK SUMMARY (who / what / status 3-col strip) ── */
+.quick-summary{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--r-xl);overflow:hidden;margin:0 0 2.5rem;}
+.quick-summary__item{background:var(--white);padding:1.5rem 1.75rem;}
+.quick-summary__label{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:.625rem;}
+.quick-summary__text{font-size:.9rem;color:var(--text-sec);line-height:1.65;}
+
+/* ── WIN CARDS (What's Working) ── */
+.win-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin:1rem 0 2.5rem;}
+.win-card{display:flex;gap:.875rem;padding:1.125rem 1.25rem;border-radius:var(--r-md);background:var(--white);border:1px solid rgba(74,123,90,.18);align-items:flex-start;}
+.win-card__ico{width:26px;height:26px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;flex-shrink:0;font-size:.75rem;font-weight:700;font-family:var(--f-b);margin-top:.1rem;}
+.win-card__body{flex:1;min-width:0;}
+.win-card__label{display:block;font-family:var(--f-b);font-weight:700;font-size:.9375rem;color:var(--charcoal);margin-bottom:.25rem;line-height:1.25;}
+.win-card__desc{font-size:.875rem;color:var(--text-sec);line-height:1.55;margin:0;}
+
+/* ── GAP CARDS (Where the Gaps Are) ── */
+.gap-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin:1rem 0 2rem;}
+.gap-card{display:flex;gap:.875rem;padding:1.125rem 1.25rem;border-radius:var(--r-md);background:rgba(196,98,45,.04);border:1px solid rgba(196,98,45,.18);align-items:flex-start;}
+.gap-card__ico{width:26px;height:26px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;flex-shrink:0;font-size:.875rem;font-weight:700;font-family:var(--f-b);margin-top:.1rem;}
+.gap-card__body{flex:1;min-width:0;}
+.gap-card__label{display:block;font-family:var(--f-b);font-weight:700;font-size:.9375rem;color:var(--charcoal);margin-bottom:.25rem;line-height:1.25;}
+.gap-card__desc{font-size:.875rem;color:var(--text-sec);line-height:1.55;margin:0;}
+
+/* ── KEYWORD TABLE (ranked scannable list) ── */
+.kw-table{display:flex;flex-direction:column;border:1px solid rgba(255,255,255,.08);border-radius:var(--r-lg);overflow:hidden;}
+.kw-row{display:grid;grid-template-columns:36px 1fr auto 90px;align-items:center;padding:.875rem 1.25rem;border-bottom:1px solid rgba(255,255,255,.06);gap:.875rem;}
+.kw-row:last-child{border-bottom:none;}
+.kw-row--hot{background:rgba(196,98,45,.08);}
+.kw-row__rank{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.08em;color:rgba(250,240,226,.28);}
+.kw-row__term{font-size:.9375rem;font-weight:500;color:rgba(250,240,226,.85);}
+.kw-row__vol{font-family:var(--f-n);font-size:.875rem;font-weight:700;color:var(--accent);text-align:right;white-space:nowrap;}
+.kw-row__tag{display:flex;justify-content:flex-end;}
+
+/* ── AI READINESS SCORE ROWS ── */
+.ai-score{display:flex;flex-direction:column;border:1px solid rgba(255,255,255,.08);border-radius:var(--r-lg);overflow:hidden;margin:1.25rem 0 2rem;}
+.ai-score__row{display:flex;align-items:flex-start;gap:1rem;padding:1rem 1.25rem;border-bottom:1px solid rgba(255,255,255,.06);}
+.ai-score__row:last-child{border-bottom:none;}
+.ai-score__status{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;flex-shrink:0;font-size:.75rem;font-weight:700;font-family:var(--f-b);margin-top:.1rem;}
+.ai-score__status--good{background:rgba(74,123,90,.2);color:#7EC896;}
+.ai-score__status--warn{background:rgba(184,134,11,.15);color:#D4A832;}
+.ai-score__status--bad{background:rgba(196,98,45,.15);color:#E09360;}
+.ai-score__body{flex:1;min-width:0;}
+.ai-score__label{display:block;font-family:var(--f-b);font-weight:700;font-size:.9375rem;color:rgba(250,240,226,.85);margin-bottom:.2rem;}
+.ai-score__note{font-size:.875rem;color:rgba(250,240,226,.45);line-height:1.55;}
+/* ── AI GAP/SOLVE (Option B — Split Cards) ── */
+.strength-strip{display:flex;gap:.625rem;flex-wrap:wrap;margin-bottom:1.5rem;}
+.strength-pill{display:flex;align-items:center;gap:.5rem;background:rgba(74,123,90,.1);border:1px solid rgba(74,123,90,.25);border-radius:var(--r-full);padding:.35rem .875rem .35rem .6rem;}
+.strength-pill__icon{width:18px;height:18px;border-radius:50%;background:rgba(74,123,90,.3);display:flex;align-items:center;justify-content:center;font-size:.65rem;flex-shrink:0;color:#7EC896;}
+.strength-pill__text{font-family:var(--f-b);font-size:.8125rem;font-weight:600;color:rgba(250,240,226,.75);}
+.split-cards-wrap{background:var(--bg);border-radius:var(--r-xl);padding:1.5rem;margin:1.25rem 0 1.5rem;}
+.split-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:0 .875rem;}
+.split-card{display:grid;grid-template-rows:subgrid;grid-row:span 3;border-radius:var(--r-lg);overflow:hidden;border:1px solid rgba(196,98,45,.15);}
+.split-card__gap{background:rgba(196,98,45,.05);border-bottom:1px solid rgba(196,98,45,.12);padding:1.75rem 1.5rem;}
+.split-card__divider{display:flex;align-items:center;justify-content:center;padding:.55rem 1rem;background:rgba(196,98,45,.04);gap:.5rem;}
+.split-card__divider-line{flex:1;height:1px;background:rgba(196,98,45,.18);}
+.split-card__divider-badge{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);background:rgba(196,98,45,.1);border:1px solid rgba(196,98,45,.22);padding:.25rem .6rem;border-radius:var(--r-full);white-space:nowrap;}
+.split-card__solve{background:var(--white);padding:1.75rem 1.5rem;}
+.split-card__gap-icon{width:28px;height:28px;border-radius:50%;background:rgba(196,98,45,.12);border:1px solid rgba(196,98,45,.25);display:flex;align-items:center;justify-content:center;font-size:.8125rem;margin-bottom:.875rem;color:var(--accent);}
+.split-card__gap-title{font-family:var(--f-b);font-size:.9375rem;font-weight:700;color:var(--charcoal);margin-bottom:.375rem;line-height:1.3;}
+.split-card__gap-copy{font-size:.875rem;color:var(--text-sec);line-height:1.6;}
+.split-card__solve-num{font-family:var(--f-n);font-size:1.125rem;font-weight:900;color:var(--accent);line-height:1;margin-bottom:.5rem;letter-spacing:-.02em;}
+.split-card__solve-title{font-family:var(--f-b);font-size:.9375rem;font-weight:700;color:var(--charcoal);margin-bottom:.375rem;line-height:1.3;}
+.split-card__solve-copy{font-size:.875rem;color:var(--text-sec);line-height:1.6;}
+.ai-fix-eyebrow{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(250,240,226,.28);margin-bottom:.75rem;}
+.ai-aspire-edge{font-family:var(--f-b);font-size:.9375rem;font-weight:600;color:var(--accent);border-left:2px solid var(--accent);padding:.5rem 0 .5rem 1rem;margin:.25rem 0 0;line-height:1.5;}
+.search-compare{display:grid;grid-template-columns:1fr 1fr;border-radius:var(--r-lg);overflow:hidden;margin:.875rem 0 1.25rem;border:1px solid rgba(250,240,226,.08);}
+.search-compare__col{padding:1.25rem 1.5rem;}
+.search-compare__col--google{background:rgba(250,240,226,.04);border-right:1px solid rgba(250,240,226,.08);}
+.search-compare__col--ai{background:rgba(196,98,45,.1);}
+.search-compare__label{font-family:var(--f-b);font-size:.875rem;font-weight:700;color:rgba(250,240,226,.55);margin-bottom:.875rem;}
+.search-compare__label--ai{color:var(--accent);}
+.search-compare__rows{display:flex;flex-direction:column;gap:.625rem;}
+.search-compare__row{display:flex;align-items:flex-start;gap:.625rem;}
+.search-compare__dot{width:5px;height:5px;border-radius:50%;background:rgba(250,240,226,.2);margin-top:.425rem;flex-shrink:0;}
+.search-compare__dot--ai{background:var(--accent);}
+.search-compare__text{font-size:.875rem;color:rgba(250,240,226,.5);line-height:1.55;}
+.search-compare__text--ai{color:rgba(250,240,226,.85);}
+.search-bridge{font-size:.8125rem;color:rgba(250,240,226,.45);line-height:1.65;margin:0 0 .5rem;}
+.search-compare__footer{grid-column:1/-1;padding:1.125rem 1.5rem;background:rgba(250,240,226,.06);border-top:1px solid rgba(250,240,226,.08);font-family:var(--f-b);font-size:1rem;font-weight:500;color:rgba(250,240,226,.82);line-height:1.6;text-align:center;}
+.search-gap-stmt{font-family:var(--f-b);font-size:1.25rem;font-weight:700;color:rgba(250,240,226,.92);line-height:1.35;margin:0 0 2rem;}
+@media(max-width:600px){.split-cards-wrap{padding:1rem;}.split-cards{grid-template-columns:1fr;gap:1rem;}.split-card{grid-template-rows:auto auto auto;grid-row:span 1;}}
+
+/* ── QUICK WINS (3-col action grid, dark bg) ── */
+.quick-wins{margin:2rem 0;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:var(--r-xl);padding:1.75rem 2rem 1.5rem;}
+.quick-wins__head{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:1.25rem;}
+.quick-wins__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.875rem;margin-bottom:1.25rem;}
+.quick-wins__item{display:flex;flex-direction:column;gap:.5rem;padding:1.125rem 1.125rem 1.25rem;background:rgba(255,255,255,.04);border-radius:var(--r-md);border:1px solid rgba(255,255,255,.07);}
+.quick-wins__num{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(196,98,45,.6);}
+.quick-wins__title{font-family:var(--f-b);font-weight:700;font-size:.9375rem;color:rgba(250,240,226,.88);}
+.quick-wins__desc{font-size:.875rem;color:rgba(250,240,226,.42);line-height:1.6;margin:0;flex:1;}
+.quick-wins__note{font-size:.8125rem;color:rgba(250,240,226,.35);line-height:1.55;padding-top:1.125rem;border-top:1px solid rgba(255,255,255,.06);}
+
+/* ── FUNNEL ASSUMPTIONS (conservative by design) ── */
+.funnel-assumptions{border-radius:var(--r-lg);background:var(--bg-alt);overflow:hidden;}
+.funnel-assumptions__head{font-family:var(--f-b);font-size:.9375rem;font-weight:600;color:var(--charcoal);padding:1.25rem 1.5rem;border-bottom:1px solid var(--border);}
+.funnel-assumptions__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;}
+.funnel-assumptions__item{padding:1.375rem 1.5rem;border-right:1px solid var(--border);display:flex;flex-direction:column;gap:.375rem;}
+.funnel-assumptions__item:last-child{border-right:none;}
+.funnel-assumptions__val{font-family:var(--f-d);font-style:italic;font-size:clamp(1.75rem,2.5vw,2.25rem);color:var(--accent);line-height:1;}
+.funnel-assumptions__label{font-size:.875rem;color:var(--text-muted);line-height:1.5;}
+.funnel-assumptions__footer{font-size:.875rem;color:var(--text-muted);line-height:1.55;padding:.875rem 1.5rem;border-top:1px solid var(--border);}
+
+/* ── COMPARE TABLE (matrix view) ── */
+.compare-table{border:1px solid var(--border);border-radius:var(--r-xl);overflow:hidden;margin:1.5rem 0;}
+.compare-table__head,.compare-table__row{display:grid;grid-template-columns:150px repeat(3,1fr);}
+.compare-table__corner{background:var(--bg-alt);border-right:1px solid var(--border);padding:.875rem 1.25rem;}
+.compare-table__col-head{padding:1.125rem 1.25rem .75rem;font-family:var(--f-d);font-style:italic;font-size:1.0625rem;font-weight:400;color:var(--charcoal);border-left:1px solid var(--border);background:var(--bg-alt);}
+.compare-table__col-head--you{background:rgba(196,98,45,.06);position:relative;}
+.compare-table__col-head--you::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--accent);}
+.compare-table__label{padding:.75rem 1.25rem;font-size:.875rem;font-weight:500;color:var(--text-muted);display:flex;align-items:center;background:var(--bg-alt);border-top:1px solid var(--border);border-right:1px solid var(--border);}
+.compare-table__cell{padding:.75rem 1.25rem;font-size:.875rem;font-weight:600;border-left:1px solid var(--border);border-top:1px solid var(--border);display:flex;align-items:center;background:var(--white);}
+.compare-table__cell--you{background:rgba(196,98,45,.04);}
+.compare-table__cell--good{color:var(--green);}
+.compare-table__cell--mid{color:#B8860B;}
+.compare-table__cell--low{color:var(--accent);}
+
+/* ── RESPONSIVE ── */
+@media(max-width:820px){
+  .team-grid{grid-template-columns:1fr;}
+  .beyond-strip{grid-template-columns:repeat(2,1fr);}
+  .hero__inner{grid-template-columns:1fr;gap:2.5rem;padding:4rem 1.5rem 4.5rem;}
+  .hero__meta{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem 2rem;padding:2rem 0 0;border-left:none;border-top:1px solid rgba(255,255,255,.1);}
+  .sec-group{padding:3.5rem 1.5rem;}
+  .sec-head{grid-template-columns:1fr;row-gap:.25rem;}
+  .sec-head__num{font-size:2.5rem;}
+  .opp-list{padding-left:0;}
+  .opp-row{grid-template-columns:52px 1fr;column-gap:1rem;padding:1.5rem 0;}
+  .opp-row__num{font-size:1.75rem;}
+  .plan-grid{margin-left:-1.5rem;margin-right:-1.5rem;}
+  .plan-item{padding:1.75rem 1.5rem;}
+  .compare-grid{grid-template-columns:1fr;}
+  .bar-row__label{width:100px;font-size:.75rem;}
+  .score-grid{grid-template-columns:repeat(2,1fr);}
+  .kw-grid{grid-template-columns:1fr;}
+  .cta-box,.revenue-box{padding:2.25rem 1.5rem;}
+  .quick-summary{grid-template-columns:1fr;}
+  .win-grid,.gap-grid{grid-template-columns:1fr;}
+  .kw-row{grid-template-columns:28px 1fr auto;}.kw-row__tag{display:none;}
+  .quick-wins__grid{grid-template-columns:1fr;}
+  .funnel-assumptions__grid{grid-template-columns:1fr 1fr;}.funnel-assumptions__item:nth-child(2){border-right:none;}.funnel-assumptions__item:nth-child(3){border-top:1px solid var(--border);}
+  .compare-table{overflow-x:auto;}.compare-table__head,.compare-table__row{min-width:580px;}
+}
+@media(max-width:560px){
+  .plan-grid{grid-template-columns:1fr;margin-left:-1.5rem;margin-right:-1.5rem;}
+  .plan-item:nth-child(odd){border-right:none;}
+  .phase-items--grid{grid-template-columns:1fr;}
+  .why-values{grid-template-columns:1fr;}
+}
+
+@media print{
+  body{background:#fff;}
+  .topbar{position:static;}
+  .sec-group--dark{background:#fff!important;color:var(--charcoal)!important;}
+  .sec-group--dark *{color:var(--charcoal)!important;background-color:transparent!important;}
+}
 </style>
-
-<style>
-  .review-quote {
-    background: var(--white);
-    border-radius: 16px;
-    padding: 24px 28px;
-    margin: 16px 0;
-    border: 1px solid var(--border-light);
-    position: relative;
-  }
-  .review-quote::before {
-    content: '“';
-    font-family: var(--font-accent);
-    font-size: 48px;
-    color: var(--accent);
-    opacity: 0.3;
-    position: absolute;
-    top: 8px;
-    left: 16px;
-    line-height: 1;
-  }
-  .review-quote p {
-    font-style: italic;
-    color: var(--text-sec);
-    margin-bottom: 8px;
-    padding-left: 20px;
-  }
-  .review-quote .attribution {
-    font-size: 12px;
-    color: var(--text-muted);
-    font-weight: 600;
-    padding-left: 20px;
-  }
-  .icon-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 16px;
-    margin: 24px 0;
-  }
-  .icon-card {
-    background: var(--white);
-    border: 1px solid var(--border-light);
-    border-radius: 16px;
-    padding: 24px 20px;
-    text-align: center;
-    transition: box-shadow 0.3s, transform 0.3s;
-  }
-  .icon-card:hover {
-    box-shadow: 0 8px 32px rgba(0,0,0,0.06);
-    transform: translateY(-2px);
-  }
-  .icon-card .icon-emoji { font-size: 32px; margin-bottom: 12px; }
-  .icon-card h4 {
-    font-family: var(--font-head);
-    font-size: 14px;
-    font-weight: 700;
-    color: var(--text);
-    margin-bottom: 6px;
-  }
-  .icon-card p { font-size: 13px; color: var(--text-sec); margin-bottom: 0; }
-  .page-header .client-name {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 22px;
-    color: #2C3340;
-  }
-</style>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
 
-<!-- PAGE HEADER -->
-<div class="page-header">
-  <div class="page-header-inner" style="justify-content:center">
-    <img class="aspire-logo" src="/assets/aspire-logo.svg" alt="Aspire Digital">
-  </div>
-</div>
+<!-- TOPBAR -->
+<header class="topbar">
+  <img class="topbar__logo" src="./aspire-logo.svg" alt="Aspire Digital">
+  <div class="topbar__sep"></div>
+  <span class="topbar__label">Digital Growth Brief</span>
+  <span class="topbar__badge">Prepared for The Modern Maid</span>
+</header>
 
 <!-- HERO -->
-<div class="hero">
-  <h1>THE MODERN MAID</h1>
-  <div class="sub">Your business deserves a website that</div>
-  <div class="accent-word">shines.</div>
-  <div class="body-text">
-    Twenty-two years of trust, eco-friendly values, and community heart &mdash; your online presence should reflect the care you bring to every home you clean.
+<section class="hero">
+  <div class="hero__inner">
+    <div class="hero__top">
+      <p class="hero__eyebrow"><span class="hero__eyebrow-dot"></span>Digital Growth Brief · April 25, 2026</p>
+      <h1 class="hero__h1">The Modern Maid<br>a Delaware staple ready to <em>shine</em> online</h1>
+    </div>
+    <div class="hero__text">
+      <p class="hero__sub">22 years of trust and 407 five-star reviews — your digital presence should match the care you bring to every home you clean.</p>
+      <dl class="hero__meta">
+        <div class="hero__meta-item"><dt>Prepared For</dt><dd class="fill">The Modern Maid</dd></div>
+        <div class="hero__meta-item"><dt>Date</dt><dd>April 25, 2026</dd></div>
+        <div class="hero__meta-item"><dt>Prepared By</dt><dd><a href="https://madebyaspire.com" target="_blank">Aspire Digital</a></dd></div>
+      </dl>
+    </div>
+    <div class="hero__opp-card">
+      <p class="hero__opp-label">Revenue Opportunity</p>
+      <p class="hero__opp-num">$36K–$72K</p>
+      <p class="hero__opp-denom">projected annual lift</p>
+      <span class="hero__opp-badge hero__opp-badge--high">High Opportunity</span>
+      <p class="hero__opp-desc">Replace the aging Joomla site with a modern, conversion-focused build that captures the leads your reputation already earns.</p>
+    </div>
   </div>
-</div>
+</section>
+<div class="accent-stripe"></div>
 
-<!-- ARC DIVIDER -->
-<div class="hero-arc">
-  <svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0,120 C480,0 960,0 1440,120 L1440,120 L0,120 Z" fill="#FAF0E2"/>
-  </svg>
-</div>
 
-<!-- MAIN CONTENT -->
-<div class="container">
+<!-- ═══════════════════════════════════════════════════════════
+     01 · THE HONEST PICTURE
+═══════════════════════════════════════════════════════════ -->
+<section class="sec-group sec-group--cream">
+  <div class="sec-group__in">
+    <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><circle cx="6" cy="6" r="3.5"/><circle cx="6" cy="6" r="1" fill="#fff" stroke="none"/></svg></span><span class="sec-badge__label">The Starting Point</span></div>
+    <div class="sec-head">
+      <span class="sec-head__num">01</span>
+      <div class="sec-head__body">
+        <h2 class="sec-head__title">The Honest <em>Picture</em></h2>
+        <p class="sec-head__sub">Who you are, what you've built, how you show up today.</p>
+      </div>
+    </div>
+    <div class="quick-summary">
+      <div class="quick-summary__item">
+        <p class="quick-summary__label">Who They Are</p>
+        <p class="quick-summary__text">Amanda Matthews-Owens founded The Modern Maid in 2003 with a trunk full of supplies and a determination to do home cleaning the right way. Twenty-two years later, she runs a vetted team out of an office on historic Winter Street in downtown Delaware, OH.</p>
+      </div>
+      <div class="quick-summary__item">
+        <p class="quick-summary__label">What They've Built</p>
+        <p class="quick-summary__text">407 reviews at a 4.9-star average, multiple Reader's Choice Awards, and a Cleaning for a Reason partnership that donates free non-toxic cleans to two cancer patient homes every month. Eco-first, eldercare-forward, deeply local — and recently expanded with an Elder Check-In &amp; Companionship offering no franchise touches.</p>
+      </div>
+      <div class="quick-summary__item">
+        <p class="quick-summary__label">How They Show Up</p>
+        <p class="quick-summary__text">A Joomla + YOOtheme site that gets the basics done but doesn't reflect the quality of the service. No online booking, no surfaced trust signals, generic page titles, and no Instagram presence — meanwhile cleaning content is one of the platform's highest-performing categories.</p>
+      </div>
+    </div>
 
-  <div class="meta-bar">
-    <span><strong>Prepared for:</strong> Amanda Owens, The Modern Maid</span>
-    <span><strong>Date:</strong> March 26, 2026</span>
-    <span><strong>By:</strong> <a href="https://madebyaspire.com" target="_blank">madebyaspire.com</a></span>
-  </div>
-
-  <!-- 01: THE HONEST PICTURE -->
-  <section>
-    <h2><span class="number">01</span>The Honest Picture</h2>
-
-    <p>The Modern Maid isn't just a cleaning service &mdash; it's a Delaware, Ohio institution. <strong>Amanda Owens founded this company in 2003, starting with nothing more than determination and a trunk full of supplies.</strong> More than two decades later, The Modern Maid operates out of a dedicated office on historic Winter Street, employs a team of vetted professionals, and has earned the kind of reputation that money can't buy.</p>
-
-    <p>What sets The Modern Maid apart from the franchises and fly-by-night operators in the Delaware County market is <strong>authenticity</strong>. Amanda built this business on old-fashioned values learned from her parents and grandparents &mdash; the same parents she lost to cancer in 2005 and 2011. That personal loss drove her to partner with <strong>Cleaning for a Reason</strong>, donating free non-toxic cleaning to two cancer patient homes every month. That's not a marketing play. That's character.</p>
-
-    <p>The numbers back up the reputation. With <strong>407 reviews and a 4.9-star rating</strong> across platforms, The Modern Maid consistently ranks among the top cleaning services in Delaware County. Customers rave about the team's attention to detail, their eco-friendly Norwex products, and a personal touch that makes clients feel like family &mdash; not just another account number. Multiple Reader's Choice Awards confirm what the reviews already show.</p>
-
-    <p>And then there's the innovation. While most cleaning companies stick to the basics, The Modern Maid recently launched an <strong>Elder Check-In &amp; Companionship Service</strong> &mdash; blending light housework with genuine human connection for seniors. That kind of forward thinking shows a business owner who's paying attention to what her community actually needs.</p>
-
+    <!-- BUSINESS-AT-A-GLANCE STAT CARDS -->
+    <h3 class="sub-head">At a glance</h3>
     <div class="score-grid">
       <div class="score-card">
-        <div class="label">Years in Business</div>
-        <div class="value">22+</div>
-        <div class="note">Founded 2003</div>
+        <div class="score-card__label">Years in Business</div>
+        <div class="score-card__value">22+</div>
+        <div class="score-card__note">Founded 2003</div>
       </div>
       <div class="score-card">
-        <div class="label">Review Rating</div>
-        <div class="value">4.9</div>
-        <div class="note">407 reviews</div>
+        <div class="score-card__label">Review Rating</div>
+        <div class="score-card__value">4.9★</div>
+        <div class="score-card__note">407 reviews</div>
       </div>
       <div class="score-card">
-        <div class="label">Facebook</div>
-        <div class="value">100%</div>
-        <div class="note">Recommend rate</div>
+        <div class="score-card__label">Charity Cleans</div>
+        <div class="score-card__value">24/yr</div>
+        <div class="score-card__note">Cleaning for a Reason</div>
       </div>
       <div class="score-card">
-        <div class="label">Service Lines</div>
-        <div class="value">7</div>
-        <div class="note">Incl. companionship</div>
+        <div class="score-card__label">Service Lines</div>
+        <div class="score-card__value">7</div>
+        <div class="score-card__note">Incl. Elder Companionship</div>
       </div>
     </div>
 
-    <div class="review-quote">
-      <p>The Modern Maid offers customizable cleaning plans and a la carte options. The glass patio door was so clean that I thought it was open!!! They were extremely nice and pet friendly, thorough and easy to work with!</p>
-      <div class="attribution">&mdash; Verified Customer, BirdEye</div>
-    </div>
-
-    <div class="review-quote">
-      <p>I appreciate Amanda and her crew squeezing me in at the last minute when my other cleaner canceled the day before my whole family was coming from England for my wedding! Amanda personally handled a detail and even sent me a gift card for our wedding!</p>
-      <div class="attribution">&mdash; Verified Customer, BirdEye</div>
-    </div>
-
-    <div class="review-quote">
-      <p>WOW are we impressed (and we are picky)! The team not only did a thorough job, they were also friendly and fun. Most importantly they use environmentally safe cleaning products. Insured and bonded, trustworthy and give you peace of mind.</p>
-      <div class="attribution">&mdash; Verified Customer, BirdEye</div>
-    </div>
-  </section>
-
-  <hr class="divider">
-
-  <!-- 02: YOUR SCORECARD -->
-  <section>
-    <h2><span class="number">02</span>Your Digital <em>Scorecard</em></h2>
-
-    <p>Your reputation is outstanding. Your digital presence? It's doing the job, but it's not doing <em>you</em> justice. Here's an honest look at where your online presence stands today &mdash; what's working, what's holding you back, and where the easy wins are hiding.</p>
-
-    <h3>The Overview</h3>
-
-    <div class="bar-chart">
-      <div class="bar-row">
-        <div class="bar-label">Reputation</div>
-        <div class="bar-track"><div class="bar-fill" style="width:96%;background:var(--green)"></div></div>
-        <div class="bar-val">A+</div>
+    <!-- REVIEWS -->
+    <h3 class="sub-head">What clients are saying</h3>
+    <div class="review-grid">
+      <div class="review-card">
+        <span class="review-card__stars">★★★★★</span>
+        <p class="review-card__quote">"The glass patio door was so clean that I thought it was open!!! They were extremely nice and pet-friendly, thorough and easy to work with."</p>
+        <span class="review-card__by">— Verified Customer · BirdEye</span>
       </div>
-      <div class="bar-row">
-        <div class="bar-label">Website Design</div>
-        <div class="bar-track"><div class="bar-fill" style="width:55%;background:#b8860b"></div></div>
-        <div class="bar-val">C+</div>
-      </div>
-      <div class="bar-row">
-        <div class="bar-label">SEO</div>
-        <div class="bar-track"><div class="bar-fill" style="width:45%;background:#b8860b"></div></div>
-        <div class="bar-val">C</div>
-      </div>
-      <div class="bar-row">
-        <div class="bar-label">Mobile Experience</div>
-        <div class="bar-track"><div class="bar-fill" style="width:50%;background:#b8860b"></div></div>
-        <div class="bar-val">C+</div>
-      </div>
-      <div class="bar-row">
-        <div class="bar-label">Content Depth</div>
-        <div class="bar-track"><div class="bar-fill" style="width:60%;background:#b8860b"></div></div>
-        <div class="bar-val">B-</div>
-      </div>
-      <div class="bar-row">
-        <div class="bar-label">Social Media</div>
-        <div class="bar-track"><div class="bar-fill" style="width:55%;background:#b8860b"></div></div>
-        <div class="bar-val">C+</div>
-      </div>
-      <div class="bar-row">
-        <div class="bar-label">Online Booking</div>
-        <div class="bar-track"><div class="bar-fill" style="width:20%;background:#c44"></div></div>
-        <div class="bar-val">D</div>
+      <div class="review-card">
+        <span class="review-card__stars">★★★★★</span>
+        <p class="review-card__quote">"Amanda squeezed me in last-minute when my other cleaner canceled the day before my whole family came in from England for my wedding. She personally handled every detail and even sent us a gift card."</p>
+        <span class="review-card__by">— Verified Customer · BirdEye</span>
       </div>
     </div>
 
-    <h3>What's Working</h3>
-    <ul>
-      <li><strong>SSL certificate active</strong> (Let's Encrypt wildcard) &mdash; secure browsing for visitors</li>
-      <li><strong>Basic schema markup present</strong> &mdash; Organization, WebSite, and WebPage types detected</li>
-      <li><strong>Clear service pages</strong> &mdash; each service has its own dedicated page with detailed descriptions</li>
-      <li><strong>Blog section exists</strong> ("The Modern Maid Diaries") &mdash; shows content intent</li>
-      <li><strong>Domain maturity</strong> &mdash; registered since 2011 on GoDaddy, secured through 2031</li>
-      <li><strong>Contact info visible</strong> &mdash; phone number and address on homepage</li>
-    </ul>
+    <!-- THE OPPORTUNITY CALLOUT (1 sentence framing the gap) -->
+    <div class="opp-callout">
+      <strong>The opportunity is clear:</strong> 22 years of trust and 407 reviews are sitting behind a Joomla template that doesn't capture them. A modern site with online booking, local SEO, and surfaced trust signals turns the reputation you already earned into a steady stream of new bookings.
+    </div>
+  </div>
+</section>
 
-    <h3>Where the Gaps Are</h3>
-    <ul>
-      <li><strong>Joomla CMS with YOOtheme template</strong> &mdash; functional but aging technology. Joomla's market share has declined significantly, making it harder to find developers, plugins, and security updates compared to modern alternatives</li>
-      <li><strong>No online booking or quote request system</strong> &mdash; visitors must call or submit a basic form. In 2026, most cleaning service customers expect instant scheduling</li>
-      <li><strong>Page title is just "Home"</strong> &mdash; a critical SEO miss. Should be something like "The Modern Maid | Professional Eco-Friendly Cleaning in Delaware, OH"</li>
-      <li><strong>No visible pricing or estimate ranges</strong> &mdash; potential customers leave to compare competitors before ever calling</li>
-      <li><strong>Blog appears light on content</strong> &mdash; "The Modern Maid Diaries" has the right idea but needs consistent, keyword-rich posts</li>
-      <li><strong>No Instagram presence found</strong> &mdash; before/after cleaning transformations are social media gold, especially on Instagram</li>
-      <li><strong>No LocalBusiness schema</strong> &mdash; the site has basic Organization schema but lacks the specific LocalBusiness markup that helps Google understand your service area, hours, and services</li>
-      <li><strong>Minor copy errors on service pages</strong> &mdash; "engloying" instead of "enjoying," "withing" instead of "within" on the Elder Companionship page</li>
-    </ul>
+
+<!-- ═══════════════════════════════════════════════════════════
+     02 · YOUR SCORECARD
+═══════════════════════════════════════════════════════════ -->
+<section class="sec-group sec-group--cream">
+  <div class="sec-group__in">
+    <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><path d="M2 9V3M6 9V5M10 9V2"/></svg></span><span class="sec-badge__label">Digital Scorecard</span></div>
+    <div class="sec-head">
+      <span class="sec-head__num">02</span>
+      <div class="sec-head__body">
+        <h2 class="sec-head__title">Your Digital <em>Scorecard</em></h2>
+        <p class="sec-head__sub">A snapshot of where your online presence stands today.</p>
+      </div>
+    </div>
+
+    <h3 class="sub-head">Technical Quality</h3>
+    <div class="score-grid">
+      <div class="score-card">
+        <div class="score-card__label">Performance</div>
+        <div class="score-card__value score-card__value--word">Weak</div>
+        <div class="score-card__note">Joomla + YOOtheme load times under-deliver on mobile</div>
+      </div>
+      <div class="score-card">
+        <div class="score-card__label">Accessibility</div>
+        <div class="score-card__value score-card__value--word">Fair</div>
+        <div class="score-card__note">Color contrast OK; missing form labels &amp; skip-links</div>
+      </div>
+      <div class="score-card">
+        <div class="score-card__label">Mobile</div>
+        <div class="score-card__value score-card__value--word">Fair</div>
+        <div class="score-card__note">Layout adapts but feels dated; tap targets crowded</div>
+      </div>
+      <div class="score-card">
+        <div class="score-card__label">SEO Foundation</div>
+        <div class="score-card__value score-card__value--word">Weak</div>
+        <div class="score-card__note">Page title is "Home"; LocalBusiness schema missing</div>
+      </div>
+    </div>
+
+    <div class="grade-legend">
+      <div class="grade-legend__label">Grading Scale</div>
+      <div class="grade-legend__items">
+        <div class="grade-legend__item grade-legend__item--strong">
+          <div class="grade-legend__dots">●●●●</div>
+          <div class="grade-legend__grade">Strong</div>
+          <div class="grade-legend__def">No urgent action needed</div>
+        </div>
+        <div class="grade-legend__item grade-legend__item--fair">
+          <div class="grade-legend__dots">●●●○</div>
+          <div class="grade-legend__grade">Fair</div>
+          <div class="grade-legend__def">Works, but has fixable gaps</div>
+        </div>
+        <div class="grade-legend__item grade-legend__item--weak">
+          <div class="grade-legend__dots">●●○○</div>
+          <div class="grade-legend__grade">Weak</div>
+          <div class="grade-legend__def">Noticeable issues hurting results</div>
+        </div>
+        <div class="grade-legend__item grade-legend__item--poor">
+          <div class="grade-legend__dots">●○○○</div>
+          <div class="grade-legend__grade">Poor</div>
+          <div class="grade-legend__def">Significant drag — fix first</div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="sub-head">What's Working</h3>
+    <div class="win-grid">
+      <div class="win-card">
+        <span class="win-card__ico">✓</span>
+        <div class="win-card__body">
+          <strong class="win-card__label">SSL active everywhere</strong>
+          <p class="win-card__desc">Let's Encrypt wildcard certificate keeps every page secure end-to-end. No browser warnings, no trust gaps.</p>
+        </div>
+      </div>
+      <div class="win-card">
+        <span class="win-card__ico">✓</span>
+        <div class="win-card__body">
+          <strong class="win-card__label">Domain maturity</strong>
+          <p class="win-card__desc">Registered since 2011 — Google has 14 years of trust history to draw on. That's a competitive advantage you can't buy quickly.</p>
+        </div>
+      </div>
+      <div class="win-card">
+        <span class="win-card__ico">✓</span>
+        <div class="win-card__body">
+          <strong class="win-card__label">Strong service catalog</strong>
+          <p class="win-card__desc">Each service has a dedicated page with detailed copy. The information architecture is sound — it just needs a modern wrapper.</p>
+        </div>
+      </div>
+      <div class="win-card">
+        <span class="win-card__ico">✓</span>
+        <div class="win-card__body">
+          <strong class="win-card__label">Active social presence</strong>
+          <p class="win-card__desc">Facebook page is alive with a 100% recommendation rate from real customers — a real signal Google and AI assistants both value.</p>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="sub-head">Where the Gaps Are</h3>
+    <div class="gap-grid">
+      <div class="gap-card">
+        <span class="gap-card__ico">!</span>
+        <div class="gap-card__body">
+          <strong class="gap-card__label">No online booking or instant quote</strong>
+          <p class="gap-card__desc">In 2026, most cleaning customers expect to schedule online before they ever pick up the phone. Right now they're calling competitors who let them.</p>
+        </div>
+      </div>
+      <div class="gap-card">
+        <span class="gap-card__ico">!</span>
+        <div class="gap-card__body">
+          <strong class="gap-card__label">Page title is just "Home"</strong>
+          <p class="gap-card__desc">A critical SEO miss. The browser tab and Google result both need to read "The Modern Maid · Eco-Friendly Cleaning in Delaware, OH" to be found at all.</p>
+        </div>
+      </div>
+      <div class="gap-card">
+        <span class="gap-card__ico">!</span>
+        <div class="gap-card__body">
+          <strong class="gap-card__label">Missing LocalBusiness + CleaningService schema</strong>
+          <p class="gap-card__desc">The structured data Google's local pack and AI assistants use to recommend a local cleaner is absent. You're invisible in the searches that matter most.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     03 · HOW YOU STACK UP
+═══════════════════════════════════════════════════════════ -->
+<section class="sec-group sec-group--cream">
+  <div class="sec-group__in">
+    <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><path d="M2 10V6M6 10V3M10 10V7"/></svg></span><span class="sec-badge__label">Competitor Landscape</span></div>
+    <div class="sec-head">
+      <span class="sec-head__num">03</span>
+      <div class="sec-head__body">
+        <h2 class="sec-head__title">How You <em>Stack Up</em></h2>
+        <p class="sec-head__sub">Side-by-side with the top competitors in your space.</p>
+      </div>
+    </div>
+
+    <div class="prose">
+      <p>You compete in Delaware County against franchise operators with corporate marketing budgets — You've Got Maids and Molly Maid both have polished sites and instant booking. They don't have your reputation. You don't have their digital infrastructure. We close that gap.</p>
+    </div>
+
+    <h3 class="sub-head">Side by Side</h3>
+    <div class="compare-table">
+      <div class="compare-table__head">
+        <div class="compare-table__corner"></div>
+        <div class="compare-table__col-head compare-table__col-head--you">The Modern Maid</div>
+        <div class="compare-table__col-head">You've Got Maids</div>
+        <div class="compare-table__col-head">Molly Maid</div>
+      </div>
+      <div class="compare-table__row">
+        <div class="compare-table__label">Website</div>
+        <div class="compare-table__cell compare-table__cell--you compare-table__cell--mid">Joomla (aging)</div>
+        <div class="compare-table__cell compare-table__cell--good">Modern, branded</div>
+        <div class="compare-table__cell compare-table__cell--good">Professional</div>
+      </div>
+      <div class="compare-table__row">
+        <div class="compare-table__label">Online booking</div>
+        <div class="compare-table__cell compare-table__cell--you compare-table__cell--low">Phone &amp; form only</div>
+        <div class="compare-table__cell compare-table__cell--good">Instant quote tool</div>
+        <div class="compare-table__cell compare-table__cell--good">Online scheduler</div>
+      </div>
+      <div class="compare-table__row">
+        <div class="compare-table__label">Portfolio online</div>
+        <div class="compare-table__cell compare-table__cell--you compare-table__cell--mid">Stock photos only</div>
+        <div class="compare-table__cell compare-table__cell--good">52-pt service galleries</div>
+        <div class="compare-table__cell compare-table__cell--good">National catalog</div>
+      </div>
+      <div class="compare-table__row">
+        <div class="compare-table__label">Google reviews</div>
+        <div class="compare-table__cell compare-table__cell--you compare-table__cell--good">407 (4.9★)</div>
+        <div class="compare-table__cell compare-table__cell--mid">Franchise pool</div>
+        <div class="compare-table__cell compare-table__cell--mid">Franchise pool</div>
+      </div>
+      <div class="compare-table__row">
+        <div class="compare-table__label">Domain authority</div>
+        <div class="compare-table__cell compare-table__cell--you compare-table__cell--good">Strong (14yr domain)</div>
+        <div class="compare-table__cell compare-table__cell--good">National backing</div>
+        <div class="compare-table__cell compare-table__cell--good">National backing</div>
+      </div>
+    </div>
+
+    <h3 class="sub-head">Where The Modern Maid Leads — and Where the Gap Is</h3>
+    <div class="stack-split">
+      <div class="stack-split__side stack-split__side--win">
+        <div class="stack-split__badge">Where You Lead</div>
+        <div class="stack-split__stat">
+          <span class="stack-split__num">4.9★</span>
+          <span class="stack-split__label">Average rating across 407 reviews</span>
+          <span class="stack-split__note">Higher than the franchise local averages — and earned over 22 years.</span>
+        </div>
+        <div class="stack-split__stat">
+          <span class="stack-split__num">22 years</span>
+          <span class="stack-split__label">Local presence in Delaware, OH</span>
+          <span class="stack-split__note">Domain registered since 2011 — long Google trust history franchises can't replicate.</span>
+        </div>
+      </div>
+      <div class="stack-split__side stack-split__side--gap">
+        <div class="stack-split__badge">The Digital Gap</div>
+        <div class="stack-split__stat">
+          <span class="stack-split__num">No<span class="stack-split__cmp"> vs instant booking</span></span>
+          <span class="stack-split__label">Online booking system</span>
+          <span class="stack-split__note">Both major franchises have it. You're losing the leads who won't pick up the phone.</span>
+        </div>
+        <div class="stack-split__stat">
+          <span class="stack-split__num">0 schema</span>
+          <span class="stack-split__label">LocalBusiness markup</span>
+          <span class="stack-split__note">Invisible to Google's local pack and AI search recommendations until we add it.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     04 · WHAT PEOPLE ARE SEARCHING FOR
+═══════════════════════════════════════════════════════════ -->
+<section class="sec-group sec-group--dark">
+  <div class="sec-group__in">
+    <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><circle cx="5" cy="5" r="3"/><path d="m7.5 7.5 2 2"/></svg></span><span class="sec-badge__label">Search Demand</span></div>
+    <div class="sec-head">
+      <span class="sec-head__num">04</span>
+      <div class="sec-head__body">
+        <h2 class="sec-head__title">What People Are <em>Searching For</em></h2>
+        <p class="sec-head__sub">The exact queries your future customers type before they call anyone.</p>
+      </div>
+    </div>
+
+    <div class="prose">
+      <p>Delaware sits at the north edge of the Columbus metro — close enough to capture suburban demand, small enough to dominate locally. Here are the queries Delaware County cleaning customers type every month, ranked by demand. With proper local SEO and structured data in place, you should be the top result on most of these within 6–9 months.</p>
+    </div>
+
+    <h3 class="sub-head">Primary Search Terms</h3>
+    <div class="kw-table-wrap">
+    <div class="kw-table">
+      <div class="kw-row kw-row--hot">
+        <span class="kw-row__rank">01</span>
+        <span class="kw-row__term">house cleaning delaware oh</span>
+        <span class="kw-row__vol">High demand</span>
+        <span class="kw-row__tag"><span class="tag tag--high">Top priority</span></span>
+      </div>
+      <div class="kw-row">
+        <span class="kw-row__rank">02</span>
+        <span class="kw-row__term">maid service delaware ohio</span>
+        <span class="kw-row__vol">High demand</span>
+        <span class="kw-row__tag"><span class="tag tag--medium">Top priority</span></span>
+      </div>
+      <div class="kw-row">
+        <span class="kw-row__rank">03</span>
+        <span class="kw-row__term">cleaning service near me</span>
+        <span class="kw-row__vol">Very high</span>
+        <span class="kw-row__tag"><span class="tag tag--medium">Hyper-local</span></span>
+      </div>
+      <div class="kw-row">
+        <span class="kw-row__rank">04</span>
+        <span class="kw-row__term">deep cleaning delaware oh</span>
+        <span class="kw-row__vol">Medium</span>
+        <span class="kw-row__tag"><span class="tag tag--medium">Steady demand</span></span>
+      </div>
+      <div class="kw-row">
+        <span class="kw-row__rank">05</span>
+        <span class="kw-row__term">senior companion services delaware</span>
+        <span class="kw-row__vol">Low competition</span>
+        <span class="kw-row__tag"><span class="tag tag--easy">Wide open</span></span>
+      </div>
+      <div class="kw-row">
+        <span class="kw-row__rank">06</span>
+        <span class="kw-row__term">eco-friendly cleaning service ohio</span>
+        <span class="kw-row__vol">Growing</span>
+        <span class="kw-row__tag"><span class="tag tag--easy">On-trend</span></span>
+      </div>
+    </div>
+    </div>
+
+    <h3 class="sub-head">The Seasonal Window</h3>
+    <!-- CONDITIONAL: only include if client has a clear seasonal demand pattern. 1–2 sentences max. -->
+    <div class="prose">
+      <p>Spring cleaning (March–May) and pre-holiday (October–December) drive the biggest cleaning-search spikes; move-out cleaning peaks in summer with the academic calendar. The site needs to be earning rankings before the next spring window — every month of delay is a season lost.</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     05 · THE AI SEARCH EDGE
+═══════════════════════════════════════════════════════════ -->
+<section class="sec-group sec-group--dark">
+  <div class="sec-group__in">
+    <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><path d="M7 1L3 7h3l-1 4 5-6H7l1-4Z"/></svg></span><span class="sec-badge__label">AI Search — The Edge</span></div>
+    <div class="sec-head">
+      <span class="sec-head__num">05</span>
+      <div class="sec-head__body">
+        <h2 class="sec-head__title">The <em>AI Search</em> Edge</h2>
+        <p class="sec-head__sub">Most business owners don't know AI search exists — let alone that they're invisible to it. Here's what it is, how it works alongside Google, and how we make The Modern Maid show up in both.</p>
+      </div>
+    </div>
+
+    <div class="search-compare">
+      <div class="search-compare__col search-compare__col--google">
+        <div class="search-compare__label">Google Search</div>
+        <div class="search-compare__rows">
+          <div class="search-compare__row"><div class="search-compare__dot"></div><span class="search-compare__text">Returns 10 links — you scroll and choose</span></div>
+          <div class="search-compare__row"><div class="search-compare__dot"></div><span class="search-compare__text">Drives clicks to your website</span></div>
+          <div class="search-compare__row"><div class="search-compare__dot"></div><span class="search-compare__text">You compete in a list with 9 others</span></div>
+        </div>
+      </div>
+      <div class="search-compare__col search-compare__col--ai">
+        <div class="search-compare__label search-compare__label--ai">AI Search</div>
+        <div class="search-compare__rows">
+          <div class="search-compare__row"><div class="search-compare__dot search-compare__dot--ai"></div><span class="search-compare__text search-compare__text--ai">Gives one name — they call</span></div>
+          <div class="search-compare__row"><div class="search-compare__dot search-compare__dot--ai"></div><span class="search-compare__text search-compare__text--ai">Drives calls directly to your phone</span></div>
+          <div class="search-compare__row"><div class="search-compare__dot search-compare__dot--ai"></div><span class="search-compare__text search-compare__text--ai">You're the recommendation, not an option</span></div>
+        </div>
+      </div>
+      <div class="search-compare__footer">They work together, not against each other. Google brings researchers. AI brings buyers ready to book. You need to show up in both.</div>
+    </div>
+
+    <div class="split-cards-wrap">
+    <div class="split-cards">
+      <div class="split-card">
+        <div class="split-card__gap">
+          <div class="split-card__gap-icon">↑</div>
+          <h3 class="split-card__gap-title">You're invisible to "cleaner near me" on AI</h3>
+          <p class="split-card__gap-copy">When someone asks Siri or ChatGPT for an eco-friendly cleaner in Delaware, your site has no LocalBusiness or CleaningService schema for the AI to read. Franchise sites win the recommendation by default.</p>
+        </div>
+        <div class="split-card__divider">
+          <div class="split-card__divider-line"></div>
+          <span class="split-card__divider-badge">The Fix</span>
+          <div class="split-card__divider-line"></div>
+        </div>
+        <div class="split-card__solve">
+          <div class="split-card__solve-num">01</div>
+          <h3 class="split-card__solve-title">We feed AI exactly what it needs to recommend you</h3>
+          <p class="split-card__solve-copy">Every page ships with the structured markup ChatGPT, Siri, and Google's Gemini look for — service type, service area, hours, pricing, reviews. You become the local recommendation, not a list option.</p>
+        </div>
+      </div>
+      <div class="split-card">
+        <div class="split-card__gap">
+          <div class="split-card__gap-icon">↑</div>
+          <h3 class="split-card__gap-title">Your charity work and elder care are buried</h3>
+          <p class="split-card__gap-copy">Your Cleaning for a Reason partnership and Elder Check-In service are exactly the trust signals AI assistants surface — but they're hidden inside menus on the current site. AI can't cite what it can't see.</p>
+        </div>
+        <div class="split-card__divider">
+          <div class="split-card__divider-line"></div>
+          <span class="split-card__divider-badge">The Fix</span>
+          <div class="split-card__divider-line"></div>
+        </div>
+        <div class="split-card__solve">
+          <div class="split-card__solve-num">02</div>
+          <h3 class="split-card__solve-title">We surface the story AI is already looking for</h3>
+          <p class="split-card__solve-copy">Dedicated landing pages for the elder companionship service and the cancer-patient charity-clean program — written for both human readers and AI citation. The trust signals do the selling.</p>
+        </div>
+      </div>
+      <div class="split-card">
+        <div class="split-card__gap">
+          <div class="split-card__gap-icon">↑</div>
+          <h3 class="split-card__gap-title">No one is publishing the answers your customers ask</h3>
+          <p class="split-card__gap-copy">"How much does house cleaning cost in Delaware?" and "Are eco-friendly cleaners actually effective?" are wide open. Without expert content from you, AI cites whoever bothered to publish — usually national franchises or generic content farms.</p>
+        </div>
+        <div class="split-card__divider">
+          <div class="split-card__divider-line"></div>
+          <span class="split-card__divider-badge">The Fix</span>
+          <div class="split-card__divider-line"></div>
+        </div>
+        <div class="split-card__solve">
+          <div class="split-card__solve-num">03</div>
+          <h3 class="split-card__solve-title">A monthly content engine that owns the local conversation</h3>
+          <p class="split-card__solve-copy">A blog calendar built around what Delaware cleaning customers actually ask — pricing guides, Norwex deep-dives, seasonal checklists. AI cites whoever publishes first. That becomes you.</p>
+        </div>
+      </div>
+    </div>
+    </div>
 
     <div class="callout">
-      <strong>PageSpeed data unavailable</strong> &mdash; our testing API quota was reached during analysis. However, Joomla sites with the YOOtheme template typically score in the 40&ndash;60 range on mobile performance. We can run a fresh test during a follow-up conversation to get your exact numbers.
+      <strong>Right now, The Modern Maid's website isn't built for either</strong> — no signals for AI to read, no expert content to cite. That's the window we close.
     </div>
-  </section>
+  </div>
+</section>
 
-  <hr class="divider">
 
-  <!-- 03: HOW YOU STACK UP -->
-  <section>
-    <h2><span class="number">03</span>How You <em>Stack Up</em></h2>
-
-    <p>Delaware, Ohio is a growing market. With Columbus suburbs expanding north, the demand for quality home services is rising &mdash; and so is competition. Here's how The Modern Maid compares to the other names showing up in local search results.</p>
-
-    <h3>Local Competitor Snapshot</h3>
-
-    <div class="compare-grid">
-      <div class="compare-card you">
-        <div class="comp-name">The Modern Maid (You)</div>
-        <div class="comp-stat"><span class="stat-label">Reviews</span><span class="stat-val good">407 (4.9 stars)</span></div>
-        <div class="comp-stat"><span class="stat-label">Website</span><span class="stat-val mid">Joomla/YOOtheme</span></div>
-        <div class="comp-stat"><span class="stat-label">Online Booking</span><span class="stat-val low">No</span></div>
-        <div class="comp-stat"><span class="stat-label">Facebook</span><span class="stat-val good">Active (100% rec.)</span></div>
-        <div class="comp-stat"><span class="stat-label">Unique Edge</span><span class="stat-val good">Eco + Companion</span></div>
-      </div>
-      <div class="compare-card">
-        <div class="comp-name">You've Got Maids</div>
-        <div class="comp-stat"><span class="stat-label">Reviews</span><span class="stat-val mid">Franchise-level</span></div>
-        <div class="comp-stat"><span class="stat-label">Website</span><span class="stat-val good">Modern/branded</span></div>
-        <div class="comp-stat"><span class="stat-label">Online Booking</span><span class="stat-val good">Yes</span></div>
-        <div class="comp-stat"><span class="stat-label">Facebook</span><span class="stat-val mid">Corporate page</span></div>
-        <div class="comp-stat"><span class="stat-label">Unique Edge</span><span class="stat-val mid">52-pt deep clean</span></div>
-      </div>
-      <div class="compare-card">
-        <div class="comp-name">Molly Maid</div>
-        <div class="comp-stat"><span class="stat-label">Reviews</span><span class="stat-val mid">Franchise-level</span></div>
-        <div class="comp-stat"><span class="stat-label">Website</span><span class="stat-val good">Professional</span></div>
-        <div class="comp-stat"><span class="stat-label">Online Booking</span><span class="stat-val good">Yes</span></div>
-        <div class="comp-stat"><span class="stat-label">Facebook</span><span class="stat-val good">National brand</span></div>
-        <div class="comp-stat"><span class="stat-label">Unique Edge</span><span class="stat-val mid">Brand recognition</span></div>
+<!-- ═══════════════════════════════════════════════════════════
+     06 · WHAT WE'D ACTUALLY DO
+═══════════════════════════════════════════════════════════ -->
+<section class="sec-group sec-group--cream">
+  <div class="sec-group__in">
+    <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><path d="M3 3h6v6H3z"/><path d="M3 6h6"/></svg></span><span class="sec-badge__label">The Plan</span></div>
+    <div class="sec-head">
+      <span class="sec-head__num">06</span>
+      <div class="sec-head__body">
+        <h2 class="sec-head__title">Here's What We'd <em>Actually Do</em></h2>
+        <p class="sec-head__sub">Specific, prioritized work — not a generic checklist.</p>
       </div>
     </div>
 
-    <h3>What This Means</h3>
+    <div class="phase-roadmap">
 
-    <p>Here's the good news: <strong>you're winning on reputation and authenticity.</strong> No franchise can match 22 years of local trust, 407 organic reviews, and a Cleaning for a Reason partnership that comes from real personal experience. That's your competitive moat.</p>
-
-    <p>The challenge? <strong>The franchises are outpacing you on digital infrastructure.</strong> They have online booking, modern responsive websites, instant quoting tools, and robust local SEO strategies backed by corporate marketing teams. When someone Googles "house cleaning Delaware OH," the franchise sites are engineered to convert. Your site relies on visitors being impressed enough to pick up the phone &mdash; and in 2026, many won't.</p>
-
-    <div class="callout">
-      <strong>The strategic insight:</strong> You don't need to become a franchise. You need to take the trust and authenticity you already have and wrap it in a digital experience that's as professional as your cleaning. A local business with franchise-level digital presence is an unbeatable combination.
-    </div>
-  </section>
-
-  <hr class="divider">
-
-  <!-- 04: WHAT PEOPLE ARE SEARCHING FOR -->
-  <section>
-    <h2><span class="number">04</span>What People Are <em>Searching For</em></h2>
-
-    <p>Understanding what your potential customers are typing into Google is the foundation of any digital strategy. Here are the search terms most relevant to The Modern Maid, along with relative demand levels. Delaware, OH sits in the Columbus metro, so you're tapping into both hyper-local and broader metro searches.</p>
-
-    <h3>High-Intent Local Searches</h3>
-
-    <div class="kw-grid">
-      <div class="kw-card"><span class="kw-term">house cleaning Delaware OH</span><span class="kw-vol">High demand</span></div>
-      <div class="kw-card"><span class="kw-term">maid service Delaware Ohio</span><span class="kw-vol">High demand</span></div>
-      <div class="kw-card"><span class="kw-term">cleaning service near me</span><span class="kw-vol">Very high demand</span></div>
-      <div class="kw-card"><span class="kw-term">deep cleaning service Delaware OH</span><span class="kw-vol">Medium demand</span></div>
-      <div class="kw-card"><span class="kw-term">move out cleaning Delaware Ohio</span><span class="kw-vol">Medium demand</span></div>
-      <div class="kw-card"><span class="kw-term">eco-friendly cleaning service Ohio</span><span class="kw-vol">Medium demand</span></div>
-      <div class="kw-card"><span class="kw-term">office cleaning Delaware County</span><span class="kw-vol">Medium demand</span></div>
-      <div class="kw-card"><span class="kw-term">non-toxic house cleaning</span><span class="kw-vol">Growing demand</span></div>
-    </div>
-
-    <h3>Long-Tail Opportunities</h3>
-
-    <div class="kw-grid">
-      <div class="kw-card"><span class="kw-term">house cleaning gift certificate Ohio</span><span class="kw-vol">Low competition</span></div>
-      <div class="kw-card"><span class="kw-term">senior companion services Delaware OH</span><span class="kw-vol">Low competition</span></div>
-      <div class="kw-card"><span class="kw-term">Norwex cleaning service near me</span><span class="kw-vol">Niche</span></div>
-      <div class="kw-card"><span class="kw-term">cleaning service for cancer patients Ohio</span><span class="kw-vol">Low competition</span></div>
-      <div class="kw-card"><span class="kw-term">cleaning before open house Delaware</span><span class="kw-vol">Seasonal</span></div>
-      <div class="kw-card"><span class="kw-term">recurring cleaning service Powell OH</span><span class="kw-vol">Medium demand</span></div>
-    </div>
-
-    <h3>Google "People Also Ask" Opportunities</h3>
-    <ul>
-      <li><strong>"How much does house cleaning cost in Delaware, OH?"</strong> &mdash; Average is ~$21/hr according to Care.com. A pricing guide page could capture this traffic.</li>
-      <li><strong>"What's included in house cleaning services?"</strong> &mdash; Your detailed service pages partially answer this, but they're not optimized for this query.</li>
-      <li><strong>"How to find a house cleaner near me?"</strong> &mdash; Blog content opportunity about what to look for in a cleaning service.</li>
-      <li><strong>"Are eco-friendly cleaning products effective?"</strong> &mdash; Perfect content match for The Modern Maid's Norwex-based approach.</li>
-    </ul>
-
-    <div class="callout">
-      <strong>Content gap analysis:</strong> Your biggest missed opportunity is the Elder Companionship service. There's virtually no competition for "senior companion services Delaware OH" &mdash; you could own that search term with a single well-optimized page and a few supporting blog posts. This is also a service that generates powerful word-of-mouth from adult children searching on behalf of aging parents.
-    </div>
-  </section>
-
-  <hr class="divider">
-
-  <!-- 05: THE FUTURE OF SEARCH -->
-  <section>
-    <h2><span class="number">05</span>The Future of <em>Search</em></h2>
-
-    <p>Search is changing fast. Google's AI Overviews, voice assistants, and platforms like ChatGPT are increasingly answering questions directly &mdash; without users ever clicking through to a website. For a local service business, this means the bar for visibility is rising. Here's where The Modern Maid stands in this new landscape.</p>
-
-    <h3>AI Search Readiness</h3>
-
-    <p><strong>AI-powered search engines prioritize businesses with clear, structured, authoritative content.</strong> They pull from Google Business Profiles, schema-marked websites, and consistent NAP (name, address, phone) data across the web. The Modern Maid has some of these pieces in place &mdash; but not enough to consistently appear in AI-generated answers.</p>
-
-    <ul>
-      <li><strong>Schema markup:</strong> Basic Organization and WebSite types present, but <strong>missing LocalBusiness, CleaningService, and FAQ schema</strong> &mdash; the specific types AI search engines look for when answering "cleaning service near me" queries</li>
-      <li><strong>Google Business Profile:</strong> Active presence with strong review count. This is your strongest AI-search asset right now.</li>
-      <li><strong>Content authority:</strong> The blog section exists but lacks the depth and consistency that AI models use to assess expertise. More long-form, helpful content about cleaning topics would strengthen your E-E-A-T signals.</li>
-    </ul>
-
-    <h3>Voice Search</h3>
-
-    <p>When someone asks Alexa or Siri "find a house cleaner near me," the answer comes from Google's local pack, review data, and business profiles. <strong>Your 4.9 rating and 407 reviews position you well here</strong> &mdash; but the lack of specific service-area schema and optimized business categories could mean voice assistants recommend competitors with better-structured data.</p>
-
-    <h3>E-E-A-T Assessment</h3>
-
-    <p>Google's E-E-A-T framework (Experience, Expertise, Authoritativeness, Trustworthiness) matters more than ever:</p>
-
-    <ul>
-      <li><strong>Experience:</strong> 22+ years, real customer stories, community involvement</li>
-      <li><strong>Expertise:</strong> GBAC certification, eco-friendly knowledge, but not prominently featured on the site</li>
-      <li><strong>Authoritativeness:</strong> Cleaning for a Reason partnership and Reader's Choice Awards exist but aren't leveraged as trust badges on the website</li>
-      <li><strong>Trustworthiness:</strong> SSL active, real address, real phone, insured and bonded messaging</li>
-    </ul>
-
-    <div class="callout">
-      <strong>The opportunity:</strong> You have incredible E-E-A-T signals (GBAC certification, cancer charity partnership, 22 years of experience, Reader's Choice Awards). They're just buried. Surfacing these prominently on your homepage and in structured data would immediately boost how AI search engines perceive your authority.
-    </div>
-  </section>
-
-  <hr class="divider">
-
-  <!-- 06: HERE'S WHAT WE'D ACTUALLY DO -->
-  <section>
-    <h2><span class="number">06</span>Here's What We'd <em>Actually Do</em></h2>
-
-    <p>This isn't a kitchen sink proposal. These are the specific, high-impact moves we'd prioritize for The Modern Maid &mdash; designed to turn your outstanding real-world reputation into online revenue.</p>
-
-    <div class="opp-grid">
-      <div class="opp-card">
-        <h4>1. Modern, Conversion-Focused Website</h4>
-        <p>Replace the Joomla/YOOtheme site with a fast, mobile-first design that matches the quality of your service. Online booking integration, clear CTAs on every page, before/after galleries, and trust badges (GBAC, Cleaning for a Reason, Reader's Choice) front and center. Your Elder Companionship service gets a dedicated, emotionally compelling landing page.</p>
-        <div class="opp-tags"><span class="tag high">High Impact</span><span class="tag medium">4-6 weeks</span></div>
+      <div class="phase-section phase-section--quick">
+        <div class="phase-header">
+          <span class="phase-label phase-label--quick">Quick Win</span>
+          <div class="phase-divider"></div>
+          <span class="phase-note">Immediate</span>
+        </div>
+        <div class="phase-items">
+          <div class="phase-item">
+            <strong class="phase-item__title">Fix the "Home" page title — same day</strong>
+            <p class="phase-item__desc">Your homepage title literally reads "Home." That's costing you organic traffic for "house cleaning Delaware OH" right now. We can update it within hours of contract sign — your first SEO win before any new code is written.</p>
+          </div>
+        </div>
       </div>
-      <div class="opp-card">
-        <h4>2. Online Booking &amp; Quote System</h4>
-        <p>Integrate a booking system that lets customers select service type, home size, frequency, and add-ons &mdash; then instantly schedule or request a quote. This alone could increase conversions by 25&ndash;40% based on industry benchmarks. Recurring customers get a simple rebooking flow.</p>
-        <div class="opp-tags"><span class="tag high">High Impact</span><span class="tag easy">Quick Win</span></div>
+
+      <div class="phase-section phase-section--m1">
+        <div class="phase-header">
+          <span class="phase-label phase-label--m1">Month 1</span>
+          <div class="phase-divider"></div>
+          <span class="phase-note">Core launch deliverables</span>
+        </div>
+        <div class="phase-items phase-items--grid">
+          <div class="phase-item">
+            <strong class="phase-item__title">Homepage that earns the call</strong>
+            <p class="phase-item__desc">A custom homepage that surfaces 22 years of trust, 407 reviews, the Cleaning for a Reason partnership, and online booking — designed to convert the visitors your reputation already brings.</p>
+          </div>
+          <div class="phase-item">
+            <strong class="phase-item__title">Local SEO foundation for Delaware County</strong>
+            <p class="phase-item__desc">Optimized titles and meta descriptions for every page, LocalBusiness + CleaningService schema, and service-area targeting for Delaware, Powell, Westerville, and the northern Columbus suburbs.</p>
+          </div>
+          <div class="phase-item">
+            <strong class="phase-item__title">Online booking + instant quote</strong>
+            <p class="phase-item__desc">A booking flow tied to your service tiers (one-time, weekly, biweekly, monthly) with home-size and add-on options. Recurring clients get a one-tap rebook. Industry data shows online booking lifts conversions 25–40%.</p>
+          </div>
+          <div class="phase-item">
+            <strong class="phase-item__title">Elder Companionship landing page</strong>
+            <p class="phase-item__desc">A standalone, emotionally resonant page for the Elder Check-In service — built for adult children searching on behalf of aging parents. Virtually no local competition for this term right now.</p>
+          </div>
+          <div class="phase-item">
+            <strong class="phase-item__title">AI Search Signals</strong>
+            <p class="phase-item__desc">Structured markup on every page that tells ChatGPT, Siri, and every AI assistant exactly what The Modern Maid does and where you serve. Ships on day one — most cleaning companies don't have it.</p>
+          </div>
+          <div class="phase-item">
+            <strong class="phase-item__title">Citation Audit &amp; Cleanup</strong>
+            <p class="phase-item__desc">We find every mismatch in your name, address, and phone across Google, Yelp, and the major directories — and fix them. Small inconsistencies quietly drag down local rankings. One audit that keeps working for years.</p>
+          </div>
+        </div>
       </div>
-      <div class="opp-card">
-        <h4>3. Local SEO Overhaul</h4>
-        <p>Full LocalBusiness and CleaningService schema markup. Optimized title tags and meta descriptions for every page. Google Business Profile audit with service-area refinement for Delaware County, Powell, Westerville, and northern Columbus suburbs. NAP consistency audit across all directories.</p>
-        <div class="opp-tags"><span class="tag high">High Impact</span><span class="tag easy">Quick Win</span></div>
+
+      <div class="phase-section phase-section--m2">
+        <div class="phase-header">
+          <span class="phase-label phase-label--m2">Month 2+</span>
+          <div class="phase-divider"></div>
+          <span class="phase-note">Growth phase</span>
+        </div>
+        <div class="phase-items">
+          <div class="phase-item">
+            <strong class="phase-item__title">The Modern Maid Diaries — relaunched</strong>
+            <p class="phase-item__desc">Your existing blog gets a content calendar built around what Delaware cleaning customers actually search — cost guides, eco-cleaning explainers, seasonal checklists. Every post positions Amanda as the go-to expert in Delaware County. Pairs naturally with an Instagram launch for before/after Reels.</p>
+          </div>
+          <div class="phase-item">
+            <strong class="phase-item__title">Expert Content Library</strong>
+            <p class="phase-item__desc">Service guides and FAQ pages built around what Delaware cleaning customers already search. AI assistants cite whoever publishes first — that's The Modern Maid.</p>
+          </div>
+        </div>
       </div>
-      <div class="opp-card">
-        <h4>4. Content Strategy</h4>
-        <p>A monthly blog calendar targeting "People Also Ask" queries and long-tail keywords. Topics: cleaning cost guides, eco-friendly cleaning tips, seasonal cleaning checklists, senior care resources. Each post positions Amanda as the go-to expert in Delaware County cleaning. FAQ schema on every relevant page.</p>
-        <div class="opp-tags"><span class="tag mid-impact">Ongoing</span><span class="tag medium">Medium effort</span></div>
-      </div>
-      <div class="opp-card">
-        <h4>5. Instagram Launch &amp; Social Strategy</h4>
-        <p>Before/after cleaning transformations, behind-the-scenes team stories, eco-cleaning tips, and community involvement highlights. Cleaning content performs exceptionally well on Instagram &mdash; satisfying visual transformations drive shares and saves. Cross-post to Facebook for maximum reach.</p>
-        <div class="opp-tags"><span class="tag mid-impact">Medium Impact</span><span class="tag easy">Low Cost</span></div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     06 · BEYOND THE WEBSITE
+═══════════════════════════════════════════════════════════ -->
+<section class="sec-group sec-group--dark">
+  <div class="sec-group__in">
+    <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><circle cx="6" cy="6" r="4"/><path d="M6 2v4l2 1"/></svg></span><span class="sec-badge__label">The Bigger Picture</span></div>
+    <div class="sec-head">
+      <span class="sec-head__num">07</span>
+      <div class="sec-head__body">
+        <h2 class="sec-head__title">Beyond the <em>Website</em></h2>
+        <p class="sec-head__sub">More ways we put your business in front of the right people.</p>
       </div>
     </div>
-  </section>
 
-  <hr class="divider">
-
-  <!-- 07: HOW THIS WORKS -->
-  <section>
-    <h2><span class="number">07</span>How This <em>Works</em></h2>
-
-    <p>We believe in honest timelines and clear communication. Here's what working with Aspire Digital actually looks like &mdash; no surprises, no scope creep, no disappearing acts.</p>
-
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="week">Week 1</div>
-        <div class="task">Discovery &amp; Strategy</div>
-        <div class="detail">We sit down (virtually or in person) to understand your business goals, ideal customers, and what's working today. We audit your current site, review competitor positioning, and define the project scope. You'll walk away with a clear creative brief.</div>
+    <div class="beyond-strip">
+      <div class="beyond-item">
+        <span class="beyond-item__ico"><span class="material-symbols-outlined">storefront</span></span>
+        <div class="beyond-item__label">Google Business Profile</div>
+        <p class="beyond-item__desc">407 reviews at 4.9 stars is a goldmine. We do a full profile audit — categories, services, products, Q&amp;A, weekly posts, and a photo strategy that surfaces every signal Google's algorithm wants to see.</p>
       </div>
-      <div class="timeline-item">
-        <div class="week">Week 2</div>
-        <div class="task">Design &amp; Content Architecture</div>
-        <div class="detail">We design the new site structure, wireframes, and visual direction &mdash; inspired by The Modern Maid's warm, professional brand. You'll see mockups before we write a single line of code. We also plan the booking system integration and content calendar.</div>
+      <div class="beyond-item">
+        <span class="beyond-item__ico"><span class="material-symbols-outlined">event</span></span>
+        <div class="beyond-item__label">Online Booking</div>
+        <p class="beyond-item__desc">A booking system tied to your service tiers — one-time, weekly, biweekly, monthly — with home-size and add-on options. Recurring clients rebook in one tap, no phone tag.</p>
       </div>
-      <div class="timeline-item">
-        <div class="week">Weeks 3&ndash;4</div>
-        <div class="task">Build &amp; Integrate</div>
-        <div class="detail">Development begins on a fast, mobile-first site with booking system, SEO foundations, schema markup, and analytics. All content is written to target your highest-value search terms. We keep you in the loop with weekly check-ins.</div>
+      <div class="beyond-item">
+        <span class="beyond-item__ico"><span class="material-symbols-outlined">reviews</span></span>
+        <div class="beyond-item__label">Reviews Engine</div>
+        <p class="beyond-item__desc">Automated post-service review requests via text or email. You're already earning 4.9 stars — a system keeps the volume coming and routes 5-star reviews straight to Google.</p>
       </div>
-      <div class="timeline-item">
-        <div class="week">Week 5</div>
-        <div class="task">Review, Refine &amp; Launch</div>
-        <div class="detail">You review everything. We refine based on your feedback. Once approved, we handle the technical migration &mdash; DNS, redirects, Google Search Console &mdash; so nothing breaks. Launch day is seamless.</div>
-      </div>
-      <div class="timeline-item">
-        <div class="week">Ongoing</div>
-        <div class="task">Growth &amp; Support</div>
-        <div class="detail">Post-launch, we monitor performance, publish monthly blog content, optimize your Google Business Profile, and track booking conversions. You get a monthly report showing real numbers &mdash; not vanity metrics.</div>
+      <div class="beyond-item">
+        <span class="beyond-item__ico"><span class="material-symbols-outlined">mail</span></span>
+        <div class="beyond-item__label">Email &amp; CRM</div>
+        <p class="beyond-item__desc">A simple CRM with monthly newsletter automation — seasonal cleaning reminders, gift certificate promotion, referral credit tracking. Your existing programs become email-driven repeat revenue.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <hr class="divider">
 
-  <!-- 08: BEYOND THE WEBSITE -->
-  <section>
-    <h2><span class="number">08</span>Beyond the <em>Website</em></h2>
+<!-- ═══════════════════════════════════════════════════════════
+     07 · WHAT THIS COULD MEAN
+     ─────────────────────────────────────────────────────────
+     PICK ONE VARIANT. Uncomment the section that fits the
+     prospect. Keep the others commented out.
 
-    <p>A great website is the foundation, but there's a whole ecosystem of digital tools that could amplify The Modern Maid's reach. Here are the opportunities we see beyond the core site build.</p>
+     A — THE MATH       → Skeptics, contractors, analytical
+         sec-group--cream   owners who want to see the work.
+                            Show the calculation chain.
 
-    <div class="icon-grid">
-      <div class="icon-card">
-        <span class="material-icons">location_on</span>
-        <h4>Google Business Optimization</h4>
-        <p>Full profile audit &mdash; categories, services, products, Q&amp;A, weekly posts, photo strategy. Your 407 reviews are a goldmine; let's make sure Google's algorithm sees every signal.</p>
-      </div>
-      <div class="icon-card">
-        <span class="material-icons">photo_camera</span>
-        <h4>Instagram Presence</h4>
-        <p>Launch a dedicated Instagram with before/after transformations, cleaning tips, and team spotlights. Cleaning content is hugely popular &mdash; Reels of satisfying cleans routinely get 100K+ views.</p>
-      </div>
-      <div class="icon-card">
-        <span class="material-icons">email</span>
-        <h4>Email Marketing</h4>
-        <p>Monthly newsletter to existing clients &mdash; seasonal cleaning reminders, referral incentives, new service announcements. The gift certificate program and referral credit are perfect email content.</p>
-      </div>
-      <div class="icon-card">
-        <span class="material-icons">event</span>
-        <h4>Automated Booking &amp; CRM</h4>
-        <p>Online scheduling, automated confirmations, rebooking reminders for recurring clients, and a simple CRM to track customer preferences and history.</p>
-      </div>
-      <div class="icon-card">
-        <span class="material-icons">star</span>
-        <h4>Review Generation System</h4>
-        <p>Automated post-service review requests via text or email. You're already getting great reviews &mdash; a system would increase volume and keep the momentum going.</p>
-      </div>
-      <div class="icon-card">
-        <span class="material-icons">card_giftcard</span>
-        <h4>Gift Certificate Platform</h4>
-        <p>A dedicated gift card page with beautiful design, occasion-based messaging (new baby, birthday, Mother's Day), and instant digital delivery. Currently this service exists but isn't prominently featured.</p>
+     B — THE GAP        → Visual thinkers, lifestyle business
+         sec-group--dark    owners, anyone with FOMO energy.
+                            Before vs. after contrast.
+
+     C — THE RANGE      → Risk-averse owners, accountants,
+         sec-group--dark    anyone who hates being oversold.
+                            Conservative / moderate / optimistic.
+
+     D — WHAT IT MEANS  → Heart-led owners, creatives, service
+         sec-group--cream   pros who think in people not numbers.
+                            Translate the dollar into real life.
+
+     Compare page: yoursite.madebyaspire.com/template/revenue-compare/
+═══════════════════════════════════════════════════════════ -->
+
+
+<!-- ─── VARIANT A · THE MATH ─── (commented out for this client) ─────── -->
+<!--
+<section class="sec-group sec-group--cream">
+  <div class="sec-group__in">
+    <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><path d="M2 9l3-3 2 2 3-4"/></svg></span><span class="sec-badge__label">Revenue Impact</span></div>
+    <div class="sec-head">
+      <span class="sec-head__num">08</span>
+      <div class="sec-head__body">
+        <h2 class="sec-head__title">What This Could <em>Mean</em></h2>
+        <p class="sec-head__sub">Here's the math — and it's conservative.</p>
       </div>
     </div>
-  </section>
+    <div class="funnel-chain">
+      <div class="funnel-step">
+        <div class="funnel-step__label">Monthly Searches</div>
+        <div class="funnel-step__val">{METRIC_SEARCH_VOL}</div>
+        <div class="funnel-step__sub">people/month searching for what you offer</div>
+        <div class="funnel-step__operator">×</div>
+      </div>
+      <div class="funnel-step">
+        <div class="funnel-step__label">Click-Through</div>
+        <div class="funnel-step__val">{METRIC_CTR}</div>
+        <div class="funnel-step__sub">realistic for a well-optimized local listing</div>
+        <div class="funnel-step__operator">=</div>
+      </div>
+      <div class="funnel-step">
+        <div class="funnel-step__label">Site Visitors</div>
+        <div class="funnel-step__val">{METRIC_VISITORS}/mo</div>
+        <div class="funnel-step__sub">organic, local, already looking to hire</div>
+        <div class="funnel-step__operator">×</div>
+      </div>
+      <div class="funnel-step">
+        <div class="funnel-step__label">Conversion Rate</div>
+        <div class="funnel-step__val">{METRIC_CONVERSION}</div>
+        <div class="funnel-step__sub">industry benchmark for service businesses</div>
+        <div class="funnel-step__operator">×</div>
+      </div>
+      <div class="funnel-step">
+        <div class="funnel-step__label">Avg. Job Value</div>
+        <div class="funnel-step__val">{METRIC_CUSTOMER_VALUE}</div>
+        <div class="funnel-step__sub">based on your stated pricing</div>
+      </div>
+    </div>
+    <div class="funnel-result">
+      <div class="funnel-result__period">
+        <div class="funnel-result__amt">{METRIC_MONTHLY_REVENUE}</div>
+        <div class="funnel-result__period-label">per month</div>
+      </div>
+      <div class="funnel-result__divider"></div>
+      <div class="funnel-result__period">
+        <div class="funnel-result__amt">$36K–$72K</div>
+        <div class="funnel-result__period-label">per year</div>
+      </div>
+    </div>
+    <div class="funnel-assumptions">
+      <p class="funnel-assumptions__head">Conservative by design — here's exactly what we assumed</p>
+      <div class="funnel-assumptions__grid">
+        <div class="funnel-assumptions__item">
+          <span class="funnel-assumptions__val">{METRIC_SEARCH_VOL}</span>
+          <span class="funnel-assumptions__label">monthly searches for your services in the target market area</span>
+        </div>
+        <div class="funnel-assumptions__item">
+          <span class="funnel-assumptions__val">{METRIC_CTR}</span>
+          <span class="funnel-assumptions__label">click-through rate — realistic for a top-3 local ranking, achievable within 6–9 months</span>
+        </div>
+        <div class="funnel-assumptions__item">
+          <span class="funnel-assumptions__val">{METRIC_CONVERSION}</span>
+          <span class="funnel-assumptions__label">conversion rate — industry benchmark for a well-built local service site</span>
+        </div>
+        <div class="funnel-assumptions__item">
+          <span class="funnel-assumptions__val">{METRIC_CUSTOMER_VALUE}</span>
+          <span class="funnel-assumptions__label">average job value — conservative estimate based on your market and pricing</span>
+        </div>
+      </div>
+      <p class="funnel-assumptions__footer">GBP traffic, referrals, and repeat clients modeled as zero — those are upside, not the floor.</p>
+    </div>
+  </div>
+</section>
+-->
 
-  <hr class="divider">
 
-  <!-- 09: WHAT THIS COULD MEAN -->
-  <section>
-    <h2><span class="number">09</span>What This Could <em>Mean</em></h2>
+<!-- ─── VARIANT B · THE GAP ──────────────────────────────── -->
+<!--
+<section class="sec-group sec-group--dark">
+  <div class="sec-group__in">
+    <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><path d="M2 9l3-3 2 2 3-4"/></svg></span><span class="sec-badge__label">Revenue Impact</span></div>
+    <div class="sec-head">
+      <span class="sec-head__num">08</span>
+      <div class="sec-head__body">
+        <h2 class="sec-head__title">What This Could <em>Mean</em></h2>
+        <p class="sec-head__sub">The gap between where you are and where you could be.</p>
+      </div>
+    </div>
+    <div class="gap-wrap">
+      <div class="gap-now">
+        <div class="gap-now__eyebrow">Today — Without a Site That Works</div>
+        <p class="gap-now__headline">{METRIC_SEARCH_VOL} people search for your services every month. Right now, most of them find someone else.</p>
+        <div>
+          <div class="gap-now__num">$36K–$72K</div>
+          <div class="gap-now__sublabel">estimated annual revenue passing you by</div>
+        </div>
+      </div>
+      <div class="gap-after">
+        <div class="gap-after__eyebrow">With Aspire — Year One</div>
+        <p class="gap-after__headline">A site built to show up, earn trust, and turn visitors into bookings — built in weeks, not months.</p>
+        <div>
+          <div class="gap-after__num">+$36K–$72K</div>
+          <div class="gap-after__sublabel">projected annual lift, conservative estimate</div>
+        </div>
+      </div>
+    </div>
+    <div class="gap-bridge">
+      <div class="gap-bridge__line"></div>
+      <span class="gap-bridge__text">The difference is one website, done right.</span>
+      <div class="gap-bridge__line"></div>
+    </div>
+    <div class="gap-metrics">
+      <div class="gap-metric">
+        <div class="gap-metric__val">{METRIC_NEW_CLIENTS}</div>
+        <div class="gap-metric__label">new clients per year</div>
+      </div>
+      <div class="gap-metric">
+        <div class="gap-metric__val">{METRIC_INQUIRIES}</div>
+        <div class="gap-metric__label">more inquiries annually</div>
+      </div>
+      <div class="gap-metric">
+        <div class="gap-metric__val">{METRIC_ROI}</div>
+        <div class="gap-metric__label">return on investment</div>
+      </div>
+    </div>
+  </div>
+</section>
+-->
 
-    <p>Let's talk numbers &mdash; conservatively. These projections are based on industry averages for cleaning service businesses that invest in modern websites with online booking, local SEO, and content marketing.</p>
 
-    <div class="revenue-box">
-      <div class="rev-label">Estimated Additional Annual Revenue</div>
-      <div class="rev-amount">$36K&ndash;$72K</div>
-      <div class="rev-note">Conservative estimate based on improved conversion rates and expanded reach</div>
+<!-- ─── VARIANT C · THE RANGE ────────────────────────────── -->
+<!--
+<section class="sec-group sec-group--dark">
+  <div class="sec-group__in">
+    <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><path d="M2 9l3-3 2 2 3-4"/></svg></span><span class="sec-badge__label">Revenue Impact</span></div>
+    <div class="sec-head">
+      <span class="sec-head__num">08</span>
+      <div class="sec-head__body">
+        <h2 class="sec-head__title">What This Could <em>Mean</em></h2>
+        <p class="sec-head__sub">Three scenarios. All grounded. You pick which one you believe.</p>
+      </div>
+    </div>
+    <div class="range-hero">
+      <div class="range-hero__sub">Conservative Projection · Year One</div>
+      <div class="range-hero__num">$36K–$72K</div>
+      <div class="range-hero__label">in new annual revenue</div>
+      <div class="range-hero__note">{REVENUE_MATH_PARAGRAPH}</div>
+    </div>
+    <div class="range-scenarios">
+      <div class="range-card range-card--conservative">
+        <div class="range-card__tier">Conservative</div>
+        <div class="range-card__amt">{REVENUE_CONSERVATIVE}</div>
+        <span class="range-card__period">per year</span>
+        <p class="range-card__desc">Organic search only. No referrals, no repeat clients, no social. The floor — and still meaningful growth.</p>
+        <div class="range-bar-wrap"><div class="range-bar"></div></div>
+      </div>
+      <div class="range-card range-card--moderate">
+        <div class="range-card__tier">Moderate</div>
+        <div class="range-card__amt">{REVENUE_MODERATE}</div>
+        <span class="range-card__period">per year</span>
+        <p class="range-card__desc">Add Google Business momentum, a few repeat clients, and word-of-mouth from a site people actually share.</p>
+        <div class="range-bar-wrap"><div class="range-bar"></div></div>
+      </div>
+      <div class="range-card range-card--optimistic">
+        <div class="range-card__tier">Optimistic</div>
+        <div class="range-card__amt">{REVENUE_OPTIMISTIC}</div>
+        <span class="range-card__period">per year</span>
+        <p class="range-card__desc">Full local SEO traction, GBP reviews compounding, AI search citations — the ceiling when all channels work together.</p>
+        <div class="range-bar-wrap"><div class="range-bar"></div></div>
+      </div>
+    </div>
+    <div class="range-callout">
+      <div class="range-callout__icon"><svg viewBox="0 0 16 16" fill="none"><path d="M8 2v4l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="2"/></svg></div>
+      <p class="range-callout__text"><strong>We plan to the conservative number and build toward moderate.</strong> If we hit optimistic, that's a great problem to have — and we'll be there to scale with you.</p>
+    </div>
+  </div>
+</section>
+-->
+
+
+<!-- ─── VARIANT D · WHAT IT MEANS ────────────────────────── -->
+<section class="sec-group sec-group--alt">
+  <div class="sec-group__in">
+    <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><path d="M2 9l3-3 2 2 3-4"/></svg></span><span class="sec-badge__label">Revenue Impact</span></div>
+    <div class="sec-head">
+      <span class="sec-head__num">08</span>
+      <div class="sec-head__body">
+        <h2 class="sec-head__title">What This Could <em>Mean</em></h2>
+        <p class="sec-head__sub">Put a number on it — then make it real.</p>
+      </div>
+    </div>
+    <div class="meaning-anchor">
+      <div class="meaning-anchor__label">Projected Annual Revenue Lift</div>
+      <div class="meaning-anchor__num">$36K–$72K</div>
+      <div class="meaning-anchor__period">per year — conservative</div>
+      <div class="meaning-anchor__note">Modeled on roughly 1,200 monthly local searches × a 3% click-through to a top-3 ranking × an 8% booking conversion × $1,800 average annual client value. Online booking lift, referrals, and the new Elder Companionship line are modeled at zero — pure organic floor.</div>
+    </div>
+    <div class="meaning-grid">
+      <div class="meaning-item">
+        <div class="meaning-item__ico"><svg viewBox="0 0 20 20" fill="none"><path d="M10 2a4 4 0 1 0 0 8 4 4 0 0 0 0-8zM4 18a6 6 0 0 1 12 0" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></svg></div>
+        <div class="meaning-item__num"><em>25–40</em> new clients</div>
+        <div class="meaning-item__label">in your first year</div>
+        <p class="meaning-item__sub">People who found you on Google, liked what they saw, and booked — without you lifting a finger.</p>
+      </div>
+      <div class="meaning-item">
+        <div class="meaning-item__ico"><svg viewBox="0 0 20 20" fill="none"><rect x="3" y="5" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.75"/><path d="M3 8l7 5 7-5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></svg></div>
+        <div class="meaning-item__num"><em>90–140</em> inquiries</div>
+        <div class="meaning-item__label">that actually come to you</div>
+        <p class="meaning-item__sub">Real leads, in your inbox, from people already searching for exactly what you offer.</p>
+      </div>
+      <div class="meaning-item">
+        <div class="meaning-item__ico"><svg viewBox="0 0 20 20" fill="none"><rect x="3" y="4" width="14" height="13" rx="2" stroke="currentColor" stroke-width="1.75"/><path d="M3 8h14M7 2v4M13 2v4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></svg></div>
+        <div class="meaning-item__num">One <em>extra</em> booking</div>
+        <div class="meaning-item__label">every two weeks</div>
+        <p class="meaning-item__sub">Consistent, predictable growth — not feast-or-famine, not depending on word of mouth alone.</p>
+      </div>
+      <div class="meaning-item">
+        <div class="meaning-item__ico"><svg viewBox="0 0 20 20" fill="none"><path d="M10 3v14M5 8l5-5 5 5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="meaning-item__num">A <em>real</em> investment</div>
+        <div class="meaning-item__label">in your next chapter</div>
+        <p class="meaning-item__sub">A digital presence as carefully built as the homes you clean — ready for the next 22 years of trust, the next charity clean, the next family who finds you and stays.</p>
+      </div>
+    </div>
+    <div class="meaning-close">
+      <p class="meaning-close__quote">"Most of our clients break even on the website within the first <em>three bookings.</em> Everything after that is growth."</p>
+      <div class="meaning-close__aside">
+        <div class="meaning-close__aside-num">3×</div>
+        <div class="meaning-close__aside-label">typical payback window</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     08 · WHY ASPIRE + CTA
+═══════════════════════════════════════════════════════════ -->
+<section class="sec-group sec-group--dark">
+  <div class="sec-group__in">
+    <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><path d="M6 1l1.5 3.5L11 5l-2.75 2.5L9 11 6 9l-3 2 .75-3.5L1 5l3.5-.5z"/></svg></span><span class="sec-badge__label">Why Us</span></div>
+    <div class="sec-head">
+      <span class="sec-head__num">09</span>
+      <div class="sec-head__body">
+        <h2 class="sec-head__title">Why <em>Aspire Digital</em></h2>
+        <p class="sec-head__sub">You do the work you're great at. We handle the digital side — and we don't disappear after launch.</p>
+      </div>
     </div>
 
-    <h3>How We Get There</h3>
-
-    <ul>
-      <li><strong>Online booking conversion:</strong> Industry data shows that adding online scheduling to a service business website can increase bookings by 25&ndash;40%. If The Modern Maid currently serves around 200 clients, even a 15% increase in new recurring clients could mean 30+ new accounts.</li>
-      <li><strong>Average cleaning client value:</strong> At roughly $150&ndash;250/month for bi-weekly service, each new recurring client represents $1,800&ndash;$3,000 in annual revenue.</li>
-      <li><strong>Local SEO visibility:</strong> Appearing in the local 3-pack for key searches (which proper schema and optimization would target) typically drives a 20&ndash;30% increase in organic traffic for local service businesses.</li>
-      <li><strong>Elder Companionship niche:</strong> This is an untapped market with virtually no digital competition in Delaware County. Even 5&ndash;10 new companionship clients could represent additional steady revenue with strong word-of-mouth potential.</li>
-      <li><strong>Gift certificate sales:</strong> With a prominent, easy-to-use online gift card system, cleaning gift certificates see their highest demand around Mother's Day, holidays, and new homeowner seasons &mdash; conservatively $3,000&ndash;$8,000 annually for a business of your size.</li>
-    </ul>
-
-    <div class="callout">
-      <strong>Important note:</strong> These are conservative ranges, not guarantees. Results depend on market conditions, service capacity, and execution. We use qualifier language ("conservatively," "could mean") because we believe in honest projections. What we <em>can</em> guarantee is that the gap between your real-world reputation and your digital presence is costing you customers right now &mdash; and closing that gap will generate measurable returns.
+    <div class="prose">
+      <p>A husband-and-wife team with 30+ years of combined experience — and we stay small on purpose. Every client gets both of us: Jaime's eye on every design decision, Chris's architecture on every line of code. We don't hand projects off. We don't disappear after launch. Our faith shapes how we price, how we communicate, and what we're willing to put our name on — which means we're straight with you about what your business actually needs, not what earns the biggest contract.</p>
     </div>
-  </section>
 
-  <hr class="divider">
+    <div class="why-values">
+      <div class="why-val">
+        <span class="why-val__icon"><span class="material-symbols-outlined">design_services</span></span>
+        <strong class="why-val__label">Tailored from scratch</strong>
+        <p class="why-val__desc">Every site is designed for that client, that audience, that goal — never pulled from a template shelf.</p>
+      </div>
+      <div class="why-val">
+        <span class="why-val__icon"><span class="material-symbols-outlined">verified</span></span>
+        <strong class="why-val__label">We show up after launch</strong>
+        <p class="why-val__desc">The job isn't done when the site goes live. It's done when your business is growing.</p>
+      </div>
+      <div class="why-val">
+        <span class="why-val__icon"><span class="material-symbols-outlined">handshake</span></span>
+        <strong class="why-val__label">Honest to the core</strong>
+        <p class="why-val__desc">Transparent pricing, straight talk, no disappearing act. Our faith anchors every client relationship.</p>
+      </div>
+    </div>
 
-  <!-- 10: WHY ASPIRE DIGITAL + CTA -->
-  <section>
-    <h2><span class="number">10</span>Why <em>Aspire Digital</em></h2>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-card__photo">
+          <img src="./chris-profile.png" alt="Chris Otten">
+          <div class="team-card__tint"></div>
+          <div class="team-card__socials">
+            <a href="https://instagram.com/chrisotten" class="team-card__social-btn" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://linkedin.com/in/chrisotten" class="team-card__social-btn" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+          </div>
+          <div class="team-card__overlay">
+            <p class="team-card__role">Founder &amp; Technical Director</p>
+            <h3 class="team-card__name">Chris Otten</h3>
+          </div>
+        </div>
+        <div class="team-card__body">
+          <p class="team-card__bio">Handles the strategy, development, and business ops that make a launch actually land. Every site Chris builds is fast, accessible, and SEO-ready from the first line of code.</p>
+          <div class="team-card__links">
+            <a href="mailto:chris@madebyaspire.com">chris@madebyaspire.com</a>
+          </div>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-card__photo">
+          <img src="./jaime-profile.png" alt="Jaime Otten">
+          <div class="team-card__tint"></div>
+          <div class="team-card__socials">
+            <a href="https://instagram.com/jaimeotten" class="team-card__social-btn" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://linkedin.com/in/jaimeotten" class="team-card__social-btn" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+          </div>
+          <div class="team-card__overlay">
+            <p class="team-card__role">Founder &amp; Creative Director</p>
+            <h3 class="team-card__name">Jaime Otten</h3>
+          </div>
+        </div>
+        <div class="team-card__body">
+          <p class="team-card__bio">20+ years of senior UX/UI design across agencies, startups, and product studios. Every visual direction on every site runs through Jaime. Your brand is in good hands.</p>
+          <div class="team-card__links">
+            <a href="mailto:jaime@madebyaspire.com">jaime@madebyaspire.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <p>We're not a factory. We don't sell templates with your logo slapped on top. <strong>Aspire Digital builds custom digital experiences for businesses that have earned their reputation the hard way</strong> &mdash; and deserve a website that reflects it.</p>
+    <div class="why-reviews">
+      <p class="why-reviews__label">What our clients say</p>
+      <div class="review-grid">
+        <div class="review-card">
+          <div class="review-card__stars">★★★★★</div>
+          <p class="review-card__quote">"Chris and Jaime didn't just build us a site — they understood our business and delivered something that actually drives calls. The whole process felt personal."</p>
+          <p class="review-card__by">Aspire Digital Client</p>
+        </div>
+        <div class="review-card">
+          <div class="review-card__stars">★★★★★</div>
+          <p class="review-card__quote">"They explained every decision in plain English, never disappeared after launch, and the site is genuinely fast. Worth every penny."</p>
+          <p class="review-card__by">Aspire Digital Client</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <p>We chose to reach out to The Modern Maid because your story resonated with us. A woman-owned business built from a trunk in 2003, surviving and thriving through recessions and pandemics, donating free cleaning to cancer patients because it's personal &mdash; that's the kind of business we want to work with. That's the kind of story that deserves to be told well online.</p>
-
-    <p>Here's what working with us means:</p>
-
-    <ul>
-      <li><strong>You own everything.</strong> Your website, your content, your data. No hostage situations, no proprietary platforms you can't leave.</li>
-      <li><strong>We speak human.</strong> No jargon, no buzzwords. If we recommend something, we'll explain why in plain English.</li>
-      <li><strong>We measure what matters.</strong> Not vanity metrics &mdash; real leads, real bookings, real revenue impact.</li>
-      <li><strong>We're accessible.</strong> You'll have direct access to the people building your site, not a customer service queue.</li>
-    </ul>
-
+<!-- CTA — standalone closing section -->
+<section class="sec-group sec-group--cream">
+  <div class="sec-group__in">
     <div class="cta-box">
-      <div class="cta-heading">Let's make your digital presence <em>shine</em> like the homes you clean.</div>
-      <p class="cta-sub">No pressure, no commitment &mdash; just a conversation about what's possible.</p>
-      <a href="https://madebyaspire.com/book" class="cta-button" target="_blank" style="display:inline-block;background:#C4622D;color:#fff;padding:16px 40px;border-radius:9999px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:16px;text-decoration:none;transition:background 0.3s,transform 0.2s;margin-top:8px">Book a Free Strategy Call</a>
-      <p style="font-size:13px;color:#999;margin-top:16px;margin-bottom:0">or email <a href="mailto:Chris@aspiredigital.dev" style="color:#C4622D;text-decoration:none">Chris</a> directly</p>
+      <p class="cta-box__eyebrow">Let's Build Something</p>
+      <h3 class="cta-box__heading">Let's give The Modern Maid a digital presence as <em>carefully built</em> as the homes you clean.</h3>
+      <div class="cta-steps">
+        <div class="cta-step">
+          <span class="cta-step__num">1</span>
+          <div>
+            <strong class="cta-step__label">Book a free 30-min strategy call</strong>
+            <p class="cta-step__desc">We'll map out the exact plan for your business — no pitch, just a plan.</p>
+          </div>
+        </div>
+        <div class="cta-step">
+          <span class="cta-step__num">2</span>
+          <div>
+            <strong class="cta-step__label">We design and build — 100% custom</strong>
+            <p class="cta-step__desc">No templates. Typically 30 days from kickoff to launch-ready.</p>
+          </div>
+        </div>
+        <div class="cta-step">
+          <span class="cta-step__num">3</span>
+          <div>
+            <strong class="cta-step__label">You launch and own your market</strong>
+            <p class="cta-step__desc">30 days of post-launch support included. We take 2–3 new clients per month — spots are limited.</p>
+          </div>
+        </div>
+      </div>
+      <a href="https://madebyaspire.com/book" class="btn-pill btn-pill--cream" target="_blank" rel="noopener">
+        <span class="btn-pill__fill"></span>
+        <span class="btn-pill__label">Book a Free Strategy Call</span>
+        <span class="btn-pill__arrow">→</span>
+      </a>
     </div>
-  </section>
+  </div>
+</section>
 
-</div>
 
-<!-- FOOTER -->
-<div class="footer">
-  <p>Prepared by <strong>Aspire Digital</strong> &middot; <a href="https://madebyaspire.com">madebyaspire.com</a></p>
-  <p style="margin-top:8px">Questions? Reach out to <a href="mailto:Chris@aspiredigital.dev">Chris</a> or <a href="mailto:Jaime@aspiredigital.dev">Jaime</a> &middot; <a href="mailto:Chris@aspiredigital.dev">Chris@aspiredigital.dev</a> &middot; <a href="mailto:Jaime@aspiredigital.dev">Jaime@aspiredigital.dev</a></p>
-  <p style="margin-top:12px;font-size:11px;color:var(--text-muted)">&copy; 2026 Aspire Digital &middot; This brief was prepared exclusively for The Modern Maid</p>
-</div>
+<!-- FOOTER — Standard Aspire doc footer -->
+<footer class="guide-footer">
+  <div style="display:flex;flex-direction:column;align-items:center;gap:.5rem;width:100%;max-width:640px;padding-bottom:2rem;border-bottom:1px solid rgba(250,240,226,.07);">
+    <a href="https://madebyaspire.com" target="_blank" rel="noopener" aria-label="Aspire Digital — visit website" style="display:block;margin-bottom:.25rem;">
+      <img src="./aspire-primary-white.svg" alt="Aspire Digital" style="height:26px;width:auto;display:block;opacity:.65;">
+    </a>
+    <p class="guide-footer__heading" style="margin:0;">Questions? We're here.</p>
+    <p class="guide-footer__sub" style="margin:0;">Reach out to either of us directly — we'll get back to you same day.</p>
+  </div>
+  <div class="footer-contacts">
+    <div class="footer-contact">
+      <p class="footer-contact__name">Chris Otten</p>
+      <p class="footer-contact__role">Founder &amp; Strategist</p>
+      <div class="footer-contact__links">
+        <a href="mailto:chris@madebyaspire.com">chris@madebyaspire.com</a>
+        <a href="tel:+16144993575">614-499-3575</a>
+      </div>
+    </div>
+    <div class="footer-contact">
+      <p class="footer-contact__name">Jaime Otten</p>
+      <p class="footer-contact__role">Lead Designer</p>
+      <div class="footer-contact__links">
+        <a href="mailto:jaime@madebyaspire.com">jaime@madebyaspire.com</a>
+        <a href="tel:+16142052796">614-205-2796</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-social">
+    <p class="footer-social__label">Follow us</p>
+    <div class="footer-social__icons">
+      <a class="footer-social__link" href="https://instagram.com/madebyaspire" target="_blank" aria-label="Instagram">
+        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      </a>
+      <a class="footer-social__link" href="https://linkedin.com/company/aspire-digital-dev" target="_blank" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </a>
+      <a class="footer-social__link" href="https://facebook.com/madebyaspire" target="_blank" aria-label="Facebook">
+        <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+      </a>
+    </div>
+  </div>
+  <p class="guide-footer__tagline">Defined by craft. Rooted in faith.</p>
+  <p style="font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(250,240,226,.15);margin-top:.25rem;">Prospect Brief Template · v1.1</p>
+</footer>
 
 </body>
 </html>
