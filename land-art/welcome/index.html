@@ -1,0 +1,1288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Land Art Inc. — Digital Growth Brief | Aspire Digital</title>
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Land Art Inc. — Your Digital Growth Opportunity">
+<meta property="og:description" content="52 years of guaranteed lawns, 2,900+ five-star reviews — and a website that's quietly costing you the next chapter. Here's what we found.">
+<meta property="og:image" content="https://yoursite.madebyaspire.com/land-art/welcome/og-card.png">
+<meta property="og:url" content="https://yoursite.madebyaspire.com/land-art/welcome/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Land Art Inc. — Your Digital Growth Opportunity">
+<meta name="twitter:description" content="A personalized digital review prepared by Aspire Digital.">
+<meta name="twitter:image" content="https://yoursite.madebyaspire.com/land-art/welcome/og-card.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Serif+Display:ital@0;1&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Unbounded:wght@400;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0" rel="stylesheet">
+<style>
+:root{
+  --bg:#FAF0E2; --bg-alt:#F2EDE6; --bg-night:#1A1F28;
+  --accent:#C4622D; --accent-dk:#A34E1A;
+  --green:#4A7B5A; --sage:#8FAF8A;
+  --charcoal:#2C3340;
+  --text:#2C3340; --text-sec:#5A6072; --text-muted:#888E97;
+  --border:rgba(44,51,64,.13); --border-lt:rgba(44,51,64,.07);
+  --white:#fff;
+  --r-sm:6px; --r-md:10px; --r-lg:16px; --r-xl:22px; --r-full:999px;
+  --sh-sm:0 1px 4px rgba(0,0,0,.07); --sh-md:0 4px 16px rgba(0,0,0,.1);
+  --f-d:"DM Serif Display",Georgia,serif;
+  --f-a:"EB Garamond",Georgia,serif;
+  --f-n:"Unbounded",-apple-system,system-ui,sans-serif;
+  --f-b:"DM Sans",-apple-system,system-ui,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{font-size:17px;-webkit-font-smoothing:antialiased;scroll-behavior:smooth;scroll-padding-top:80px;}
+body{font-family:var(--f-b);font-size:16px;line-height:1.75;background:var(--bg-night);color:var(--text);}
+img{max-width:100%;display:block;}
+::selection{background:var(--accent);color:#fff;}
+
+.topbar{position:fixed;top:0;left:0;right:0;z-index:200;height:58px;background:var(--white);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.875rem;padding:0 2rem;box-shadow:0 1px 0 var(--border);}
+.topbar__logo{height:22px;flex-shrink:0;}
+.topbar__sep{width:1px;height:20px;background:var(--border);flex-shrink:0;}
+.topbar__label{font-family:var(--f-b);font-size:.9375rem;font-weight:600;color:var(--text-sec);}
+.topbar__badge{margin-left:auto;font-family:var(--f-n);font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--white);background:var(--accent);padding:4px 12px;border-radius:var(--r-full);max-width:50%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+
+.hero{padding-top:58px;background:var(--bg-night);padding-bottom:0;}
+.hero__inner{max-width:960px;margin:0 auto;padding:5rem 2rem 5.5rem;display:grid;grid-template-columns:1.35fr 1fr;grid-template-rows:auto auto;gap:1.5rem 3.5rem;align-items:start;}
+.hero__top{grid-column:1/-1;padding-bottom:.5rem;}
+.hero__top .hero__h1{font-size:clamp(3rem,6.5vw,5.25rem);}
+.hero__text{min-width:0;}
+.hero__h1{overflow-wrap:anywhere;word-break:break-word;hyphens:auto;}
+.hero__eyebrow{font-family:var(--f-n);font-size:.75rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:1.25rem;display:flex;align-items:center;gap:.625rem;}
+.hero__eyebrow-dot{width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;}
+.hero__h1{font-family:var(--f-d);font-style:normal;font-size:clamp(2.5rem,5.5vw,4.25rem);font-weight:400;color:var(--bg);line-height:1.05;margin-bottom:1rem;}
+.hero__h1 em{font-style:normal;color:var(--accent);font-family:var(--f-d);}
+.hero__sub{font-family:var(--f-b);font-size:1.125rem;color:rgba(250,240,226,.72);line-height:1.65;margin-bottom:0;max-width:480px;}
+.hero__meta{display:flex;flex-direction:column;gap:1.25rem;padding:.25rem 0 .25rem 2rem;border-left:1px solid rgba(255,255,255,.1);margin-top:2rem;}
+.hero__meta-item dt{font-family:var(--f-n);font-size:.6875rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(250,240,226,.3);margin-bottom:.35rem;}
+.hero__meta-item dd{font-family:var(--f-b);font-size:.9375rem;font-weight:500;color:var(--bg);}
+.hero__meta-item dd.fill{font-family:var(--f-a);font-style:normal;font-size:1.25rem;color:var(--sage);}
+.hero__meta-item a{color:inherit;text-decoration:none;border-bottom:1px solid rgba(143,175,138,.4);padding-bottom:1px;}
+
+.accent-stripe{height:3px;background:linear-gradient(to right,var(--accent),#A34E1A);}
+
+.sec-group{padding:5rem 2rem;}
+.sec-group--dark{background:var(--bg-night);}
+.sec-group--cream{background:var(--bg);}
+.sec-group--alt{background:var(--bg-alt);}
+.sec-group__in{max-width:860px;margin:0 auto;}
+
+.sec-badge{display:inline-flex;align-items:center;gap:10px;padding:5px 18px 5px 5px;border-radius:var(--r-full);margin-bottom:1.75rem;}
+.sec-group--cream .sec-badge,.sec-group--alt .sec-badge{background:var(--bg);border:1px solid var(--border);box-shadow:var(--sh-sm);}
+.sec-group--dark .sec-badge{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);}
+.sec-badge__icon{width:30px;height:30px;border-radius:50%;background:var(--green);color:var(--white);display:grid;place-items:center;flex-shrink:0;}
+.sec-badge__icon svg{width:12px;height:12px;fill:none;stroke:#fff;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;}
+.sec-badge__label{font-family:var(--f-n);font-size:.6875rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;}
+.sec-group--cream .sec-badge__label,.sec-group--alt .sec-badge__label{color:var(--text-sec);}
+.sec-group--dark .sec-badge__label{color:rgba(250,240,226,.55);}
+
+.sec-head{display:grid;grid-template-columns:auto 1fr;column-gap:1.75rem;align-items:baseline;margin-bottom:2.5rem;}
+.sec-head__num{font-family:var(--f-d);font-style:normal;font-size:clamp(3rem,5vw,4.5rem);font-weight:400;line-height:1;color:var(--accent);}
+.sec-head__body{display:flex;flex-direction:column;gap:.5rem;}
+.sec-head__title{font-family:var(--f-d);font-style:normal;font-size:clamp(1.75rem,3vw,2.5rem);font-weight:400;line-height:1.15;margin:0;}
+.sec-group--cream .sec-head__title,.sec-group--alt .sec-head__title{color:var(--charcoal);}
+.sec-group--dark .sec-head__title{color:var(--bg);}
+.sec-head__title em{font-style:normal;color:var(--accent);}
+.sec-group--dark .sec-head__title em{color:var(--accent);}
+.sec-head__sub{font-family:var(--f-b);font-size:1rem;line-height:1.65;}
+.sec-group--cream .sec-head__sub,.sec-group--alt .sec-head__sub{color:var(--text-sec);}
+.sec-group--dark .sec-head__sub{color:rgba(250,240,226,.5);}
+
+.prose p{margin-bottom:1rem;line-height:1.8;}
+.sec-group--cream .prose p,.sec-group--alt .prose p{color:var(--text-sec);}
+.sec-group--dark .prose p{color:rgba(250,240,226,.82);}
+.prose p:last-child{margin-bottom:0;}
+.prose strong{font-weight:600;}
+.sec-group--cream .prose strong,.sec-group--alt .prose strong{color:var(--charcoal);}
+.sec-group--dark .prose strong{color:var(--bg);}
+.prose em{font-family:var(--f-a);font-style:normal;}
+
+.sub-head{font-family:var(--f-n);font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin:2.5rem 0 1rem;display:flex;align-items:center;gap:.5rem;}
+.sec-group--cream .sub-head,.sec-group--alt .sub-head{color:var(--text-sec);}
+.sec-group--dark .sub-head{color:rgba(250,240,226,.4);}
+.sub-head::before{content:'';display:block;width:20px;height:1px;background:currentColor;opacity:.6;}
+
+.screenshot-frame{background:var(--white);border-radius:var(--r-lg);padding:8px;border:1px solid var(--border);box-shadow:var(--sh-md);margin:1.5rem 0;overflow:hidden;}
+.sec-group--dark .screenshot-frame{background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.08);}
+.screenshot-frame img{width:100%;border-radius:10px;display:block;}
+.screenshot-caption{text-align:center;font-family:var(--f-n);font-size:.6875rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--text-muted);margin-top:.75rem;}
+.sec-group--dark .screenshot-caption{color:rgba(250,240,226,.35);}
+
+.score-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:1rem;margin:1.5rem 0;}
+.score-card{min-width:0;border-radius:var(--r-lg);padding:1.5rem 1.25rem;text-align:center;}
+.sec-group--cream .score-card,.sec-group--alt .score-card{background:var(--white);border:1px solid var(--border-lt);box-shadow:var(--sh-sm);}
+.sec-group--dark .score-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);}
+.score-card__label{font-family:var(--f-n);font-size:.625rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--text-muted);margin-bottom:.5rem;overflow-wrap:anywhere;}
+.sec-group--dark .score-card__label{color:rgba(250,240,226,.4);}
+.score-card__value{font-family:var(--f-n);font-size:clamp(1.75rem,2.75vw,2.5rem);font-weight:700;color:var(--accent);line-height:1;overflow-wrap:anywhere;word-break:break-word;hyphens:auto;letter-spacing:-.02em;}
+.score-card__note{font-family:var(--f-b);font-size:.875rem;color:var(--text-muted);margin-top:.5rem;}
+.sec-group--dark .score-card__note{color:rgba(250,240,226,.4);}
+
+.kw-table-wrap{background:var(--bg)!important;border:1px solid rgba(44,51,64,.12)!important;border-radius:var(--r-lg);padding:1rem;margin:1.5rem 0;}
+.kw-table-wrap .kw-table{border-color:rgba(44,51,64,.08);}
+.kw-table-wrap .kw-row{border-bottom-color:rgba(44,51,64,.06);}
+.kw-table-wrap .kw-row--hot{background:rgba(196,98,45,.05);}
+.kw-table-wrap .kw-row__rank{color:var(--text-muted);}
+.kw-table-wrap .kw-row__term{color:var(--charcoal);}
+.kw-table-wrap .kw-row__vol{color:var(--accent);}
+
+.stack-split{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(44,51,64,.08);border-radius:var(--r-xl);overflow:hidden;margin:1.5rem 0;}
+.stack-split__side{padding:2rem 1.75rem;display:flex;flex-direction:column;gap:1.5rem;}
+.stack-split__side--win{background:rgba(74,123,90,.06);}
+.stack-split__side--gap{background:rgba(196,98,45,.04);}
+.stack-split__badge{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:4px 12px;border-radius:var(--r-full);display:inline-block;width:fit-content;}
+.stack-split__side--win .stack-split__badge{background:rgba(74,123,90,.15);color:var(--green);}
+.stack-split__side--gap .stack-split__badge{background:rgba(196,98,45,.1);color:var(--accent-dk);}
+.stack-split__stat{display:flex;flex-direction:column;gap:.25rem;}
+.stack-split__num{font-family:var(--f-n);font-weight:700;font-size:clamp(1.125rem,1.875vw,1.5rem);line-height:1.1;}
+.stack-split__side--win .stack-split__num{color:var(--green);}
+.stack-split__side--gap .stack-split__num{color:var(--accent);}
+.stack-split__cmp{font-size:.65em;opacity:.55;font-style:normal;}
+.stack-split__label{font-family:var(--f-b);font-weight:700;font-size:.875rem;color:var(--charcoal);}
+.stack-split__note{font-size:.875rem;line-height:1.5;color:var(--text-muted);}
+
+.tag{display:inline-block;padding:3px 10px;border-radius:var(--r-full);font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;}
+.tag--easy{background:rgba(74,123,90,.15);color:var(--green);}
+.tag--medium{background:rgba(184,134,11,.12);color:#B8860B;}
+.tag--high{background:var(--accent);color:#fff;}
+
+.review-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem;margin:1.5rem 0;}
+.review-card{border-radius:var(--r-lg);padding:1.5rem 1.5rem 1.25rem;display:flex;flex-direction:column;gap:.875rem;}
+.sec-group--cream .review-card,.sec-group--alt .review-card{background:var(--white);border:1px solid var(--border-lt);box-shadow:var(--sh-sm);}
+.sec-group--dark .review-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);}
+.review-card__stars{color:var(--accent);font-size:1rem;letter-spacing:.2em;line-height:1;}
+.review-card__quote{font-family:var(--f-b);font-style:normal;font-size:1rem;line-height:1.6;margin:0;}
+.sec-group--cream .review-card__quote,.sec-group--alt .review-card__quote{color:var(--charcoal);}
+.sec-group--dark .review-card__quote{color:rgba(250,240,226,.92);}
+.review-card__by{font-family:var(--f-b);font-size:.8125rem;font-weight:500;color:var(--text-muted);margin-top:auto;}
+.sec-group--dark .review-card__by{color:rgba(250,240,226,.45);}
+
+.opp-callout{border-left:3px solid var(--accent);border-radius:0 var(--r-md) var(--r-md) 0;padding:1.25rem 1.5rem;margin:2rem 0;font-size:.9375rem;line-height:1.7;}
+.sec-group--cream .opp-callout,.sec-group--alt .opp-callout{background:var(--bg-alt);color:var(--text-sec);}
+.sec-group--dark .opp-callout{background:rgba(250,240,226,.04);color:rgba(250,240,226,.82);}
+.opp-callout strong{font-weight:600;}
+.sec-group--cream .opp-callout strong,.sec-group--alt .opp-callout strong{color:var(--charcoal);}
+.sec-group--dark .opp-callout strong{color:var(--bg);}
+
+.score-card__value--word{font-size:clamp(1.5rem,2vw,1.875rem);font-weight:700;font-family:var(--f-b);font-style:normal;letter-spacing:-.01em;}
+.grade-legend{margin:1rem 0 2.5rem;}
+.grade-legend__label{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);margin-bottom:.5rem;}
+.grade-legend__items{display:flex;background:var(--white);border:1px solid rgba(44,51,64,.12);border-radius:10px;box-shadow:0 1px 4px rgba(44,51,64,.07);overflow:hidden;}
+.grade-legend__item{flex:1;padding:.875rem 1rem;border-right:1px solid rgba(44,51,64,.1);}
+.grade-legend__item:last-child{border-right:none;}
+.grade-legend__dots{font-size:.55rem;letter-spacing:.15em;line-height:1;margin-bottom:.3rem;}
+.grade-legend__grade{font-family:var(--f-n);font-size:.6875rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-bottom:.25rem;}
+.grade-legend__def{font-family:var(--f-b);font-size:.7rem;color:var(--text-muted);line-height:1.4;}
+.grade-legend__item--strong{border-top:3px solid #1B7A6E;}.grade-legend__item--strong .grade-legend__grade,.grade-legend__item--strong .grade-legend__dots{color:#1B7A6E;}
+.grade-legend__item--fair{border-top:3px solid #8B7200;}.grade-legend__item--fair .grade-legend__grade,.grade-legend__item--fair .grade-legend__dots{color:#8B7200;}
+.grade-legend__item--weak{border-top:3px solid #B85C00;}.grade-legend__item--weak .grade-legend__grade,.grade-legend__item--weak .grade-legend__dots{color:#B85C00;}
+.grade-legend__item--poor{border-top:3px solid #8B1A1A;}.grade-legend__item--poor .grade-legend__grade,.grade-legend__item--poor .grade-legend__dots{color:#8B1A1A;}
+
+.callout{border-radius:var(--r-md);padding:1.25rem 1.5rem;margin:1.5rem 0;font-size:.9375rem;line-height:1.7;border-left:3px solid var(--accent);}
+.sec-group--cream .callout,.sec-group--alt .callout{background:var(--white);color:var(--text-sec);box-shadow:var(--sh-sm);}
+.sec-group--dark .callout{background:rgba(250,240,226,.04);color:rgba(250,240,226,.75);border-left-color:var(--accent);}
+.callout strong{font-weight:600;}
+.sec-group--cream .callout strong,.sec-group--alt .callout strong{color:var(--charcoal);}
+.sec-group--dark .callout strong{color:var(--bg);}
+
+.btn-pill{position:relative;overflow:hidden;isolation:isolate;display:inline-flex;align-items:center;border-radius:var(--r-full);text-decoration:none;cursor:pointer;border:1.5px solid;font-family:var(--f-b);font-weight:600;}
+.btn-pill__fill{position:absolute;top:4px;bottom:4px;right:4px;border-radius:var(--r-full);transition:left .65s cubic-bezier(.22,1,.36,1);}
+.btn-pill__label{position:relative;z-index:1;}
+.btn-pill__arrow{position:relative;z-index:1;border-radius:50%;display:grid;place-items:center;flex-shrink:0;transition:transform .2s;}
+.btn-pill:hover .btn-pill__arrow{transform:translateX(3px);}
+.btn-pill--cream{background:#FAF0E2;color:var(--accent);border-color:#FAF0E2;padding:5px 5px 5px 26px;min-height:56px;font-size:1rem;}
+.btn-pill--cream .btn-pill__fill{background:var(--white);left:calc(100% - 48px);}
+.btn-pill--cream:hover .btn-pill__fill{left:4px;}
+.btn-pill--cream .btn-pill__label{color:var(--accent);}
+.btn-pill--cream .btn-pill__arrow{width:44px;height:44px;background:rgba(196,98,45,.14);color:var(--accent);margin-left:18px;font-size:1rem;}
+
+.cta-box{text-align:center;border-radius:var(--r-xl);padding:3rem 2.5rem;margin:2rem 0;}
+.sec-group--cream .cta-box,.sec-group--alt .cta-box{background:var(--bg-night);color:var(--bg);}
+.sec-group--dark .cta-box{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);}
+.cta-box__eyebrow{font-family:var(--f-n);font-size:.6875rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:1rem;}
+.cta-box__heading{font-family:var(--f-d);font-style:normal;font-size:clamp(1.75rem,3vw,2.5rem);font-weight:400;line-height:1.15;margin-bottom:.75rem;color:var(--bg);overflow-wrap:anywhere;}
+.cta-box__heading em{color:var(--accent);}
+.cta-box__sub{font-size:1.0625rem;color:rgba(250,240,226,.55);margin-bottom:2rem;max-width:500px;margin-left:auto;margin-right:auto;line-height:1.55;}
+
+.guide-footer{background:var(--charcoal);border-top:1px solid rgba(250,240,226,.08);padding:4rem 3rem 3rem;display:flex;flex-direction:column;align-items:center;gap:1.5rem;text-align:center;}
+.guide-footer__heading{font-family:var(--f-d);font-style:normal;font-size:1.375rem;color:rgba(250,240,226,.82);margin-bottom:.25rem;line-height:1.2;}
+.guide-footer__sub{font-family:var(--f-a);font-style:normal;font-size:.9375rem;color:rgba(250,240,226,.35);margin-bottom:.5rem;}
+.footer-contacts{display:grid;grid-template-columns:1fr 1fr;gap:1rem;width:100%;max-width:640px;}
+.footer-contact{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.07);border-left:3px solid var(--green);border-radius:var(--r-lg);padding:1.5rem 1.75rem;text-align:left;}
+.footer-contact__name{font-family:var(--f-b);font-weight:700;font-size:1.0625rem;color:rgba(250,240,226,.92);margin-bottom:.3rem;}
+.footer-contact__role{font-size:.9375rem;color:rgba(250,240,226,.38);margin-bottom:1rem;}
+.footer-contact__links{display:flex;flex-direction:column;gap:.3rem;}
+.footer-contact__links a{font-size:.9375rem;color:rgba(250,240,226,.65);text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(250,240,226,.25);transition:color .18s;}
+.footer-contact__links a:hover{color:rgba(250,240,226,.92);}
+.footer-social{width:100%;max-width:640px;text-align:center;}
+.footer-social__label{font-family:var(--f-b);font-size:.9375rem;font-weight:600;color:rgba(250,240,226,.4);margin-bottom:1rem;}
+.footer-social__icons{display:flex;gap:.875rem;justify-content:center;}
+.footer-social__link{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);display:grid;place-items:center;color:rgba(250,240,226,.5);transition:background .2s,color .2s;}
+.footer-social__link:hover{background:var(--accent);color:#fff;}
+.footer-social__link svg{width:16px;height:16px;fill:currentColor;}
+.guide-footer__tagline{font-family:var(--f-a);font-style:normal;font-size:.875rem;color:rgba(250,240,226,.22);letter-spacing:.01em;margin-top:.5rem;}
+
+.phase-roadmap{margin:2rem 0 0;display:flex;flex-direction:column;gap:1.75rem;}
+.phase-header{display:flex;align-items:center;gap:.75rem;margin-bottom:.875rem;}
+.phase-label{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:4px 14px;border-radius:var(--r-full);white-space:nowrap;}
+.phase-label--quick{background:rgba(196,98,45,.1);color:var(--accent-dk);}
+.phase-label--m1{background:rgba(74,123,90,.1);color:#3D6B4A;}
+.phase-label--m2{background:rgba(44,51,64,.07);color:var(--text-sec);}
+.phase-divider{flex:1;height:1px;background:var(--border);}
+.phase-note{font-family:var(--f-b);font-size:.75rem;font-weight:600;color:var(--text-sec);white-space:nowrap;background:var(--bg-alt);border:1px solid var(--border);border-radius:var(--r-full);padding:3px 12px;}
+.phase-items{display:grid;grid-template-columns:1fr;gap:.625rem;}
+.phase-items--grid{grid-template-columns:1fr 1fr;}
+.phase-item{padding:1.25rem 1.5rem;border-radius:var(--r-lg);background:var(--white);border:1px solid var(--border-lt);display:flex;flex-direction:column;gap:.5rem;}
+.phase-item__title{font-family:var(--f-b);font-weight:700;font-size:.9375rem;color:var(--charcoal);line-height:1.25;margin:0;}
+.phase-item__desc{font-size:.875rem;color:var(--text-sec);line-height:1.65;margin:0;flex:1;}
+
+.team-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:2.5rem;}
+.team-card{border-radius:var(--r-xl);overflow:hidden;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);}
+.team-card__photo{aspect-ratio:3/4;overflow:hidden;position:relative;}
+.team-card__photo img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;transition:transform .5s cubic-bezier(.22,1,.36,1);}
+.team-card:hover .team-card__photo img{transform:scale(1.04);}
+.team-card__tint{position:absolute;inset:0;background:linear-gradient(to bottom,transparent 30%,rgba(20,24,32,.55) 65%,rgba(20,24,32,.92) 100%);}
+.team-card__overlay{position:absolute;bottom:0;left:0;right:0;padding:1.5rem 1.75rem 1.75rem;display:flex;flex-direction:column;gap:.375rem;}
+.team-card__role{font-family:var(--f-b);font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.55);margin:0;}
+.team-card__name{font-family:var(--f-d);font-size:clamp(28px,3.5vw,48px);font-weight:400;line-height:1;letter-spacing:-.02em;color:#fff;margin:0;}
+.team-card__body{padding:1.5rem 1.75rem 1.875rem;}
+.team-card__bio{font-size:.9375rem;line-height:1.65;color:rgba(250,240,226,.6);}
+.team-card__links{display:flex;flex-direction:column;gap:.3rem;margin-top:1.125rem;}
+.team-card__links a{font-size:.875rem;color:rgba(250,240,226,.5);text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(250,240,226,.2);}
+.why-values{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.07);border-radius:var(--r-xl);overflow:hidden;margin:2rem 0;}
+.why-val{background:rgba(255,255,255,.03);padding:1.625rem 1.5rem;display:flex;flex-direction:column;gap:.5rem;}
+.why-val__icon{width:34px;height:34px;border-radius:var(--r-md);background:rgba(196,98,45,.14);display:grid;place-items:center;flex-shrink:0;}
+.why-val__icon .material-symbols-outlined{font-size:17px;color:#E09360;}
+.why-val__label{font-family:var(--f-b);font-weight:700;font-size:.9375rem;color:rgba(250,240,226,.88);line-height:1.2;}
+.why-val__desc{font-size:.875rem;color:rgba(250,240,226,.48);line-height:1.55;margin:0;}
+.why-reviews{margin-top:2.5rem;}
+.why-reviews__label{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(250,240,226,.25);margin-bottom:1rem;}
+
+.cta-steps{display:flex;flex-direction:column;gap:.625rem;margin:1.5rem auto 2rem;max-width:400px;text-align:left;}
+.cta-step{display:flex;gap:.875rem;align-items:flex-start;}
+.cta-step__num{width:26px;height:26px;border-radius:50%;background:rgba(196,98,45,.2);border:1px solid rgba(196,98,45,.35);color:#E09360;font-family:var(--f-n);font-size:.5625rem;font-weight:700;display:grid;place-items:center;flex-shrink:0;margin-top:.175rem;}
+.cta-step__label{display:block;font-family:var(--f-b);font-weight:700;font-size:.9375rem;color:var(--bg);line-height:1.3;margin-bottom:.2rem;}
+.cta-step__desc{font-size:.8125rem;color:rgba(250,240,226,.42);line-height:1.5;margin:0;}
+
+.hero__opp-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:var(--r-xl);padding:2.5rem 2rem;text-align:center;display:flex;flex-direction:column;align-items:center;gap:.75rem;}
+.hero__opp-label{font-family:var(--f-n);font-size:.625rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(250,240,226,.32);}
+.hero__opp-num{font-family:var(--f-d);font-style:normal;font-size:clamp(2.5rem,5vw,3.75rem);font-weight:400;line-height:1;color:var(--bg);overflow-wrap:anywhere;}
+.hero__opp-denom{font-family:var(--f-n);font-size:.625rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(250,240,226,.22);margin-top:-.25rem;}
+.hero__opp-badge{font-family:var(--f-b);font-size:.8125rem;font-weight:600;padding:5px 16px;border-radius:var(--r-full);background:rgba(196,98,45,.15);color:#E09360;}
+.hero__opp-badge--high{background:rgba(126,200,150,.12);color:#7EC896;}
+.hero__opp-desc{font-family:var(--f-b);font-size:.875rem;color:rgba(250,240,226,.35);line-height:1.55;max-width:220px;text-align:center;}
+
+.quick-summary{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--r-xl);overflow:hidden;margin:0 0 2.5rem;}
+.quick-summary__item{background:var(--white);padding:1.5rem 1.75rem;}
+.quick-summary__label{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:.625rem;}
+.quick-summary__text{font-size:.9rem;color:var(--text-sec);line-height:1.65;}
+.quick-summary__text ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.5rem;}
+.quick-summary__text ul li{position:relative;padding-left:1rem;line-height:1.55;}
+.quick-summary__text ul li::before{content:'';position:absolute;left:0;top:.6em;width:5px;height:5px;border-radius:50%;background:var(--green);}
+
+.win-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin:1rem 0 2.5rem;}
+.win-card{display:flex;gap:.875rem;padding:1.125rem 1.25rem;border-radius:var(--r-md);background:var(--white);border:1px solid rgba(74,123,90,.18);align-items:flex-start;}
+.win-card__ico{width:26px;height:26px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;flex-shrink:0;font-size:.75rem;font-weight:700;font-family:var(--f-b);margin-top:.1rem;}
+.win-card__body{flex:1;min-width:0;}
+.win-card__label{display:block;font-family:var(--f-b);font-weight:700;font-size:.9375rem;color:var(--charcoal);margin-bottom:.25rem;line-height:1.25;}
+.win-card__desc{font-size:.875rem;color:var(--text-sec);line-height:1.55;margin:0;}
+
+.gap-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin:1rem 0 2rem;}
+.gap-card{display:flex;gap:.875rem;padding:1.125rem 1.25rem;border-radius:var(--r-md);background:rgba(196,98,45,.04);border:1px solid rgba(196,98,45,.18);align-items:flex-start;}
+.gap-card__ico{width:26px;height:26px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;flex-shrink:0;font-size:.875rem;font-weight:700;font-family:var(--f-b);margin-top:.1rem;}
+.gap-card__body{flex:1;min-width:0;}
+.gap-card__label{display:block;font-family:var(--f-b);font-weight:700;font-size:.9375rem;color:var(--charcoal);margin-bottom:.25rem;line-height:1.25;}
+.gap-card__desc{font-size:.875rem;color:var(--text-sec);line-height:1.55;margin:0;}
+
+.kw-table{display:flex;flex-direction:column;border:1px solid rgba(255,255,255,.08);border-radius:var(--r-lg);overflow:hidden;}
+.kw-row{display:grid;grid-template-columns:36px 1fr 140px 130px;align-items:center;padding:.875rem 1.25rem;border-bottom:1px solid rgba(255,255,255,.06);gap:1.25rem;}
+.kw-row:last-child{border-bottom:none;}
+.kw-row--hot{background:rgba(196,98,45,.08);}
+.kw-row__rank{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.08em;color:rgba(250,240,226,.28);}
+.kw-row__term{font-size:.9375rem;font-weight:500;color:rgba(250,240,226,.85);}
+.kw-row__vol{font-family:var(--f-n);font-style:normal;font-size:.6875rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);text-align:right;white-space:nowrap;}
+.kw-row__tag{display:flex;justify-content:flex-end;}
+
+.split-cards-wrap{background:var(--bg);border-radius:var(--r-xl);padding:1.5rem;margin:1.25rem 0 1.5rem;}
+.split-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:0 .875rem;}
+.split-card{display:grid;grid-template-rows:subgrid;grid-row:span 3;border-radius:var(--r-lg);overflow:hidden;border:1px solid rgba(196,98,45,.15);}
+.split-card__gap{background:rgba(196,98,45,.05);border-bottom:1px solid rgba(196,98,45,.12);padding:1.75rem 1.5rem;}
+.split-card__divider{display:flex;align-items:center;justify-content:center;padding:.55rem 1rem;background:rgba(196,98,45,.04);gap:.5rem;}
+.split-card__divider-line{flex:1;height:1px;background:rgba(196,98,45,.18);}
+.split-card__divider-badge{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);background:rgba(196,98,45,.1);border:1px solid rgba(196,98,45,.22);padding:.25rem .6rem;border-radius:var(--r-full);white-space:nowrap;}
+.split-card__solve{background:var(--white);padding:1.75rem 1.5rem;}
+.split-card__gap-icon{width:28px;height:28px;border-radius:50%;background:rgba(196,98,45,.12);border:1px solid rgba(196,98,45,.25);display:flex;align-items:center;justify-content:center;font-size:.8125rem;margin-bottom:.875rem;color:var(--accent);}
+.split-card__gap-title{font-family:var(--f-b);font-size:.9375rem;font-weight:700;color:var(--charcoal);margin-bottom:.375rem;line-height:1.3;}
+.split-card__gap-copy{font-size:.875rem;color:var(--text-sec);line-height:1.6;}
+.split-card__solve-num{font-family:var(--f-n);font-size:1.125rem;font-weight:900;color:var(--accent);line-height:1;margin-bottom:.5rem;letter-spacing:-.02em;}
+.split-card__solve-title{font-family:var(--f-b);font-size:.9375rem;font-weight:700;color:var(--charcoal);margin-bottom:.375rem;line-height:1.3;}
+.split-card__solve-copy{font-size:.875rem;color:var(--text-sec);line-height:1.6;}
+
+.search-compare{display:grid;grid-template-columns:1fr 1fr;border-radius:var(--r-lg);overflow:hidden;margin:.875rem 0 1.25rem;border:1px solid rgba(250,240,226,.08);}
+.search-compare__col{padding:1.25rem 1.5rem;}
+.search-compare__col--google{background:rgba(250,240,226,.04);border-right:1px solid rgba(250,240,226,.08);}
+.search-compare__col--ai{background:rgba(196,98,45,.1);}
+.search-compare__label{font-family:var(--f-b);font-size:.875rem;font-weight:700;color:rgba(250,240,226,.55);margin-bottom:.875rem;}
+.search-compare__label--ai{color:var(--accent);}
+.search-compare__rows{display:flex;flex-direction:column;gap:.625rem;}
+.search-compare__row{display:flex;align-items:flex-start;gap:.625rem;}
+.search-compare__dot{width:5px;height:5px;border-radius:50%;background:rgba(250,240,226,.2);margin-top:.425rem;flex-shrink:0;}
+.search-compare__dot--ai{background:var(--accent);}
+.search-compare__text{font-size:.875rem;color:rgba(250,240,226,.5);line-height:1.55;}
+.search-compare__text--ai{color:rgba(250,240,226,.85);}
+.search-compare__footer{grid-column:1/-1;padding:1.125rem 1.5rem;background:rgba(250,240,226,.06);border-top:1px solid rgba(250,240,226,.08);font-family:var(--f-b);font-size:1rem;font-weight:500;color:rgba(250,240,226,.82);line-height:1.6;text-align:center;}
+
+.beyond-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.07);border-radius:var(--r-xl);overflow:hidden;margin:1.5rem 0;}
+.beyond-item{background:rgba(255,255,255,.025);padding:1.75rem 1.5rem;display:flex;flex-direction:column;gap:.625rem;}
+.beyond-item__ico{width:36px;height:36px;border-radius:var(--r-md);background:rgba(196,98,45,.15);display:grid;place-items:center;flex-shrink:0;}
+.beyond-item__ico .material-symbols-outlined{font-size:18px;color:#E09360;}
+.beyond-item__label{font-family:var(--f-b);font-weight:700;font-size:.9375rem;color:var(--bg);line-height:1.2;}
+.beyond-item__desc{font-size:.875rem;color:rgba(250,240,226,.52);line-height:1.55;}
+
+.funnel-chain{display:flex;align-items:stretch;margin:0 0 2rem;flex-wrap:wrap;}
+.funnel-step{flex:1;min-width:120px;position:relative;padding:1.75rem 1.25rem 1.5rem;border:1px solid var(--border);border-right:none;background:var(--white);}
+.funnel-step:first-child{border-radius:var(--r-lg) 0 0 var(--r-lg);}
+.funnel-step:last-child{border-right:1px solid var(--border);border-radius:0 var(--r-lg) var(--r-lg) 0;}
+.funnel-step__operator{position:absolute;right:-14px;top:50%;transform:translateY(-50%);width:26px;height:26px;border-radius:50%;background:var(--bg-alt);border:1px solid var(--border);display:grid;place-items:center;z-index:2;font-family:var(--f-n);font-size:.5rem;font-weight:700;color:var(--text-muted);}
+.funnel-step__label{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);margin-bottom:.625rem;}
+.funnel-step__val{font-family:var(--f-d);font-style:normal;font-size:clamp(1.5rem,2.5vw,2rem);color:var(--charcoal);line-height:1;margin-bottom:.25rem;overflow-wrap:anywhere;}
+.funnel-step__sub{font-size:.75rem;color:var(--text-muted);line-height:1.4;}
+.funnel-result{background:var(--accent);border-radius:var(--r-xl);padding:2.75rem 3rem;text-align:center;display:flex;align-items:center;justify-content:center;gap:3rem;margin-bottom:1.5rem;flex-wrap:wrap;}
+.funnel-result__period{text-align:center;}
+.funnel-result__amt{font-family:var(--f-d);font-style:normal;font-size:clamp(2.5rem,5vw,4rem);font-weight:400;color:#fff;line-height:1;margin-bottom:.375rem;overflow-wrap:anywhere;}
+.funnel-result__period-label{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.55);}
+.funnel-result__divider{width:1px;height:60px;background:rgba(255,255,255,.2);}
+.funnel-assumptions{border-radius:var(--r-lg);background:var(--bg-alt);overflow:hidden;}
+.funnel-assumptions__head{font-family:var(--f-b);font-size:.9375rem;font-weight:600;color:var(--charcoal);padding:1.25rem 1.5rem;border-bottom:1px solid var(--border);}
+.funnel-assumptions__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;}
+.funnel-assumptions__item{padding:1.375rem 1.5rem;border-right:1px solid var(--border);display:flex;flex-direction:column;gap:.375rem;}
+.funnel-assumptions__item:last-child{border-right:none;}
+.funnel-assumptions__val{font-family:var(--f-d);font-style:normal;font-size:clamp(1.75rem,2.5vw,2.25rem);color:var(--accent);line-height:1;}
+.funnel-assumptions__label{font-size:.875rem;color:var(--text-muted);line-height:1.5;}
+.funnel-assumptions__footer{font-size:.875rem;color:var(--text-muted);line-height:1.55;padding:.875rem 1.5rem;border-top:1px solid var(--border);}
+
+.compare-table{border:1px solid var(--border);border-radius:var(--r-xl);overflow:hidden;margin:1.5rem 0;}
+.compare-table__head,.compare-table__row{display:grid;grid-template-columns:150px repeat(3,1fr);}
+.compare-table__corner{background:var(--bg-alt);border-right:1px solid var(--border);padding:.875rem 1.25rem;}
+.compare-table__col-head{padding:1.125rem 1.25rem .75rem;font-family:var(--f-d);font-style:normal;font-size:1.0625rem;font-weight:400;color:var(--charcoal);border-left:1px solid var(--border);background:var(--bg-alt);}
+.compare-table__col-head--you{background:rgba(196,98,45,.06);position:relative;}
+.compare-table__col-head--you::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--accent);}
+.compare-table__label{padding:.75rem 1.25rem;font-size:.875rem;font-weight:500;color:var(--text-muted);display:flex;align-items:center;background:var(--bg-alt);border-top:1px solid var(--border);border-right:1px solid var(--border);}
+.compare-table__cell{padding:.75rem 1.25rem;font-size:.875rem;font-weight:600;border-left:1px solid var(--border);border-top:1px solid var(--border);display:flex;align-items:center;background:var(--white);}
+.compare-table__cell--you{background:rgba(196,98,45,.04);}
+.compare-table__cell--good{color:var(--green);}
+.compare-table__cell--mid{color:#B8860B;}
+.compare-table__cell--low{color:var(--accent);}
+
+@media(max-width:820px){
+  .team-grid{grid-template-columns:1fr;}
+  .beyond-strip{grid-template-columns:repeat(2,1fr);}
+  .hero__inner{grid-template-columns:1fr;gap:2.5rem;padding:4rem 1.5rem 4.5rem;}
+  .hero__meta{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem 2rem;padding:2rem 0 0;border-left:none;border-top:1px solid rgba(255,255,255,.1);}
+  .sec-group{padding:3.5rem 1.5rem;}
+  .sec-head{grid-template-columns:1fr;row-gap:.25rem;}
+  .sec-head__num{font-size:2.5rem;}
+  .quick-summary{grid-template-columns:1fr;}
+  .win-grid,.gap-grid{grid-template-columns:1fr;}
+  .kw-row{grid-template-columns:28px 1fr auto;}.kw-row__tag{display:none;}
+  .funnel-assumptions__grid{grid-template-columns:1fr 1fr;}.funnel-assumptions__item:nth-child(2){border-right:none;}.funnel-assumptions__item:nth-child(3){border-top:1px solid var(--border);}
+  .compare-table{overflow-x:auto;}.compare-table__head,.compare-table__row{min-width:580px;}
+  .split-cards-wrap{padding:1rem;}.split-cards{grid-template-columns:1fr;gap:1rem;}.split-card{grid-template-rows:auto auto auto;grid-row:span 1;}
+}
+@media(max-width:560px){
+  .why-values{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <img class="topbar__logo" src="/assets/aspire-logo.svg" alt="Aspire Digital">
+  <div class="topbar__sep"></div>
+  <span class="topbar__label">Digital Growth Brief</span>
+  <span class="topbar__badge">Prepared for Land Art Inc.</span>
+</header>
+
+<section class="hero">
+  <div class="hero__inner">
+    <div class="hero__top">
+      <p class="hero__eyebrow"><span class="hero__eyebrow-dot"></span>Digital Growth Brief · April 30, 2026</p>
+      <h1 class="hero__h1">Land Art Inc.<br>your <em>website</em> should match your<br><em>52-year</em> reputation.</h1>
+    </div>
+    <div class="hero__text">
+      <p class="hero__sub">You've built the dominant lawn-care brand in Northwest Ohio — 2,900+ five-star reviews and three regional offices. Your website is the one part of that story that hasn't kept up.</p>
+      <dl class="hero__meta">
+        <div class="hero__meta-item"><dt>Prepared For</dt><dd class="fill">Land Art Inc.</dd></div>
+        <div class="hero__meta-item"><dt>Date</dt><dd>April 30, 2026</dd></div>
+        <div class="hero__meta-item"><dt>Prepared By</dt><dd><a href="https://madebyaspire.com" target="_blank">Aspire Digital</a></dd></div>
+      </dl>
+    </div>
+    <div class="hero__opp-card">
+      <p class="hero__opp-label">Revenue Opportunity</p>
+      <p class="hero__opp-num">~$80K</p>
+      <p class="hero__opp-denom">projected annual lift</p>
+      <span class="hero__opp-badge hero__opp-badge--high">High Opportunity</span>
+      <p class="hero__opp-desc">Conservative estimate — pure organic search, no GBP or referrals counted.</p>
+    </div>
+  </div>
+</section>
+<div class="accent-stripe"></div>
+
+
+<!-- 01 · THE HONEST PICTURE -->
+<section class="sec-group sec-group--cream">
+  <div class="sec-group__in">
+    <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><circle cx="6" cy="6" r="3.5"/><circle cx="6" cy="6" r="1" fill="#fff" stroke="none"/></svg></span><span class="sec-badge__label">The Starting Point</span></div>
+    <div class="sec-head">
+      <span class="sec-head__num">01</span>
+      <div class="sec-head__body">
+        <h2 class="sec-head__title">The Honest <em>Picture</em></h2>
+        <p class="sec-head__sub">Who you are, what you've built, how you show up today.</p>
+      </div>
+    </div>
+    <div class="quick-summary">
+      <div class="quick-summary__item">
+        <p class="quick-summary__label">Who You Are</p>
+        <div class="quick-summary__text">
+          <ul>
+            <li>Family-owned lawn-care business, founded over 52 years ago</li>
+            <li>HQ in Perrysburg, OH — three regional offices across Ohio + Florida</li>
+            <li>Owner-guaranteed satisfaction, custom-blended fertilizers, no franchise script</li>
+          </ul>
+        </div>
+      </div>
+      <div class="quick-summary__item">
+        <p class="quick-summary__label">What You've Built</p>
+        <div class="quick-summary__text">
+          <ul>
+            <li>4.9 ★ on Google with 2,912 reviews at the Perrysburg HQ alone</li>
+            <li>3,441 total reviews referenced site-wide across platforms</li>
+            <li>BBB + NPMA member; 50+ communities served across two states</li>
+          </ul>
+        </div>
+      </div>
+      <div class="quick-summary__item">
+        <p class="quick-summary__label">How You Show Up</p>
+        <div class="quick-summary__text">
+          <ul>
+            <li>Site sits on a dated CMS — no online quoting, basic forms only</li>
+            <li>Three offices share one website + one phone number — no clear local handoff</li>
+            <li>Existing blog content is location-specific (Plain City, Naples) — but underused</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="prose">
+      <p>Fifty-two years is not a tagline — it's a measurable fact. <strong>Land Art has been guaranteeing better lawns since the early 1970s,</strong> long before "Toledo lawn care" was a Google query. You expanded from one Northwest Ohio office to Plain City to Naples without losing the family-owned feel, and customers tell you regularly that they've stayed for twenty-plus years. That kind of compounding loyalty is hard-won and rare.</p>
+      <p>The Google numbers reflect that reputation. <strong>2,912 reviews at a 4.9-star average</strong> is roughly nine times the review volume of the nearest national franchise in your trade area. When someone in Perrysburg, Sylvania, or Maumee searches "lawn care near me," your name carries the most social proof on the page. That's earned authority — most contractors will never see those numbers, no matter how much they spend on ads.</p>
+      <p>What we want to flag — gently — is that <strong>the website doesn't tell that story.</strong> The current site is functional, mobile-accessible, and the SMS consent block is well-built (already A2P-compliant, which most lawn-care companies don't do). But the chassis underneath is older Drupal-style markup, the hero treatment is image-heavy and slow on mobile, and three offices share a single phone number without making it easy for a Plain City homeowner to know they've reached the right team. The brand's reputation is doing the heavy lifting that the website should be sharing.</p>
+    </div>
+
+    <h3 class="sub-head">At a glance</h3>
+    <div class="score-grid">
+      <div class="score-card">
+        <div class="score-card__label">Years in Business</div>
+        <div class="score-card__value">52+</div>
+        <div class="score-card__note">Family-owned since the early 1970s</div>
+      </div>
+      <div class="score-card">
+        <div class="score-card__label">Google Reviews</div>
+        <div class="score-card__value">2,912</div>
+        <div class="score-card__note">Perrysburg HQ — 4.9 ★ average</div>
+      </div>
+      <div class="score-card">
+        <div class="score-card__label">Regional Offices</div>
+        <div class="score-card__value">3</div>
+        <div class="score-card__note">Perrysburg · Plain City · Naples</div>
+      </div>
+      <div class="score-card">
+        <div class="score-card__label">Communities Served</div>
+        <div class="score-card__value">50+</div>
+        <div class="score-card__note">Across Ohio + Southwest Florida</div>
+      </div>
+    </div>
+
+    <h3 class="sub-head">What clients are saying</h3>
+    <div class="review-grid">
+      <div class="review-card">
+        <span class="review-card__stars">★★★★★</span>
+        <p class="review-card__quote">"Land-Art is essential to keeping weeds under control in the Toledo area."</p>
+        <span class="review-card__by">— Justin Powell, Google review</span>
+      </div>
+      <div class="review-card">
+        <span class="review-card__stars">★★★★★</span>
+        <p class="review-card__quote">"Customers who have remained loyal for over twenty years."</p>
+        <span class="review-card__by">— Sentiment cited on the company About page</span>
+      </div>
+    </div>
+
+    <div class="opp-callout">
+      <strong>The opportunity is clear:</strong> the brand has already done the hard part — building a reputation people stake their lawns on. The website's job is to convert the next homeowner who searches for that reputation, in any of three markets, on any device, in 90 seconds or less. Right now, it doesn't.
+    </div>
+  </div>
+</section>
+
+
+<!-- 02 · YOUR SCORECARD -->
+<section class="sec-group sec-group--cream">
+  <div class="sec-group__in">
+    <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><path d="M2 9V3M6 9V5M10 9V2"/></svg></span><span class="sec-badge__label">Digital Scorecard</span></div>
+    <div class="sec-head">
+      <span class="sec-head__num">02</span>
+      <div class="sec-head__body">
+        <h2 class="sec-head__title">Your Digital <em>Scorecard</em></h2>
+        <p class="sec-head__sub">A snapshot of where your online presence stands today.</p>
+      </div>
+    </div>
+
+    <div class="prose" style="margin-bottom:1.5rem;">
+      <p>Note on data: PageSpeed live scoring is rate-limited today, so the technical grades below are based on hands-on inspection of the rendered DOM, mobile/desktop layout, and the underlying CMS markup — not fabricated scores.</p>
+    </div>
+
+    <h3 class="sub-head">Your Current Website</h3>
+    <div class="screenshot-frame">
+      <img src="./land-art-screenshot.png" alt="Land Art Inc. current homepage screenshot">
+    </div>
+    <p class="screenshot-caption">Captured April 30, 2026 — landartinc.com</p>
+
+    <h3 class="sub-head">Technical Quality</h3>
+    <div class="score-grid">
+      <div class="score-card">
+        <div class="score-card__label">Performance</div>
+        <div class="score-card__value score-card__value--word">Weak</div>
+        <div class="score-card__note">Heavy hero, image-first markup, slow on 4G</div>
+      </div>
+      <div class="score-card">
+        <div class="score-card__label">Accessibility</div>
+        <div class="score-card__value score-card__value--word">Fair</div>
+        <div class="score-card__note">Generic alt text ("Image"), readable contrast</div>
+      </div>
+      <div class="score-card">
+        <div class="score-card__label">Mobile</div>
+        <div class="score-card__value score-card__value--word">Fair</div>
+        <div class="score-card__note">Resizes, but layout density is desktop-first</div>
+      </div>
+      <div class="score-card">
+        <div class="score-card__label">SEO Foundation</div>
+        <div class="score-card__value score-card__value--word">Fair</div>
+        <div class="score-card__note">Blog exists; page metadata + schema thin</div>
+      </div>
+    </div>
+
+    <div class="grade-legend">
+      <div class="grade-legend__label">Grading Scale</div>
+      <div class="grade-legend__items">
+        <div class="grade-legend__item grade-legend__item--strong">
+          <div class="grade-legend__dots">●●●●</div>
+          <div class="grade-legend__grade">Strong</div>
+          <div class="grade-legend__def">No urgent action needed</div>
+        </div>
+        <div class="grade-legend__item grade-legend__item--fair">
+          <div class="grade-legend__dots">●●●○</div>
+          <div class="grade-legend__grade">Fair</div>
+          <div class="grade-legend__def">Works, but has fixable gaps</div>
+        </div>
+        <div class="grade-legend__item grade-legend__item--weak">
+          <div class="grade-legend__dots">●●○○</div>
+          <div class="grade-legend__grade">Weak</div>
+          <div class="grade-legend__def">Noticeable issues hurting results</div>
+        </div>
+        <div class="grade-legend__item grade-legend__item--poor">
+          <div class="grade-legend__dots">●○○○</div>
+          <div class="grade-legend__grade">Poor</div>
+          <div class="grade-legend__def">Significant drag — fix first</div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="sub-head">What's Working</h3>
+    <div class="win-grid">
+      <div class="win-card">
+        <span class="win-card__ico">✓</span>
+        <div class="win-card__body">
+          <strong class="win-card__label">A2P-compliant SMS consent</strong>
+          <p class="win-card__desc">The opt-in checkbox on your quote form is properly worded with reply-STOP, message-frequency, and privacy-policy language. Most lawn-care sites we audit fail this — yours doesn't.</p>
+        </div>
+      </div>
+      <div class="win-card">
+        <span class="win-card__ico">✓</span>
+        <div class="win-card__body">
+          <strong class="win-card__label">Location-specific blog content</strong>
+          <p class="win-card__desc">"Best Trees to Plant in Plain City, OH" and "How to Get Rid of Grubs in Your Naples Lawn" are exactly the long-tail posts AI search and Google both reward. The seed is planted.</p>
+        </div>
+      </div>
+      <div class="win-card">
+        <span class="win-card__ico">✓</span>
+        <div class="win-card__body">
+          <strong class="win-card__label">Trust signals are surfaced</strong>
+          <p class="win-card__desc">"4.9 Star Rating · 3,441 Reviews" appears in the topbar above the fold. That number is the single strongest closer on the page — it should anchor the new site too.</p>
+        </div>
+      </div>
+      <div class="win-card">
+        <span class="win-card__ico">✓</span>
+        <div class="win-card__body">
+          <strong class="win-card__label">Owner-guarantee positioning</strong>
+          <p class="win-card__desc">"Owner-Guaranteed Satisfaction" and "Complimentary Service Calls" are differentiators a national franchise can't say. They deserve real estate, not a footer mention.</p>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="sub-head">Where the Gaps Are</h3>
+    <div class="gap-grid">
+      <div class="gap-card">
+        <span class="gap-card__ico">!</span>
+        <div class="gap-card__body">
+          <strong class="gap-card__label">No instant quote or pricing visibility</strong>
+          <p class="gap-card__desc">Every visitor has to fill a 10-field form to get any number. Competitors increasingly show square-foot pricing or a calculator on the page — that's a 30%+ conversion gap on lukewarm leads.</p>
+        </div>
+      </div>
+      <div class="gap-card">
+        <span class="gap-card__ico">!</span>
+        <div class="gap-card__body">
+          <strong class="gap-card__label">Three offices, one phone number</strong>
+          <p class="gap-card__desc">Plain City and Naples customers reach the same line as Perrysburg. Local landing pages with their own phone, schema, and review snippets would compound rankings instead of splitting them.</p>
+        </div>
+      </div>
+      <div class="gap-card">
+        <span class="gap-card__ico">!</span>
+        <div class="gap-card__body">
+          <strong class="gap-card__label">Page weight + dated CMS markup</strong>
+          <p class="gap-card__desc">The site uses old image-block patterns and Drupal-style placeholder alt text. That hurts mobile speed (a Google ranking signal) and makes the brand look 10 years older than it is.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- 03 · HOW YOU STACK UP -->
+<section class="sec-group sec-group--cream">
+  <div class="sec-group__in">
+    <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><path d="M2 10V6M6 10V3M10 10V7"/></svg></span><span class="sec-badge__label">Competitor Landscape</span></div>
+    <div class="sec-head">
+      <span class="sec-head__num">03</span>
+      <div class="sec-head__body">
+        <h2 class="sec-head__title">How You <em>Stack Up</em></h2>
+        <p class="sec-head__sub">Side-by-side with the top competitors in your space.</p>
+      </div>
+    </div>
+
+    <div class="prose">
+      <p>The competitive picture in Northwest Ohio lawn care is unusual — and entirely in your favour. The two national franchises operating in the same trade area (TruGreen and Weed Man) have polished corporate websites, but their actual local reputation doesn't come close to yours. <strong>Land Art has roughly 7–9× the Google review volume of the next-largest competitor in Perrysburg or Toledo.</strong> The story to tell is "the locals already trust us — now the website matches."</p>
+    </div>
+
+    <h3 class="sub-head">Side by Side</h3>
+    <div class="compare-table">
+      <div class="compare-table__head">
+        <div class="compare-table__corner"></div>
+        <div class="compare-table__col-head compare-table__col-head--you">Land Art Inc.</div>
+        <div class="compare-table__col-head">TruGreen (Perrysburg)</div>
+        <div class="compare-table__col-head">Weed Man (Toledo)</div>
+      </div>
+      <div class="compare-table__row">
+        <div class="compare-table__label">Google reviews</div>
+        <div class="compare-table__cell compare-table__cell--you compare-table__cell--good">2,912 · 4.9 ★</div>
+        <div class="compare-table__cell compare-table__cell--mid">326 · 4.3 ★</div>
+        <div class="compare-table__cell compare-table__cell--mid">412 · 4.5 ★</div>
+      </div>
+      <div class="compare-table__row">
+        <div class="compare-table__label">Website</div>
+        <div class="compare-table__cell compare-table__cell--you compare-table__cell--mid">Dated CMS</div>
+        <div class="compare-table__cell compare-table__cell--good">Modern (corporate)</div>
+        <div class="compare-table__cell compare-table__cell--good">Modern (corporate)</div>
+      </div>
+      <div class="compare-table__row">
+        <div class="compare-table__label">Instant quote</div>
+        <div class="compare-table__cell compare-table__cell--you compare-table__cell--low">Form only</div>
+        <div class="compare-table__cell compare-table__cell--good">Yes (online)</div>
+        <div class="compare-table__cell compare-table__cell--good">Yes (online)</div>
+      </div>
+      <div class="compare-table__row">
+        <div class="compare-table__label">Local landing pages</div>
+        <div class="compare-table__cell compare-table__cell--you compare-table__cell--low">Limited</div>
+        <div class="compare-table__cell compare-table__cell--good">Per-city</div>
+        <div class="compare-table__cell compare-table__cell--good">Per-city</div>
+      </div>
+      <div class="compare-table__row">
+        <div class="compare-table__label">Local roots</div>
+        <div class="compare-table__cell compare-table__cell--you compare-table__cell--good">52+ years, family</div>
+        <div class="compare-table__cell compare-table__cell--mid">National franchise</div>
+        <div class="compare-table__cell compare-table__cell--mid">National franchise</div>
+      </div>
+      <div class="compare-table__row">
+        <div class="compare-table__label">Owner guarantee</div>
+        <div class="compare-table__cell compare-table__cell--you compare-table__cell--good">Yes — named</div>
+        <div class="compare-table__cell compare-table__cell--mid">Corporate guarantee</div>
+        <div class="compare-table__cell compare-table__cell--mid">Corporate guarantee</div>
+      </div>
+    </div>
+
+    <h3 class="sub-head">Where Land Art Leads — and Where the Gap Is</h3>
+    <div class="stack-split">
+      <div class="stack-split__side stack-split__side--win">
+        <div class="stack-split__badge">Where You Lead</div>
+        <div class="stack-split__stat">
+          <span class="stack-split__num">2,912 reviews<span class="stack-split__cmp"> vs 326 (TruGreen)</span></span>
+          <span class="stack-split__label">Local social proof</span>
+          <span class="stack-split__note">~9× the next-closest local competitor — an insurmountable moat for any new entrant.</span>
+        </div>
+        <div class="stack-split__stat">
+          <span class="stack-split__num">52+ years of named ownership</span>
+          <span class="stack-split__label">Trust-by-default</span>
+          <span class="stack-split__note">Franchises rotate operators every 3–5 years. You don't. That story sells itself once it's on the page.</span>
+        </div>
+      </div>
+      <div class="stack-split__side stack-split__side--gap">
+        <div class="stack-split__badge">The Digital Gap</div>
+        <div class="stack-split__stat">
+          <span class="stack-split__num">No instant-quote tool<span class="stack-split__cmp"> vs both competitors offer one</span></span>
+          <span class="stack-split__label">Conversion friction</span>
+          <span class="stack-split__note">A 10-field form is the slowest path. A square-foot calculator with an "Email me a real number" handoff closes the gap in a week of work.</span>
+        </div>
+        <div class="stack-split__stat">
+          <span class="stack-split__num">1 phone number for 3 markets</span>
+          <span class="stack-split__label">Local-search disadvantage</span>
+          <span class="stack-split__note">Google ranks "lawn care Naples FL" pages higher when each office has a dedicated number, address, and schema. Right now, three offices compete for one local pin.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- 04 · WHAT PEOPLE ARE SEARCHING FOR -->
+<section class="sec-group sec-group--dark">
+  <div class="sec-group__in">
+    <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><circle cx="5" cy="5" r="3"/><path d="m7.5 7.5 2 2"/></svg></span><span class="sec-badge__label">Search Demand</span></div>
+    <div class="sec-head">
+      <span class="sec-head__num">04</span>
+      <div class="sec-head__body">
+        <h2 class="sec-head__title">What People Are <em>Searching For</em></h2>
+        <p class="sec-head__sub">The exact queries your future customers type before they call anyone.</p>
+      </div>
+    </div>
+
+    <div class="prose">
+      <p>Lawn-care search demand is unusual: it's seasonal, it's hyper-local, and the buying decision often happens within the same week as the search. Across your three markets — Toledo/Perrysburg, Columbus/Plain City, Naples/Fort Myers — these are the queries that show consistent, year-over-year demand. Volumes are shown as qualitative bands rather than fabricated specific numbers; we'll quantify exact volumes from a paid tool the day we kick off.</p>
+    </div>
+
+    <h3 class="sub-head">Primary Search Terms</h3>
+    <div class="kw-table-wrap">
+    <div class="kw-table">
+      <div class="kw-row kw-row--hot">
+        <span class="kw-row__rank">01</span>
+        <span class="kw-row__term">lawn care perrysburg / toledo / sylvania</span>
+        <span class="kw-row__vol">High volume</span>
+        <span class="kw-row__tag"><span class="tag tag--high">Core revenue</span></span>
+      </div>
+      <div class="kw-row kw-row--hot">
+        <span class="kw-row__rank">02</span>
+        <span class="kw-row__term">lawn care naples fl</span>
+        <span class="kw-row__vol">High volume</span>
+        <span class="kw-row__tag"><span class="tag tag--high">Core revenue</span></span>
+      </div>
+      <div class="kw-row">
+        <span class="kw-row__rank">03</span>
+        <span class="kw-row__term">mosquito control near me</span>
+        <span class="kw-row__vol">Medium · Seasonal spike</span>
+        <span class="kw-row__tag"><span class="tag tag--medium">Add-on</span></span>
+      </div>
+      <div class="kw-row">
+        <span class="kw-row__rank">04</span>
+        <span class="kw-row__term">grub control ohio / florida</span>
+        <span class="kw-row__vol">Medium · Seasonal</span>
+        <span class="kw-row__tag"><span class="tag tag--medium">Add-on</span></span>
+      </div>
+      <div class="kw-row">
+        <span class="kw-row__rank">05</span>
+        <span class="kw-row__term">core aeration overseeding columbus</span>
+        <span class="kw-row__vol">Medium · Fall peak</span>
+        <span class="kw-row__tag"><span class="tag tag--medium">Recurring</span></span>
+      </div>
+      <div class="kw-row">
+        <span class="kw-row__rank">06</span>
+        <span class="kw-row__term">tree shrub care perrysburg</span>
+        <span class="kw-row__vol">Lower · High intent</span>
+        <span class="kw-row__tag"><span class="tag tag--easy">Cross-sell</span></span>
+      </div>
+      <div class="kw-row">
+        <span class="kw-row__rank">07</span>
+        <span class="kw-row__term">free lawn care quote near me</span>
+        <span class="kw-row__vol">Medium · Highest intent</span>
+        <span class="kw-row__tag"><span class="tag tag--high">Bottom of funnel</span></span>
+      </div>
+      <div class="kw-row">
+        <span class="kw-row__rank">08</span>
+        <span class="kw-row__term">how to get rid of grubs in [city]</span>
+        <span class="kw-row__vol">Long-tail · Educational</span>
+        <span class="kw-row__tag"><span class="tag tag--easy">AI-citable</span></span>
+      </div>
+    </div>
+    </div>
+
+    <h3 class="sub-head">The Seasonal Window</h3>
+    <div class="prose">
+      <p>Ohio searches for lawn care peak from <strong>late March through May</strong> and again in <strong>August–September</strong> for aeration. Naples is the inverse — peak demand starts in <strong>October</strong> as snowbirds arrive. A site rebuilt in the next 60 days lands fully indexed before the spring Ohio rush, when every dollar of search visibility compounds.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- 05 · THE AI SEARCH EDGE -->
+<section class="sec-group sec-group--dark">
+  <div class="sec-group__in">
+    <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><path d="M7 1L3 7h3l-1 4 5-6H7l1-4Z"/></svg></span><span class="sec-badge__label">AI Search — The Edge</span></div>
+    <div class="sec-head">
+      <span class="sec-head__num">05</span>
+      <div class="sec-head__body">
+        <h2 class="sec-head__title">The <em>AI Search</em> Edge</h2>
+        <p class="sec-head__sub">Most business owners don't know AI search exists — let alone that they're invisible to it. Here's what it is, how it works alongside Google, and how we make Land Art show up in both.</p>
+      </div>
+    </div>
+
+    <div class="search-compare">
+      <div class="search-compare__col search-compare__col--google">
+        <div class="search-compare__label">Google Search</div>
+        <div class="search-compare__rows">
+          <div class="search-compare__row"><div class="search-compare__dot"></div><span class="search-compare__text">Returns 10 links — they scroll and choose</span></div>
+          <div class="search-compare__row"><div class="search-compare__dot"></div><span class="search-compare__text">Drives clicks to your website</span></div>
+          <div class="search-compare__row"><div class="search-compare__dot"></div><span class="search-compare__text">You compete in a list with 9 others</span></div>
+        </div>
+      </div>
+      <div class="search-compare__col search-compare__col--ai">
+        <div class="search-compare__label search-compare__label--ai">AI Search</div>
+        <div class="search-compare__rows">
+          <div class="search-compare__row"><div class="search-compare__dot search-compare__dot--ai"></div><span class="search-compare__text search-compare__text--ai">Gives one name — they call</span></div>
+          <div class="search-compare__row"><div class="search-compare__dot search-compare__dot--ai"></div><span class="search-compare__text search-compare__text--ai">Drives calls directly to your phone</span></div>
+          <div class="search-compare__row"><div class="search-compare__dot search-compare__dot--ai"></div><span class="search-compare__text search-compare__text--ai">You're the recommendation, not an option</span></div>
+        </div>
+      </div>
+      <div class="search-compare__footer">They work together, not against each other. Google brings researchers. AI brings buyers ready to book. You need to show up in both.</div>
+    </div>
+
+    <div class="split-cards-wrap">
+    <div class="split-cards">
+      <div class="split-card">
+        <div class="split-card__gap">
+          <div class="split-card__gap-icon">↑</div>
+          <h3 class="split-card__gap-title">Your authority isn't readable to AI</h3>
+          <p class="split-card__gap-copy">52 years of family ownership and 2,912 reviews are facts a human visitor can find — but ChatGPT and Perplexity can't read images or buried About text. They cite the source that says it cleanly, in structured markup.</p>
+        </div>
+        <div class="split-card__divider">
+          <div class="split-card__divider-line"></div>
+          <span class="split-card__divider-badge">The Fix</span>
+          <div class="split-card__divider-line"></div>
+        </div>
+        <div class="split-card__solve">
+          <div class="split-card__solve-num">01</div>
+          <h3 class="split-card__solve-title">Schema-marked authority blocks</h3>
+          <p class="split-card__solve-copy">Founded date, owner names, license/affiliations, review counts, and service areas — all rendered in structured data on every page. AI assistants cite Land Art when someone asks "best lawn care in Toledo."</p>
+        </div>
+      </div>
+      <div class="split-card">
+        <div class="split-card__gap">
+          <div class="split-card__gap-icon">↑</div>
+          <h3 class="split-card__gap-title">Three offices look like one to AI</h3>
+          <p class="split-card__gap-copy">When Naples or Plain City customers ask AI for a local lawn-care recommendation, it can't tell that you have a physical operation in their market. It sees one Perrysburg pin.</p>
+        </div>
+        <div class="split-card__divider">
+          <div class="split-card__divider-line"></div>
+          <span class="split-card__divider-badge">The Fix</span>
+          <div class="split-card__divider-line"></div>
+        </div>
+        <div class="split-card__solve">
+          <div class="split-card__solve-num">02</div>
+          <h3 class="split-card__solve-title">Per-market location pages</h3>
+          <p class="split-card__solve-copy">A real, indexed page for each office with address, phone, hours, services, and the local team. AI assistants treat each as a distinct local business. So does Google's local pack.</p>
+        </div>
+      </div>
+      <div class="split-card">
+        <div class="split-card__gap">
+          <div class="split-card__gap-icon">↑</div>
+          <h3 class="split-card__gap-title">Your blog isn't built for citation</h3>
+          <p class="split-card__gap-copy">"How to Get Rid of Grubs in Your Naples Lawn" is the right post — but the markup, headings, and FAQ structure aren't built to be quoted by AI. The content's there; the wrapper isn't.</p>
+        </div>
+        <div class="split-card__divider">
+          <div class="split-card__divider-line"></div>
+          <span class="split-card__divider-badge">The Fix</span>
+          <div class="split-card__divider-line"></div>
+        </div>
+        <div class="split-card__solve">
+          <div class="split-card__solve-num">03</div>
+          <h3 class="split-card__solve-title">FAQ + HowTo schema retrofit</h3>
+          <p class="split-card__solve-copy">Every existing post gets a structured FAQ and HowTo block. The same content starts being cited in AI Overviews, ChatGPT answers, and Perplexity — without writing a single new article.</p>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div class="callout">
+      <strong>Right now, Land Art's website isn't built for either</strong> — Google sees a dated CMS, AI sees nothing structured to quote. That's the window we close.
+    </div>
+  </div>
+</section>
+
+
+<!-- 06 · WHAT WE'D ACTUALLY DO -->
+<section class="sec-group sec-group--cream">
+  <div class="sec-group__in">
+    <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><path d="M3 3h6v6H3z"/><path d="M3 6h6"/></svg></span><span class="sec-badge__label">The Plan</span></div>
+    <div class="sec-head">
+      <span class="sec-head__num">06</span>
+      <div class="sec-head__body">
+        <h2 class="sec-head__title">Here's What We'd <em>Actually Do</em></h2>
+        <p class="sec-head__sub">Specific, prioritized work — not a generic checklist.</p>
+      </div>
+    </div>
+
+    <div class="phase-roadmap">
+
+      <div class="phase-section phase-section--quick">
+        <div class="phase-header">
+          <span class="phase-label phase-label--quick">Quick Win</span>
+          <div class="phase-divider"></div>
+          <span class="phase-note">Immediate</span>
+        </div>
+        <div class="phase-items">
+          <div class="phase-item">
+            <strong class="phase-item__title">Hero rebuild + reviews-as-anchor</strong>
+            <p class="phase-item__desc">Replace the current image-heavy hero with a single performant section that leads with "4.9 ★ · 2,912 reviews · 52 years guaranteed." Same fold, half the page weight, and the strongest signal you have leading the page. Ship in week one.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="phase-section phase-section--m1">
+        <div class="phase-header">
+          <span class="phase-label phase-label--m1">Month 1</span>
+          <div class="phase-divider"></div>
+          <span class="phase-note">Core launch deliverables</span>
+        </div>
+        <div class="phase-items phase-items--grid">
+          <div class="phase-item">
+            <strong class="phase-item__title">Homepage that converts</strong>
+            <p class="phase-item__desc">Owner-guarantee positioning, real photos of your actual lawns, and a hero that loads under 1.5 seconds on a 4G phone. Built for the homeowner who already searched once and is comparing two names.</p>
+          </div>
+          <div class="phase-item">
+            <strong class="phase-item__title">Three local landing pages</strong>
+            <p class="phase-item__desc">Perrysburg / Plain City / Naples — each with its own phone (or extension), schema, service area, and embedded GBP. Google starts ranking each market separately instead of stacking them on one pin.</p>
+          </div>
+          <div class="phase-item">
+            <strong class="phase-item__title">Service category pages, rebuilt</strong>
+            <p class="phase-item__desc">Lawn Care · Weed Control · Mosquito · Grub · Aeration · Tree & Shrub. Each with FAQ schema, seasonal context (Ohio vs Florida), and a clear "next step" that isn't a 10-field form.</p>
+          </div>
+          <div class="phase-item">
+            <strong class="phase-item__title">Square-foot estimator</strong>
+            <p class="phase-item__desc">A simple slider — yard size + service tier — returns a real ballpark range. We don't replace your phone consultation; we give the visitor a number good enough to commit. Industry data says 30%+ more form completions.</p>
+          </div>
+          <div class="phase-item">
+            <strong class="phase-item__title">AI search signals</strong>
+            <p class="phase-item__desc">Every page is built so ChatGPT, Siri, and every AI assistant know exactly what Land Art does and where you serve. Ships on day one — most lawn-care companies don't have it.</p>
+          </div>
+          <div class="phase-item">
+            <strong class="phase-item__title">Citation Audit &amp; Cleanup</strong>
+            <p class="phase-item__desc">We find every mismatch in your name, address, and phone across Google, Yelp, BBB, and the major directories — and fix them. Small inconsistencies quietly drag down local rankings. One audit that keeps working for years.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="phase-section phase-section--m2">
+        <div class="phase-header">
+          <span class="phase-label phase-label--m2">Month 2+</span>
+          <div class="phase-divider"></div>
+          <span class="phase-note">Growth phase</span>
+        </div>
+        <div class="phase-items">
+          <div class="phase-item">
+            <strong class="phase-item__title">Review-engine automation</strong>
+            <p class="phase-item__desc">After every visit, an automated SMS asks happy customers to add a Google review for the right office. You're already at 2,912 — keeping the pace ensures every new local entrant has 5+ years of compounding to catch up to.</p>
+          </div>
+          <div class="phase-item">
+            <strong class="phase-item__title">Expert content library</strong>
+            <p class="phase-item__desc">Service guides and FAQ pages built around what Toledo, Columbus, and Naples homeowners already search. AI assistants cite whoever publishes first — that's Land Art, with the existing blog as the foundation.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- 07 · BEYOND THE WEBSITE -->
+<section class="sec-group sec-group--dark">
+  <div class="sec-group__in">
+    <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><circle cx="6" cy="6" r="4"/><path d="M6 2v4l2 1"/></svg></span><span class="sec-badge__label">The Bigger Picture</span></div>
+    <div class="sec-head">
+      <span class="sec-head__num">07</span>
+      <div class="sec-head__body">
+        <h2 class="sec-head__title">Beyond the <em>Website</em></h2>
+        <p class="sec-head__sub">More ways we put your business in front of the right people.</p>
+      </div>
+    </div>
+
+    <div class="beyond-strip">
+      <div class="beyond-item">
+        <span class="beyond-item__ico"><span class="material-symbols-outlined">storefront</span></span>
+        <div class="beyond-item__label">Google Business Profile</div>
+        <p class="beyond-item__desc">Three GBPs — one per office — fully optimised with photos, services, FAQ, and weekly post cadence. Right now Perrysburg is doing all the lifting.</p>
+      </div>
+      <div class="beyond-item">
+        <span class="beyond-item__ico"><span class="material-symbols-outlined">event</span></span>
+        <div class="beyond-item__label">Online Booking</div>
+        <p class="beyond-item__desc">Self-serve scheduling for new-customer estimates so the office line stays open for current customers. Reduces no-shows with automated reminders.</p>
+      </div>
+      <div class="beyond-item">
+        <span class="beyond-item__ico"><span class="material-symbols-outlined">reviews</span></span>
+        <div class="beyond-item__label">Reviews Engine</div>
+        <p class="beyond-item__desc">Automated post-visit review requests, distributed across all three GBPs. Compound your already-best-in-market 2,912-review moat into 4,000+ inside 18 months.</p>
+      </div>
+      <div class="beyond-item">
+        <span class="beyond-item__ico"><span class="material-symbols-outlined">mail</span></span>
+        <div class="beyond-item__label">Email &amp; CRM</div>
+        <p class="beyond-item__desc">Seasonal reminder emails for aeration, mosquito, and pre-emergent windows. Existing customers re-up earlier; reactivations from old customers come back in.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- 08 · WHAT THIS COULD MEAN -->
+<!-- Variant A: 52-year family-owned lawn-care business; trade/contractor profile, owner-data-driven, reviews use "essential / reliable / trustworthy" language. The math sells itself. -->
+<section class="sec-group sec-group--cream">
+  <div class="sec-group__in">
+    <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><path d="M2 9l3-3 2 2 3-4"/></svg></span><span class="sec-badge__label">Revenue Impact</span></div>
+    <div class="sec-head">
+      <span class="sec-head__num">08</span>
+      <div class="sec-head__body">
+        <h2 class="sec-head__title">What This Could <em>Mean</em></h2>
+        <p class="sec-head__sub">Here's the math — and it's conservative.</p>
+      </div>
+    </div>
+    <div class="funnel-chain">
+      <div class="funnel-step">
+        <div class="funnel-step__label">Monthly Searches</div>
+        <div class="funnel-step__val">~3,000</div>
+        <div class="funnel-step__sub">across Toledo, Columbus, Naples lawn-care queries</div>
+        <div class="funnel-step__operator">×</div>
+      </div>
+      <div class="funnel-step">
+        <div class="funnel-step__label">Click-Through</div>
+        <div class="funnel-step__val">6%</div>
+        <div class="funnel-step__sub">realistic for a top-3 ranking with 2,900+ reviews</div>
+        <div class="funnel-step__operator">=</div>
+      </div>
+      <div class="funnel-step">
+        <div class="funnel-step__label">Site Visitors</div>
+        <div class="funnel-step__val">~180/mo</div>
+        <div class="funnel-step__sub">organic, local, already looking to hire</div>
+        <div class="funnel-step__operator">×</div>
+      </div>
+      <div class="funnel-step">
+        <div class="funnel-step__label">Conversion Rate</div>
+        <div class="funnel-step__val">4%</div>
+        <div class="funnel-step__sub">benchmark for a well-built service site</div>
+        <div class="funnel-step__operator">×</div>
+      </div>
+      <div class="funnel-step">
+        <div class="funnel-step__label">First-Year Customer Value</div>
+        <div class="funnel-step__val">~$700</div>
+        <div class="funnel-step__sub">based on a typical Land Art annual program</div>
+      </div>
+    </div>
+    <div class="funnel-result">
+      <div class="funnel-result__period">
+        <div class="funnel-result__amt">~$5K</div>
+        <div class="funnel-result__period-label">per month</div>
+      </div>
+      <div class="funnel-result__divider"></div>
+      <div class="funnel-result__period">
+        <div class="funnel-result__amt">~$80K</div>
+        <div class="funnel-result__period-label">per year</div>
+      </div>
+    </div>
+    <div class="funnel-assumptions">
+      <p class="funnel-assumptions__head">Conservative by design — here's exactly what we assumed</p>
+      <div class="funnel-assumptions__grid">
+        <div class="funnel-assumptions__item">
+          <span class="funnel-assumptions__val">~3,000</span>
+          <span class="funnel-assumptions__label">monthly searches across your three markets — combined lawn-care, weed-control, and mosquito queries</span>
+        </div>
+        <div class="funnel-assumptions__item">
+          <span class="funnel-assumptions__val">6%</span>
+          <span class="funnel-assumptions__label">click-through rate — realistic for a top-3 local ranking with your review profile, achievable within 4–6 months</span>
+        </div>
+        <div class="funnel-assumptions__item">
+          <span class="funnel-assumptions__val">4%</span>
+          <span class="funnel-assumptions__label">conversion rate — industry benchmark for a well-built local service site with a working estimator</span>
+        </div>
+        <div class="funnel-assumptions__item">
+          <span class="funnel-assumptions__val">~$700</span>
+          <span class="funnel-assumptions__label">first-year customer value — conservative for an annual lawn program in your markets, before renewals or upsells</span>
+        </div>
+      </div>
+      <p class="funnel-assumptions__footer">GBP traffic, referrals, repeat-customer expansion, and reactivation emails to your existing base are all modeled as zero. Those are upside, not the floor.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- 09 · WHY ASPIRE -->
+<section class="sec-group sec-group--dark">
+  <div class="sec-group__in">
+    <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><path d="M6 1l1.5 3.5L11 5l-2.75 2.5L9 11 6 9l-3 2 .75-3.5L1 5l3.5-.5z"/></svg></span><span class="sec-badge__label">Why Us</span></div>
+    <div class="sec-head">
+      <span class="sec-head__num">09</span>
+      <div class="sec-head__body">
+        <h2 class="sec-head__title">Why <em>Aspire Digital</em></h2>
+        <p class="sec-head__sub">You do the work you're great at. We handle the digital side — and we don't disappear after launch.</p>
+      </div>
+    </div>
+
+    <div class="prose">
+      <p>Land Art is a family business that's been doing one thing well for 52 years. So is Aspire. A husband-and-wife team with 30+ years of combined experience — and we stay small on purpose. Every client gets both of us: Jaime's eye on every design decision, Chris's architecture on every line of code. We don't hand projects off to junior developers. We don't disappear after launch. Our faith shapes how we price, how we communicate, and what we're willing to put our name on — which means we're straight with you about what your business actually needs, not what earns the biggest contract.</p>
+    </div>
+
+    <div class="why-values">
+      <div class="why-val">
+        <span class="why-val__icon"><span class="material-symbols-outlined">design_services</span></span>
+        <strong class="why-val__label">Tailored from scratch</strong>
+        <p class="why-val__desc">Every site is designed for that client, that audience, that goal — never pulled from a template shelf.</p>
+      </div>
+      <div class="why-val">
+        <span class="why-val__icon"><span class="material-symbols-outlined">verified</span></span>
+        <strong class="why-val__label">We show up after launch</strong>
+        <p class="why-val__desc">The job isn't done when the site goes live. It's done when your business is growing.</p>
+      </div>
+      <div class="why-val">
+        <span class="why-val__icon"><span class="material-symbols-outlined">handshake</span></span>
+        <strong class="why-val__label">Honest to the core</strong>
+        <p class="why-val__desc">Transparent pricing, straight talk, no disappearing act. Our faith anchors every client relationship.</p>
+      </div>
+    </div>
+
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-card__photo">
+          <img src="/assets/chris-profile.png" alt="Chris Otten">
+          <div class="team-card__tint"></div>
+          <div class="team-card__overlay">
+            <p class="team-card__role">Founder &amp; Technical Director</p>
+            <h3 class="team-card__name">Chris Otten</h3>
+          </div>
+        </div>
+        <div class="team-card__body">
+          <p class="team-card__bio">Handles the strategy, development, and business ops that make a launch actually land. Every site Chris builds is fast, accessible, and SEO-ready from the first line of code.</p>
+          <div class="team-card__links">
+            <a href="mailto:chris@madebyaspire.com">chris@madebyaspire.com</a>
+          </div>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-card__photo">
+          <img src="/assets/jaime-profile.png" alt="Jaime Otten">
+          <div class="team-card__tint"></div>
+          <div class="team-card__overlay">
+            <p class="team-card__role">Founder &amp; Creative Director</p>
+            <h3 class="team-card__name">Jaime Otten</h3>
+          </div>
+        </div>
+        <div class="team-card__body">
+          <p class="team-card__bio">20+ years of senior UX/UI design across agencies, startups, and product studios. Every visual direction on every site runs through Jaime. Your brand is in good hands.</p>
+          <div class="team-card__links">
+            <a href="mailto:jaime@madebyaspire.com">jaime@madebyaspire.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="sec-group sec-group--cream">
+  <div class="sec-group__in">
+    <div class="cta-box">
+      <p class="cta-box__eyebrow">Let's Build Something</p>
+      <h3 class="cta-box__heading">A website worthy of <em>52 years</em> of guaranteed lawns.</h3>
+      <div class="cta-steps">
+        <div class="cta-step">
+          <span class="cta-step__num">1</span>
+          <div>
+            <strong class="cta-step__label">Book a free 30-min strategy call</strong>
+            <p class="cta-step__desc">We'll map out the exact plan for Land Art — no pitch, just a plan.</p>
+          </div>
+        </div>
+        <div class="cta-step">
+          <span class="cta-step__num">2</span>
+          <div>
+            <strong class="cta-step__label">We design and build — 100% custom</strong>
+            <p class="cta-step__desc">No templates. Typically 30 days from kickoff to launch-ready.</p>
+          </div>
+        </div>
+        <div class="cta-step">
+          <span class="cta-step__num">3</span>
+          <div>
+            <strong class="cta-step__label">You launch and own your market</strong>
+            <p class="cta-step__desc">30 days of post-launch support included. We take 2–3 new clients per month — spots are limited.</p>
+          </div>
+        </div>
+      </div>
+      <a href="https://madebyaspire.com/book" class="btn-pill btn-pill--cream" target="_blank" rel="noopener">
+        <span class="btn-pill__fill"></span>
+        <span class="btn-pill__label">Book a Free Strategy Call</span>
+        <span class="btn-pill__arrow">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<footer class="guide-footer">
+  <div style="display:flex;flex-direction:column;align-items:center;gap:.5rem;width:100%;max-width:640px;padding-bottom:2rem;border-bottom:1px solid rgba(250,240,226,.07);">
+    <a href="https://madebyaspire.com" target="_blank" rel="noopener" aria-label="Aspire Digital — visit website" style="display:block;margin-bottom:.25rem;">
+      <img src="/assets/aspire-primary-white.svg" alt="Aspire Digital" style="height:26px;width:auto;display:block;opacity:.65;">
+    </a>
+    <p class="guide-footer__heading" style="margin:0;">Questions? We're here.</p>
+    <p class="guide-footer__sub" style="margin:0;">Reach out to either of us directly — we'll get back to you same day.</p>
+  </div>
+  <div class="footer-contacts">
+    <div class="footer-contact">
+      <p class="footer-contact__name">Chris Otten</p>
+      <p class="footer-contact__role">Founder &amp; Strategist</p>
+      <div class="footer-contact__links">
+        <a href="mailto:chris@madebyaspire.com">chris@madebyaspire.com</a>
+        <a href="tel:+16144993575">614-499-3575</a>
+      </div>
+    </div>
+    <div class="footer-contact">
+      <p class="footer-contact__name">Jaime Otten</p>
+      <p class="footer-contact__role">Lead Designer</p>
+      <div class="footer-contact__links">
+        <a href="mailto:jaime@madebyaspire.com">jaime@madebyaspire.com</a>
+        <a href="tel:+16142052796">614-205-2796</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-social">
+    <p class="footer-social__label">Follow us</p>
+    <div class="footer-social__icons">
+      <a class="footer-social__link" href="https://instagram.com/madebyaspire" target="_blank" aria-label="Instagram">
+        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      </a>
+      <a class="footer-social__link" href="https://linkedin.com/company/aspire-digital-dev" target="_blank" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </a>
+      <a class="footer-social__link" href="https://facebook.com/madebyaspire" target="_blank" aria-label="Facebook">
+        <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+      </a>
+    </div>
+  </div>
+  <p class="guide-footer__tagline">Defined by craft. Rooted in faith.</p>
+</footer>
+
+</body>
+</html>
