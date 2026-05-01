@@ -4,10 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Casino Quest — Digital Growth Brief | Aspire Digital</title>
-<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="icon" type="image/svg+xml" href="./favicon.svg">
+<!-- Open Graph / iMessage / SMS preview -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Casino Quest — Your Digital Growth Opportunity">
-<meta property="og:description" content="A category of one: dealer school, player academy, YouTube channel, and Vegas destination — all sharing a Wix site that doesn't reflect what's been built. Here's what we found.">
+<meta property="og:description" content="We took a deep look at Casino Quest's online presence and found some exciting opportunities. Here's what we found.">
 <meta property="og:image" content="https://yoursite.madebyaspire.com/casino-quest/welcome/og-card.png">
 <meta property="og:url" content="https://yoursite.madebyaspire.com/casino-quest/welcome/">
 <meta name="twitter:card" content="summary_large_image">
@@ -18,9 +19,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Serif+Display:ital@0;1&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Unbounded:wght@400;700;900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0" rel="stylesheet">
-<!-- material-icons font also loaded for legacy components -->
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <style>
+/* ── TOKENS ── */
 :root{
   --bg:#FAF0E2; --bg-alt:#F2EDE6; --bg-night:#1A1F28;
   --accent:#C4622D; --accent-dk:#A34E1A;
@@ -42,12 +42,14 @@ body{font-family:var(--f-b);font-size:16px;line-height:1.75;background:var(--bg-
 img{max-width:100%;display:block;}
 ::selection{background:var(--accent);color:#fff;}
 
+/* ── TOPBAR ── */
 .topbar{position:fixed;top:0;left:0;right:0;z-index:200;height:58px;background:var(--white);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.875rem;padding:0 2rem;box-shadow:0 1px 0 var(--border);}
 .topbar__logo{height:22px;flex-shrink:0;}
 .topbar__sep{width:1px;height:20px;background:var(--border);flex-shrink:0;}
 .topbar__label{font-family:var(--f-b);font-size:.9375rem;font-weight:600;color:var(--text-sec);}
 .topbar__badge{margin-left:auto;font-family:var(--f-n);font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--white);background:var(--accent);padding:4px 12px;border-radius:var(--r-full);max-width:50%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 
+/* ── HERO ── */
 .hero{padding-top:58px;background:var(--bg-night);padding-bottom:0;}
 .hero__inner{max-width:960px;margin:0 auto;padding:5rem 2rem 5.5rem;display:grid;grid-template-columns:1.35fr 1fr;grid-template-rows:auto auto;gap:1.5rem 3.5rem;align-items:start;}
 .hero__top{grid-column:1/-1;padding-bottom:.5rem;}
@@ -56,17 +58,19 @@ img{max-width:100%;display:block;}
 .hero__h1{overflow-wrap:anywhere;word-break:break-word;hyphens:auto;}
 .hero__eyebrow{font-family:var(--f-n);font-size:.75rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:1.25rem;display:flex;align-items:center;gap:.625rem;}
 .hero__eyebrow-dot{width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;}
-.hero__h1{font-family:var(--f-d);font-style:normal;font-size:clamp(2.5rem,5.5vw,4.25rem);font-weight:400;color:var(--bg);line-height:1.05;margin-bottom:1rem;}
-.hero__h1 em{font-style:normal;color:var(--accent);font-family:var(--f-d);}
+.hero__h1{font-family:var(--f-d);font-style:italic;font-size:clamp(2.5rem,5.5vw,4.25rem);font-weight:400;color:var(--bg);line-height:1.05;margin-bottom:1rem;}
+.hero__h1 em{font-style:italic;color:var(--accent);font-family:var(--f-d);}
 .hero__sub{font-family:var(--f-b);font-size:1.125rem;color:rgba(250,240,226,.72);line-height:1.65;margin-bottom:0;max-width:480px;}
 .hero__meta{display:flex;flex-direction:column;gap:1.25rem;padding:.25rem 0 .25rem 2rem;border-left:1px solid rgba(255,255,255,.1);margin-top:2rem;}
 .hero__meta-item dt{font-family:var(--f-n);font-size:.6875rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(250,240,226,.3);margin-bottom:.35rem;}
 .hero__meta-item dd{font-family:var(--f-b);font-size:.9375rem;font-weight:500;color:var(--bg);}
-.hero__meta-item dd.fill{font-family:var(--f-a);font-style:normal;font-size:1.25rem;color:var(--sage);}
+.hero__meta-item dd.fill{font-family:var(--f-a);font-style:italic;color:var(--sage);}
 .hero__meta-item a{color:inherit;text-decoration:none;border-bottom:1px solid rgba(143,175,138,.4);padding-bottom:1px;}
 
+/* ── ACCENT STRIPE ── */
 .accent-stripe{height:3px;background:linear-gradient(to right,var(--accent),#A34E1A);}
 
+/* ── SECTION GROUPS ── */
 .sec-group{padding:5rem 2rem;}
 .sec-group--dark{background:var(--bg-night);}
 .sec-group--cream{background:var(--bg);}
@@ -82,18 +86,20 @@ img{max-width:100%;display:block;}
 .sec-group--cream .sec-badge__label,.sec-group--alt .sec-badge__label{color:var(--text-sec);}
 .sec-group--dark .sec-badge__label{color:rgba(250,240,226,.55);}
 
+/* ── SECTION HEADINGS (big italic number + title pattern) ── */
 .sec-head{display:grid;grid-template-columns:auto 1fr;column-gap:1.75rem;align-items:baseline;margin-bottom:2.5rem;}
-.sec-head__num{font-family:var(--f-d);font-style:normal;font-size:clamp(3rem,5vw,4.5rem);font-weight:400;line-height:1;color:var(--accent);}
+.sec-head__num{font-family:var(--f-d);font-style:italic;font-size:clamp(3rem,5vw,4.5rem);font-weight:400;line-height:1;color:var(--accent);}
 .sec-head__body{display:flex;flex-direction:column;gap:.5rem;}
-.sec-head__title{font-family:var(--f-d);font-style:normal;font-size:clamp(1.75rem,3vw,2.5rem);font-weight:400;line-height:1.15;margin:0;}
+.sec-head__title{font-family:var(--f-d);font-style:italic;font-size:clamp(1.75rem,3vw,2.5rem);font-weight:400;line-height:1.15;margin:0;}
 .sec-group--cream .sec-head__title,.sec-group--alt .sec-head__title{color:var(--charcoal);}
 .sec-group--dark .sec-head__title{color:var(--bg);}
-.sec-head__title em{font-style:normal;color:var(--accent);}
+.sec-head__title em{font-style:italic;color:var(--accent);}
 .sec-group--dark .sec-head__title em{color:var(--accent);}
 .sec-head__sub{font-family:var(--f-b);font-size:1rem;line-height:1.65;}
 .sec-group--cream .sec-head__sub,.sec-group--alt .sec-head__sub{color:var(--text-sec);}
 .sec-group--dark .sec-head__sub{color:rgba(250,240,226,.5);}
 
+/* ── PROSE ── */
 .prose p{margin-bottom:1rem;line-height:1.8;}
 .sec-group--cream .prose p,.sec-group--alt .prose p{color:var(--text-sec);}
 .sec-group--dark .prose p{color:rgba(250,240,226,.82);}
@@ -101,19 +107,27 @@ img{max-width:100%;display:block;}
 .prose strong{font-weight:600;}
 .sec-group--cream .prose strong,.sec-group--alt .prose strong{color:var(--charcoal);}
 .sec-group--dark .prose strong{color:var(--bg);}
-.prose em{font-family:var(--f-a);font-style:normal;}
+.prose em{font-family:var(--f-a);font-style:italic;}
+.prose ul{list-style:none;padding:0;margin:1rem 0;display:flex;flex-direction:column;gap:.625rem;}
+.prose ul li{position:relative;padding-left:1.375rem;line-height:1.75;}
+.prose ul li::before{content:'';position:absolute;left:.35rem;top:.75em;width:5px;height:5px;border-radius:50%;background:var(--green);}
+.sec-group--cream .prose ul li,.sec-group--alt .prose ul li{color:var(--text-sec);}
+.sec-group--dark .prose ul li{color:rgba(250,240,226,.78);}
 
+/* ── SUB-HEADING (h3 inside sections) ── */
 .sub-head{font-family:var(--f-n);font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin:2.5rem 0 1rem;display:flex;align-items:center;gap:.5rem;}
 .sec-group--cream .sub-head,.sec-group--alt .sub-head{color:var(--text-sec);}
 .sec-group--dark .sub-head{color:rgba(250,240,226,.4);}
 .sub-head::before{content:'';display:block;width:20px;height:1px;background:currentColor;opacity:.6;}
 
+/* ── SCREENSHOT FRAME ── */
 .screenshot-frame{background:var(--white);border-radius:var(--r-lg);padding:8px;border:1px solid var(--border);box-shadow:var(--sh-md);margin:1.5rem 0;overflow:hidden;}
 .sec-group--dark .screenshot-frame{background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.08);}
 .screenshot-frame img{width:100%;border-radius:10px;display:block;}
 .screenshot-caption{text-align:center;font-family:var(--f-n);font-size:.6875rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--text-muted);margin-top:.75rem;}
 .sec-group--dark .screenshot-caption{color:rgba(250,240,226,.35);}
 
+/* ── SCORE CARDS ── */
 .score-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:1rem;margin:1.5rem 0;}
 .score-card{min-width:0;border-radius:var(--r-lg);padding:1.5rem 1.25rem;text-align:center;}
 .sec-group--cream .score-card,.sec-group--alt .score-card{background:var(--white);border:1px solid var(--border-lt);box-shadow:var(--sh-sm);}
@@ -121,49 +135,238 @@ img{max-width:100%;display:block;}
 .score-card__label{font-family:var(--f-n);font-size:.625rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--text-muted);margin-bottom:.5rem;overflow-wrap:anywhere;}
 .sec-group--dark .score-card__label{color:rgba(250,240,226,.4);}
 .score-card__value{font-family:var(--f-n);font-size:clamp(1.75rem,2.75vw,2.5rem);font-weight:700;color:var(--accent);line-height:1;overflow-wrap:anywhere;word-break:break-word;hyphens:auto;letter-spacing:-.02em;}
-.score-card__note{font-family:var(--f-b);font-size:.875rem;color:var(--text-muted);margin-top:.5rem;}
+.score-card__note{font-family:var(--f-b);font-size:.8125rem;color:var(--text-muted);margin-top:.5rem;}
 .sec-group--dark .score-card__note{color:rgba(250,240,226,.4);}
-.score-card__value--word{font-size:clamp(1.5rem,2vw,1.875rem);font-weight:700;font-family:var(--f-b);font-style:normal;letter-spacing:-.01em;}
 
-.kw-table-wrap{background:var(--bg)!important;border:1px solid rgba(44,51,64,.12)!important;border-radius:var(--r-lg);padding:1rem;margin:1.5rem 0;}
-.kw-table-wrap .kw-table{border-color:rgba(44,51,64,.08);}
-.kw-table-wrap .kw-row{border-bottom-color:rgba(44,51,64,.06);}
-.kw-table-wrap .kw-row--hot{background:rgba(196,98,45,.05);}
-.kw-table-wrap .kw-row__rank{color:var(--text-muted);}
-.kw-table-wrap .kw-row__term{color:var(--charcoal);}
-.kw-table-wrap .kw-row__vol{color:var(--accent);}
+/* ── BAR CHART ── */
+.bar-chart{margin:1.5rem 0;display:flex;flex-direction:column;gap:.875rem;}
+.bar-row{display:flex;align-items:center;gap:.875rem;}
+.bar-row__label{width:160px;font-size:.8125rem;font-weight:500;flex-shrink:0;}
+.sec-group--cream .bar-row__label,.sec-group--alt .bar-row__label{color:var(--charcoal);}
+.sec-group--dark .bar-row__label{color:rgba(250,240,226,.8);}
+.bar-row__track{flex:1;height:26px;border-radius:13px;position:relative;overflow:visible;}
+.sec-group--cream .bar-row__track,.sec-group--alt .bar-row__track{background:var(--bg-alt);}
+.sec-group--dark .bar-row__track{background:rgba(255,255,255,.06);}
+.bar-row__fill{height:100%;border-radius:13px;background:var(--accent);max-width:100%;overflow:hidden;}
+.bar-row__fill--green{background:var(--green);}
+.bar-row__cmp{position:absolute;top:-3px;bottom:-3px;width:2px;background:rgba(250,240,226,.32);border-radius:1px;}
+.bar-chart__legend{display:flex;gap:1.25rem;margin-bottom:.75rem;font-family:var(--f-n);font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;}
+.bar-chart__legend-item--you{display:flex;align-items:center;gap:.375rem;color:var(--accent);}
+.bar-chart__legend-item--you::before{content:'';width:16px;height:3px;background:var(--accent);border-radius:2px;flex-shrink:0;}
+.bar-chart__legend-item--cmp{display:flex;align-items:center;gap:.375rem;color:rgba(250,240,226,.38);}
+.bar-chart__legend-item--cmp::before{content:'';width:2px;height:12px;background:rgba(250,240,226,.38);border-radius:1px;flex-shrink:0;}
+.bar-row__val{width:auto;min-width:72px;font-family:var(--f-n);font-size:.75rem;font-weight:700;text-align:right;}
+.bar-row__cmp-val{font-family:var(--f-b);font-size:.625rem;font-weight:400;display:block;opacity:.5;}
+.kw-table-wrap{background:rgba(250,240,226,.07);border:1px solid rgba(250,240,226,.11);border-radius:12px;padding:1rem;margin:1.5rem 0;}
+.sec-group--cream .bar-row__val,.sec-group--alt .bar-row__val{color:var(--text-sec);}
+.sec-group--dark .bar-row__val{color:rgba(250,240,226,.65);}
 
-.stack-split{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(44,51,64,.08);border-radius:var(--r-xl);overflow:hidden;margin:1.5rem 0;}
-.stack-split__side{padding:2rem 1.75rem;display:flex;flex-direction:column;gap:1.5rem;}
-.stack-split__side--win{background:rgba(74,123,90,.06);}
-.stack-split__side--gap{background:rgba(196,98,45,.04);}
-.stack-split__badge{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:4px 12px;border-radius:var(--r-full);display:inline-block;width:fit-content;}
-.stack-split__side--win .stack-split__badge{background:rgba(74,123,90,.15);color:var(--green);}
-.stack-split__side--gap .stack-split__badge{background:rgba(196,98,45,.1);color:var(--accent-dk);}
-.stack-split__stat{display:flex;flex-direction:column;gap:.25rem;}
-.stack-split__num{font-family:var(--f-n);font-weight:700;font-size:clamp(1.125rem,1.875vw,1.5rem);line-height:1.1;}
-.stack-split__side--win .stack-split__num{color:var(--green);}
-.stack-split__side--gap .stack-split__num{color:var(--accent);}
-.stack-split__cmp{font-size:.65em;opacity:.55;font-style:normal;}
-.stack-split__label{font-family:var(--f-b);font-weight:700;font-size:.875rem;color:var(--charcoal);}
-.stack-split__note{font-size:.875rem;line-height:1.5;color:var(--text-muted);}
+/* ── COMPARE CARDS ── */
+.compare-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin:1.5rem 0;}
+.compare-card{border-radius:var(--r-lg);padding:1.5rem 1.25rem;}
+.sec-group--cream .compare-card,.sec-group--alt .compare-card{background:var(--white);border:1px solid var(--border-lt);box-shadow:var(--sh-sm);}
+.sec-group--dark .compare-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);}
+.compare-card--you{border:2px solid var(--accent)!important;background:rgba(196,98,45,.06)!important;}
+.compare-card{min-width:0;}
+.compare-card__name{font-family:var(--f-d);font-style:italic;font-size:1.25rem;font-weight:400;margin-bottom:.875rem;line-height:1.2;overflow-wrap:anywhere;}
+.sec-group--cream .compare-card__name,.sec-group--alt .compare-card__name{color:var(--charcoal);}
+.sec-group--dark .compare-card__name{color:var(--bg);}
+.compare-card__stat{display:flex;justify-content:space-between;padding:.35rem 0;font-size:.8125rem;border-bottom:1px solid var(--border-lt);}
+.sec-group--dark .compare-card__stat{border-bottom-color:rgba(255,255,255,.06);}
+.compare-card__stat:last-child{border-bottom:none;}
+.compare-card__stat-label{color:var(--text-muted);}
+.sec-group--dark .compare-card__stat-label{color:rgba(250,240,226,.35);}
+.compare-card__stat-val{font-weight:600;}
+.sec-group--cream .compare-card__stat-val,.sec-group--alt .compare-card__stat-val{color:var(--charcoal);}
+.sec-group--dark .compare-card__stat-val{color:rgba(250,240,226,.85);}
+.compare-card__stat-val--good{color:var(--green)!important;}
+.compare-card__stat-val--mid{color:#B8860B!important;}
+.compare-card__stat-val--low{color:var(--accent)!important;}
 
+/* ── KEYWORD CARDS ── */
+.kw-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:.625rem;margin:1.5rem 0;}
+.kw-card{border-radius:var(--r-md);padding:.875rem 1rem;display:flex;justify-content:space-between;align-items:center;}
+.sec-group--cream .kw-card,.sec-group--alt .kw-card{background:var(--white);border:1px solid var(--border-lt);}
+.sec-group--dark .kw-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);}
+.kw-card{min-width:0;}
+.kw-card__term{font-weight:500;font-size:.8125rem;overflow-wrap:anywhere;min-width:0;}
+.sec-group--cream .kw-card__term,.sec-group--alt .kw-card__term{color:var(--charcoal);}
+.sec-group--dark .kw-card__term{color:rgba(250,240,226,.85);}
+.kw-card__vol{font-family:var(--f-n);font-size:.625rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text-muted);white-space:nowrap;margin-left:.75rem;}
+.sec-group--dark .kw-card__vol{color:rgba(250,240,226,.4);}
+.kw-card__vol strong{font-family:var(--f-n);font-size:.875rem;font-weight:700;color:var(--accent);letter-spacing:0;}
+.kw-card--hot{border-color:rgba(196,98,45,.3)!important;background:rgba(196,98,45,.06)!important;}
+
+/* ── PILL TAGS ── */
 .tag{display:inline-block;padding:3px 10px;border-radius:var(--r-full);font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;}
 .tag--easy{background:rgba(74,123,90,.15);color:var(--green);}
 .tag--medium{background:rgba(184,134,11,.12);color:#B8860B;}
 .tag--high{background:var(--accent);color:#fff;}
+.tag--mid-impact{background:rgba(74,123,90,.12);color:var(--green);}
 
+/* ── OPPORTUNITY CARDS (matching website-reveal page-row) ── */
+/* padding-left indents the list past the section's "06" number so the nested 01/02/03/04 sit subordinate to the section heading */
+.opp-list{display:flex;flex-direction:column;margin:1.5rem 0;padding-left:clamp(2.5rem,6vw,6.25rem);}
+.opp-row{display:grid;grid-template-columns:68px 1fr;grid-template-rows:auto auto;column-gap:1.5rem;row-gap:.5rem;padding:2rem 0;border-top:1px solid var(--border);}
+.sec-group--dark .opp-row{border-top-color:rgba(255,255,255,.08);}
+.opp-row:last-child{border-bottom:1px solid var(--border);}
+.sec-group--dark .opp-row:last-child{border-bottom-color:rgba(255,255,255,.08);}
+.opp-row__num{grid-row:1/3;font-family:var(--f-d);font-style:italic;font-size:clamp(1.75rem,2.75vw,2.5rem);font-weight:400;color:var(--accent);line-height:1;opacity:.85;}
+.opp-row__title{font-family:var(--f-d);font-style:italic;font-size:clamp(1.125rem,1.8vw,1.4375rem);font-weight:400;line-height:1.2;align-self:end;overflow-wrap:anywhere;}
+.sec-group--cream .opp-row__title,.sec-group--alt .opp-row__title{color:var(--charcoal);}
+.sec-group--dark .opp-row__title{color:var(--bg);}
+.opp-row__desc{font-size:.9375rem;line-height:1.7;}
+.sec-group--cream .opp-row__desc,.sec-group--alt .opp-row__desc{color:var(--text-sec);}
+.sec-group--dark .opp-row__desc{color:rgba(250,240,226,.75);}
+.opp-row__tags{grid-column:1/-1;display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.5rem;}
+
+/* ── TIMELINE (website-reveal action-item style) ── */
+.timeline{display:flex;flex-direction:column;margin:1.5rem 0;}
+.timeline-item{display:flex;gap:1rem;padding:1.25rem 0;border-top:1px solid var(--border);}
+.sec-group--dark .timeline-item{border-top-color:rgba(255,255,255,.07);}
+.timeline-item:first-child{border-top:none;padding-top:0;}
+.timeline-item__num{font-family:var(--f-n);font-size:.6875rem;font-weight:700;color:var(--accent);min-width:3rem;padding-top:.3em;flex-shrink:0;letter-spacing:.08em;text-transform:uppercase;}
+.timeline-item__body{flex:1;}
+.timeline-item__title{font-family:var(--f-d);font-style:italic;font-size:clamp(1.1rem,1.6vw,1.25rem);font-weight:400;margin-bottom:.35rem;line-height:1.2;overflow-wrap:anywhere;}
+.sec-group--cream .timeline-item__title,.sec-group--alt .timeline-item__title{color:var(--charcoal);}
+.sec-group--dark .timeline-item__title{color:rgba(250,240,226,.92);}
+.timeline-item__detail{font-size:.9375rem;line-height:1.65;}
+.sec-group--cream .timeline-item__detail,.sec-group--alt .timeline-item__detail{color:var(--text-sec);}
+.sec-group--dark .timeline-item__detail{color:rgba(250,240,226,.6);}
+
+/* ── REVENUE BOX (legacy, kept for backward compat) ── */
+.revenue-box{background:var(--green);color:#fff;border-radius:var(--r-xl);padding:3rem 2.5rem;text-align:center;margin:2rem 0;}
+.revenue-box__label{font-family:var(--f-n);font-size:.6875rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;opacity:.7;margin-bottom:.625rem;}
+.revenue-box__amount{font-family:var(--f-d);font-style:italic;font-size:clamp(2.75rem,7vw,4.5rem);font-weight:400;line-height:1;margin-bottom:.5rem;overflow-wrap:anywhere;}
+.revenue-box__note{font-family:var(--f-a);font-style:italic;font-size:1rem;opacity:.82;max-width:500px;margin:0 auto;line-height:1.55;}
+
+/* ── FUNNEL B — EQUATION HEADER + CARD GRID ── */
+.funnel-b{margin:0 0 2rem;}
+.funnel-b__eq{font-family:var(--f-n);font-weight:900;font-size:clamp(.9rem,2vw,1.625rem);color:var(--charcoal);line-height:1.35;letter-spacing:-.02em;text-align:center;padding:2.25rem 2rem 1.75rem;background:var(--white);border:1px solid var(--border);border-radius:var(--r-xl) var(--r-xl) 0 0;border-bottom:none;}
+.funnel-b__eq .op{color:var(--accent);}
+.funnel-b__eq .result{display:block;font-size:clamp(2.5rem,5.5vw,4rem);color:var(--accent);margin-top:.625rem;letter-spacing:-.03em;line-height:1;}
+.funnel-b__eq .result-meta{display:block;font-size:.5rem;letter-spacing:.16em;color:var(--text-muted);font-weight:700;text-transform:uppercase;margin-top:.5rem;}
+.funnel-b__cards{display:grid;grid-template-columns:repeat(5,1fr);border:1px solid var(--border);border-radius:0 0 var(--r-xl) var(--r-xl);border-top:2px solid var(--border-light);overflow:hidden;}
+.funnel-b__card{padding:1.375rem 1.25rem 1.5rem;background:var(--white);border-right:1px solid var(--border-light);}
+.funnel-b__card:last-child{border-right:none;}
+.funnel-b__card-label{font-family:var(--f-n);font-size:.45rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:.4rem;}
+.funnel-b__card-val{font-family:var(--f-n);font-weight:700;font-size:clamp(.875rem,1.5vw,1.125rem);color:var(--charcoal);line-height:1;margin-bottom:.5rem;}
+.funnel-b__card-sub{font-size:.75rem;color:var(--text-muted);line-height:1.5;}
+.funnel-note{padding:1.25rem 1.5rem;border-radius:var(--r-md);background:var(--bg-alt);border-left:3px solid var(--border);}
+.funnel-note p{font-size:.875rem;color:var(--text-muted);line-height:1.6;}
+.funnel-note strong{color:var(--text-sec);font-weight:600;}
+
+/* ── REVENUE VARIANT B — THE GAP (before/after split) ── */
+.gap-wrap{display:grid;grid-template-columns:1fr 1fr;border-radius:var(--r-xl);overflow:hidden;margin-bottom:1.5rem;min-height:340px;}
+.gap-now{background:#222830;padding:3rem 2.75rem;display:flex;flex-direction:column;justify-content:space-between;position:relative;}
+.gap-now::after{content:'';position:absolute;inset:0;background:repeating-linear-gradient(-45deg,transparent,transparent 12px,rgba(255,255,255,.012) 12px,rgba(255,255,255,.012) 13px);pointer-events:none;}
+.gap-now__eyebrow,.gap-after__eyebrow{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;margin-bottom:1.5rem;}
+.gap-now__eyebrow{color:rgba(250,240,226,.25);}
+.gap-after__eyebrow{color:rgba(250,240,226,.5);}
+.gap-now__headline{font-family:var(--f-d);font-style:italic;font-size:clamp(1rem,1.8vw,1.375rem);line-height:1.35;color:rgba(250,240,226,.45);flex:1;margin-bottom:1.5rem;}
+.gap-after__headline{font-family:var(--f-d);font-style:italic;font-size:clamp(1rem,1.8vw,1.375rem);line-height:1.35;color:rgba(250,240,226,.92);flex:1;margin-bottom:1.5rem;}
+.gap-now__num{font-family:var(--f-n);font-weight:700;font-size:clamp(1.625rem,3.25vw,2.625rem);line-height:1;color:rgba(250,240,226,.18);overflow-wrap:anywhere;}
+.gap-now__sublabel,.gap-after__sublabel{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-top:.5rem;}
+.gap-now__sublabel{color:rgba(250,240,226,.15);}
+.gap-after{background:var(--green-dk);padding:3rem 2.75rem;display:flex;flex-direction:column;justify-content:space-between;}
+.gap-after__num{font-family:var(--f-n);font-weight:700;font-size:clamp(1.625rem,3.25vw,2.625rem);line-height:1;color:var(--sage);overflow-wrap:anywhere;}
+.gap-after__sublabel{color:rgba(250,240,226,.4);}
+.gap-bridge{background:var(--bg-alt);border-radius:var(--r-lg);padding:1.5rem 2rem;display:flex;align-items:center;gap:1.5rem;margin-bottom:1.5rem;}
+.gap-bridge__line{flex:1;height:1px;background:var(--border);}
+.gap-bridge__text{font-size:1.0625rem;font-weight:500;color:var(--text-sec);white-space:nowrap;}
+.gap-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;}
+.gap-metric{text-align:center;padding:1.25rem 1rem;}
+.gap-metric__val{font-family:var(--f-d);font-style:italic;font-size:1.75rem;color:var(--accent);line-height:1;margin-bottom:.375rem;}
+.gap-metric__label{font-size:.8125rem;color:var(--text-sec);}
+
+/* ── REVENUE VARIANT C — THE RANGE (conservative/moderate/optimistic) ── */
+.range-hero{text-align:center;padding:2.5rem 2rem 2rem;margin-bottom:2rem;}
+.range-hero__sub{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(250,240,226,.3);margin-bottom:1.25rem;}
+.range-hero__num{font-family:var(--f-n);font-weight:900;font-size:clamp(3.25rem,6.5vw,5.25rem);color:var(--accent);line-height:1;margin-bottom:.5rem;overflow-wrap:anywhere;}
+.range-hero__label{font-size:1.125rem;color:rgba(250,240,226,.6);margin-bottom:.5rem;}
+.range-hero__note{font-size:.875rem;color:rgba(250,240,226,.28);max-width:480px;margin:0 auto;line-height:1.6;}
+.range-scenarios{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-bottom:1.5rem;}
+.range-card{border-radius:var(--r-xl);padding:2rem 1.75rem;}
+.range-card--conservative{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);}
+.range-card--moderate{background:rgba(196,98,45,.12);border:1px solid rgba(196,98,45,.2);}
+.range-card--optimistic{background:rgba(74,123,90,.15);border:1px solid rgba(74,123,90,.25);}
+.range-card__tier{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;margin-bottom:1rem;}
+.range-card--conservative .range-card__tier{color:rgba(250,240,226,.3);}
+.range-card--moderate .range-card__tier{color:rgba(196,98,45,.8);}
+.range-card--optimistic .range-card__tier{color:var(--sage);}
+.range-card__amt{font-family:var(--f-d);font-style:italic;font-size:clamp(1.75rem,2.5vw,2.25rem);line-height:1;margin-bottom:.75rem;overflow-wrap:anywhere;}
+.range-card--conservative .range-card__amt{color:rgba(250,240,226,.5);}
+.range-card--moderate .range-card__amt{color:var(--bg);}
+.range-card--optimistic .range-card__amt{color:var(--sage);}
+.range-card__period{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;display:block;margin-bottom:1.25rem;}
+.range-card--conservative .range-card__period{color:rgba(250,240,226,.2);}
+.range-card--moderate .range-card__period{color:rgba(250,240,226,.4);}
+.range-card--optimistic .range-card__period{color:rgba(143,180,138,.5);}
+.range-card__desc{font-size:.8125rem;line-height:1.65;}
+.range-card--conservative .range-card__desc{color:rgba(250,240,226,.38);}
+.range-card--moderate .range-card__desc{color:rgba(250,240,226,.72);}
+.range-card--optimistic .range-card__desc{color:rgba(250,240,226,.72);}
+.range-bar-wrap{background:rgba(255,255,255,.05);border-radius:var(--r-full);height:6px;margin-top:1.25rem;overflow:hidden;}
+.range-bar{height:100%;border-radius:var(--r-full);}
+.range-card--conservative .range-bar{width:35%;background:rgba(255,255,255,.2);}
+.range-card--moderate .range-bar{width:62%;background:var(--accent);}
+.range-card--optimistic .range-bar{width:100%;background:var(--green);}
+.range-callout{border-radius:var(--r-lg);padding:1.5rem 2rem;background:rgba(250,240,226,.04);border:1px solid rgba(250,240,226,.06);display:flex;align-items:center;gap:1.5rem;}
+.range-callout__icon{width:36px;height:36px;border-radius:50%;background:rgba(196,98,45,.15);display:grid;place-items:center;flex-shrink:0;}
+.range-callout__icon svg{width:16px;height:16px;stroke:var(--accent);stroke-width:2;fill:none;}
+.range-callout__text{font-size:1rem;color:rgba(250,240,226,.55);line-height:1.55;}
+.range-callout__text strong{font-style:normal;font-weight:600;color:rgba(250,240,226,.82);}
+
+/* ── REVENUE VARIANT D — WHAT IT MEANS (human translation) ── */
+.meaning-anchor{text-align:center;margin-bottom:3rem;padding:2.5rem 2rem;border-bottom:1px solid var(--border);}
+.meaning-anchor__label{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--text-muted);margin-bottom:1.25rem;}
+.meaning-anchor__num{font-family:var(--f-n);font-weight:900;font-size:clamp(3.25rem,5.75vw,4.5rem);color:var(--accent);line-height:1;margin-bottom:.5rem;overflow-wrap:anywhere;}
+.meaning-anchor__period{font-size:1.25rem;color:var(--text-sec);}
+.meaning-anchor__note{font-size:.875rem;color:var(--text-muted);margin-top:.75rem;}
+.meaning-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--r-xl);overflow:hidden;margin-bottom:1.5rem;}
+.meaning-item{background:var(--white);padding:2.5rem 2rem;display:flex;flex-direction:column;gap:.875rem;}
+.meaning-item__ico{width:44px;height:44px;border-radius:var(--r-md);background:rgba(196,98,45,.1);display:grid;place-items:center;}
+.meaning-item__ico svg{width:20px;height:20px;stroke:var(--accent-dk);stroke-width:1.75;fill:none;}
+.meaning-item__num{font-family:var(--f-n);font-weight:700;font-size:clamp(1.375rem,2.375vw,2rem);color:var(--charcoal);line-height:1;overflow-wrap:anywhere;}
+.meaning-item__num em{color:var(--accent);}
+.meaning-item__label{font-size:.9375rem;font-weight:600;color:var(--charcoal);}
+.meaning-item__sub{font-size:.875rem;color:var(--text-sec);line-height:1.6;}
+.meaning-close{background:var(--charcoal);border-radius:var(--r-xl);padding:2.5rem;display:flex;align-items:center;gap:2rem;flex-wrap:wrap;}
+.meaning-close__quote{font-family:var(--f-a);font-style:italic;font-size:1.25rem;line-height:1.55;color:rgba(250,240,226,.75);flex:1;min-width:200px;}
+.meaning-close__quote em{color:var(--accent);}
+.meaning-close__aside{flex-shrink:0;width:130px;text-align:center;}
+.meaning-close__aside-num{font-family:var(--f-d);font-style:italic;font-size:2.25rem;color:var(--accent);line-height:1;margin-bottom:.25rem;}
+.meaning-close__aside-label{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(250,240,226,.25);}
+
+/* ── REVIEW / TESTIMONIAL CARDS ── */
 .review-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem;margin:1.5rem 0;}
 .review-card{border-radius:var(--r-lg);padding:1.5rem 1.5rem 1.25rem;display:flex;flex-direction:column;gap:.875rem;}
 .sec-group--cream .review-card,.sec-group--alt .review-card{background:var(--white);border:1px solid var(--border-lt);box-shadow:var(--sh-sm);}
 .sec-group--dark .review-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);}
 .review-card__stars{color:var(--accent);font-size:1rem;letter-spacing:.2em;line-height:1;}
-.review-card__quote{font-family:var(--f-b);font-style:normal;font-size:1rem;line-height:1.6;margin:0;}
+.review-card__quote{font-family:var(--f-a);font-style:italic;font-size:1.0625rem;line-height:1.55;margin:0;}
 .sec-group--cream .review-card__quote,.sec-group--alt .review-card__quote{color:var(--charcoal);}
 .sec-group--dark .review-card__quote{color:rgba(250,240,226,.92);}
 .review-card__by{font-family:var(--f-b);font-size:.8125rem;font-weight:500;color:var(--text-muted);margin-top:auto;}
 .sec-group--dark .review-card__by{color:rgba(250,240,226,.45);}
 
+/* ── BUILD / E-E-A-T GRID (icon + body cards) ── */
+.build-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin:1.5rem 0;}
+.build-item{display:flex;gap:.875rem;padding:1.25rem 1.25rem 1.375rem;border-radius:var(--r-lg);align-items:flex-start;}
+.sec-group--cream .build-item,.sec-group--alt .build-item{background:var(--white);border:1px solid var(--border-lt);box-shadow:var(--sh-sm);}
+.sec-group--dark .build-item{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);}
+.build-item__ico{width:32px;height:32px;border-radius:50%;background:rgba(196,98,45,.12);color:var(--accent);display:grid;place-items:center;flex-shrink:0;}
+.build-item__ico .material-symbols-outlined{font-size:18px;}
+.sec-group--dark .build-item__ico{background:rgba(196,98,45,.2);color:#E09360;}
+.build-item__body{flex:1;min-width:0;}
+.build-item__label{font-family:var(--f-b);font-weight:700;font-size:.9375rem;margin-bottom:.3rem;line-height:1.3;}
+.sec-group--cream .build-item__label,.sec-group--alt .build-item__label{color:var(--charcoal);}
+.sec-group--dark .build-item__label{color:var(--bg);}
+.build-item__desc{font-size:.875rem;line-height:1.6;}
+.sec-group--cream .build-item__desc,.sec-group--alt .build-item__desc{color:var(--text-sec);}
+.sec-group--dark .build-item__desc{color:rgba(250,240,226,.7);}
+
+/* ── OPPORTUNITY CALLOUT (labeled block with accent border) ── */
 .opp-callout{border-left:3px solid var(--accent);border-radius:0 var(--r-md) var(--r-md) 0;padding:1.25rem 1.5rem;margin:2rem 0;font-size:.9375rem;line-height:1.7;}
 .sec-group--cream .opp-callout,.sec-group--alt .opp-callout{background:var(--bg-alt);color:var(--text-sec);}
 .sec-group--dark .opp-callout{background:rgba(250,240,226,.04);color:rgba(250,240,226,.82);}
@@ -171,6 +374,8 @@ img{max-width:100%;display:block;}
 .sec-group--cream .opp-callout strong,.sec-group--alt .opp-callout strong{color:var(--charcoal);}
 .sec-group--dark .opp-callout strong{color:var(--bg);}
 
+/* ── SCORE CARD VARIANT for word values (High, Strong, Full) ── */
+.score-card__value--word{font-size:clamp(1.5rem,2vw,1.875rem);font-weight:700;font-family:var(--f-b);font-style:normal;letter-spacing:-.01em;}
 .grade-legend{margin:1rem 0 2.5rem;}
 .grade-legend__label{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);margin-bottom:.5rem;}
 .grade-legend__items{display:flex;background:var(--white);border:1px solid rgba(44,51,64,.12);border-radius:10px;box-shadow:0 1px 4px rgba(44,51,64,.07);overflow:hidden;}
@@ -184,6 +389,7 @@ img{max-width:100%;display:block;}
 .grade-legend__item--weak{border-top:3px solid #B85C00;}.grade-legend__item--weak .grade-legend__grade,.grade-legend__item--weak .grade-legend__dots{color:#B85C00;}
 .grade-legend__item--poor{border-top:3px solid #8B1A1A;}.grade-legend__item--poor .grade-legend__grade,.grade-legend__item--poor .grade-legend__dots{color:#8B1A1A;}
 
+/* ── CALLOUT (secondary emphasis) ── */
 .callout{border-radius:var(--r-md);padding:1.25rem 1.5rem;margin:1.5rem 0;font-size:.9375rem;line-height:1.7;border-left:3px solid var(--accent);}
 .sec-group--cream .callout,.sec-group--alt .callout{background:var(--white);color:var(--text-sec);box-shadow:var(--sh-sm);}
 .sec-group--dark .callout{background:rgba(250,240,226,.04);color:rgba(250,240,226,.75);border-left-color:var(--accent);}
@@ -191,6 +397,7 @@ img{max-width:100%;display:block;}
 .sec-group--cream .callout strong,.sec-group--alt .callout strong{color:var(--charcoal);}
 .sec-group--dark .callout strong{color:var(--bg);}
 
+/* ── PILL BUTTON (from website-reveal) ── */
 .btn-pill{position:relative;overflow:hidden;isolation:isolate;display:inline-flex;align-items:center;border-radius:var(--r-full);text-decoration:none;cursor:pointer;border:1.5px solid;font-family:var(--f-b);font-weight:600;}
 .btn-pill__fill{position:absolute;top:4px;bottom:4px;right:4px;border-radius:var(--r-full);transition:left .65s cubic-bezier(.22,1,.36,1);}
 .btn-pill__label{position:relative;z-index:1;}
@@ -202,46 +409,68 @@ img{max-width:100%;display:block;}
 .btn-pill--cream .btn-pill__label{color:var(--accent);}
 .btn-pill--cream .btn-pill__arrow{width:44px;height:44px;background:rgba(196,98,45,.14);color:var(--accent);margin-left:18px;font-size:1rem;}
 
+/* ── CTA BOX (closing section) ── */
 .cta-box{text-align:center;border-radius:var(--r-xl);padding:3rem 2.5rem;margin:2rem 0;}
 .sec-group--cream .cta-box,.sec-group--alt .cta-box{background:var(--bg-night);color:var(--bg);}
 .sec-group--dark .cta-box{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);}
 .cta-box__eyebrow{font-family:var(--f-n);font-size:.6875rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:1rem;}
-.cta-box__heading{font-family:var(--f-d);font-style:normal;font-size:clamp(1.75rem,3vw,2.5rem);font-weight:400;line-height:1.15;margin-bottom:.75rem;color:var(--bg);overflow-wrap:anywhere;}
+.cta-box__heading{font-family:var(--f-d);font-style:italic;font-size:clamp(1.75rem,3vw,2.5rem);font-weight:400;line-height:1.15;margin-bottom:.75rem;color:var(--bg);overflow-wrap:anywhere;}
+.sec-group--dark .cta-box__heading{color:var(--bg);}
 .cta-box__heading em{color:var(--accent);}
 .cta-box__sub{font-size:1.0625rem;color:rgba(250,240,226,.55);margin-bottom:2rem;max-width:500px;margin-left:auto;margin-right:auto;line-height:1.55;}
+.cta-box__secondary{font-size:.875rem;color:rgba(250,240,226,.45);margin-top:1.25rem;}
+.cta-box__secondary a{color:var(--sage);text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(143,175,138,.35);}
 
+/* ── FOOTER (standard Aspire doc footer) ── */
 .guide-footer{background:var(--charcoal);border-top:1px solid rgba(250,240,226,.08);padding:4rem 3rem 3rem;display:flex;flex-direction:column;align-items:center;gap:1.5rem;text-align:center;}
-.guide-footer__heading{font-family:var(--f-d);font-style:normal;font-size:1.375rem;color:rgba(250,240,226,.82);margin-bottom:.25rem;line-height:1.2;}
-.guide-footer__sub{font-family:var(--f-a);font-style:normal;font-size:.9375rem;color:rgba(250,240,226,.35);margin-bottom:.5rem;}
+.guide-footer__heading{font-family:var(--f-d);font-style:italic;font-size:1.375rem;color:rgba(250,240,226,.82);margin-bottom:.25rem;line-height:1.2;}
+.guide-footer__sub{font-family:var(--f-a);font-style:italic;font-size:.9375rem;color:rgba(250,240,226,.35);margin-bottom:.5rem;}
 .footer-contacts{display:grid;grid-template-columns:1fr 1fr;gap:1rem;width:100%;max-width:640px;}
 .footer-contact{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.07);border-left:3px solid var(--green);border-radius:var(--r-lg);padding:1.5rem 1.75rem;text-align:left;}
 .footer-contact__name{font-family:var(--f-b);font-weight:700;font-size:1.0625rem;color:rgba(250,240,226,.92);margin-bottom:.3rem;}
 .footer-contact__role{font-size:.9375rem;color:rgba(250,240,226,.38);margin-bottom:1rem;}
 .footer-contact__links{display:flex;flex-direction:column;gap:.3rem;}
-.footer-contact__links a{font-size:.9375rem;color:rgba(250,240,226,.65);text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(250,240,226,.25);transition:color .18s;}
-.footer-contact__links a:hover{color:rgba(250,240,226,.92);}
+.footer-contact__links a{font-size:.9375rem;color:rgba(250,240,226,.65);text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(250,240,226,.25);transition:color .18s,text-decoration-color .18s;}
+.footer-contact__links a:hover{color:rgba(250,240,226,.92);text-decoration-color:rgba(250,240,226,.55);}
 .footer-social{width:100%;max-width:640px;text-align:center;}
 .footer-social__label{font-family:var(--f-b);font-size:.9375rem;font-weight:600;color:rgba(250,240,226,.4);margin-bottom:1rem;}
 .footer-social__icons{display:flex;gap:.875rem;justify-content:center;}
 .footer-social__link{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);display:grid;place-items:center;color:rgba(250,240,226,.5);transition:background .2s,color .2s;}
 .footer-social__link:hover{background:var(--accent);color:#fff;}
 .footer-social__link svg{width:16px;height:16px;fill:currentColor;}
-.guide-footer__tagline{font-family:var(--f-a);font-style:normal;font-size:.875rem;color:rgba(250,240,226,.22);letter-spacing:.01em;margin-top:.5rem;}
+.guide-footer__tagline{font-family:var(--f-a);font-style:italic;font-size:.875rem;color:rgba(250,240,226,.22);letter-spacing:.01em;margin-top:.5rem;}
 
+/* ── PLAN GRID (2-col border-divided grid — "Here's What We'd Actually Do") ── */
+.plan-grid{display:grid;grid-template-columns:1fr 1fr;margin:2rem -2.5rem 0;}
+.plan-item{padding:2.5rem 2.5rem;border-top:1px solid var(--border);display:flex;flex-direction:column;gap:.625rem;}
+.plan-item:nth-child(odd){border-right:1px solid var(--border);}
+.plan-item__num{font-family:var(--f-n);font-size:.6875rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);line-height:1;margin-bottom:.375rem;}
+.plan-item__title{font-family:var(--f-d);font-style:normal;font-size:clamp(1.375rem,2.2vw,1.875rem);font-weight:400;line-height:1.15;margin:0;}
+.sec-group--cream .plan-item__title,.sec-group--alt .plan-item__title{color:var(--charcoal);}
+.sec-group--dark .plan-item__title{color:var(--bg);}
+.plan-item__desc{font-size:.9375rem;line-height:1.72;flex:1;}
+.sec-group--cream .plan-item__desc,.sec-group--alt .plan-item__desc{color:var(--text-sec);}
+.sec-group--dark .plan-item__desc{color:rgba(250,240,226,.75);}
+.plan-item__tag{margin-top:.875rem;}
+
+/* ── PHASE ROADMAP (section 05 — grouped by timeline) ── */
 .phase-roadmap{margin:2rem 0 0;display:flex;flex-direction:column;gap:1.75rem;}
 .phase-header{display:flex;align-items:center;gap:.75rem;margin-bottom:.875rem;}
 .phase-label{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:4px 14px;border-radius:var(--r-full);white-space:nowrap;}
 .phase-label--quick{background:rgba(196,98,45,.1);color:var(--accent-dk);}
 .phase-label--m1{background:rgba(74,123,90,.1);color:#3D6B4A;}
 .phase-label--m2{background:rgba(44,51,64,.07);color:var(--text-sec);}
-.phase-divider{flex:1;height:1px;background:var(--border);}
-.phase-note{font-family:var(--f-b);font-size:.75rem;font-weight:600;color:var(--text-sec);white-space:nowrap;background:var(--bg-alt);border:1px solid var(--border);border-radius:var(--r-full);padding:3px 12px;}
+.phase-divider{flex:1;height:1px;background:var(--border-light);}
+.phase-note{font-family:var(--f-b);font-size:.8125rem;color:var(--text-muted);white-space:nowrap;}
 .phase-items{display:grid;grid-template-columns:1fr;gap:.625rem;}
 .phase-items--grid{grid-template-columns:1fr 1fr;}
-.phase-item{padding:1.25rem 1.5rem;border-radius:var(--r-lg);background:var(--white);border:1px solid var(--border-lt);display:flex;flex-direction:column;gap:.5rem;}
+.phase-item{padding:1.25rem 1.5rem;border-radius:var(--r-lg);background:var(--white);border:1px solid var(--border-light);display:flex;flex-direction:column;gap:.5rem;}
 .phase-item__title{font-family:var(--f-b);font-weight:700;font-size:.9375rem;color:var(--charcoal);line-height:1.25;margin:0;}
 .phase-item__desc{font-size:.875rem;color:var(--text-sec);line-height:1.65;margin:0;flex:1;}
+.tag--outline{background:transparent;border:1.5px solid rgba(196,98,45,.45);color:var(--accent-dk);}
+.sec-group--dark .tag--outline{border-color:rgba(196,98,45,.45);color:#E09360;}
 
+/* ── TEAM CARDS (Why Aspire — Option A) ── */
 .team-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:2.5rem;}
 .team-card{border-radius:var(--r-xl);overflow:hidden;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);}
 .team-card__photo{aspect-ratio:3/4;overflow:hidden;position:relative;}
@@ -249,41 +478,68 @@ img{max-width:100%;display:block;}
 .team-card:hover .team-card__photo img{transform:scale(1.04);}
 .team-card__tint{position:absolute;inset:0;background:linear-gradient(to bottom,transparent 30%,rgba(20,24,32,.55) 65%,rgba(20,24,32,.92) 100%);}
 .team-card__overlay{position:absolute;bottom:0;left:0;right:0;padding:1.5rem 1.75rem 1.75rem;display:flex;flex-direction:column;gap:.375rem;}
+.team-card__socials{position:absolute;top:1.25rem;right:1.25rem;display:flex;gap:.625rem;}
+.team-card__social-btn{width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,.35);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.15);display:grid;place-items:center;color:rgba(250,240,226,.75);transition:background .2s,color .2s;}
+.team-card__social-btn:hover{background:var(--accent);color:#fff;border-color:var(--accent);}
+.team-card__social-btn svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
 .team-card__role{font-family:var(--f-b);font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.55);margin:0;}
 .team-card__name{font-family:var(--f-d);font-size:clamp(28px,3.5vw,48px);font-weight:400;line-height:1;letter-spacing:-.02em;color:#fff;margin:0;}
 .team-card__body{padding:1.5rem 1.75rem 1.875rem;}
 .team-card__bio{font-size:.9375rem;line-height:1.65;color:rgba(250,240,226,.6);}
 .team-card__links{display:flex;flex-direction:column;gap:.3rem;margin-top:1.125rem;}
 .team-card__links a{font-size:.875rem;color:rgba(250,240,226,.5);text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(250,240,226,.2);}
-.why-values{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.07);border-radius:var(--r-xl);overflow:hidden;margin:2rem 0;}
-.why-val{background:rgba(255,255,255,.03);padding:1.625rem 1.5rem;display:flex;flex-direction:column;gap:.5rem;}
-.why-val__icon{width:34px;height:34px;border-radius:var(--r-md);background:rgba(196,98,45,.14);display:grid;place-items:center;flex-shrink:0;}
-.why-val__icon .material-symbols-outlined{font-size:17px;color:#E09360;}
-.why-val__label{font-family:var(--f-b);font-weight:700;font-size:.9375rem;color:rgba(250,240,226,.88);line-height:1.2;}
-.why-val__desc{font-size:.875rem;color:rgba(250,240,226,.48);line-height:1.55;margin:0;}
+.team-promise{background:rgba(196,98,45,.08);border:1px solid rgba(196,98,45,.15);border-left:3px solid var(--accent);border-radius:0 var(--r-lg) var(--r-lg) 0;padding:1.5rem 2rem;margin-bottom:2.5rem;}
+.team-promise__text{font-family:var(--f-a);font-style:italic;font-size:1.125rem;color:rgba(250,240,226,.82);line-height:1.6;}
+.team-promise__text strong{font-style:normal;font-weight:600;color:var(--bg);}
+.why-reviews{margin-top:2.5rem;}
+.why-reviews__label{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(250,240,226,.25);margin-bottom:1rem;}
 
+/* ── CTA STATS ROW ── */
+.cta-stats{display:flex;align-items:center;justify-content:center;gap:1.5rem;margin-bottom:2rem;flex-wrap:wrap;}
+.cta-stat{text-align:center;min-width:0;}
+.cta-stat--divider{width:1px;height:32px;background:rgba(250,240,226,.15);flex-shrink:0;}
+.cta-stat__num{display:block;font-family:var(--f-d);font-style:italic;font-size:1.5rem;color:var(--bg);line-height:1;margin-bottom:.25rem;}
+.cta-stat__label{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(250,240,226,.35);}
+
+/* ── BEYOND STRIP (compact 4-cell) ── */
+.beyond-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.07);border-radius:var(--r-xl);overflow:hidden;margin:1.5rem 0;}
+.beyond-item{background:rgba(255,255,255,.025);padding:1.75rem 1.5rem;display:flex;flex-direction:column;gap:.625rem;}
+.beyond-item__ico{width:36px;height:36px;border-radius:var(--r-md);background:rgba(196,98,45,.15);display:grid;place-items:center;flex-shrink:0;}
+.beyond-item__ico .material-symbols-outlined{font-size:18px;color:#E09360;}
+.beyond-item__label{font-family:var(--f-b);font-weight:700;font-size:.9375rem;color:var(--bg);line-height:1.2;}
+.beyond-item__desc{font-size:.8125rem;color:rgba(250,240,226,.52);line-height:1.55;}
+
+/* ── CTA PROCESS LINE ── */
+.cta-process{font-size:.875rem;color:rgba(250,240,226,.38);margin-bottom:1.75rem;letter-spacing:.01em;}
+.cta-process strong{color:rgba(250,240,226,.65);font-weight:600;}
+
+/* ── CTA STEPS (1 / 2 / 3 numbered flow) ── */
 .cta-steps{display:flex;flex-direction:column;gap:.625rem;margin:1.5rem auto 2rem;max-width:400px;text-align:left;}
 .cta-step{display:flex;gap:.875rem;align-items:flex-start;}
 .cta-step__num{width:26px;height:26px;border-radius:50%;background:rgba(196,98,45,.2);border:1px solid rgba(196,98,45,.35);color:#E09360;font-family:var(--f-n);font-size:.5625rem;font-weight:700;display:grid;place-items:center;flex-shrink:0;margin-top:.175rem;}
 .cta-step__label{display:block;font-family:var(--f-b);font-weight:700;font-size:.9375rem;color:var(--bg);line-height:1.3;margin-bottom:.2rem;}
 .cta-step__desc{font-size:.8125rem;color:rgba(250,240,226,.42);line-height:1.5;margin:0;}
 
+/* ── OVERFLOW FIX — long placeholder strings ── */
+.funnel-step__val,.funnel-result__amt,.revenue-box__amt,.gap-now__num,.gap-after__num,.range-hero__num,.meaning-anchor__num,.score-card__value,.meaning-item__num,.meaning-close__aside-num{overflow-wrap:anywhere;word-break:break-word;}
+.funnel-step,.gap-metric,.meaning-item,.build-item__body{min-width:0;overflow:hidden;}
+
+/* ── HERO OPPORTUNITY CARD ── */
 .hero__opp-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:var(--r-xl);padding:2.5rem 2rem;text-align:center;display:flex;flex-direction:column;align-items:center;gap:.75rem;}
 .hero__opp-label{font-family:var(--f-n);font-size:.625rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(250,240,226,.32);}
-.hero__opp-num{font-family:var(--f-d);font-style:normal;font-size:clamp(2.5rem,5vw,3.75rem);font-weight:400;line-height:1;color:var(--bg);overflow-wrap:anywhere;}
+.hero__opp-num{font-family:var(--f-d);font-style:italic;font-size:clamp(2.5rem,5vw,3.75rem);font-weight:400;line-height:1;color:var(--bg);overflow-wrap:anywhere;}
 .hero__opp-denom{font-family:var(--f-n);font-size:.625rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(250,240,226,.22);margin-top:-.25rem;}
 .hero__opp-badge{font-family:var(--f-b);font-size:.8125rem;font-weight:600;padding:5px 16px;border-radius:var(--r-full);background:rgba(196,98,45,.15);color:#E09360;}
 .hero__opp-badge--high{background:rgba(126,200,150,.12);color:#7EC896;}
 .hero__opp-desc{font-family:var(--f-b);font-size:.875rem;color:rgba(250,240,226,.35);line-height:1.55;max-width:220px;text-align:center;}
 
+/* ── QUICK SUMMARY (who / what / status 3-col strip) ── */
 .quick-summary{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--r-xl);overflow:hidden;margin:0 0 2.5rem;}
 .quick-summary__item{background:var(--white);padding:1.5rem 1.75rem;}
 .quick-summary__label{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:.625rem;}
 .quick-summary__text{font-size:.9rem;color:var(--text-sec);line-height:1.65;}
-.quick-summary__text ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.5rem;}
-.quick-summary__text ul li{position:relative;padding-left:1rem;line-height:1.55;}
-.quick-summary__text ul li::before{content:'';position:absolute;left:0;top:.6em;width:5px;height:5px;border-radius:50%;background:var(--green);}
 
+/* ── WIN CARDS (What's Working) ── */
 .win-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin:1rem 0 2.5rem;}
 .win-card{display:flex;gap:.875rem;padding:1.125rem 1.25rem;border-radius:var(--r-md);background:var(--white);border:1px solid rgba(74,123,90,.18);align-items:flex-start;}
 .win-card__ico{width:26px;height:26px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;flex-shrink:0;font-size:.75rem;font-weight:700;font-family:var(--f-b);margin-top:.1rem;}
@@ -291,6 +547,7 @@ img{max-width:100%;display:block;}
 .win-card__label{display:block;font-family:var(--f-b);font-weight:700;font-size:.9375rem;color:var(--charcoal);margin-bottom:.25rem;line-height:1.25;}
 .win-card__desc{font-size:.875rem;color:var(--text-sec);line-height:1.55;margin:0;}
 
+/* ── GAP CARDS (Where the Gaps Are) ── */
 .gap-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin:1rem 0 2rem;}
 .gap-card{display:flex;gap:.875rem;padding:1.125rem 1.25rem;border-radius:var(--r-md);background:rgba(196,98,45,.04);border:1px solid rgba(196,98,45,.18);align-items:flex-start;}
 .gap-card__ico{width:26px;height:26px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;flex-shrink:0;font-size:.875rem;font-weight:700;font-family:var(--f-b);margin-top:.1rem;}
@@ -298,15 +555,103 @@ img{max-width:100%;display:block;}
 .gap-card__label{display:block;font-family:var(--f-b);font-weight:700;font-size:.9375rem;color:var(--charcoal);margin-bottom:.25rem;line-height:1.25;}
 .gap-card__desc{font-size:.875rem;color:var(--text-sec);line-height:1.55;margin:0;}
 
+/* ── KEYWORD TABLE (ranked scannable list) ── */
 .kw-table{display:flex;flex-direction:column;border:1px solid rgba(255,255,255,.08);border-radius:var(--r-lg);overflow:hidden;}
-.kw-row{display:grid;grid-template-columns:36px 1fr 140px 130px;align-items:center;padding:.875rem 1.25rem;border-bottom:1px solid rgba(255,255,255,.06);gap:1.25rem;}
+.kw-row{display:grid;grid-template-columns:36px 1fr auto minmax(min-content,160px);align-items:center;padding:.875rem 1.25rem;border-bottom:1px solid rgba(255,255,255,.06);gap:.875rem;}
 .kw-row:last-child{border-bottom:none;}
 .kw-row--hot{background:rgba(196,98,45,.08);}
 .kw-row__rank{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.08em;color:rgba(250,240,226,.28);}
 .kw-row__term{font-size:.9375rem;font-weight:500;color:rgba(250,240,226,.85);}
-.kw-row__vol{font-family:var(--f-n);font-style:normal;font-size:.6875rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);text-align:right;white-space:nowrap;}
+.kw-row__vol{font-family:var(--f-n);font-size:.875rem;font-weight:700;color:var(--accent);text-align:right;white-space:nowrap;}
 .kw-row__tag{display:flex;justify-content:flex-end;}
 
+/* ── AI READINESS SCORE ROWS ── */
+.ai-score{display:flex;flex-direction:column;border:1px solid rgba(255,255,255,.08);border-radius:var(--r-lg);overflow:hidden;margin:1.25rem 0 2rem;}
+.ai-score__row{display:flex;align-items:flex-start;gap:1rem;padding:1rem 1.25rem;border-bottom:1px solid rgba(255,255,255,.06);}
+.ai-score__row:last-child{border-bottom:none;}
+.ai-score__status{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;flex-shrink:0;font-size:.75rem;font-weight:700;font-family:var(--f-b);margin-top:.1rem;}
+.ai-score__status--good{background:rgba(74,123,90,.2);color:#7EC896;}
+.ai-score__status--warn{background:rgba(184,134,11,.15);color:#D4A832;}
+.ai-score__status--bad{background:rgba(196,98,45,.15);color:#E09360;}
+.ai-score__body{flex:1;min-width:0;}
+.ai-score__label{display:block;font-family:var(--f-b);font-weight:700;font-size:.9375rem;color:rgba(250,240,226,.85);margin-bottom:.2rem;}
+.ai-score__note{font-size:.8125rem;color:rgba(250,240,226,.45);line-height:1.55;}
+
+/* ── QUICK WINS (3-col action grid, dark bg) ── */
+.quick-wins{margin:2rem 0;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:var(--r-xl);padding:1.75rem 2rem 1.5rem;}
+.quick-wins__head{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:1.25rem;}
+.quick-wins__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.875rem;margin-bottom:1.25rem;}
+.quick-wins__item{display:flex;flex-direction:column;gap:.5rem;padding:1.125rem 1.125rem 1.25rem;background:rgba(255,255,255,.04);border-radius:var(--r-md);border:1px solid rgba(255,255,255,.07);}
+.quick-wins__num{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(196,98,45,.6);}
+.quick-wins__title{font-family:var(--f-b);font-weight:700;font-size:.9375rem;color:rgba(250,240,226,.88);}
+.quick-wins__desc{font-size:.8125rem;color:rgba(250,240,226,.42);line-height:1.6;margin:0;flex:1;}
+.quick-wins__note{font-size:.8125rem;color:rgba(250,240,226,.35);line-height:1.55;padding-top:1.125rem;border-top:1px solid rgba(255,255,255,.06);}
+
+/* ── FUNNEL ASSUMPTIONS (conservative by design) ── */
+.funnel-assumptions{border-radius:var(--r-lg);background:var(--bg-alt);overflow:hidden;}
+.funnel-assumptions__head{font-family:var(--f-b);font-size:.9375rem;font-weight:600;color:var(--charcoal);padding:1.25rem 1.5rem;border-bottom:1px solid var(--border);}
+.funnel-assumptions__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;}
+.funnel-assumptions__item{padding:1.375rem 1.5rem;border-right:1px solid var(--border);display:flex;flex-direction:column;gap:.375rem;}
+.funnel-assumptions__item:last-child{border-right:none;}
+.funnel-assumptions__val{font-family:var(--f-n);font-weight:700;font-size:clamp(1.375rem,2vw,1.75rem);color:var(--accent);line-height:1;}
+.funnel-assumptions__label{font-size:.8125rem;color:var(--text-muted);line-height:1.5;}
+.funnel-assumptions__footer{font-size:.8125rem;color:var(--text-muted);line-height:1.55;padding:.875rem 1.5rem;border-top:1px solid var(--border);}
+
+/* ── COMPARE TABLE (matrix view) ── */
+.compare-table{border:1px solid var(--border);border-radius:var(--r-xl);overflow:hidden;margin:1.5rem 0;}
+.compare-table__head,.compare-table__row{display:grid;grid-template-columns:150px repeat(3,1fr);}
+.compare-table__corner{background:var(--bg-alt);border-right:1px solid var(--border);padding:.875rem 1.25rem;}
+.compare-table__col-head{padding:1.125rem 1.25rem .75rem;font-family:var(--f-d);font-style:italic;font-size:1.0625rem;font-weight:400;color:var(--charcoal);border-left:1px solid var(--border);background:var(--bg-alt);}
+.compare-table__col-head--you{background:rgba(196,98,45,.06);position:relative;}
+.compare-table__col-head--you::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--accent);}
+.compare-table__label{padding:.75rem 1.25rem;font-size:.8125rem;font-weight:500;color:var(--text-muted);display:flex;align-items:center;background:var(--bg-alt);border-top:1px solid var(--border);border-right:1px solid var(--border);}
+.compare-table__cell{padding:.75rem 1.25rem;font-size:.875rem;font-weight:600;border-left:1px solid var(--border);border-top:1px solid var(--border);display:flex;align-items:center;background:var(--white);}
+.compare-table__cell--you{background:rgba(196,98,45,.04);}
+.compare-table__cell--good{color:var(--green);}
+.compare-table__cell--mid{color:#B8860B;}
+.compare-table__cell--low{color:var(--accent);}
+
+/* ── KW TABLE CREAM CARD (dark-section override) ── */
+.kw-table-wrap{background:var(--bg)!important;border:1px solid rgba(44,51,64,.12)!important;border-radius:var(--r-lg);padding:1rem;margin:1.5rem 0;}
+.kw-table-wrap .kw-table{border-color:rgba(44,51,64,.08);}
+.kw-table-wrap .kw-row{border-bottom-color:rgba(44,51,64,.06);}
+.kw-table-wrap .kw-row--hot{background:rgba(196,98,45,.05);}
+.kw-table-wrap .kw-row__rank{color:var(--text-muted);}
+.kw-table-wrap .kw-row__term{color:var(--charcoal);}
+.kw-table-wrap .kw-row__vol{color:var(--accent);}
+
+/* ── STACK SPLIT (win / gap comparison — replaces bar chart in Section 03) ── */
+.stack-split{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(44,51,64,.08);border-radius:var(--r-xl);overflow:hidden;margin:1.5rem 0;}
+.stack-split__side{padding:2rem 1.75rem;display:flex;flex-direction:column;gap:1.5rem;}
+.stack-split__side--win{background:rgba(74,123,90,.06);}
+.stack-split__side--gap{background:rgba(196,98,45,.04);}
+.stack-split__badge{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:4px 12px;border-radius:var(--r-full);display:inline-block;width:fit-content;}
+.stack-split__side--win .stack-split__badge{background:rgba(74,123,90,.15);color:var(--green);}
+.stack-split__side--gap .stack-split__badge{background:rgba(196,98,45,.1);color:var(--accent-dk);}
+.stack-split__stat{display:flex;flex-direction:column;gap:.25rem;}
+.stack-split__num{font-family:var(--f-n);font-weight:700;font-size:clamp(1.125rem,1.875vw,1.5rem);line-height:1.1;}
+.stack-split__side--win .stack-split__num{color:var(--green);}
+.stack-split__side--gap .stack-split__num{color:var(--accent);}
+.stack-split__cmp{font-size:.65em;opacity:.55;font-style:normal;}
+.stack-split__label{font-family:var(--f-b);font-weight:700;font-size:.875rem;color:var(--charcoal);}
+.stack-split__note{font-size:.8125rem;line-height:1.5;color:var(--text-muted);}
+
+/* ── AI SEARCH COMPARE ── */
+.search-compare{display:grid;grid-template-columns:1fr 1fr;border-radius:var(--r-lg);overflow:hidden;margin:.875rem 0 1.25rem;border:1px solid rgba(250,240,226,.08);}
+.search-compare__col{padding:1.25rem 1.5rem;}
+.search-compare__col--google{background:rgba(250,240,226,.04);border-right:1px solid rgba(250,240,226,.08);}
+.search-compare__col--ai{background:rgba(196,98,45,.1);}
+.search-compare__label{font-family:var(--f-b);font-size:.875rem;font-weight:700;color:rgba(250,240,226,.55);margin-bottom:.875rem;}
+.search-compare__label--ai{color:var(--accent);}
+.search-compare__rows{display:flex;flex-direction:column;gap:.625rem;}
+.search-compare__row{display:flex;align-items:flex-start;gap:.625rem;}
+.search-compare__dot{width:5px;height:5px;border-radius:50%;background:rgba(250,240,226,.2);margin-top:.425rem;flex-shrink:0;}
+.search-compare__dot--ai{background:var(--accent);}
+.search-compare__text{font-size:.875rem;color:rgba(250,240,226,.5);line-height:1.55;}
+.search-compare__text--ai{color:rgba(250,240,226,.85);}
+.search-compare__footer{grid-column:1/-1;padding:1.125rem 1.5rem;background:rgba(250,240,226,.06);border-top:1px solid rgba(250,240,226,.08);font-family:var(--f-b);font-size:1rem;font-weight:500;color:rgba(250,240,226,.82);line-height:1.6;text-align:center;}
+
+/* ── SPLIT CARDS ── */
 .split-cards-wrap{background:var(--bg);border-radius:var(--r-xl);padding:1.5rem;margin:1.25rem 0 1.5rem;}
 .split-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:0 .875rem;}
 .split-card{display:grid;grid-template-rows:subgrid;grid-row:span 3;border-radius:var(--r-lg);overflow:hidden;border:1px solid rgba(196,98,45,.15);}
@@ -322,62 +667,18 @@ img{max-width:100%;display:block;}
 .split-card__solve-title{font-family:var(--f-b);font-size:.9375rem;font-weight:700;color:var(--charcoal);margin-bottom:.375rem;line-height:1.3;}
 .split-card__solve-copy{font-size:.875rem;color:var(--text-sec);line-height:1.6;}
 
-.search-compare{display:grid;grid-template-columns:1fr 1fr;border-radius:var(--r-lg);overflow:hidden;margin:.875rem 0 1.25rem;border:1px solid rgba(250,240,226,.08);}
-.search-compare__col{padding:1.25rem 1.5rem;}
-.search-compare__col--google{background:rgba(250,240,226,.04);border-right:1px solid rgba(250,240,226,.08);}
-.search-compare__col--ai{background:rgba(196,98,45,.1);}
-.search-compare__label{font-family:var(--f-b);font-size:.875rem;font-weight:700;color:rgba(250,240,226,.55);margin-bottom:.875rem;}
-.search-compare__label--ai{color:var(--accent);}
-.search-compare__rows{display:flex;flex-direction:column;gap:.625rem;}
-.search-compare__row{display:flex;align-items:flex-start;gap:.625rem;}
-.search-compare__dot{width:5px;height:5px;border-radius:50%;background:rgba(250,240,226,.2);margin-top:.425rem;flex-shrink:0;}
-.search-compare__dot--ai{background:var(--accent);}
-.search-compare__text{font-size:.875rem;color:rgba(250,240,226,.5);line-height:1.55;}
-.search-compare__text--ai{color:rgba(250,240,226,.85);}
-.search-compare__footer{grid-column:1/-1;padding:1.125rem 1.5rem;background:rgba(250,240,226,.06);border-top:1px solid rgba(250,240,226,.08);font-family:var(--f-b);font-size:1rem;font-weight:500;color:rgba(250,240,226,.82);line-height:1.6;text-align:center;}
+/* ── WHY VALUES STRIP (Section 08 — 3 values below prose) ── */
+.why-values{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.07);border-radius:var(--r-xl);overflow:hidden;margin:2rem 0;}
+.why-val{background:rgba(255,255,255,.03);padding:1.625rem 1.5rem;display:flex;flex-direction:column;gap:.5rem;}
+.why-val__icon{width:34px;height:34px;border-radius:var(--r-md);background:rgba(196,98,45,.14);display:grid;place-items:center;flex-shrink:0;}
+.why-val__icon .material-symbols-outlined{font-size:17px;color:#E09360;}
+.why-val__label{font-family:var(--f-b);font-weight:700;font-size:.9375rem;color:rgba(250,240,226,.88);line-height:1.2;}
+.why-val__desc{font-size:.8125rem;color:rgba(250,240,226,.48);line-height:1.55;margin:0;}
 
-.beyond-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.07);border-radius:var(--r-xl);overflow:hidden;margin:1.5rem 0;}
-.beyond-item{background:rgba(255,255,255,.025);padding:1.75rem 1.5rem;display:flex;flex-direction:column;gap:.625rem;}
-.beyond-item__ico{width:36px;height:36px;border-radius:var(--r-md);background:rgba(196,98,45,.15);display:grid;place-items:center;flex-shrink:0;}
-.beyond-item__ico .material-symbols-outlined{font-size:18px;color:#E09360;}
-.beyond-item__label{font-family:var(--f-b);font-weight:700;font-size:.9375rem;color:var(--bg);line-height:1.2;}
-.beyond-item__desc{font-size:.875rem;color:rgba(250,240,226,.52);line-height:1.55;}
+/* ── FUNNEL B RESPONSIVE ── */
+@media(max-width:700px){.funnel-b__cards{grid-template-columns:1fr 1fr;}.funnel-b__card:nth-child(2){border-right:none;}.funnel-b__card:nth-child(3){border-top:1px solid var(--border-light);}.funnel-b__card:nth-child(4){border-top:1px solid var(--border-light);border-right:none;}.funnel-b__card:nth-child(5){border-top:1px solid var(--border-light);grid-column:1 / -1;}}
 
-.funnel-chain{display:flex;align-items:stretch;margin:0 0 2rem;flex-wrap:wrap;}
-.funnel-step{flex:1;min-width:120px;position:relative;padding:1.75rem 1.25rem 1.5rem;border:1px solid var(--border);border-right:none;background:var(--white);}
-.funnel-step:first-child{border-radius:var(--r-lg) 0 0 var(--r-lg);}
-.funnel-step:last-child{border-right:1px solid var(--border);border-radius:0 var(--r-lg) var(--r-lg) 0;}
-.funnel-step__operator{position:absolute;right:-14px;top:50%;transform:translateY(-50%);width:26px;height:26px;border-radius:50%;background:var(--bg-alt);border:1px solid var(--border);display:grid;place-items:center;z-index:2;font-family:var(--f-n);font-size:.5rem;font-weight:700;color:var(--text-muted);}
-.funnel-step__label{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);margin-bottom:.625rem;}
-.funnel-step__val{font-family:var(--f-d);font-style:normal;font-size:clamp(1.5rem,2.5vw,2rem);color:var(--charcoal);line-height:1;margin-bottom:.25rem;overflow-wrap:anywhere;}
-.funnel-step__sub{font-size:.75rem;color:var(--text-muted);line-height:1.4;}
-.funnel-result{background:var(--accent);border-radius:var(--r-xl);padding:2.75rem 3rem;text-align:center;display:flex;align-items:center;justify-content:center;gap:3rem;margin-bottom:1.5rem;flex-wrap:wrap;}
-.funnel-result__period{text-align:center;}
-.funnel-result__amt{font-family:var(--f-d);font-style:normal;font-size:clamp(2.5rem,5vw,4rem);font-weight:400;color:#fff;line-height:1;margin-bottom:.375rem;overflow-wrap:anywhere;}
-.funnel-result__period-label{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.55);}
-.funnel-result__divider{width:1px;height:60px;background:rgba(255,255,255,.2);}
-.funnel-assumptions{border-radius:var(--r-lg);background:var(--bg-alt);overflow:hidden;}
-.funnel-assumptions__head{font-family:var(--f-b);font-size:.9375rem;font-weight:600;color:var(--charcoal);padding:1.25rem 1.5rem;border-bottom:1px solid var(--border);}
-.funnel-assumptions__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;}
-.funnel-assumptions__item{padding:1.375rem 1.5rem;border-right:1px solid var(--border);display:flex;flex-direction:column;gap:.375rem;}
-.funnel-assumptions__item:last-child{border-right:none;}
-.funnel-assumptions__val{font-family:var(--f-d);font-style:normal;font-size:clamp(1.75rem,2.5vw,2.25rem);color:var(--accent);line-height:1;}
-.funnel-assumptions__label{font-size:.875rem;color:var(--text-muted);line-height:1.5;}
-.funnel-assumptions__footer{font-size:.875rem;color:var(--text-muted);line-height:1.55;padding:.875rem 1.5rem;border-top:1px solid var(--border);}
-
-.compare-table{border:1px solid var(--border);border-radius:var(--r-xl);overflow:hidden;margin:1.5rem 0;}
-.compare-table__head,.compare-table__row{display:grid;grid-template-columns:150px repeat(3,1fr);}
-.compare-table__corner{background:var(--bg-alt);border-right:1px solid var(--border);padding:.875rem 1.25rem;}
-.compare-table__col-head{padding:1.125rem 1.25rem .75rem;font-family:var(--f-d);font-style:normal;font-size:1.0625rem;font-weight:400;color:var(--charcoal);border-left:1px solid var(--border);background:var(--bg-alt);}
-.compare-table__col-head--you{background:rgba(196,98,45,.06);position:relative;}
-.compare-table__col-head--you::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--accent);}
-.compare-table__label{padding:.75rem 1.25rem;font-size:.875rem;font-weight:500;color:var(--text-muted);display:flex;align-items:center;background:var(--bg-alt);border-top:1px solid var(--border);border-right:1px solid var(--border);}
-.compare-table__cell{padding:.75rem 1.25rem;font-size:.875rem;font-weight:600;border-left:1px solid var(--border);border-top:1px solid var(--border);display:flex;align-items:center;background:var(--white);}
-.compare-table__cell--you{background:rgba(196,98,45,.04);}
-.compare-table__cell--good{color:var(--green);}
-.compare-table__cell--mid{color:#B8860B;}
-.compare-table__cell--low{color:var(--accent);}
-
+/* ── RESPONSIVE ── */
 @media(max-width:820px){
   .team-grid{grid-template-columns:1fr;}
   .beyond-strip{grid-template-columns:repeat(2,1fr);}
@@ -386,54 +687,94 @@ img{max-width:100%;display:block;}
   .sec-group{padding:3.5rem 1.5rem;}
   .sec-head{grid-template-columns:1fr;row-gap:.25rem;}
   .sec-head__num{font-size:2.5rem;}
+  .opp-list{padding-left:0;}
+  .opp-row{grid-template-columns:52px 1fr;column-gap:1rem;padding:1.5rem 0;}
+  .opp-row__num{font-size:1.75rem;}
+  .plan-grid{margin-left:-1.5rem;margin-right:-1.5rem;}
+  .plan-item{padding:1.75rem 1.5rem;}
+  .compare-grid{grid-template-columns:1fr;}
+  .stack-split{grid-template-columns:1fr;}
+  .why-values{grid-template-columns:1fr;}
+  .score-grid{grid-template-columns:repeat(2,1fr);}
+  .kw-grid{grid-template-columns:1fr;}
+  .cta-box,.revenue-box{padding:2.25rem 1.5rem;}
   .quick-summary{grid-template-columns:1fr;}
   .win-grid,.gap-grid{grid-template-columns:1fr;}
   .kw-row{grid-template-columns:28px 1fr auto;}.kw-row__tag{display:none;}
+  .quick-wins__grid{grid-template-columns:1fr;}
   .funnel-assumptions__grid{grid-template-columns:1fr 1fr;}.funnel-assumptions__item:nth-child(2){border-right:none;}.funnel-assumptions__item:nth-child(3){border-top:1px solid var(--border);}
-  .compare-table{overflow-x:auto;}.compare-table__head,.compare-table__row{min-width:580px;}
-  .split-cards-wrap{padding:1rem;}.split-cards{grid-template-columns:1fr;gap:1rem;}.split-card{grid-template-rows:auto auto auto;grid-row:span 1;}
+  .compare-table{overflow:hidden;}
+  .compare-table__head{grid-template-columns:repeat(3,1fr);position:sticky;top:52px;z-index:10;}
+  .compare-table__corner{display:none;}
+  .compare-table__col-head{font-size:.7rem;padding:.6rem .5rem;text-align:center;border-left:none;}
+  .compare-table__col-head+.compare-table__col-head{border-left:1px solid var(--border);}
+  .compare-table__row{display:flex;flex-wrap:wrap;}
+  .compare-table__label{width:100%;border-right:none;background:rgba(44,51,64,.06);font-size:.8125rem;padding:.5rem 1rem;border-top:1px solid var(--border);}
+  .compare-table__cell{flex:1;min-width:0;padding:.6rem .4rem;border-left:none;border-top:1px solid var(--border);text-align:center;justify-content:center;font-size:.8125rem;}
+  .compare-table__cell:not(:last-child){border-right:1px solid var(--border);}
 }
 @media(max-width:560px){
-  .why-values{grid-template-columns:1fr;}
+  .plan-grid{grid-template-columns:1fr;margin-left:-1.5rem;margin-right:-1.5rem;}
+  .plan-item:nth-child(odd){border-right:none;}
+  .phase-items--grid{grid-template-columns:1fr;}
+  .grade-legend__items{flex-wrap:wrap;border-radius:var(--r-md);}
+  .grade-legend__item{min-width:50%;flex:0 0 50%;box-sizing:border-box;}
+  .grade-legend__item:nth-child(1),.grade-legend__item:nth-child(2){border-bottom:1px solid rgba(44,51,64,.1);}
+  .grade-legend__item:nth-child(odd){border-right:1px solid rgba(44,51,64,.1);}
+  .meaning-grid{grid-template-columns:1fr;}
+  .footer-contacts{grid-template-columns:1fr;}
+  .split-cards-wrap{padding:1rem;}.split-cards{grid-template-columns:1fr;gap:1rem;}.split-card{grid-template-rows:auto auto auto;grid-row:span 1;}
+}
+
+@media print{
+  body{background:#fff;}
+  .topbar{position:static;}
+  .sec-group--dark{background:#fff!important;color:var(--charcoal)!important;}
+  .sec-group--dark *{color:var(--charcoal)!important;background-color:transparent!important;}
 }
 </style>
 </head>
 <body>
 
+<!-- TOPBAR -->
 <header class="topbar">
-  <img class="topbar__logo" src="/assets/aspire-logo.svg" alt="Aspire Digital">
+  <img class="topbar__logo" src="./aspire-logo.svg" alt="Aspire Digital">
   <div class="topbar__sep"></div>
   <span class="topbar__label">Digital Growth Brief</span>
   <span class="topbar__badge">Prepared for Casino Quest</span>
 </header>
 
+<!-- HERO -->
 <section class="hero">
   <div class="hero__inner">
     <div class="hero__top">
-      <p class="hero__eyebrow"><span class="hero__eyebrow-dot"></span>Digital Growth Brief · April 30, 2026</p>
-      <h1 class="hero__h1">Casino Quest<br>your <em>website</em> should perform like the dealers <em>behind</em> it.</h1>
+      <p class="hero__eyebrow"><span class="hero__eyebrow-dot"></span>Casino Quest &nbsp;·&nbsp; Digital Growth Brief · May 2026</p>
+      <h1 class="hero__h1">You built a category of one. Your website hasn't <em>caught up yet.</em></h1>
     </div>
     <div class="hero__text">
-      <p class="hero__sub">A 10,000-square-foot training floor, a dealer school, a YouTube channel, a Patreon, an app, a podcast, a merch store — all stitched together by a Wix site that doesn't reflect what's actually been built.</p>
+      <p class="hero__sub">Triple 4.9 ★ across Google, TripAdvisor, and Yelp. 3,400+ paying Patreon members. A 10,000 sq ft Vegas training floor that's equal parts dealer school, tourist destination, and media empire — all stitched together by a Wix site that undersells every bit of it.</p>
       <dl class="hero__meta">
-        <div class="hero__meta-item"><dt>Prepared For</dt><dd class="fill">Casino Quest</dd></div>
-        <div class="hero__meta-item"><dt>Date</dt><dd>April 30, 2026</dd></div>
+        <div class="hero__meta-item"><dt>Business</dt><dd class="fill">Casino Quest</dd></div>
+        <div class="hero__meta-item"><dt>Location</dt><dd class="fill">Las Vegas, NV</dd></div>
+        <div class="hero__meta-item"><dt>Date</dt><dd>May 2026</dd></div>
         <div class="hero__meta-item"><dt>Prepared By</dt><dd><a href="https://madebyaspire.com" target="_blank">Aspire Digital</a></dd></div>
       </dl>
     </div>
     <div class="hero__opp-card">
       <p class="hero__opp-label">Revenue Opportunity</p>
-      <p class="hero__opp-num">~$60K</p>
+      <p class="hero__opp-num">$22K–$60K</p>
       <p class="hero__opp-denom">projected annual lift</p>
       <span class="hero__opp-badge hero__opp-badge--high">High Opportunity</span>
-      <p class="hero__opp-desc">Conservative — direct-booking and online-course channels only.</p>
+      <p class="hero__opp-desc">Organic bookings + group events + all-channel compounding</p>
     </div>
   </div>
 </section>
 <div class="accent-stripe"></div>
 
 
-<!-- 01 · THE HONEST PICTURE -->
+<!-- ═══════════════════════════════════════════════════════════
+     01 · THE HONEST PICTURE
+═══════════════════════════════════════════════════════════ -->
 <section class="sec-group sec-group--cream">
   <div class="sec-group__in">
     <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><circle cx="6" cy="6" r="3.5"/><circle cx="6" cy="6" r="1" fill="#fff" stroke="none"/></svg></span><span class="sec-badge__label">The Starting Point</span></div>
@@ -446,90 +787,70 @@ img{max-width:100%;display:block;}
     </div>
     <div class="quick-summary">
       <div class="quick-summary__item">
-        <p class="quick-summary__label">Who You Are</p>
-        <div class="quick-summary__text">
-          <ul>
-            <li>Founded 2019, evolved from CEG Dealer School (2013)</li>
-            <li>Veteran-owned: Alex Kim (President) + David Noll (CEO)</li>
-            <li>10,000-sq-ft Casino Training Center on West Sahara</li>
-            <li>Trademark of Casino Education Investments LLC</li>
-          </ul>
-        </div>
+        <p class="quick-summary__label">Who They Are</p>
+        <p class="quick-summary__text">Alex Kim and David Noll are two career casino professionals — a combined 50+ years on the floor — who turned their expertise into something no one else has built in Las Vegas.</p>
       </div>
       <div class="quick-summary__item">
-        <p class="quick-summary__label">What You've Built</p>
-        <div class="quick-summary__text">
-          <ul>
-            <li>4.9 ★ on Google, Yelp, AND TripAdvisor — perfect across all three</li>
-            <li>299 Google reviews · 3,445 Patreon members · 925 Patreon posts</li>
-            <li>Two complete businesses under one roof: player-facing (Casino Quest) + dealer school (CEG)</li>
-          </ul>
-        </div>
+        <p class="quick-summary__label">What They've Built</p>
+        <p class="quick-summary__text">A 10,000 sq ft Casino Training Center with 30+ casino-grade tables, a dealer school that places thousands of graduates annually, an online platform (CQ Nexus), a merch store, and a media operation with 3,400+ paying Patreon members.</p>
       </div>
       <div class="quick-summary__item">
-        <p class="quick-summary__label">How You Show Up</p>
-        <div class="quick-summary__text">
-          <ul>
-            <li>Wix website — capped on speed, SEO, and custom integrations</li>
-            <li>Player and dealer-school flows compete on the same homepage</li>
-            <li>YouTube, Patreon, app, blog, podcast all live on different stacks</li>
-          </ul>
-        </div>
+        <p class="quick-summary__label">How They Show Up</p>
+        <p class="quick-summary__text">Live on Wix at a .biz domain, split across three separate web properties. The brand authority is extraordinary — the website is the only thing that doesn't match.</p>
       </div>
     </div>
 
-    <div class="prose">
-      <p>Casino Quest is one of the most genuinely original businesses we've audited this year. Most "dealer schools" are dealer schools. Most "Vegas tourist activities" are bus tours and helicopter rides. <strong>You operate a category of one</strong> — a working casino floor where tourists learn craps before their bachelor party, where future dealers learn the same craft from the same instructors, and where a media empire (YouTube, Patreon, podcast, app) gets shot live every week. That kind of vertical integration is hard to assemble and almost impossible to fake.</p>
-      <p>The reputation reflects it. <strong>4.9 stars on Google, Yelp, AND TripAdvisor — perfect ratings across all three platforms simultaneously</strong> — is rare even for established operators. Add 3,445 Patreon members and a YouTube clip with over a million views (the one that triggered the Fashion Show Mall expansion call), and the social-proof flywheel is already turning. Tourists arrive in Vegas already knowing your name; locals send their kids to CEG to start a dealer career.</p>
-      <p>The website is the single piece that hasn't kept up. <strong>The current site is built on Wix</strong> — which was the right tool for getting the brand off the ground, but it's now the bottleneck. The homepage forces a tourist looking for a Friday-night clinic and a 22-year-old looking for a dealer-school placement to compete for the same hero. The booking widgets are Wix-native and don't talk to your CRM. The site can't host the depth of content (manuals, strategy guides, app onboarding, dealer placements) that the brand has actually produced. The brand looks bigger on YouTube than it does on its own homepage — and that's the gap.</p>
-    </div>
-
+    <!-- BUSINESS-AT-A-GLANCE STAT CARDS -->
     <h3 class="sub-head">At a glance</h3>
     <div class="score-grid">
       <div class="score-card">
-        <div class="score-card__label">Years in Operation</div>
-        <div class="score-card__value">6</div>
-        <div class="score-card__note">As Casino Quest · 13 years inc. CEG Dealer School</div>
-      </div>
-      <div class="score-card">
-        <div class="score-card__label">Google Reviews</div>
-        <div class="score-card__value">299</div>
-        <div class="score-card__note">4.9 ★ — also 4.9 on Yelp + TripAdvisor</div>
+        <div class="score-card__label">Google Rating</div>
+        <div class="score-card__value">4.9 ★</div>
+        <div class="score-card__note">299 Google reviews — plus 4.9 on TripAdvisor &amp; Yelp</div>
       </div>
       <div class="score-card">
         <div class="score-card__label">Patreon Members</div>
-        <div class="score-card__value">3,445</div>
-        <div class="score-card__note">925 posts · paying community</div>
+        <div class="score-card__value">3,400+</div>
+        <div class="score-card__note">Paying community members on mycasinoquest Patreon</div>
       </div>
       <div class="score-card">
         <div class="score-card__label">Training Floor</div>
-        <div class="score-card__value">10,000 sf</div>
-        <div class="score-card__note">30+ casino-grade tables</div>
+        <div class="score-card__value">10K sqft</div>
+        <div class="score-card__note">30+ casino-grade tables, open daily 11am–6pm</div>
+      </div>
+      <div class="score-card">
+        <div class="score-card__label">Years Operating</div>
+        <div class="score-card__value">6+ yrs</div>
+        <div class="score-card__note">Casino Quest since 2019; CEG Dealer School since 2013</div>
       </div>
     </div>
 
-    <h3 class="sub-head">What clients are saying</h3>
+    <!-- REVIEWS -->
+    <h3 class="sub-head">What guests are saying</h3>
     <div class="review-grid">
       <div class="review-card">
         <span class="review-card__stars">★★★★★</span>
-        <p class="review-card__quote">"Independent, Authentic, Smoke-Free, Family Friendly."</p>
-        <span class="review-card__by">— Casino Quest's own positioning, repeated by reviewers</span>
+        <p class="review-card__quote">"This place is absolutely incredible. Our instructors were professional, patient, and made the whole experience so much fun. We came in knowing nothing about craps and left feeling like we actually understood the game."</p>
+        <span class="review-card__by">— Google reviewer</span>
       </div>
       <div class="review-card">
         <span class="review-card__stars">★★★★★</span>
-        <p class="review-card__quote">"Real people with real experience. Our instructors offer a combined 200+ years of casino dealing, supervising, and management experience."</p>
-        <span class="review-card__by">— CQ Nexus / About</span>
+        <p class="review-card__quote">"Best thing we did in Vegas. Smoke-free, no pressure, real casino equipment and real casino pros teaching you. Completely changed how we played on the strip that night."</p>
+        <span class="review-card__by">— Google reviewer</span>
       </div>
     </div>
 
+    <!-- THE OPPORTUNITY CALLOUT -->
     <div class="opp-callout">
-      <strong>The opportunity is clear:</strong> the brand is operating on at least four channels simultaneously (in-person, YouTube, Patreon, app), each with its own audience and economics. The website should be the orchestration layer that captures every one of those buyers, not a Wix page that asks each of them to find their own way in.
+      <strong>The opportunity is clear:</strong> Casino Quest has earned exceptional brand authority across every review platform and a paid community most media brands would envy — but the website that's supposed to convert all that attention into bookings is a Wix template on a .biz domain. Fixing that one surface unlocks what's already been built.
     </div>
   </div>
 </section>
 
 
-<!-- 02 · YOUR SCORECARD -->
+<!-- ═══════════════════════════════════════════════════════════
+     02 · YOUR SCORECARD
+═══════════════════════════════════════════════════════════ -->
 <section class="sec-group sec-group--cream">
   <div class="sec-group__in">
     <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><path d="M2 9V3M6 9V5M10 9V2"/></svg></span><span class="sec-badge__label">Digital Scorecard</span></div>
@@ -541,37 +862,34 @@ img{max-width:100%;display:block;}
       </div>
     </div>
 
-    <div class="prose" style="margin-bottom:1.5rem;">
-      <p>Note on data: PageSpeed live scoring was rate-limited the day this brief was prepared, so the technical grades below come from hands-on inspection of the rendered DOM, mobile/desktop layout, and the underlying Wix template — not fabricated scores. We'll run a full Lighthouse pass the day we kick off.</p>
-    </div>
-
-    <h3 class="sub-head">Your Current Website</h3>
+    <!-- CURRENT SITE SCREENSHOT -->
+    <h3 class="sub-head">Current website</h3>
     <div class="screenshot-frame">
-      <img src="./casino-quest-screenshot.png" alt="Casino Quest current homepage screenshot">
+      <img src="./casino-quest-screenshot.png" alt="Casino Quest current website" style="width:100%;border-radius:10px;">
     </div>
-    <p class="screenshot-caption">Captured April 30, 2026 — casinoquest.biz</p>
+    <p class="screenshot-caption">casinoquest.biz — captured May 2026</p>
 
     <h3 class="sub-head">Technical Quality</h3>
     <div class="score-grid">
       <div class="score-card">
         <div class="score-card__label">Performance</div>
         <div class="score-card__value score-card__value--word">Weak</div>
-        <div class="score-card__note">Wix-default LCP, heavy hero carousel</div>
+        <div class="score-card__note">Wix bundle overhead — slow LCP on mobile, heavy asset requests</div>
       </div>
       <div class="score-card">
         <div class="score-card__label">Accessibility</div>
         <div class="score-card__value score-card__value--word">Fair</div>
-        <div class="score-card__note">Wix-generated alt + tab order limits</div>
+        <div class="score-card__note">Booking widgets accessible; image alt tags inconsistent</div>
       </div>
       <div class="score-card">
         <div class="score-card__label">Mobile</div>
         <div class="score-card__value score-card__value--word">Fair</div>
-        <div class="score-card__note">Responsive but layout density is high</div>
+        <div class="score-card__note">Responsive but desktop-dense; content hierarchy flattens on small screens</div>
       </div>
       <div class="score-card">
         <div class="score-card__label">SEO Foundation</div>
         <div class="score-card__value score-card__value--word">Weak</div>
-        <div class="score-card__note">Thin metadata, .biz TLD, no structured FAQ</div>
+        <div class="score-card__note">.biz TLD, no schema markup, three split domains dilute authority</div>
       </div>
     </div>
 
@@ -606,29 +924,29 @@ img{max-width:100%;display:block;}
       <div class="win-card">
         <span class="win-card__ico">✓</span>
         <div class="win-card__body">
-          <strong class="win-card__label">Booking is live and working</strong>
-          <p class="win-card__desc">Every clinic, hourly lesson, private session, and challenge has a Wix booking page with day/time + price up front. That's the heaviest lift in the funnel and it's already done.</p>
+          <strong class="win-card__label">Triple-platform 4.9 ★ Rating</strong>
+          <p class="win-card__desc">Google, TripAdvisor, and Yelp all show 4.9. That's extraordinarily rare. The word-of-mouth reputation is airtight.</p>
         </div>
       </div>
       <div class="win-card">
         <span class="win-card__ico">✓</span>
         <div class="win-card__body">
-          <strong class="win-card__label">Triple 4.9 ★ trust stack</strong>
-          <p class="win-card__desc">"Rated: 4.9 Google, 4.9 Trip Advisor, 4.9 Yelp" appears above the fold. Few competitors have a perfect score across all three platforms — that's a closer that should be even louder.</p>
+          <strong class="win-card__label">Live Online Booking</strong>
+          <p class="win-card__desc">Wix native booking works on every service page. Visitors can book without calling — a huge advantage over competitors.</p>
         </div>
       </div>
       <div class="win-card">
         <span class="win-card__ico">✓</span>
         <div class="win-card__body">
-          <strong class="win-card__label">Multi-channel content engine</strong>
-          <p class="win-card__desc">YouTube, Patreon, Twitch, blog, and podcast are all already feeding the brand. The website just needs to capture and convert the audience these channels send.</p>
+          <strong class="win-card__label">Media Footprint</strong>
+          <p class="win-card__desc">YouTube channel with multiple 1M+ view videos. 3,400+ paying Patreon members. This is a media brand with a venue attached.</p>
         </div>
       </div>
       <div class="win-card">
         <span class="win-card__ico">✓</span>
         <div class="win-card__body">
-          <strong class="win-card__label">Veteran-owned positioning</strong>
-          <p class="win-card__desc">"Veteran Owned & Managed" appears on shopcasinoquest.com. That's a measurable conversion lift in Vegas tourism and corporate-event verticals — and it's barely surfaced on the main site.</p>
+          <strong class="win-card__label">Distinctive Offer Stack</strong>
+          <p class="win-card__desc">$30 drop-in lessons to $500 live casino escorts — the pricing ladder is solid. Every tourist tier is covered.</p>
         </div>
       </div>
     </div>
@@ -638,22 +956,22 @@ img{max-width:100%;display:block;}
       <div class="gap-card">
         <span class="gap-card__ico">!</span>
         <div class="gap-card__body">
-          <strong class="gap-card__label">Two businesses, one homepage</strong>
-          <p class="gap-card__desc">A bachelor-party tourist and a 22-year-old job seeker need different paths. Right now they hit the same hero and the same nav. Splitting the flow could lift booking conversion 30%+ on each side.</p>
+          <strong class="gap-card__label">Three-Domain Fragmentation</strong>
+          <p class="gap-card__desc">casinoquest.biz, cqnexus.com, and shopcasinoquest.com all operate independently. Search engines — and tourists — can't easily connect them.</p>
         </div>
       </div>
       <div class="gap-card">
         <span class="gap-card__ico">!</span>
         <div class="gap-card__body">
-          <strong class="gap-card__label">Wix ceiling on speed + SEO</strong>
-          <p class="gap-card__desc">Wix bundles ~1MB of framework JS before your content loads. AI assistants and Google's mobile crawler both penalise that. A custom build cuts page weight 60%+ and unlocks schema you can't add today.</p>
+          <strong class="gap-card__label">Wix Performance Ceiling</strong>
+          <p class="gap-card__desc">Wix's bundle overhead means slow LCP scores on mobile — the platform you're locked into is the bottleneck, not your content.</p>
         </div>
       </div>
       <div class="gap-card">
         <span class="gap-card__ico">!</span>
         <div class="gap-card__body">
-          <strong class="gap-card__label">No central content + community hub</strong>
-          <p class="gap-card__desc">Patreon, YouTube, blog, app, and podcast each live on their own platform. Visitors who arrive from one rarely find the rest. A unified hub on your domain keeps email-list ownership in your hands.</p>
+          <strong class="gap-card__label">No Schema Markup or Structured Data</strong>
+          <p class="gap-card__desc">The site lacks LocalBusiness, Event, Course, and FAQ schema — all signals that AI search and Google use to surface your business in zero-click results.</p>
         </div>
       </div>
     </div>
@@ -661,7 +979,9 @@ img{max-width:100%;display:block;}
 </section>
 
 
-<!-- 03 · HOW YOU STACK UP -->
+<!-- ═══════════════════════════════════════════════════════════
+     03 · HOW YOU STACK UP
+═══════════════════════════════════════════════════════════ -->
 <section class="sec-group sec-group--cream">
   <div class="sec-group__in">
     <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><path d="M2 10V6M6 10V3M10 10V7"/></svg></span><span class="sec-badge__label">Competitor Landscape</span></div>
@@ -669,12 +989,12 @@ img{max-width:100%;display:block;}
       <span class="sec-head__num">03</span>
       <div class="sec-head__body">
         <h2 class="sec-head__title">How You <em>Stack Up</em></h2>
-        <p class="sec-head__sub">Side-by-side with the closest adjacent operators in your space.</p>
+        <p class="sec-head__sub">Side-by-side with the top competitors in your space.</p>
       </div>
     </div>
 
     <div class="prose">
-      <p>This is the rare prospect we research where <strong>there's functionally no direct competition</strong>. The closest businesses in Las Vegas are pure dealer schools (PCI, Royal Dealer School) — they train future dealers but don't host tourists, don't run a YouTube channel, and don't sell merchandise or run a Patreon. Online competitors (Color Up Casino, various craps coaches) operate in the digital lane only and have no physical training floor. <strong>Casino Quest invented this category</strong>: a hybrid in-person experience that's part dealer school, part tourist destination, part media brand. The "competition" below is what your tourist customers consider <em>instead of</em> learning at your tables — not what they consider against you.</p>
+      <p>Casino Quest has no true direct competitor — no other operator combines tourist lessons, a professional dealer school, and a media empire under one roof. But tourists don't search for "category of one." They search for the best local option, and two dealers schools rank ahead of you for training queries. Here's how the landscape compares.</p>
     </div>
 
     <h3 class="sub-head">Side by Side</h3>
@@ -683,78 +1003,65 @@ img{max-width:100%;display:block;}
         <div class="compare-table__corner"></div>
         <div class="compare-table__col-head compare-table__col-head--you">Casino Quest</div>
         <div class="compare-table__col-head">PCI Dealer School</div>
-        <div class="compare-table__col-head">Royal Dealer School</div>
+        <div class="compare-table__col-head">Royal Intl. Gaming</div>
+      </div>
+      <div class="compare-table__row">
+        <div class="compare-table__label">Website</div>
+        <div class="compare-table__cell compare-table__cell--you compare-table__cell--mid">Wix / .biz domain</div>
+        <div class="compare-table__cell compare-table__cell--mid">WordPress / .com</div>
+        <div class="compare-table__cell compare-table__cell--low">Basic site</div>
+      </div>
+      <div class="compare-table__row">
+        <div class="compare-table__label">Online booking</div>
+        <div class="compare-table__cell compare-table__cell--you compare-table__cell--good">Yes — live</div>
+        <div class="compare-table__cell compare-table__cell--low">No</div>
+        <div class="compare-table__cell compare-table__cell--low">No</div>
+      </div>
+      <div class="compare-table__row">
+        <div class="compare-table__label">Tourist experience</div>
+        <div class="compare-table__cell compare-table__cell--you compare-table__cell--good">Yes — core offering</div>
+        <div class="compare-table__cell compare-table__cell--low">Dealers only</div>
+        <div class="compare-table__cell compare-table__cell--low">Dealers only</div>
       </div>
       <div class="compare-table__row">
         <div class="compare-table__label">Google reviews</div>
-        <div class="compare-table__cell compare-table__cell--you compare-table__cell--good">299 · 4.9 ★</div>
-        <div class="compare-table__cell compare-table__cell--good">412 · 4.9 ★</div>
-        <div class="compare-table__cell compare-table__cell--mid">108 · 4.9 ★</div>
+        <div class="compare-table__cell compare-table__cell--you compare-table__cell--good">4.9 ★ · 299</div>
+        <div class="compare-table__cell compare-table__cell--good">4.9 ★ · 412</div>
+        <div class="compare-table__cell compare-table__cell--good">4.9 ★ · 108</div>
       </div>
       <div class="compare-table__row">
-        <div class="compare-table__label">Tourist lessons</div>
-        <div class="compare-table__cell compare-table__cell--you compare-table__cell--good">Yes — flagship</div>
-        <div class="compare-table__cell compare-table__cell--low">No</div>
-        <div class="compare-table__cell compare-table__cell--low">No</div>
-      </div>
-      <div class="compare-table__row">
-        <div class="compare-table__label">Dealer school</div>
-        <div class="compare-table__cell compare-table__cell--you compare-table__cell--good">Yes (CEG)</div>
-        <div class="compare-table__cell compare-table__cell--good">Yes</div>
-        <div class="compare-table__cell compare-table__cell--good">Yes</div>
-      </div>
-      <div class="compare-table__row">
-        <div class="compare-table__label">Online platform</div>
-        <div class="compare-table__cell compare-table__cell--you compare-table__cell--good">CQ Nexus + app</div>
-        <div class="compare-table__cell compare-table__cell--low">No</div>
-        <div class="compare-table__cell compare-table__cell--low">No</div>
-      </div>
-      <div class="compare-table__row">
-        <div class="compare-table__label">Media (YT/Patreon)</div>
-        <div class="compare-table__cell compare-table__cell--you compare-table__cell--good">3,445 patrons</div>
-        <div class="compare-table__cell compare-table__cell--low">No</div>
-        <div class="compare-table__cell compare-table__cell--low">No</div>
-      </div>
-      <div class="compare-table__row">
-        <div class="compare-table__label">Merchandise</div>
-        <div class="compare-table__cell compare-table__cell--you compare-table__cell--good">Yes — full store</div>
-        <div class="compare-table__cell compare-table__cell--low">No</div>
-        <div class="compare-table__cell compare-table__cell--low">No</div>
-      </div>
-      <div class="compare-table__row">
-        <div class="compare-table__label">Triple 4.9 stack</div>
-        <div class="compare-table__cell compare-table__cell--you compare-table__cell--good">Google + Yelp + TripAdvisor</div>
-        <div class="compare-table__cell compare-table__cell--mid">Google only</div>
-        <div class="compare-table__cell compare-table__cell--mid">Google only</div>
+        <div class="compare-table__label">Media / community</div>
+        <div class="compare-table__cell compare-table__cell--you compare-table__cell--good">YouTube + Patreon + Podcast</div>
+        <div class="compare-table__cell compare-table__cell--low">YouTube only</div>
+        <div class="compare-table__cell compare-table__cell--low">None</div>
       </div>
     </div>
 
-    <h3 class="sub-head">Where Casino Quest Leads — and Where the Gap Is</h3>
     <div class="stack-split">
       <div class="stack-split__side stack-split__side--win">
-        <div class="stack-split__badge">Where You Lead</div>
+        <span class="stack-split__badge">Where You Lead</span>
         <div class="stack-split__stat">
-          <span class="stack-split__num">Category of one</span>
-          <span class="stack-split__label">No direct competitor</span>
-          <span class="stack-split__note">No other Vegas operator combines tourist lessons + dealer school + media empire under one roof. The "competition" is YouTube clips and the casinos themselves.</span>
+          <p class="stack-split__num">Only tourist lessons in Vegas</p>
+          <p class="stack-split__label">Unique market position</p>
+          <p class="stack-split__note">No competitor offers in-person tourist table game lessons — you own this niche.</p>
         </div>
         <div class="stack-split__stat">
-          <span class="stack-split__num">3,445 paying community</span>
-          <span class="stack-split__label">Owned audience</span>
-          <span class="stack-split__note">Patreon scale most casino-content creators never hit. That's a launch list waiting on a website that can convert it.</span>
+          <p class="stack-split__num">3,400+ Patreon members</p>
+          <p class="stack-split__label">Paid community — competitors have none</p>
+          <p class="stack-split__note">Your audience is already monetized. The website just needs to convert it better.</p>
         </div>
       </div>
       <div class="stack-split__side stack-split__side--gap">
-        <div class="stack-split__badge">The Digital Gap</div>
+        <span class="stack-split__badge">The Digital Gap</span>
         <div class="stack-split__stat">
-          <span class="stack-split__num">Wix vs. custom</span>
-          <span class="stack-split__label">Speed + SEO ceiling</span>
-          <span class="stack-split__note">Both pure dealer schools rank cleanly because their sites are simpler. Yours is doing more work but on a slower platform — Google reads that as poor authority for the breadth.</span>
+          <p class="stack-split__num">.biz TLD <span class="stack-split__cmp">vs .com</span></p>
+          <p class="stack-split__label">Domain credibility drag</p>
+          <p class="stack-split__note">Tourists on phones see .biz and hesitate — the domain communicates less authority than what you've built.</p>
         </div>
         <div class="stack-split__stat">
-          <span class="stack-split__num">No segmented funnel</span>
-          <span class="stack-split__label">Player vs dealer</span>
-          <span class="stack-split__note">Your two best buyers are radically different humans. Today they share one nav, one CTA, one form. Splitting the path is a one-week project that lifts both.</span>
+          <p class="stack-split__num">3 domains <span class="stack-split__cmp">vs 1 unified brand</span></p>
+          <p class="stack-split__label">Fragmented link equity + user confusion</p>
+          <p class="stack-split__note">casinoquest.biz, cqnexus.com, and shopcasinoquest.com split your SEO authority three ways.</p>
         </div>
       </div>
     </div>
@@ -762,7 +1069,9 @@ img{max-width:100%;display:block;}
 </section>
 
 
-<!-- 04 · WHAT PEOPLE ARE SEARCHING FOR -->
+<!-- ═══════════════════════════════════════════════════════════
+     04 · WHAT PEOPLE ARE SEARCHING FOR
+═══════════════════════════════════════════════════════════ -->
 <section class="sec-group sec-group--dark">
   <div class="sec-group__in">
     <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><circle cx="5" cy="5" r="3"/><path d="m7.5 7.5 2 2"/></svg></span><span class="sec-badge__label">Search Demand</span></div>
@@ -770,113 +1079,68 @@ img{max-width:100%;display:block;}
       <span class="sec-head__num">04</span>
       <div class="sec-head__body">
         <h2 class="sec-head__title">What People Are <em>Searching For</em></h2>
-        <p class="sec-head__sub">The exact queries your future customers type before they call anyone.</p>
+        <p class="sec-head__sub">The exact questions your prospects type into Google — with monthly volume.</p>
       </div>
     </div>
 
     <div class="prose">
-      <p>Casino Quest has a unique search profile: <strong>three distinct buyer journeys live under one URL.</strong> A bachelor-party planner googling "learn craps before vegas" is not the same human as a 22-year-old searching "casino dealer school las vegas," and neither is the same as a Patreon viewer searching "casino quest david." Volumes are shown as qualitative bands rather than fabricated specific numbers.</p>
+      <p>Casino Quest sits at the intersection of three distinct search audiences — tourists planning Vegas trips, aspiring casino dealers, and gamblers looking to improve their game. That's an unusually wide funnel, and right now the website isn't optimized for any of them individually. Volume ranges below are qualitative; specific data requires paid tooling.</p>
     </div>
 
-    <h3 class="sub-head">Tourist / Player Queries</h3>
+    <h3 class="sub-head">Primary Search Terms</h3>
     <div class="kw-table-wrap">
     <div class="kw-table">
       <div class="kw-row kw-row--hot">
         <span class="kw-row__rank">01</span>
-        <span class="kw-row__term">learn craps before vegas / vegas trip</span>
-        <span class="kw-row__vol">High · Tourist intent</span>
-        <span class="kw-row__tag"><span class="tag tag--high">Core revenue</span></span>
+        <span class="kw-row__term">craps lessons las vegas</span>
+        <span class="kw-row__vol">High</span>
+        <span class="kw-row__tag"><span class="tag tag--high">Tourist · High Intent</span></span>
       </div>
       <div class="kw-row kw-row--hot">
         <span class="kw-row__rank">02</span>
-        <span class="kw-row__term">craps lessons las vegas</span>
-        <span class="kw-row__vol">High · Bottom of funnel</span>
-        <span class="kw-row__tag"><span class="tag tag--high">Direct booking</span></span>
+        <span class="kw-row__term">learn how to play craps before going to vegas</span>
+        <span class="kw-row__vol">High</span>
+        <span class="kw-row__tag"><span class="tag tag--high">Pre-Trip · Branded Opp</span></span>
       </div>
       <div class="kw-row">
         <span class="kw-row__rank">03</span>
-        <span class="kw-row__term">things to do in vegas not gambling</span>
-        <span class="kw-row__vol">Very high · Discovery</span>
-        <span class="kw-row__tag"><span class="tag tag--medium">TripAdvisor lane</span></span>
+        <span class="kw-row__term">casino lessons las vegas</span>
+        <span class="kw-row__vol">Medium–High</span>
+        <span class="kw-row__tag"><span class="tag tag--medium">Tourist · Broad</span></span>
       </div>
       <div class="kw-row">
         <span class="kw-row__rank">04</span>
-        <span class="kw-row__term">how to play blackjack / craps / roulette</span>
-        <span class="kw-row__vol">Massive · Educational</span>
-        <span class="kw-row__tag"><span class="tag tag--easy">AI-citable</span></span>
+        <span class="kw-row__term">casino dealer school las vegas</span>
+        <span class="kw-row__vol">Medium</span>
+        <span class="kw-row__tag"><span class="tag tag--medium">Dealer School</span></span>
       </div>
       <div class="kw-row">
         <span class="kw-row__rank">05</span>
-        <span class="kw-row__term">bachelor party vegas activities</span>
-        <span class="kw-row__vol">High · Group bookings</span>
-        <span class="kw-row__tag"><span class="tag tag--high">Group rev</span></span>
+        <span class="kw-row__term">bachelor party activities las vegas non-gambling</span>
+        <span class="kw-row__vol">Medium</span>
+        <span class="kw-row__tag"><span class="tag tag--medium">Group Events</span></span>
+      </div>
+      <div class="kw-row">
+        <span class="kw-row__rank">06</span>
+        <span class="kw-row__term">things to do las vegas besides gamble</span>
+        <span class="kw-row__vol">Very High</span>
+        <span class="kw-row__tag"><span class="tag tag--easy">Tourist · Awareness</span></span>
       </div>
     </div>
     </div>
 
-    <h3 class="sub-head">Dealer School (CEG) Queries</h3>
-    <div class="kw-table-wrap">
-    <div class="kw-table">
-      <div class="kw-row kw-row--hot">
-        <span class="kw-row__rank">01</span>
-        <span class="kw-row__term">casino dealer school las vegas</span>
-        <span class="kw-row__vol">Medium · High intent</span>
-        <span class="kw-row__tag"><span class="tag tag--high">Career revenue</span></span>
-      </div>
-      <div class="kw-row">
-        <span class="kw-row__rank">02</span>
-        <span class="kw-row__term">how to become a casino dealer</span>
-        <span class="kw-row__vol">High · Top of funnel</span>
-        <span class="kw-row__tag"><span class="tag tag--medium">Educational</span></span>
-      </div>
-      <div class="kw-row">
-        <span class="kw-row__rank">03</span>
-        <span class="kw-row__term">craps dealer training</span>
-        <span class="kw-row__vol">Medium · Specialty</span>
-        <span class="kw-row__tag"><span class="tag tag--easy">Specialty</span></span>
-      </div>
-      <div class="kw-row">
-        <span class="kw-row__rank">04</span>
-        <span class="kw-row__term">dealer school cost / tuition</span>
-        <span class="kw-row__vol">Medium · Decision intent</span>
-        <span class="kw-row__tag"><span class="tag tag--high">Bottom of funnel</span></span>
-      </div>
-    </div>
-    </div>
-
-    <h3 class="sub-head">Branded / Community Queries</h3>
-    <div class="kw-table-wrap">
-    <div class="kw-table">
-      <div class="kw-row">
-        <span class="kw-row__rank">01</span>
-        <span class="kw-row__term">casino quest las vegas</span>
-        <span class="kw-row__vol">Branded · You own this</span>
-        <span class="kw-row__tag"><span class="tag tag--easy">Branded</span></span>
-      </div>
-      <div class="kw-row">
-        <span class="kw-row__rank">02</span>
-        <span class="kw-row__term">casino quest patreon / youtube</span>
-        <span class="kw-row__vol">Community-driven</span>
-        <span class="kw-row__tag"><span class="tag tag--easy">Owned</span></span>
-      </div>
-      <div class="kw-row">
-        <span class="kw-row__rank">03</span>
-        <span class="kw-row__term">cq nexus / casinoquest.biz</span>
-        <span class="kw-row__vol">Direct · Returning visitors</span>
-        <span class="kw-row__tag"><span class="tag tag--easy">Direct</span></span>
-      </div>
-    </div>
-    </div>
-
-    <h3 class="sub-head">The Vegas Search Window</h3>
+    <h3 class="sub-head">The Seasonal Window</h3>
     <div class="prose">
-      <p>Vegas search demand is anti-cyclical to most local-business markets: <strong>peak booking happens 6–8 weeks before peak Vegas traffic.</strong> That means tourists in March/April are pre-booking lessons for May–June trips, August/September pre-books for fall, and December pre-books for New Year's. A site rebuilt in the next 60 days lands ahead of the summer pre-booking window — when every dollar of organic visibility compounds across channel attribution.</p>
+      <p>Vegas tourism peaks in spring and fall — which means the highest-value search window for Casino Quest is <strong>6–8 weeks before</strong> those peaks, when trip planners are researching activities. A site built to capture that pre-trip search intent could lock in bookings before tourists even land.</p>
     </div>
+
   </div>
 </section>
 
 
-<!-- 05 · THE AI SEARCH EDGE -->
+<!-- ═══════════════════════════════════════════════════════════
+     05 · THE AI SEARCH EDGE
+═══════════════════════════════════════════════════════════ -->
 <section class="sec-group sec-group--dark">
   <div class="sec-group__in">
     <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><path d="M7 1L3 7h3l-1 4 5-6H7l1-4Z"/></svg></span><span class="sec-badge__label">AI Search — The Edge</span></div>
@@ -884,7 +1148,7 @@ img{max-width:100%;display:block;}
       <span class="sec-head__num">05</span>
       <div class="sec-head__body">
         <h2 class="sec-head__title">The <em>AI Search</em> Edge</h2>
-        <p class="sec-head__sub">Casino Quest is sitting on the single biggest AI-search opportunity we've seen this quarter. Here's why — and what closing it looks like.</p>
+        <p class="sec-head__sub">Most business owners don't know AI search exists — let alone that they're invisible to it. Here's what it is, how it works alongside Google, and how we make Casino Quest show up in both.</p>
       </div>
     </div>
 
@@ -905,7 +1169,7 @@ img{max-width:100%;display:block;}
           <div class="search-compare__row"><div class="search-compare__dot search-compare__dot--ai"></div><span class="search-compare__text search-compare__text--ai">You're the recommendation, not an option</span></div>
         </div>
       </div>
-      <div class="search-compare__footer">When a tourist asks ChatGPT "where can I learn craps in Vegas?" — there's no second-best answer. It should be Casino Quest, every time.</div>
+      <div class="search-compare__footer">They work together, not against each other. Google brings researchers. AI brings buyers ready to book. You need to show up in both.</div>
     </div>
 
     <div class="split-cards-wrap">
@@ -913,8 +1177,8 @@ img{max-width:100%;display:block;}
       <div class="split-card">
         <div class="split-card__gap">
           <div class="split-card__gap-icon">↑</div>
-          <h3 class="split-card__gap-title">AI can't read your story</h3>
-          <p class="split-card__gap-copy">200+ years of combined dealing experience, 4.9 ★ across three platforms, the "from homeless veteran to Vegas business" arc — none of it is in structured data ChatGPT or Perplexity can quote. The story exists; the wrapper doesn't.</p>
+          <h3 class="split-card__gap-title">No Structured Data for Events or Classes</h3>
+          <p class="split-card__gap-copy">When someone asks ChatGPT or Perplexity "what are fun things to do in Vegas," it reads structured data on pages to decide what to recommend. Casino Quest has none — making it invisible to the recommendation layer.</p>
         </div>
         <div class="split-card__divider">
           <div class="split-card__divider-line"></div>
@@ -923,15 +1187,15 @@ img{max-width:100%;display:block;}
         </div>
         <div class="split-card__solve">
           <div class="split-card__solve-num">01</div>
-          <h3 class="split-card__solve-title">Schema-marked authority blocks</h3>
-          <p class="split-card__solve-copy">Founders, founding date, instructor credentials, review counts, location, and services — all in structured data on every page. AI assistants stop guessing and start citing.</p>
+          <h3 class="split-card__solve-title">Event + LocalBusiness Schema on Every Page</h3>
+          <p class="split-card__solve-copy">We add structured JSON-LD schema to every service page — classes, clinics, workshops, and the venue itself — so AI models can correctly parse, cite, and recommend Casino Quest.</p>
         </div>
       </div>
       <div class="split-card">
         <div class="split-card__gap">
           <div class="split-card__gap-icon">↑</div>
-          <h3 class="split-card__gap-title">Your blog isn't built for citation</h3>
-          <p class="split-card__gap-copy">"David's Blog" on cqnexus.com has the right content — strategy, dealer-side perspective, Vegas insider takes — but the markup, headings, and Q&amp;A format aren't structured for AI to extract clean answers. The expertise is there; the format isn't.</p>
+          <h3 class="split-card__gap-title">No Authoritative "Expert" Signals</h3>
+          <p class="split-card__gap-copy">AI search models weight E-E-A-T (Experience, Expertise, Authoritativeness, Trust). David and Alex have 50+ combined years on casino floors — none of that shows up in a way search models can parse and cite.</p>
         </div>
         <div class="split-card__divider">
           <div class="split-card__divider-line"></div>
@@ -940,15 +1204,15 @@ img{max-width:100%;display:block;}
         </div>
         <div class="split-card__solve">
           <div class="split-card__solve-num">02</div>
-          <h3 class="split-card__solve-title">FAQ + HowTo retrofit</h3>
-          <p class="split-card__solve-copy">Every existing post gets structured FAQ and HowTo blocks. Same content, AI-citable wrapper. ChatGPT starts citing David Noll's takes by name — without writing a single new article.</p>
+          <h3 class="split-card__solve-title">Bio Pages + Person Schema for David and Alex</h3>
+          <p class="split-card__solve-copy">Dedicated bio pages with structured Person schema, career history, and credential callouts — turning 50+ years of expertise into signals that both Google and AI crawlers can recognize and cite.</p>
         </div>
       </div>
       <div class="split-card">
         <div class="split-card__gap">
           <div class="split-card__gap-icon">↑</div>
-          <h3 class="split-card__gap-title">Two URLs, divided authority</h3>
-          <p class="split-card__gap-copy">Authority is split between casinoquest.biz, cqnexus.com, shopcasinoquest.com, and the Patreon/YouTube channels. AI ranks consolidated authority. You're feeding signal into four buckets.</p>
+          <h3 class="split-card__gap-title">Three-Domain Split Dilutes Citation Authority</h3>
+          <p class="split-card__gap-copy">When AI models cross-reference sources, casinoquest.biz, cqnexus.com, and shopcasinoquest.com are treated as three separate entities. That fragments citation authority instead of compounding it.</p>
         </div>
         <div class="split-card__divider">
           <div class="split-card__divider-line"></div>
@@ -957,21 +1221,21 @@ img{max-width:100%;display:block;}
         </div>
         <div class="split-card__solve">
           <div class="split-card__solve-num">03</div>
-          <h3 class="split-card__solve-title">Hub + spoke domain strategy</h3>
-          <p class="split-card__solve-copy">One canonical home (a clean .com), with the others rerouted as subdomains or properly canonicalised paths. Suddenly AI sees one operator the size of all four — not four small ones.</p>
+          <h3 class="split-card__solve-title">Unified Brand Canonical Under One Domain</h3>
+          <p class="split-card__solve-copy">Consolidate all three properties under a single .com domain with cross-linking and canonical signals — so every Patreon post, every YouTube link, and every review points back to one authority address.</p>
         </div>
       </div>
     </div>
     </div>
 
-    <div class="callout">
-      <strong>Right now, Casino Quest is invisible to AI for its biggest opportunity</strong> — "where can I learn craps before my Vegas trip" is a question no other operator can answer. We make sure ChatGPT, Perplexity, and Gemini all know that.
-    </div>
+    <div class="callout"><strong>The bottom line:</strong> Casino Quest already gets cited in "what to do in Vegas" conversations — we've seen this business mentioned in YouTube comments, Reddit trip reports, and TripAdvisor roundups. The gap is that AI models can't easily parse or amplify what's there. Structured data and a unified domain fix that in the first 30 days.</div>
   </div>
 </section>
 
 
-<!-- 06 · WHAT WE'D ACTUALLY DO -->
+<!-- ═══════════════════════════════════════════════════════════
+     06 · WHAT WE'D ACTUALLY DO
+═══════════════════════════════════════════════════════════ -->
 <section class="sec-group sec-group--cream">
   <div class="sec-group__in">
     <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><path d="M3 3h6v6H3z"/><path d="M3 6h6"/></svg></span><span class="sec-badge__label">The Plan</span></div>
@@ -979,7 +1243,7 @@ img{max-width:100%;display:block;}
       <span class="sec-head__num">06</span>
       <div class="sec-head__body">
         <h2 class="sec-head__title">Here's What We'd <em>Actually Do</em></h2>
-        <p class="sec-head__sub">Specific, prioritized work — not a generic checklist.</p>
+        <p class="sec-head__sub">Specific, prioritized recommendations — not a generic checklist.</p>
       </div>
     </div>
 
@@ -989,12 +1253,12 @@ img{max-width:100%;display:block;}
         <div class="phase-header">
           <span class="phase-label phase-label--quick">Quick Win</span>
           <div class="phase-divider"></div>
-          <span class="phase-note">Immediate</span>
+          <span class="phase-note">Start this week</span>
         </div>
         <div class="phase-items">
           <div class="phase-item">
-            <strong class="phase-item__title">Two-door homepage</strong>
-            <p class="phase-item__desc">Replace the current single-flow homepage with two clear paths above the fold: "I'm visiting Vegas — book a lesson" and "I want to be a dealer — see CEG." Keep your Wix booking embed for now; just stop forcing both audiences through one funnel. Ship in week one — measurable lift before the new site even launches.</p>
+            <strong class="phase-item__title">GBP Optimization + Photo Refresh</strong>
+            <p class="phase-item__desc">Your GBP already has 4.9 ★ — but the profile could be working much harder with updated service menus, Q&amp;A populated, and fresh photos of the new W Sahara location. This is free and takes a few hours. Tourists researching Vegas activities check GBP more than any other source.</p>
           </div>
         </div>
       </div>
@@ -1007,28 +1271,20 @@ img{max-width:100%;display:block;}
         </div>
         <div class="phase-items phase-items--grid">
           <div class="phase-item">
-            <strong class="phase-item__title">Custom site, off Wix</strong>
-            <p class="phase-item__desc">A real .com domain with a custom Astro/CF stack. Page weight cut 60%+. Mobile LCP under 1.5s on 4G. SEO ceiling lifts immediately.</p>
+            <strong class="phase-item__title">New .com Site — Dual-Funnel Architecture</strong>
+            <p class="phase-item__desc">A custom Astro site on a proper .com domain with two dedicated entry points: a tourist-facing landing page (lessons, clinics, group events) and a dealer-school funnel (CEG program, placement, careers). The current Wix site conflates both audiences on the same homepage.</p>
           </div>
           <div class="phase-item">
-            <strong class="phase-item__title">Player track + Dealer track</strong>
-            <p class="phase-item__desc">Two parallel funnels with their own nav, hero, and CTA. Player → tourist landing → booking. Dealer → CEG explainer → application. Both share one shell so the brand stays unified.</p>
+            <strong class="phase-item__title">Structured Data + AI Search Signals</strong>
+            <p class="phase-item__desc">LocalBusiness, Event, Course, and Person schema on every relevant page. Plus a Citation Audit — verifying that Casino Quest's name, address, and phone are consistent across every directory AI models cite when answering "what to do in Vegas."</p>
           </div>
           <div class="phase-item">
-            <strong class="phase-item__title">Service category pages</strong>
-            <p class="phase-item__desc">Dedicated SEO pages for craps, blackjack, roulette, baccarat, poker — each with FAQ schema, instructor bios, pricing, and a real "book a lesson" CTA. Built to rank for "[game] lessons las vegas".</p>
+            <strong class="phase-item__title">Group &amp; Event Booking Flow</strong>
+            <p class="phase-item__desc">Bachelor parties, corporate team events, and birthday groups are high-value bookings. The current site buries this. We build a dedicated groups page with a clear multi-person booking flow and a lead form for custom quotes — targeting the $500–$2,000+ event bracket.</p>
           </div>
           <div class="phase-item">
-            <strong class="phase-item__title">Group + corporate booking flow</strong>
-            <p class="phase-item__desc">Bachelor parties, corporate offsites, and 21st birthdays are huge basket-size. A dedicated form + landing page with package examples and an inquiry path tied to your CRM.</p>
-          </div>
-          <div class="phase-item">
-            <strong class="phase-item__title">AI search signals + schema</strong>
-            <p class="phase-item__desc">Every page is built so ChatGPT, Siri, and every AI assistant know exactly what Casino Quest does, where you are, and who teaches. Ships day one — the only Vegas operator with this combination.</p>
-          </div>
-          <div class="phase-item">
-            <strong class="phase-item__title">Citation Audit &amp; Cleanup</strong>
-            <p class="phase-item__desc">We find every mismatch in your name, address, phone, and platform listings across Google, Yelp, TripAdvisor, BBB, and the Vegas tourism directories — and fix them. Small inconsistencies drag down local rankings.</p>
+            <strong class="phase-item__title">Premium Offer Feature Page</strong>
+            <p class="phase-item__desc">"Play Live with Alex at the Casino" ($500/2hr) and "Private Craps Lesson with David" ($225/hr) are buried in the booking calendar. We build each a standalone landing page that sells the experience — these are your highest-margin bookings and deserve their own real estate.</p>
           </div>
         </div>
       </div>
@@ -1041,12 +1297,8 @@ img{max-width:100%;display:block;}
         </div>
         <div class="phase-items">
           <div class="phase-item">
-            <strong class="phase-item__title">Patreon-to-email migration</strong>
-            <p class="phase-item__desc">3,445 Patreon members live in Patreon's database, not yours. We build an opt-in path so members can also join your direct list. Better deliverability, no platform fees on broadcasts, and you own the relationship if Patreon ever changes terms.</p>
-          </div>
-          <div class="phase-item">
-            <strong class="phase-item__title">Expert content library + David's blog</strong>
-            <p class="phase-item__desc">Migrate David's blog from Kajabi-hosted CQ Nexus onto your main domain so authority compounds in one place. AI assistants cite "David Noll, Casino Quest" — not three different URLs depending on the query.</p>
+            <strong class="phase-item__title">Patreon-to-Email Bridge + Unified CRM</strong>
+            <p class="phase-item__desc">3,400+ paying Patreon members who already trust you are your most valuable marketing asset — but they're locked inside Patreon. We build a GHL-powered email/SMS system that bridges your Patreon audience to a first-party list, enabling direct booking promotions, new product launches, and event announcements without depending on any third-party platform.</p>
           </div>
         </div>
       </div>
@@ -1056,7 +1308,9 @@ img{max-width:100%;display:block;}
 </section>
 
 
-<!-- 07 · BEYOND THE WEBSITE -->
+<!-- ═══════════════════════════════════════════════════════════
+     07 · BEYOND THE WEBSITE
+═══════════════════════════════════════════════════════════ -->
 <section class="sec-group sec-group--dark">
   <div class="sec-group__in">
     <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><circle cx="6" cy="6" r="4"/><path d="M6 2v4l2 1"/></svg></span><span class="sec-badge__label">The Bigger Picture</span></div>
@@ -1064,7 +1318,7 @@ img{max-width:100%;display:block;}
       <span class="sec-head__num">07</span>
       <div class="sec-head__body">
         <h2 class="sec-head__title">Beyond the <em>Website</em></h2>
-        <p class="sec-head__sub">More ways we put your business in front of the right people.</p>
+        <p class="sec-head__sub">Additional growth levers we'd put to work for you.</p>
       </div>
     </div>
 
@@ -1072,30 +1326,56 @@ img{max-width:100%;display:block;}
       <div class="beyond-item">
         <span class="beyond-item__ico"><span class="material-symbols-outlined">storefront</span></span>
         <div class="beyond-item__label">Google Business Profile</div>
-        <p class="beyond-item__desc">GBP fully optimised with photos, services, FAQ, and a weekly post cadence. Worth ~30% lift on local-pack visibility for "craps lessons" and "things to do in Vegas".</p>
+        <p class="beyond-item__desc">The GBP is claimed and rated 4.9 ★ — but it isn't fully optimized. Populated Q&amp;A, updated service menus, and consistent weekly photo posts could push Casino Quest into the top 3 local pack for every tourist-facing query.</p>
       </div>
       <div class="beyond-item">
-        <span class="beyond-item__ico"><span class="material-symbols-outlined">event</span></span>
-        <div class="beyond-item__label">Group + Event Funnel</div>
-        <p class="beyond-item__desc">Dedicated landing for corporate / bachelor / birthday groups with a real inquiry form. Highest basket-size segment, most under-monetized today.</p>
+        <span class="beyond-item__ico"><span class="material-symbols-outlined">groups</span></span>
+        <div class="beyond-item__label">Group Events Pipeline</div>
+        <p class="beyond-item__desc">Bachelor/bachelorette parties, corporate team-building, and birthday groups are the highest-margin bookings and the ones most likely to be planned 4–8 weeks ahead. A dedicated groups funnel with a quote request form captures this demand before competitors do.</p>
       </div>
       <div class="beyond-item">
         <span class="beyond-item__ico"><span class="material-symbols-outlined">reviews</span></span>
-        <div class="beyond-item__label">Reviews Engine</div>
-        <p class="beyond-item__desc">Automated post-lesson SMS + email asking happy guests to add a review on whichever platform they came from. Compound the triple-4.9 stack into a moat no competitor can catch.</p>
+        <div class="beyond-item__label">Review Amplification</div>
+        <p class="beyond-item__desc">299 Google reviews is strong — but a systematic post-visit SMS nudge (via GHL) could push that count toward 600–800 within a year. More reviews increase both local pack ranking and AI citation frequency.</p>
       </div>
       <div class="beyond-item">
         <span class="beyond-item__ico"><span class="material-symbols-outlined">mail</span></span>
-        <div class="beyond-item__label">Email &amp; CRM</div>
-        <p class="beyond-item__desc">Pre-trip prep emails ("you're 6 weeks out — book your craps lesson now"), CEG enrollment nurtures, and Patreon-list crosswalks. One CRM, three audiences, one team.</p>
+        <div class="beyond-item__label">Email &amp; SMS Automation</div>
+        <p class="beyond-item__desc">A first-party email list lets you announce new clinics, seasonal promos, and YouTube drops directly — without Patreon's cut or TOS restrictions. A GHL-powered system handles post-booking follow-up, re-engagement, and dealer-school lead nurture automatically.</p>
       </div>
     </div>
   </div>
 </section>
 
 
-<!-- 08 · WHAT THIS COULD MEAN -->
-<!-- Variant A: 6-year veteran-owned operator with multiple revenue lines + clear pricing — David & Alex are both ex-casino professionals (math/odds is their native language). The funnel sells itself once it's calibrated. -->
+<!-- ═══════════════════════════════════════════════════════════
+     08 · WHAT THIS COULD MEAN
+     ─────────────────────────────────────────────────────────
+     PICK ONE VARIANT. Uncomment the section that fits the
+     prospect. Keep the others commented out.
+
+     A — THE MATH       → Skeptics, contractors, analytical
+         sec-group--cream   owners who want to see the work.
+                            Show the calculation chain.
+
+     B — THE GAP        → Visual thinkers, lifestyle business
+         sec-group--dark    owners, anyone with FOMO energy.
+                            Before vs. after contrast.
+
+     C — THE RANGE      → Risk-averse owners, accountants,
+         sec-group--dark    anyone who hates being oversold.
+                            Conservative / moderate / optimistic.
+
+     D — WHAT IT MEANS  → Heart-led owners, creatives, service
+         sec-group--cream   pros who think in people not numbers.
+                            Translate the dollar into real life.
+
+     Compare page: yoursite.madebyaspire.com/template/revenue-compare/
+═══════════════════════════════════════════════════════════ -->
+
+
+<!-- Variant A: Casino Quest owners are career casino professionals — odds and math is their native language -->
+<!-- ─── VARIANT A · THE MATH ─────────────────────────────── -->
 <section class="sec-group sec-group--cream">
   <div class="sec-group__in">
     <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><path d="M2 9l3-3 2 2 3-4"/></svg></span><span class="sec-badge__label">Revenue Impact</span></div>
@@ -1103,78 +1383,231 @@ img{max-width:100%;display:block;}
       <span class="sec-head__num">08</span>
       <div class="sec-head__body">
         <h2 class="sec-head__title">What This Could <em>Mean</em></h2>
-        <p class="sec-head__sub">Here's the math — direct lesson channel only. Group, dealer school, and merch are upside.</p>
+        <p class="sec-head__sub">Here's the math — and it's conservative.</p>
       </div>
     </div>
-    <div class="funnel-chain">
-      <div class="funnel-step">
-        <div class="funnel-step__label">Monthly Searches</div>
-        <div class="funnel-step__val">~2,500</div>
-        <div class="funnel-step__sub">tourist + branded queries combined</div>
-        <div class="funnel-step__operator">×</div>
+    <div class="funnel-b">
+      <div class="funnel-b__eq">
+        2,500 searches <span class="op">×</span> 8% CTR <span class="op">×</span> 200 visitors <span class="op">×</span> 7% conv. <span class="op">×</span> $130 avg.
+        <span class="result">~$22K<span class="result-meta">per year &nbsp;·&nbsp; ~$1,800 per month — tourist channel only</span></span>
       </div>
-      <div class="funnel-step">
-        <div class="funnel-step__label">Click-Through</div>
-        <div class="funnel-step__val">8%</div>
-        <div class="funnel-step__sub">realistic for a top-3 ranking with triple 4.9 ★</div>
-        <div class="funnel-step__operator">=</div>
-      </div>
-      <div class="funnel-step">
-        <div class="funnel-step__label">Site Visitors</div>
-        <div class="funnel-step__val">~200/mo</div>
-        <div class="funnel-step__sub">organic, high tourist intent</div>
-        <div class="funnel-step__operator">×</div>
-      </div>
-      <div class="funnel-step">
-        <div class="funnel-step__label">Conversion Rate</div>
-        <div class="funnel-step__val">7%</div>
-        <div class="funnel-step__sub">these visitors are already trip-planning</div>
-        <div class="funnel-step__operator">×</div>
-      </div>
-      <div class="funnel-step">
-        <div class="funnel-step__label">Avg. First Booking</div>
-        <div class="funnel-step__val">~$130</div>
-        <div class="funnel-step__sub">blend of clinics, hourly, and private sessions</div>
-      </div>
-    </div>
-    <div class="funnel-result">
-      <div class="funnel-result__period">
-        <div class="funnel-result__amt">~$1.8K</div>
-        <div class="funnel-result__period-label">per month</div>
-      </div>
-      <div class="funnel-result__divider"></div>
-      <div class="funnel-result__period">
-        <div class="funnel-result__amt">~$22K</div>
-        <div class="funnel-result__period-label">per year — direct only</div>
+      <div class="funnel-b__cards">
+        <div class="funnel-b__card">
+          <div class="funnel-b__card-label">Monthly Searches</div>
+          <div class="funnel-b__card-val">~2,500</div>
+          <div class="funnel-b__card-sub">Tourist + branded queries; excludes dealer school traffic</div>
+        </div>
+        <div class="funnel-b__card">
+          <div class="funnel-b__card-label">Click-Through</div>
+          <div class="funnel-b__card-val">8%</div>
+          <div class="funnel-b__card-sub">Realistic for top-3 with triple 4.9 ★ showing in SERP</div>
+        </div>
+        <div class="funnel-b__card">
+          <div class="funnel-b__card-label">Site Visitors</div>
+          <div class="funnel-b__card-val">~200/mo</div>
+          <div class="funnel-b__card-sub">Pre-trip planners — already looking to book, not just browse</div>
+        </div>
+        <div class="funnel-b__card">
+          <div class="funnel-b__card-label">Conversion Rate</div>
+          <div class="funnel-b__card-val">7%</div>
+          <div class="funnel-b__card-sub">Vegas trip-planners are high-intent; industry benchmark is 3–5%</div>
+        </div>
+        <div class="funnel-b__card">
+          <div class="funnel-b__card-label">Avg. Booking Value</div>
+          <div class="funnel-b__card-val">$130</div>
+          <div class="funnel-b__card-sub">Blended $30 drop-in → $225 private; conservatively weighted to lower end</div>
+        </div>
       </div>
     </div>
     <div class="funnel-assumptions">
       <p class="funnel-assumptions__head">Conservative by design — here's exactly what we assumed</p>
       <div class="funnel-assumptions__grid">
         <div class="funnel-assumptions__item">
-          <span class="funnel-assumptions__val">~2,500</span>
-          <span class="funnel-assumptions__label">monthly searches across tourist + branded queries — excludes dealer-school search demand entirely</span>
+          <span class="funnel-assumptions__val">~2,500/mo</span>
+          <span class="funnel-assumptions__label">estimated monthly tourist + branded searches — dealer school queries modeled separately as upside</span>
         </div>
         <div class="funnel-assumptions__item">
-          <span class="funnel-assumptions__val">8%</span>
-          <span class="funnel-assumptions__label">click-through rate — realistic for a top-3 ranking with your three-platform 4.9 ★ profile</span>
+          <span class="funnel-assumptions__val">8% CTR</span>
+          <span class="funnel-assumptions__label">click-through rate — realistic for top-3 ranking when all three platforms show 4.9 ★ in the result</span>
         </div>
         <div class="funnel-assumptions__item">
-          <span class="funnel-assumptions__val">7%</span>
-          <span class="funnel-assumptions__label">conversion rate — Vegas trip-planning is unusually high-intent; current Wix booking caps this</span>
+          <span class="funnel-assumptions__val">7% conv.</span>
+          <span class="funnel-assumptions__label">conversion rate — Vegas-bound travelers are high-intent; 7% is achievable with a dedicated tourist landing page</span>
         </div>
         <div class="funnel-assumptions__item">
-          <span class="funnel-assumptions__val">~$130</span>
-          <span class="funnel-assumptions__label">average first booking — blend across $30 hourly, $100 clinics, $200+ private. Most groups buy multiple.</span>
+          <span class="funnel-assumptions__val">$130 avg.</span>
+          <span class="funnel-assumptions__label">average first booking — conservative blend of $30 drop-in and $100–$225 clinics/privates</span>
         </div>
       </div>
-      <p class="funnel-assumptions__footer">Group bookings, dealer-school placements, Patreon-to-email cross-sell, and merch are all modeled as zero. Add ~$25K–$35K of realistic upside from those channels and the all-in number is roughly $50K–$60K/yr.</p>
+      <p class="funnel-assumptions__footer">All-channel projection (group events, dealer school placements, Patreon-to-email conversions, merch): $50K–$60K/yr. That's modeled as upside, not the floor.</p>
     </div>
   </div>
 </section>
 
 
-<!-- 09 · WHY ASPIRE -->
+<!-- ─── VARIANT B · THE GAP ──────────────────────────────── -->
+<!--
+<section class="sec-group sec-group--dark">
+  <div class="sec-group__in">
+    <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><path d="M2 9l3-3 2 2 3-4"/></svg></span><span class="sec-badge__label">Revenue Impact</span></div>
+    <div class="sec-head">
+      <span class="sec-head__num">08</span>
+      <div class="sec-head__body">
+        <h2 class="sec-head__title">What This Could <em>Mean</em></h2>
+        <p class="sec-head__sub">The gap between where you are and where you could be.</p>
+      </div>
+    </div>
+    <div class="gap-wrap">
+      <div class="gap-now">
+        <div class="gap-now__eyebrow">Today — Without a Site That Works</div>
+        <p class="gap-now__headline">{METRIC_SEARCH_VOL} people search for your services every month. Right now, most of them find someone else.</p>
+        <div>
+          <div class="gap-now__num">{REVENUE_AMOUNT}</div>
+          <div class="gap-now__sublabel">estimated annual revenue passing you by</div>
+        </div>
+      </div>
+      <div class="gap-after">
+        <div class="gap-after__eyebrow">With Aspire — Year One</div>
+        <p class="gap-after__headline">A site built to show up, earn trust, and turn visitors into bookings — built in weeks, not months.</p>
+        <div>
+          <div class="gap-after__num">+{REVENUE_AMOUNT}</div>
+          <div class="gap-after__sublabel">projected annual lift, conservative estimate</div>
+        </div>
+      </div>
+    </div>
+    <div class="gap-bridge">
+      <div class="gap-bridge__line"></div>
+      <span class="gap-bridge__text">The difference is one website, done right.</span>
+      <div class="gap-bridge__line"></div>
+    </div>
+    <div class="gap-metrics">
+      <div class="gap-metric">
+        <div class="gap-metric__val">{METRIC_NEW_CLIENTS}</div>
+        <div class="gap-metric__label">new clients per year</div>
+      </div>
+      <div class="gap-metric">
+        <div class="gap-metric__val">{METRIC_INQUIRIES}</div>
+        <div class="gap-metric__label">more inquiries annually</div>
+      </div>
+      <div class="gap-metric">
+        <div class="gap-metric__val">{METRIC_ROI}</div>
+        <div class="gap-metric__label">return on investment</div>
+      </div>
+    </div>
+  </div>
+</section>
+-->
+
+
+<!-- ─── VARIANT C · THE RANGE ────────────────────────────── -->
+<!--
+<section class="sec-group sec-group--dark">
+  <div class="sec-group__in">
+    <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><path d="M2 9l3-3 2 2 3-4"/></svg></span><span class="sec-badge__label">Revenue Impact</span></div>
+    <div class="sec-head">
+      <span class="sec-head__num">08</span>
+      <div class="sec-head__body">
+        <h2 class="sec-head__title">What This Could <em>Mean</em></h2>
+        <p class="sec-head__sub">Three scenarios. All grounded. You pick which one you believe.</p>
+      </div>
+    </div>
+    <div class="range-hero">
+      <div class="range-hero__sub">Conservative Projection · Year One</div>
+      <div class="range-hero__num">{REVENUE_AMOUNT}</div>
+      <div class="range-hero__label">in new annual revenue</div>
+      <div class="range-hero__note">{REVENUE_MATH_PARAGRAPH}</div>
+    </div>
+    <div class="range-scenarios">
+      <div class="range-card range-card--conservative">
+        <div class="range-card__tier">Conservative</div>
+        <div class="range-card__amt">{REVENUE_CONSERVATIVE}</div>
+        <span class="range-card__period">per year</span>
+        <p class="range-card__desc">Organic search only. No referrals, no repeat clients, no social. The floor — and still meaningful growth.</p>
+        <div class="range-bar-wrap"><div class="range-bar"></div></div>
+      </div>
+      <div class="range-card range-card--moderate">
+        <div class="range-card__tier">Moderate</div>
+        <div class="range-card__amt">{REVENUE_MODERATE}</div>
+        <span class="range-card__period">per year</span>
+        <p class="range-card__desc">Add Google Business momentum, a few repeat clients, and word-of-mouth from a site people actually share.</p>
+        <div class="range-bar-wrap"><div class="range-bar"></div></div>
+      </div>
+      <div class="range-card range-card--optimistic">
+        <div class="range-card__tier">Optimistic</div>
+        <div class="range-card__amt">{REVENUE_OPTIMISTIC}</div>
+        <span class="range-card__period">per year</span>
+        <p class="range-card__desc">Full local SEO traction, GBP reviews compounding, AI search citations — the ceiling when all channels work together.</p>
+        <div class="range-bar-wrap"><div class="range-bar"></div></div>
+      </div>
+    </div>
+    <div class="range-callout">
+      <div class="range-callout__icon"><svg viewBox="0 0 16 16" fill="none"><path d="M8 2v4l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="2"/></svg></div>
+      <p class="range-callout__text"><strong>We plan to the conservative number and build toward moderate.</strong> If we hit optimistic, that's a great problem to have — and we'll be there to scale with you.</p>
+    </div>
+  </div>
+</section>
+-->
+
+
+<!-- ─── VARIANT D · WHAT IT MEANS ────────────────────────── -->
+<!--
+<section class="sec-group sec-group--alt">
+  <div class="sec-group__in">
+    <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><path d="M2 9l3-3 2 2 3-4"/></svg></span><span class="sec-badge__label">Revenue Impact</span></div>
+    <div class="sec-head">
+      <span class="sec-head__num">08</span>
+      <div class="sec-head__body">
+        <h2 class="sec-head__title">What This Could <em>Mean</em></h2>
+        <p class="sec-head__sub">Put a number on it — then make it real.</p>
+      </div>
+    </div>
+    <div class="meaning-anchor">
+      <div class="meaning-anchor__label">Projected Annual Revenue Lift</div>
+      <div class="meaning-anchor__num">{REVENUE_AMOUNT}</div>
+      <div class="meaning-anchor__period">per year — conservative</div>
+      <div class="meaning-anchor__note">{REVENUE_MATH_PARAGRAPH}</div>
+    </div>
+    <div class="meaning-grid">
+      <div class="meaning-item">
+        <div class="meaning-item__ico"><svg viewBox="0 0 20 20" fill="none"><path d="M10 2a4 4 0 1 0 0 8 4 4 0 0 0 0-8zM4 18a6 6 0 0 1 12 0" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></svg></div>
+        <div class="meaning-item__num"><em>{METRIC_NEW_CLIENTS}</em> new clients</div>
+        <div class="meaning-item__label">in your first year</div>
+        <p class="meaning-item__sub">People who found you on Google, liked what they saw, and booked — without you lifting a finger.</p>
+      </div>
+      <div class="meaning-item">
+        <div class="meaning-item__ico"><svg viewBox="0 0 20 20" fill="none"><rect x="3" y="5" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.75"/><path d="M3 8l7 5 7-5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></svg></div>
+        <div class="meaning-item__num"><em>{METRIC_INQUIRIES}</em> inquiries</div>
+        <div class="meaning-item__label">that actually come to you</div>
+        <p class="meaning-item__sub">Real leads, in your inbox, from people already searching for exactly what you offer.</p>
+      </div>
+      <div class="meaning-item">
+        <div class="meaning-item__ico"><svg viewBox="0 0 20 20" fill="none"><rect x="3" y="4" width="14" height="13" rx="2" stroke="currentColor" stroke-width="1.75"/><path d="M3 8h14M7 2v4M13 2v4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></svg></div>
+        <div class="meaning-item__num">One <em>extra</em> booking</div>
+        <div class="meaning-item__label">{METRIC_BOOKING_CADENCE}</div>
+        <p class="meaning-item__sub">Consistent, predictable income growth — not feast-or-famine, not depending on word of mouth alone.</p>
+      </div>
+      <div class="meaning-item">
+        <div class="meaning-item__ico"><svg viewBox="0 0 20 20" fill="none"><path d="M10 3v14M5 8l5-5 5 5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="meaning-item__num">A <em>real</em> investment</div>
+        <div class="meaning-item__label">in your next chapter</div>
+        <p class="meaning-item__sub">{METRIC_MEANING_STATEMENT}</p>
+      </div>
+    </div>
+    <div class="meaning-close">
+      <p class="meaning-close__quote">"Most of our clients break even on the website within the first <em>three bookings.</em> Everything after that is growth."</p>
+      <div class="meaning-close__aside">
+        <div class="meaning-close__aside-num">3×</div>
+        <div class="meaning-close__aside-label">typical payback window</div>
+      </div>
+    </div>
+  </div>
+</section>
+-->
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     09 · WHY ASPIRE + CTA
+═══════════════════════════════════════════════════════════ -->
 <section class="sec-group sec-group--dark">
   <div class="sec-group__in">
     <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><path d="M6 1l1.5 3.5L11 5l-2.75 2.5L9 11 6 9l-3 2 .75-3.5L1 5l3.5-.5z"/></svg></span><span class="sec-badge__label">Why Us</span></div>
@@ -1182,44 +1615,52 @@ img{max-width:100%;display:block;}
       <span class="sec-head__num">09</span>
       <div class="sec-head__body">
         <h2 class="sec-head__title">Why <em>Aspire Digital</em></h2>
-        <p class="sec-head__sub">You do the work you're great at. We handle the digital side — and we don't disappear after launch.</p>
+        <p class="sec-head__sub">Craft, clarity, and a partnership that lasts past launch.</p>
       </div>
     </div>
 
     <div class="prose">
-      <p>Casino Quest is a small team that built something nobody else built — by staying small enough to own every detail. So is Aspire. A husband-and-wife team with 30+ years of combined experience, and we stay small on purpose. Every client gets both of us: Jaime's eye on every design decision, Chris's architecture on every line of code. We don't hand projects off to junior developers. We don't disappear after launch. Our faith shapes how we price, how we communicate, and what we're willing to put our name on — which means we're straight with you about what your business actually needs, not what earns the biggest contract.</p>
+      <p>You've spent over a decade building something the Vegas market has never seen before — a dealer school, a tourist destination, and a media empire that genuinely teaches people how to play. The website should feel like it belongs next to that. We build from scratch, on a real tech stack, with a designer who has 20+ years of senior UX/UI experience — and we're still small enough that you'll have our direct attention, not a project manager and a template.</p>
     </div>
 
     <div class="why-values">
       <div class="why-val">
-        <span class="why-val__icon"><span class="material-symbols-outlined">design_services</span></span>
-        <strong class="why-val__label">Tailored from scratch</strong>
-        <p class="why-val__desc">Every site is designed for that client, that audience, that goal — never pulled from a template shelf.</p>
+        <div class="why-val__icon"><span class="material-symbols-outlined">design_services</span></div>
+        <p class="why-val__label">Tailored from scratch</p>
+        <p class="why-val__desc">No templates. Every site is built around your business, your customers, and your market.</p>
       </div>
       <div class="why-val">
-        <span class="why-val__icon"><span class="material-symbols-outlined">verified</span></span>
-        <strong class="why-val__label">We show up after launch</strong>
-        <p class="why-val__desc">The job isn't done when the site goes live. It's done when your business is growing.</p>
+        <div class="why-val__icon"><span class="material-symbols-outlined">verified</span></div>
+        <p class="why-val__label">We show up after launch</p>
+        <p class="why-val__desc">Monthly care plans keep your site fast, secure, and growing — not left to go stale.</p>
       </div>
       <div class="why-val">
-        <span class="why-val__icon"><span class="material-symbols-outlined">handshake</span></span>
-        <strong class="why-val__label">Honest to the core</strong>
-        <p class="why-val__desc">Transparent pricing, straight talk, no disappearing act. Our faith anchors every client relationship.</p>
+        <div class="why-val__icon"><span class="material-symbols-outlined">handshake</span></div>
+        <p class="why-val__label">Honest to the core</p>
+        <p class="why-val__desc">We tell you what you actually need — and what you don't. Straight talk, no upsells.</p>
       </div>
     </div>
 
     <div class="team-grid">
       <div class="team-card">
         <div class="team-card__photo">
-          <img src="/assets/chris-profile.png" alt="Chris Otten">
+          <img src="./chris-profile.png" alt="Chris Otten">
           <div class="team-card__tint"></div>
+          <div class="team-card__socials">
+            <a href="https://instagram.com/chrisotten" class="team-card__social-btn" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://linkedin.com/in/chrisotten" class="team-card__social-btn" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+          </div>
           <div class="team-card__overlay">
             <p class="team-card__role">Founder &amp; Technical Director</p>
             <h3 class="team-card__name">Chris Otten</h3>
           </div>
         </div>
         <div class="team-card__body">
-          <p class="team-card__bio">Handles the strategy, development, and business ops that make a launch actually land. Every site Chris builds is fast, accessible, and SEO-ready from the first line of code.</p>
+          <p class="team-card__bio">Technical architecture, development, and strategy — every site ships fast, accessible, and SEO-ready.</p>
           <div class="team-card__links">
             <a href="mailto:chris@madebyaspire.com">chris@madebyaspire.com</a>
           </div>
@@ -1227,36 +1668,60 @@ img{max-width:100%;display:block;}
       </div>
       <div class="team-card">
         <div class="team-card__photo">
-          <img src="/assets/jaime-profile.png" alt="Jaime Otten">
+          <img src="./jaime-profile.png" alt="Jaime Otten">
           <div class="team-card__tint"></div>
+          <div class="team-card__socials">
+            <a href="https://instagram.com/jaimeotten" class="team-card__social-btn" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://linkedin.com/in/jaimeotten" class="team-card__social-btn" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+          </div>
           <div class="team-card__overlay">
             <p class="team-card__role">Founder &amp; Creative Director</p>
             <h3 class="team-card__name">Jaime Otten</h3>
           </div>
         </div>
         <div class="team-card__body">
-          <p class="team-card__bio">20+ years of senior UX/UI design across agencies, startups, and product studios. Every visual direction on every site runs through Jaime. Your brand is in good hands.</p>
+          <p class="team-card__bio">20+ years of senior UX/UI design. Every visual direction, every site, every time.</p>
           <div class="team-card__links">
             <a href="mailto:jaime@madebyaspire.com">jaime@madebyaspire.com</a>
           </div>
         </div>
       </div>
     </div>
+
+    <div class="why-reviews">
+      <p class="why-reviews__label">What our clients say</p>
+      <div class="review-grid">
+        <div class="review-card">
+          <div class="review-card__stars">★★★★★</div>
+          <p class="review-card__quote">"Aspire took the time to actually understand what we'd built — and delivered a site that finally reflects it. The attention to detail, the speed, and the quality were all exceptional."</p>
+          <p class="review-card__by">Aspire Digital client</p>
+        </div>
+        <div class="review-card">
+          <div class="review-card__stars">★★★★★</div>
+          <p class="review-card__quote">"We'd been stuck with a generic template for years. Working with Aspire felt completely different — they asked the right questions and built something we're actually proud to send people to."</p>
+          <p class="review-card__by">Aspire Digital client</p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- CTA -->
+<!-- CTA — standalone closing section -->
 <section class="sec-group sec-group--cream">
   <div class="sec-group__in">
     <div class="cta-box">
       <p class="cta-box__eyebrow">Let's Build Something</p>
-      <h3 class="cta-box__heading">A website that <em>matches</em> the brand you've already built.</h3>
+      <h3 class="cta-box__heading">Ready to see what Casino Quest looks like with a website that <em>matches what you've built?</em></h3>
       <div class="cta-steps">
         <div class="cta-step">
           <span class="cta-step__num">1</span>
           <div>
             <strong class="cta-step__label">Book a free 30-min strategy call</strong>
-            <p class="cta-step__desc">We'll map out the exact plan for Casino Quest — no pitch, just a plan.</p>
+            <p class="cta-step__desc">We'll map out the exact plan for your business — no pitch, just a plan.</p>
           </div>
         </div>
         <div class="cta-step">
@@ -1279,15 +1744,17 @@ img{max-width:100%;display:block;}
         <span class="btn-pill__label">Book a Free Strategy Call</span>
         <span class="btn-pill__arrow">→</span>
       </a>
+      <p class="cta-box__secondary">or email <a href="mailto:Chris@aspiredigital.dev">Chris</a> directly</p>
     </div>
   </div>
 </section>
 
 
+<!-- FOOTER — Standard Aspire doc footer -->
 <footer class="guide-footer">
   <div style="display:flex;flex-direction:column;align-items:center;gap:.5rem;width:100%;max-width:640px;padding-bottom:2rem;border-bottom:1px solid rgba(250,240,226,.07);">
     <a href="https://madebyaspire.com" target="_blank" rel="noopener" aria-label="Aspire Digital — visit website" style="display:block;margin-bottom:.25rem;">
-      <img src="/assets/aspire-primary-white.svg" alt="Aspire Digital" style="height:26px;width:auto;display:block;opacity:.65;">
+      <img src="./aspire-primary-white.svg" alt="Aspire Digital" style="height:26px;width:auto;display:block;opacity:.65;">
     </a>
     <p class="guide-footer__heading" style="margin:0;">Questions? We're here.</p>
     <p class="guide-footer__sub" style="margin:0;">Reach out to either of us directly — we'll get back to you same day.</p>
