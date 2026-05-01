@@ -636,28 +636,36 @@ img{max-width:100%;display:block;}
 .stack-split__label{font-family:var(--f-b);font-weight:700;font-size:.875rem;color:var(--charcoal);}
 .stack-split__note{font-size:.8125rem;line-height:1.5;color:var(--text-muted);}
 
-/* ── AI READINESS CARDS (replaces ai-score rows in Section 04) ── */
-.ai-card-grid{display:grid;grid-template-columns:1fr 1fr;gap:.875rem;margin:1.25rem 0 2rem;}
-.ai-card{border-radius:var(--r-lg);padding:1.5rem;display:flex;flex-direction:column;gap:.625rem;}
-.ai-card--good{background:rgba(74,123,90,.1);border:1px solid rgba(74,123,90,.22);border-top:3px solid #4A7B5A;}
-.ai-card--warn{background:rgba(184,134,11,.08);border:1px solid rgba(184,134,11,.2);border-top:3px solid #B8860B;}
-.ai-card--bad{background:rgba(196,98,45,.08);border:1px solid rgba(196,98,45,.18);border-top:3px solid var(--accent);}
-.ai-card__icon{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;font-size:.9375rem;font-weight:700;font-family:var(--f-b);flex-shrink:0;}
-.ai-card--good .ai-card__icon{background:rgba(74,123,90,.2);color:#3D6B4A;}
-.ai-card--warn .ai-card__icon{background:rgba(184,134,11,.15);color:#7A5E00;}
-.ai-card--bad .ai-card__icon{background:rgba(196,98,45,.15);color:var(--accent-dk);}
-.ai-card__label{font-family:var(--f-b);font-weight:700;font-size:.9375rem;color:rgba(250,240,226,.9);line-height:1.2;}
-.ai-card__note{font-size:.8125rem;color:rgba(250,240,226,.48);line-height:1.55;margin:0;}
+/* ── AI SEARCH COMPARE ── */
+.search-compare{display:grid;grid-template-columns:1fr 1fr;border-radius:var(--r-lg);overflow:hidden;margin:.875rem 0 1.25rem;border:1px solid rgba(250,240,226,.08);}
+.search-compare__col{padding:1.25rem 1.5rem;}
+.search-compare__col--google{background:rgba(250,240,226,.04);border-right:1px solid rgba(250,240,226,.08);}
+.search-compare__col--ai{background:rgba(196,98,45,.1);}
+.search-compare__label{font-family:var(--f-b);font-size:.875rem;font-weight:700;color:rgba(250,240,226,.55);margin-bottom:.875rem;}
+.search-compare__label--ai{color:var(--accent);}
+.search-compare__rows{display:flex;flex-direction:column;gap:.625rem;}
+.search-compare__row{display:flex;align-items:flex-start;gap:.625rem;}
+.search-compare__dot{width:5px;height:5px;border-radius:50%;background:rgba(250,240,226,.2);margin-top:.425rem;flex-shrink:0;}
+.search-compare__dot--ai{background:var(--accent);}
+.search-compare__text{font-size:.875rem;color:rgba(250,240,226,.5);line-height:1.55;}
+.search-compare__text--ai{color:rgba(250,240,226,.85);}
+.search-compare__footer{grid-column:1/-1;padding:1.125rem 1.5rem;background:rgba(250,240,226,.06);border-top:1px solid rgba(250,240,226,.08);font-family:var(--f-b);font-size:1rem;font-weight:500;color:rgba(250,240,226,.82);line-height:1.6;text-align:center;}
 
-/* ── AI FIX LIST ── */
-.ai-fix-eyebrow{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(250,240,226,.28);margin-bottom:.75rem;}
-.ai-fix-list{display:flex;flex-direction:column;border-radius:var(--r-lg);overflow:hidden;border:1px solid rgba(255,255,255,.07);margin:0 0 1.25rem;}
-.ai-fix-item{display:grid;grid-template-columns:120px 1fr;gap:.5rem 1.25rem;padding:1rem 1.25rem;border-bottom:1px solid rgba(255,255,255,.05);align-items:baseline;}
-.ai-fix-item:last-child{border-bottom:none;}
-.ai-fix-item__gap{font-family:var(--f-b);font-size:.75rem;font-weight:700;color:rgba(250,240,226,.3);text-transform:uppercase;letter-spacing:.06em;}
-.ai-fix-item__action{font-size:.875rem;color:rgba(250,240,226,.68);line-height:1.55;}
-.ai-fix-item__action strong{color:rgba(250,240,226,.88);font-weight:600;}
-@media(max-width:560px){.ai-fix-item{grid-template-columns:1fr;gap:.25rem;}}
+/* ── SPLIT CARDS ── */
+.split-cards-wrap{background:var(--bg);border-radius:var(--r-xl);padding:1.5rem;margin:1.25rem 0 1.5rem;}
+.split-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:0 .875rem;}
+.split-card{display:grid;grid-template-rows:subgrid;grid-row:span 3;border-radius:var(--r-lg);overflow:hidden;border:1px solid rgba(196,98,45,.15);}
+.split-card__gap{background:rgba(196,98,45,.05);border-bottom:1px solid rgba(196,98,45,.12);padding:1.75rem 1.5rem;}
+.split-card__divider{display:flex;align-items:center;justify-content:center;padding:.55rem 1rem;background:rgba(196,98,45,.04);gap:.5rem;}
+.split-card__divider-line{flex:1;height:1px;background:rgba(196,98,45,.18);}
+.split-card__divider-badge{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);background:rgba(196,98,45,.1);border:1px solid rgba(196,98,45,.22);padding:.25rem .6rem;border-radius:var(--r-full);white-space:nowrap;}
+.split-card__solve{background:var(--white);padding:1.75rem 1.5rem;}
+.split-card__gap-icon{width:28px;height:28px;border-radius:50%;background:rgba(196,98,45,.12);border:1px solid rgba(196,98,45,.25);display:flex;align-items:center;justify-content:center;font-size:.8125rem;margin-bottom:.875rem;color:var(--accent);}
+.split-card__gap-title{font-family:var(--f-b);font-size:.9375rem;font-weight:700;color:var(--charcoal);margin-bottom:.375rem;line-height:1.3;}
+.split-card__gap-copy{font-size:.875rem;color:var(--text-sec);line-height:1.6;}
+.split-card__solve-num{font-family:var(--f-n);font-size:1.125rem;font-weight:900;color:var(--accent);line-height:1;margin-bottom:.5rem;letter-spacing:-.02em;}
+.split-card__solve-title{font-family:var(--f-b);font-size:.9375rem;font-weight:700;color:var(--charcoal);margin-bottom:.375rem;line-height:1.3;}
+.split-card__solve-copy{font-size:.875rem;color:var(--text-sec);line-height:1.6;}
 
 /* ── WHY VALUES STRIP (Section 08 — 3 values below prose) ── */
 .why-values{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.07);border-radius:var(--r-xl);overflow:hidden;margin:2rem 0;}
@@ -686,7 +694,6 @@ img{max-width:100%;display:block;}
   .plan-item{padding:1.75rem 1.5rem;}
   .compare-grid{grid-template-columns:1fr;}
   .stack-split{grid-template-columns:1fr;}
-  .ai-card-grid{grid-template-columns:1fr 1fr;}
   .why-values{grid-template-columns:1fr;}
   .score-grid{grid-template-columns:repeat(2,1fr);}
   .kw-grid{grid-template-columns:1fr;}
@@ -716,6 +723,7 @@ img{max-width:100%;display:block;}
   .grade-legend__item:nth-child(odd){border-right:1px solid rgba(44,51,64,.1);}
   .meaning-grid{grid-template-columns:1fr;}
   .footer-contacts{grid-template-columns:1fr;}
+  .split-cards-wrap{padding:1rem;}.split-cards{grid-template-columns:1fr;gap:1rem;}.split-card{grid-template-rows:auto auto auto;grid-row:span 1;}
 }
 
 @media print{
@@ -1120,67 +1128,113 @@ img{max-width:100%;display:block;}
       <p>{SEASONAL_PARAGRAPH — 1–2 sentences. Peak windows + urgency of acting now.}</p>
     </div>
 
-    <div style="height:1px;background:rgba(255,255,255,.06);margin:2.5rem 0;"></div>
-
-    <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><path d="M6 1v10M1 6h10"/></svg></span><span class="sec-badge__label">AI Search Readiness</span></div>
-    <div class="prose" style="margin:.75rem 0 1.5rem;">
-      <p>Google now answers local service questions before any website links — the businesses it names earned that placement, not paid for it. Here's where {BUSINESS_NAME} stands.</p>
-    </div>
-
-    <h3 class="sub-head">AI Search Readiness</h3>
-    <div class="ai-card-grid">
-      <div class="ai-card {AI_TRUST_STATUS_CLASS}">
-        <div class="ai-card__icon">{AI_TRUST_STATUS_ICON}</div>
-        <p class="ai-card__label">Trust Foundation</p>
-        <p class="ai-card__note">{AI_TRUST_DESC — e.g. "BBB A+, HTTPS, 4.8★ reviews — strong signals that just need surfacing."}</p>
-      </div>
-      <div class="ai-card {AI_TRACK_STATUS_CLASS}">
-        <div class="ai-card__icon">{AI_TRACK_STATUS_ICON}</div>
-        <p class="ai-card__label">Proven Track Record</p>
-        <p class="ai-card__note">{AI_TRACK_DESC — e.g. "X years of work — nothing documented online for Google to read."}</p>
-      </div>
-      <div class="ai-card {AI_CONTENT_STATUS_CLASS}">
-        <div class="ai-card__icon">{AI_CONTENT_STATUS_ICON}</div>
-        <p class="ai-card__label">Helpful Content</p>
-        <p class="ai-card__note">{AI_CONTENT_DESC — e.g. "No FAQs or guides — the content Google surfaces in AI answers."}</p>
-      </div>
-      <div class="ai-card {AI_SCHEMA_STATUS_CLASS}">
-        <div class="ai-card__icon">{AI_SCHEMA_STATUS_ICON}</div>
-        <p class="ai-card__label">Structured Data</p>
-        <p class="ai-card__note">{AI_SCHEMA_DESC — e.g. "No schema markup — Google can't read the service area with confidence."}</p>
-      </div>
-    </div>
-
-    <p class="ai-fix-eyebrow">Here's what we build in on day one</p>
-    <div class="ai-fix-list">
-      <div class="ai-fix-item">
-        <span class="ai-fix-item__gap">Track Record</span>
-        <span class="ai-fix-item__action">LocalBusiness + ServiceArea schema for every city you serve — your years of experience becomes machine-readable and citable by Google and ChatGPT.</span>
-      </div>
-      <div class="ai-fix-item">
-        <span class="ai-fix-item__gap">Helpful Content</span>
-        <span class="ai-fix-item__action">FAQ blocks on every service page answering exactly what AI tools pull from — service comparisons, process questions, city-specific content structured for citation, not just reading.</span>
-      </div>
-      <div class="ai-fix-item">
-        <span class="ai-fix-item__gap">Structured Data</span>
-        <span class="ai-fix-item__action">LocalBusiness, ServiceArea, FAQPage, and Review schemas built into every page — the invisible code that tells Google <strong>exactly</strong> who you are, what you do, and where.</span>
-      </div>
-    </div>
-    <div class="callout">
-      Most clients start appearing in AI search results within <strong>60–90 days of launch.</strong> These aren't extras — they're part of every site we build.
-    </div>
   </div>
 </section>
 
 
 <!-- ═══════════════════════════════════════════════════════════
-     05 · WHAT WE'D ACTUALLY DO
+     05 · THE AI SEARCH EDGE
+═══════════════════════════════════════════════════════════ -->
+<section class="sec-group sec-group--dark">
+  <div class="sec-group__in">
+    <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><path d="M7 1L3 7h3l-1 4 5-6H7l1-4Z"/></svg></span><span class="sec-badge__label">AI Search — The Edge</span></div>
+    <div class="sec-head">
+      <span class="sec-head__num">05</span>
+      <div class="sec-head__body">
+        <h2 class="sec-head__title">The <em>AI Search</em> Edge</h2>
+        <p class="sec-head__sub">Most business owners don't know AI search exists — let alone that they're invisible to it. Here's what it is, how it works alongside Google, and how we make {BUSINESS_NAME} show up in both.</p>
+      </div>
+    </div>
+
+    <div class="search-compare">
+      <div class="search-compare__col search-compare__col--google">
+        <div class="search-compare__label">Google Search</div>
+        <div class="search-compare__rows">
+          <div class="search-compare__row"><div class="search-compare__dot"></div><span class="search-compare__text">Returns 10 links — they scroll and choose</span></div>
+          <div class="search-compare__row"><div class="search-compare__dot"></div><span class="search-compare__text">Drives clicks to your website</span></div>
+          <div class="search-compare__row"><div class="search-compare__dot"></div><span class="search-compare__text">You compete in a list with 9 others</span></div>
+        </div>
+      </div>
+      <div class="search-compare__col search-compare__col--ai">
+        <div class="search-compare__label search-compare__label--ai">AI Search</div>
+        <div class="search-compare__rows">
+          <div class="search-compare__row"><div class="search-compare__dot search-compare__dot--ai"></div><span class="search-compare__text search-compare__text--ai">Gives one name — they call</span></div>
+          <div class="search-compare__row"><div class="search-compare__dot search-compare__dot--ai"></div><span class="search-compare__text search-compare__text--ai">Drives calls directly to your phone</span></div>
+          <div class="search-compare__row"><div class="search-compare__dot search-compare__dot--ai"></div><span class="search-compare__text search-compare__text--ai">You're the recommendation, not an option</span></div>
+        </div>
+      </div>
+      <div class="search-compare__footer">They work together, not against each other. Google brings researchers. AI brings buyers ready to book. You need to show up in both.</div>
+    </div>
+
+    <div class="split-cards-wrap">
+    <div class="split-cards">
+      <div class="split-card">
+        <div class="split-card__gap">
+          <div class="split-card__gap-icon">↑</div>
+          <h3 class="split-card__gap-title">{AI_GAP_1_TITLE}</h3>
+          <p class="split-card__gap-copy">{AI_GAP_1_COPY}</p>
+        </div>
+        <div class="split-card__divider">
+          <div class="split-card__divider-line"></div>
+          <span class="split-card__divider-badge">The Fix</span>
+          <div class="split-card__divider-line"></div>
+        </div>
+        <div class="split-card__solve">
+          <div class="split-card__solve-num">01</div>
+          <h3 class="split-card__solve-title">{AI_SOLVE_1_TITLE}</h3>
+          <p class="split-card__solve-copy">{AI_SOLVE_1_COPY}</p>
+        </div>
+      </div>
+      <div class="split-card">
+        <div class="split-card__gap">
+          <div class="split-card__gap-icon">↑</div>
+          <h3 class="split-card__gap-title">{AI_GAP_2_TITLE}</h3>
+          <p class="split-card__gap-copy">{AI_GAP_2_COPY}</p>
+        </div>
+        <div class="split-card__divider">
+          <div class="split-card__divider-line"></div>
+          <span class="split-card__divider-badge">The Fix</span>
+          <div class="split-card__divider-line"></div>
+        </div>
+        <div class="split-card__solve">
+          <div class="split-card__solve-num">02</div>
+          <h3 class="split-card__solve-title">{AI_SOLVE_2_TITLE}</h3>
+          <p class="split-card__solve-copy">{AI_SOLVE_2_COPY}</p>
+        </div>
+      </div>
+      <div class="split-card">
+        <div class="split-card__gap">
+          <div class="split-card__gap-icon">↑</div>
+          <h3 class="split-card__gap-title">{AI_GAP_3_TITLE}</h3>
+          <p class="split-card__gap-copy">{AI_GAP_3_COPY}</p>
+        </div>
+        <div class="split-card__divider">
+          <div class="split-card__divider-line"></div>
+          <span class="split-card__divider-badge">The Fix</span>
+          <div class="split-card__divider-line"></div>
+        </div>
+        <div class="split-card__solve">
+          <div class="split-card__solve-num">03</div>
+          <h3 class="split-card__solve-title">{AI_SOLVE_3_TITLE}</h3>
+          <p class="split-card__solve-copy">{AI_SOLVE_3_COPY}</p>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div class="callout">{AI_CALLOUT}</div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     06 · WHAT WE'D ACTUALLY DO
 ═══════════════════════════════════════════════════════════ -->
 <section class="sec-group sec-group--cream">
   <div class="sec-group__in">
     <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><path d="M3 3h6v6H3z"/><path d="M3 6h6"/></svg></span><span class="sec-badge__label">The Plan</span></div>
     <div class="sec-head">
-      <span class="sec-head__num">05</span>
+      <span class="sec-head__num">06</span>
       <div class="sec-head__body">
         <h2 class="sec-head__title">Here's What We'd <em>Actually Do</em></h2>
         <p class="sec-head__sub">Specific, prioritized recommendations — not a generic checklist.</p>
@@ -1249,13 +1303,13 @@ img{max-width:100%;display:block;}
 
 
 <!-- ═══════════════════════════════════════════════════════════
-     06 · BEYOND THE WEBSITE
+     07 · BEYOND THE WEBSITE
 ═══════════════════════════════════════════════════════════ -->
 <section class="sec-group sec-group--dark">
   <div class="sec-group__in">
     <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><circle cx="6" cy="6" r="4"/><path d="M6 2v4l2 1"/></svg></span><span class="sec-badge__label">The Bigger Picture</span></div>
     <div class="sec-head">
-      <span class="sec-head__num">06</span>
+      <span class="sec-head__num">07</span>
       <div class="sec-head__body">
         <h2 class="sec-head__title">Beyond the <em>Website</em></h2>
         <p class="sec-head__sub">Additional growth levers we'd put to work for you.</p>
@@ -1289,7 +1343,7 @@ img{max-width:100%;display:block;}
 
 
 <!-- ═══════════════════════════════════════════════════════════
-     07 · WHAT THIS COULD MEAN
+     08 · WHAT THIS COULD MEAN
      ─────────────────────────────────────────────────────────
      PICK ONE VARIANT. Uncomment the section that fits the
      prospect. Keep the others commented out.
@@ -1319,7 +1373,7 @@ img{max-width:100%;display:block;}
   <div class="sec-group__in">
     <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><path d="M2 9l3-3 2 2 3-4"/></svg></span><span class="sec-badge__label">Revenue Impact</span></div>
     <div class="sec-head">
-      <span class="sec-head__num">07</span>
+      <span class="sec-head__num">08</span>
       <div class="sec-head__body">
         <h2 class="sec-head__title">What This Could <em>Mean</em></h2>
         <p class="sec-head__sub">Here's the math — and it's conservative.</p>
@@ -1390,7 +1444,7 @@ img{max-width:100%;display:block;}
   <div class="sec-group__in">
     <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><path d="M2 9l3-3 2 2 3-4"/></svg></span><span class="sec-badge__label">Revenue Impact</span></div>
     <div class="sec-head">
-      <span class="sec-head__num">07</span>
+      <span class="sec-head__num">08</span>
       <div class="sec-head__body">
         <h2 class="sec-head__title">What This Could <em>Mean</em></h2>
         <p class="sec-head__sub">The gap between where you are and where you could be.</p>
@@ -1444,7 +1498,7 @@ img{max-width:100%;display:block;}
   <div class="sec-group__in">
     <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><path d="M2 9l3-3 2 2 3-4"/></svg></span><span class="sec-badge__label">Revenue Impact</span></div>
     <div class="sec-head">
-      <span class="sec-head__num">07</span>
+      <span class="sec-head__num">08</span>
       <div class="sec-head__body">
         <h2 class="sec-head__title">What This Could <em>Mean</em></h2>
         <p class="sec-head__sub">Three scenarios. All grounded. You pick which one you believe.</p>
@@ -1494,7 +1548,7 @@ img{max-width:100%;display:block;}
   <div class="sec-group__in">
     <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><path d="M2 9l3-3 2 2 3-4"/></svg></span><span class="sec-badge__label">Revenue Impact</span></div>
     <div class="sec-head">
-      <span class="sec-head__num">07</span>
+      <span class="sec-head__num">08</span>
       <div class="sec-head__body">
         <h2 class="sec-head__title">What This Could <em>Mean</em></h2>
         <p class="sec-head__sub">Put a number on it — then make it real.</p>
@@ -1545,13 +1599,13 @@ img{max-width:100%;display:block;}
 
 
 <!-- ═══════════════════════════════════════════════════════════
-     08 · WHY ASPIRE + CTA
+     09 · WHY ASPIRE + CTA
 ═══════════════════════════════════════════════════════════ -->
 <section class="sec-group sec-group--dark">
   <div class="sec-group__in">
     <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><path d="M6 1l1.5 3.5L11 5l-2.75 2.5L9 11 6 9l-3 2 .75-3.5L1 5l3.5-.5z"/></svg></span><span class="sec-badge__label">Why Us</span></div>
     <div class="sec-head">
-      <span class="sec-head__num">08</span>
+      <span class="sec-head__num">09</span>
       <div class="sec-head__body">
         <h2 class="sec-head__title">Why <em>Aspire Digital</em></h2>
         <p class="sec-head__sub">Craft, clarity, and a partnership that lasts past launch.</p>
