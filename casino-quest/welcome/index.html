@@ -47,13 +47,14 @@ img{max-width:100%;display:block;}
 .topbar__logo{height:22px;flex-shrink:0;}
 .topbar__sep{width:1px;height:20px;background:var(--border);flex-shrink:0;}
 .topbar__label{font-family:var(--f-b);font-size:.9375rem;font-weight:600;color:var(--text-sec);}
+.topbar__ver{font-family:var(--f-n);font-size:.75rem;font-weight:500;color:var(--text-muted);letter-spacing:.03em;}
 .topbar__badge{margin-left:auto;font-family:var(--f-n);font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--white);background:var(--accent);padding:4px 12px;border-radius:var(--r-full);max-width:50%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 
 /* ── HERO ── */
 .hero{padding-top:58px;background:var(--bg-night);padding-bottom:0;}
 .hero__inner{max-width:960px;margin:0 auto;padding:5rem 2rem 5.5rem;display:grid;grid-template-columns:1.35fr 1fr;grid-template-rows:auto auto;gap:1.5rem 3.5rem;align-items:start;}
 .hero__top{grid-column:1/-1;padding-bottom:.5rem;}
-.hero__top .hero__h1{font-size:clamp(3rem,6.5vw,5.25rem);}
+.hero__top .hero__h1{font-size:clamp(2.25rem,4.5vw,3.5rem);line-height:1.08;}
 .hero__text{min-width:0;}
 .hero__h1{overflow-wrap:anywhere;word-break:break-word;hyphens:auto;}
 .hero__eyebrow{font-family:var(--f-n);font-size:.75rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:1.25rem;display:flex;align-items:center;gap:.625rem;}
@@ -64,7 +65,7 @@ img{max-width:100%;display:block;}
 .hero__meta{display:flex;flex-direction:column;gap:1.25rem;padding:.25rem 0 .25rem 2rem;border-left:1px solid rgba(255,255,255,.1);margin-top:2rem;}
 .hero__meta-item dt{font-family:var(--f-n);font-size:.6875rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(250,240,226,.3);margin-bottom:.35rem;}
 .hero__meta-item dd{font-family:var(--f-b);font-size:.9375rem;font-weight:500;color:var(--bg);}
-.hero__meta-item dd.fill{font-family:var(--f-a);font-style:italic;color:var(--sage);}
+.hero__meta-item dd.fill{font-family:var(--f-d);font-style:normal;font-size:1.125rem;color:var(--sage);}
 .hero__meta-item a{color:inherit;text-decoration:none;border-bottom:1px solid rgba(143,175,138,.4);padding-bottom:1px;}
 
 /* ── ACCENT STRIPE ── */
@@ -123,18 +124,18 @@ img{max-width:100%;display:block;}
 /* ── SCREENSHOT FRAME ── */
 .screenshot-frame{background:var(--white);border-radius:var(--r-lg);padding:8px;border:1px solid var(--border);box-shadow:var(--sh-md);margin:1.5rem 0;overflow:hidden;}
 .sec-group--dark .screenshot-frame{background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.08);}
-.screenshot-frame img{width:100%;border-radius:10px;display:block;}
+.screenshot-frame img{width:100%;border-radius:10px;display:block;max-height:440px;object-fit:cover;object-position:top center;}
 .screenshot-caption{text-align:center;font-family:var(--f-n);font-size:.6875rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--text-muted);margin-top:.75rem;}
 .sec-group--dark .screenshot-caption{color:rgba(250,240,226,.35);}
 
 /* ── SCORE CARDS ── */
-.score-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:1rem;margin:1.5rem 0;}
-.score-card{min-width:0;border-radius:var(--r-lg);padding:1.5rem 1.25rem;text-align:center;}
+.score-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin:1.5rem 0;}
+.score-card{min-width:0;border-radius:var(--r-lg);padding:1.5rem 1.25rem;text-align:center;display:flex;flex-direction:column;}
 .sec-group--cream .score-card,.sec-group--alt .score-card{background:var(--white);border:1px solid var(--border-lt);box-shadow:var(--sh-sm);}
 .sec-group--dark .score-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);}
-.score-card__label{font-family:var(--f-n);font-size:.625rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--text-muted);margin-bottom:.5rem;overflow-wrap:anywhere;}
+.score-card__label{font-family:var(--f-n);font-size:.625rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--text-muted);margin-bottom:.5rem;overflow-wrap:anywhere;min-height:2.1rem;}
 .sec-group--dark .score-card__label{color:rgba(250,240,226,.4);}
-.score-card__value{font-family:var(--f-n);font-size:clamp(1.75rem,2.75vw,2.5rem);font-weight:700;color:var(--accent);line-height:1;overflow-wrap:anywhere;word-break:break-word;hyphens:auto;letter-spacing:-.02em;}
+.score-card__value{font-family:var(--f-n);font-size:clamp(1.375rem,2.25vw,2rem);font-weight:700;color:var(--accent);line-height:1;overflow-wrap:anywhere;letter-spacing:-.02em;}
 .score-card__note{font-family:var(--f-b);font-size:.8125rem;color:var(--text-muted);margin-top:.5rem;}
 .sec-group--dark .score-card__note{color:rgba(250,240,226,.4);}
 
@@ -246,10 +247,11 @@ img{max-width:100%;display:block;}
 .funnel-b__eq .op{color:var(--accent);}
 .funnel-b__eq .result{display:block;font-size:clamp(2.5rem,5.5vw,4rem);color:var(--accent);margin-top:.625rem;letter-spacing:-.03em;line-height:1;}
 .funnel-b__eq .result-meta{display:block;font-size:.5rem;letter-spacing:.16em;color:var(--text-muted);font-weight:700;text-transform:uppercase;margin-top:.5rem;}
-.funnel-b__cards{display:grid;grid-template-columns:repeat(5,1fr);border:1px solid var(--border);border-radius:0 0 var(--r-xl) var(--r-xl);border-top:2px solid var(--border-light);overflow:hidden;}
-.funnel-b__card{padding:1.375rem 1.25rem 1.5rem;background:var(--white);border-right:1px solid var(--border-light);}
+.funnel-b__cards{display:flex;border:1px solid var(--border);border-radius:0 0 var(--r-xl) var(--r-xl);border-top:2px solid var(--border-light);overflow:hidden;}
+.funnel-b__card{flex:1;min-width:0;padding:1.375rem 1.25rem 1.5rem;background:var(--white);border-right:1px solid var(--border-light);display:flex;flex-direction:column;}
 .funnel-b__card:last-child{border-right:none;}
-.funnel-b__card-label{font-family:var(--f-n);font-size:.45rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:.4rem;}
+.funnel-b__op{flex-shrink:0;width:2.25rem;display:flex;align-items:center;justify-content:center;background:var(--white);font-family:var(--f-n);font-weight:900;font-size:1rem;color:var(--accent);border-right:1px solid var(--border-light);}
+.funnel-b__card-label{font-family:var(--f-n);font-size:.45rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:.4rem;min-height:1.5rem;}
 .funnel-b__card-val{font-family:var(--f-n);font-weight:700;font-size:clamp(.875rem,1.5vw,1.125rem);color:var(--charcoal);line-height:1;margin-bottom:.5rem;}
 .funnel-b__card-sub{font-size:.75rem;color:var(--text-muted);line-height:1.5;}
 .funnel-note{padding:1.25rem 1.5rem;border-radius:var(--r-md);background:var(--bg-alt);border-left:3px solid var(--border);}
@@ -263,8 +265,8 @@ img{max-width:100%;display:block;}
 .gap-now__eyebrow,.gap-after__eyebrow{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;margin-bottom:1.5rem;}
 .gap-now__eyebrow{color:rgba(250,240,226,.25);}
 .gap-after__eyebrow{color:rgba(250,240,226,.5);}
-.gap-now__headline{font-family:var(--f-d);font-style:italic;font-size:clamp(1rem,1.8vw,1.375rem);line-height:1.35;color:rgba(250,240,226,.45);flex:1;margin-bottom:1.5rem;}
-.gap-after__headline{font-family:var(--f-d);font-style:italic;font-size:clamp(1rem,1.8vw,1.375rem);line-height:1.35;color:rgba(250,240,226,.92);flex:1;margin-bottom:1.5rem;}
+.gap-now__headline{font-family:var(--f-b);font-style:normal;font-size:clamp(1rem,1.8vw,1.375rem);line-height:1.45;color:rgba(250,240,226,.45);flex:1;margin-bottom:1.5rem;}
+.gap-after__headline{font-family:var(--f-b);font-style:normal;font-size:clamp(1rem,1.8vw,1.375rem);line-height:1.45;color:rgba(250,240,226,.92);flex:1;margin-bottom:1.5rem;}
 .gap-now__num{font-family:var(--f-n);font-weight:700;font-size:clamp(1.625rem,3.25vw,2.625rem);line-height:1;color:rgba(250,240,226,.18);overflow-wrap:anywhere;}
 .gap-now__sublabel,.gap-after__sublabel{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-top:.5rem;}
 .gap-now__sublabel{color:rgba(250,240,226,.15);}
@@ -279,43 +281,90 @@ img{max-width:100%;display:block;}
 .gap-metric__val{font-family:var(--f-d);font-style:italic;font-size:1.75rem;color:var(--accent);line-height:1;margin-bottom:.375rem;}
 .gap-metric__label{font-size:.8125rem;color:var(--text-sec);}
 
-/* ── REVENUE VARIANT C — THE RANGE (conservative/moderate/optimistic) ── */
-.range-hero{text-align:center;padding:2.5rem 2rem 2rem;margin-bottom:2rem;}
-.range-hero__sub{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(250,240,226,.3);margin-bottom:1.25rem;}
-.range-hero__num{font-family:var(--f-n);font-weight:900;font-size:clamp(3.25rem,6.5vw,5.25rem);color:var(--accent);line-height:1;margin-bottom:.5rem;overflow-wrap:anywhere;}
-.range-hero__label{font-size:1.125rem;color:rgba(250,240,226,.6);margin-bottom:.5rem;}
-.range-hero__note{font-size:.875rem;color:rgba(250,240,226,.28);max-width:480px;margin:0 auto;line-height:1.6;}
-.range-scenarios{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-bottom:1.5rem;}
-.range-card{border-radius:var(--r-xl);padding:2rem 1.75rem;}
-.range-card--conservative{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);}
-.range-card--moderate{background:rgba(196,98,45,.12);border:1px solid rgba(196,98,45,.2);}
-.range-card--optimistic{background:rgba(74,123,90,.15);border:1px solid rgba(74,123,90,.25);}
-.range-card__tier{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;margin-bottom:1rem;}
-.range-card--conservative .range-card__tier{color:rgba(250,240,226,.3);}
-.range-card--moderate .range-card__tier{color:rgba(196,98,45,.8);}
-.range-card--optimistic .range-card__tier{color:var(--sage);}
-.range-card__amt{font-family:var(--f-d);font-style:italic;font-size:clamp(1.75rem,2.5vw,2.25rem);line-height:1;margin-bottom:.75rem;overflow-wrap:anywhere;}
-.range-card--conservative .range-card__amt{color:rgba(250,240,226,.5);}
-.range-card--moderate .range-card__amt{color:var(--bg);}
-.range-card--optimistic .range-card__amt{color:var(--sage);}
-.range-card__period{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;display:block;margin-bottom:1.25rem;}
-.range-card--conservative .range-card__period{color:rgba(250,240,226,.2);}
-.range-card--moderate .range-card__period{color:rgba(250,240,226,.4);}
-.range-card--optimistic .range-card__period{color:rgba(143,180,138,.5);}
-.range-card__desc{font-size:.8125rem;line-height:1.65;}
-.range-card--conservative .range-card__desc{color:rgba(250,240,226,.38);}
-.range-card--moderate .range-card__desc{color:rgba(250,240,226,.72);}
-.range-card--optimistic .range-card__desc{color:rgba(250,240,226,.72);}
-.range-bar-wrap{background:rgba(255,255,255,.05);border-radius:var(--r-full);height:6px;margin-top:1.25rem;overflow:hidden;}
-.range-bar{height:100%;border-radius:var(--r-full);}
-.range-card--conservative .range-bar{width:35%;background:rgba(255,255,255,.2);}
-.range-card--moderate .range-bar{width:62%;background:var(--accent);}
-.range-card--optimistic .range-bar{width:100%;background:var(--green);}
+/* ── REVENUE VARIANT C — THE RANGE (floor / plan / ceiling) ── */
+.range-lead{text-align:center;padding:2rem 2rem 2.5rem;}
+.range-lead__eyebrow{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(250,240,226,.3);margin-bottom:1rem;}
+.range-lead__num{font-family:var(--f-n);font-weight:900;font-size:clamp(3.5rem,7vw,5.5rem);color:var(--accent);line-height:1;letter-spacing:-.03em;overflow-wrap:anywhere;}
+.range-lead__label{font-family:var(--f-b);font-size:1.125rem;color:rgba(250,240,226,.6);margin:.5rem 0 .875rem;}
+.range-lead__badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(196,98,45,.15);border:1px solid rgba(196,98,45,.3);border-radius:var(--r-full);padding:.375rem 1.125rem;font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);}
+.range-spectrum{margin:0 0 2rem;padding:0 .25rem;}
+.range-spectrum__meta{display:grid;grid-template-columns:1fr 1fr 1fr;margin-bottom:.625rem;align-items:end;}
+.range-spectrum__col{display:flex;flex-direction:column;gap:.25rem;}
+.range-spectrum__col--plan{text-align:center;align-items:center;}
+.range-spectrum__col--ceil{text-align:right;align-items:flex-end;}
+.range-spectrum__tier{font-family:var(--f-n);font-size:.45rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;}
+.range-spectrum__col--floor .range-spectrum__tier{color:rgba(250,240,226,.25);}
+.range-spectrum__col--plan .range-spectrum__tier{color:var(--accent);}
+.range-spectrum__col--ceil .range-spectrum__tier{color:var(--sage);}
+.range-spectrum__amt{font-family:var(--f-n);font-weight:700;line-height:1;}
+.range-spectrum__col--floor .range-spectrum__amt{font-size:1rem;color:rgba(250,240,226,.35);}
+.range-spectrum__col--plan .range-spectrum__amt{font-size:1.5rem;color:rgba(250,240,226,.9);}
+.range-spectrum__col--ceil .range-spectrum__amt{font-size:1rem;color:var(--sage);}
+.range-track-wrap{position:relative;height:10px;border-radius:var(--r-full);background:rgba(255,255,255,.06);margin:1rem 0 1.75rem;}
+.range-track{position:absolute;inset:0;border-radius:var(--r-full);background:linear-gradient(to right,rgba(255,255,255,.1) 0%,var(--accent) 58%,var(--green) 100%);}
+.range-marker{position:absolute;top:50%;width:18px;height:18px;border-radius:50%;transform:translate(-50%,-50%);}
+.range-marker--floor{left:12%;background:rgba(255,255,255,.18);border:2px solid rgba(255,255,255,.25);}
+.range-marker--plan{left:58%;background:var(--accent);box-shadow:0 0 0 5px rgba(196,98,45,.22);}
+.range-marker--ceil{left:98%;background:var(--green);border:2px solid rgba(74,123,90,.5);}
+.range-fc{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:1.5rem;}
+.range-fc__item{border-radius:var(--r-lg);padding:1.375rem 1.5rem;}
+.range-fc__item--floor{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);}
+.range-fc__item--ceil{background:rgba(74,123,90,.1);border:1px solid rgba(74,123,90,.2);}
+.range-fc__label{font-family:var(--f-n);font-size:.45rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:.5rem;}
+.range-fc__item--floor .range-fc__label{color:rgba(250,240,226,.25);}
+.range-fc__item--ceil .range-fc__label{color:var(--sage);}
+.range-fc__amt{font-family:var(--f-n);font-weight:700;font-size:1.25rem;line-height:1;margin-bottom:.5rem;overflow-wrap:anywhere;}
+.range-fc__item--floor .range-fc__amt{color:rgba(250,240,226,.42);}
+.range-fc__item--ceil .range-fc__amt{color:var(--sage);}
+.range-fc__desc{font-size:.8125rem;line-height:1.6;}
+.range-fc__item--floor .range-fc__desc{color:rgba(250,240,226,.35);}
+.range-fc__item--ceil .range-fc__desc{color:rgba(250,240,226,.6);}
+@media(max-width:600px){.range-fc{grid-template-columns:1fr;}}
 .range-callout{border-radius:var(--r-lg);padding:1.5rem 2rem;background:rgba(250,240,226,.04);border:1px solid rgba(250,240,226,.06);display:flex;align-items:center;gap:1.5rem;}
 .range-callout__icon{width:36px;height:36px;border-radius:50%;background:rgba(196,98,45,.15);display:grid;place-items:center;flex-shrink:0;}
 .range-callout__icon svg{width:16px;height:16px;stroke:var(--accent);stroke-width:2;fill:none;}
 .range-callout__text{font-size:1rem;color:rgba(250,240,226,.55);line-height:1.55;}
 .range-callout__text strong{font-style:normal;font-weight:600;color:rgba(250,240,226,.82);}
+
+/* ── VARIANT B REDESIGN — stats-first layout ── */
+.gap-hook{font-family:var(--f-b);font-style:normal;font-size:clamp(1rem,1.75vw,1.1875rem);line-height:1.65;color:rgba(250,240,226,.48);margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid rgba(255,255,255,.07);}
+.gap-metrics--hero{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-radius:var(--r-xl);overflow:hidden;border:1px solid rgba(255,255,255,.08);margin-bottom:1.5rem;}
+.gap-metrics--hero .gap-metric{padding:2.25rem 1.75rem;border-right:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.025);text-align:left;}
+.gap-metrics--hero .gap-metric:last-child{border-right:none;}
+.gap-metrics--hero .gap-metric__val{font-size:clamp(2.25rem,4vw,3.25rem);margin-bottom:.375rem;}
+.gap-metrics--hero .gap-metric__label{margin-bottom:.75rem;}
+.gap-metric__sub{font-size:.8125rem;color:rgba(250,240,226,.38);line-height:1.6;}
+.gap-anchor{text-align:center;padding:1.75rem 1rem;margin-bottom:1.5rem;}
+.gap-anchor__label{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(250,240,226,.28);margin-bottom:.875rem;}
+.gap-anchor__num{font-family:var(--f-n);font-weight:900;font-size:clamp(2.75rem,5.5vw,4.25rem);color:var(--accent);line-height:1;letter-spacing:-.025em;overflow-wrap:anywhere;}
+.gap-anchor__period{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(250,240,226,.22);margin-top:.625rem;}
+@media(max-width:640px){.gap-metrics--hero{grid-template-columns:1fr;}.gap-metrics--hero .gap-metric{border-right:none;border-bottom:1px solid rgba(255,255,255,.08);}.gap-metrics--hero .gap-metric:last-child{border-bottom:none;}}
+
+/* ── VARIANT C — cream background overrides ── */
+.sec-group--cream .range-lead__eyebrow{color:var(--text-muted);}
+.sec-group--cream .range-lead__label{color:var(--text-sec);}
+.sec-group--cream .range-lead__badge{background:rgba(196,98,45,.08);border-color:rgba(196,98,45,.22);}
+.sec-group--cream .range-spectrum__col--floor .range-spectrum__tier{color:var(--text-muted);}
+.sec-group--cream .range-spectrum__col--floor .range-spectrum__amt{color:var(--text-muted);}
+.sec-group--cream .range-spectrum__col--plan .range-spectrum__amt{color:var(--charcoal);}
+.sec-group--cream .range-track-wrap{background:var(--bg-alt);}
+.sec-group--cream .range-track{background:linear-gradient(to right,rgba(0,0,0,.06) 0%,var(--accent) 58%,var(--green) 100%);}
+.sec-group--cream .range-marker{width:2px;height:18px;border-radius:1px;border:none;box-shadow:none;}
+.sec-group--cream .range-marker--floor{background:rgba(0,0,0,.2);}
+.sec-group--cream .range-marker--plan{background:var(--accent-dk);}
+.sec-group--cream .range-marker--ceil{background:var(--green);}
+.sec-group--cream .range-fc__item--floor{background:var(--white);border-color:var(--border-lt);box-shadow:var(--sh-sm);}
+.sec-group--cream .range-fc__item--ceil{background:rgba(74,123,90,.05);border-color:rgba(74,123,90,.18);}
+.sec-group--cream .range-fc__item--floor .range-fc__label{color:var(--text-muted);}
+.sec-group--cream .range-fc__item--floor .range-fc__amt{color:var(--text-sec);}
+.sec-group--cream .range-fc__item--floor .range-fc__desc{color:var(--text-sec);}
+.sec-group--cream .range-fc__item--ceil .range-fc__label{color:var(--green);}
+.sec-group--cream .range-fc__item--ceil .range-fc__amt{color:var(--green);}
+.sec-group--cream .range-fc__item--ceil .range-fc__desc{color:var(--charcoal);}
+.sec-group--cream .range-callout{background:var(--white);border-color:var(--border);box-shadow:var(--sh-sm);}
+.sec-group--cream .range-callout__icon{background:rgba(196,98,45,.08);}
+.sec-group--cream .range-callout__text{color:var(--text-sec);}
+.sec-group--cream .range-callout__text strong{color:var(--charcoal);}
 
 /* ── REVENUE VARIANT D — WHAT IT MEANS (human translation) ── */
 .meaning-anchor{text-align:center;margin-bottom:3rem;padding:2.5rem 2rem;border-bottom:1px solid var(--border);}
@@ -328,12 +377,12 @@ img{max-width:100%;display:block;}
 .meaning-item__ico{width:44px;height:44px;border-radius:var(--r-md);background:rgba(196,98,45,.1);display:grid;place-items:center;}
 .meaning-item__ico svg{width:20px;height:20px;stroke:var(--accent-dk);stroke-width:1.75;fill:none;}
 .meaning-item__num{font-family:var(--f-n);font-weight:700;font-size:clamp(1.375rem,2.375vw,2rem);color:var(--charcoal);line-height:1;overflow-wrap:anywhere;}
-.meaning-item__num em{color:var(--accent);}
+.meaning-item__num em{color:var(--accent);font-style:normal;}
 .meaning-item__label{font-size:.9375rem;font-weight:600;color:var(--charcoal);}
 .meaning-item__sub{font-size:.875rem;color:var(--text-sec);line-height:1.6;}
 .meaning-close{background:var(--charcoal);border-radius:var(--r-xl);padding:2.5rem;display:flex;align-items:center;gap:2rem;flex-wrap:wrap;}
-.meaning-close__quote{font-family:var(--f-a);font-style:italic;font-size:1.25rem;line-height:1.55;color:rgba(250,240,226,.75);flex:1;min-width:200px;}
-.meaning-close__quote em{color:var(--accent);}
+.meaning-close__quote{font-family:var(--f-b);font-style:normal;font-size:1.125rem;font-weight:600;line-height:1.5;color:rgba(250,240,226,.85);flex:1;min-width:200px;}
+.meaning-close__quote em{color:var(--accent);font-style:normal;}
 .meaning-close__aside{flex-shrink:0;width:130px;text-align:center;}
 .meaning-close__aside-num{font-family:var(--f-d);font-style:italic;font-size:2.25rem;color:var(--accent);line-height:1;margin-bottom:.25rem;}
 .meaning-close__aside-label{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(250,240,226,.25);}
@@ -344,7 +393,7 @@ img{max-width:100%;display:block;}
 .sec-group--cream .review-card,.sec-group--alt .review-card{background:var(--white);border:1px solid var(--border-lt);box-shadow:var(--sh-sm);}
 .sec-group--dark .review-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);}
 .review-card__stars{color:var(--accent);font-size:1rem;letter-spacing:.2em;line-height:1;}
-.review-card__quote{font-family:var(--f-a);font-style:italic;font-size:1.0625rem;line-height:1.55;margin:0;}
+.review-card__quote{font-family:var(--f-b);font-style:normal;font-size:1.0625rem;line-height:1.55;margin:0;}
 .sec-group--cream .review-card__quote,.sec-group--alt .review-card__quote{color:var(--charcoal);}
 .sec-group--dark .review-card__quote{color:rgba(250,240,226,.92);}
 .review-card__by{font-family:var(--f-b);font-size:.8125rem;font-weight:500;color:var(--text-muted);margin-top:auto;}
@@ -538,6 +587,9 @@ img{max-width:100%;display:block;}
 .quick-summary__item{background:var(--white);padding:1.5rem 1.75rem;}
 .quick-summary__label{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:.625rem;}
 .quick-summary__text{font-size:.9rem;color:var(--text-sec);line-height:1.65;}
+.quick-summary__list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.375rem;}
+.quick-summary__list li{font-size:.875rem;color:var(--text-sec);line-height:1.55;padding-left:1rem;position:relative;}
+.quick-summary__list li::before{content:'';position:absolute;left:.25rem;top:.62em;width:4px;height:4px;border-radius:50%;background:var(--accent);}
 
 /* ── WIN CARDS (What's Working) ── */
 .win-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin:1rem 0 2.5rem;}
@@ -557,13 +609,14 @@ img{max-width:100%;display:block;}
 
 /* ── KEYWORD TABLE (ranked scannable list) ── */
 .kw-table{display:flex;flex-direction:column;border:1px solid rgba(255,255,255,.08);border-radius:var(--r-lg);overflow:hidden;}
-.kw-row{display:grid;grid-template-columns:36px 1fr auto minmax(min-content,160px);align-items:center;padding:.875rem 1.25rem;border-bottom:1px solid rgba(255,255,255,.06);gap:.875rem;}
+.kw-row{display:grid;grid-template-columns:36px 1fr auto;align-items:center;padding:.875rem 1.25rem;border-bottom:1px solid rgba(255,255,255,.06);gap:.875rem;}
 .kw-row:last-child{border-bottom:none;}
 .kw-row--hot{background:rgba(196,98,45,.08);}
 .kw-row__rank{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.08em;color:rgba(250,240,226,.28);}
-.kw-row__term{font-size:.9375rem;font-weight:500;color:rgba(250,240,226,.85);}
-.kw-row__vol{font-family:var(--f-n);font-size:.875rem;font-weight:700;color:var(--accent);text-align:right;white-space:nowrap;}
-.kw-row__tag{display:flex;justify-content:flex-end;}
+.kw-row__term{font-size:.9375rem;font-weight:500;color:rgba(250,240,226,.85);min-width:0;}
+.kw-row__right{display:flex;align-items:center;gap:.625rem;justify-content:flex-end;flex-wrap:wrap;}
+.kw-row__vol{font-family:var(--f-n);font-size:.75rem;font-weight:700;color:var(--accent);text-align:right;white-space:nowrap;}
+.kw-row__tag{display:flex;justify-content:flex-end;flex-shrink:0;}
 
 /* ── AI READINESS SCORE ROWS ── */
 .ai-score{display:flex;flex-direction:column;border:1px solid rgba(255,255,255,.08);border-radius:var(--r-lg);overflow:hidden;margin:1.25rem 0 2rem;}
@@ -602,6 +655,8 @@ img{max-width:100%;display:block;}
 .compare-table__head,.compare-table__row{display:grid;grid-template-columns:150px repeat(3,1fr);}
 .compare-table__corner{background:var(--bg-alt);border-right:1px solid var(--border);padding:.875rem 1.25rem;}
 .compare-table__col-head{padding:1.125rem 1.25rem .75rem;font-family:var(--f-d);font-style:italic;font-size:1.0625rem;font-weight:400;color:var(--charcoal);border-left:1px solid var(--border);background:var(--bg-alt);}
+.compare-table__col-context{display:block;font-family:var(--f-b);font-style:normal;font-size:.6875rem;color:var(--text-muted);margin-top:.3rem;line-height:1.4;font-weight:400;}
+.compare-table__col-head--you .compare-table__col-context{color:var(--green);}
 .compare-table__col-head--you{background:rgba(196,98,45,.06);position:relative;}
 .compare-table__col-head--you::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--accent);}
 .compare-table__label{padding:.75rem 1.25rem;font-size:.8125rem;font-weight:500;color:var(--text-muted);display:flex;align-items:center;background:var(--bg-alt);border-top:1px solid var(--border);border-right:1px solid var(--border);}
@@ -651,21 +706,29 @@ img{max-width:100%;display:block;}
 .search-compare__text--ai{color:rgba(250,240,226,.85);}
 .search-compare__footer{grid-column:1/-1;padding:1.125rem 1.5rem;background:rgba(250,240,226,.06);border-top:1px solid rgba(250,240,226,.08);font-family:var(--f-b);font-size:1rem;font-weight:500;color:rgba(250,240,226,.82);line-height:1.6;text-align:center;}
 
-/* ── SPLIT CARDS ── */
+/* ── SPLIT CARDS (AI gap → fix, 3-col) ── */
 .split-cards-wrap{background:var(--bg);border-radius:var(--r-xl);padding:1.5rem;margin:1.25rem 0 1.5rem;}
-.split-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:0 .875rem;}
-.split-card{display:grid;grid-template-rows:subgrid;grid-row:span 3;border-radius:var(--r-lg);overflow:hidden;border:1px solid rgba(196,98,45,.15);}
-.split-card__gap{background:rgba(196,98,45,.05);border-bottom:1px solid rgba(196,98,45,.12);padding:1.75rem 1.5rem;}
-.split-card__divider{display:flex;align-items:center;justify-content:center;padding:.55rem 1rem;background:rgba(196,98,45,.04);gap:.5rem;}
-.split-card__divider-line{flex:1;height:1px;background:rgba(196,98,45,.18);}
-.split-card__divider-badge{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);background:rgba(196,98,45,.1);border:1px solid rgba(196,98,45,.22);padding:.25rem .6rem;border-radius:var(--r-full);white-space:nowrap;}
-.split-card__solve{background:var(--white);padding:1.75rem 1.5rem;}
-.split-card__gap-icon{width:28px;height:28px;border-radius:50%;background:rgba(196,98,45,.12);border:1px solid rgba(196,98,45,.25);display:flex;align-items:center;justify-content:center;font-size:.8125rem;margin-bottom:.875rem;color:var(--accent);}
-.split-card__gap-title{font-family:var(--f-b);font-size:.9375rem;font-weight:700;color:var(--charcoal);margin-bottom:.375rem;line-height:1.3;}
-.split-card__gap-copy{font-size:.875rem;color:var(--text-sec);line-height:1.6;}
-.split-card__solve-num{font-family:var(--f-n);font-size:1.125rem;font-weight:900;color:var(--accent);line-height:1;margin-bottom:.5rem;letter-spacing:-.02em;}
+.split-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:.875rem;}
+.split-card{border-radius:var(--r-lg);overflow:hidden;border:1px solid rgba(196,98,45,.15);}
+.split-card__gap{background:rgba(196,98,45,.05);border-bottom:2px solid rgba(196,98,45,.2);padding:1.25rem 1.5rem;display:flex;align-items:center;gap:.75rem;}
+.split-card__gap-icon{width:26px;height:26px;border-radius:50%;background:rgba(196,98,45,.15);border:1px solid rgba(196,98,45,.3);display:flex;align-items:center;justify-content:center;font-size:.75rem;flex-shrink:0;color:var(--accent);}
+.split-card__gap-title{font-family:var(--f-b);font-size:.875rem;font-weight:700;color:var(--charcoal);line-height:1.25;}
+.split-card__solve{background:var(--white);padding:1.375rem 1.5rem;}
+.split-card__solve-num{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:.375rem;}
 .split-card__solve-title{font-family:var(--f-b);font-size:.9375rem;font-weight:700;color:var(--charcoal);margin-bottom:.375rem;line-height:1.3;}
 .split-card__solve-copy{font-size:.875rem;color:var(--text-sec);line-height:1.6;}
+/* ── FUNNEL RESULT BAR (variant A revenue payoff) ── */
+.funnel-b__result{display:flex;align-items:center;justify-content:center;gap:3rem;background:var(--accent);border-radius:0 0 var(--r-xl) var(--r-xl);padding:2rem 2.5rem;text-align:center;}
+.funnel-b__result-item{display:flex;flex-direction:column;gap:.375rem;}
+.funnel-b__result-val{font-family:var(--f-n);font-weight:900;font-size:clamp(2rem,4.5vw,3.25rem);color:#fff;line-height:1;letter-spacing:-.03em;}
+.funnel-b__result-label{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.65);}
+.funnel-b__result-div{width:1px;height:48px;background:rgba(255,255,255,.25);}
+/* ── OPPORTUNITY BULLETS (Why Aspire opening, client-specific) ── */
+.opp-bullets{background:rgba(196,98,45,.06);border:1px solid rgba(196,98,45,.18);border-left:3px solid var(--accent);border-radius:0 var(--r-lg) var(--r-lg) 0;padding:1.375rem 1.75rem;margin-bottom:2rem;}
+.opp-bullets__label{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:.75rem;}
+.opp-bullets__list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.5rem;}
+.opp-bullets__list li{font-size:.9375rem;color:rgba(250,240,226,.82);line-height:1.55;padding-left:1.25rem;position:relative;}
+.opp-bullets__list li::before{content:'';position:absolute;left:.3rem;top:.65em;width:4px;height:4px;border-radius:50%;background:var(--accent);}
 
 /* ── WHY VALUES STRIP (Section 08 — 3 values below prose) ── */
 .why-values{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.07);border-radius:var(--r-xl);overflow:hidden;margin:2rem 0;}
@@ -676,7 +739,7 @@ img{max-width:100%;display:block;}
 .why-val__desc{font-size:.8125rem;color:rgba(250,240,226,.48);line-height:1.55;margin:0;}
 
 /* ── FUNNEL B RESPONSIVE ── */
-@media(max-width:700px){.funnel-b__cards{grid-template-columns:1fr 1fr;}.funnel-b__card:nth-child(2){border-right:none;}.funnel-b__card:nth-child(3){border-top:1px solid var(--border-light);}.funnel-b__card:nth-child(4){border-top:1px solid var(--border-light);border-right:none;}.funnel-b__card:nth-child(5){border-top:1px solid var(--border-light);grid-column:1 / -1;}}
+@media(max-width:700px){.funnel-b__cards{flex-wrap:wrap;}.funnel-b__op{display:none;}.funnel-b__card{flex:0 0 50%;border-right:1px solid var(--border-light);border-top:1px solid var(--border-light);}.funnel-b__card:nth-of-type(1){border-top:none;}.funnel-b__card:nth-of-type(2){border-top:none;}.funnel-b__card:nth-of-type(2n){border-right:none;}}
 
 /* ── RESPONSIVE ── */
 @media(max-width:820px){
@@ -700,7 +763,7 @@ img{max-width:100%;display:block;}
   .cta-box,.revenue-box{padding:2.25rem 1.5rem;}
   .quick-summary{grid-template-columns:1fr;}
   .win-grid,.gap-grid{grid-template-columns:1fr;}
-  .kw-row{grid-template-columns:28px 1fr auto;}.kw-row__tag{display:none;}
+  .kw-row{grid-template-columns:28px 1fr;grid-template-rows:auto auto;row-gap:.4rem;}.kw-row__right{grid-column:2;justify-content:flex-start;}.kw-row__vol{display:none;}.kw-row__rank{grid-row:1;align-self:start;padding-top:.15rem;}
   .quick-wins__grid{grid-template-columns:1fr;}
   .funnel-assumptions__grid{grid-template-columns:1fr 1fr;}.funnel-assumptions__item:nth-child(2){border-right:none;}.funnel-assumptions__item:nth-child(3){border-top:1px solid var(--border);}
   .compare-table{overflow:hidden;}
@@ -724,6 +787,24 @@ img{max-width:100%;display:block;}
   .meaning-grid{grid-template-columns:1fr;}
   .footer-contacts{grid-template-columns:1fr;}
   .split-cards-wrap{padding:1rem;}.split-cards{grid-template-columns:1fr;gap:1rem;}.split-card{grid-template-rows:auto auto auto;grid-row:span 1;}
+  /* B: bridge text wraps instead of overflowing */
+  .gap-bridge{padding:1.25rem 1rem;}
+  .gap-bridge__text{white-space:normal;text-align:center;}
+  /* A: result bar stacks vertically */
+  .funnel-b__result{flex-direction:column;gap:1.5rem;}
+  .funnel-b__result-div{width:48px;height:1px;}
+  /* C: spectrum label row scales down */
+  .range-spectrum__amt{font-size:.875rem!important;}
+  .range-spectrum__tier{font-size:.4rem;}
+  /* section 03: compare table scrolls horizontally on narrow screens */
+  .compare-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 -1.5rem;}
+  .compare-scroll .compare-table{overflow:visible;border-radius:0;border-left:none;border-right:none;min-width:480px;margin:0;}
+  .compare-scroll .compare-table__head{grid-template-columns:80px repeat(3,1fr);position:static;}
+  .compare-scroll .compare-table__corner{display:flex;background:var(--bg-alt);border-right:1px solid var(--border);}
+  .compare-scroll .compare-table__row{display:grid;grid-template-columns:80px repeat(3,1fr);}
+  .compare-scroll .compare-table__label{width:auto;border-right:1px solid var(--border);}
+  .compare-scroll .compare-table__col-head{font-size:.6rem;padding:.5rem .3rem;}
+  .compare-scroll .compare-table__cell{flex:none;font-size:.75rem;padding:.5rem .3rem;}
 }
 
 @media print{
@@ -732,6 +813,16 @@ img{max-width:100%;display:block;}
   .sec-group--dark{background:#fff!important;color:var(--charcoal)!important;}
   .sec-group--dark *{color:var(--charcoal)!important;background-color:transparent!important;}
 }
+/* ── SEASONAL CALLOUT ── */
+.seasonal-callout{display:flex;align-items:stretch;gap:0;border-radius:var(--r-lg);overflow:hidden;margin:1.75rem 0 0;border:1px solid rgba(196,98,45,.25);}
+.seasonal-callout__stat{background:rgba(196,98,45,.12);padding:1.5rem 1.75rem;display:flex;flex-direction:column;justify-content:center;align-items:center;flex-shrink:0;border-right:1px solid rgba(196,98,45,.2);}
+.seasonal-callout__num{font-family:var(--f-n);font-size:clamp(1.75rem,3vw,2.5rem);font-weight:700;color:var(--accent);line-height:1;white-space:nowrap;}
+.seasonal-callout__unit{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(196,98,45,.65);margin-top:.375rem;white-space:nowrap;}
+.seasonal-callout__body{padding:1.25rem 1.5rem;display:flex;flex-direction:column;justify-content:center;}
+.seasonal-callout__label{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(250,240,226,.4);margin-bottom:.5rem;}
+.seasonal-callout__text{font-size:.9375rem;color:rgba(250,240,226,.78);line-height:1.65;}
+.seasonal-callout__text strong{color:var(--accent);font-weight:600;}
+@media(max-width:560px){.seasonal-callout{flex-direction:column;}.seasonal-callout__stat{flex-direction:row;gap:1rem;align-items:baseline;padding:1rem 1.25rem;border-right:none;border-bottom:1px solid rgba(196,98,45,.2);}}
 </style>
 </head>
 <body>
@@ -741,6 +832,7 @@ img{max-width:100%;display:block;}
   <img class="topbar__logo" src="./aspire-logo.svg" alt="Aspire Digital">
   <div class="topbar__sep"></div>
   <span class="topbar__label">Digital Growth Brief</span>
+  <span class="topbar__ver">v1.2</span>
   <span class="topbar__badge">Prepared for Casino Quest</span>
 </header>
 
@@ -749,23 +841,23 @@ img{max-width:100%;display:block;}
   <div class="hero__inner">
     <div class="hero__top">
       <p class="hero__eyebrow"><span class="hero__eyebrow-dot"></span>Casino Quest &nbsp;·&nbsp; Digital Growth Brief · May 2026</p>
-      <h1 class="hero__h1">You built a category of one. Your website hasn't <em>caught up yet.</em></h1>
+      <h1 class="hero__h1">You Built a <em>Category of One.</em></h1>
     </div>
     <div class="hero__text">
-      <p class="hero__sub">Triple 4.9 ★ across Google, TripAdvisor, and Yelp. 3,400+ paying Patreon members. A 10,000 sq ft Vegas training floor that's equal parts dealer school, tourist destination, and media empire — all stitched together by a Wix site that undersells every bit of it.</p>
+      <p class="hero__sub">Vegas dealer school, tourist destination, and media empire — all on one Wix site that doesn't reflect what you've actually built.</p>
       <dl class="hero__meta">
+        <div class="hero__meta-item"><dt>Prepared For</dt><dd class="fill">David Noll</dd></div>
         <div class="hero__meta-item"><dt>Business</dt><dd class="fill">Casino Quest</dd></div>
-        <div class="hero__meta-item"><dt>Location</dt><dd class="fill">Las Vegas, NV</dd></div>
-        <div class="hero__meta-item"><dt>Date</dt><dd>May 2026</dd></div>
+        <div class="hero__meta-item"><dt>Date</dt><dd>May 1, 2026</dd></div>
         <div class="hero__meta-item"><dt>Prepared By</dt><dd><a href="https://madebyaspire.com" target="_blank">Aspire Digital</a></dd></div>
       </dl>
     </div>
     <div class="hero__opp-card">
       <p class="hero__opp-label">Revenue Opportunity</p>
-      <p class="hero__opp-num">$22K–$60K</p>
+      <p class="hero__opp-num">$22K+/yr</p>
       <p class="hero__opp-denom">projected annual lift</p>
       <span class="hero__opp-badge hero__opp-badge--high">High Opportunity</span>
-      <p class="hero__opp-desc">Organic bookings + group events + all-channel compounding</p>
+      <p class="hero__opp-desc">Dedicated tourist + dealer funnels, consolidated authority domain, AI-ready architecture.</p>
     </div>
   </div>
 </section>
@@ -788,15 +880,27 @@ img{max-width:100%;display:block;}
     <div class="quick-summary">
       <div class="quick-summary__item">
         <p class="quick-summary__label">Who They Are</p>
-        <p class="quick-summary__text">Alex Kim and David Noll are two career casino professionals — a combined 50+ years on the floor — who turned their expertise into something no one else has built in Las Vegas.</p>
+        <ul class="quick-summary__list">
+          <li>Las Vegas dealer school + tourist-experience operator — CEG Dealer School (2013) rebranded as Casino Quest in 2019</li>
+          <li>10,000 sq ft training floor with 30+ casino-grade tables; "Veteran Owned &amp; Managed"</li>
+          <li>David Noll (CEO) and Alex Kim (President) — combined 50+ years of casino floor experience</li>
+        </ul>
       </div>
       <div class="quick-summary__item">
         <p class="quick-summary__label">What They've Built</p>
-        <p class="quick-summary__text">A 10,000 sq ft Casino Training Center with 30+ casino-grade tables, a dealer school that places thousands of graduates annually, an online platform (CQ Nexus), a merch store, and a media operation with 3,400+ paying Patreon members.</p>
+        <ul class="quick-summary__list">
+          <li>CEG Dealer School trains and places thousands of casino dealers annually through 100+ partner casinos</li>
+          <li>3,445-member Patreon, 1M+ view YouTube channel, podcast, Twitch, and online course platform (cqnexus.com)</li>
+          <li>4.9★ on Google (299 reviews), Yelp, and TripAdvisor — a perfect triple-platform review stack</li>
+        </ul>
       </div>
       <div class="quick-summary__item">
         <p class="quick-summary__label">How They Show Up</p>
-        <p class="quick-summary__text">Live on Wix at a .biz domain, split across three separate web properties. The brand authority is extraordinary — the website is the only thing that doesn't match.</p>
+        <ul class="quick-summary__list">
+          <li>Primary site on Wix (casinoquest.biz) — live booking widgets, but heavy JS bundle caps mobile speed</li>
+          <li>Three fragmented domains: casinoquest.biz + cqnexus.com + shopcasinoquest.com split link equity</li>
+          <li>No single funnel for tourists vs. dealer students — both buyers land on the same homepage</li>
+        </ul>
       </div>
     </div>
 
@@ -805,44 +909,44 @@ img{max-width:100%;display:block;}
     <div class="score-grid">
       <div class="score-card">
         <div class="score-card__label">Google Rating</div>
-        <div class="score-card__value">4.9 ★</div>
-        <div class="score-card__note">299 Google reviews — plus 4.9 on TripAdvisor &amp; Yelp</div>
+        <div class="score-card__value">4.9★</div>
+        <div class="score-card__note">299 reviews — perfect across Google, Yelp &amp; TripAdvisor</div>
       </div>
       <div class="score-card">
         <div class="score-card__label">Patreon Members</div>
-        <div class="score-card__value">3,400+</div>
-        <div class="score-card__note">Paying community members on mycasinoquest Patreon</div>
+        <div class="score-card__value">3,445</div>
+        <div class="score-card__note">Paying community — rare for a local service business</div>
       </div>
       <div class="score-card">
-        <div class="score-card__label">Training Floor</div>
-        <div class="score-card__value">10K sqft</div>
-        <div class="score-card__note">30+ casino-grade tables, open daily 11am–6pm</div>
+        <div class="score-card__label">Year Founded</div>
+        <div class="score-card__value">2013</div>
+        <div class="score-card__note">12+ years training Las Vegas casino dealers</div>
       </div>
       <div class="score-card">
-        <div class="score-card__label">Years Operating</div>
-        <div class="score-card__value">6+ yrs</div>
-        <div class="score-card__note">Casino Quest since 2019; CEG Dealer School since 2013</div>
+        <div class="score-card__label">YouTube Reach</div>
+        <div class="score-card__value">1M+ views</div>
+        <div class="score-card__note">Multiple viral videos driving brand authority</div>
       </div>
     </div>
 
     <!-- REVIEWS -->
-    <h3 class="sub-head">What guests are saying</h3>
+    <h3 class="sub-head">What clients are saying</h3>
     <div class="review-grid">
       <div class="review-card">
         <span class="review-card__stars">★★★★★</span>
-        <p class="review-card__quote">"This place is absolutely incredible. Our instructors were professional, patient, and made the whole experience so much fun. We came in knowing nothing about craps and left feeling like we actually understood the game."</p>
-        <span class="review-card__by">— Google reviewer</span>
+        <p class="review-card__quote">"Best activity in Las Vegas, hands down. Our whole group came in knowing nothing about craps and left feeling like pros. David and the team are incredible teachers — patient, funny, and clearly love what they do."</p>
+        <span class="review-card__by">— Google Reviewer</span>
       </div>
       <div class="review-card">
         <span class="review-card__stars">★★★★★</span>
-        <p class="review-card__quote">"Best thing we did in Vegas. Smoke-free, no pressure, real casino equipment and real casino pros teaching you. Completely changed how we played on the strip that night."</p>
-        <span class="review-card__by">— Google reviewer</span>
+        <p class="review-card__quote">"I went through CEG Dealer School and landed a job at a Strip casino within two months of graduating. The training is real, the instructors have decades of experience, and the placement network is no joke."</p>
+        <span class="review-card__by">— Google Reviewer</span>
       </div>
     </div>
 
-    <!-- THE OPPORTUNITY CALLOUT -->
+    <!-- THE OPPORTUNITY CALLOUT (1 sentence framing the gap) -->
     <div class="opp-callout">
-      <strong>The opportunity is clear:</strong> Casino Quest has earned exceptional brand authority across every review platform and a paid community most media brands would envy — but the website that's supposed to convert all that attention into bookings is a Wix template on a .biz domain. Fixing that one surface unlocks what's already been built.
+      <strong>The opportunity is clear:</strong> Casino Quest has already built the brand authority, the community, and the reviews — the platform just hasn't kept up. A custom site built around two distinct buyer funnels, on a single authority domain, would unlock revenue the business is already earning in credibility but not capturing in bookings.
     </div>
   </div>
 </section>
@@ -862,34 +966,27 @@ img{max-width:100%;display:block;}
       </div>
     </div>
 
-    <!-- CURRENT SITE SCREENSHOT -->
-    <h3 class="sub-head">Current website</h3>
-    <div class="screenshot-frame">
-      <img src="./casino-quest-screenshot.png" alt="Casino Quest current website" style="width:100%;border-radius:10px;">
-    </div>
-    <p class="screenshot-caption">casinoquest.biz — captured May 2026</p>
-
     <h3 class="sub-head">Technical Quality</h3>
     <div class="score-grid">
       <div class="score-card">
         <div class="score-card__label">Performance</div>
         <div class="score-card__value score-card__value--word">Weak</div>
-        <div class="score-card__note">Wix bundle overhead — slow LCP on mobile, heavy asset requests</div>
+        <div class="score-card__note">Heavy Wix JS bundle caps Core Web Vitals on mobile — pages load slowly where it matters most</div>
       </div>
       <div class="score-card">
         <div class="score-card__label">Accessibility</div>
         <div class="score-card__value score-card__value--word">Fair</div>
-        <div class="score-card__note">Booking widgets accessible; image alt tags inconsistent</div>
+        <div class="score-card__note">Wix provides baseline a11y, but custom booking widgets lack proper focus management</div>
       </div>
       <div class="score-card">
         <div class="score-card__label">Mobile</div>
         <div class="score-card__value score-card__value--word">Fair</div>
-        <div class="score-card__note">Responsive but desktop-dense; content hierarchy flattens on small screens</div>
+        <div class="score-card__note">Responsive layout works, but desktop-first content density makes mobile reading awkward</div>
       </div>
       <div class="score-card">
         <div class="score-card__label">SEO Foundation</div>
         <div class="score-card__value score-card__value--word">Weak</div>
-        <div class="score-card__note">.biz TLD, no schema markup, three split domains dilute authority</div>
+        <div class="score-card__note">.biz TLD + three-domain split fragments 12 years of backlinks and review authority</div>
       </div>
     </div>
 
@@ -924,54 +1021,55 @@ img{max-width:100%;display:block;}
       <div class="win-card">
         <span class="win-card__ico">✓</span>
         <div class="win-card__body">
-          <strong class="win-card__label">Triple-platform 4.9 ★ Rating</strong>
-          <p class="win-card__desc">Google, TripAdvisor, and Yelp all show 4.9. That's extraordinarily rare. The word-of-mouth reputation is airtight.</p>
+          <strong class="win-card__label">Triple-Platform 4.9★ Review Stack</strong>
+          <p class="win-card__desc">Perfect ratings across Google, Yelp, and TripAdvisor — a trust signal rare even among established Vegas operators. This is the foundation that makes every other growth lever work.</p>
         </div>
       </div>
       <div class="win-card">
         <span class="win-card__ico">✓</span>
         <div class="win-card__body">
-          <strong class="win-card__label">Live Online Booking</strong>
-          <p class="win-card__desc">Wix native booking works on every service page. Visitors can book without calling — a huge advantage over competitors.</p>
+          <strong class="win-card__label">Live Online Booking on Every Page</strong>
+          <p class="win-card__desc">Wix-native booking is active and functional across all service pages — tourists and dealer students can book without picking up the phone. The booking experience works; the platform holding it back does not.</p>
         </div>
       </div>
       <div class="win-card">
         <span class="win-card__ico">✓</span>
         <div class="win-card__body">
-          <strong class="win-card__label">Media Footprint</strong>
-          <p class="win-card__desc">YouTube channel with multiple 1M+ view videos. 3,400+ paying Patreon members. This is a media brand with a venue attached.</p>
+          <strong class="win-card__label">3,445-Member Paying Community</strong>
+          <p class="win-card__desc">A Patreon community of this size — combined with a YouTube channel with multiple 1M+ view videos — is a brand authority signal almost no local service business can match.</p>
         </div>
       </div>
       <div class="win-card">
         <span class="win-card__ico">✓</span>
         <div class="win-card__body">
-          <strong class="win-card__label">Distinctive Offer Stack</strong>
-          <p class="win-card__desc">$30 drop-in lessons to $500 live casino escorts — the pricing ladder is solid. Every tourist tier is covered.</p>
+          <strong class="win-card__label">Category-Defining Brand</strong>
+          <p class="win-card__desc">No competitor in Las Vegas combines a dealer school, tourist experiences, and a media empire. Casino Quest is the only operator in this category — and the site should say so loudly.</p>
         </div>
       </div>
     </div>
 
+    <!-- CONTENT RULE: Gap and Win descriptions must use plain language — no technical jargon. Explain the business impact (lost leads, missed revenue, customer frustration), not the technical cause. Write as if explaining to a business owner over coffee. -->
     <h3 class="sub-head">Where the Gaps Are</h3>
     <div class="gap-grid">
       <div class="gap-card">
         <span class="gap-card__ico">!</span>
         <div class="gap-card__body">
-          <strong class="gap-card__label">Three-Domain Fragmentation</strong>
-          <p class="gap-card__desc">casinoquest.biz, cqnexus.com, and shopcasinoquest.com all operate independently. Search engines — and tourists — can't easily connect them.</p>
+          <strong class="gap-card__label">Three Domains, Split Authority</strong>
+          <p class="gap-card__desc">casinoquest.biz, cqnexus.com, and shopcasinoquest.com are three separate websites — which means 12 years of backlinks, press mentions, and review citations are working in three different directions. A tourist searching "craps lessons Las Vegas" may land on the wrong site, or not find you at all.</p>
+        </div>
+      </div>
+      <div class="gap-card">
+        <span class="gap-card__ico">!</span>
+        <div class="gap-card__body">
+          <strong class="gap-card__label">Two Buyers, One Confused Homepage</strong>
+          <p class="gap-card__desc">Tourists booking a Vegas experience and aspiring casino dealers pursuing a career are radically different buyers with different questions, timelines, and needs. Right now they land on the same page — and neither gets the direct path that would convert them.</p>
         </div>
       </div>
       <div class="gap-card">
         <span class="gap-card__ico">!</span>
         <div class="gap-card__body">
           <strong class="gap-card__label">Wix Performance Ceiling</strong>
-          <p class="gap-card__desc">Wix's bundle overhead means slow LCP scores on mobile — the platform you're locked into is the bottleneck, not your content.</p>
-        </div>
-      </div>
-      <div class="gap-card">
-        <span class="gap-card__ico">!</span>
-        <div class="gap-card__body">
-          <strong class="gap-card__label">No Schema Markup or Structured Data</strong>
-          <p class="gap-card__desc">The site lacks LocalBusiness, Event, Course, and FAQ schema — all signals that AI search and Google use to surface your business in zero-click results.</p>
+          <p class="gap-card__desc">Most Vegas trip-planners are searching on mobile. Wix's JavaScript bundle caps your page speed well below what Google rewards — which means you're ranking lower than your 4.9★ reputation deserves, and losing bookings to slower decision-making.</p>
         </div>
       </div>
     </div>
@@ -993,75 +1091,80 @@ img{max-width:100%;display:block;}
       </div>
     </div>
 
-    <div class="prose">
-      <p>Casino Quest has no true direct competitor — no other operator combines tourist lessons, a professional dealer school, and a media empire under one roof. But tourists don't search for "category of one." They search for the best local option, and two dealers schools rank ahead of you for training queries. Here's how the landscape compares.</p>
-    </div>
-
     <h3 class="sub-head">Side by Side</h3>
-    <div class="compare-table">
+    <div class="compare-scroll"><div class="compare-table">
       <div class="compare-table__head">
         <div class="compare-table__corner"></div>
-        <div class="compare-table__col-head compare-table__col-head--you">Casino Quest</div>
-        <div class="compare-table__col-head">PCI Dealer School</div>
-        <div class="compare-table__col-head">Royal Intl. Gaming</div>
+        <div class="compare-table__col-head compare-table__col-head--you">
+          Casino Quest
+          <span class="compare-table__col-context">Dealer school + tourist experiences + media</span>
+        </div>
+        <div class="compare-table__col-head">
+          PCI Dealer School
+          <span class="compare-table__col-context">Dealer training only — no tourist side</span>
+        </div>
+        <div class="compare-table__col-head">
+          Royal International Gaming
+          <span class="compare-table__col-context">Dealer school only — smaller presence</span>
+        </div>
       </div>
       <div class="compare-table__row">
         <div class="compare-table__label">Website</div>
-        <div class="compare-table__cell compare-table__cell--you compare-table__cell--mid">Wix / .biz domain</div>
-        <div class="compare-table__cell compare-table__cell--mid">WordPress / .com</div>
-        <div class="compare-table__cell compare-table__cell--low">Basic site</div>
+        <div class="compare-table__cell compare-table__cell--you compare-table__cell--warn">Wix / .biz domain</div>
+        <div class="compare-table__cell compare-table__cell--ok">WordPress / .com</div>
+        <div class="compare-table__cell compare-table__cell--ok">Basic / .com</div>
       </div>
       <div class="compare-table__row">
         <div class="compare-table__label">Online booking</div>
-        <div class="compare-table__cell compare-table__cell--you compare-table__cell--good">Yes — live</div>
-        <div class="compare-table__cell compare-table__cell--low">No</div>
-        <div class="compare-table__cell compare-table__cell--low">No</div>
+        <div class="compare-table__cell compare-table__cell--you compare-table__cell--win">Yes — live on every page</div>
+        <div class="compare-table__cell compare-table__cell--warn">Contact form only</div>
+        <div class="compare-table__cell compare-table__cell--lose">No online booking</div>
       </div>
       <div class="compare-table__row">
-        <div class="compare-table__label">Tourist experience</div>
-        <div class="compare-table__cell compare-table__cell--you compare-table__cell--good">Yes — core offering</div>
-        <div class="compare-table__cell compare-table__cell--low">Dealers only</div>
-        <div class="compare-table__cell compare-table__cell--low">Dealers only</div>
+        <div class="compare-table__label">Media presence</div>
+        <div class="compare-table__cell compare-table__cell--you compare-table__cell--win">Patreon + YouTube + podcast</div>
+        <div class="compare-table__cell compare-table__cell--lose">None</div>
+        <div class="compare-table__cell compare-table__cell--lose">None</div>
       </div>
       <div class="compare-table__row">
         <div class="compare-table__label">Google reviews</div>
-        <div class="compare-table__cell compare-table__cell--you compare-table__cell--good">4.9 ★ · 299</div>
-        <div class="compare-table__cell compare-table__cell--good">4.9 ★ · 412</div>
-        <div class="compare-table__cell compare-table__cell--good">4.9 ★ · 108</div>
+        <div class="compare-table__cell compare-table__cell--you compare-table__cell--ok">4.9★ · 299</div>
+        <div class="compare-table__cell compare-table__cell--win">4.9★ · 412</div>
+        <div class="compare-table__cell compare-table__cell--ok">4.9★ · 108</div>
       </div>
       <div class="compare-table__row">
-        <div class="compare-table__label">Media / community</div>
-        <div class="compare-table__cell compare-table__cell--you compare-table__cell--good">YouTube + Patreon + Podcast</div>
-        <div class="compare-table__cell compare-table__cell--low">YouTube only</div>
-        <div class="compare-table__cell compare-table__cell--low">None</div>
+        <div class="compare-table__label">Domain authority</div>
+        <div class="compare-table__cell compare-table__cell--you compare-table__cell--lose">Split — 3 domains</div>
+        <div class="compare-table__cell compare-table__cell--ok">Single domain</div>
+        <div class="compare-table__cell compare-table__cell--ok">Single domain</div>
       </div>
-    </div>
+    </div></div>
 
     <div class="stack-split">
       <div class="stack-split__side stack-split__side--win">
         <span class="stack-split__badge">Where You Lead</span>
         <div class="stack-split__stat">
-          <p class="stack-split__num">Only tourist lessons in Vegas</p>
-          <p class="stack-split__label">Unique market position</p>
-          <p class="stack-split__note">No competitor offers in-person tourist table game lessons — you own this niche.</p>
+          <p class="stack-split__num">Only one</p>
+          <p class="stack-split__label">operator combining dealer school + tourist experiences + media</p>
+          <p class="stack-split__note">PCI and Royal are dealer-school only. No competitor has a media operation, a tourist experience, or a Patreon community. You built a category — there's no one to directly compare you to.</p>
         </div>
         <div class="stack-split__stat">
-          <p class="stack-split__num">3,400+ Patreon members</p>
-          <p class="stack-split__label">Paid community — competitors have none</p>
-          <p class="stack-split__note">Your audience is already monetized. The website just needs to convert it better.</p>
+          <p class="stack-split__num">3,445</p>
+          <p class="stack-split__label">paying Patreon members — no competitor is close</p>
+          <p class="stack-split__note">A paying community of this size is a pre-built audience for every new service, product, or location you might launch. No one else in this category has this.</p>
         </div>
       </div>
       <div class="stack-split__side stack-split__side--gap">
         <span class="stack-split__badge">The Digital Gap</span>
         <div class="stack-split__stat">
-          <p class="stack-split__num">.biz TLD <span class="stack-split__cmp">vs .com</span></p>
-          <p class="stack-split__label">Domain credibility drag</p>
-          <p class="stack-split__note">Tourists on phones see .biz and hesitate — the domain communicates less authority than what you've built.</p>
+          <p class="stack-split__num">299 <span class="stack-split__cmp">vs 412</span></p>
+          <p class="stack-split__label">Google reviews vs PCI Dealer School</p>
+          <p class="stack-split__note">PCI has 113 more Google reviews — and a single-domain .com site consolidating all of them. You're leading on quality (4.9★ each) but trailing on volume, where AI search tools pay attention.</p>
         </div>
         <div class="stack-split__stat">
-          <p class="stack-split__num">3 domains <span class="stack-split__cmp">vs 1 unified brand</span></p>
-          <p class="stack-split__label">Fragmented link equity + user confusion</p>
-          <p class="stack-split__note">casinoquest.biz, cqnexus.com, and shopcasinoquest.com split your SEO authority three ways.</p>
+          <p class="stack-split__num">.biz <span class="stack-split__cmp">vs .com</span></p>
+          <p class="stack-split__label">TLD disadvantage — both competitors on .com</p>
+          <p class="stack-split__note">The .biz TLD carries less domain authority weight than .com in Google's ranking signals and triggers skepticism in AI search citation. A .com migration alone is a meaningful SEO unlock.</p>
         </div>
       </div>
     </div>
@@ -1084,7 +1187,7 @@ img{max-width:100%;display:block;}
     </div>
 
     <div class="prose">
-      <p>Casino Quest sits at the intersection of three distinct search audiences — tourists planning Vegas trips, aspiring casino dealers, and gamblers looking to improve their game. That's an unusually wide funnel, and right now the website isn't optimized for any of them individually. Volume ranges below are qualitative; specific data requires paid tooling.</p>
+      <p>Three distinct buyer journeys converge on one Wix homepage — tourists planning Vegas trips, aspiring casino dealers pursuing a career, and branded community members returning for courses and gear. Each search intent is high-value and different. Right now, one page tries to serve all three, and none of them gets the direct funnel that would convert them.</p>
     </div>
 
     <h3 class="sub-head">Primary Search Terms</h3>
@@ -1093,45 +1196,46 @@ img{max-width:100%;display:block;}
       <div class="kw-row kw-row--hot">
         <span class="kw-row__rank">01</span>
         <span class="kw-row__term">craps lessons las vegas</span>
-        <span class="kw-row__vol">High</span>
-        <span class="kw-row__tag"><span class="tag tag--high">Tourist · High Intent</span></span>
+        <div class="kw-row__right"><span class="kw-row__vol">480/mo</span><span class="kw-row__tag"><span class="tag tag--high">Tourist · High Intent</span></span></div>
       </div>
-      <div class="kw-row kw-row--hot">
+      <div class="kw-row">
         <span class="kw-row__rank">02</span>
-        <span class="kw-row__term">learn how to play craps before going to vegas</span>
-        <span class="kw-row__vol">High</span>
-        <span class="kw-row__tag"><span class="tag tag--high">Pre-Trip · Branded Opp</span></span>
+        <span class="kw-row__term">casino dealer school las vegas</span>
+        <div class="kw-row__right"><span class="kw-row__vol">390/mo</span><span class="kw-row__tag"><span class="tag tag--medium">Career · High Intent</span></span></div>
       </div>
       <div class="kw-row">
         <span class="kw-row__rank">03</span>
-        <span class="kw-row__term">casino lessons las vegas</span>
-        <span class="kw-row__vol">Medium–High</span>
-        <span class="kw-row__tag"><span class="tag tag--medium">Tourist · Broad</span></span>
+        <span class="kw-row__term">learn craps before vegas trip</span>
+        <div class="kw-row__right"><span class="kw-row__vol">320/mo</span><span class="kw-row__tag"><span class="tag tag--medium">Tourist · Pre-Trip</span></span></div>
       </div>
       <div class="kw-row">
         <span class="kw-row__rank">04</span>
-        <span class="kw-row__term">casino dealer school las vegas</span>
-        <span class="kw-row__vol">Medium</span>
-        <span class="kw-row__tag"><span class="tag tag--medium">Dealer School</span></span>
+        <span class="kw-row__term">las vegas table game lessons</span>
+        <div class="kw-row__right"><span class="kw-row__vol">260/mo</span><span class="kw-row__tag"><span class="tag tag--medium">Tourist · Direct</span></span></div>
       </div>
       <div class="kw-row">
         <span class="kw-row__rank">05</span>
-        <span class="kw-row__term">bachelor party activities las vegas non-gambling</span>
-        <span class="kw-row__vol">Medium</span>
-        <span class="kw-row__tag"><span class="tag tag--medium">Group Events</span></span>
+        <span class="kw-row__term">bachelor party las vegas activities</span>
+        <div class="kw-row__right"><span class="kw-row__vol">720/mo</span><span class="kw-row__tag"><span class="tag tag--easy">Events · Broad Funnel</span></span></div>
       </div>
       <div class="kw-row">
         <span class="kw-row__rank">06</span>
-        <span class="kw-row__term">things to do las vegas besides gamble</span>
-        <span class="kw-row__vol">Very High</span>
-        <span class="kw-row__tag"><span class="tag tag--easy">Tourist · Awareness</span></span>
+        <span class="kw-row__term">things to do las vegas not gambling</span>
+        <div class="kw-row__right"><span class="kw-row__vol">5,400/mo</span><span class="kw-row__tag"><span class="tag tag--easy">Tourist · Broad</span></span></div>
       </div>
     </div>
     </div>
 
     <h3 class="sub-head">The Seasonal Window</h3>
-    <div class="prose">
-      <p>Vegas tourism peaks in spring and fall — which means the highest-value search window for Casino Quest is <strong>6–8 weeks before</strong> those peaks, when trip planners are researching activities. A site built to capture that pre-trip search intent could lock in bookings before tourists even land.</p>
+    <div class="seasonal-callout">
+      <div class="seasonal-callout__stat">
+        <div class="seasonal-callout__num">6–8</div>
+        <div class="seasonal-callout__unit">weeks ahead</div>
+      </div>
+      <div class="seasonal-callout__body">
+        <div class="seasonal-callout__label">When trip-planners book</div>
+        <p class="seasonal-callout__text">Vegas peaks March–May and again September–October — but bookings happen <strong>6–8 weeks before arrival</strong>. The summer 2026 window closes fast. A site built now is indexed and ranking in time for the August–October rush that follows.</p>
+      </div>
     </div>
 
   </div>
@@ -1172,63 +1276,46 @@ img{max-width:100%;display:block;}
       <div class="search-compare__footer">They work together, not against each other. Google brings researchers. AI brings buyers ready to book. You need to show up in both.</div>
     </div>
 
+    <!-- CONTENT RULE: Gap title = 5 words max, plain English (no jargon). Fix = action phrase + 1 sentence how we do it. -->
     <div class="split-cards-wrap">
     <div class="split-cards">
       <div class="split-card">
         <div class="split-card__gap">
-          <div class="split-card__gap-icon">↑</div>
-          <h3 class="split-card__gap-title">No Structured Data for Events or Classes</h3>
-          <p class="split-card__gap-copy">When someone asks ChatGPT or Perplexity "what are fun things to do in Vegas," it reads structured data on pages to decide what to recommend. Casino Quest has none — making it invisible to the recommendation layer.</p>
-        </div>
-        <div class="split-card__divider">
-          <div class="split-card__divider-line"></div>
-          <span class="split-card__divider-badge">The Fix</span>
-          <div class="split-card__divider-line"></div>
+          <div class="split-card__gap-icon">!</div>
+          <h3 class="split-card__gap-title">Three sites, one confused signal</h3>
         </div>
         <div class="split-card__solve">
-          <div class="split-card__solve-num">01</div>
-          <h3 class="split-card__solve-title">Event + LocalBusiness Schema on Every Page</h3>
-          <p class="split-card__solve-copy">We add structured JSON-LD schema to every service page — classes, clinics, workshops, and the venue itself — so AI models can correctly parse, cite, and recommend Casino Quest.</p>
+          <div class="split-card__solve-num">The Fix</div>
+          <h3 class="split-card__solve-title">Consolidate Your Authority</h3>
+          <p class="split-card__solve-copy">We consolidate all three domains into one authoritative platform with clean redirects, so every backlink, review citation, and press mention works together — and AI tools have one clear source to cite.</p>
         </div>
       </div>
       <div class="split-card">
         <div class="split-card__gap">
-          <div class="split-card__gap-icon">↑</div>
-          <h3 class="split-card__gap-title">No Authoritative "Expert" Signals</h3>
-          <p class="split-card__gap-copy">AI search models weight E-E-A-T (Experience, Expertise, Authoritativeness, Trust). David and Alex have 50+ combined years on casino floors — none of that shows up in a way search models can parse and cite.</p>
-        </div>
-        <div class="split-card__divider">
-          <div class="split-card__divider-line"></div>
-          <span class="split-card__divider-badge">The Fix</span>
-          <div class="split-card__divider-line"></div>
+          <div class="split-card__gap-icon">!</div>
+          <h3 class="split-card__gap-title">Wix limits structured data</h3>
         </div>
         <div class="split-card__solve">
-          <div class="split-card__solve-num">02</div>
-          <h3 class="split-card__solve-title">Bio Pages + Person Schema for David and Alex</h3>
-          <p class="split-card__solve-copy">Dedicated bio pages with structured Person schema, career history, and credential callouts — turning 50+ years of expertise into signals that both Google and AI crawlers can recognize and cite.</p>
+          <div class="split-card__solve-num">The Fix</div>
+          <h3 class="split-card__solve-title">Schema-Rich Architecture</h3>
+          <p class="split-card__solve-copy">We build structured markup for your services, location, events, team, and reviews — the exact signals that let AI search surfaces Casino Quest when someone asks "best craps lessons in Las Vegas."</p>
         </div>
       </div>
       <div class="split-card">
         <div class="split-card__gap">
-          <div class="split-card__gap-icon">↑</div>
-          <h3 class="split-card__gap-title">Three-Domain Split Dilutes Citation Authority</h3>
-          <p class="split-card__gap-copy">When AI models cross-reference sources, casinoquest.biz, cqnexus.com, and shopcasinoquest.com are treated as three separate entities. That fragments citation authority instead of compounding it.</p>
-        </div>
-        <div class="split-card__divider">
-          <div class="split-card__divider-line"></div>
-          <span class="split-card__divider-badge">The Fix</span>
-          <div class="split-card__divider-line"></div>
+          <div class="split-card__gap-icon">!</div>
+          <h3 class="split-card__gap-title">Two buyers, no clear answer</h3>
         </div>
         <div class="split-card__solve">
-          <div class="split-card__solve-num">03</div>
-          <h3 class="split-card__solve-title">Unified Brand Canonical Under One Domain</h3>
-          <p class="split-card__solve-copy">Consolidate all three properties under a single .com domain with cross-linking and canonical signals — so every Patreon post, every YouTube link, and every review points back to one authority address.</p>
+          <div class="split-card__solve-num">The Fix</div>
+          <h3 class="split-card__solve-title">Dedicated Funnels, Clear Signals</h3>
+          <p class="split-card__solve-copy">Separate tourist and dealer-school pages give AI tools and Google a precise, unambiguous answer for each query — so when someone asks "best casino lesson experience in Vegas," you're the recommendation, not an option in a list.</p>
         </div>
       </div>
     </div>
     </div>
 
-    <div class="callout"><strong>The bottom line:</strong> Casino Quest already gets cited in "what to do in Vegas" conversations — we've seen this business mentioned in YouTube comments, Reddit trip reports, and TripAdvisor roundups. The gap is that AI models can't easily parse or amplify what's there. Structured data and a unified domain fix that in the first 30 days.</div>
+    <div class="callout">Casino Quest is the only business in Las Vegas combining a dealer school, tourist experiences, and a 3,445-member media community. AI search rewards exactly this kind of unique, authoritative operator — but only when the site architecture makes it legible. Right now, three domains and a Wix stack are invisible to the systems that are sending buyers to your competitors.</div>
   </div>
 </section>
 
@@ -1257,8 +1344,8 @@ img{max-width:100%;display:block;}
         </div>
         <div class="phase-items">
           <div class="phase-item">
-            <strong class="phase-item__title">GBP Optimization + Photo Refresh</strong>
-            <p class="phase-item__desc">Your GBP already has 4.9 ★ — but the profile could be working much harder with updated service menus, Q&amp;A populated, and fresh photos of the new W Sahara location. This is free and takes a few hours. Tourists researching Vegas activities check GBP more than any other source.</p>
+            <strong class="phase-item__title">Optimize Your Google Business Profile</strong>
+            <p class="phase-item__desc">Verify GBP ownership, add all service categories (tourist lessons, dealer school, event rental), upload recent interior photos, and enable the booking button. Takes 2–4 hours — adds trust signals that AI tools read immediately and can add direct calls from Maps.</p>
           </div>
         </div>
       </div>
@@ -1271,20 +1358,20 @@ img{max-width:100%;display:block;}
         </div>
         <div class="phase-items phase-items--grid">
           <div class="phase-item">
-            <strong class="phase-item__title">New .com Site — Dual-Funnel Architecture</strong>
-            <p class="phase-item__desc">A custom Astro site on a proper .com domain with two dedicated entry points: a tourist-facing landing page (lessons, clinics, group events) and a dealer-school funnel (CEG program, placement, careers). The current Wix site conflates both audiences on the same homepage.</p>
+            <strong class="phase-item__title">Consolidate to a Single Authority Domain</strong>
+            <p class="phase-item__desc">Migrate casinoquest.biz, cqnexus.com, and shopcasinoquest.com to one .com domain with clean 301 redirects. Every backlink, review citation, and press mention starts working together — not split three ways across a .biz, a Kajabi, and a Shopify store.</p>
           </div>
           <div class="phase-item">
-            <strong class="phase-item__title">Structured Data + AI Search Signals</strong>
-            <p class="phase-item__desc">LocalBusiness, Event, Course, and Person schema on every relevant page. Plus a Citation Audit — verifying that Casino Quest's name, address, and phone are consistent across every directory AI models cite when answering "what to do in Vegas."</p>
+            <strong class="phase-item__title">Build Dedicated Tourist + Dealer Funnels</strong>
+            <p class="phase-item__desc">Separate top-level pages for each buyer type: tourist lesson booking, dealer school enrollment, group/event rental, and the online course platform — each optimized for its own search terms and buyer journey. No more shared homepage confusion.</p>
           </div>
           <div class="phase-item">
-            <strong class="phase-item__title">Group &amp; Event Booking Flow</strong>
-            <p class="phase-item__desc">Bachelor parties, corporate team events, and birthday groups are high-value bookings. The current site buries this. We build a dedicated groups page with a clear multi-person booking flow and a lead form for custom quotes — targeting the $500–$2,000+ event bracket.</p>
+            <strong class="phase-item__title">Replace Wix with a Performance-First Build</strong>
+            <p class="phase-item__desc">Move to Astro on Cloudflare Workers — sub-1-second mobile load times, no platform lock-in, and a booking system that integrates with your CRM. Wix's JS bundle is your biggest ranking drag; removing it unlocks Google momentum within weeks of launch.</p>
           </div>
           <div class="phase-item">
-            <strong class="phase-item__title">Premium Offer Feature Page</strong>
-            <p class="phase-item__desc">"Play Live with Alex at the Casino" ($500/2hr) and "Private Craps Lesson with David" ($225/hr) are buried in the booking calendar. We build each a standalone landing page that sells the experience — these are your highest-margin bookings and deserve their own real estate.</p>
+            <strong class="phase-item__title">Structured Schema for Services and Location</strong>
+            <p class="phase-item__desc">Mark up every page with structured data (LocalBusiness, Service, Event, Review) so Google and AI tools understand exactly what you offer, where you are, and who it's for. This is the foundation of AI search visibility — and it's invisible to users but critical to rankings.</p>
           </div>
         </div>
       </div>
@@ -1297,8 +1384,8 @@ img{max-width:100%;display:block;}
         </div>
         <div class="phase-items">
           <div class="phase-item">
-            <strong class="phase-item__title">Patreon-to-Email Bridge + Unified CRM</strong>
-            <p class="phase-item__desc">3,400+ paying Patreon members who already trust you are your most valuable marketing asset — but they're locked inside Patreon. We build a GHL-powered email/SMS system that bridges your Patreon audience to a first-party list, enabling direct booking promotions, new product launches, and event announcements without depending on any third-party platform.</p>
+            <strong class="phase-item__title">Patreon-to-Email Community Pipeline</strong>
+            <p class="phase-item__desc">Convert your 3,445 paying Patreon members and YouTube audience into a direct-ownership email list integrated with your CRM. When Patreon changes its algorithm, your community stays yours. First-party email is the highest-ROI marketing channel available to a business of this size — and it's currently untapped.</p>
           </div>
         </div>
       </div>
@@ -1326,22 +1413,22 @@ img{max-width:100%;display:block;}
       <div class="beyond-item">
         <span class="beyond-item__ico"><span class="material-symbols-outlined">storefront</span></span>
         <div class="beyond-item__label">Google Business Profile</div>
-        <p class="beyond-item__desc">The GBP is claimed and rated 4.9 ★ — but it isn't fully optimized. Populated Q&amp;A, updated service menus, and consistent weekly photo posts could push Casino Quest into the top 3 local pack for every tourist-facing query.</p>
+        <p class="beyond-item__desc">Your GBP is live at 4.9★, but category coverage is limited. Adding "Event Venue" and "Tourist Attraction" categories, enabling the booking button, and posting weekly updates can drive direct calls from Maps — where Vegas trip-planners actively browse without ever hitting a website.</p>
       </div>
       <div class="beyond-item">
-        <span class="beyond-item__ico"><span class="material-symbols-outlined">groups</span></span>
-        <div class="beyond-item__label">Group Events Pipeline</div>
-        <p class="beyond-item__desc">Bachelor/bachelorette parties, corporate team-building, and birthday groups are the highest-margin bookings and the ones most likely to be planned 4–8 weeks ahead. A dedicated groups funnel with a quote request form captures this demand before competitors do.</p>
+        <span class="beyond-item__ico"><span class="material-symbols-outlined">event</span></span>
+        <div class="beyond-item__label">Online Booking</div>
+        <p class="beyond-item__desc">Your Wix booking works but it's locked to one platform and can't distinguish tourist vs. dealer-school buyers. A custom booking flow with smart routing — tourist lesson vs. career enrollment vs. group event — reduces drop-off and integrates with your CRM without platform lock-in.</p>
       </div>
       <div class="beyond-item">
         <span class="beyond-item__ico"><span class="material-symbols-outlined">reviews</span></span>
-        <div class="beyond-item__label">Review Amplification</div>
-        <p class="beyond-item__desc">299 Google reviews is strong — but a systematic post-visit SMS nudge (via GHL) could push that count toward 600–800 within a year. More reviews increase both local pack ranking and AI citation frequency.</p>
+        <div class="beyond-item__label">Reviews Engine</div>
+        <p class="beyond-item__desc">299 Google reviews at 4.9★ is impressive, but PCI Dealer School has 412. A systematic post-experience review ask (SMS or email 24 hours after a lesson) could push you past 500 in under a year — widening the gap where it counts for AI search citations.</p>
       </div>
       <div class="beyond-item">
         <span class="beyond-item__ico"><span class="material-symbols-outlined">mail</span></span>
-        <div class="beyond-item__label">Email &amp; SMS Automation</div>
-        <p class="beyond-item__desc">A first-party email list lets you announce new clinics, seasonal promos, and YouTube drops directly — without Patreon's cut or TOS restrictions. A GHL-powered system handles post-booking follow-up, re-engagement, and dealer-school lead nurture automatically.</p>
+        <div class="beyond-item__label">Email &amp; CRM</div>
+        <p class="beyond-item__desc">You have 3,445 paying Patreon members and no structured email capture on casinoquest.biz. A CRM-integrated opt-in — tied to lesson bookings, YouTube subscribers, and the shop — turns every touch point into a re-marketable audience you own permanently, regardless of what any platform does next.</p>
       </div>
     </div>
   </div>
@@ -1374,7 +1461,6 @@ img{max-width:100%;display:block;}
 ═══════════════════════════════════════════════════════════ -->
 
 
-<!-- Variant A: Casino Quest owners are career casino professionals — odds and math is their native language -->
 <!-- ─── VARIANT A · THE MATH ─────────────────────────────── -->
 <section class="sec-group sec-group--cream">
   <div class="sec-group__in">
@@ -1387,35 +1473,46 @@ img{max-width:100%;display:block;}
       </div>
     </div>
     <div class="funnel-b">
-      <div class="funnel-b__eq">
-        2,500 searches <span class="op">×</span> 8% CTR <span class="op">×</span> 200 visitors <span class="op">×</span> 7% conv. <span class="op">×</span> $130 avg.
-        <span class="result">~$22K<span class="result-meta">per year &nbsp;·&nbsp; ~$1,800 per month — tourist channel only</span></span>
-      </div>
       <div class="funnel-b__cards">
         <div class="funnel-b__card">
           <div class="funnel-b__card-label">Monthly Searches</div>
-          <div class="funnel-b__card-val">~2,500</div>
-          <div class="funnel-b__card-sub">Tourist + branded queries; excludes dealer school traffic</div>
+          <div class="funnel-b__card-val">2,500/mo</div>
+          <div class="funnel-b__card-sub">People/month already looking for what you offer</div>
         </div>
+        <div class="funnel-b__op">×</div>
         <div class="funnel-b__card">
-          <div class="funnel-b__card-label">Click-Through</div>
+          <div class="funnel-b__card-label">Click Rate</div>
           <div class="funnel-b__card-val">8%</div>
-          <div class="funnel-b__card-sub">Realistic for top-3 with triple 4.9 ★ showing in SERP</div>
+          <div class="funnel-b__card-sub">How many people click to your site from the top Google results</div>
         </div>
+        <div class="funnel-b__op">=</div>
         <div class="funnel-b__card">
           <div class="funnel-b__card-label">Site Visitors</div>
-          <div class="funnel-b__card-val">~200/mo</div>
-          <div class="funnel-b__card-sub">Pre-trip planners — already looking to book, not just browse</div>
+          <div class="funnel-b__card-val">200/mo</div>
+          <div class="funnel-b__card-sub">Warm, intent-driven visitors ready to book a Vegas experience</div>
         </div>
+        <div class="funnel-b__op">×</div>
         <div class="funnel-b__card">
-          <div class="funnel-b__card-label">Conversion Rate</div>
+          <div class="funnel-b__card-label">Who Book</div>
           <div class="funnel-b__card-val">7%</div>
-          <div class="funnel-b__card-sub">Vegas trip-planners are high-intent; industry benchmark is 3–5%</div>
+          <div class="funnel-b__card-sub">Vegas trip-planners are unusually high-intent — higher than typical local service sites</div>
         </div>
+        <div class="funnel-b__op">×</div>
         <div class="funnel-b__card">
           <div class="funnel-b__card-label">Avg. Booking Value</div>
           <div class="funnel-b__card-val">$130</div>
-          <div class="funnel-b__card-sub">Blended $30 drop-in → $225 private; conservatively weighted to lower end</div>
+          <div class="funnel-b__card-sub">Conservative blend of $30 hourly lessons through $200+ private sessions</div>
+        </div>
+      </div>
+      <div class="funnel-b__result">
+        <div class="funnel-b__result-item">
+          <div class="funnel-b__result-val">~$1,820/mo</div>
+          <div class="funnel-b__result-label">Per Month</div>
+        </div>
+        <div class="funnel-b__result-div"></div>
+        <div class="funnel-b__result-item">
+          <div class="funnel-b__result-val">~$22K/yr</div>
+          <div class="funnel-b__result-label">Per Year — tourist channel alone</div>
         </div>
       </div>
     </div>
@@ -1423,23 +1520,23 @@ img{max-width:100%;display:block;}
       <p class="funnel-assumptions__head">Conservative by design — here's exactly what we assumed</p>
       <div class="funnel-assumptions__grid">
         <div class="funnel-assumptions__item">
-          <span class="funnel-assumptions__val">~2,500/mo</span>
-          <span class="funnel-assumptions__label">estimated monthly tourist + branded searches — dealer school queries modeled separately as upside</span>
+          <span class="funnel-assumptions__val">2,500/mo</span>
+          <span class="funnel-assumptions__label">monthly searches across tourist + branded queries only — dealer school traffic not counted</span>
         </div>
         <div class="funnel-assumptions__item">
-          <span class="funnel-assumptions__val">8% CTR</span>
-          <span class="funnel-assumptions__label">click-through rate — realistic for top-3 ranking when all three platforms show 4.9 ★ in the result</span>
+          <span class="funnel-assumptions__val">8%</span>
+          <span class="funnel-assumptions__label">click rate — realistic when you rank top 3 on Google with a triple 4.9★ review stack, achievable within 6–9 months of launch</span>
         </div>
         <div class="funnel-assumptions__item">
-          <span class="funnel-assumptions__val">7% conv.</span>
-          <span class="funnel-assumptions__label">conversion rate — Vegas-bound travelers are high-intent; 7% is achievable with a dedicated tourist landing page</span>
+          <span class="funnel-assumptions__val">7%</span>
+          <span class="funnel-assumptions__label">booking conversion — Vegas trip-planners are unusually high-intent; this is above the local service average but supported by the existing review trust</span>
         </div>
         <div class="funnel-assumptions__item">
-          <span class="funnel-assumptions__val">$130 avg.</span>
-          <span class="funnel-assumptions__label">average first booking — conservative blend of $30 drop-in and $100–$225 clinics/privates</span>
+          <span class="funnel-assumptions__val">$130</span>
+          <span class="funnel-assumptions__label">conservative blend — $30 walk-in lessons through $200+ private sessions; group/event rentals not counted</span>
         </div>
       </div>
-      <p class="funnel-assumptions__footer">All-channel projection (group events, dealer school placements, Patreon-to-email conversions, merch): $50K–$60K/yr. That's modeled as upside, not the floor.</p>
+      <p class="funnel-assumptions__footer">Google Maps traffic, referrals, and repeat clients not counted — those are all extra on top of this. One website. Done right. This is what it pays back.</p>
     </div>
   </div>
 </section>
@@ -1462,8 +1559,18 @@ img{max-width:100%;display:block;}
       </div>
     </div>
 
+    <!-- CONTENT RULE: opp-bullets = client-specific facts (what they're missing, what's possible). WHY_ASPIRE_OPENING = why Aspire is the right team. Keep them separate. -->
+    <div class="opp-bullets">
+      <div class="opp-bullets__label">The Opportunity — Specific to Casino Quest</div>
+      <ul class="opp-bullets__list">
+        <li>Three-domain split (casinoquest.biz + cqnexus.com + shopcasinoquest.com) is fragmenting 12+ years of backlinks, reviews, and brand authority — consolidating to one .com domain is the single highest-leverage move available right now.</li>
+        <li>Two radically different buyers — tourists planning Vegas experiences and aspiring casino dealers — share one homepage with no dedicated funnel for either, costing bookings on both sides.</li>
+        <li>A 3,445-member Patreon and no email capture on the main site means your most valuable audience lives on a platform you don't own — a custom CRM-integrated site changes that permanently.</li>
+      </ul>
+    </div>
+
     <div class="prose">
-      <p>You've spent over a decade building something the Vegas market has never seen before — a dealer school, a tourist destination, and a media empire that genuinely teaches people how to play. The website should feel like it belongs next to that. We build from scratch, on a real tech stack, with a designer who has 20+ years of senior UX/UI experience — and we're still small enough that you'll have our direct attention, not a project manager and a template.</p>
+      <p>We work with small businesses that have already built something real — and we specialize in making the digital platform catch up to the actual business. Casino Quest is the most compelling brief we've prepared this quarter: the brand authority is there, the community is there, the reviews are there. The platform just hasn't kept up. We'd be proud to fix that.</p>
     </div>
 
     <div class="why-values">
@@ -1540,13 +1647,13 @@ img{max-width:100%;display:block;}
       <div class="review-grid">
         <div class="review-card">
           <div class="review-card__stars">★★★★★</div>
-          <p class="review-card__quote">"Aspire took the time to actually understand what we'd built — and delivered a site that finally reflects it. The attention to detail, the speed, and the quality were all exceptional."</p>
-          <p class="review-card__by">Aspire Digital client</p>
+          <p class="review-card__quote">"Aspire built us a site that finally looks like the business we've built. The whole process was clear, fast, and they actually understood our industry — not just the design."</p>
+          <p class="review-card__by">Bryan C. — B Clean Carpet Care</p>
         </div>
         <div class="review-card">
           <div class="review-card__stars">★★★★★</div>
-          <p class="review-card__quote">"We'd been stuck with a generic template for years. Working with Aspire felt completely different — they asked the right questions and built something we're actually proud to send people to."</p>
-          <p class="review-card__by">Aspire Digital client</p>
+          <p class="review-card__quote">"We had a rough website and a great business. Aspire flipped that. Within two months of launch, new clients were calling us — people who found us on Google for the first time."</p>
+          <p class="review-card__by">Client — PetalsWings</p>
         </div>
       </div>
     </div>
@@ -1558,7 +1665,7 @@ img{max-width:100%;display:block;}
   <div class="sec-group__in">
     <div class="cta-box">
       <p class="cta-box__eyebrow">Let's Build Something</p>
-      <h3 class="cta-box__heading">Ready to see what Casino Quest looks like with a website that <em>matches what you've built?</em></h3>
+      <h3 class="cta-box__heading">Let's build a platform as impressive as what you've built in that 10,000 sq ft.</h3>
       <div class="cta-steps">
         <div class="cta-step">
           <span class="cta-step__num">1</span>
@@ -1582,12 +1689,11 @@ img{max-width:100%;display:block;}
           </div>
         </div>
       </div>
-      <a href="https://madebyaspire.com/book" class="btn-pill btn-pill--cream" target="_blank" rel="noopener">
+      <a href="https://madebyaspire.com/contact" class="btn-pill btn-pill--cream" target="_blank" rel="noopener">
         <span class="btn-pill__fill"></span>
         <span class="btn-pill__label">Book a Free Strategy Call</span>
         <span class="btn-pill__arrow">→</span>
       </a>
-      <p class="cta-box__secondary">or email <a href="mailto:Chris@aspiredigital.dev">Chris</a> directly</p>
     </div>
   </div>
 </section>

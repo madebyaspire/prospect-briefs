@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Revenue Section — Design Concepts | Aspire Digital</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=DM+Serif+Display:ital@0;1&family=EB+Garamond:ital,wght@1,400;1,500&family=Unbounded:wght@700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FAF0E2; --bg-alt:#F2EDE6; --night:#1A1F28; --night-2:#222832;
+  --accent:#C4622D; --accent-dk:#A34E1A; --accent-btn:#D44800;
+  --green:#4A7B5A; --green-dk:#2D5940; --sage:#8FAF8A;
+  --charcoal:#2C3340;
+  --text:#2C3340; --text-sec:#5A6072; --text-muted:#888E97;
+  --border:rgba(44,51,64,.13); --border-lt:rgba(44,51,64,.07);
+  --white:#fff;
+  --r-sm:6px; --r-md:10px; --r-lg:16px; --r-xl:22px; --r-full:999px;
+  --sh-sm:0 1px 4px rgba(0,0,0,.07); --sh-md:0 4px 16px rgba(0,0,0,.1);
+  --f-d:"DM Serif Display",Georgia,serif;
+  --f-a:"EB Garamond",Georgia,serif;
+  --f-n:"Unbounded",-apple-system,sans-serif;
+  --f-b:"DM Sans",-apple-system,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{font-size:16px;-webkit-font-smoothing:antialiased;scroll-behavior:smooth;scroll-padding-top:64px;}
+body{font-family:var(--f-b);background:var(--charcoal);}
+
+/* ── NAV ── */
+.cmp-nav{position:sticky;top:0;z-index:100;background:var(--charcoal);border-bottom:1px solid rgba(255,255,255,.08);padding:0 2rem;display:flex;align-items:center;gap:0;height:56px;}
+.cmp-nav__logo{font-family:var(--f-n);font-size:.6875rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(250,240,226,.3);margin-right:2rem;white-space:nowrap;}
+.cmp-nav__links{display:flex;gap:0;overflow-x:auto;-webkit-overflow-scrolling:touch;}
+.cmp-nav__link{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.25rem;font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(250,240,226,.45);text-decoration:none;border-bottom:2px solid transparent;white-space:nowrap;transition:color .18s,border-color .18s;}
+.cmp-nav__link:hover{color:rgba(250,240,226,.85);}
+.cmp-nav__link.a{--c:#C4622D;} .cmp-nav__link.b{--c:#4A7B5A;} .cmp-nav__link.c{--c:#8FAF8A;} .cmp-nav__link.d{--c:#C4622D;}
+.cmp-nav__link:hover,.cmp-nav__link:focus{border-bottom-color:var(--c,var(--accent));color:rgba(250,240,226,.9);}
+.cmp-nav__dot{width:6px;height:6px;border-radius:50%;background:var(--c,var(--accent));}
+
+/* ── OPTION WRAPPER ── */
+.option{scroll-margin-top:56px;}
+.option-label-bar{background:var(--charcoal);padding:.875rem 2.5rem;display:flex;align-items:center;gap:1rem;border-top:1px solid rgba(255,255,255,.06);}
+.option-label-bar__tag{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#fff;padding:3px 12px;border-radius:var(--r-full);}
+.option-label-bar__name{font-family:var(--f-b);font-size:.9375rem;font-weight:600;color:rgba(250,240,226,.55);}
+.option-label-bar__desc{font-size:.9375rem;color:rgba(250,240,226,.3);margin-left:auto;}
+
+/* ── SHARED SECTION CHROME ── */
+.sec{padding:4.5rem 2.5rem;}
+.sec__in{max-width:860px;margin:0 auto;}
+.sec--cream{background:var(--bg);}
+.sec--alt{background:var(--bg-alt);}
+.sec--night{background:var(--night);}
+.sec-badge{display:inline-flex;align-items:center;gap:.5rem;padding:5px 14px 5px 6px;border-radius:var(--r-full);margin-bottom:2rem;}
+.sec--cream .sec-badge,.sec--alt .sec-badge{background:rgba(44,51,64,.06);}
+.sec--night .sec-badge{background:rgba(255,255,255,.06);}
+.sec-badge__dot{width:22px;height:22px;border-radius:50%;background:var(--green);display:grid;place-items:center;flex-shrink:0;}
+.sec-badge__dot svg{width:10px;height:10px;stroke:#fff;stroke-width:1.8;fill:none;}
+.sec-badge__label{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;}
+.sec--cream .sec-badge__label,.sec--alt .sec-badge__label{color:var(--text-muted);}
+.sec--night .sec-badge__label{color:rgba(250,240,226,.4);}
+.sec-head{display:grid;grid-template-columns:auto 1fr;column-gap:1.75rem;align-items:baseline;margin-bottom:3rem;}
+.sec-head__num{font-family:var(--f-d);font-style:italic;font-size:clamp(3rem,5vw,4.5rem);font-weight:400;line-height:1;color:var(--accent);}
+.sec-head__title{font-family:var(--f-d);font-style:italic;font-size:clamp(1.75rem,3vw,2.5rem);font-weight:400;line-height:1.15;margin:0;}
+.sec--cream .sec-head__title,.sec--alt .sec-head__title{color:var(--charcoal);}
+.sec--night .sec-head__title{color:var(--bg);}
+.sec-head__title em{color:var(--accent);}
+.sec-head__sub{font-family:var(--f-a);font-style:italic;font-size:1.0625rem;line-height:1.65;margin-top:.5rem;}
+.sec--cream .sec-head__sub,.sec--alt .sec-head__sub{color:var(--text-sec);}
+.sec--night .sec-head__sub{color:rgba(250,240,226,.45);}
+
+/* ══════════════════════════════════════════
+   OPTION A — THE MATH
+   Show the calculation chain. Credibility.
+══════════════════════════════════════════ */
+.funnel-chain{display:flex;align-items:stretch;gap:0;margin:0 0 2.5rem;flex-wrap:wrap;}
+.funnel-step{flex:1;min-width:120px;position:relative;padding:1.75rem 1.25rem 1.5rem;border:1px solid var(--border);border-right:none;background:var(--white);}
+.funnel-step:first-child{border-radius:var(--r-lg) 0 0 var(--r-lg);}
+.funnel-step:last-child{border-right:1px solid var(--border);border-radius:0 var(--r-lg) var(--r-lg) 0;}
+.funnel-step__operator{position:absolute;right:-14px;top:50%;transform:translateY(-50%);width:26px;height:26px;border-radius:50%;background:var(--bg-alt);border:1px solid var(--border);display:grid;place-items:center;z-index:2;font-family:var(--f-n);font-size:.5rem;font-weight:700;color:var(--text-muted);}
+.funnel-step__label{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);margin-bottom:.625rem;}
+.funnel-step__val{font-family:var(--f-d);font-style:italic;font-size:clamp(1.5rem,2.5vw,2rem);color:var(--charcoal);line-height:1;margin-bottom:.25rem;}
+.funnel-step__sub{font-size:.75rem;color:var(--text-muted);line-height:1.4;}
+.funnel-result{background:var(--accent);border-radius:var(--r-xl);padding:2.75rem 3rem;text-align:center;display:flex;align-items:center;justify-content:center;gap:3rem;margin-bottom:1.5rem;}
+.funnel-result__period{text-align:center;}
+.funnel-result__amt{font-family:var(--f-d);font-style:italic;font-size:clamp(2.5rem,5vw,4rem);font-weight:400;color:#fff;line-height:1;margin-bottom:.375rem;}
+.funnel-result__period-label{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.55);}
+.funnel-result__divider{width:1px;height:60px;background:rgba(255,255,255,.2);}
+.funnel-assumptions{padding:1.25rem 1.5rem;border-radius:var(--r-md);background:var(--bg-alt);border-left:3px solid var(--border);}
+.funnel-assumptions p{font-size:.875rem;color:var(--text-muted);line-height:1.6;}
+.funnel-assumptions strong{color:var(--text-sec);font-weight:600;}
+
+/* ══════════════════════════════════════════
+   OPTION B — THE GAP
+   Before vs. After. Visceral contrast.
+══════════════════════════════════════════ */
+.gap-wrap{display:grid;grid-template-columns:1fr 1fr;border-radius:var(--r-xl);overflow:hidden;margin-bottom:1.5rem;min-height:360px;}
+.gap-now{background:#222830;padding:3rem 2.75rem;display:flex;flex-direction:column;justify-content:space-between;position:relative;}
+.gap-now::after{content:'';position:absolute;inset:0;background:repeating-linear-gradient(-45deg,transparent,transparent 12px,rgba(255,255,255,.012) 12px,rgba(255,255,255,.012) 13px);pointer-events:none;}
+.gap-now__eyebrow{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(250,240,226,.25);margin-bottom:1.5rem;}
+.gap-now__headline{font-family:var(--f-d);font-style:italic;font-size:clamp(1.125rem,2vw,1.5rem);line-height:1.3;color:rgba(250,240,226,.45);margin-bottom:1.5rem;flex:1;}
+.gap-now__num{font-family:var(--f-d);font-style:italic;font-size:clamp(2.5rem,4vw,3.5rem);line-height:1;color:rgba(250,240,226,.18);letter-spacing:-.01em;}
+.gap-now__sublabel{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(250,240,226,.15);margin-top:.5rem;}
+.gap-after{background:var(--green-dk);padding:3rem 2.75rem;display:flex;flex-direction:column;justify-content:space-between;}
+.gap-after__eyebrow{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(250,240,226,.5);margin-bottom:1.5rem;}
+.gap-after__headline{font-family:var(--f-d);font-style:italic;font-size:clamp(1.125rem,2vw,1.5rem);line-height:1.3;color:rgba(250,240,226,.92);margin-bottom:1.5rem;flex:1;}
+.gap-after__num{font-family:var(--f-d);font-style:italic;font-size:clamp(2.5rem,4vw,3.5rem);line-height:1;color:var(--sage);letter-spacing:-.01em;}
+.gap-after__sublabel{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(250,240,226,.4);margin-top:.5rem;}
+.gap-bridge{background:var(--bg-alt);border-radius:var(--r-lg);padding:1.5rem 2rem;display:flex;align-items:center;gap:1.5rem;}
+.gap-bridge__line{flex:1;height:1px;background:var(--border);}
+.gap-bridge__text{font-size:1.0625rem;font-weight:500;color:var(--text-sec);white-space:nowrap;}
+.gap-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.5rem;}
+.gap-metric{text-align:center;padding:1.25rem 1rem;}
+.gap-metric__val{font-family:var(--f-d);font-style:italic;font-size:1.75rem;color:var(--accent);line-height:1;margin-bottom:.375rem;}
+.gap-metric__label{font-size:.8125rem;color:var(--text-sec);}
+
+/* ══════════════════════════════════════════
+   OPTION C — THE RANGE
+   Conservative / Moderate / Optimistic.
+   Lets the owner choose their belief level.
+══════════════════════════════════════════ */
+.range-hero{text-align:center;padding:3rem 2rem 2.5rem;margin-bottom:2rem;}
+.range-hero__sub{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(250,240,226,.3);margin-bottom:1.5rem;}
+.range-hero__num{font-family:var(--f-d);font-style:italic;font-size:clamp(4rem,8vw,6.5rem);font-weight:400;color:var(--accent);line-height:1;margin-bottom:.5rem;}
+.range-hero__label{font-size:1.1875rem;color:rgba(250,240,226,.6);margin-bottom:.5rem;}
+.range-hero__note{font-size:.875rem;color:rgba(250,240,226,.28);max-width:480px;margin:0 auto;line-height:1.6;}
+.range-scenarios{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-bottom:1.5rem;}
+.range-card{border-radius:var(--r-xl);padding:2rem 1.75rem;position:relative;overflow:hidden;}
+.range-card--conservative{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);}
+.range-card--moderate{background:rgba(196,98,45,.12);border:1px solid rgba(196,98,45,.2);}
+.range-card--optimistic{background:rgba(74,123,90,.15);border:1px solid rgba(74,123,90,.25);}
+.range-card__tier{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;margin-bottom:1rem;}
+.range-card--conservative .range-card__tier{color:rgba(250,240,226,.3);}
+.range-card--moderate .range-card__tier{color:rgba(196,98,45,.8);}
+.range-card--optimistic .range-card__tier{color:var(--sage);}
+.range-card__amt{font-family:var(--f-d);font-style:italic;font-size:clamp(1.75rem,2.5vw,2.25rem);line-height:1;margin-bottom:.75rem;}
+.range-card--conservative .range-card__amt{color:rgba(250,240,226,.5);}
+.range-card--moderate .range-card__amt{color:var(--bg);}
+.range-card--optimistic .range-card__amt{color:var(--sage);}
+.range-card__period{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;display:block;margin-bottom:1.25rem;}
+.range-card--conservative .range-card__period{color:rgba(250,240,226,.2);}
+.range-card--moderate .range-card__period{color:rgba(250,240,226,.4);}
+.range-card--optimistic .range-card__period{color:rgba(143,180,138,.5);}
+.range-card__desc{font-size:.8125rem;line-height:1.65;}
+.range-card--conservative .range-card__desc{color:rgba(250,240,226,.38);}
+.range-card--moderate .range-card__desc{color:rgba(250,240,226,.72);}
+.range-card--optimistic .range-card__desc{color:rgba(250,240,226,.72);}
+.range-bar-wrap{background:rgba(255,255,255,.05);border-radius:var(--r-full);height:6px;margin-top:1.25rem;overflow:hidden;}
+.range-bar{height:100%;border-radius:var(--r-full);}
+.range-card--conservative .range-bar{width:35%;background:rgba(255,255,255,.2);}
+.range-card--moderate .range-bar{width:62%;background:var(--accent);}
+.range-card--optimistic .range-bar{width:100%;background:var(--green);}
+.range-callout{border-radius:var(--r-lg);padding:1.5rem 2rem;background:rgba(250,240,226,.04);border:1px solid rgba(250,240,226,.06);display:flex;align-items:center;gap:1.5rem;}
+.range-callout__icon{width:36px;height:36px;border-radius:50%;background:rgba(196,98,45,.15);display:grid;place-items:center;flex-shrink:0;}
+.range-callout__icon svg{width:16px;height:16px;stroke:var(--accent);stroke-width:2;fill:none;}
+.range-callout__text{font-size:1rem;color:rgba(250,240,226,.55);line-height:1.55;}
+.range-callout__text strong{font-style:normal;font-weight:600;color:rgba(250,240,226,.82);}
+
+/* ══════════════════════════════════════════
+   OPTION D — WHAT IT MEANS
+   Translate the number. Human, tangible.
+══════════════════════════════════════════ */
+.meaning-anchor{text-align:center;margin-bottom:3rem;padding:3rem 2rem 2.5rem;border-bottom:1px solid var(--border);}
+.meaning-anchor__label{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--text-muted);margin-bottom:1.25rem;}
+.meaning-anchor__num{font-family:var(--f-d);font-style:italic;font-size:clamp(4rem,7vw,5.5rem);font-weight:400;color:var(--accent);line-height:1;margin-bottom:.5rem;}
+.meaning-anchor__period{font-size:1.25rem;color:var(--text-sec);}
+.meaning-anchor__note{font-size:.875rem;color:var(--text-muted);margin-top:.75rem;}
+.meaning-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--r-xl);overflow:hidden;margin-bottom:1.5rem;}
+.meaning-item{background:var(--white);padding:2.5rem 2rem;display:flex;flex-direction:column;gap:.875rem;}
+.meaning-item__ico{width:44px;height:44px;border-radius:var(--r-md);background:rgba(196,98,45,.1);display:grid;place-items:center;}
+.meaning-item__ico svg{width:20px;height:20px;stroke:var(--accent-dk);stroke-width:1.75;fill:none;}
+.meaning-item__num{font-family:var(--f-d);font-style:italic;font-size:clamp(1.75rem,3vw,2.5rem);color:var(--charcoal);line-height:1;}
+.meaning-item__num em{color:var(--accent);}
+.meaning-item__label{font-size:.9375rem;font-weight:600;color:var(--charcoal);}
+.meaning-item__sub{font-size:.875rem;color:var(--text-sec);line-height:1.6;margin-top:-.25rem;}
+.meaning-close{background:var(--charcoal);border-radius:var(--r-xl);padding:2.5rem 2.5rem;display:flex;align-items:center;gap:2rem;}
+.meaning-close__quote{font-family:var(--f-a);font-style:italic;font-size:1.25rem;line-height:1.55;color:rgba(250,240,226,.75);flex:1;}
+.meaning-close__quote em{color:var(--accent);font-style:italic;}
+.meaning-close__aside{flex-shrink:0;width:140px;text-align:center;}
+.meaning-close__aside-num{font-family:var(--f-d);font-style:italic;font-size:2.25rem;color:var(--accent);line-height:1;margin-bottom:.25rem;}
+.meaning-close__aside-label{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(250,240,226,.25);}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="cmp-nav">
+  <span class="cmp-nav__logo">Revenue Section · Concepts</span>
+  <div class="cmp-nav__links">
+    <a class="cmp-nav__link a" href="#option-a"><span class="cmp-nav__dot"></span> A — The Math</a>
+    <a class="cmp-nav__link b" href="#option-b"><span class="cmp-nav__dot"></span> B — The Gap</a>
+    <a class="cmp-nav__link c" href="#option-c"><span class="cmp-nav__dot"></span> C — The Range</a>
+    <a class="cmp-nav__link d" href="#option-d"><span class="cmp-nav__dot"></span> D — What It Means</a>
+  </div>
+</nav>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     OPTION A — THE MATH
+     Show the work. Each step of the calculation chain
+     builds credibility — business owners can follow the
+     logic and trust the number at the end.
+═══════════════════════════════════════════════════════ -->
+<div class="option" id="option-a">
+  <div class="option-label-bar">
+    <span class="option-label-bar__tag" style="background:#C4622D;">A</span>
+    <span class="option-label-bar__name">The Math</span>
+    <span class="option-label-bar__desc">Show the calculation chain — earn the number</span>
+  </div>
+  <div class="sec sec--cream">
+    <div class="sec__in">
+      <div class="sec-badge">
+        <span class="sec-badge__dot"><svg viewBox="0 0 12 12"><polyline points="2,9 5,6 7,8 10,4"/></svg></span>
+        <span class="sec-badge__label">Revenue Impact</span>
+      </div>
+      <div class="sec-head">
+        <span class="sec-head__num">09</span>
+        <div>
+          <h2 class="sec-head__title">What This Could <em>Mean</em></h2>
+          <p class="sec-head__sub">Here's the math — and it's conservative.</p>
+        </div>
+      </div>
+
+      <!-- Calculation chain -->
+      <div class="funnel-chain">
+        <div class="funnel-step">
+          <div class="funnel-step__label">Monthly Searches</div>
+          <div class="funnel-step__val">480</div>
+          <div class="funnel-step__sub">people/month looking for what you offer</div>
+          <div class="funnel-step__operator">×</div>
+        </div>
+        <div class="funnel-step">
+          <div class="funnel-step__label">Click-Through</div>
+          <div class="funnel-step__val">4.2%</div>
+          <div class="funnel-step__sub">realistic for a well-optimized local listing</div>
+          <div class="funnel-step__operator">=</div>
+        </div>
+        <div class="funnel-step">
+          <div class="funnel-step__label">Site Visitors</div>
+          <div class="funnel-step__val">20/mo</div>
+          <div class="funnel-step__sub">organic, local, already looking to hire</div>
+          <div class="funnel-step__operator">×</div>
+        </div>
+        <div class="funnel-step">
+          <div class="funnel-step__label">Conversion Rate</div>
+          <div class="funnel-step__val">6%</div>
+          <div class="funnel-step__sub">industry benchmark for service businesses</div>
+          <div class="funnel-step__operator">×</div>
+        </div>
+        <div class="funnel-step" style="border-right:1px solid var(--border);border-radius:0 var(--r-lg) var(--r-lg) 0;">
+          <div class="funnel-step__label">Avg. Job Value</div>
+          <div class="funnel-step__val">$1,200</div>
+          <div class="funnel-step__sub">based on your stated session pricing</div>
+        </div>
+      </div>
+
+      <!-- Result -->
+      <div class="funnel-result">
+        <div class="funnel-result__period">
+          <div class="funnel-result__amt">$960</div>
+          <div class="funnel-result__period-label">per month</div>
+        </div>
+        <div class="funnel-result__divider"></div>
+        <div class="funnel-result__period">
+          <div class="funnel-result__amt">$11,500</div>
+          <div class="funnel-result__period-label">per year</div>
+        </div>
+      </div>
+
+      <div class="funnel-assumptions">
+        <p><strong>Conservative by design.</strong> These numbers assume no repeat clients, no referrals, and no social lift — only organic search. Most clients see 20–40% better results once the site is live and indexed.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     OPTION B — THE GAP
+     Left = the money you're leaving on the table right
+     now. Right = what changes with Aspire. The contrast
+     does the selling.
+═══════════════════════════════════════════════════════ -->
+<div class="option" id="option-b">
+  <div class="option-label-bar">
+    <span class="option-label-bar__tag" style="background:#4A7B5A;">B</span>
+    <span class="option-label-bar__name">The Gap</span>
+    <span class="option-label-bar__desc">Left vs. right — what you're losing vs. what you'd gain</span>
+  </div>
+  <div class="sec sec--night">
+    <div class="sec__in">
+      <div class="sec-badge">
+        <span class="sec-badge__dot"><svg viewBox="0 0 12 12"><polyline points="2,9 5,6 7,8 10,4"/></svg></span>
+        <span class="sec-badge__label">Revenue Impact</span>
+      </div>
+      <div class="sec-head">
+        <span class="sec-head__num">09</span>
+        <div>
+          <h2 class="sec-head__title">What This Could <em>Mean</em></h2>
+          <p class="sec-head__sub">The gap between where you are and where you could be.</p>
+        </div>
+      </div>
+
+      <div class="gap-wrap">
+        <div class="gap-now">
+          <div class="gap-now__eyebrow">Today — Without a Site That Works</div>
+          <p class="gap-now__headline">480 people search for your services every month. Right now, most of them find someone else.</p>
+          <div>
+            <div class="gap-now__num">$11,500</div>
+            <div class="gap-now__sublabel">estimated annual revenue passing you by</div>
+          </div>
+        </div>
+        <div class="gap-after">
+          <div class="gap-after__eyebrow">With Aspire — Year One</div>
+          <p class="gap-after__headline">A site built to show up, earn trust, and turn visitors into bookings — built in weeks, not months.</p>
+          <div>
+            <div class="gap-after__num">+$11,500</div>
+            <div class="gap-after__sublabel">projected annual lift, conservative estimate</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="gap-bridge">
+        <div class="gap-bridge__line"></div>
+        <span class="gap-bridge__text">The difference is one website, done right.</span>
+        <div class="gap-bridge__line"></div>
+      </div>
+
+      <div class="gap-metrics">
+        <div class="gap-metric">
+          <div class="gap-metric__val">9+</div>
+          <div class="gap-metric__label" style="color:var(--text-muted);">new clients per year</div>
+        </div>
+        <div class="gap-metric">
+          <div class="gap-metric__val">76</div>
+          <div class="gap-metric__label" style="color:var(--text-muted);">more inquiries annually</div>
+        </div>
+        <div class="gap-metric">
+          <div class="gap-metric__val">4.2×</div>
+          <div class="gap-metric__label" style="color:var(--text-muted);">return on investment</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     OPTION C — THE RANGE
+     Conservative / Moderate / Optimistic. Lets skeptical
+     owners anchor on the low end while believers see the
+     full ceiling.
+═══════════════════════════════════════════════════════ -->
+<div class="option" id="option-c">
+  <div class="option-label-bar">
+    <span class="option-label-bar__tag" style="background:#8FAF8A;color:#2C3340;">C</span>
+    <span class="option-label-bar__name">The Range</span>
+    <span class="option-label-bar__desc">Conservative / moderate / optimistic — let them self-select</span>
+  </div>
+  <div class="sec sec--night">
+    <div class="sec__in">
+      <div class="sec-badge">
+        <span class="sec-badge__dot"><svg viewBox="0 0 12 12"><polyline points="2,9 5,6 7,8 10,4"/></svg></span>
+        <span class="sec-badge__label">Revenue Impact</span>
+      </div>
+      <div class="sec-head">
+        <span class="sec-head__num">09</span>
+        <div>
+          <h2 class="sec-head__title">What This Could <em>Mean</em></h2>
+          <p class="sec-head__sub">Three scenarios. All grounded. You pick which one you believe.</p>
+        </div>
+      </div>
+
+      <div class="range-hero">
+        <div class="range-hero__sub">Conservative Projection · Year One</div>
+        <div class="range-hero__num">$11,500</div>
+        <div class="range-hero__label">in new annual revenue</div>
+        <div class="range-hero__note">Based on 480 monthly local searches, 4.2% CTR, 6% site conversion, 65% close rate, $1,200 average booking value.</div>
+      </div>
+
+      <div class="range-scenarios">
+        <div class="range-card range-card--conservative">
+          <div class="range-card__tier">Conservative</div>
+          <div class="range-card__amt">$11,500</div>
+          <span class="range-card__period">per year</span>
+          <p class="range-card__desc">Organic search only. No referrals, no repeat clients, no social. The floor — and still meaningful growth.</p>
+          <div class="range-bar-wrap"><div class="range-bar"></div></div>
+        </div>
+        <div class="range-card range-card--moderate">
+          <div class="range-card__tier">Moderate</div>
+          <div class="range-card__amt">$19,200</div>
+          <span class="range-card__period">per year</span>
+          <p class="range-card__desc">Add Google Business momentum, a few repeat clients, and word-of-mouth from a site people actually share.</p>
+          <div class="range-bar-wrap"><div class="range-bar"></div></div>
+        </div>
+        <div class="range-card range-card--optimistic">
+          <div class="range-card__tier">Optimistic</div>
+          <div class="range-card__amt">$31,000</div>
+          <span class="range-card__period">per year</span>
+          <p class="range-card__desc">Full local SEO traction, GBP reviews compounding, AI search citations — the ceiling when all channels work together.</p>
+          <div class="range-bar-wrap"><div class="range-bar"></div></div>
+        </div>
+      </div>
+
+      <div class="range-callout">
+        <div class="range-callout__icon"><svg viewBox="0 0 16 16"><path d="M8 2v4l3 3"/><circle cx="8" cy="8" r="6"/></svg></div>
+        <p class="range-callout__text"><strong>We plan to the conservative number and build toward moderate.</strong> If we hit optimistic, that's a great problem to have — and we'll be there to scale with you.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     OPTION D — WHAT IT MEANS
+     Translate the abstract dollar figure into tangible,
+     human outcomes. Business owners feel numbers in their
+     business — not as spreadsheet cells.
+═══════════════════════════════════════════════════════ -->
+<div class="option" id="option-d">
+  <div class="option-label-bar">
+    <span class="option-label-bar__tag" style="background:#C4622D;">D</span>
+    <span class="option-label-bar__name">What It Means</span>
+    <span class="option-label-bar__desc">Translate the number — make $11,500 feel real</span>
+  </div>
+  <div class="sec sec--alt">
+    <div class="sec__in">
+      <div class="sec-badge">
+        <span class="sec-badge__dot"><svg viewBox="0 0 12 12"><polyline points="2,9 5,6 7,8 10,4"/></svg></span>
+        <span class="sec-badge__label">Revenue Impact</span>
+      </div>
+      <div class="sec-head">
+        <span class="sec-head__num">09</span>
+        <div>
+          <h2 class="sec-head__title">What This Could <em>Mean</em></h2>
+          <p class="sec-head__sub">Put a number on it — then make it real.</p>
+        </div>
+      </div>
+
+      <div class="meaning-anchor">
+        <div class="meaning-anchor__label">Projected Annual Revenue Lift</div>
+        <div class="meaning-anchor__num">$11,500</div>
+        <div class="meaning-anchor__period">per year — conservative</div>
+        <div class="meaning-anchor__note">Based on local search volume, your market, and comparable businesses Aspire has built for.</div>
+      </div>
+
+      <div class="meaning-grid">
+        <div class="meaning-item">
+          <div class="meaning-item__ico">
+            <svg viewBox="0 0 20 20"><path d="M10 2a4 4 0 1 0 0 8 4 4 0 0 0 0-8zM4 18a6 6 0 0 1 12 0"/></svg>
+          </div>
+          <div class="meaning-item__num"><em>9</em> new clients</div>
+          <div class="meaning-item__label">in your first year</div>
+          <p class="meaning-item__sub">People who found you on Google, liked what they saw, and booked — without you lifting a finger.</p>
+        </div>
+        <div class="meaning-item">
+          <div class="meaning-item__ico">
+            <svg viewBox="0 0 20 20"><rect x="3" y="5" width="14" height="10" rx="2"/><path d="M3 8l7 5 7-5"/></svg>
+          </div>
+          <div class="meaning-item__num"><em>76</em> inquiries</div>
+          <div class="meaning-item__label">that actually come to you</div>
+          <p class="meaning-item__sub">Real leads, in your inbox, from people already searching for exactly what you offer.</p>
+        </div>
+        <div class="meaning-item">
+          <div class="meaning-item__ico">
+            <svg viewBox="0 0 20 20"><rect x="3" y="4" width="14" height="13" rx="2"/><path d="M3 8h14M7 2v4M13 2v4"/></svg>
+          </div>
+          <div class="meaning-item__num">One <em>extra</em> booking</div>
+          <div class="meaning-item__label">every 6 weeks</div>
+          <p class="meaning-item__sub">Consistent, predictable income growth — not feast-or-famine, not depending on word of mouth alone.</p>
+        </div>
+        <div class="meaning-item">
+          <div class="meaning-item__ico">
+            <svg viewBox="0 0 20 20"><path d="M10 3v14M5 8l5-5 5 5"/></svg>
+          </div>
+          <div class="meaning-item__num">A <em>real</em> investment</div>
+          <div class="meaning-item__label">in your next chapter</div>
+          <p class="meaning-item__sub">New gear. A part-time assistant. A studio upgrade. $11,500 is the kind of number that actually changes what's possible.</p>
+        </div>
+      </div>
+
+      <div class="meaning-close">
+        <p class="meaning-close__quote">"Most of our clients break even on the website within the first <em>three bookings.</em> Everything after that is growth."</p>
+        <div class="meaning-close__aside">
+          <div class="meaning-close__aside-num">3×</div>
+          <div class="meaning-close__aside-label">typical payback window</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

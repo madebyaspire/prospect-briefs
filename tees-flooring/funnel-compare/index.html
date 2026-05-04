@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Funnel Layout Comparison — Tee's Flooring</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Unbounded:wght@700;900&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FAF0E2;
+    --bg-alt: #F2EDE6;
+    --white: #ffffff;
+    --charcoal: #2C3340;
+    --accent: #C4622D;
+    --accent-dk: #A34E1A;
+    --green: #4A7B5A;
+    --border: #E5E5E5;
+    --border-light: #EFEFEF;
+    --text-sec: #666666;
+    --text-muted: #999999;
+    --f-b: 'DM Sans', system-ui, sans-serif;
+    --f-n: 'Unbounded', system-ui, sans-serif;
+    --f-d: 'DM Serif Display', Georgia, serif;
+    --r-sm: 6px;
+    --r-md: 10px;
+    --r-lg: 14px;
+    --r-xl: 20px;
+    --r-full: 9999px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: var(--f-b); background: var(--bg); color: var(--charcoal); -webkit-font-smoothing: antialiased; }
+
+  .topbar { background: var(--white); border-bottom: 1px solid var(--border); padding: 14px 48px; display: flex; align-items: center; justify-content: space-between; }
+  .topbar__title { font-family: var(--f-b); font-size: .875rem; font-weight: 600; color: var(--text-muted); letter-spacing: .02em; }
+  .topbar__client { font-family: var(--f-b); font-size: .875rem; color: var(--charcoal); font-weight: 700; }
+
+  .page { max-width: 960px; margin: 0 auto; padding: 3.5rem 2.5rem 6rem; }
+  .page-eyebrow { font-family: var(--f-n); font-size: .5rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--accent); margin-bottom: .625rem; }
+  .page-title { font-family: var(--f-d); font-size: clamp(28px, 4vw, 42px); color: var(--charcoal); line-height: 1.15; margin-bottom: .5rem; }
+  .page-sub { font-size: .9375rem; color: var(--text-sec); line-height: 1.65; margin-bottom: 3.5rem; }
+
+  .option { margin-bottom: 4rem; }
+  .option-label { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.25rem; }
+  .option-badge { font-family: var(--f-n); font-size: .5rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center; flex-shrink: 0; }
+  .option-badge--a { background: var(--charcoal); color: var(--bg); }
+  .option-badge--b { background: var(--accent); color: #fff; }
+  .option-badge--c { background: var(--green); color: #fff; }
+  .option-name { font-family: var(--f-b); font-weight: 700; font-size: 1.0625rem; color: var(--charcoal); }
+  .option-desc { font-size: .875rem; color: var(--text-sec); line-height: 1.55; }
+  .option-divider { height: 1px; background: var(--border); margin: 3.5rem 0; }
+
+  /* ────────────────────────────────────────────────
+     OPTION A — VERTICAL STEP-DOWN
+  ──────────────────────────────────────────────── */
+  .funnel-a { background: var(--white); border: 1px solid var(--border); border-radius: var(--r-xl); overflow: hidden; }
+  .funnel-a__step { display: grid; grid-template-columns: 44px 1fr; gap: 0; border-bottom: 1px solid var(--border-light); }
+  .funnel-a__step:last-child { border-bottom: none; }
+  .funnel-a__left { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 1.75rem 0; background: var(--bg-alt); border-right: 1px solid var(--border-light); }
+  .funnel-a__num { font-family: var(--f-n); font-weight: 900; font-size: clamp(1.5rem, 3vw, 2.5rem); color: var(--charcoal); line-height: 1; }
+  .funnel-a__right { padding: 1.75rem 2rem; display: flex; flex-direction: column; justify-content: center; gap: .375rem; }
+  .funnel-a__label { font-family: var(--f-n); font-size: .5rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--text-muted); }
+  .funnel-a__sub { font-size: .9375rem; color: var(--text-sec); line-height: 1.6; }
+  .funnel-a__op { display: flex; align-items: center; justify-content: center; background: var(--bg-alt); border-right: 1px solid var(--border-light); padding: .625rem 0; }
+  .funnel-a__op-circle { width: 30px; height: 30px; border-radius: 50%; background: var(--accent); color: #fff; font-family: var(--f-n); font-size: .75rem; font-weight: 700; display: grid; place-items: center; }
+  .funnel-a__result { display: flex; align-items: center; justify-content: center; gap: 3rem; padding: 2rem 2.5rem; background: var(--accent); }
+  .funnel-a__result-amt { font-family: var(--f-n); font-weight: 900; font-size: clamp(1.75rem, 4vw, 3rem); color: #fff; line-height: 1; }
+  .funnel-a__result-period { font-family: var(--f-n); font-size: .5rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: rgba(255,255,255,.55); margin-top: .375rem; }
+  .funnel-a__result-divider { width: 1px; height: 48px; background: rgba(255,255,255,.2); }
+
+  /* ────────────────────────────────────────────────
+     OPTION B — EQUATION HEADER + CARD GRID
+  ──────────────────────────────────────────────── */
+  .funnel-b { }
+  .funnel-b__eq { font-family: var(--f-n); font-weight: 900; font-size: clamp(1.125rem, 2.5vw, 1.875rem); color: var(--charcoal); line-height: 1.3; letter-spacing: -.02em; text-align: center; padding: 2rem 2rem 1rem; background: var(--white); border: 1px solid var(--border); border-radius: var(--r-xl) var(--r-xl) 0 0; border-bottom: none; }
+  .funnel-b__eq .op { color: var(--accent); }
+  .funnel-b__eq .result { display: block; font-size: clamp(2rem, 5vw, 4rem); color: var(--accent); margin-top: .375rem; letter-spacing: -.03em; }
+  .funnel-b__eq .result-period { font-size: .5rem; letter-spacing: .16em; color: var(--text-muted); font-weight: 700; text-transform: uppercase; }
+  .funnel-b__cards { display: grid; grid-template-columns: repeat(5, 1fr); border: 1px solid var(--border); border-radius: 0 0 var(--r-xl) var(--r-xl); border-top: 2px solid var(--border-light); overflow: hidden; }
+  .funnel-b__card { padding: 1.375rem 1.25rem 1.5rem; background: var(--white); border-right: 1px solid var(--border-light); }
+  .funnel-b__card:last-child { border-right: none; }
+  .funnel-b__card-val { font-family: var(--f-n); font-weight: 700; font-size: clamp(.875rem, 1.5vw, 1.125rem); color: var(--charcoal); line-height: 1; margin-bottom: .5rem; }
+  .funnel-b__card-label { font-family: var(--f-n); font-size: .45rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); margin-bottom: .4rem; }
+  .funnel-b__card-sub { font-size: .75rem; color: var(--text-muted); line-height: 1.5; }
+
+  /* ────────────────────────────────────────────────
+     OPTION C — THREE INPUTS, ONE OUTPUT
+  ──────────────────────────────────────────────── */
+  .funnel-c { display: grid; grid-template-columns: 1fr 56px 1fr 56px 1fr 56px 1fr; align-items: stretch; gap: 0; }
+  .funnel-c__cell { background: var(--white); border: 1px solid var(--border); border-radius: var(--r-xl); padding: 2rem 1.75rem 2rem; display: flex; flex-direction: column; gap: .5rem; }
+  .funnel-c__cell--result { background: var(--charcoal); border-color: var(--charcoal); }
+  .funnel-c__op { display: flex; align-items: center; justify-content: center; }
+  .funnel-c__op-circle { width: 36px; height: 36px; border-radius: 50%; background: var(--accent); color: #fff; font-family: var(--f-n); font-size: .875rem; font-weight: 700; display: grid; place-items: center; }
+  .funnel-c__op-circle--eq { background: var(--charcoal); }
+  .funnel-c__label { font-family: var(--f-n); font-size: .45rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--text-muted); }
+  .funnel-c__cell--result .funnel-c__label { color: rgba(255,255,255,.4); }
+  .funnel-c__val { font-family: var(--f-n); font-weight: 900; font-size: clamp(1.5rem, 3vw, 2.5rem); color: var(--charcoal); line-height: 1; }
+  .funnel-c__cell--result .funnel-c__val { color: var(--bg); }
+  .funnel-c__sub { font-size: .8125rem; color: var(--text-sec); line-height: 1.55; margin-top: .25rem; }
+  .funnel-c__cell--result .funnel-c__sub { color: rgba(250,240,226,.45); }
+  .funnel-c__note { font-size: .75rem; font-style: italic; color: var(--text-muted); line-height: 1.5; border-top: 1px solid var(--border-light); padding-top: .75rem; margin-top: auto; }
+  .funnel-c__cell--result .funnel-c__note { color: rgba(250,240,226,.3); border-top-color: rgba(250,240,226,.1); }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar__title">Internal Review — Funnel Layout Options</div>
+  <div class="topbar__client">Tee's Flooring · Section 07</div>
+</div>
+
+<div class="page">
+
+  <p class="page-eyebrow">Design Comparison</p>
+  <h1 class="page-title">Three Ways to Show the Math</h1>
+  <p class="page-sub">Same data, three different layouts. Pick the one that reads clearest for a business owner.</p>
+
+
+  <!-- ════════════════════════════════════════
+       OPTION A — VERTICAL STEP-DOWN
+  ════════════════════════════════════════ -->
+  <div class="option">
+    <div class="option-label">
+      <div class="option-badge option-badge--a">A</div>
+      <div>
+        <div class="option-name">Vertical Step-Down</div>
+        <div class="option-desc">Math reads top to bottom. Operators left-aligned, numbers prominent, support copy to the right. No clipping, perfect alignment.</div>
+      </div>
+    </div>
+
+    <div class="funnel-a">
+      <div class="funnel-a__step">
+        <div class="funnel-a__left">
+          <div class="funnel-a__num">2,500</div>
+        </div>
+        <div class="funnel-a__right">
+          <div class="funnel-a__label">Monthly Searches</div>
+          <div class="funnel-a__sub">People searching for flooring services in the Columbus metro area every month.</div>
+        </div>
+      </div>
+
+      <div class="funnel-a__step">
+        <div class="funnel-a__op"><div class="funnel-a__op-circle">×</div></div>
+        <div></div>
+      </div>
+
+      <div class="funnel-a__step">
+        <div class="funnel-a__left">
+          <div class="funnel-a__num">8%</div>
+        </div>
+        <div class="funnel-a__right">
+          <div class="funnel-a__label">Click-Through Rate</div>
+          <div class="funnel-a__sub">Realistic for a well-optimized listing ranking in the top 3 local results.</div>
+        </div>
+      </div>
+
+      <div class="funnel-a__step">
+        <div class="funnel-a__op"><div class="funnel-a__op-circle">=</div></div>
+        <div></div>
+      </div>
+
+      <div class="funnel-a__step">
+        <div class="funnel-a__left">
+          <div class="funnel-a__num" style="font-size:clamp(1.125rem,2.25vw,1.75rem);">200/mo</div>
+        </div>
+        <div class="funnel-a__right">
+          <div class="funnel-a__label">Site Visitors</div>
+          <div class="funnel-a__sub">Organic, local, already searching for what you do — not random traffic.</div>
+        </div>
+      </div>
+
+      <div class="funnel-a__step">
+        <div class="funnel-a__op"><div class="funnel-a__op-circle">×</div></div>
+        <div></div>
+      </div>
+
+      <div class="funnel-a__step">
+        <div class="funnel-a__left">
+          <div class="funnel-a__num">3%</div>
+        </div>
+        <div class="funnel-a__right">
+          <div class="funnel-a__label">Conversion Rate</div>
+          <div class="funnel-a__sub">Industry benchmark for a well-built local service site with clear CTAs.</div>
+        </div>
+      </div>
+
+      <div class="funnel-a__step">
+        <div class="funnel-a__op"><div class="funnel-a__op-circle">×</div></div>
+        <div></div>
+      </div>
+
+      <div class="funnel-a__step">
+        <div class="funnel-a__left">
+          <div class="funnel-a__num" style="font-size:clamp(1rem,2vw,1.625rem);">$2,800</div>
+        </div>
+        <div class="funnel-a__right">
+          <div class="funnel-a__label">Avg. Job Value</div>
+          <div class="funnel-a__sub">Conservative for Central Ohio residential flooring installs.</div>
+        </div>
+      </div>
+
+      <div class="funnel-a__result">
+        <div>
+          <div class="funnel-a__result-amt">$16,800</div>
+          <div class="funnel-a__result-period">per month</div>
+        </div>
+        <div class="funnel-a__result-divider"></div>
+        <div>
+          <div class="funnel-a__result-amt">$200K</div>
+          <div class="funnel-a__result-period">per year</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option-divider"></div>
+
+
+  <!-- ════════════════════════════════════════
+       OPTION B — EQUATION HEADER + CARD GRID
+  ════════════════════════════════════════ -->
+  <div class="option">
+    <div class="option-label">
+      <div class="option-badge option-badge--b">B</div>
+      <div>
+        <div class="option-name">Equation Header + Cards</div>
+        <div class="option-desc">The full equation set in large type at the top — result is the hero. Cards below explain each variable. No alignment issues because the equation is just text.</div>
+      </div>
+    </div>
+
+    <div class="funnel-b">
+      <div class="funnel-b__eq">
+        2,500 <span class="op">×</span> 8% <span class="op">×</span> 200 <span class="op">×</span> 3% <span class="op">×</span> $2,800
+        <span class="result">$200K <span class="result-period">per year</span></span>
+      </div>
+      <div class="funnel-b__cards">
+        <div class="funnel-b__card">
+          <div class="funnel-b__card-label">Monthly Searches</div>
+          <div class="funnel-b__card-val">2,500</div>
+          <div class="funnel-b__card-sub">People/month searching for flooring in Columbus metro</div>
+        </div>
+        <div class="funnel-b__card">
+          <div class="funnel-b__card-label">Click-Through</div>
+          <div class="funnel-b__card-val">8%</div>
+          <div class="funnel-b__card-sub">Realistic for a top-3 local listing</div>
+        </div>
+        <div class="funnel-b__card">
+          <div class="funnel-b__card-label">Site Visitors</div>
+          <div class="funnel-b__card-val">200/mo</div>
+          <div class="funnel-b__card-sub">Organic, local, already looking to hire</div>
+        </div>
+        <div class="funnel-b__card">
+          <div class="funnel-b__card-label">Conversion Rate</div>
+          <div class="funnel-b__card-val">3%</div>
+          <div class="funnel-b__card-sub">Industry benchmark for local service sites</div>
+        </div>
+        <div class="funnel-b__card">
+          <div class="funnel-b__card-label">Avg. Job Value</div>
+          <div class="funnel-b__card-val">$2,800</div>
+          <div class="funnel-b__card-sub">Conservative for Central Ohio installs</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option-divider"></div>
+
+
+  <!-- ════════════════════════════════════════
+       OPTION C — THREE INPUTS, ONE OUTPUT
+  ════════════════════════════════════════ -->
+  <div class="option">
+    <div class="option-label">
+      <div class="option-badge option-badge--c">C</div>
+      <div>
+        <div class="option-name">Three Inputs → One Output</div>
+        <div class="option-desc">Collapse 5 variables to 3 visible ones. Wide columns, breathing room, nothing gets clipped. Operators are clearly visible. Result card is the fourth column.</div>
+      </div>
+    </div>
+
+    <div class="funnel-c">
+      <div class="funnel-c__cell">
+        <div class="funnel-c__label">Monthly Searches</div>
+        <div class="funnel-c__val">2,500</div>
+        <div class="funnel-c__sub">People/month in Columbus metro already looking for flooring</div>
+        <div class="funnel-c__note">× 8% click-through for a top-3 local listing = 200 qualified visitors/month</div>
+      </div>
+      <div class="funnel-c__op"><div class="funnel-c__op-circle">×</div></div>
+      <div class="funnel-c__cell">
+        <div class="funnel-c__label">Conversion Rate</div>
+        <div class="funnel-c__val">3%</div>
+        <div class="funnel-c__sub">Industry benchmark for a well-built local service site</div>
+        <div class="funnel-c__note">= ~6 new customers per month from organic search alone</div>
+      </div>
+      <div class="funnel-c__op"><div class="funnel-c__op-circle">×</div></div>
+      <div class="funnel-c__cell">
+        <div class="funnel-c__label">Avg. Job Value</div>
+        <div class="funnel-c__val">$2,800</div>
+        <div class="funnel-c__sub">Conservative for Central Ohio residential installs</div>
+        <div class="funnel-c__note">Low end — Columbus installs commonly run $1,800–$4,500</div>
+      </div>
+      <div class="funnel-c__op"><div class="funnel-c__op-circle funnel-c__op-circle--eq">=</div></div>
+      <div class="funnel-c__cell funnel-c__cell--result">
+        <div class="funnel-c__label">Additional Revenue</div>
+        <div class="funnel-c__val">$200K</div>
+        <div class="funnel-c__sub">Per year — conservative estimate</div>
+        <div class="funnel-c__note">GBP, referrals, and repeat clients modeled as zero — pure upside</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

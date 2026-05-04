@@ -1,0 +1,2230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>B Clean Carpet — Competitive Analysis & Design Direction | Aspire Digital</title>
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:title" content="B Clean Carpet — Competitive Analysis & Design Direction">
+<meta property="og:description" content="Research readout: what the competition is doing, what the best-in-class sites do right, and where we take B Clean.">
+<meta property="og:url" content="https://yoursite.madebyaspire.com/bclean-carpet/competitive-analysis/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Quicksand:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=recoleta@300,400,500,600,700&f[]=general-sans@400,500,600,700&f[]=clash-display@500,600,700&f[]=satoshi@300,400,500,700,900&f[]=cabinet-grotesk@400,500,700&f[]=erode@400,500,700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FAF0E2;
+    --bg-alt: #F2EDE6;
+    --bg-card: #FFFFFF;
+    --text: #2C3340;
+    --text-sec: #666666;
+    --text-muted: #999999;
+    --accent: #C4622D;
+    --accent-dark: #B53D00;
+    --border: #E5E5E5;
+    --border-light: #F0F0F0;
+    --green: #4A7B5A;
+    --hero-green: #8FAF8A;
+    --white: #ffffff;
+    --font: 'DM Sans', system-ui, -apple-system, sans-serif;
+    --font-head: 'Montserrat', system-ui, sans-serif;
+    --font-accent: 'Playfair Display', Georgia, serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 32px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* Header */
+  .brand-bar {
+    background: var(--text);
+    color: var(--bg);
+    padding: 14px 0;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .brand-bar .wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .brand-bar .logo {
+    font-family: var(--font-head);
+    font-weight: 700;
+    letter-spacing: 0.12em;
+  }
+  .brand-bar .logo .italic {
+    font-family: var(--font-accent);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--accent);
+    text-transform: none;
+    letter-spacing: 0;
+  }
+  .brand-bar .tag { opacity: 0.7; }
+
+  /* Hero */
+  .hero {
+    padding: 90px 0 70px;
+    border-bottom: 1px solid var(--border);
+  }
+  .hero .eyebrow {
+    font-family: var(--font-head);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 24px;
+  }
+  .hero h1 {
+    font-family: var(--font-head);
+    font-size: clamp(40px, 6vw, 72px);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+  }
+  .hero h1 .italic {
+    font-family: var(--font-accent);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--accent);
+  }
+  .hero .lede {
+    font-size: 20px;
+    line-height: 1.5;
+    color: var(--text-sec);
+    max-width: 700px;
+    margin-bottom: 30px;
+  }
+  .hero .meta {
+    display: flex;
+    gap: 32px;
+    font-size: 13px;
+    color: var(--text-muted);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  .hero .meta strong {
+    display: block;
+    color: var(--text);
+    font-weight: 700;
+    margin-top: 4px;
+    letter-spacing: normal;
+    text-transform: none;
+    font-size: 14px;
+  }
+
+  /* Section */
+  section.content { padding: 70px 0; border-bottom: 1px solid var(--border); }
+  section.content.light { background: var(--bg-alt); }
+  .section-header { max-width: 780px; margin-bottom: 50px; }
+  .section-header .num {
+    font-family: var(--font-accent);
+    font-style: italic;
+    color: var(--accent);
+    font-size: 20px;
+    margin-bottom: 10px;
+    display: block;
+  }
+  .section-header h2 {
+    font-family: var(--font-head);
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+    margin-bottom: 16px;
+  }
+  .section-header h2 .italic {
+    font-family: var(--font-accent);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--accent);
+  }
+  .section-header p {
+    font-size: 17px;
+    color: var(--text-sec);
+    line-height: 1.6;
+  }
+
+  /* Competitor cards */
+  .grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+  .grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+  @media (max-width: 900px) {
+    .grid-3, .grid-2 { grid-template-columns: 1fr; }
+  }
+  .site-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .site-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 40px -20px rgba(44, 51, 64, 0.3);
+  }
+  .site-card .shot {
+    background: var(--bg-alt);
+    aspect-ratio: 16/10;
+    overflow: hidden;
+    position: relative;
+  }
+  .site-card .shot img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+  }
+  .site-card .body { padding: 22px 24px 24px; flex: 1; display: flex; flex-direction: column; }
+  .site-card h3 {
+    font-family: var(--font-head);
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    letter-spacing: -0.01em;
+  }
+  .site-card .url {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 14px;
+    letter-spacing: 0.02em;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    width: fit-content;
+    transition: color 0.15s;
+  }
+  a.url:hover { color: var(--accent); text-decoration: none; }
+  a.url::after {
+    content: "↗";
+    font-size: 11px;
+    opacity: 0.6;
+    transition: transform 0.15s, opacity 0.15s;
+  }
+  a.url:hover::after { opacity: 1; transform: translate(2px, -2px); }
+  .pick .url { font-size: 13px; }
+  .site-card .palette {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 14px;
+  }
+  .site-card .swatch {
+    width: 18px; height: 18px; border-radius: 50%;
+    border: 1px solid rgba(0,0,0,0.08);
+  }
+  .site-card .takeaway {
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--text-sec);
+  }
+  .site-card .tag {
+    display: inline-block;
+    font-family: var(--font-head);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 4px 9px;
+    border-radius: 3px;
+    margin-bottom: 14px;
+    align-self: flex-start;
+  }
+  .tag-best { background: var(--green); color: white; }
+  .tag-avoid { background: #e8d4d0; color: #8a3b2d; }
+  .tag-steal { background: var(--accent); color: white; }
+  .tag-template { background: var(--text); color: var(--bg); }
+
+  /* Best practices */
+  .practice-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  @media (max-width: 800px) { .practice-grid { grid-template-columns: 1fr; } }
+  .practice {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    padding: 24px 26px;
+    border-radius: 4px;
+  }
+  .practice .num {
+    font-family: var(--font-accent);
+    font-style: italic;
+    color: var(--accent);
+    font-size: 28px;
+    line-height: 1;
+    margin-bottom: 12px;
+  }
+  .practice h4 {
+    font-family: var(--font-head);
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: -0.005em;
+  }
+  .practice p {
+    font-size: 14px;
+    color: var(--text-sec);
+    line-height: 1.55;
+  }
+
+  /* Mimic / Avoid columns */
+  .compare {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  @media (max-width: 800px) { .compare { grid-template-columns: 1fr; } }
+  .compare-col {
+    padding: 28px 30px;
+    border-radius: 6px;
+  }
+  .compare-col.mimic {
+    background: #e8efe9;
+    border: 1px solid #c8d8ca;
+  }
+  .compare-col.avoid {
+    background: #f2e3df;
+    border: 1px solid #e0c6bf;
+  }
+  .compare-col h3 {
+    font-family: var(--font-head);
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 18px;
+  }
+  .compare-col.mimic h3 { color: var(--green); }
+  .compare-col.avoid h3 { color: #8a3b2d; }
+  .compare-col ul { list-style: none; }
+  .compare-col li {
+    padding: 10px 0;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--text);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    display: flex;
+    gap: 12px;
+  }
+  .compare-col li:last-child { border: none; }
+  .compare-col li::before {
+    content: "";
+    flex-shrink: 0;
+    width: 18px; height: 18px;
+    border-radius: 50%;
+    margin-top: 2px;
+  }
+  .compare-col.mimic li::before { background: var(--green); content: "✓"; color: white; font-weight: bold; font-size: 11px; display: flex; align-items: center; justify-content: center; }
+  .compare-col.avoid li::before { background: #a8493a; content: "✕"; color: white; font-weight: bold; font-size: 11px; display: flex; align-items: center; justify-content: center; }
+
+  /* Combined Palette + Type cards */
+  .direction {
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 32px;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    min-height: 540px;
+    border: 1px solid var(--border);
+  }
+  @media (max-width: 960px) { .direction { grid-template-columns: 1fr; } }
+
+  .direction .stage {
+    padding: 48px 52px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .direction .stage .opt-tag {
+    display: inline-block;
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    border-radius: 3px;
+    margin-bottom: 28px;
+    align-self: flex-start;
+  }
+  .direction .stage .display {
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.04;
+    letter-spacing: -0.02em;
+    margin-bottom: 18px;
+  }
+  .direction .stage .sub {
+    font-size: 17px;
+    line-height: 1.5;
+    margin-bottom: 26px;
+    max-width: 480px;
+  }
+  .direction .stage .body-sample {
+    font-size: 15px;
+    line-height: 1.65;
+    margin-bottom: 28px;
+    max-width: 500px;
+    opacity: 0.85;
+  }
+  .direction .stage .mock-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 24px;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    align-self: flex-start;
+    border: none;
+    cursor: default;
+  }
+
+  .direction .meta {
+    background: var(--bg-card);
+    padding: 40px 40px 36px;
+    border-left: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  @media (max-width: 960px) { .direction .meta { border-left: none; border-top: 1px solid var(--border); } }
+  .direction .meta h3 {
+    font-family: var(--font-head);
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin-bottom: 4px;
+  }
+  .direction .meta h3 .italic {
+    font-family: var(--font-accent);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--accent);
+  }
+  .direction .meta .vibe {
+    font-size: 12px;
+    color: var(--text-muted);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .direction .meta .desc {
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--text-sec);
+  }
+
+  .meta-block {
+    padding-top: 18px;
+    border-top: 1px solid var(--border-light);
+  }
+  .meta-block h5 {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text);
+    margin-bottom: 12px;
+  }
+  .meta-block .swatch-row {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 10px;
+  }
+  .meta-block .swatch-row .sw {
+    width: 26px; height: 26px;
+    border-radius: 4px;
+    border: 1px solid rgba(0,0,0,0.08);
+    flex-shrink: 0;
+  }
+  .meta-block .hex-list {
+    font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+    font-size: 11px;
+    color: var(--text-muted);
+    letter-spacing: 0.02em;
+    line-height: 1.5;
+  }
+  .meta-block .font-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    font-size: 13px;
+  }
+  .meta-block .font-row + .font-row { border-top: 1px solid var(--border-light); }
+  .meta-block .font-row strong {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    color: var(--text);
+  }
+  .meta-block .font-row span {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-muted);
+    font-size: 12px;
+  }
+  .meta-block .logo-note {
+    background: var(--bg-alt);
+    border-radius: 4px;
+    padding: 10px 12px;
+    font-size: 12px;
+    line-height: 1.5;
+    color: var(--text-sec);
+    margin-top: 10px;
+    border-left: 2px solid #00A8B0;
+  }
+  .meta-block .logo-note strong { color: var(--text); }
+  .meta-block .ratio-row {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    padding: 5px 0;
+  }
+  .meta-block .ratio-row span:first-child { color: var(--text-sec); }
+  .meta-block .ratio-row .pass {
+    font-weight: 700;
+    color: #2d7a3d;
+    background: #e5f2e8;
+    padding: 1px 7px;
+    border-radius: 3px;
+    font-size: 11px;
+  }
+  .meta-block .ratio-row .warn {
+    font-weight: 700;
+    color: #8a5d00;
+    background: #faf0d3;
+    padding: 1px 7px;
+    border-radius: 3px;
+    font-size: 11px;
+  }
+
+  /* Direction A — Warm Editorial */
+  .direction.a .stage { background: #FAF6EC; color: #2A3540; }
+  .direction.a .stage .opt-tag { background: #2A3540; color: #FAF6EC; }
+  .direction.a .stage .display { font-family: 'Recoleta', 'Fraunces', Georgia, serif; font-weight: 400; }
+  .direction.a .stage .display em { font-style: italic; color: #B86A3F; font-weight: 500; }
+  .direction.a .stage .sub { font-family: 'Outfit', sans-serif; font-weight: 500; }
+  .direction.a .stage .body-sample { font-family: 'Outfit', sans-serif; font-weight: 400; }
+  .direction.a .stage .mock-cta { background: #0A4F5C; color: #FAF6EC; font-family: 'Outfit', sans-serif; }
+
+  /* Direction B — Premium Dark */
+  .direction.b .stage { background: #1C2329; color: #F4EFE3; }
+  .direction.b .stage .opt-tag { background: #00A8B0; color: #FFFFFF; }
+  .direction.b .stage .display { font-family: 'Clash Display', sans-serif; font-weight: 600; }
+  .direction.b .stage .display em { font-style: normal; color: #00A8B0; }
+  .direction.b .stage .sub { font-family: 'Satoshi', sans-serif; font-weight: 500; color: #D6D1C3; }
+  .direction.b .stage .body-sample { font-family: 'Satoshi', sans-serif; font-weight: 400; color: #B8B3A5; }
+  .direction.b .stage .mock-cta { background: #00A8B0; color: #0E1519; font-family: 'Satoshi', sans-serif; font-weight: 700; }
+
+  /* Direction C — Clean Modern Trust */
+  .direction.c .stage { background: #FCFAF6; color: #2A3540; }
+  .direction.c .stage .opt-tag { background: #0A4F5C; color: #FCFAF6; }
+  .direction.c .stage .display { font-family: 'Outfit', sans-serif; font-weight: 700; letter-spacing: -0.025em; }
+  .direction.c .stage .display em { font-style: italic; color: #0A4F5C; font-family: 'Recoleta', Georgia, serif; font-weight: 500; }
+  .direction.c .stage .sub { font-family: 'Outfit', sans-serif; font-weight: 500; }
+  .direction.c .stage .body-sample { font-family: 'Outfit', sans-serif; font-weight: 400; }
+  .direction.c .stage .mock-cta { background: #0A4F5C; color: #FCFAF6; font-family: 'Outfit', sans-serif; }
+
+  /* ADA+SEO banner */
+  .std-banner {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 30px 36px;
+    margin-bottom: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  @media (max-width: 800px) { .std-banner { grid-template-columns: 1fr; } }
+  .std-banner .std {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .std-banner .std .head {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  .std-banner .std strong {
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--text);
+  }
+  .std-banner .std p {
+    font-size: 13px;
+    color: var(--text-sec);
+    line-height: 1.5;
+  }
+
+  /* Selected badge */
+  .direction .meta .selected-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 11px;
+    background: #2d7a3d;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    border-radius: 3px;
+    margin-bottom: 14px;
+    align-self: flex-start;
+  }
+  .direction.locked { outline: 3px solid #2d7a3d; outline-offset: -1px; }
+
+  /* Locked direction section */
+  .locked-hero {
+    background: linear-gradient(135deg, #0A4F5C 0%, #072B33 100%);
+    color: #FCFAF6;
+    padding: 60px 56px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+  }
+  .locked-hero::before {
+    content: "";
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(0,168,176,0.25) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .locked-hero .stamp {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    background: #00A8B0;
+    color: #072B33;
+    font-family: 'Outfit', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    border-radius: 3px;
+    margin-bottom: 24px;
+  }
+  .locked-hero h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(32px, 4.5vw, 56px);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 18px;
+    position: relative;
+  }
+  .locked-hero h3 .italic {
+    font-family: 'Recoleta', Georgia, serif;
+    font-style: italic;
+    font-weight: 500;
+    color: #00A8B0;
+  }
+  .locked-hero p {
+    font-family: 'Outfit', sans-serif;
+    font-size: 17px;
+    line-height: 1.55;
+    max-width: 720px;
+    opacity: 0.9;
+    margin-bottom: 14px;
+    position: relative;
+  }
+
+  .pillars {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+  @media (max-width: 900px) { .pillars { grid-template-columns: 1fr; } }
+  .pillar {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-top: 3px solid #00A8B0;
+    border-radius: 4px;
+    padding: 24px 26px;
+  }
+  .pillar .source {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 10px;
+  }
+  .pillar h4 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin-bottom: 8px;
+  }
+  .pillar h4 em {
+    font-family: 'Recoleta', serif;
+    font-style: italic;
+    color: #0A4F5C;
+    font-weight: 500;
+  }
+  .pillar p {
+    font-family: 'Outfit', sans-serif;
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--text-sec);
+  }
+
+  /* Page rhythm visualization */
+  .rhythm-wrap { margin-top: 24px; }
+  .rhythm-wrap h4 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin-bottom: 8px;
+  }
+  .rhythm-wrap h4 .italic {
+    font-family: 'Recoleta', serif;
+    font-style: italic;
+    color: #0A4F5C;
+    font-weight: 500;
+  }
+  .rhythm-wrap .rhythm-intro {
+    font-family: 'Outfit', sans-serif;
+    font-size: 15px;
+    color: var(--text-sec);
+    margin-bottom: 24px;
+    max-width: 720px;
+    line-height: 1.55;
+  }
+  .rhythm {
+    max-width: 720px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+  }
+  .rhythm-row {
+    display: grid;
+    grid-template-columns: 120px 1fr auto;
+    align-items: center;
+    padding: 16px 24px;
+    gap: 24px;
+    font-family: 'Outfit', sans-serif;
+  }
+  .rhythm-row.dark {
+    background: #1C2329;
+    color: #FCFAF6;
+  }
+  .rhythm-row.light {
+    background: #FCFAF6;
+    color: #2A3540;
+  }
+  .rhythm-row .tone {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    opacity: 0.7;
+  }
+  .rhythm-row.dark .tone { color: #00A8B0; opacity: 1; }
+  .rhythm-row.light .tone { color: #0A4F5C; opacity: 1; }
+  .rhythm-row .section-name {
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+  .rhythm-row .desc {
+    font-size: 13px;
+    opacity: 0.7;
+    text-align: right;
+  }
+  @media (max-width: 700px) {
+    .rhythm-row { grid-template-columns: 1fr; gap: 4px; padding: 14px 18px; }
+    .rhythm-row .desc { text-align: left; }
+  }
+
+  /* Brand summary */
+  .brand-summary {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 32px 36px;
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  @media (max-width: 800px) { .brand-summary { grid-template-columns: 1fr; } }
+  .brand-summary h5 {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 14px;
+  }
+  .brand-summary .tokens {
+    display: grid;
+    gap: 10px;
+  }
+  .brand-summary .token-row {
+    display: grid;
+    grid-template-columns: 28px 1fr auto;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 13px;
+  }
+  .brand-summary .token-row .chip {
+    width: 28px; height: 28px;
+    border-radius: 4px;
+    border: 1px solid rgba(0,0,0,0.1);
+  }
+  .brand-summary .token-row strong { font-weight: 600; color: var(--text); }
+  .brand-summary .token-row .role { font-size: 11px; color: var(--text-muted); }
+  .brand-summary .token-row .hex {
+    font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+    font-size: 11px;
+    color: var(--text-muted);
+  }
+  .brand-summary .font-specimen {
+    padding: 18px;
+    background: var(--bg-alt);
+    border-radius: 4px;
+    margin-bottom: 12px;
+  }
+  .brand-summary .font-specimen .name {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+  }
+  .brand-summary .font-specimen.outfit .sample {
+    font-family: 'Outfit', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--text);
+  }
+  .brand-summary .font-specimen.recoleta .sample {
+    font-family: 'Recoleta', Georgia, serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 26px;
+    color: #0A4F5C;
+  }
+
+  /* Established brand block */
+  .established {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 48px;
+    align-items: center;
+  }
+  @media (max-width: 860px) { .established { grid-template-columns: 1fr; } }
+  .established .logo-frame {
+    background: #ffffff;
+    border: 1px solid var(--border-light);
+    border-radius: 4px;
+    padding: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .established .logo-frame img { max-width: 100%; height: auto; }
+  .established h3 {
+    font-family: var(--font-head);
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin-bottom: 14px;
+  }
+  .established p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--text-sec);
+    margin-bottom: 22px;
+  }
+  .established .brand-swatches {
+    display: grid;
+    gap: 10px;
+  }
+  .brand-swatch {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 14px;
+    background: var(--bg-alt);
+    border-radius: 4px;
+  }
+  .brand-swatch .chip {
+    width: 48px; height: 48px;
+    border-radius: 4px;
+    flex-shrink: 0;
+    border: 1px solid rgba(0,0,0,0.1);
+  }
+  .brand-swatch .meta strong {
+    display: block;
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 2px;
+  }
+  .brand-swatch .meta .hex {
+    font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+    font-size: 12px;
+    color: var(--text-muted);
+    letter-spacing: 0.05em;
+  }
+  .brand-swatch .meta .role {
+    font-size: 12px;
+    color: var(--text-sec);
+    margin-top: 2px;
+  }
+
+
+  .palette-option .body {
+    padding: 22px 26px 26px;
+  }
+  .palette-option h3 {
+    font-family: var(--font-head);
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin-bottom: 6px;
+  }
+  .palette-option h3 .italic {
+    font-family: var(--font-accent);
+    font-style: italic;
+    color: var(--accent);
+    font-weight: 400;
+  }
+  .palette-option .vibe {
+    font-size: 13px;
+    color: var(--text-muted);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .palette-option p {
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--text-sec);
+    margin-bottom: 14px;
+  }
+  .palette-option .fonts {
+    padding-top: 14px;
+    border-top: 1px solid var(--border-light);
+    font-size: 13px;
+    color: var(--text-sec);
+  }
+  .palette-option .fonts strong {
+    display: block;
+    color: var(--text);
+    font-family: var(--font-head);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 6px;
+  }
+
+  /* Structure list */
+  .structure {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 36px 40px;
+  }
+  .structure-item {
+    display: flex;
+    gap: 22px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--border-light);
+    align-items: flex-start;
+  }
+  .structure-item:last-child { border: none; }
+  .structure-item .n {
+    font-family: var(--font-accent);
+    font-style: italic;
+    color: var(--accent);
+    font-size: 22px;
+    flex-shrink: 0;
+    min-width: 40px;
+  }
+  .structure-item h4 {
+    font-family: var(--font-head);
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    letter-spacing: -0.005em;
+  }
+  .structure-item p {
+    font-size: 14px;
+    color: var(--text-sec);
+    line-height: 1.55;
+  }
+
+  /* Picks */
+  .picks-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  @media (max-width: 900px) { .picks-wrap { grid-template-columns: 1fr; } }
+  .pick {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .pick .shot {
+    aspect-ratio: 16/10;
+    background: var(--bg-alt);
+    overflow: hidden;
+  }
+  .pick .shot img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
+  .pick .body { padding: 28px 30px; }
+  .pick .rank {
+    font-family: var(--font-head);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 10px;
+  }
+  .pick h3 {
+    font-family: var(--font-head);
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+    margin-bottom: 10px;
+  }
+  .pick h3 .italic {
+    font-family: var(--font-accent);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--accent);
+  }
+  .pick .url {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 18px;
+  }
+  .pick .steal h5 {
+    font-family: var(--font-head);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 6px;
+    margin-top: 14px;
+  }
+  .pick .steal p {
+    font-size: 14.5px;
+    color: var(--text);
+    line-height: 1.55;
+    margin-bottom: 4px;
+  }
+
+  /* Spinza deep dive */
+  .spinza-hero-card {
+    background: linear-gradient(135deg, #1F3D2B 0%, #0F2318 100%);
+    color: #F4EFE3;
+    border-radius: 8px;
+    padding: 48px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  @media (max-width: 900px) { .spinza-hero-card { grid-template-columns: 1fr; padding: 36px; } }
+  .spinza-hero-card .tag {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 5px 11px;
+    background: #FFC940;
+    color: #1F3D2B;
+    border-radius: 3px;
+    margin-bottom: 18px;
+  }
+  .spinza-hero-card h3 {
+    font-family: var(--font-head);
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+    margin-bottom: 14px;
+  }
+  .spinza-hero-card h3 .italic {
+    font-family: var(--font-accent);
+    font-style: italic;
+    font-weight: 400;
+    color: #FFC940;
+  }
+  .spinza-hero-card p {
+    font-size: 15px;
+    line-height: 1.6;
+    opacity: 0.88;
+    margin-bottom: 12px;
+  }
+  .spinza-hero-card .shot {
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+  .spinza-hero-card .shot img { width: 100%; display: block; }
+
+  .patterns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+  }
+  @media (max-width: 900px) { .patterns { grid-template-columns: 1fr; } }
+  .pattern {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .pattern .shot {
+    aspect-ratio: 16/10;
+    background: var(--bg-alt);
+    overflow: hidden;
+  }
+  .pattern .shot img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
+  .pattern .body { padding: 26px 30px 28px; }
+  .pattern .label {
+    font-family: var(--font-head);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 10px;
+  }
+  .pattern h4 {
+    font-family: var(--font-head);
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+    margin-bottom: 10px;
+  }
+  .pattern h4 .italic {
+    font-family: var(--font-accent);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--accent);
+  }
+  .pattern p {
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: var(--text-sec);
+    margin-bottom: 14px;
+  }
+  .pattern .adapt {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border-light);
+  }
+  .pattern .adapt strong {
+    display: block;
+    font-family: var(--font-head);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 6px;
+  }
+  .pattern .adapt span {
+    font-size: 14px;
+    color: var(--text);
+    line-height: 1.55;
+  }
+
+  .scroll-anim-callout {
+    background: linear-gradient(135deg, #2A3540 0%, #1C2329 100%);
+    color: var(--bg);
+    padding: 40px 44px;
+    border-radius: 6px;
+    margin-top: 32px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 32px;
+    align-items: center;
+  }
+  @media (max-width: 800px) { .scroll-anim-callout { grid-template-columns: 1fr; } }
+  .scroll-anim-callout .icon {
+    width: 64px; height: 64px;
+    border-radius: 50%;
+    background: #00A8B0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-accent);
+    font-style: italic;
+    font-size: 34px;
+    color: white;
+    flex-shrink: 0;
+  }
+  .scroll-anim-callout h4 {
+    font-family: var(--font-head);
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin-bottom: 8px;
+  }
+  .scroll-anim-callout h4 .italic {
+    font-family: var(--font-accent);
+    font-style: italic;
+    font-weight: 400;
+    color: #00A8B0;
+  }
+  .scroll-anim-callout p {
+    font-size: 15px;
+    line-height: 1.6;
+    opacity: 0.9;
+  }
+
+  /* CTA */
+  .cta {
+    text-align: center;
+    padding: 90px 0;
+    background: var(--text);
+    color: var(--bg);
+  }
+  .cta h2 {
+    font-family: var(--font-head);
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 16px;
+    letter-spacing: -0.015em;
+  }
+  .cta h2 .italic {
+    font-family: var(--font-accent);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--accent);
+  }
+  .cta p {
+    font-size: 18px;
+    opacity: 0.85;
+    max-width: 620px;
+    margin: 0 auto 32px;
+    line-height: 1.55;
+  }
+  .cta .next-steps {
+    display: inline-flex;
+    gap: 18px;
+    align-items: center;
+    padding: 14px 24px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  .cta .next-steps strong { color: var(--accent); font-family: var(--font-head); }
+
+  /* Footer */
+  footer {
+    padding: 40px 0;
+    text-align: center;
+    font-size: 12px;
+    color: var(--text-muted);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: var(--bg-alt);
+  }
+</style>
+</head>
+<body>
+
+<div class="brand-bar">
+  <div class="wrap">
+    <div class="logo">Made By <span class="italic">Aspire</span></div>
+    <div class="tag">Research Readout — 2026.04.16</div>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">B Clean Carpet &amp; Upholstery</div>
+    <h1>Competitive analysis &amp; <span class="italic">design direction</span></h1>
+    <p class="lede">We studied fifteen carpet-cleaning sites — five locals Bryan competes with, three national leaders, and four of the best templates available on Framer and Webflow. Here's what we found, what to borrow, and where B Clean should land.</p>
+    <div class="meta">
+      <div>Prepared for<strong>Jaime Clark</strong></div>
+      <div>Client<strong>Bryan Wilson — B Clean</strong></div>
+      <div>Sites reviewed<strong>12 live sites + 4 templates</strong></div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCAL COMPETITION -->
+<section class="content">
+  <div class="wrap">
+    <div class="section-header">
+      <span class="num">01</span>
+      <h2>The <span class="italic">local competition</span></h2>
+      <p>Bryan's Westerville &amp; Columbus rivals. Every one of them looks either corporate-cold (Stanley Steemer) or dated-template (Knight's, HIS, Family Value). B&amp;G has the strongest identity but it's loud. <strong>There is a wide-open lane for the design-forward, genuinely premium family option.</strong></p>
+    </div>
+
+    <div class="grid-3">
+      <div class="site-card">
+        <div class="shot"><img src="images/local/bandg.jpg" alt="B&amp;G Carpet Cleaning"></div>
+        <div class="body">
+          <span class="tag tag-avoid">Loud &amp; cluttered</span>
+          <h3>B&amp;G Carpet Cleaning</h3>
+          <a class="url" href="https://www.bandgcarpetcleaning.com/" target="_blank" rel="noopener">bandgcarpetcleaning.com</a>
+          <div class="palette">
+            <div class="swatch" style="background:#00706a"></div>
+            <div class="swatch" style="background:#e8c04c"></div>
+            <div class="swatch" style="background:#ffffff"></div>
+          </div>
+          <p class="takeaway">Teal + mustard, "Woman Owned" angle. Request-a-quote form on hero is smart, but the overall design is busy and aggressive.</p>
+        </div>
+      </div>
+
+      <div class="site-card">
+        <div class="shot"><img src="images/local/his.jpg" alt="HIS Carpet Cleaning"></div>
+        <div class="body">
+          <span class="tag tag-avoid">Discount-led</span>
+          <h3>HIS Carpet Cleaning</h3>
+          <a class="url" href="https://www.hiscarpetcleaning.com/" target="_blank" rel="noopener">hiscarpetcleaning.com</a>
+          <div class="palette">
+            <div class="swatch" style="background:#f4b320"></div>
+            <div class="swatch" style="background:#2a2a2a"></div>
+            <div class="swatch" style="background:#ffffff"></div>
+          </div>
+          <p class="takeaway">25+ years in business, but leads with "$75 for 5 areas + FREE deodorizer." Cheap-looking promo dominates what should be a trust pitch.</p>
+        </div>
+      </div>
+
+      <div class="site-card">
+        <div class="shot"><img src="images/local/knights.jpg" alt="Knight's Carpet Care"></div>
+        <div class="body">
+          <span class="tag tag-avoid">Dated template</span>
+          <h3>Knight's Carpet Care</h3>
+          <a class="url" href="https://www.knightscarpetcare.com/" target="_blank" rel="noopener">knightscarpetcare.com</a>
+          <div class="palette">
+            <div class="swatch" style="background:#1a4d8f"></div>
+            <div class="swatch" style="background:#e63946"></div>
+            <div class="swatch" style="background:#ffffff"></div>
+          </div>
+          <p class="takeaway">Bryan's closest local rival — Westerville since 1993, BBB A+. Strong credentials undermined by 2015-era template look. Easy to leapfrog.</p>
+        </div>
+      </div>
+
+      <div class="site-card">
+        <div class="shot"><img src="images/local/stanley.jpg" alt="Stanley Steemer"></div>
+        <div class="body">
+          <span class="tag tag-avoid">Corporate-cold</span>
+          <h3>Stanley Steemer</h3>
+          <a class="url" href="https://www.stanleysteemer.com/locations/OH/Columbus/569" target="_blank" rel="noopener">stanleysteemer.com · Columbus</a>
+          <div class="palette">
+            <div class="swatch" style="background:#ffc107"></div>
+            <div class="swatch" style="background:#003366"></div>
+            <div class="swatch" style="background:#ffffff"></div>
+          </div>
+          <p class="takeaway">The 75-year national giant. Fleet photo, email-signup modal. Zero personality — the machine Bryan can out-humanize by leaning into family story.</p>
+        </div>
+      </div>
+
+      <div class="site-card">
+        <div class="shot"><img src="images/local/family-value.jpg" alt="Family Value Cleaning"></div>
+        <div class="body">
+          <span class="tag tag-avoid">Unrefined</span>
+          <h3>Family Value Cleaning</h3>
+          <a class="url" href="https://familyvaluecleaning.com/" target="_blank" rel="noopener">familyvaluecleaning.com</a>
+          <div class="palette">
+            <div class="swatch" style="background:#b11a1a"></div>
+            <div class="swatch" style="background:#ffffff"></div>
+            <div class="swatch" style="background:#222"></div>
+          </div>
+          <p class="takeaway">Red + white mom-and-pop feel. IICRC certified like Bryan, but presentation is pure 2012. Service tiles below fold. Easy to out-design.</p>
+        </div>
+      </div>
+
+      <div class="site-card" style="background:#f5ebe0; border-color:var(--accent);">
+        <div class="shot" style="background:var(--accent); display:flex; align-items:center; justify-content:center; padding:40px;">
+          <div style="color:white; font-family:var(--font-accent); font-style:italic; font-size:28px; text-align:center; line-height:1.3;">The local gap<br><span style="font-size:14px; font-family:var(--font); font-style:normal; letter-spacing:0.1em; text-transform:uppercase; opacity:0.9;">Where B Clean lands</span></div>
+        </div>
+        <div class="body">
+          <span class="tag tag-steal">Bryan's opportunity</span>
+          <h3>The open lane</h3>
+          <div class="url">Design-forward, premium, human</div>
+          <p class="takeaway">No Westerville competitor is premium, modern, or brand-led. Bryan has the credentials (IICRC, 96 five-star Google reviews, 2026 Quality Business Award) — he just needs a site that matches.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NATIONAL LEADERS -->
+<section class="content light">
+  <div class="wrap">
+    <div class="section-header">
+      <span class="num">02</span>
+      <h2>National leaders — <span class="italic">what the best do right</span></h2>
+      <p>Three national sites consistently named best-in-class by design publications. Each one gives us a specific pattern to borrow for B Clean.</p>
+    </div>
+
+    <div class="grid-3">
+      <div class="site-card">
+        <div class="shot"><img src="images/national/zerorez.jpg" alt="Zerorez"></div>
+        <div class="body">
+          <span class="tag tag-best">★ Best conversion UX</span>
+          <h3>Zerorez</h3>
+          <a class="url" href="https://www.zerorez.com/" target="_blank" rel="noopener">zerorez.com</a>
+          <p class="takeaway"><strong>Pattern to steal:</strong> Zip-code-first hero — no scroll, no dropdown, just type your zip and get a local quote. Differentiated headline ("The Right Way to Clean"). Proprietary-feeling tech claim. Photo of a tech cleaning a modern sofa.</p>
+        </div>
+      </div>
+
+      <div class="site-card">
+        <div class="shot"><img src="images/national/coit.jpg" alt="COIT"></div>
+        <div class="body">
+          <span class="tag tag-best">★ Best brand feel</span>
+          <h3>COIT</h3>
+          <a class="url" href="https://www.coit.com/" target="_blank" rel="noopener">coit.com</a>
+          <p class="takeaway"><strong>Pattern to steal:</strong> Legacy-first headline ("75 Years"). Editorial B&amp;W portrait of a real customer. Dual CTAs — "Request Services" + "Find Your Local COIT." Feels like a brand, not a coupon.</p>
+        </div>
+      </div>
+
+      <div class="site-card">
+        <div class="shot"><img src="images/national/chemdry.jpg" alt="Chem-Dry"></div>
+        <div class="body">
+          <span class="tag tag-best">★ Video hero</span>
+          <h3>Chem-Dry</h3>
+          <a class="url" href="https://www.chemdry.com/" target="_blank" rel="noopener">chemdry.com</a>
+          <p class="takeaway"><strong>Pattern to steal:</strong> Video hero (dog running on clean carpet). Video out-converts every static hero in this industry. B Clean's version: before/after time-lapse of a real Bryan job.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEMPLATE PICKS -->
+<section class="content">
+  <div class="wrap">
+    <div class="section-header">
+      <span class="num">03</span>
+      <h2>Template <span class="italic">inspiration</span></h2>
+      <p>We're building in Astro, so templates are reference only. But these four show the strongest structural patterns for a premium local-service brand.</p>
+    </div>
+
+    <div class="grid-2">
+      <div class="site-card">
+        <div class="shot"><img src="images/templates/ultraclean.jpg" alt="UltraClean Framer template"></div>
+        <div class="body">
+          <span class="tag tag-template">⭐ Top pick — structural base</span>
+          <h3>UltraClean <span style="font-weight:400; color:var(--text-muted); font-size:14px;">(Framer)</span></h3>
+          <a class="url" href="https://ultraclean.framer.website/" target="_blank" rel="noopener">ultraclean.framer.website</a>
+          <p class="takeaway"><strong>Why this one:</strong> Cleanest hero architecture in the category — headline + subhead + photo collage with floating stats card ("100k+ satisfied"). Clean type hierarchy, single-color CTA, trust bar below fold. This is the backbone we'd build B Clean from. Swap palette, swap photos, keep the structure.</p>
+        </div>
+      </div>
+
+      <div class="site-card">
+        <div class="shot"><img src="images/templates/cleanpartners.jpg" alt="Clean Partners Framer template"></div>
+        <div class="body">
+          <span class="tag tag-template">Pattern — social proof</span>
+          <h3>Clean Partners <span style="font-weight:400; color:var(--text-muted); font-size:14px;">(Framer)</span></h3>
+          <a class="url" href="https://cleanpartners.framer.website/" target="_blank" rel="noopener">cleanpartners.framer.website</a>
+          <p class="takeaway"><strong>Why this one:</strong> Floating testimonial card overlaid on hero photo — customer face, quote, star rating, all above the fold. Plus a rating pill above the headline. Two patterns worth stealing for B Clean's 96-review credibility.</p>
+        </div>
+      </div>
+
+      <div class="site-card">
+        <div class="shot"><img src="images/templates/cleano.jpg" alt="Cleano Framer template"></div>
+        <div class="body">
+          <span class="tag tag-template">Pattern — photo-tile grid</span>
+          <h3>Cleano <span style="font-weight:400; color:var(--text-muted); font-size:14px;">(Framer)</span></h3>
+          <a class="url" href="https://www.framer.com/marketplace/templates/cleano/" target="_blank" rel="noopener">framer.com/marketplace · cleano</a>
+          <p class="takeaway"><strong>Why this one:</strong> Green palette, photo-heavy service tile grid, strong about-company focus. The photo-tile service grid pattern works perfectly for B Clean's "Carpet / Upholstery / Tile / Pet" lineup.</p>
+        </div>
+      </div>
+
+      <div class="site-card">
+        <div class="shot"><img src="images/templates/cleaningx.jpg" alt="Cleaning X Webflow template"></div>
+        <div class="body">
+          <span class="tag tag-template">Reference only</span>
+          <h3>Cleaning X <span style="font-weight:400; color:var(--text-muted); font-size:14px;">(Webflow)</span></h3>
+          <a class="url" href="https://cleaningtemplate.webflow.io/" target="_blank" rel="noopener">cleaningtemplate.webflow.io</a>
+          <p class="takeaway"><strong>Why reference only:</strong> 15+ pages, CMS-ready, SEO-optimized — but the illustrated cartoon characters feel friendly-cheap, not premium. Not the vibe for Bryan. Useful to see the page architecture though.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPINZA DEEP DIVE -->
+<section class="content light">
+  <div class="wrap">
+    <div class="section-header">
+      <span class="num">04</span>
+      <h2>Spinza deep dive — <span class="italic">the hybrid pattern</span></h2>
+      <p>Jaime flagged this Webflow template — and she's right to. Spinza earns its own section because it delivers the things the other picks only hint at: embedded booking in the hero, a beautifully staged "What We Offer" section, and a vertical scrolling testimonial wall. Here are the specific patterns we adapt for Bryan.</p>
+    </div>
+
+    <div class="spinza-hero-card">
+      <div>
+        <span class="tag">Why Spinza earns a section</span>
+        <h3>Built to <span class="italic">convert</span> — without looking like a coupon</h3>
+        <p>Every top-performing pattern we wanted — embedded hero form (Zerorez), stats as trust (UltraClean), editorial product photography (COIT), premium dark palette (Option B) — Spinza ships all of them in one template. It's what we were recommending, already executed.</p>
+        <p>We adapt three specific elements for Bryan: <strong>the embedded hero booking form, the "What We Offer" presentation pattern, and the vertical scrolling testimonial wall.</strong> Plus the scroll-animation language throughout — reveals, staggers, parallax.</p>
+        <p style="margin-top: 22px;"><a href="https://spinza.webflow.io/" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:8px; padding:11px 20px; background:#FFC940; color:#1F3D2B; border-radius:4px; text-decoration:none; font-weight:700; font-size:13px; letter-spacing:0.02em;">View Spinza live ↗</a></p>
+      </div>
+      <div class="shot">
+        <img src="images/spinza/hero.jpg" alt="Spinza hero — embedded booking form over editorial photo">
+      </div>
+    </div>
+
+    <div class="patterns">
+      <div class="pattern">
+        <div class="shot"><img src="images/spinza/services.jpg" alt="Spinza 'What We Offer' section"></div>
+        <div class="body">
+          <div class="label">Pattern 01 · What We Offer</div>
+          <h4>Editorial service <span class="italic">reveal</span></h4>
+          <p>Centered pill label ("What We Offer"), confident two-line headline ("Simple Services, Reliable Care"), then a large editorial photo against a solid-color backdrop. Each service scrolls in with a staggered reveal — headline first, then photo fades up, then the service grid stacks in.</p>
+          <p>It's the same idea as a magazine spread: big declarative statement, then the proof. Feels curated, not sales-y.</p>
+          <div class="adapt">
+            <strong>Bryan's adaptation</strong>
+            <span>"What B Clean does" headline, then a close-up hero shot of fresh-cleaned carpet texture (or a before/after pair) on Bryan's teal backdrop. Four service cards underneath: Carpet · Upholstery · Tile &amp; Grout · Pet Treatment — each with its own photo + instant price range.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pattern">
+        <div class="shot"><img src="images/spinza/testimonials.jpg" alt="Spinza vertical scrolling testimonial wall"></div>
+        <div class="body">
+          <div class="label">Pattern 02 · Vertical testimonial wall</div>
+          <h4>Sticky panel + <span class="italic">scrolling reviews</span></h4>
+          <p>Left side: a sticky panel with the headline ("Real Stories from Our Happy Customers"), CTA button, and stat card (2400+ Happy Customers with profile pics). Right side: three vertical columns of testimonial cards scrolling at different speeds — a living wall of social proof that moves while you read.</p>
+          <p>Way stronger than a static grid of testimonials. It makes the volume of reviews <em>feel</em> like a volume of reviews.</p>
+          <div class="adapt">
+            <strong>Bryan's adaptation</strong>
+            <span>Left sticky panel: "96 five-star reviews and counting" + "Read them all on Google" CTA + stat card. Right columns: real B Clean reviews scrolling — Kelli, Erika, Krystn, Andrew, Jesse. Star ratings visible. Dark background so Bryan's teal accent glows.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-anim-callout">
+      <div class="icon">~</div>
+      <div>
+        <h4>And the <span class="italic">scroll animations</span></h4>
+        <p>Spinza uses reveal-on-scroll throughout — headlines fade up, photos parallax gently, stats count up as they enter the viewport, testimonial columns scroll at offset speeds. It's never flashy — just enough motion to feel alive and premium. Our <code>scroll-animations</code> skill + GSAP ScrollTrigger skill cover exactly these patterns. We'd match Spinza's motion vocabulary beat-for-beat.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BEST PRACTICES -->
+<section class="content">
+  <div class="wrap">
+    <div class="section-header">
+      <span class="num">05</span>
+      <h2>Best practices — <span class="italic">what every top site does</span></h2>
+      <p>Patterns that show up at every high-performing carpet-cleaning site we reviewed. These aren't opinions — these are consistent conversion drivers across the category.</p>
+    </div>
+
+    <div class="practice-grid">
+      <div class="practice">
+        <div class="num">01</div>
+        <h4>Phone + CTA visible without scrolling</h4>
+        <p>Every top site, no exception. Phone number in the top bar, primary CTA button in the hero. Friction-free contact is non-negotiable.</p>
+      </div>
+      <div class="practice">
+        <div class="num">02</div>
+        <h4>One clear differentiated headline</h4>
+        <p>Never "carpet cleaning in [city]." Always a reason they're different — legacy (COIT), method (Zerorez), values. Bryan's is second-generation family expertise.</p>
+      </div>
+      <div class="practice">
+        <div class="num">03</div>
+        <h4>Zip code or instant-quote widget</h4>
+        <p>Reduces friction from "visit" to "lead." Zerorez leads with it. We'd adapt for B Clean — "Get a Quote" with zip + service selector.</p>
+      </div>
+      <div class="practice">
+        <div class="num">04</div>
+        <h4>Social proof in first screen</h4>
+        <p>Star rating, review count, or testimonial card. 90% of consumers read reviews before buying. Bryan has 96 five-star Google reviews — this belongs above the fold.</p>
+      </div>
+      <div class="practice">
+        <div class="num">05</div>
+        <h4>Founder story prominently featured</h4>
+        <p>Confidence driver, especially for family businesses. Bryan's grandfather-founded-KE-WA-PA story is a genuine moat no competitor has.</p>
+      </div>
+      <div class="practice">
+        <div class="num">06</div>
+        <h4>Certifications as visual badges</h4>
+        <p>IICRC, BBB, awards displayed as icons near the hero — not buried on a sub-page. Bryan's IICRC CCT + TMF + 2026 Quality Business Award deserve prominence.</p>
+      </div>
+      <div class="practice">
+        <div class="num">07</div>
+        <h4>Real testimonials with names</h4>
+        <p>Not stock. Stars + first name + location. Bryan's real reviews ("Pet stains? What pet stains?!") read like friends talking — that's gold.</p>
+      </div>
+      <div class="practice">
+        <div class="num">08</div>
+        <h4>Before/after photos or video</h4>
+        <p>Highest-converting content in the category. Bryan has these — they just need to be featured, not hidden. Time-lapse video of a real job would crush it.</p>
+      </div>
+      <div class="practice">
+        <div class="num">09</div>
+        <h4>Transparent pricing page</h4>
+        <p>Almost no competitor does this. Bryan already has transparent pricing — it's an unfair advantage that should be featured, not hidden behind a "Contact Us."</p>
+      </div>
+      <div class="practice">
+        <div class="num">10</div>
+        <h4>Service-area SEO pages</h4>
+        <p>Separate page per service area (Westerville, Dublin, Powell, Lewis Center, New Albany, Gahanna, Worthington) drives local SEO. Each page lightly localized.</p>
+      </div>
+      <div class="practice">
+        <div class="num">11</div>
+        <h4>FAQ for trust + SEO</h4>
+        <p>Preempts objections (drying time, chemicals, pet safety). Bryan's existing FAQ content is great — just needs proper design treatment.</p>
+      </div>
+      <div class="practice">
+        <div class="num">12</div>
+        <h4>Fast load, minimal animation</h4>
+        <p>Premium without lag. We'll ship WebP/AVIF images, lazy-load below the fold, self-host fonts. Target &lt;2s LCP, 100 Lighthouse mobile.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MIMIC / AVOID -->
+<section class="content light">
+  <div class="wrap">
+    <div class="section-header">
+      <span class="num">06</span>
+      <h2>What we <span class="italic">mimic</span> vs. what we avoid</h2>
+      <p>The direct comparison — the specific patterns we steal from the best, and the traps we steer clear of.</p>
+    </div>
+
+    <div class="compare">
+      <div class="compare-col mimic">
+        <h3>Mimic</h3>
+        <ul>
+          <li>Zerorez's zip-code CTA in the hero</li>
+          <li>COIT's legacy-first editorial headline</li>
+          <li>UltraClean's photo collage + floating stats card</li>
+          <li>Clean Partners' floating testimonial overlay</li>
+          <li>Chem-Dry's video hero (before/after)</li>
+          <li>Transparent pricing as a featured page</li>
+          <li>Founder story with real Bryan photo, not stock</li>
+          <li>Certification badges in the hero area</li>
+          <li>Service-area pages for local SEO</li>
+        </ul>
+      </div>
+      <div class="compare-col avoid">
+        <h3>Avoid</h3>
+        <ul>
+          <li>Discount-led headlines ("$75 off" cheapens the brand)</li>
+          <li>Generic blue + yellow palette (every competitor uses it)</li>
+          <li>Cluttered top bars with 6+ trust badges at once</li>
+          <li>Stock photos of smiling families on clean carpet</li>
+          <li>"We clean carpets in Westerville" headlines</li>
+          <li>Loud promo banners that scream desperation</li>
+          <li>Cartoon illustrations (feels friendly-cheap)</li>
+          <li>Services buried behind dropdown-only nav</li>
+          <li>Contact info hidden below the fold</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SITE STRUCTURE -->
+<section class="content">
+  <div class="wrap">
+    <div class="section-header">
+      <span class="num">07</span>
+      <h2>Recommended <span class="italic">site structure</span></h2>
+      <p>Pages to build for B Clean, ordered by launch priority. Blog can defer to post-launch.</p>
+    </div>
+
+    <div class="structure">
+      <div class="structure-item">
+        <div class="n">01</div>
+        <div>
+          <h4>Home</h4>
+          <p>Hero with differentiated headline + zip CTA + floating stats/testimonial · Our Method section · Service grid · Before/after gallery · Founder intro · Final CTA.</p>
+        </div>
+      </div>
+      <div class="structure-item">
+        <div class="n">02</div>
+        <div>
+          <h4>About Bryan</h4>
+          <p>Full founder narrative · KE WA PA Sales family heritage · IICRC + TMF certifications as visible badges · Real Bryan photo.</p>
+        </div>
+      </div>
+      <div class="structure-item">
+        <div class="n">03</div>
+        <div>
+          <h4>Services</h4>
+          <p>Overview page plus four service pages: Carpet · Upholstery · Tile &amp; Grout · Pet Treatment. Each with method explained + pricing + before/after.</p>
+        </div>
+      </div>
+      <div class="structure-item">
+        <div class="n">04</div>
+        <div>
+          <h4>Pricing</h4>
+          <p>Keep Bryan's transparent pricing — design it beautifully. This is his moat. Room-count cards + add-ons + FAQs about minimum.</p>
+        </div>
+      </div>
+      <div class="structure-item">
+        <div class="n">05</div>
+        <div>
+          <h4>Service Areas</h4>
+          <p>Westerville · Dublin · Powell · Lewis Center · New Albany · Gahanna · Worthington. Each page lightly localized for SEO.</p>
+        </div>
+      </div>
+      <div class="structure-item">
+        <div class="n">06</div>
+        <div>
+          <h4>Reviews</h4>
+          <p>Full review wall with Google integration. Before/after photo pairings next to testimonials where possible.</p>
+        </div>
+      </div>
+      <div class="structure-item">
+        <div class="n">07</div>
+        <div>
+          <h4>FAQ</h4>
+          <p>Bryan's existing content (drying time, pet safety, wicking, chemicals) — redesigned in an accordion with category filtering.</p>
+        </div>
+      </div>
+      <div class="structure-item">
+        <div class="n">08</div>
+        <div>
+          <h4>Book / Contact</h4>
+          <p>Real booking form with zip · service · date · notes. Phone CTA · social links · hours · service radius map.</p>
+        </div>
+      </div>
+      <div class="structure-item">
+        <div class="n">09</div>
+        <div>
+          <h4>Blog <span style="color:var(--text-muted); font-weight:400; font-size:14px;">(post-launch)</span></h4>
+          <p>Long-tail SEO content — carpet-care guides, stain-removal how-tos. Built on Keystatic so Bryan can post himself later.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOP PICKS DEEP -->
+<section class="content light">
+  <div class="wrap">
+    <div class="section-header">
+      <span class="num">08</span>
+      <h2>Our <span class="italic">top picks</span></h2>
+      <p>If we steal one thing from each of these, B Clean lands ahead of every local competitor on day one.</p>
+    </div>
+
+    <div class="picks-wrap">
+      <div class="pick">
+        <div class="shot"><img src="images/national/zerorez.jpg" alt="Zerorez hero"></div>
+        <div class="body">
+          <div class="rank">Pick 01 — Conversion</div>
+          <h3>Zerorez's <span class="italic">zip-code hero</span></h3>
+          <a class="url" href="https://www.zerorez.com/" target="_blank" rel="noopener">zerorez.com</a>
+          <div class="steal">
+            <h5>What we steal</h5>
+            <p>Zip-first CTA. Type in, get matched, book. Highest-converting pattern in the industry. Adapted for B Clean: zip + service type → instant quote estimate based on his transparent pricing.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="pick">
+        <div class="shot"><img src="images/national/coit.jpg" alt="COIT hero"></div>
+        <div class="body">
+          <div class="rank">Pick 02 — Brand</div>
+          <h3>COIT's <span class="italic">legacy lead</span></h3>
+          <a class="url" href="https://www.coit.com/" target="_blank" rel="noopener">coit.com</a>
+          <div class="steal">
+            <h5>What we steal</h5>
+            <p>Editorial headline anchored in history. Their line is "75 Years." Bryan's version: <em>"Second-generation carpet care, rooted in Westerville."</em> Editorial B&amp;W portrait of Bryan in the hero, not stock imagery.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="pick">
+        <div class="shot"><img src="images/templates/ultraclean.jpg" alt="UltraClean template"></div>
+        <div class="body">
+          <div class="rank">Pick 03 — Structure</div>
+          <h3>UltraClean's <span class="italic">stats card</span></h3>
+          <a class="url" href="https://ultraclean.framer.website/" target="_blank" rel="noopener">ultraclean.framer.website</a>
+          <div class="steal">
+            <h5>What we steal</h5>
+            <p>Hero architecture: headline + subhead + photo collage + floating stats card. B Clean version: "96 five-star Google reviews" stat pill, "IICRC Certified" badge, "2026 #1 Westerville" award — all floating over a real Bryan job photo.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="pick">
+        <div class="shot"><img src="images/templates/cleanpartners.jpg" alt="Clean Partners template"></div>
+        <div class="body">
+          <div class="rank">Pick 04 — Social proof</div>
+          <h3>Clean Partners' <span class="italic">floating testimonial</span></h3>
+          <a class="url" href="https://cleanpartners.framer.website/" target="_blank" rel="noopener">cleanpartners.framer.website</a>
+          <div class="steal">
+            <h5>What we steal</h5>
+            <p>Testimonial card overlaid on hero — customer face + quote + stars, no scroll. B Clean version: Kelli Wildman's "Pet stains? What pet stains?!" pulled forward as the anchor quote.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ESTABLISHED BRAND -->
+<section class="content">
+  <div class="wrap">
+    <div class="section-header">
+      <span class="num">09</span>
+      <h2>Bryan's <span class="italic">established brand</span></h2>
+      <p>Bryan already has brand equity in his logo and his Google reviews. Any direction we go should build on the teal, not throw it out. Here's what's locked in today — we take this forward.</p>
+    </div>
+
+    <div class="established">
+      <div class="logo-frame">
+        <img src="images/brand/b-clean-logo.png" alt="B Clean Carpet & Upholstery logo">
+      </div>
+      <div>
+        <h3>Current brand colors (extracted from logo)</h3>
+        <p>Two colors carry Bryan's brand: a vibrant aqua-teal for "B Clean" and a warm graphite for the wordmark underline. These are the anchors. The three directions below each build on these, they don't replace them.</p>
+        <div class="brand-swatches">
+          <div class="brand-swatch">
+            <div class="chip" style="background:#00A8B0"></div>
+            <div class="meta">
+              <strong>B Clean Teal</strong>
+              <span class="hex">#00A8B0</span>
+              <div class="role">Primary — logo teal, CTAs, accents</div>
+            </div>
+          </div>
+          <div class="brand-swatch">
+            <div class="chip" style="background:#605050"></div>
+            <div class="meta">
+              <strong>Warm Graphite</strong>
+              <span class="hex">#605050</span>
+              <div class="role">Supporting — tagline type, muted surfaces</div>
+            </div>
+          </div>
+          <div class="brand-swatch">
+            <div class="chip" style="background:#FFFFFF; border-color:#ccc;"></div>
+            <div class="meta">
+              <strong>Crisp White</strong>
+              <span class="hex">#FFFFFF</span>
+              <div class="role">Background — keeps the teal vibrant</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PALETTE + TYPE DIRECTIONS -->
+<section class="content light">
+  <div class="wrap">
+    <div class="section-header">
+      <span class="num">10</span>
+      <h2>Three directions — <span class="italic">palette + type, together</span></h2>
+      <p>All three keep Bryan's teal as the brand anchor. Each one pairs a palette with type that either <strong>mirrors</strong> the rounded geometric character of Bryan's logo (Outfit, Recoleta) or <strong>complements</strong> it with intentional contrast (Clash Display). None of these are our usual Playfair + Montserrat + DM Sans — we're picking fonts that feel <em>his</em>, not ours. Every pairing is checked for WCAG AA contrast and optimized for performance.</p>
+    </div>
+
+    <div class="std-banner">
+      <div class="std">
+        <div class="head">ADA / WCAG 2.1</div>
+        <strong>AA minimum, AAA where possible</strong>
+        <p>4.5:1 body contrast, 3:1 for large text. Teal #00A8B0 on light backgrounds is accent-only (2.87:1) — CTAs on light palettes use deep teal #0A4F5C (9:1+).</p>
+      </div>
+      <div class="std">
+        <div class="head">SEO / Performance</div>
+        <strong>Self-hosted variable fonts</strong>
+        <p>One or two font families per direction. Preloaded + font-display: swap. Target &lt;80KB total font weight. Google Fonts / Fontshare both mirrored locally for privacy + speed.</p>
+      </div>
+      <div class="std">
+        <div class="head">Readability</div>
+        <strong>Large x-heights, open apertures</strong>
+        <p>All body fonts chosen for legibility at 15–16px. Display fonts restricted to 28px+ where they shine. No hairline weights below 16px. Dyslexia-friendly spacing.</p>
+      </div>
+    </div>
+
+    <!-- DIRECTION A — WARM EDITORIAL -->
+    <div class="direction a">
+      <div class="stage">
+        <span class="opt-tag">Option A · Warm Editorial</span>
+        <div class="display">Second-generation carpet care, <em>rooted in Westerville</em>.</div>
+        <div class="sub">Bryan brings your flooring &amp; upholstery back to life.</div>
+        <div class="body-sample">IICRC certified. Transparent pricing. Ninety-six five-star Google reviews and counting. The second-generation local option Westerville has been waiting for.</div>
+        <span class="mock-cta">Get a Free Quote →</span>
+      </div>
+      <div class="meta">
+        <div>
+          <h3>Option A · <span class="italic">Warm Editorial</span></h3>
+          <div class="vibe">Kinfolk magazine meets Bryan's teal</div>
+          <div class="desc">Cream bg, deep teal for CTAs, copper as secondary accent, charcoal type. Feels handcrafted, family-rooted. Plays into the generational story.</div>
+        </div>
+
+        <div class="meta-block">
+          <h5>Palette</h5>
+          <div class="swatch-row">
+            <div class="sw" style="background:#FAF6EC" title="Cream"></div>
+            <div class="sw" style="background:#00A8B0" title="B Clean Teal"></div>
+            <div class="sw" style="background:#0A4F5C" title="Deep Teal (CTAs)"></div>
+            <div class="sw" style="background:#B86A3F" title="Copper"></div>
+            <div class="sw" style="background:#2A3540" title="Charcoal"></div>
+          </div>
+          <div class="hex-list">#FAF6EC · #00A8B0 · #0A4F5C · #B86A3F · #2A3540</div>
+        </div>
+
+        <div class="meta-block">
+          <h5>Typography</h5>
+          <div class="font-row"><strong>Recoleta</strong><span>Display · editorial serif</span></div>
+          <div class="font-row"><strong>Outfit</strong><span>Body + UI · rounded geo sans</span></div>
+          <div class="logo-note"><strong>Pairs with the logo:</strong> Outfit mirrors the logo's rounded geometric warmth. Recoleta adds editorial contrast without fighting the logo's friendliness.</div>
+        </div>
+
+        <div class="meta-block">
+          <h5>Contrast · WCAG</h5>
+          <div class="ratio-row"><span>Body on cream</span><span class="pass">11.2 : 1 · AAA</span></div>
+          <div class="ratio-row"><span>CTA (deep teal/cream)</span><span class="pass">9.4 : 1 · AAA</span></div>
+          <div class="ratio-row"><span>Teal accent — headline-size</span><span class="pass">Pass 3:1 large</span></div>
+          <div class="ratio-row"><span>Teal on cream — body</span><span class="warn">2.87 : 1 · accent only</span></div>
+        </div>
+
+        <div class="meta-block">
+          <h5>Performance</h5>
+          <div class="ratio-row"><span>Total font weight</span><span>~62 KB</span></div>
+          <div class="ratio-row"><span>Families loaded</span><span>2</span></div>
+          <div class="ratio-row"><span>Variable fonts</span><span>Both</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DIRECTION B — PREMIUM DARK -->
+    <div class="direction b">
+      <div class="stage">
+        <span class="opt-tag">Option B · Premium Dark</span>
+        <div class="display">Second-generation carpet care, <em>rooted in Westerville</em>.</div>
+        <div class="sub">Bryan brings your flooring &amp; upholstery back to life.</div>
+        <div class="body-sample">IICRC certified. Transparent pricing. Ninety-six five-star Google reviews and counting. The second-generation local option Westerville has been waiting for.</div>
+        <span class="mock-cta">Get a Free Quote →</span>
+      </div>
+      <div class="meta">
+        <div>
+          <h3>Option B · <span class="italic">Premium Dark</span></h3>
+          <div class="vibe">Steakhouse-confident · teal glows</div>
+          <div class="desc">Rich charcoal base, warm cream type, Bryan's teal as a beacon. Against dark, the teal <em>pops</em> and CTAs earn their AA contrast naturally. Burnished gold for award badges.</div>
+        </div>
+
+        <div class="meta-block">
+          <h5>Palette</h5>
+          <div class="swatch-row">
+            <div class="sw" style="background:#1C2329" title="Charcoal base"></div>
+            <div class="sw" style="background:#2A3540" title="Slate surfaces"></div>
+            <div class="sw" style="background:#00A8B0" title="B Clean Teal"></div>
+            <div class="sw" style="background:#C39A4E" title="Gold"></div>
+            <div class="sw" style="background:#F4EFE3" title="Cream text"></div>
+          </div>
+          <div class="hex-list">#1C2329 · #2A3540 · #00A8B0 · #C39A4E · #F4EFE3</div>
+        </div>
+
+        <div class="meta-block">
+          <h5>Typography</h5>
+          <div class="font-row"><strong>Clash Display</strong><span>Display · bold architectural</span></div>
+          <div class="font-row"><strong>Satoshi</strong><span>Body · clean modern geometric</span></div>
+          <div class="logo-note"><strong>Pairs with the logo:</strong> Clash provides intentional contrast — bolder, squarer forms set off the logo's rounded friendliness. Satoshi stays neutral and modern without competing.</div>
+        </div>
+
+        <div class="meta-block">
+          <h5>Contrast · WCAG</h5>
+          <div class="ratio-row"><span>Cream on charcoal</span><span class="pass">14.8 : 1 · AAA</span></div>
+          <div class="ratio-row"><span>Teal on charcoal</span><span class="pass">6.2 : 1 · AA body</span></div>
+          <div class="ratio-row"><span>Teal CTA (dark text inside)</span><span class="pass">5.4 : 1 · AA</span></div>
+          <div class="ratio-row"><span>Gold accent</span><span class="pass">Pass · badges only</span></div>
+        </div>
+
+        <div class="meta-block">
+          <h5>Performance</h5>
+          <div class="ratio-row"><span>Total font weight</span><span>~68 KB</span></div>
+          <div class="ratio-row"><span>Families loaded</span><span>2</span></div>
+          <div class="ratio-row"><span>Variable fonts</span><span>Satoshi (var), Clash (static)</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DIRECTION C — CLEAN MODERN TRUST -->
+    <div class="direction c locked">
+      <div class="stage">
+        <span class="opt-tag">Option C · Clean Modern Trust ★ SELECTED BASE</span>
+        <div class="display">Second-generation carpet care, <em>rooted in Westerville</em>.</div>
+        <div class="sub">Bryan brings your flooring &amp; upholstery back to life.</div>
+        <div class="body-sample">IICRC certified. Transparent pricing. Ninety-six five-star Google reviews and counting. The second-generation local option Westerville has been waiting for.</div>
+        <span class="mock-cta">Get a Free Quote →</span>
+      </div>
+      <div class="meta">
+        <div>
+          <span class="selected-badge">★ Our Pick — Base Direction</span>
+          <h3>Option C · <span class="italic">Clean Modern Trust</span></h3>
+          <div class="vibe">Teal-family · confident &amp; crisp</div>
+          <div class="desc">Warm off-white bg, deep teal anchors the brand, Bryan's teal is the bright accent. Two-tone teal system — sophisticated, Zerorez-level clean, zero color clash. Italic serif accents only where they earn their place. <strong>Closest to Bryan's current site</strong> — refines his brand without throwing out equity.</div>
+        </div>
+
+        <div class="meta-block">
+          <h5>Palette</h5>
+          <div class="swatch-row">
+            <div class="sw" style="background:#FCFAF6" title="Warm white"></div>
+            <div class="sw" style="background:#0A4F5C" title="Deep Teal"></div>
+            <div class="sw" style="background:#00A8B0" title="B Clean Teal"></div>
+            <div class="sw" style="background:#2A3540" title="Charcoal"></div>
+            <div class="sw" style="background:#E8E2D4" title="Warm neutral"></div>
+          </div>
+          <div class="hex-list">#FCFAF6 · #0A4F5C · #00A8B0 · #2A3540 · #E8E2D4</div>
+        </div>
+
+        <div class="meta-block">
+          <h5>Typography</h5>
+          <div class="font-row"><strong>Outfit</strong><span>Display + body · geo sans</span></div>
+          <div class="font-row"><strong>Recoleta</strong><span>Italic accents only</span></div>
+          <div class="logo-note"><strong>Pairs with the logo:</strong> Outfit is the closest match to the logo's character — rounded geometric, warm, open. A single-family system keeps the brand tight and loading fast. Recoleta italic appears only for emotional phrases.</div>
+        </div>
+
+        <div class="meta-block">
+          <h5>Contrast · WCAG</h5>
+          <div class="ratio-row"><span>Charcoal on warm white</span><span class="pass">11.6 : 1 · AAA</span></div>
+          <div class="ratio-row"><span>Deep teal CTA</span><span class="pass">9.1 : 1 · AAA</span></div>
+          <div class="ratio-row"><span>B Clean teal — headlines</span><span class="pass">Pass 3:1 large</span></div>
+          <div class="ratio-row"><span>Teal on warm white body</span><span class="warn">2.9 : 1 · accent only</span></div>
+        </div>
+
+        <div class="meta-block">
+          <h5>Performance</h5>
+          <div class="ratio-row"><span>Total font weight</span><span>~54 KB</span></div>
+          <div class="ratio-row"><span>Families loaded</span><span>2 (Recoleta italic-only subset)</span></div>
+          <div class="ratio-row"><span>Variable fonts</span><span>Outfit (var)</span></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- LOCKED DIRECTION -->
+<section class="content">
+  <div class="wrap">
+    <div class="section-header">
+      <span class="num">11</span>
+      <h2>The direction — <span class="italic">locked</span></h2>
+      <p>After weighing all three, the answer is a hybrid — Option C as the base (closest to Bryan's current brand), Option A's editorial fonts where they earn it, and Option B's drama reserved for hero, testimonials, and final CTA. One site, three moods, one coherent brand.</p>
+    </div>
+
+    <div class="locked-hero">
+      <span class="stamp">★ Locked Direction</span>
+      <h3>Option C base · <span class="italic">Outfit + Recoleta type</span> · dark sections where they earn drama</h3>
+      <p>The whole site isn't dark — we <em>alternate</em>. Light sections for the content people need to read (services, pricing, FAQ). Dark sections where atmosphere matters (hero, testimonials, final CTA). Bryan's teal is the bright beat that carries across both tones.</p>
+    </div>
+
+    <div class="pillars">
+      <div class="pillar">
+        <div class="source">From Option A</div>
+        <h4>Editorial <em>feel</em></h4>
+        <p>Recoleta italic appears on the About page, founder story, and testimonial intros. Magazine-like warmth without going full serif. Adds emotion exactly where it belongs.</p>
+      </div>
+      <div class="pillar">
+        <div class="source">From Option B</div>
+        <h4>Dark <em>drama</em></h4>
+        <p>Hero, testimonial wall, and final CTA use the dark charcoal base. Against dark, Bryan's teal glows and CTAs naturally pass AA contrast. Drama reserved for where it converts.</p>
+      </div>
+      <div class="pillar">
+        <div class="source">From Option C</div>
+        <h4>Clean <em>base</em></h4>
+        <p>Warm off-white as the primary background. Deep teal #0A4F5C as the anchor, Bryan's teal as the bright accent. Outfit as the primary typeface — mirrors his logo, loads fast.</p>
+      </div>
+    </div>
+
+    <div class="rhythm-wrap">
+      <h4>Page <span class="italic">rhythm</span></h4>
+      <p class="rhythm-intro">How the home page flows top to bottom — alternating tone creates a living brand instead of a static one. Each transition is a breath.</p>
+
+      <div class="rhythm">
+        <div class="rhythm-row dark">
+          <div class="tone">Dark</div>
+          <div class="section-name">Hero</div>
+          <div class="desc">Embedded quote form · teal CTA glows · trust pills</div>
+        </div>
+        <div class="rhythm-row light">
+          <div class="tone">Light</div>
+          <div class="section-name">Trust bar</div>
+          <div class="desc">IICRC · 96 reviews · 2026 Award · BBB A+</div>
+        </div>
+        <div class="rhythm-row light">
+          <div class="tone">Light</div>
+          <div class="section-name">What we offer</div>
+          <div class="desc">Editorial reveal · service grid with real photos</div>
+        </div>
+        <div class="rhythm-row light">
+          <div class="tone">Light</div>
+          <div class="section-name">About Bryan</div>
+          <div class="desc">Founder story · Recoleta italic headlines</div>
+        </div>
+        <div class="rhythm-row dark">
+          <div class="tone">Dark</div>
+          <div class="section-name">Before &amp; after</div>
+          <div class="desc">Photos glow on dark bg · parallax reveal</div>
+        </div>
+        <div class="rhythm-row light">
+          <div class="tone">Light</div>
+          <div class="section-name">Pricing</div>
+          <div class="desc">Transparent · readable · Bryan's moat</div>
+        </div>
+        <div class="rhythm-row dark">
+          <div class="tone">Dark</div>
+          <div class="section-name">Testimonial wall</div>
+          <div class="desc">Spinza pattern · sticky sidebar · scrolling reviews</div>
+        </div>
+        <div class="rhythm-row light">
+          <div class="tone">Light</div>
+          <div class="section-name">FAQ</div>
+          <div class="desc">Accordion · friendly · SEO-valuable</div>
+        </div>
+        <div class="rhythm-row dark">
+          <div class="tone">Dark</div>
+          <div class="section-name">Final CTA</div>
+          <div class="desc">Book form · teal primary · urgency without desperation</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="brand-summary">
+      <div>
+        <h5>Locked palette</h5>
+        <div class="tokens">
+          <div class="token-row">
+            <div class="chip" style="background:#FCFAF6"></div>
+            <div><strong>Warm White</strong><div class="role">Base · light sections</div></div>
+            <div class="hex">#FCFAF6</div>
+          </div>
+          <div class="token-row">
+            <div class="chip" style="background:#1C2329"></div>
+            <div><strong>Charcoal</strong><div class="role">Base · dark sections</div></div>
+            <div class="hex">#1C2329</div>
+          </div>
+          <div class="token-row">
+            <div class="chip" style="background:#0A4F5C"></div>
+            <div><strong>Deep Teal</strong><div class="role">Primary CTAs on light</div></div>
+            <div class="hex">#0A4F5C</div>
+          </div>
+          <div class="token-row">
+            <div class="chip" style="background:#00A8B0"></div>
+            <div><strong>B Clean Teal</strong><div class="role">Accent · glows on dark</div></div>
+            <div class="hex">#00A8B0</div>
+          </div>
+          <div class="token-row">
+            <div class="chip" style="background:#2A3540"></div>
+            <div><strong>Slate</strong><div class="role">Body type on light</div></div>
+            <div class="hex">#2A3540</div>
+          </div>
+          <div class="token-row">
+            <div class="chip" style="background:#F4EFE3"></div>
+            <div><strong>Cream</strong><div class="role">Body type on dark</div></div>
+            <div class="hex">#F4EFE3</div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h5>Locked type system</h5>
+        <div class="font-specimen outfit">
+          <div class="name">Outfit · Display + Body + UI</div>
+          <div class="sample">Second-generation carpet care</div>
+        </div>
+        <div class="font-specimen recoleta">
+          <div class="name">Recoleta · Editorial italic accents only</div>
+          <div class="sample">rooted in Westerville</div>
+        </div>
+        <div style="padding: 12px 16px; background: var(--bg-alt); border-left: 2px solid #00A8B0; border-radius: 3px; font-family: 'Outfit', sans-serif; font-size: 13px; line-height: 1.55; color: var(--text-sec);">
+          <strong style="color: var(--text);">Why this works with the logo:</strong> Outfit mirrors the logo's rounded geometric character. Recoleta italic adds editorial warmth on About and founder moments. Two families, ~54KB total, both self-hosted and WCAG AAA-contrasted.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="wrap">
+    <h2>Direction locked — <span class="italic">let's build.</span></h2>
+    <p>Option C base · Outfit + Recoleta type · alternating dark / light rhythm. Next up: soul.md locks, design tokens generate, scaffold spins up, and pages start rolling onto studio.</p>
+    <div class="next-steps">
+      <strong>Next</strong>
+      <span>soul.md locks → design-tokens skill → astro-scaffold → component-library → home page build</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Made by Aspire Digital · B Clean Carpet &amp; Upholstery · 2026
+  </div>
+</footer>
+
+</body>
+</html>

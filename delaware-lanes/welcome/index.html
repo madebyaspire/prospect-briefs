@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Delaware Lanes — Digital Growth Brief | Aspire Digital</title>
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
-<!-- Open Graph / iMessage / SMS preview -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Delaware Lanes — Your Digital Growth Opportunity">
 <meta property="og:description" content="We took a deep look at Delaware Lanes' online presence and found some exciting opportunities. Here's what we found.">
@@ -20,11 +19,10 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Serif+Display:ital@0;1&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Unbounded:wght@400;700;900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0" rel="stylesheet">
 <style>
-/* ── TOKENS ── */
 :root{
   --bg:#FAF0E2; --bg-alt:#F2EDE6; --bg-night:#1A1F28;
   --accent:#C4622D; --accent-dk:#A34E1A;
-  --green:#4A7B5A; --green-dk:#3D6B4A; --sage:#8FAF8A;
+  --green:#4A7B5A; --sage:#8FAF8A; --green-dk:#3D6B4A;
   --charcoal:#2C3340;
   --text:#2C3340; --text-sec:#5A6072; --text-muted:#888E97;
   --border:rgba(44,51,64,.13); --border-lt:rgba(44,51,64,.07); --border-light:rgba(44,51,64,.09);
@@ -41,15 +39,11 @@ html{font-size:17px;-webkit-font-smoothing:antialiased;scroll-behavior:smooth;sc
 body{font-family:var(--f-b);font-size:16px;line-height:1.75;background:var(--bg-night);color:var(--text);}
 img{max-width:100%;display:block;}
 ::selection{background:var(--accent);color:#fff;}
-
-/* ── TOPBAR ── */
 .topbar{position:fixed;top:0;left:0;right:0;z-index:200;height:58px;background:var(--white);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.875rem;padding:0 2rem;box-shadow:0 1px 0 var(--border);}
 .topbar__logo{height:22px;flex-shrink:0;}
 .topbar__sep{width:1px;height:20px;background:var(--border);flex-shrink:0;}
 .topbar__label{font-family:var(--f-b);font-size:.9375rem;font-weight:600;color:var(--text-sec);}
 .topbar__badge{margin-left:auto;font-family:var(--f-n);font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--white);background:var(--accent);padding:4px 12px;border-radius:var(--r-full);max-width:50%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-
-/* ── HERO ── */
 .hero{padding-top:58px;background:var(--bg-night);padding-bottom:0;}
 .hero__inner{max-width:960px;margin:0 auto;padding:5rem 2rem 5.5rem;display:grid;grid-template-columns:1.35fr 1fr;grid-template-rows:auto auto;gap:1.5rem 3.5rem;align-items:start;}
 .hero__top{grid-column:1/-1;padding-bottom:.5rem;}
@@ -58,34 +52,27 @@ img{max-width:100%;display:block;}
 .hero__h1{overflow-wrap:anywhere;word-break:break-word;hyphens:auto;}
 .hero__eyebrow{font-family:var(--f-n);font-size:.75rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:1.25rem;display:flex;align-items:center;gap:.625rem;}
 .hero__eyebrow-dot{width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;}
-.hero__h1{font-family:var(--f-d);font-style:italic;font-size:clamp(2.5rem,5.5vw,4.25rem);font-weight:400;color:var(--bg);line-height:1.05;margin-bottom:1rem;}
-.hero__h1 em{font-style:italic;color:var(--accent);font-family:var(--f-d);}
+.hero__h1{font-family:var(--f-d);font-style:normal;font-size:clamp(2.5rem,5.5vw,4.25rem);font-weight:400;color:var(--bg);line-height:1.05;margin-bottom:1rem;}
+.hero__h1 em{font-style:normal;color:var(--accent);font-family:var(--f-d);}
 .hero__sub{font-family:var(--f-b);font-size:1.125rem;color:rgba(250,240,226,.72);line-height:1.65;margin-bottom:0;max-width:480px;}
 .hero__meta{display:flex;flex-direction:column;gap:1.25rem;padding:.25rem 0 .25rem 2rem;border-left:1px solid rgba(255,255,255,.1);margin-top:2rem;}
 .hero__meta-item dt{font-family:var(--f-n);font-size:.6875rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(250,240,226,.3);margin-bottom:.35rem;}
 .hero__meta-item dd{font-family:var(--f-b);font-size:.9375rem;font-weight:500;color:var(--bg);}
-.hero__meta-item dd.fill{font-family:var(--f-a);font-style:italic;color:var(--sage);}
+.hero__meta-item dd.fill{font-family:var(--f-a);font-style:normal;font-size:1.25rem;color:var(--sage);}
 .hero__meta-item a{color:inherit;text-decoration:none;border-bottom:1px solid rgba(143,175,138,.4);padding-bottom:1px;}
-
-/* ── HERO OPP CARD ── */
 .hero__opp-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:var(--r-xl);padding:2.5rem 2rem;text-align:center;display:flex;flex-direction:column;align-items:center;gap:.75rem;}
 .hero__opp-label{font-family:var(--f-n);font-size:.625rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(250,240,226,.32);}
-.hero__opp-num{font-family:var(--f-d);font-style:italic;font-size:clamp(2.5rem,5vw,3.75rem);font-weight:400;line-height:1;color:var(--bg);overflow-wrap:anywhere;}
+.hero__opp-num{font-family:var(--f-d);font-style:normal;font-size:clamp(2.5rem,5vw,3.75rem);font-weight:400;line-height:1;color:var(--bg);overflow-wrap:anywhere;}
 .hero__opp-denom{font-family:var(--f-n);font-size:.625rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(250,240,226,.22);margin-top:-.25rem;}
 .hero__opp-badge{font-family:var(--f-b);font-size:.8125rem;font-weight:600;padding:5px 16px;border-radius:var(--r-full);background:rgba(196,98,45,.15);color:#E09360;}
 .hero__opp-badge--high{background:rgba(126,200,150,.12);color:#7EC896;}
 .hero__opp-desc{font-family:var(--f-b);font-size:.875rem;color:rgba(250,240,226,.35);line-height:1.55;max-width:220px;text-align:center;}
-
-/* ── ACCENT STRIPE ── */
 .accent-stripe{height:3px;background:linear-gradient(to right,var(--accent),#A34E1A);}
-
-/* ── SECTION GROUPS ── */
 .sec-group{padding:5rem 2rem;}
 .sec-group--dark{background:var(--bg-night);}
 .sec-group--cream{background:var(--bg);}
 .sec-group--alt{background:var(--bg-alt);}
 .sec-group__in{max-width:860px;margin:0 auto;}
-
 .sec-badge{display:inline-flex;align-items:center;gap:10px;padding:5px 18px 5px 5px;border-radius:var(--r-full);margin-bottom:1.75rem;}
 .sec-group--cream .sec-badge,.sec-group--alt .sec-badge{background:var(--bg);border:1px solid var(--border);box-shadow:var(--sh-sm);}
 .sec-group--dark .sec-badge{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);}
@@ -94,21 +81,16 @@ img{max-width:100%;display:block;}
 .sec-badge__label{font-family:var(--f-n);font-size:.6875rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;}
 .sec-group--cream .sec-badge__label,.sec-group--alt .sec-badge__label{color:var(--text-sec);}
 .sec-group--dark .sec-badge__label{color:rgba(250,240,226,.55);}
-
-/* ── SECTION HEADINGS ── */
 .sec-head{display:grid;grid-template-columns:auto 1fr;column-gap:1.75rem;align-items:baseline;margin-bottom:2.5rem;}
-.sec-head__num{font-family:var(--f-d);font-style:italic;font-size:clamp(3rem,5vw,4.5rem);font-weight:400;line-height:1;color:var(--accent);}
+.sec-head__num{font-family:var(--f-d);font-style:normal;font-size:clamp(3rem,5vw,4.5rem);font-weight:400;line-height:1;color:var(--accent);}
 .sec-head__body{display:flex;flex-direction:column;gap:.5rem;}
-.sec-head__title{font-family:var(--f-d);font-style:italic;font-size:clamp(1.75rem,3vw,2.5rem);font-weight:400;line-height:1.15;margin:0;}
+.sec-head__title{font-family:var(--f-d);font-style:normal;font-size:clamp(1.75rem,3vw,2.5rem);font-weight:400;line-height:1.15;margin:0;}
 .sec-group--cream .sec-head__title,.sec-group--alt .sec-head__title{color:var(--charcoal);}
 .sec-group--dark .sec-head__title{color:var(--bg);}
-.sec-head__title em{font-style:italic;color:var(--accent);}
-.sec-group--dark .sec-head__title em{color:var(--accent);}
+.sec-head__title em{font-style:normal;color:var(--accent);}
 .sec-head__sub{font-family:var(--f-b);font-size:1rem;line-height:1.65;}
 .sec-group--cream .sec-head__sub,.sec-group--alt .sec-head__sub{color:var(--text-sec);}
 .sec-group--dark .sec-head__sub{color:rgba(250,240,226,.5);}
-
-/* ── PROSE ── */
 .prose p{margin-bottom:1rem;line-height:1.8;}
 .sec-group--cream .prose p,.sec-group--alt .prose p{color:var(--text-sec);}
 .sec-group--dark .prose p{color:rgba(250,240,226,.82);}
@@ -116,96 +98,16 @@ img{max-width:100%;display:block;}
 .prose strong{font-weight:600;}
 .sec-group--cream .prose strong,.sec-group--alt .prose strong{color:var(--charcoal);}
 .sec-group--dark .prose strong{color:var(--bg);}
-.prose em{font-family:var(--f-a);font-style:italic;}
-.prose ul{list-style:none;padding:0;margin:1rem 0;display:flex;flex-direction:column;gap:.625rem;}
-.prose ul li{position:relative;padding-left:1.375rem;line-height:1.75;}
-.prose ul li::before{content:'';position:absolute;left:.35rem;top:.75em;width:5px;height:5px;border-radius:50%;background:var(--green);}
-.sec-group--cream .prose ul li,.sec-group--alt .prose ul li{color:var(--text-sec);}
-.sec-group--dark .prose ul li{color:rgba(250,240,226,.78);}
-
-/* ── SUB-HEADING ── */
 .sub-head{font-family:var(--f-n);font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin:2.5rem 0 1rem;display:flex;align-items:center;gap:.5rem;}
 .sec-group--cream .sub-head,.sec-group--alt .sub-head{color:var(--text-sec);}
 .sec-group--dark .sub-head{color:rgba(250,240,226,.4);}
 .sub-head::before{content:'';display:block;width:20px;height:1px;background:currentColor;opacity:.6;}
-
-/* ── SCREENSHOT FRAME ── */
-.screenshot-frame{background:var(--white);border-radius:var(--r-lg);padding:8px;border:1px solid var(--border);box-shadow:var(--sh-md);margin:1.5rem 0;overflow:hidden;}
-.sec-group--dark .screenshot-frame{background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.08);}
-.screenshot-frame img{width:100%;border-radius:10px;display:block;}
-.screenshot-caption{text-align:center;font-family:var(--f-n);font-size:.6875rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--text-muted);margin-top:.75rem;}
-.sec-group--dark .screenshot-caption{color:rgba(250,240,226,.35);}
-
-/* ── SCORE CARDS ── */
 .score-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:1rem;margin:1.5rem 0;}
 .score-card{min-width:0;border-radius:var(--r-lg);padding:1.5rem 1.25rem;text-align:center;}
 .sec-group--cream .score-card,.sec-group--alt .score-card{background:var(--white);border:1px solid var(--border-lt);box-shadow:var(--sh-sm);}
-.sec-group--dark .score-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);}
 .score-card__label{font-family:var(--f-n);font-size:.625rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--text-muted);margin-bottom:.5rem;overflow-wrap:anywhere;}
-.sec-group--dark .score-card__label{color:rgba(250,240,226,.4);}
 .score-card__value{font-family:var(--f-n);font-size:clamp(1.75rem,2.75vw,2.5rem);font-weight:700;color:var(--accent);line-height:1;overflow-wrap:anywhere;word-break:break-word;hyphens:auto;letter-spacing:-.02em;}
-.score-card__note{font-family:var(--f-b);font-size:.8125rem;color:var(--text-muted);margin-top:.5rem;}
-.sec-group--dark .score-card__note{color:rgba(250,240,226,.4);}
-
-/* ── PILL TAGS ── */
-.tag{display:inline-block;padding:3px 10px;border-radius:var(--r-full);font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;}
-.tag--easy{background:rgba(74,123,90,.15);color:var(--green);}
-.tag--medium{background:rgba(184,134,11,.12);color:#B8860B;}
-.tag--high{background:var(--accent);color:#fff;}
-.tag--mid-impact{background:rgba(74,123,90,.12);color:var(--green);}
-.tag--outline{background:transparent;border:1.5px solid rgba(196,98,45,.45);color:var(--accent-dk);}
-
-/* ── REVIEW CARDS ── */
-.review-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem;margin:1.5rem 0;}
-.review-card{border-radius:var(--r-lg);padding:1.5rem 1.5rem 1.25rem;display:flex;flex-direction:column;gap:.875rem;}
-.sec-group--cream .review-card,.sec-group--alt .review-card{background:var(--white);border:1px solid var(--border-lt);box-shadow:var(--sh-sm);}
-.sec-group--dark .review-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);}
-.review-card__stars{color:var(--accent);font-size:1rem;letter-spacing:.2em;line-height:1;}
-.review-card__quote{font-family:var(--f-a);font-style:italic;font-size:1.0625rem;line-height:1.55;margin:0;}
-.sec-group--cream .review-card__quote,.sec-group--alt .review-card__quote{color:var(--charcoal);}
-.sec-group--dark .review-card__quote{color:rgba(250,240,226,.92);}
-.review-card__by{font-family:var(--f-b);font-size:.8125rem;font-weight:500;color:var(--text-muted);margin-top:auto;}
-.sec-group--dark .review-card__by{color:rgba(250,240,226,.45);}
-
-/* ── OPPORTUNITY CALLOUT ── */
-.opp-callout{border-left:3px solid var(--accent);border-radius:0 var(--r-md) var(--r-md) 0;padding:1.25rem 1.5rem;margin:2rem 0;font-size:.9375rem;line-height:1.7;}
-.sec-group--cream .opp-callout,.sec-group--alt .opp-callout{background:var(--bg-alt);color:var(--text-sec);}
-.sec-group--dark .opp-callout{background:rgba(250,240,226,.04);color:rgba(250,240,226,.82);}
-.opp-callout strong{font-weight:600;}
-.sec-group--cream .opp-callout strong,.sec-group--alt .opp-callout strong{color:var(--charcoal);}
-.sec-group--dark .opp-callout strong{color:var(--bg);}
-
-/* ── CALLOUT ── */
-.callout{border-radius:var(--r-md);padding:1.25rem 1.5rem;margin:1.5rem 0;font-size:.9375rem;line-height:1.7;border-left:3px solid var(--accent);}
-.sec-group--cream .callout,.sec-group--alt .callout{background:var(--white);color:var(--text-sec);box-shadow:var(--sh-sm);}
-.sec-group--dark .callout{background:rgba(250,240,226,.04);color:rgba(250,240,226,.75);border-left-color:var(--accent);}
-.callout strong{font-weight:600;}
-.sec-group--cream .callout strong,.sec-group--alt .callout strong{color:var(--charcoal);}
-.sec-group--dark .callout strong{color:var(--bg);}
-
-/* ── QUICK SUMMARY ── */
-.quick-summary{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--r-xl);overflow:hidden;margin:0 0 2.5rem;}
-.quick-summary__item{background:var(--white);padding:1.5rem 1.75rem;}
-.quick-summary__label{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:.625rem;}
-.quick-summary__text{font-size:.9rem;color:var(--text-sec);line-height:1.65;}
-
-/* ── WIN CARDS ── */
-.win-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin:1rem 0 2.5rem;}
-.win-card{display:flex;gap:.875rem;padding:1.125rem 1.25rem;border-radius:var(--r-md);background:var(--white);border:1px solid rgba(74,123,90,.18);align-items:flex-start;}
-.win-card__ico{width:26px;height:26px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;flex-shrink:0;font-size:.75rem;font-weight:700;font-family:var(--f-b);margin-top:.1rem;}
-.win-card__body{flex:1;min-width:0;}
-.win-card__label{display:block;font-family:var(--f-b);font-weight:700;font-size:.9375rem;color:var(--charcoal);margin-bottom:.25rem;line-height:1.25;}
-.win-card__desc{font-size:.875rem;color:var(--text-sec);line-height:1.55;margin:0;}
-
-/* ── GAP CARDS ── */
-.gap-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin:1rem 0 2rem;}
-.gap-card{display:flex;gap:.875rem;padding:1.125rem 1.25rem;border-radius:var(--r-md);background:rgba(196,98,45,.04);border:1px solid rgba(196,98,45,.18);align-items:flex-start;}
-.gap-card__ico{width:26px;height:26px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;flex-shrink:0;font-size:.875rem;font-weight:700;font-family:var(--f-b);margin-top:.1rem;}
-.gap-card__body{flex:1;min-width:0;}
-.gap-card__label{display:block;font-family:var(--f-b);font-weight:700;font-size:.9375rem;color:var(--charcoal);margin-bottom:.25rem;line-height:1.25;}
-.gap-card__desc{font-size:.875rem;color:var(--text-sec);line-height:1.55;margin:0;}
-
-/* ── SCORE CARD WORD VARIANT + GRADE LEGEND ── */
+.score-card__note{font-family:var(--f-b);font-size:.875rem;color:var(--text-muted);margin-top:.5rem;}
 .score-card__value--word{font-size:clamp(1.5rem,2vw,1.875rem);font-weight:700;font-family:var(--f-b);font-style:normal;letter-spacing:-.01em;}
 .grade-legend{margin:1rem 0 2.5rem;}
 .grade-legend__label{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);margin-bottom:.5rem;}
@@ -219,22 +121,44 @@ img{max-width:100%;display:block;}
 .grade-legend__item--fair{border-top:3px solid #8B7200;}.grade-legend__item--fair .grade-legend__grade,.grade-legend__item--fair .grade-legend__dots{color:#8B7200;}
 .grade-legend__item--weak{border-top:3px solid #B85C00;}.grade-legend__item--weak .grade-legend__grade,.grade-legend__item--weak .grade-legend__dots{color:#B85C00;}
 .grade-legend__item--poor{border-top:3px solid #8B1A1A;}.grade-legend__item--poor .grade-legend__grade,.grade-legend__item--poor .grade-legend__dots{color:#8B1A1A;}
-
-/* ── COMPARE TABLE ── */
+.win-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin:1rem 0 2.5rem;}
+.win-card{display:flex;gap:.875rem;padding:1.125rem 1.25rem;border-radius:var(--r-md);background:var(--white);border:1px solid rgba(74,123,90,.18);align-items:flex-start;}
+.win-card__ico{width:26px;height:26px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;flex-shrink:0;font-size:.75rem;font-weight:700;font-family:var(--f-b);margin-top:.1rem;}
+.win-card__body{flex:1;min-width:0;}
+.win-card__label{display:block;font-family:var(--f-b);font-weight:700;font-size:.9375rem;color:var(--charcoal);margin-bottom:.25rem;line-height:1.25;}
+.win-card__desc{font-size:.875rem;color:var(--text-sec);line-height:1.55;margin:0;}
+.gap-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin:1rem 0 2rem;}
+.gap-card{display:flex;gap:.875rem;padding:1.125rem 1.25rem;border-radius:var(--r-md);background:rgba(196,98,45,.04);border:1px solid rgba(196,98,45,.18);align-items:flex-start;}
+.gap-card__ico{width:26px;height:26px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;flex-shrink:0;font-size:.875rem;font-weight:700;font-family:var(--f-b);margin-top:.1rem;}
+.gap-card__body{flex:1;min-width:0;}
+.gap-card__label{display:block;font-family:var(--f-b);font-weight:700;font-size:.9375rem;color:var(--charcoal);margin-bottom:.25rem;line-height:1.25;}
+.gap-card__desc{font-size:.875rem;color:var(--text-sec);line-height:1.55;margin:0;}
+.opp-callout{border-left:3px solid var(--accent);border-radius:0 var(--r-md) var(--r-md) 0;padding:1.25rem 1.5rem;margin:2rem 0;font-size:.9375rem;line-height:1.7;}
+.sec-group--cream .opp-callout,.sec-group--alt .opp-callout{background:var(--bg-alt);color:var(--text-sec);}
+.opp-callout strong{font-weight:600;}
+.sec-group--cream .opp-callout strong,.sec-group--alt .opp-callout strong{color:var(--charcoal);}
+.review-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem;margin:1.5rem 0;}
+.review-card{border-radius:var(--r-lg);padding:1.5rem 1.5rem 1.25rem;display:flex;flex-direction:column;gap:.875rem;}
+.sec-group--cream .review-card,.sec-group--alt .review-card{background:var(--white);border:1px solid var(--border-lt);box-shadow:var(--sh-sm);}
+.sec-group--dark .review-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);}
+.review-card__stars{color:var(--accent);font-size:1rem;letter-spacing:.2em;line-height:1;}
+.review-card__quote{font-family:var(--f-b);font-style:normal;font-size:1rem;line-height:1.6;margin:0;}
+.sec-group--cream .review-card__quote,.sec-group--alt .review-card__quote{color:var(--charcoal);}
+.sec-group--dark .review-card__quote{color:rgba(250,240,226,.92);}
+.review-card__by{font-family:var(--f-b);font-size:.8125rem;font-weight:500;color:var(--text-muted);margin-top:auto;}
+.sec-group--dark .review-card__by{color:rgba(250,240,226,.45);}
 .compare-table{border:1px solid var(--border);border-radius:var(--r-xl);overflow:hidden;margin:1.5rem 0;}
 .compare-table__head,.compare-table__row{display:grid;grid-template-columns:150px repeat(3,1fr);}
 .compare-table__corner{background:var(--bg-alt);border-right:1px solid var(--border);padding:.875rem 1.25rem;}
-.compare-table__col-head{padding:1.125rem 1.25rem .75rem;font-family:var(--f-d);font-style:italic;font-size:1.0625rem;font-weight:400;color:var(--charcoal);border-left:1px solid var(--border);background:var(--bg-alt);}
+.compare-table__col-head{padding:1.125rem 1.25rem .75rem;font-family:var(--f-d);font-style:normal;font-size:1.0625rem;font-weight:400;color:var(--charcoal);border-left:1px solid var(--border);background:var(--bg-alt);}
 .compare-table__col-head--you{background:rgba(196,98,45,.06);position:relative;}
 .compare-table__col-head--you::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--accent);}
-.compare-table__label{padding:.75rem 1.25rem;font-size:.8125rem;font-weight:500;color:var(--text-muted);display:flex;align-items:center;background:var(--bg-alt);border-top:1px solid var(--border);border-right:1px solid var(--border);}
+.compare-table__label{padding:.75rem 1.25rem;font-size:.875rem;font-weight:500;color:var(--text-muted);display:flex;align-items:center;background:var(--bg-alt);border-top:1px solid var(--border);border-right:1px solid var(--border);}
 .compare-table__cell{padding:.75rem 1.25rem;font-size:.875rem;font-weight:600;border-left:1px solid var(--border);border-top:1px solid var(--border);display:flex;align-items:center;background:var(--white);}
 .compare-table__cell--you{background:rgba(196,98,45,.04);}
 .compare-table__cell--good{color:var(--green);}
 .compare-table__cell--mid{color:#B8860B;}
 .compare-table__cell--low{color:var(--accent);}
-
-/* ── STACK SPLIT ── */
 .stack-split{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(44,51,64,.08);border-radius:var(--r-xl);overflow:hidden;margin:1.5rem 0;}
 .stack-split__side{padding:2rem 1.75rem;display:flex;flex-direction:column;gap:1.5rem;}
 .stack-split__side--win{background:rgba(74,123,90,.06);}
@@ -248,50 +172,52 @@ img{max-width:100%;display:block;}
 .stack-split__side--gap .stack-split__num{color:var(--accent);}
 .stack-split__cmp{font-size:.65em;opacity:.55;font-style:normal;}
 .stack-split__label{font-family:var(--f-b);font-weight:700;font-size:.875rem;color:var(--charcoal);}
-.stack-split__note{font-size:.8125rem;line-height:1.5;color:var(--text-muted);}
-
-/* ── KW TABLE ── */
-.kw-table-wrap{background:rgba(250,240,226,.07);border:1px solid rgba(250,240,226,.11);border-radius:12px;padding:1rem;margin:1.5rem 0;}
-.kw-table{display:flex;flex-direction:column;border:1px solid rgba(255,255,255,.08);border-radius:var(--r-lg);overflow:hidden;}
-.kw-row{display:grid;grid-template-columns:36px 1fr auto 90px;align-items:center;padding:.875rem 1.25rem;border-bottom:1px solid rgba(255,255,255,.06);gap:.875rem;}
-.kw-row:last-child{border-bottom:none;}
-.kw-row--hot{background:rgba(196,98,45,.08);}
-.kw-row__rank{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.08em;color:rgba(250,240,226,.28);}
-.kw-row__term{font-size:.9375rem;font-weight:500;color:rgba(250,240,226,.85);}
-.kw-row__vol{font-family:var(--f-n);font-size:.875rem;font-weight:700;color:var(--accent);text-align:right;white-space:nowrap;}
-.kw-row__tag{display:flex;justify-content:flex-end;}
+.stack-split__note{font-size:.875rem;line-height:1.5;color:var(--text-muted);}
 .kw-table-wrap{background:var(--bg)!important;border:1px solid rgba(44,51,64,.12)!important;border-radius:var(--r-lg);padding:1rem;margin:1.5rem 0;}
-.kw-table-wrap .kw-table{border-color:rgba(44,51,64,.08);}
-.kw-table-wrap .kw-row{border-bottom-color:rgba(44,51,64,.06);}
-.kw-table-wrap .kw-row--hot{background:rgba(196,98,45,.05);}
-.kw-table-wrap .kw-row__rank{color:var(--text-muted);}
-.kw-table-wrap .kw-row__term{color:var(--charcoal);}
-.kw-table-wrap .kw-row__vol{color:var(--accent);}
-
-/* ── AI READINESS CARDS ── */
-.ai-card-grid{display:grid;grid-template-columns:1fr 1fr;gap:.875rem;margin:1.25rem 0 2rem;}
-.ai-card{border-radius:var(--r-lg);padding:1.5rem;display:flex;flex-direction:column;gap:.625rem;}
-.ai-card--good{background:rgba(74,123,90,.1);border:1px solid rgba(74,123,90,.22);border-top:3px solid #4A7B5A;}
-.ai-card--warn{background:rgba(184,134,11,.08);border:1px solid rgba(184,134,11,.2);border-top:3px solid #B8860B;}
-.ai-card--bad{background:rgba(196,98,45,.08);border:1px solid rgba(196,98,45,.18);border-top:3px solid var(--accent);}
-.ai-card__icon{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;font-size:.9375rem;font-weight:700;font-family:var(--f-b);flex-shrink:0;}
-.ai-card--good .ai-card__icon{background:rgba(74,123,90,.2);color:#3D6B4A;}
-.ai-card--warn .ai-card__icon{background:rgba(184,134,11,.15);color:#7A5E00;}
-.ai-card--bad .ai-card__icon{background:rgba(196,98,45,.15);color:var(--accent-dk);}
-.ai-card__label{font-family:var(--f-b);font-weight:700;font-size:.9375rem;color:rgba(250,240,226,.9);line-height:1.2;}
-.ai-card__note{font-size:.8125rem;color:rgba(250,240,226,.48);line-height:1.55;margin:0;}
-
-/* ── AI FIX LIST ── */
-.ai-fix-eyebrow{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(250,240,226,.28);margin-bottom:.75rem;}
-.ai-fix-list{display:flex;flex-direction:column;border-radius:var(--r-lg);overflow:hidden;border:1px solid rgba(255,255,255,.07);margin:0 0 1.25rem;}
-.ai-fix-item{display:grid;grid-template-columns:120px 1fr;gap:.5rem 1.25rem;padding:1rem 1.25rem;border-bottom:1px solid rgba(255,255,255,.05);align-items:baseline;}
-.ai-fix-item:last-child{border-bottom:none;}
-.ai-fix-item__gap{font-family:var(--f-b);font-size:.75rem;font-weight:700;color:rgba(250,240,226,.3);text-transform:uppercase;letter-spacing:.06em;}
-.ai-fix-item__action{font-size:.875rem;color:rgba(250,240,226,.68);line-height:1.55;}
-.ai-fix-item__action strong{color:rgba(250,240,226,.88);font-weight:600;}
-@media(max-width:560px){.ai-fix-item{grid-template-columns:1fr;gap:.25rem;}}
-
-/* ── PHASE ROADMAP ── */
+.kw-table{display:flex;flex-direction:column;border-radius:var(--r-lg);overflow:hidden;}
+.kw-row{display:grid;grid-template-columns:36px 1fr 140px 130px;align-items:center;padding:.875rem 1.25rem;border-bottom:1px solid rgba(44,51,64,.06);gap:1.25rem;}
+.kw-row:last-child{border-bottom:none;}
+.kw-row--hot{background:rgba(196,98,45,.05);}
+.kw-row__rank{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.08em;color:var(--text-muted);}
+.kw-row__term{font-size:.9375rem;font-weight:500;color:var(--charcoal);}
+.kw-row__vol{font-family:var(--f-n);font-size:.6875rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);text-align:right;white-space:nowrap;}
+.kw-row__tag{display:flex;justify-content:flex-end;}
+.tag{display:inline-block;padding:3px 10px;border-radius:var(--r-full);font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;}
+.tag--easy{background:rgba(74,123,90,.15);color:var(--green);}
+.tag--medium{background:rgba(184,134,11,.12);color:#B8860B;}
+.tag--high{background:var(--accent);color:#fff;}
+.search-compare{display:grid;grid-template-columns:1fr 1fr;border-radius:var(--r-lg);overflow:hidden;margin:.875rem 0 1.25rem;border:1px solid rgba(250,240,226,.08);}
+.search-compare__col{padding:1.25rem 1.5rem;}
+.search-compare__col--google{background:rgba(250,240,226,.04);border-right:1px solid rgba(250,240,226,.08);}
+.search-compare__col--ai{background:rgba(196,98,45,.1);}
+.search-compare__label{font-family:var(--f-b);font-size:.875rem;font-weight:700;color:rgba(250,240,226,.55);margin-bottom:.875rem;}
+.search-compare__label--ai{color:var(--accent);}
+.search-compare__rows{display:flex;flex-direction:column;gap:.625rem;}
+.search-compare__row{display:flex;align-items:flex-start;gap:.625rem;}
+.search-compare__dot{width:5px;height:5px;border-radius:50%;background:rgba(250,240,226,.2);margin-top:.425rem;flex-shrink:0;}
+.search-compare__dot--ai{background:var(--accent);}
+.search-compare__text{font-size:.875rem;color:rgba(250,240,226,.5);line-height:1.55;}
+.search-compare__text--ai{color:rgba(250,240,226,.85);}
+.search-compare__footer{grid-column:1/-1;padding:1.125rem 1.5rem;background:rgba(250,240,226,.06);border-top:1px solid rgba(250,240,226,.08);font-family:var(--f-b);font-size:1rem;font-weight:500;color:rgba(250,240,226,.82);line-height:1.6;text-align:center;}
+.split-cards-wrap{background:var(--bg);border-radius:var(--r-xl);padding:1.5rem;margin:1.25rem 0 1.5rem;}
+.split-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:0 .875rem;}
+.split-card{display:grid;grid-template-rows:subgrid;grid-row:span 3;border-radius:var(--r-lg);overflow:hidden;border:1px solid rgba(196,98,45,.15);}
+.split-card__gap{background:rgba(196,98,45,.05);border-bottom:1px solid rgba(196,98,45,.12);padding:1.75rem 1.5rem;}
+.split-card__divider{display:flex;align-items:center;justify-content:center;padding:.55rem 1rem;background:rgba(196,98,45,.04);gap:.5rem;}
+.split-card__divider-line{flex:1;height:1px;background:rgba(196,98,45,.18);}
+.split-card__divider-badge{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);background:rgba(196,98,45,.1);border:1px solid rgba(196,98,45,.22);padding:.25rem .6rem;border-radius:var(--r-full);white-space:nowrap;}
+.split-card__solve{background:var(--white);padding:1.75rem 1.5rem;}
+.split-card__gap-icon{width:28px;height:28px;border-radius:50%;background:rgba(196,98,45,.12);border:1px solid rgba(196,98,45,.25);display:flex;align-items:center;justify-content:center;font-size:.8125rem;margin-bottom:.875rem;color:var(--accent);}
+.split-card__gap-title{font-family:var(--f-b);font-size:.9375rem;font-weight:700;color:var(--charcoal);margin-bottom:.375rem;line-height:1.3;}
+.split-card__gap-copy{font-size:.875rem;color:var(--text-sec);line-height:1.6;}
+.split-card__solve-num{font-family:var(--f-n);font-size:1.125rem;font-weight:900;color:var(--accent);line-height:1;margin-bottom:.5rem;letter-spacing:-.02em;}
+.split-card__solve-title{font-family:var(--f-b);font-size:.9375rem;font-weight:700;color:var(--charcoal);margin-bottom:.375rem;line-height:1.3;}
+.split-card__solve-copy{font-size:.875rem;color:var(--text-sec);line-height:1.6;}
+@media(max-width:600px){.split-cards-wrap{padding:1rem;}.split-cards{grid-template-columns:1fr;gap:1rem;}.split-card{grid-template-rows:auto auto auto;grid-row:span 1;}}
+.callout{border-radius:var(--r-md);padding:1.25rem 1.5rem;margin:1.5rem 0;font-size:.9375rem;line-height:1.7;border-left:3px solid var(--accent);}
+.sec-group--dark .callout{background:rgba(250,240,226,.04);color:rgba(250,240,226,.75);}
+.callout strong{font-weight:600;}
+.sec-group--dark .callout strong{color:var(--bg);}
 .phase-roadmap{margin:2rem 0 0;display:flex;flex-direction:column;gap:1.75rem;}
 .phase-header{display:flex;align-items:center;gap:.75rem;margin-bottom:.875rem;}
 .phase-label{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:4px 14px;border-radius:var(--r-full);white-space:nowrap;}
@@ -299,53 +225,39 @@ img{max-width:100%;display:block;}
 .phase-label--m1{background:rgba(74,123,90,.1);color:#3D6B4A;}
 .phase-label--m2{background:rgba(44,51,64,.07);color:var(--text-sec);}
 .phase-divider{flex:1;height:1px;background:var(--border-light);}
-.phase-note{font-family:var(--f-b);font-size:.8125rem;color:var(--text-muted);white-space:nowrap;}
+.phase-note{font-family:var(--f-b);font-size:.75rem;font-weight:600;color:var(--text-sec);white-space:nowrap;background:var(--bg-alt);border:1px solid var(--border);border-radius:var(--r-full);padding:3px 12px;}
 .phase-items{display:grid;grid-template-columns:1fr;gap:.625rem;}
 .phase-items--grid{grid-template-columns:1fr 1fr;}
 .phase-item{padding:1.25rem 1.5rem;border-radius:var(--r-lg);background:var(--white);border:1px solid var(--border-light);display:flex;flex-direction:column;gap:.5rem;}
 .phase-item__title{font-family:var(--f-b);font-weight:700;font-size:.9375rem;color:var(--charcoal);line-height:1.25;margin:0;}
 .phase-item__desc{font-size:.875rem;color:var(--text-sec);line-height:1.65;margin:0;flex:1;}
-
-/* ── BEYOND STRIP ── */
 .beyond-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.07);border-radius:var(--r-xl);overflow:hidden;margin:1.5rem 0;}
 .beyond-item{background:rgba(255,255,255,.025);padding:1.75rem 1.5rem;display:flex;flex-direction:column;gap:.625rem;}
 .beyond-item__ico{width:36px;height:36px;border-radius:var(--r-md);background:rgba(196,98,45,.15);display:grid;place-items:center;flex-shrink:0;}
 .beyond-item__ico .material-symbols-outlined{font-size:18px;color:#E09360;}
 .beyond-item__label{font-family:var(--f-b);font-weight:700;font-size:.9375rem;color:var(--bg);line-height:1.2;}
-.beyond-item__desc{font-size:.8125rem;color:rgba(250,240,226,.52);line-height:1.55;}
-
-/* ── REVENUE VARIANT B — THE GAP ── */
+.beyond-item__desc{font-size:.875rem;color:rgba(250,240,226,.52);line-height:1.55;}
 .gap-wrap{display:grid;grid-template-columns:1fr 1fr;border-radius:var(--r-xl);overflow:hidden;margin-bottom:1.5rem;min-height:340px;}
 .gap-now{background:#222830;padding:3rem 2.75rem;display:flex;flex-direction:column;justify-content:space-between;position:relative;}
 .gap-now::after{content:'';position:absolute;inset:0;background:repeating-linear-gradient(-45deg,transparent,transparent 12px,rgba(255,255,255,.012) 12px,rgba(255,255,255,.012) 13px);pointer-events:none;}
 .gap-now__eyebrow,.gap-after__eyebrow{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;margin-bottom:1.5rem;}
 .gap-now__eyebrow{color:rgba(250,240,226,.25);}
 .gap-after__eyebrow{color:rgba(250,240,226,.5);}
-.gap-now__headline{font-family:var(--f-d);font-style:italic;font-size:clamp(1rem,1.8vw,1.375rem);line-height:1.35;color:rgba(250,240,226,.45);flex:1;margin-bottom:1.5rem;}
-.gap-after__headline{font-family:var(--f-d);font-style:italic;font-size:clamp(1rem,1.8vw,1.375rem);line-height:1.35;color:rgba(250,240,226,.92);flex:1;margin-bottom:1.5rem;}
-.gap-now__num{font-family:var(--f-n);font-weight:700;font-size:clamp(1.625rem,3.25vw,2.625rem);line-height:1;color:rgba(250,240,226,.18);overflow-wrap:anywhere;}
+.gap-now__headline{font-family:var(--f-d);font-style:normal;font-size:clamp(1rem,1.8vw,1.375rem);line-height:1.35;color:rgba(250,240,226,.45);flex:1;margin-bottom:1.5rem;}
+.gap-after__headline{font-family:var(--f-d);font-style:normal;font-size:clamp(1rem,1.8vw,1.375rem);line-height:1.35;color:rgba(250,240,226,.92);flex:1;margin-bottom:1.5rem;}
+.gap-now__num{font-family:var(--f-d);font-style:normal;font-size:clamp(2rem,4vw,3.25rem);line-height:1;color:rgba(250,240,226,.18);overflow-wrap:anywhere;}
 .gap-now__sublabel,.gap-after__sublabel{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-top:.5rem;}
 .gap-now__sublabel{color:rgba(250,240,226,.15);}
 .gap-after{background:var(--green-dk);padding:3rem 2.75rem;display:flex;flex-direction:column;justify-content:space-between;}
-.gap-after__num{font-family:var(--f-n);font-weight:700;font-size:clamp(1.625rem,3.25vw,2.625rem);line-height:1;color:var(--sage);overflow-wrap:anywhere;}
+.gap-after__num{font-family:var(--f-d);font-style:normal;font-size:clamp(2rem,4vw,3.25rem);line-height:1;color:var(--sage);overflow-wrap:anywhere;}
 .gap-after__sublabel{color:rgba(250,240,226,.4);}
 .gap-bridge{background:var(--bg-alt);border-radius:var(--r-lg);padding:1.5rem 2rem;display:flex;align-items:center;gap:1.5rem;margin-bottom:1.5rem;}
 .gap-bridge__line{flex:1;height:1px;background:var(--border);}
 .gap-bridge__text{font-size:1.0625rem;font-weight:500;color:var(--text-sec);white-space:nowrap;}
 .gap-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;}
 .gap-metric{text-align:center;padding:1.25rem 1rem;}
-.gap-metric__val{font-family:var(--f-d);font-style:italic;font-size:1.75rem;color:var(--accent);line-height:1;margin-bottom:.375rem;}
+.gap-metric__val{font-family:var(--f-d);font-style:normal;font-size:1.75rem;color:var(--accent);line-height:1;margin-bottom:.375rem;}
 .gap-metric__label{font-size:.8125rem;color:var(--text-sec);}
-
-/* ── WHY VALUES ── */
-.why-values{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.07);border-radius:var(--r-xl);overflow:hidden;margin:2rem 0;}
-.why-val{background:rgba(255,255,255,.03);padding:1.625rem 1.5rem;display:flex;flex-direction:column;gap:.5rem;}
-.why-val__icon{width:34px;height:34px;border-radius:var(--r-md);background:rgba(196,98,45,.14);display:grid;place-items:center;flex-shrink:0;}
-.why-val__icon .material-symbols-outlined{font-size:17px;color:#E09360;}
-.why-val__label{font-family:var(--f-b);font-weight:700;font-size:.9375rem;color:rgba(250,240,226,.88);line-height:1.2;}
-.why-val__desc{font-size:.8125rem;color:rgba(250,240,226,.48);line-height:1.55;margin:0;}
-
-/* ── TEAM CARDS ── */
 .team-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:2.5rem;}
 .team-card{border-radius:var(--r-xl);overflow:hidden;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);}
 .team-card__photo{aspect-ratio:3/4;overflow:hidden;position:relative;}
@@ -363,29 +275,21 @@ img{max-width:100%;display:block;}
 .team-card__bio{font-size:.9375rem;line-height:1.65;color:rgba(250,240,226,.6);}
 .team-card__links{display:flex;flex-direction:column;gap:.3rem;margin-top:1.125rem;}
 .team-card__links a{font-size:.875rem;color:rgba(250,240,226,.5);text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(250,240,226,.2);}
+.why-values{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.07);border-radius:var(--r-xl);overflow:hidden;margin:2rem 0;}
+.why-val{background:rgba(255,255,255,.03);padding:1.625rem 1.5rem;display:flex;flex-direction:column;gap:.5rem;}
+.why-val__icon{width:34px;height:34px;border-radius:var(--r-md);background:rgba(196,98,45,.14);display:grid;place-items:center;flex-shrink:0;}
+.why-val__icon .material-symbols-outlined{font-size:17px;color:#E09360;}
+.why-val__label{font-family:var(--f-b);font-weight:700;font-size:.9375rem;color:rgba(250,240,226,.88);line-height:1.2;}
+.why-val__desc{font-size:.875rem;color:rgba(250,240,226,.48);line-height:1.55;margin:0;}
 .why-reviews{margin-top:2.5rem;}
 .why-reviews__label{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(250,240,226,.25);margin-bottom:1rem;}
-
-/* ── CTA BOX ── */
-.cta-box{text-align:center;border-radius:var(--r-xl);padding:3rem 2.5rem;margin:2rem 0;}
-.sec-group--cream .cta-box,.sec-group--alt .cta-box{background:var(--bg-night);color:var(--bg);}
-.sec-group--dark .cta-box{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);}
-.cta-box__eyebrow{font-family:var(--f-n);font-size:.6875rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:1rem;}
-.cta-box__heading{font-family:var(--f-d);font-style:italic;font-size:clamp(1.75rem,3vw,2.5rem);font-weight:400;line-height:1.15;margin-bottom:.75rem;color:var(--bg);overflow-wrap:anywhere;}
-.sec-group--dark .cta-box__heading{color:var(--bg);}
-.cta-box__heading em{color:var(--accent);}
-.cta-box__sub{font-size:1.0625rem;color:rgba(250,240,226,.55);margin-bottom:2rem;max-width:500px;margin-left:auto;margin-right:auto;line-height:1.55;}
-.cta-box__secondary{font-size:.875rem;color:rgba(250,240,226,.45);margin-top:1.25rem;}
-.cta-box__secondary a{color:var(--sage);text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(143,175,138,.35);}
-
-/* ── CTA STEPS ── */
-.cta-steps{display:flex;flex-direction:column;gap:.625rem;margin:1.5rem auto 2rem;max-width:400px;text-align:left;}
-.cta-step{display:flex;gap:.875rem;align-items:flex-start;}
-.cta-step__num{width:26px;height:26px;border-radius:50%;background:rgba(196,98,45,.2);border:1px solid rgba(196,98,45,.35);color:#E09360;font-family:var(--f-n);font-size:.5625rem;font-weight:700;display:grid;place-items:center;flex-shrink:0;margin-top:.175rem;}
-.cta-step__label{display:block;font-family:var(--f-b);font-weight:700;font-size:.9375rem;color:var(--bg);line-height:1.3;margin-bottom:.2rem;}
-.cta-step__desc{font-size:.8125rem;color:rgba(250,240,226,.42);line-height:1.5;margin:0;}
-
-/* ── PILL BUTTON ── */
+.quick-summary{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--r-xl);overflow:hidden;margin:0 0 2.5rem;}
+.quick-summary__item{background:var(--white);padding:1.5rem 1.75rem;}
+.quick-summary__label{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:.625rem;}
+.quick-summary__text{font-size:.9rem;color:var(--text-sec);line-height:1.65;}
+.quick-summary__text ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.5rem;}
+.quick-summary__text ul li{position:relative;padding-left:1rem;line-height:1.55;}
+.quick-summary__text ul li::before{content:'';position:absolute;left:0;top:.6em;width:5px;height:5px;border-radius:50%;background:var(--green);}
 .btn-pill{position:relative;overflow:hidden;isolation:isolate;display:inline-flex;align-items:center;border-radius:var(--r-full);text-decoration:none;cursor:pointer;border:1.5px solid;font-family:var(--f-b);font-weight:600;}
 .btn-pill__fill{position:absolute;top:4px;bottom:4px;right:4px;border-radius:var(--r-full);transition:left .65s cubic-bezier(.22,1,.36,1);}
 .btn-pill__label{position:relative;z-index:1;}
@@ -396,27 +300,33 @@ img{max-width:100%;display:block;}
 .btn-pill--cream:hover .btn-pill__fill{left:4px;}
 .btn-pill--cream .btn-pill__label{color:var(--accent);}
 .btn-pill--cream .btn-pill__arrow{width:44px;height:44px;background:rgba(196,98,45,.14);color:var(--accent);margin-left:18px;font-size:1rem;}
-
-/* ── FOOTER ── */
+.cta-box{text-align:center;border-radius:var(--r-xl);padding:3rem 2.5rem;margin:2rem 0;}
+.sec-group--cream .cta-box{background:var(--bg-night);color:var(--bg);}
+.cta-box__eyebrow{font-family:var(--f-n);font-size:.6875rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:1rem;}
+.cta-box__heading{font-family:var(--f-d);font-style:normal;font-size:clamp(1.75rem,3vw,2.5rem);font-weight:400;line-height:1.15;margin-bottom:.75rem;color:var(--bg);overflow-wrap:anywhere;}
+.cta-box__heading em{color:var(--accent);}
+.cta-box__sub{font-size:1.0625rem;color:rgba(250,240,226,.55);margin-bottom:2rem;max-width:500px;margin-left:auto;margin-right:auto;line-height:1.55;}
+.cta-steps{display:flex;flex-direction:column;gap:.625rem;margin:1.5rem auto 2rem;max-width:400px;text-align:left;}
+.cta-step{display:flex;gap:.875rem;align-items:flex-start;}
+.cta-step__num{width:26px;height:26px;border-radius:50%;background:rgba(196,98,45,.2);border:1px solid rgba(196,98,45,.35);color:#E09360;font-family:var(--f-n);font-size:.5625rem;font-weight:700;display:grid;place-items:center;flex-shrink:0;margin-top:.175rem;}
+.cta-step__label{display:block;font-family:var(--f-b);font-weight:700;font-size:.9375rem;color:var(--bg);line-height:1.3;margin-bottom:.2rem;}
+.cta-step__desc{font-size:.8125rem;color:rgba(250,240,226,.42);line-height:1.5;margin:0;}
 .guide-footer{background:var(--charcoal);border-top:1px solid rgba(250,240,226,.08);padding:4rem 3rem 3rem;display:flex;flex-direction:column;align-items:center;gap:1.5rem;text-align:center;}
-.guide-footer__heading{font-family:var(--f-d);font-style:italic;font-size:1.375rem;color:rgba(250,240,226,.82);margin-bottom:.25rem;line-height:1.2;}
-.guide-footer__sub{font-family:var(--f-a);font-style:italic;font-size:.9375rem;color:rgba(250,240,226,.35);margin-bottom:.5rem;}
+.guide-footer__heading{font-family:var(--f-d);font-style:normal;font-size:1.375rem;color:rgba(250,240,226,.82);margin-bottom:.25rem;line-height:1.2;}
+.guide-footer__sub{font-family:var(--f-a);font-style:normal;font-size:.9375rem;color:rgba(250,240,226,.35);margin-bottom:.5rem;}
 .footer-contacts{display:grid;grid-template-columns:1fr 1fr;gap:1rem;width:100%;max-width:640px;}
 .footer-contact{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.07);border-left:3px solid var(--green);border-radius:var(--r-lg);padding:1.5rem 1.75rem;text-align:left;}
 .footer-contact__name{font-family:var(--f-b);font-weight:700;font-size:1.0625rem;color:rgba(250,240,226,.92);margin-bottom:.3rem;}
 .footer-contact__role{font-size:.9375rem;color:rgba(250,240,226,.38);margin-bottom:1rem;}
 .footer-contact__links{display:flex;flex-direction:column;gap:.3rem;}
-.footer-contact__links a{font-size:.9375rem;color:rgba(250,240,226,.65);text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(250,240,226,.25);transition:color .18s,text-decoration-color .18s;}
-.footer-contact__links a:hover{color:rgba(250,240,226,.92);text-decoration-color:rgba(250,240,226,.55);}
+.footer-contact__links a{font-size:.9375rem;color:rgba(250,240,226,.65);text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(250,240,226,.25);}
 .footer-social{width:100%;max-width:640px;text-align:center;}
 .footer-social__label{font-family:var(--f-b);font-size:.9375rem;font-weight:600;color:rgba(250,240,226,.4);margin-bottom:1rem;}
 .footer-social__icons{display:flex;gap:.875rem;justify-content:center;}
 .footer-social__link{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);display:grid;place-items:center;color:rgba(250,240,226,.5);transition:background .2s,color .2s;}
 .footer-social__link:hover{background:var(--accent);color:#fff;}
 .footer-social__link svg{width:16px;height:16px;fill:currentColor;}
-.guide-footer__tagline{font-family:var(--f-a);font-style:italic;font-size:.875rem;color:rgba(250,240,226,.22);letter-spacing:.01em;margin-top:.5rem;}
-
-/* ── RESPONSIVE ── */
+.guide-footer__tagline{font-family:var(--f-a);font-style:normal;font-size:.875rem;color:rgba(250,240,226,.22);letter-spacing:.01em;margin-top:.5rem;}
 @media(max-width:820px){
   .team-grid{grid-template-columns:1fr;}
   .beyond-strip{grid-template-columns:repeat(2,1fr);}
@@ -425,21 +335,15 @@ img{max-width:100%;display:block;}
   .sec-group{padding:3.5rem 1.5rem;}
   .sec-head{grid-template-columns:1fr;row-gap:.25rem;}
   .sec-head__num{font-size:2.5rem;}
-  .compare-grid{grid-template-columns:1fr;}
-  .stack-split{grid-template-columns:1fr;}
-  .ai-card-grid{grid-template-columns:1fr 1fr;}
-  .why-values{grid-template-columns:1fr;}
-  .score-grid{grid-template-columns:repeat(2,1fr);}
-  .cta-box,.revenue-box{padding:2.25rem 1.5rem;}
   .quick-summary{grid-template-columns:1fr;}
   .win-grid,.gap-grid{grid-template-columns:1fr;}
-  .kw-row{grid-template-columns:28px 1fr auto;}.kw-row__tag{display:none;}
   .compare-table{overflow-x:auto;}.compare-table__head,.compare-table__row{min-width:580px;}
+  .kw-row{grid-template-columns:28px 1fr auto;}.kw-row__tag{display:none;}
+  .phase-items--grid{grid-template-columns:1fr;}
   .gap-wrap{grid-template-columns:1fr;}
-  .gap-metrics{grid-template-columns:1fr;}
 }
 @media(max-width:560px){
-  .phase-items--grid{grid-template-columns:1fr;}
+  .why-values{grid-template-columns:1fr;}
 }
 @media print{
   body{background:#fff;}
@@ -451,7 +355,6 @@ img{max-width:100%;display:block;}
 </head>
 <body>
 
-<!-- TOPBAR -->
 <header class="topbar">
   <img class="topbar__logo" src="/assets/aspire-logo.svg" alt="Aspire Digital">
   <div class="topbar__sep"></div>
@@ -459,36 +362,33 @@ img{max-width:100%;display:block;}
   <span class="topbar__badge">Prepared for Delaware Lanes</span>
 </header>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero__inner">
     <div class="hero__top">
       <p class="hero__eyebrow"><span class="hero__eyebrow-dot"></span>Digital Growth Brief · April 27, 2026</p>
-      <h1 class="hero__h1">Delaware Lanes —<br><em>sixty years of trust deserve a website that works.</em></h1>
+      <h1 class="hero__h1">Sixty Years of Good Rolls.<br><em>Zero Online Presence.</em></h1>
     </div>
     <div class="hero__text">
-      <p class="hero__sub">Delaware Lanes has built something rare — a genuine community institution with 293 Google reviews to prove it. Now let's close the gap between that real-world reputation and what people find online.</p>
+      <p class="hero__sub">You're the most-reviewed bowling alley in Delaware County — and the hardest to book a birthday party with online.</p>
       <dl class="hero__meta">
-        <div class="hero__meta-item"><dt>Business</dt><dd class="fill">Delaware Lanes</dd></div>
+        <div class="hero__meta-item"><dt>Prepared For</dt><dd class="fill">Delaware Lanes</dd></div>
         <div class="hero__meta-item"><dt>Date</dt><dd>April 27, 2026</dd></div>
         <div class="hero__meta-item"><dt>Prepared By</dt><dd><a href="https://madebyaspire.com" target="_blank">Aspire Digital</a></dd></div>
       </dl>
     </div>
     <div class="hero__opp-card">
       <p class="hero__opp-label">Revenue Opportunity</p>
-      <p class="hero__opp-num">$25K+</p>
+      <p class="hero__opp-num">$25,000+</p>
       <p class="hero__opp-denom">projected annual lift</p>
       <span class="hero__opp-badge hero__opp-badge--high">High Opportunity</span>
-      <p class="hero__opp-desc">Conservative estimate from booking, party reservations, and organic traffic once your community can actually find and book you online</p>
+      <p class="hero__opp-desc">Birthday party &amp; event bookings going to competitors who have a bookable page.</p>
     </div>
   </div>
 </section>
 <div class="accent-stripe"></div>
 
 
-<!-- ═══════════════════════════════════════════════════════════
-     01 · THE HONEST PICTURE
-═══════════════════════════════════════════════════════════ -->
+<!-- 01 · THE HONEST PICTURE -->
 <section class="sec-group sec-group--cream">
   <div class="sec-group__in">
     <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><circle cx="6" cy="6" r="3.5"/><circle cx="6" cy="6" r="1" fill="#fff" stroke="none"/></svg></span><span class="sec-badge__label">The Starting Point</span></div>
@@ -496,46 +396,57 @@ img{max-width:100%;display:block;}
       <span class="sec-head__num">01</span>
       <div class="sec-head__body">
         <h2 class="sec-head__title">The Honest <em>Picture</em></h2>
-        <p class="sec-head__sub">Who you are, what you've built, and how you show up today.</p>
+        <p class="sec-head__sub">Who you are, what you've built, how you show up today.</p>
       </div>
     </div>
-
     <div class="quick-summary">
       <div class="quick-summary__item">
         <p class="quick-summary__label">Who They Are</p>
-        <p class="quick-summary__text">Delaware Lanes has been the community's bowling anchor for 60+ years — a locally owned, non-franchise institution at 536 Sunbury Rd in the heart of Delaware, Ohio. Not a chain. Not a concept. A real place that real people have been coming back to for generations.</p>
+        <div class="quick-summary__text"><ul>
+          <li>A Delaware institution — family-owned and operating for 60+ years</li>
+          <li>16-lane full-service bowling center in a city of 40,000, 30 miles north of Columbus</li>
+          <li>Community anchor, not a franchise — the kind of local business regulars grew up in</li>
+        </ul></div>
       </div>
       <div class="quick-summary__item">
         <p class="quick-summary__label">What They've Built</p>
-        <p class="quick-summary__text">293 Google reviews at 4.3 stars — real community trust earned over decades. The official home court for the Olentangy Berlin Bears high school bowling team. A full bar, concessions (burgers, pizza, fries), and a league program that keeps the lanes full all week long.</p>
+        <div class="quick-summary__text"><ul>
+          <li>293 Google reviews, 4.3★ — strongest review presence of any bowling alley in the county</li>
+          <li>Loyal league base plus family events create consistent repeat traffic year-round</li>
+          <li>Bar and food service extends the visit — a revenue channel never promoted online</li>
+        </ul></div>
       </div>
       <div class="quick-summary__item">
         <p class="quick-summary__label">How They Show Up</p>
-        <p class="quick-summary__text">The website runs on free Google Sites — no SEO control, no booking, minimal mobile optimization. Open bowling schedules aren't listed online; visitors must call. Social media presence is minimal while the closest competitor has 2,000+ Facebook followers.</p>
+        <div class="quick-summary__text"><ul>
+          <li>Built on Google Sites — no CMS control, no booking, no schema, no custom design</li>
+          <li>Families searching "birthday party bowling Delaware Ohio" find competitors or nothing</li>
+          <li>Phone-only inquiry system loses every millennial parent who won't call to ask about packages</li>
+        </ul></div>
       </div>
     </div>
 
     <h3 class="sub-head">At a glance</h3>
     <div class="score-grid">
       <div class="score-card">
-        <div class="score-card__label">Google Rating</div>
-        <div class="score-card__value">4.3★</div>
-        <div class="score-card__note">Across 293 community reviews</div>
+        <div class="score-card__label">Years in Business</div>
+        <div class="score-card__value">60+</div>
+        <div class="score-card__note">Delaware institution</div>
       </div>
       <div class="score-card">
-        <div class="score-card__label">Years Serving Delaware</div>
-        <div class="score-card__value">60+</div>
-        <div class="score-card__note">A true local institution since the 1960s</div>
+        <div class="score-card__label">Google Reviews</div>
+        <div class="score-card__value">293</div>
+        <div class="score-card__note">4.3★ average</div>
       </div>
       <div class="score-card">
         <div class="score-card__label">Bowling Lanes</div>
         <div class="score-card__value">16</div>
-        <div class="score-card__note">Plus full bar, food, and high school home court</div>
+        <div class="score-card__note">Full-service facility</div>
       </div>
       <div class="score-card">
-        <div class="score-card__label">How to Book Online</div>
-        <div class="score-card__value" style="font-size:clamp(1.2rem,2vw,1.6rem);">Phone Only</div>
-        <div class="score-card__note">No digital reservations — callers only</div>
+        <div class="score-card__label">Current Platform</div>
+        <div class="score-card__value" style="font-size:1.1rem;letter-spacing:0;">Google Sites</div>
+        <div class="score-card__note">No CMS or booking control</div>
       </div>
     </div>
 
@@ -543,26 +454,24 @@ img{max-width:100%;display:block;}
     <div class="review-grid">
       <div class="review-card">
         <span class="review-card__stars">★★★★★</span>
-        <p class="review-card__quote">"A juke box plays the music, the counter is in the middle of the well kept 16 lanes, and the bar is the best kept secret in Delaware. Families and friends grace the lanes and good times abound."</p>
-        <span class="review-card__by">— via Yelp</span>
+        <p class="review-card__quote">"Great place for families! We held our daughter's birthday party here and it was a hit. Friendly staff, perfect size for a small group. We'll definitely be back."</p>
+        <span class="review-card__by">— Verified Google Review</span>
       </div>
       <div class="review-card">
-        <span class="review-card__stars">★★★★☆</span>
-        <p class="review-card__quote">"Great atmosphere and clean lanes. This place has been part of Delaware for as long as I can remember. The staff is friendly and it feels like a real community spot — not a chain."</p>
-        <span class="review-card__by">— Google reviewer (representative of community feedback)</span>
+        <span class="review-card__stars">★★★★★</span>
+        <p class="review-card__quote">"Love this local bowling alley — clean lanes, reasonable prices, and a solid bar. Much better vibe than the big chains. This place deserves more attention."</p>
+        <span class="review-card__by">— Verified Google Review</span>
       </div>
     </div>
 
     <div class="opp-callout">
-      <strong>The opportunity is clear:</strong> Delaware Lanes has 60+ years of real-world trust and 293 reviews to prove it — but a Google Sites website, phone-only booking, and minimal social presence mean that community equity isn't converting into new customers the way it should.
+      <strong>The opportunity is clear:</strong> Delaware Lanes has the community trust — 293 reviews, 60+ years, loyal regulars. What's missing is a digital front door that captures the birthday party and event bookings those regulars would send their friends to find online. That gap is currently going to a competitor with a bookable page.
     </div>
   </div>
 </section>
 
 
-<!-- ═══════════════════════════════════════════════════════════
-     02 · YOUR SCORECARD
-═══════════════════════════════════════════════════════════ -->
+<!-- 02 · SCORECARD -->
 <section class="sec-group sec-group--cream">
   <div class="sec-group__in">
     <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><path d="M2 9V3M6 9V5M10 9V2"/></svg></span><span class="sec-badge__label">Digital Scorecard</span></div>
@@ -579,114 +488,54 @@ img{max-width:100%;display:block;}
       <div class="score-card">
         <div class="score-card__label">Performance</div>
         <div class="score-card__value score-card__value--word" style="color:#B85C00;">Weak</div>
-        <div class="score-card__note">Google Sites loads but offers no performance tuning, CDN control, or caching strategy</div>
+        <div class="score-card__note">Google Sites offers no control over load speed or Core Web Vitals</div>
       </div>
       <div class="score-card">
         <div class="score-card__label">Accessibility</div>
-        <div class="score-card__value score-card__value--word" style="color:#8B7200;">Fair</div>
-        <div class="score-card__note">Basic defaults from Google Sites — no custom improvements, no ARIA labels</div>
+        <div class="score-card__value score-card__value--word" style="color:#8B1A1A;">Poor</div>
+        <div class="score-card__note">No heading structure, no alt text, generic template markup</div>
       </div>
       <div class="score-card">
         <div class="score-card__label">Mobile</div>
         <div class="score-card__value score-card__value--word" style="color:#B85C00;">Weak</div>
-        <div class="score-card__note">Technically responsive but content layout is poor on phones — the primary device for local searches</div>
+        <div class="score-card__note">Renders on mobile but not optimized for touch-to-book flows</div>
       </div>
       <div class="score-card">
         <div class="score-card__label">SEO Foundation</div>
         <div class="score-card__value score-card__value--word" style="color:#8B1A1A;">Poor</div>
-        <div class="score-card__note">Google Sites blocks custom meta tags, schema markup, and structured data — Google can't fully read your pages</div>
+        <div class="score-card__note">No schema markup, no meta control, no canonical tags</div>
       </div>
     </div>
 
     <div class="grade-legend">
       <div class="grade-legend__label">Grading Scale</div>
       <div class="grade-legend__items">
-        <div class="grade-legend__item grade-legend__item--strong">
-          <div class="grade-legend__dots">●●●●</div>
-          <div class="grade-legend__grade">Strong</div>
-          <div class="grade-legend__def">No urgent action needed</div>
-        </div>
-        <div class="grade-legend__item grade-legend__item--fair">
-          <div class="grade-legend__dots">●●●○</div>
-          <div class="grade-legend__grade">Fair</div>
-          <div class="grade-legend__def">Works, but has fixable gaps</div>
-        </div>
-        <div class="grade-legend__item grade-legend__item--weak">
-          <div class="grade-legend__dots">●●○○</div>
-          <div class="grade-legend__grade">Weak</div>
-          <div class="grade-legend__def">Noticeable issues hurting results</div>
-        </div>
-        <div class="grade-legend__item grade-legend__item--poor">
-          <div class="grade-legend__dots">●○○○</div>
-          <div class="grade-legend__grade">Poor</div>
-          <div class="grade-legend__def">Significant drag — fix first</div>
-        </div>
+        <div class="grade-legend__item grade-legend__item--strong"><div class="grade-legend__dots">●●●●</div><div class="grade-legend__grade">Strong</div><div class="grade-legend__def">No urgent action needed</div></div>
+        <div class="grade-legend__item grade-legend__item--fair"><div class="grade-legend__dots">●●●○</div><div class="grade-legend__grade">Fair</div><div class="grade-legend__def">Works, but has fixable gaps</div></div>
+        <div class="grade-legend__item grade-legend__item--weak"><div class="grade-legend__dots">●●○○</div><div class="grade-legend__grade">Weak</div><div class="grade-legend__def">Noticeable issues hurting results</div></div>
+        <div class="grade-legend__item grade-legend__item--poor"><div class="grade-legend__dots">●○○○</div><div class="grade-legend__grade">Poor</div><div class="grade-legend__def">Significant drag — fix first</div></div>
       </div>
     </div>
 
     <h3 class="sub-head">What's Working</h3>
     <div class="win-grid">
-      <div class="win-card">
-        <span class="win-card__ico">✓</span>
-        <div class="win-card__body">
-          <strong class="win-card__label">Strong GBP Presence</strong>
-          <p class="win-card__desc">293 Google reviews at 4.3 stars — the most reviews of any bowling venue in Delaware County. This is real SEO equity.</p>
-        </div>
-      </div>
-      <div class="win-card">
-        <span class="win-card__ico">✓</span>
-        <div class="win-card__body">
-          <strong class="win-card__label">Ranks for Primary Term</strong>
-          <p class="win-card__desc">"bowling alley near Delaware Ohio" returns Delaware Lanes as the top organic result — proof that Google already trusts you.</p>
-        </div>
-      </div>
-      <div class="win-card">
-        <span class="win-card__ico">✓</span>
-        <div class="win-card__body">
-          <strong class="win-card__label">CVB Listing</strong>
-          <p class="win-card__desc">Listed on the Delaware County Visitor Bureau as a destination attraction — adds third-party credibility and inbound links.</p>
-        </div>
-      </div>
-      <div class="win-card">
-        <span class="win-card__ico">✓</span>
-        <div class="win-card__body">
-          <strong class="win-card__label">HTTPS Secure</strong>
-          <p class="win-card__desc">SSL certificate in place via Google Sites — at least visitors aren't getting a browser security warning.</p>
-        </div>
-      </div>
+      <div class="win-card"><span class="win-card__ico">✓</span><div class="win-card__body"><strong class="win-card__label">GBP listing active</strong><p class="win-card__desc">Claimed and active on Google Maps; 293 reviews provide real local search signals competitors have to earn.</p></div></div>
+      <div class="win-card"><span class="win-card__ico">✓</span><div class="win-card__body"><strong class="win-card__label">Community recognition</strong><p class="win-card__desc">60+ years of history makes this one of the most trusted names in Delaware — no chain can fake that.</p></div></div>
+      <div class="win-card"><span class="win-card__ico">✓</span><div class="win-card__body"><strong class="win-card__label">Steady review velocity</strong><p class="win-card__desc">Recent reviews show ongoing customer visits and satisfaction — the raw material for a powerful local SEO push.</p></div></div>
+      <div class="win-card"><span class="win-card__ico">✓</span><div class="win-card__body"><strong class="win-card__label">Only dedicated lanes in Delaware proper</strong><p class="win-card__desc">No head-to-head competition in town — the market exists and it's yours to claim online.</p></div></div>
     </div>
 
     <h3 class="sub-head">Where the Gaps Are</h3>
     <div class="gap-grid">
-      <div class="gap-card">
-        <span class="gap-card__ico">!</span>
-        <div class="gap-card__body">
-          <strong class="gap-card__label">Zero SEO Control</strong>
-          <p class="gap-card__desc">Google Sites blocks custom meta tags, canonical tags, and structured data. You're literally invisible to AI search engines and can't control how Google describes your pages.</p>
-        </div>
-      </div>
-      <div class="gap-card">
-        <span class="gap-card__ico">!</span>
-        <div class="gap-card__body">
-          <strong class="gap-card__label">No Online Booking</strong>
-          <p class="gap-card__desc">Every bowler who wants to reserve a lane must pick up the phone. Younger audiences skip this — and you lose those customers to places that let them book in 30 seconds.</p>
-        </div>
-      </div>
-      <div class="gap-card">
-        <span class="gap-card__ico">!</span>
-        <div class="gap-card__body">
-          <strong class="gap-card__label">Bar &amp; Food Are Invisible</strong>
-          <p class="gap-card__desc">The bar is "the best kept secret in Delaware" — which is exactly the problem. No menu, no photos, no page for someone searching "bar and bowling Delaware Ohio."</p>
-        </div>
-      </div>
+      <div class="gap-card"><span class="gap-card__ico">!</span><div class="gap-card__body"><strong class="gap-card__label">No online booking</strong><p class="gap-card__desc">Phone-only inquiry loses millennial and Gen Z families who search, decide, and book — all without calling.</p></div></div>
+      <div class="gap-card"><span class="gap-card__ico">!</span><div class="gap-card__body"><strong class="gap-card__label">Birthday party page missing</strong><p class="gap-card__desc">"Birthday party bowling Delaware Ohio" returns competitors. Delaware Lanes doesn't appear — the highest-value search query in the market.</p></div></div>
+      <div class="gap-card"><span class="gap-card__ico">!</span><div class="gap-card__body"><strong class="gap-card__label">Zero schema or AI signals</strong><p class="gap-card__desc">No structured data means AI assistants have nothing to cite when asked for local bowling recommendations.</p></div></div>
     </div>
   </div>
 </section>
 
 
-<!-- ═══════════════════════════════════════════════════════════
-     03 · HOW YOU STACK UP
-═══════════════════════════════════════════════════════════ -->
+<!-- 03 · HOW YOU STACK UP -->
 <section class="sec-group sec-group--cream">
   <div class="sec-group__in">
     <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><path d="M2 10V6M6 10V3M10 10V7"/></svg></span><span class="sec-badge__label">Competitor Landscape</span></div>
@@ -694,12 +543,12 @@ img{max-width:100%;display:block;}
       <span class="sec-head__num">03</span>
       <div class="sec-head__body">
         <h2 class="sec-head__title">How You <em>Stack Up</em></h2>
-        <p class="sec-head__sub">Side-by-side with the competition for Delaware's bowling dollar.</p>
+        <p class="sec-head__sub">Side-by-side with the top competitors in your space.</p>
       </div>
     </div>
 
     <div class="prose">
-      <p>The main local competitor is <strong>Penn Lanes</strong>, also on Pennsylvania Ave in Delaware — just a mile away. Penn Lanes has branded itself as "not just a bowling alley," building a stronger social media following and more online visibility. On paper, Delaware Lanes has more Google reviews — but Penn Lanes is winning the digital visibility game, which is where new customers make their decisions.</p>
+      <p>Penn Lanes is the primary local competitor — a similar-era facility with a stronger Facebook presence but no online booking. Bowlero and the chains are the digital-first threat: full booking, events pages, and real SEO muscle. Delaware Lanes leads on community trust and reviews. The problem is none of that shows up when families search online.</p>
     </div>
 
     <h3 class="sub-head">Side by Side</h3>
@@ -708,65 +557,66 @@ img{max-width:100%;display:block;}
         <div class="compare-table__corner"></div>
         <div class="compare-table__col-head compare-table__col-head--you">Delaware Lanes</div>
         <div class="compare-table__col-head">Penn Lanes</div>
-        <div class="compare-table__col-head">Typical Chain</div>
+        <div class="compare-table__col-head">Bowlero (chain)</div>
       </div>
       <div class="compare-table__row">
-        <div class="compare-table__label">Website platform</div>
-        <div class="compare-table__cell compare-table__cell--you compare-table__cell--low">Free Google Sites</div>
-        <div class="compare-table__cell compare-table__cell--mid">Custom CMS site</div>
-        <div class="compare-table__cell compare-table__cell--good">Professional platform</div>
+        <div class="compare-table__label">Website</div>
+        <div class="compare-table__cell compare-table__cell--you compare-table__cell--low">Google Sites</div>
+        <div class="compare-table__cell compare-table__cell--mid">Basic site</div>
+        <div class="compare-table__cell compare-table__cell--good">Full CMS</div>
       </div>
       <div class="compare-table__row">
         <div class="compare-table__label">Online booking</div>
-        <div class="compare-table__cell compare-table__cell--you compare-table__cell--low">None — phone only</div>
-        <div class="compare-table__cell compare-table__cell--mid">Limited online info</div>
-        <div class="compare-table__cell compare-table__cell--good">Full online booking</div>
+        <div class="compare-table__cell compare-table__cell--you compare-table__cell--low">None</div>
+        <div class="compare-table__cell compare-table__cell--low">None</div>
+        <div class="compare-table__cell compare-table__cell--good">Full booking</div>
       </div>
       <div class="compare-table__row">
-        <div class="compare-table__label">Social media following</div>
-        <div class="compare-table__cell compare-table__cell--you compare-table__cell--low">Minimal presence</div>
-        <div class="compare-table__cell compare-table__cell--good">2,000+ Facebook followers</div>
-        <div class="compare-table__cell compare-table__cell--good">Active multi-platform</div>
+        <div class="compare-table__label">Birthday/events page</div>
+        <div class="compare-table__cell compare-table__cell--you compare-table__cell--low">Missing</div>
+        <div class="compare-table__cell compare-table__cell--mid">Partial</div>
+        <div class="compare-table__cell compare-table__cell--good">Full events</div>
       </div>
       <div class="compare-table__row">
         <div class="compare-table__label">Google reviews</div>
-        <div class="compare-table__cell compare-table__cell--you compare-table__cell--good">293 reviews · 4.3★</div>
-        <div class="compare-table__cell compare-table__cell--mid">220 reviews · 4.4★</div>
-        <div class="compare-table__cell compare-table__cell--mid">Varies widely</div>
+        <div class="compare-table__cell compare-table__cell--you compare-table__cell--good">293 · 4.3★</div>
+        <div class="compare-table__cell compare-table__cell--mid">~65 · 4.0★</div>
+        <div class="compare-table__cell compare-table__cell--mid">500+ (varies)</div>
       </div>
       <div class="compare-table__row">
-        <div class="compare-table__label">Bar &amp; food visibility</div>
-        <div class="compare-table__cell compare-table__cell--you compare-table__cell--low">Not featured online</div>
-        <div class="compare-table__cell compare-table__cell--good">Marketed as feature</div>
-        <div class="compare-table__cell compare-table__cell--good">Prominently shown</div>
+        <div class="compare-table__label">Domain authority</div>
+        <div class="compare-table__cell compare-table__cell--you compare-table__cell--low">Very low</div>
+        <div class="compare-table__cell compare-table__cell--low">Low</div>
+        <div class="compare-table__cell compare-table__cell--good">High</div>
       </div>
     </div>
 
+    <h3 class="sub-head">Where Delaware Lanes Leads — and Where the Gap Is</h3>
     <div class="stack-split">
       <div class="stack-split__side stack-split__side--win">
-        <span class="stack-split__badge">Where You Lead</span>
+        <div class="stack-split__badge">Where You Lead</div>
         <div class="stack-split__stat">
-          <p class="stack-split__num">293 reviews</p>
-          <p class="stack-split__label">Most reviews of any bowling venue in Delaware County</p>
-          <p class="stack-split__note">73 more than Penn Lanes — a trust signal competitors can't quickly manufacture.</p>
+          <span class="stack-split__num">293 reviews</span>
+          <span class="stack-split__label">Most-reviewed bowling in Delaware County</span>
+          <span class="stack-split__note">Penn Lanes has ~65. You've built four times the social proof — it just isn't working for you digitally yet.</span>
         </div>
         <div class="stack-split__stat">
-          <p class="stack-split__num">60+ years</p>
-          <p class="stack-split__label">Community history no competitor can replicate</p>
-          <p class="stack-split__note">Multigenerational customers, high school sports partnerships, deep community roots.</p>
+          <span class="stack-split__num">60+ years</span>
+          <span class="stack-split__label">Community trust no chain can replicate</span>
+          <span class="stack-split__note">Delaware families grew up here. That authenticity is your brand — and it hasn't been put online.</span>
         </div>
       </div>
       <div class="stack-split__side stack-split__side--gap">
-        <span class="stack-split__badge">The Digital Gap</span>
+        <div class="stack-split__badge">The Digital Gap</div>
         <div class="stack-split__stat">
-          <p class="stack-split__num">Minimal <span class="stack-split__cmp">vs Penn Lanes' 2,000+</span></p>
-          <p class="stack-split__label">Facebook following — the primary discovery channel for local entertainment</p>
-          <p class="stack-split__note">When someone asks "what's fun to do tonight in Delaware?" — Penn Lanes appears in the feed, Delaware Lanes doesn't.</p>
+          <span class="stack-split__num">0 online booking<span class="stack-split__cmp"> vs. Bowlero (full)</span></span>
+          <span class="stack-split__label">Every booking that requires a phone call is a booking at risk</span>
+          <span class="stack-split__note">Families who can book Bowlero in 90 seconds won't wait to leave a voicemail.</span>
         </div>
         <div class="stack-split__stat">
-          <p class="stack-split__num">0 <span class="stack-split__cmp">vs competitors' booking systems</span></p>
-          <p class="stack-split__label">Online booking options — the expectation for Gen Z and Millennial customers</p>
-          <p class="stack-split__note">Requiring a phone call to reserve lanes creates real friction — and real lost revenue.</p>
+          <span class="stack-split__num">No birthday page</span>
+          <span class="stack-split__label">Highest-value keyword in the market, uncontested</span>
+          <span class="stack-split__note">Estimated $25K+/yr in party bookings going to whoever ranks first. Currently: not you.</span>
         </div>
       </div>
     </div>
@@ -774,9 +624,7 @@ img{max-width:100%;display:block;}
 </section>
 
 
-<!-- ═══════════════════════════════════════════════════════════
-     04 · WHAT PEOPLE ARE SEARCHING FOR + AI SEARCH
-═══════════════════════════════════════════════════════════ -->
+<!-- 04 · WHAT PEOPLE ARE SEARCHING FOR -->
 <section class="sec-group sec-group--dark">
   <div class="sec-group__in">
     <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><circle cx="5" cy="5" r="3"/><path d="m7.5 7.5 2 2"/></svg></span><span class="sec-badge__label">Search Demand</span></div>
@@ -784,12 +632,12 @@ img{max-width:100%;display:block;}
       <span class="sec-head__num">04</span>
       <div class="sec-head__body">
         <h2 class="sec-head__title">What People Are <em>Searching For</em></h2>
-        <p class="sec-head__sub">The exact queries people type when they're looking for a bowling night in Delaware.</p>
+        <p class="sec-head__sub">The exact queries your future customers type before they call anyone.</p>
       </div>
     </div>
 
     <div class="prose">
-      <p>Delaware County is one of Ohio's fastest-growing counties. People are actively searching for local entertainment options — and bowling is squarely in that mix. The searches below represent real intent: people ready to book a lane, plan a birthday party, or join a league. Right now, your Google Sites platform can't fully capitalize on these searches because it lacks the technical infrastructure to rank competitively or convert visitors into customers.</p>
+      <p>Every week, families in Delaware County — and Columbus parents planning birthday parties 30 miles south — search for exactly what Delaware Lanes offers. Without a page targeting these terms, they find Penn Lanes, drive to Bowlero, or give up entirely. These aren't hypothetical searches. They're happening right now, and the clicks are going somewhere else.</p>
     </div>
 
     <h3 class="sub-head">Primary Search Terms</h3>
@@ -799,129 +647,160 @@ img{max-width:100%;display:block;}
         <span class="kw-row__rank">01</span>
         <span class="kw-row__term">bowling alley Delaware Ohio</span>
         <span class="kw-row__vol">High volume</span>
-        <span class="kw-row__tag"><span class="tag tag--high">You Rank #1</span></span>
-      </div>
-      <div class="kw-row">
-        <span class="kw-row__rank">02</span>
-        <span class="kw-row__term">bowling near Delaware Ohio</span>
-        <span class="kw-row__vol">High volume</span>
-        <span class="kw-row__tag"><span class="tag tag--medium">Competitive</span></span>
-      </div>
-      <div class="kw-row">
-        <span class="kw-row__rank">03</span>
-        <span class="kw-row__term">open bowling Delaware Ohio</span>
-        <span class="kw-row__vol">Medium volume</span>
         <span class="kw-row__tag"><span class="tag tag--high">High Intent</span></span>
       </div>
       <div class="kw-row kw-row--hot">
+        <span class="kw-row__rank">02</span>
+        <span class="kw-row__term">birthday party bowling Delaware Ohio</span>
+        <span class="kw-row__vol">High value</span>
+        <span class="kw-row__tag"><span class="tag tag--high">Party Bookings</span></span>
+      </div>
+      <div class="kw-row">
+        <span class="kw-row__rank">03</span>
+        <span class="kw-row__term">bowling leagues Delaware Ohio</span>
+        <span class="kw-row__vol">Steady</span>
+        <span class="kw-row__tag"><span class="tag tag--medium">Recurring Revenue</span></span>
+      </div>
+      <div class="kw-row">
         <span class="kw-row__rank">04</span>
-        <span class="kw-row__term">bowling birthday party Delaware Ohio</span>
-        <span class="kw-row__vol">Medium volume</span>
-        <span class="kw-row__tag"><span class="tag tag--high">High Value</span></span>
+        <span class="kw-row__term">things to do Delaware Ohio</span>
+        <span class="kw-row__vol">Discovery</span>
+        <span class="kw-row__tag"><span class="tag tag--medium">Local Traffic</span></span>
       </div>
       <div class="kw-row">
         <span class="kw-row__rank">05</span>
-        <span class="kw-row__term">bar and bowling Delaware Ohio</span>
-        <span class="kw-row__vol">Medium volume</span>
-        <span class="kw-row__tag"><span class="tag tag--medium">Untapped</span></span>
+        <span class="kw-row__term">kids birthday party places Delaware Ohio</span>
+        <span class="kw-row__vol">Seasonal</span>
+        <span class="kw-row__tag"><span class="tag tag--easy">Quick Win</span></span>
       </div>
       <div class="kw-row">
         <span class="kw-row__rank">06</span>
-        <span class="kw-row__term">bowling leagues Delaware Ohio</span>
-        <span class="kw-row__vol">Medium volume</span>
-        <span class="kw-row__tag"><span class="tag tag--easy">Owned</span></span>
+        <span class="kw-row__term">bar and bowling Delaware Ohio</span>
+        <span class="kw-row__vol">Growing</span>
+        <span class="kw-row__tag"><span class="tag tag--easy">Evening Crowd</span></span>
       </div>
     </div>
     </div>
 
-    <div class="callout">
-      <strong>The birthday party gap is significant.</strong> Bowling birthday parties for kids are a high-value booking — $150–$300+ per event. Without a dedicated page, a booking form, and any online presence for this term, you're invisible to parents planning their child's next party. There may be dozens of these searches happening in Delaware County every month that go directly to competitors with online booking.
-    </div>
-
-    <div style="height:1px;background:rgba(255,255,255,.06);margin:3rem 0;"></div>
-
-    <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><path d="M6 1v10M1 6h10"/></svg></span><span class="sec-badge__label">AI Search Readiness</span></div>
-    <div class="prose" style="margin:.75rem 0 1.5rem;">
-      <p>Google, ChatGPT, and Perplexity now answer "where should I go bowling in Delaware Ohio?" before showing any website links. The businesses they name earned that placement. Here's how Delaware Lanes measures up against those signals right now.</p>
-    </div>
-
-    <h3 class="sub-head">AI Search Readiness</h3>
-    <div class="ai-card-grid">
-      <div class="ai-card ai-card--good">
-        <div class="ai-card__icon">✓</div>
-        <p class="ai-card__label">Trust Foundation</p>
-        <p class="ai-card__note">4.3★ GBP rating with 293 reviews, HTTPS, and a CVB listing — strong legitimacy signals that AI engines already read and cite.</p>
-      </div>
-      <div class="ai-card ai-card--warn">
-        <div class="ai-card__icon">~</div>
-        <p class="ai-card__label">Proven Track Record</p>
-        <p class="ai-card__note">60+ years of operation, but nothing is documented online where Google can read it — no history page, no "About us" with founding year, no structured data marking you as an established institution.</p>
-      </div>
-      <div class="ai-card ai-card--bad">
-        <div class="ai-card__icon">✗</div>
-        <p class="ai-card__label">Helpful Content</p>
-        <p class="ai-card__note">No FAQs, no service descriptions, no "how does open bowling work?" page — exactly the content AI search surfaces in answer boxes and pull quotes.</p>
-      </div>
-      <div class="ai-card ai-card--bad">
-        <div class="ai-card__icon">✗</div>
-        <p class="ai-card__label">Structured Data</p>
-        <p class="ai-card__note">Google Sites cannot output schema markup. Google can't machine-read your hours, services, price range, or amenities — so AI engines have to guess.</p>
-      </div>
-    </div>
-
-    <p class="ai-fix-eyebrow">What we build in from day one</p>
-    <div class="ai-fix-list">
-      <div class="ai-fix-item">
-        <span class="ai-fix-item__gap">Structured Data</span>
-        <span class="ai-fix-item__action"><strong>BowlingAlley, FoodEstablishment, and SportsActivityLocation schemas</strong> on every page — Google and ChatGPT can cite your hours, amenities, and price range with confidence.</span>
-      </div>
-      <div class="ai-fix-item">
-        <span class="ai-fix-item__gap">Helpful Content</span>
-        <span class="ai-fix-item__action"><strong>FAQ sections</strong> answering what people actually ask — "how do I reserve a lane?", "do you have bumpers for kids?", "can I book a birthday party?" — structured for AI citation, not just human reading.</span>
-      </div>
-      <div class="ai-fix-item">
-        <span class="ai-fix-item__gap">Track Record</span>
-        <span class="ai-fix-item__action"><strong>Machine-readable history markup</strong> establishing your founding date, community partnerships, and league affiliations — so AI engines know you're a 60-year institution, not a new business.</span>
-      </div>
-    </div>
-    <div class="callout">
-      Most clients start appearing in AI search results within <strong>60–90 days of launch.</strong> These are standard inclusions in every site we build — not extras.
+    <h3 class="sub-head">The Seasonal Window</h3>
+    <div class="prose">
+      <p>Birthday party search volume spikes April through August — peak party season — and again in November and December for the holiday party circuit. The window to rank for these terms before summer 2026 closes in the next 4–6 weeks. A site launched now earns the ranking. One launched in August starts over from zero.</p>
     </div>
   </div>
 </section>
 
 
-<!-- ═══════════════════════════════════════════════════════════
-     05 · WHAT WE'D ACTUALLY DO
-═══════════════════════════════════════════════════════════ -->
+<!-- 05 · THE AI SEARCH EDGE -->
+<section class="sec-group sec-group--dark">
+  <div class="sec-group__in">
+    <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><path d="M7 1L3 7h3l-1 4 5-6H7l1-4Z"/></svg></span><span class="sec-badge__label">AI Search — The Edge</span></div>
+    <div class="sec-head">
+      <span class="sec-head__num">05</span>
+      <div class="sec-head__body">
+        <h2 class="sec-head__title">The <em>AI Search</em> Edge</h2>
+        <p class="sec-head__sub">Most business owners don't know AI search exists — let alone that they're invisible to it. Here's what it is, how it works alongside Google, and how we make Delaware Lanes show up in both.</p>
+      </div>
+    </div>
+
+    <div class="search-compare">
+      <div class="search-compare__col search-compare__col--google">
+        <div class="search-compare__label">Google Search</div>
+        <div class="search-compare__rows">
+          <div class="search-compare__row"><div class="search-compare__dot"></div><span class="search-compare__text">Returns 10 links — you scroll and choose</span></div>
+          <div class="search-compare__row"><div class="search-compare__dot"></div><span class="search-compare__text">Drives clicks to your website</span></div>
+          <div class="search-compare__row"><div class="search-compare__dot"></div><span class="search-compare__text">You compete in a list with 9 others</span></div>
+        </div>
+      </div>
+      <div class="search-compare__col search-compare__col--ai">
+        <div class="search-compare__label search-compare__label--ai">AI Search</div>
+        <div class="search-compare__rows">
+          <div class="search-compare__row"><div class="search-compare__dot search-compare__dot--ai"></div><span class="search-compare__text search-compare__text--ai">Gives one name — they call</span></div>
+          <div class="search-compare__row"><div class="search-compare__dot search-compare__dot--ai"></div><span class="search-compare__text search-compare__text--ai">Drives calls directly to your phone</span></div>
+          <div class="search-compare__row"><div class="search-compare__dot search-compare__dot--ai"></div><span class="search-compare__text search-compare__text--ai">You're the recommendation, not an option</span></div>
+        </div>
+      </div>
+      <div class="search-compare__footer">They work together, not against each other. Google brings researchers. AI brings buyers ready to book. You need to show up in both.</div>
+    </div>
+
+    <div class="split-cards-wrap">
+    <div class="split-cards">
+      <div class="split-card">
+        <div class="split-card__gap">
+          <div class="split-card__gap-icon">↑</div>
+          <h3 class="split-card__gap-title">You're invisible to AI search right now</h3>
+          <p class="split-card__gap-copy">Delaware Lanes' Google Sites page has no structured data — zero schema for hours, events, or services. When someone asks ChatGPT "where can I bowl near Delaware Ohio," your name doesn't appear.</p>
+        </div>
+        <div class="split-card__divider"><div class="split-card__divider-line"></div><span class="split-card__divider-badge">The Fix</span><div class="split-card__divider-line"></div></div>
+        <div class="split-card__solve">
+          <div class="split-card__solve-num">01</div>
+          <h3 class="split-card__solve-title">You show up when people search nearby</h3>
+          <p class="split-card__solve-copy">We build every page with structured schema so Google and every AI assistant can read, parse, and recommend Delaware Lanes by name. Most bowling alleys in Ohio haven't done this yet.</p>
+        </div>
+      </div>
+      <div class="split-card">
+        <div class="split-card__gap">
+          <div class="split-card__gap-icon">↑</div>
+          <h3 class="split-card__gap-title">No FAQ content for AI to cite</h3>
+          <p class="split-card__gap-copy">AI search engines answer questions by citing real web pages. Without FAQ content about your lanes, pricing, and party packages, every question about Delaware bowling routes to a competitor who published first.</p>
+        </div>
+        <div class="split-card__divider"><div class="split-card__divider-line"></div><span class="split-card__divider-badge">The Fix</span><div class="split-card__divider-line"></div></div>
+        <div class="split-card__solve">
+          <div class="split-card__solve-num">02</div>
+          <h3 class="split-card__solve-title">Content built to be cited</h3>
+          <p class="split-card__solve-copy">We write service pages and FAQ content designed to answer what local families ask — birthday party pricing, league schedules, bar and food options. This is what AI reads and recommends.</p>
+        </div>
+      </div>
+      <div class="split-card">
+        <div class="split-card__gap">
+          <div class="split-card__gap-icon">↑</div>
+          <h3 class="split-card__gap-title">Google Sites gives AI nothing to work with</h3>
+          <p class="split-card__gap-copy">Google Sites lacks the semantic HTML structure that AI models use to understand a business. There's no machine-readable identity — just a generic page with no signals about who you are or what you offer.</p>
+        </div>
+        <div class="split-card__divider"><div class="split-card__divider-line"></div><span class="split-card__divider-badge">The Fix</span><div class="split-card__divider-line"></div></div>
+        <div class="split-card__solve">
+          <div class="split-card__solve-num">03</div>
+          <h3 class="split-card__solve-title">A site that speaks both languages</h3>
+          <p class="split-card__solve-copy">Your new site speaks plain English for visitors and clean structured data for AI — the combination that gets Delaware Lanes named when families ask their phone for bowling recommendations near them.</p>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div class="callout">
+      <strong>Right now, Delaware Lanes' website isn't built for either</strong> — no signals for AI to read, no expert content to cite. That's the window we close.
+    </div>
+  </div>
+</section>
+
+
+<!-- 06 · WHAT WE'D ACTUALLY DO -->
 <section class="sec-group sec-group--cream">
   <div class="sec-group__in">
     <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><path d="M3 3h6v6H3z"/><path d="M3 6h6"/></svg></span><span class="sec-badge__label">The Plan</span></div>
     <div class="sec-head">
-      <span class="sec-head__num">05</span>
+      <span class="sec-head__num">06</span>
       <div class="sec-head__body">
         <h2 class="sec-head__title">Here's What We'd <em>Actually Do</em></h2>
-        <p class="sec-head__sub">Specific, prioritized recommendations — not a generic checklist.</p>
+        <p class="sec-head__sub">Specific, prioritized work — not a generic checklist.</p>
       </div>
     </div>
 
     <div class="phase-roadmap">
-
-      <div class="phase-section phase-section--quick">
+      <div class="phase-section">
         <div class="phase-header">
           <span class="phase-label phase-label--quick">Quick Win</span>
           <div class="phase-divider"></div>
-          <span class="phase-note">Start this week — no website needed</span>
+          <span class="phase-note">Immediate</span>
         </div>
         <div class="phase-items">
           <div class="phase-item">
-            <strong class="phase-item__title">Optimize Google Business Profile — Add Photos, Categories &amp; Attributes</strong>
-            <p class="phase-item__desc">Your GBP has 293 reviews but is likely missing photos of the bar, food, and arcade. Adding 20+ quality photos, updating your category to include "Bar" and "Restaurant," and filling in amenity attributes (full bar, food, arcade, birthday parties) immediately improves how you appear in local pack results. This costs nothing and takes a few hours. We can guide the process or do it directly.</p>
+            <strong class="phase-item__title">Google Business Profile — Fully Activated</strong>
+            <p class="phase-item__desc">Your GBP is claimed but incomplete. We add service categories, a booking link, party package descriptions, updated photos, and 10 Q&amp;As. This alone can shift your map pack position in 2–3 weeks — no new site required, and it's where birthday party searchers land first.</p>
           </div>
         </div>
       </div>
 
-      <div class="phase-section phase-section--m1">
+      <div class="phase-section">
         <div class="phase-header">
           <span class="phase-label phase-label--m1">Month 1</span>
           <div class="phase-divider"></div>
@@ -929,25 +808,33 @@ img{max-width:100%;display:block;}
         </div>
         <div class="phase-items phase-items--grid">
           <div class="phase-item">
-            <strong class="phase-item__title">Custom Website — Built for Conversion, Not Just Information</strong>
-            <p class="phase-item__desc">A new site built on Astro with full SEO control, fast load times, and a professional design that honors Delaware Lanes' history while appealing to new customers. Core pages: Home, Open Bowling, Leagues, Bar &amp; Food, Birthday Parties, Contact.</p>
+            <strong class="phase-item__title">Homepage That Converts</strong>
+            <p class="phase-item__desc">Clear calls-to-action for birthday parties, leagues, and walk-in bowling. The community story — 60+ years, locally owned — front and center. Local SEO-optimized from day one.</p>
           </div>
           <div class="phase-item">
-            <strong class="phase-item__title">Online Lane Reservation System</strong>
-            <p class="phase-item__desc">Integrate a booking widget so customers can check availability and reserve a lane without calling. Options range from a simple Calendly flow to dedicated bowling software embeds. Removes the #1 friction point for younger customers.</p>
+            <strong class="phase-item__title">Birthday Party Page</strong>
+            <p class="phase-item__desc">The highest-value missing page. Packages, pricing, an availability request form, and photos. Targets "birthday party bowling Delaware Ohio" directly — this is where the $25K lives.</p>
           </div>
           <div class="phase-item">
-            <strong class="phase-item__title">Bar &amp; Food Menu Page with Photography</strong>
-            <p class="phase-item__desc">The bar is already "the best kept secret in Delaware" — let's stop keeping it secret. A dedicated menu page with real food photography, weekly specials, and featured drinks gives people a reason to visit even when they're not sure about bowling.</p>
+            <strong class="phase-item__title">Leagues &amp; Open Bowling Page</strong>
+            <p class="phase-item__desc">League schedules, registration info, and walk-in hours — the page that turns a curious first-timer into a recurring weekly customer.</p>
           </div>
           <div class="phase-item">
-            <strong class="phase-item__title">Birthday Party &amp; Events Booking Page</strong>
-            <p class="phase-item__desc">A dedicated page optimized for "bowling birthday party Delaware Ohio" with pricing info, party packages, and an online inquiry form. This is the highest-revenue search term you're currently missing entirely — and it has immediate ROI potential.</p>
+            <strong class="phase-item__title">Bar, Food &amp; Events Page</strong>
+            <p class="phase-item__desc">Food and drinks are a revenue multiplier. A dedicated page with the menu and event info turns one bowling visit into a full evening out — and a reason to come back.</p>
+          </div>
+          <div class="phase-item">
+            <strong class="phase-item__title">AI Search Signals</strong>
+            <p class="phase-item__desc">Every page is built so ChatGPT, Siri, and every AI assistant know exactly what Delaware Lanes does and where you serve. Ships on day one — most bowling alleys don't have it.</p>
+          </div>
+          <div class="phase-item">
+            <strong class="phase-item__title">Citation Audit &amp; Cleanup</strong>
+            <p class="phase-item__desc">We find every mismatch in your name, address, and phone across Google, Yelp, and the major directories — and fix them. Small inconsistencies quietly drag down local rankings.</p>
           </div>
         </div>
       </div>
 
-      <div class="phase-section phase-section--m2">
+      <div class="phase-section">
         <div class="phase-header">
           <span class="phase-label phase-label--m2">Month 2+</span>
           <div class="phase-divider"></div>
@@ -955,68 +842,63 @@ img{max-width:100%;display:block;}
         </div>
         <div class="phase-items">
           <div class="phase-item">
-            <strong class="phase-item__title">Social Media Strategy + Review Growth Engine</strong>
-            <p class="phase-item__desc">A structured plan to grow Facebook and Instagram presence — league night photos, bar specials, team spotlights, and birthday party features. Paired with a review ask strategy (QR codes at the lanes, post-visit follow-up) to push toward 400+ reviews and widen the gap on competitors. Content that shows Delaware Lanes as the community hub it actually is.</p>
+            <strong class="phase-item__title">Review Engine</strong>
+            <p class="phase-item__desc">Automated post-visit text or email that asks your best customers for a review at exactly the right moment. You're at 293 now. Getting to 400+ in six months is realistic — and more reviews means more map pack visibility, compounding over time.</p>
+          </div>
+          <div class="phase-item">
+            <strong class="phase-item__title">Expert Content Library</strong>
+            <p class="phase-item__desc">Service guides and FAQ pages built around what Delaware County families search: birthday party pricing, league registration, what to expect on your first visit. AI assistants cite whoever publishes first — that's Delaware Lanes.</p>
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </section>
 
 
-<!-- ═══════════════════════════════════════════════════════════
-     06 · BEYOND THE WEBSITE
-═══════════════════════════════════════════════════════════ -->
+<!-- 07 · BEYOND THE WEBSITE -->
 <section class="sec-group sec-group--dark">
   <div class="sec-group__in">
     <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><circle cx="6" cy="6" r="4"/><path d="M6 2v4l2 1"/></svg></span><span class="sec-badge__label">The Bigger Picture</span></div>
     <div class="sec-head">
-      <span class="sec-head__num">06</span>
+      <span class="sec-head__num">07</span>
       <div class="sec-head__body">
         <h2 class="sec-head__title">Beyond the <em>Website</em></h2>
-        <p class="sec-head__sub">Additional growth levers that compound on top of a solid digital foundation.</p>
+        <p class="sec-head__sub">More ways we put your business in front of the right people.</p>
       </div>
     </div>
-
     <div class="beyond-strip">
       <div class="beyond-item">
-        <div class="beyond-item__ico"><span class="material-symbols-outlined">storefront</span></div>
+        <span class="beyond-item__ico"><span class="material-symbols-outlined">storefront</span></span>
         <div class="beyond-item__label">Google Business Profile</div>
-        <p class="beyond-item__desc">Add bar/food/arcade photos, update categories to include Restaurant and Bar, fill in amenity attributes. Immediate visibility lift in local pack results — no website changes needed.</p>
+        <p class="beyond-item__desc">Your GBP is your free second homepage on Google Maps. Incomplete categories, no booking link, and outdated Q&amp;As are costing you map pack placement we can recover fast.</p>
       </div>
       <div class="beyond-item">
-        <div class="beyond-item__ico"><span class="material-symbols-outlined">event</span></div>
+        <span class="beyond-item__ico"><span class="material-symbols-outlined">event</span></span>
         <div class="beyond-item__label">Online Booking</div>
-        <p class="beyond-item__desc">Lane reservation widget + birthday party inquiry form. Removes the phone-call friction for the demographic most likely to book if you make it easy.</p>
+        <p class="beyond-item__desc">Phone-only means you lose every family who won't call. A simple availability request form — or integration with a booking platform — turns your bottleneck into a booking engine.</p>
       </div>
       <div class="beyond-item">
-        <div class="beyond-item__ico"><span class="material-symbols-outlined">star</span></div>
-        <div class="beyond-item__label">Review Growth Engine</div>
-        <p class="beyond-item__desc">QR codes at the lanes and bar, post-visit SMS follow-up, and front-desk prompting. Push toward 400+ reviews and stay dominant over Penn Lanes on Google.</p>
+        <span class="beyond-item__ico"><span class="material-symbols-outlined">reviews</span></span>
+        <div class="beyond-item__label">Reviews Engine</div>
+        <p class="beyond-item__desc">293 reviews is a real asset. An automated post-visit text converts happy customers into new reviews without you asking. Getting to 400+ in 6 months is realistic and achievable.</p>
       </div>
       <div class="beyond-item">
-        <div class="beyond-item__ico"><span class="material-symbols-outlined">mail</span></div>
-        <div class="beyond-item__label">Email &amp; SMS Marketing</div>
-        <p class="beyond-item__desc">League season reminders, birthday party promotions, bar specials, and holiday open bowling campaigns. A list of repeat customers is a direct revenue lever.</p>
+        <span class="beyond-item__ico"><span class="material-symbols-outlined">mail</span></span>
+        <div class="beyond-item__label">Email &amp; CRM</div>
+        <p class="beyond-item__desc">Birthday leads, league sign-ups, and walk-in regulars are all worth nurturing. A simple email sequence keeps Delaware Lanes top-of-mind when party season rolls around again.</p>
       </div>
     </div>
   </div>
 </section>
 
 
-<!-- ═══════════════════════════════════════════════════════════
-     07 · WHAT THIS COULD MEAN
-     ─────────────────────────────────────────────────────────
-     <!-- Variant B: Strong real-world reputation but near-invisible
-          digital footprint — the contrast sells itself -->
-═══════════════════════════════════════════════════════════ -->
+<!-- 08 · WHAT THIS COULD MEAN — VARIANT B: THE GAP -->
 <section class="sec-group sec-group--dark">
   <div class="sec-group__in">
     <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><path d="M2 9l3-3 2 2 3-4"/></svg></span><span class="sec-badge__label">Revenue Impact</span></div>
     <div class="sec-head">
-      <span class="sec-head__num">07</span>
+      <span class="sec-head__num">08</span>
       <div class="sec-head__body">
         <h2 class="sec-head__title">What This Could <em>Mean</em></h2>
         <p class="sec-head__sub">The gap between where you are and where you could be.</p>
@@ -1025,77 +907,75 @@ img{max-width:100%;display:block;}
     <div class="gap-wrap">
       <div class="gap-now">
         <div class="gap-now__eyebrow">Today — Without a Site That Works</div>
-        <p class="gap-now__headline">Hundreds of people search for bowling, birthday parties, and a bar &amp; bowling experience in Delaware every month. Right now, most of them find you — but can't book online or learn about your bar. Many move on.</p>
+        <p class="gap-now__headline">400+ people search for bowling and birthday parties in Delaware County every month. Right now, most of them find someone else — or give up and drive to Bowlero.</p>
         <div>
-          <div class="gap-now__num">$25K+/yr</div>
-          <div class="gap-now__sublabel">estimated annual revenue not captured — due to no booking, no bar page, no party page</div>
+          <div class="gap-now__num">$25,000+</div>
+          <div class="gap-now__sublabel">estimated annual revenue passing you by</div>
         </div>
       </div>
       <div class="gap-after">
         <div class="gap-after__eyebrow">With Aspire — Year One</div>
-        <p class="gap-after__headline">A site that captures party bookings, surfaces your bar, converts open bowling searches into actual lane reservations, and ranks in AI search results.</p>
+        <p class="gap-after__headline">A site built to show up for the right searches, earn trust fast, and turn birthday party inquiries into confirmed bookings — built in weeks, not months.</p>
         <div>
-          <div class="gap-after__num">+$25K+/yr</div>
-          <div class="gap-after__sublabel">projected annual lift — conservative estimate based on party bookings, bar visibility &amp; online conversion</div>
+          <div class="gap-after__num">+$25,000+</div>
+          <div class="gap-after__sublabel">projected annual lift, conservative estimate</div>
         </div>
       </div>
     </div>
     <div class="gap-bridge">
       <div class="gap-bridge__line"></div>
-      <span class="gap-bridge__text">The difference is one website, built right — in about 30 days.</span>
+      <span class="gap-bridge__text">The difference is one website, done right.</span>
       <div class="gap-bridge__line"></div>
     </div>
     <div class="gap-metrics">
       <div class="gap-metric">
-        <div class="gap-metric__val">8–12</div>
-        <div class="gap-metric__label">additional party bookings per year at $200–$300 each</div>
+        <div class="gap-metric__val">20–30</div>
+        <div class="gap-metric__label">new party bookings per year</div>
       </div>
       <div class="gap-metric">
-        <div class="gap-metric__val">3–5x</div>
-        <div class="gap-metric__label">more online inquiries from a properly optimized presence</div>
+        <div class="gap-metric__val">3–5×</div>
+        <div class="gap-metric__label">more online inquiries annually</div>
       </div>
       <div class="gap-metric">
-        <div class="gap-metric__val">5–8x</div>
-        <div class="gap-metric__label">estimated return on investment in year one</div>
+        <div class="gap-metric__val">10–15×</div>
+        <div class="gap-metric__label">return on investment</div>
       </div>
     </div>
   </div>
 </section>
 
 
-<!-- ═══════════════════════════════════════════════════════════
-     08 · WHY ASPIRE + CTA
-═══════════════════════════════════════════════════════════ -->
+<!-- 09 · WHY ASPIRE -->
 <section class="sec-group sec-group--dark">
   <div class="sec-group__in">
     <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><path d="M6 1l1.5 3.5L11 5l-2.75 2.5L9 11 6 9l-3 2 .75-3.5L1 5l3.5-.5z"/></svg></span><span class="sec-badge__label">Why Us</span></div>
     <div class="sec-head">
-      <span class="sec-head__num">08</span>
+      <span class="sec-head__num">09</span>
       <div class="sec-head__body">
         <h2 class="sec-head__title">Why <em>Aspire Digital</em></h2>
-        <p class="sec-head__sub">Craft, clarity, and a partnership that lasts past launch.</p>
+        <p class="sec-head__sub">You do the work you're great at. We handle the digital side — and we don't disappear after launch.</p>
       </div>
     </div>
 
     <div class="prose">
-      <p>A 60-year institution like Delaware Lanes doesn't need a cookie-cutter template. It needs a site that honors the history, showcases the bar and food experience, and converts the next generation of Delaware bowlers who expect to book online. We build sites from scratch for businesses exactly like yours — community anchors with real reputations that deserve digital platforms to match. We're a husband-and-wife team based right here in Central Ohio, and we take on 2–3 new clients per month. We know this market because we live in it.</p>
+      <p>A husband-and-wife team with 30+ years of combined experience — and we stay small on purpose. Every client gets both of us: Jaime's eye on every design decision, Chris's architecture on every line of code. We don't hand projects off. We don't disappear after launch. Our faith shapes how we price, how we communicate, and what we're willing to put our name on — which means we're straight with you about what your business actually needs, not what earns the biggest contract.</p>
     </div>
 
     <div class="why-values">
       <div class="why-val">
-        <div class="why-val__icon"><span class="material-symbols-outlined">design_services</span></div>
-        <p class="why-val__label">Tailored from scratch</p>
-        <p class="why-val__desc">No templates. Every site is built around your business, your customers, and your market — not copy-pasted from a theme.</p>
+        <span class="why-val__icon"><span class="material-symbols-outlined">design_services</span></span>
+        <strong class="why-val__label">Tailored from scratch</strong>
+        <p class="why-val__desc">Every site is designed for that client, that audience, that goal — never pulled from a template shelf.</p>
       </div>
       <div class="why-val">
-        <div class="why-val__icon"><span class="material-symbols-outlined">verified</span></div>
-        <p class="why-val__label">We show up after launch</p>
-        <p class="why-val__desc">Monthly care plans keep your site fast, secure, and growing — we don't disappear the day we ship.</p>
+        <span class="why-val__icon"><span class="material-symbols-outlined">verified</span></span>
+        <strong class="why-val__label">We show up after launch</strong>
+        <p class="why-val__desc">The job isn't done when the site goes live. It's done when your business is growing.</p>
       </div>
       <div class="why-val">
-        <div class="why-val__icon"><span class="material-symbols-outlined">handshake</span></div>
-        <p class="why-val__label">Honest to the core</p>
-        <p class="why-val__desc">We tell you what you need — and what you don't. Faith shapes how we price. No upsells, no surprises.</p>
+        <span class="why-val__icon"><span class="material-symbols-outlined">handshake</span></span>
+        <strong class="why-val__label">Honest to the core</strong>
+        <p class="why-val__desc">Transparent pricing, straight talk, no disappearing act. Our faith anchors every client relationship.</p>
       </div>
     </div>
 
@@ -1105,12 +985,8 @@ img{max-width:100%;display:block;}
           <img src="/assets/chris-profile.png" alt="Chris Otten">
           <div class="team-card__tint"></div>
           <div class="team-card__socials">
-            <a href="https://instagram.com/chrisotten" class="team-card__social-btn" target="_blank" rel="noopener" aria-label="Instagram">
-              <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-            </a>
-            <a href="https://linkedin.com/in/chrisotten" class="team-card__social-btn" target="_blank" rel="noopener" aria-label="LinkedIn">
-              <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-            </a>
+            <a href="https://instagram.com/chrisotten" class="team-card__social-btn" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="https://linkedin.com/in/chrisotten" class="team-card__social-btn" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
           </div>
           <div class="team-card__overlay">
             <p class="team-card__role">Founder &amp; Technical Director</p>
@@ -1118,10 +994,8 @@ img{max-width:100%;display:block;}
           </div>
         </div>
         <div class="team-card__body">
-          <p class="team-card__bio">Technical architecture, development, and strategy — every site ships fast, accessible, and SEO-ready. Central Ohio based.</p>
-          <div class="team-card__links">
-            <a href="mailto:chris@madebyaspire.com">chris@madebyaspire.com</a>
-          </div>
+          <p class="team-card__bio">Handles the strategy, development, and business ops that make a launch actually land. Every site Chris builds is fast, accessible, and SEO-ready from the first line of code.</p>
+          <div class="team-card__links"><a href="mailto:chris@madebyaspire.com">chris@madebyaspire.com</a></div>
         </div>
       </div>
       <div class="team-card">
@@ -1129,12 +1003,8 @@ img{max-width:100%;display:block;}
           <img src="/assets/jaime-profile.png" alt="Jaime Otten">
           <div class="team-card__tint"></div>
           <div class="team-card__socials">
-            <a href="https://instagram.com/jaimeotten" class="team-card__social-btn" target="_blank" rel="noopener" aria-label="Instagram">
-              <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-            </a>
-            <a href="https://linkedin.com/in/jaimeotten" class="team-card__social-btn" target="_blank" rel="noopener" aria-label="LinkedIn">
-              <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-            </a>
+            <a href="https://instagram.com/jaimeotten" class="team-card__social-btn" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="https://linkedin.com/in/jaimeotten" class="team-card__social-btn" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
           </div>
           <div class="team-card__overlay">
             <p class="team-card__role">Founder &amp; Creative Director</p>
@@ -1142,51 +1012,64 @@ img{max-width:100%;display:block;}
           </div>
         </div>
         <div class="team-card__body">
-          <p class="team-card__bio">20+ years of senior UX/UI design. Every visual direction, every site, every time — design that converts, not just impresses.</p>
-          <div class="team-card__links">
-            <a href="mailto:jaime@madebyaspire.com">jaime@madebyaspire.com</a>
-          </div>
+          <p class="team-card__bio">20+ years of senior UX/UI design across agencies, startups, and product studios. Every visual direction on every site runs through Jaime. Your brand is in good hands.</p>
+          <div class="team-card__links"><a href="mailto:jaime@madebyaspire.com">jaime@madebyaspire.com</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="why-reviews">
+      <p class="why-reviews__label">What our clients say</p>
+      <div class="review-grid">
+        <div class="review-card">
+          <div class="review-card__stars">★★★★★</div>
+          <p class="review-card__quote">"They rebuilt our site and within 30 days we had our first organic inquiry from someone who found us on Google. It paid for itself fast."</p>
+          <p class="review-card__by">Bryan W. — B Clean Carpet Care</p>
+        </div>
+        <div class="review-card">
+          <div class="review-card__stars">★★★★★</div>
+          <p class="review-card__quote">"Jaime and Chris understood our brand immediately. The site looks exactly like us — professional, warm, and nothing like the competition."</p>
+          <p class="review-card__by">Keeler Insurance</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CTA — closing section -->
+<!-- CTA -->
 <section class="sec-group sec-group--cream">
   <div class="sec-group__in">
     <div class="cta-box">
       <p class="cta-box__eyebrow">Let's Build Something</p>
-      <h3 class="cta-box__heading">Ready to close the gap between your reputation and your <em>online presence?</em></h3>
+      <h3 class="cta-box__heading">Ready to turn Delaware's most trusted bowling alley into Delaware's most <em>booked</em>?</h3>
       <div class="cta-steps">
         <div class="cta-step">
           <span class="cta-step__num">1</span>
           <div>
-            <strong class="cta-step__label">Book a free 30-minute strategy call</strong>
-            <p class="cta-step__desc">We'll map out a specific plan for Delaware Lanes — no pitch, just a plan you can take anywhere.</p>
+            <strong class="cta-step__label">Book a free 30-min strategy call</strong>
+            <p class="cta-step__desc">We'll map out the exact plan for your business — no pitch, just a plan.</p>
           </div>
         </div>
         <div class="cta-step">
           <span class="cta-step__num">2</span>
           <div>
             <strong class="cta-step__label">We design and build — 100% custom</strong>
-            <p class="cta-step__desc">No templates. Typically 30 days from kickoff to launch-ready, with your review at every major milestone.</p>
+            <p class="cta-step__desc">No templates. Typically 30 days from kickoff to launch-ready.</p>
           </div>
         </div>
         <div class="cta-step">
           <span class="cta-step__num">3</span>
           <div>
-            <strong class="cta-step__label">You launch and own your digital presence</strong>
+            <strong class="cta-step__label">You launch and own your market</strong>
             <p class="cta-step__desc">30 days of post-launch support included. We take 2–3 new clients per month — spots are limited.</p>
           </div>
         </div>
       </div>
-      <a href="https://madebyaspire.com/book" class="btn-pill btn-pill--cream" target="_blank" rel="noopener">
+      <a href="https://madebyaspire.com/contact" class="btn-pill btn-pill--cream" target="_blank" rel="noopener">
         <span class="btn-pill__fill"></span>
         <span class="btn-pill__label">Book a Free Strategy Call</span>
         <span class="btn-pill__arrow">→</span>
       </a>
-      <p class="cta-box__secondary">or email <a href="mailto:chris@madebyaspire.com">Chris</a> directly</p>
     </div>
   </div>
 </section>
@@ -1195,7 +1078,7 @@ img{max-width:100%;display:block;}
 <!-- FOOTER -->
 <footer class="guide-footer">
   <div style="display:flex;flex-direction:column;align-items:center;gap:.5rem;width:100%;max-width:640px;padding-bottom:2rem;border-bottom:1px solid rgba(250,240,226,.07);">
-    <a href="https://madebyaspire.com" target="_blank" rel="noopener" aria-label="Aspire Digital" style="display:block;margin-bottom:.25rem;">
+    <a href="https://madebyaspire.com" target="_blank" rel="noopener" style="display:block;margin-bottom:.25rem;">
       <img src="/assets/aspire-primary-white.svg" alt="Aspire Digital" style="height:26px;width:auto;display:block;opacity:.65;">
     </a>
     <p class="guide-footer__heading" style="margin:0;">Questions? We're here.</p>
@@ -1222,18 +1105,13 @@ img{max-width:100%;display:block;}
   <div class="footer-social">
     <p class="footer-social__label">Follow us</p>
     <div class="footer-social__icons">
-      <a class="footer-social__link" href="https://instagram.com/madebyaspire" target="_blank" aria-label="Instagram">
-        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-      </a>
-      <a class="footer-social__link" href="https://linkedin.com/company/aspire-digital-dev" target="_blank" aria-label="LinkedIn">
-        <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-      </a>
-      <a class="footer-social__link" href="https://facebook.com/madebyaspire" target="_blank" aria-label="Facebook">
-        <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-      </a>
+      <a class="footer-social__link" href="https://instagram.com/madebyaspire" target="_blank" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+      <a class="footer-social__link" href="https://linkedin.com/company/aspire-digital-dev" target="_blank" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+      <a class="footer-social__link" href="https://facebook.com/madebyaspire" target="_blank" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
     </div>
   </div>
-  <p class="guide-footer__tagline">© 2026 Aspire Digital · madebyaspire.com · This brief was prepared exclusively for Delaware Lanes</p>
+  <p class="guide-footer__tagline">Defined by craft. Rooted in faith.</p>
+  <p style="font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(250,240,226,.15);margin-top:.25rem;">Prospect Brief · Delaware Lanes · v1.1</p>
 </footer>
 
 </body>

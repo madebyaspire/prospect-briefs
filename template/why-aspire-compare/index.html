@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why Aspire — Layout Compare | Aspire Digital</title>
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Serif+Display:ital@0;1&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Unbounded:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+/* ── TOKENS ── */
+:root{
+  --bg:#FAF0E2; --bg-alt:#F2EDE6; --bg-night:#1A1F28;
+  --accent:#C4622D; --accent-dk:#A34E1A;
+  --green:#4A7B5A; --green-dk:#2E5239; --sage:#8FAF8A;
+  --charcoal:#2C3340;
+  --text:#2C3340; --text-sec:#5A6072; --text-muted:#888E97;
+  --border:rgba(44,51,64,.13); --border-lt:rgba(44,51,64,.07);
+  --white:#fff;
+  --r-sm:6px; --r-md:10px; --r-lg:16px; --r-xl:22px; --r-full:999px;
+  --sh-sm:0 1px 4px rgba(0,0,0,.07);
+  --f-d:"DM Serif Display",Georgia,serif;
+  --f-a:"EB Garamond",Georgia,serif;
+  --f-n:"Unbounded",-apple-system,system-ui,sans-serif;
+  --f-b:"DM Sans",-apple-system,system-ui,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{font-size:16px;-webkit-font-smoothing:antialiased;scroll-behavior:smooth;}
+body{font-family:var(--f-b);background:var(--bg-night);color:var(--bg);}
+img{max-width:100%;display:block;}
+
+/* ── PAGE HEADER ── */
+.page-header{padding:4rem 2rem 3rem;max-width:800px;margin:0 auto;text-align:center;}
+.page-header__eyebrow{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(250,240,226,.3);margin-bottom:1.25rem;}
+.page-header__title{font-family:var(--f-d);font-style:italic;font-size:clamp(2rem,4vw,3rem);color:var(--bg);line-height:1.15;margin-bottom:1rem;}
+.page-header__title em{color:var(--accent);}
+.page-header__body{font-size:1rem;color:rgba(250,240,226,.55);line-height:1.7;max-width:560px;margin:0 auto;}
+
+/* ── OPTION LABEL BAR ── */
+.option-bar{display:flex;align-items:center;gap:1.25rem;padding:1.125rem 2rem;background:rgba(255,255,255,.04);border-top:1px solid rgba(255,255,255,.07);border-bottom:1px solid rgba(255,255,255,.07);position:sticky;top:0;z-index:10;backdrop-filter:blur(12px);}
+.option-bar__letter{font-family:var(--f-n);font-size:1.125rem;font-weight:700;color:var(--accent);line-height:1;flex-shrink:0;}
+.option-bar__name{font-family:var(--f-b);font-weight:700;font-size:1rem;color:var(--bg);line-height:1.2;}
+.option-bar__desc{font-size:.875rem;color:rgba(250,240,226,.4);margin-left:auto;padding-left:1rem;text-align:right;}
+
+/* ── SECTION WRAPPER ── */
+.option-section{padding:3.5rem 2rem;max-width:900px;margin:0 auto;}
+
+/* ── SHARED COMPONENTS ── */
+.sec-badge{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;margin-bottom:1.5rem;}
+.sec-badge__icon{width:20px;height:20px;border-radius:50%;background:rgba(196,98,45,.2);display:grid;place-items:center;flex-shrink:0;}
+.sec-badge__icon svg{width:10px;height:10px;stroke:var(--accent);stroke-width:2;fill:none;}
+.sec-badge__label{color:rgba(250,240,226,.35);}
+
+.sec-head{display:grid;grid-template-columns:80px 1fr;column-gap:1.5rem;align-items:start;margin-bottom:2.5rem;}
+.sec-head__num{font-family:var(--f-d);font-style:italic;font-size:4rem;font-weight:400;color:rgba(250,240,226,.08);line-height:1;}
+.sec-head__title{font-family:var(--f-d);font-style:italic;font-size:clamp(1.75rem,3vw,2.375rem);font-weight:400;line-height:1.15;color:var(--bg);}
+.sec-head__title em{color:var(--accent);}
+.sec-head__sub{font-size:.9375rem;color:rgba(250,240,226,.45);margin-top:.375rem;line-height:1.5;}
+
+.review-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem;margin:1.5rem 0;}
+.review-card{border-radius:var(--r-lg);padding:1.5rem 1.5rem 1.25rem;display:flex;flex-direction:column;gap:.875rem;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);}
+.review-card__stars{color:var(--accent);font-size:1rem;letter-spacing:.2em;}
+.review-card__quote{font-family:var(--f-a);font-style:italic;font-size:1.0625rem;line-height:1.55;color:rgba(250,240,226,.92);}
+.review-card__by{font-family:var(--f-b);font-size:.8125rem;font-weight:500;color:rgba(250,240,226,.4);margin-top:auto;}
+
+.btn-pill{display:inline-flex;align-items:center;border-radius:var(--r-full);text-decoration:none;cursor:pointer;border:1.5px solid;font-family:var(--f-b);font-weight:600;position:relative;overflow:hidden;isolation:isolate;}
+.btn-pill__fill{position:absolute;top:4px;bottom:4px;right:4px;border-radius:var(--r-full);transition:left .65s cubic-bezier(.22,1,.36,1);}
+.btn-pill__label{position:relative;z-index:1;}
+.btn-pill__arrow{position:relative;z-index:1;border-radius:50%;display:grid;place-items:center;flex-shrink:0;transition:transform .2s;}
+.btn-pill:hover .btn-pill__arrow{transform:translateX(3px);}
+.btn-pill--cream{background:var(--bg);color:var(--accent);border-color:var(--bg);padding:5px 5px 5px 26px;min-height:52px;font-size:.9375rem;}
+.btn-pill--cream .btn-pill__fill{background:var(--white);left:calc(100% - 44px);}
+.btn-pill--cream:hover .btn-pill__fill{left:4px;}
+.btn-pill--cream .btn-pill__label{color:var(--accent);}
+.btn-pill--cream .btn-pill__arrow{width:40px;height:40px;background:rgba(196,98,45,.14);color:var(--accent);margin-left:16px;}
+
+.divider{height:1px;background:rgba(255,255,255,.06);margin:0;}
+
+/* ═══════════════════════════════════════
+   OPTION A — FACE-FORWARD
+═══════════════════════════════════════ */
+
+.team-intro{font-size:1.0625rem;color:rgba(250,240,226,.72);line-height:1.75;margin-bottom:2.5rem;max-width:640px;}
+.team-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:2.5rem;}
+.team-card{border-radius:var(--r-xl);overflow:hidden;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);}
+.team-card__photo{aspect-ratio:3/4;overflow:hidden;position:relative;}
+.team-card__photo img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;transition:transform .5s cubic-bezier(.22,1,.36,1);}
+.team-card:hover .team-card__photo img{transform:scale(1.04);}
+.team-card__tint{position:absolute;inset:0;background:linear-gradient(to bottom,transparent 30%,rgba(20,24,32,.55) 65%,rgba(20,24,32,.92) 100%);}
+.team-card__overlay{position:absolute;bottom:0;left:0;right:0;padding:1.5rem 1.75rem 1.75rem;display:flex;flex-direction:column;gap:.375rem;}
+.team-card__socials{position:absolute;top:1.25rem;right:1.25rem;display:flex;gap:.625rem;}
+.team-card__social-btn{width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,.35);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.15);display:grid;place-items:center;color:rgba(250,240,226,.75);transition:background .2s,color .2s;}
+.team-card__social-btn:hover{background:var(--accent);color:#fff;border-color:var(--accent);}
+.team-card__social-btn svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+.team-card__role{font-family:var(--f-b);font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.55);margin:0;}
+.team-card__name{font-family:var(--f-d);font-size:clamp(28px,3.5vw,48px);font-weight:400;line-height:1;letter-spacing:-.02em;color:#fff;margin:0;}
+.team-card__body{padding:1.5rem 1.75rem 1.875rem;}
+.team-card__bio{font-size:.9375rem;line-height:1.65;color:rgba(250,240,226,.6);}
+.team-card__links{display:flex;flex-direction:column;gap:.3rem;margin-top:1.125rem;}
+.team-card__links a{font-size:.875rem;color:rgba(250,240,226,.5);text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(250,240,226,.2);}
+.team-promise{background:rgba(196,98,45,.08);border:1px solid rgba(196,98,45,.15);border-left:3px solid var(--accent);border-radius:0 var(--r-lg) var(--r-lg) 0;padding:1.5rem 2rem;margin-bottom:2.5rem;}
+.team-promise__text{font-family:var(--f-a);font-style:italic;font-size:1.125rem;color:rgba(250,240,226,.82);line-height:1.6;}
+.team-promise__text strong{font-style:normal;font-weight:600;color:var(--bg);}
+
+/* ═══════════════════════════════════════
+   OPTION B — THREE-WAY COMPARE
+═══════════════════════════════════════ */
+
+.compare-intro{font-size:1.0625rem;color:rgba(250,240,226,.72);line-height:1.75;margin-bottom:2.5rem;max-width:640px;}
+.tri-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-radius:var(--r-xl);overflow:hidden;border:1px solid rgba(255,255,255,.1);margin-bottom:2rem;}
+.tri-col{display:flex;flex-direction:column;}
+.tri-col--diy{background:rgba(255,255,255,.025);}
+.tri-col--agency{background:rgba(255,255,255,.035);}
+.tri-col--aspire{background:rgba(196,98,45,.1);border-left:1px solid rgba(196,98,45,.2);border-right:1px solid rgba(196,98,45,.2);}
+.tri-head{padding:1.75rem 1.5rem 1.5rem;border-bottom:1px solid rgba(255,255,255,.07);}
+.tri-head__label{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;margin-bottom:.625rem;}
+.tri-col--diy .tri-head__label{color:rgba(250,240,226,.25);}
+.tri-col--agency .tri-head__label{color:rgba(250,240,226,.25);}
+.tri-col--aspire .tri-head__label{color:var(--accent);}
+.tri-head__name{font-family:var(--f-b);font-weight:700;font-size:1.0625rem;color:var(--bg);line-height:1.2;}
+.tri-head__sub{font-size:.8125rem;color:rgba(250,240,226,.35);margin-top:.3rem;}
+.tri-col--aspire .tri-head__name{color:var(--bg);}
+.tri-rows{flex:1;}
+.tri-row{display:grid;grid-template-columns:1fr;padding:1.125rem 1.5rem;border-bottom:1px solid rgba(255,255,255,.05);}
+.tri-row:last-child{border-bottom:none;}
+.tri-row__category{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(250,240,226,.2);margin-bottom:.3rem;}
+.tri-row__val{font-size:.9375rem;line-height:1.4;}
+.tri-col--diy .tri-row__val{color:rgba(250,240,226,.4);}
+.tri-col--agency .tri-row__val{color:rgba(250,240,226,.55);}
+.tri-col--aspire .tri-row__val{color:var(--bg);font-weight:500;}
+.tri-row__val--good::before{content:"✓ ";color:var(--sage);}
+.tri-row__val--bad::before{content:"✗ ";color:rgba(250,240,226,.25);}
+.tri-row__val--mid::before{content:"◐ ";color:rgba(250,240,226,.35);}
+.tri-aspire-tag{display:inline-block;font-family:var(--f-n);font-size:.45rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;background:var(--accent);color:#fff;border-radius:var(--r-full);padding:3px 10px;margin-top:.375rem;}
+
+/* ═══════════════════════════════════════
+   OPTION C — RESULTS-FIRST
+═══════════════════════════════════════ */
+
+.results-bar{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.07);border-radius:var(--r-xl);overflow:hidden;margin-bottom:2.5rem;}
+.result-cell{background:rgba(255,255,255,.025);padding:2rem 1.75rem;text-align:center;}
+.result-cell__num{font-family:var(--f-d);font-style:italic;font-size:clamp(2.5rem,4vw,3.5rem);color:var(--accent);line-height:1;margin-bottom:.5rem;}
+.result-cell__label{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(250,240,226,.3);}
+.result-cell__note{font-size:.8125rem;color:rgba(250,240,226,.4);margin-top:.375rem;line-height:1.4;}
+.result-divider{width:1px;background:rgba(255,255,255,.07);}
+.results-pillars{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(255,255,255,.06);border-radius:var(--r-xl);overflow:hidden;margin-top:2rem;}
+.result-pillar{background:rgba(255,255,255,.02);padding:1.75rem 1.75rem;display:flex;align-items:flex-start;gap:1rem;}
+.result-pillar__ico{width:32px;height:32px;border-radius:50%;background:rgba(196,98,45,.15);display:grid;place-items:center;flex-shrink:0;}
+.result-pillar__ico svg{width:14px;height:14px;stroke:var(--accent);stroke-width:2;fill:none;}
+.result-pillar__body{min-width:0;}
+.result-pillar__title{font-weight:700;font-size:.9375rem;color:var(--bg);margin-bottom:.3rem;}
+.result-pillar__desc{font-size:.875rem;color:rgba(250,240,226,.55);line-height:1.55;}
+
+/* ═══════════════════════════════════════
+   OPTION D — SMALL ON PURPOSE
+═══════════════════════════════════════ */
+
+.sop-statement{text-align:center;padding:3rem 2rem;margin-bottom:2rem;}
+.sop-statement__pre{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(250,240,226,.25);margin-bottom:1.5rem;}
+.sop-statement__heading{font-family:var(--f-d);font-style:italic;font-size:clamp(2rem,4vw,3rem);color:var(--bg);line-height:1.2;margin-bottom:1.25rem;}
+.sop-statement__heading em{color:var(--accent);}
+.sop-statement__body{font-size:1.0625rem;color:rgba(250,240,226,.62);line-height:1.75;max-width:540px;margin:0 auto;}
+.sop-availability{display:flex;align-items:center;justify-content:center;gap:1rem;margin:2rem 0;padding:1.25rem 2rem;background:rgba(74,123,90,.1);border:1px solid rgba(74,123,90,.2);border-radius:var(--r-full);}
+.sop-dots{display:flex;gap:.5rem;}
+.sop-dot{width:10px;height:10px;border-radius:50%;}
+.sop-dot--open{background:var(--sage);}
+.sop-dot--taken{background:rgba(255,255,255,.12);}
+.sop-avail__label{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(250,240,226,.55);}
+.sop-avail__count{font-family:var(--f-b);font-weight:700;font-size:.9375rem;color:var(--sage);}
+.sop-reasons{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:2rem;}
+.sop-reason{padding:1.75rem 1.75rem;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:var(--r-xl);}
+.sop-reason__num{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(250,240,226,.18);margin-bottom:.75rem;}
+.sop-reason__title{font-weight:700;font-size:1rem;color:var(--bg);margin-bottom:.5rem;line-height:1.3;}
+.sop-reason__body{font-size:.875rem;color:rgba(250,240,226,.52);line-height:1.6;}
+
+/* ═══════════════════════════════════════
+   OPTION E — PORTFOLIO GLIMPSE
+═══════════════════════════════════════ */
+
+.portfolio-intro{font-size:1.0625rem;color:rgba(250,240,226,.72);line-height:1.75;margin-bottom:2rem;max-width:640px;}
+.portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-bottom:2.5rem;}
+.portfolio-card{border-radius:var(--r-xl);overflow:hidden;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);transition:border-color .2s;}
+.portfolio-card:hover{border-color:rgba(196,98,45,.4);}
+.portfolio-card__thumb{aspect-ratio:4/3;position:relative;overflow:hidden;}
+.portfolio-card__thumb-inner{position:absolute;inset:0;display:flex;flex-direction:column;padding:1.25rem;}
+.portfolio-card__browser{display:flex;align-items:center;gap:.4rem;margin-bottom:.75rem;}
+.portfolio-card__dot{width:7px;height:7px;border-radius:50%;opacity:.5;}
+.portfolio-card__dot:nth-child(1){background:#ff5f57;}
+.portfolio-card__dot:nth-child(2){background:#febc2e;}
+.portfolio-card__dot:nth-child(3){background:#28c840;}
+.portfolio-card__screen{flex:1;border-radius:6px;opacity:.9;}
+.card-screen--bcleam{background:linear-gradient(160deg,#1a2830 0%,#0d1f2b 100%);}
+.card-screen--tees{background:linear-gradient(160deg,#2a2018 0%,#1c160f 100%);}
+.card-screen--petalwings{background:linear-gradient(160deg,#1e2a1e 0%,#121a12 100%);}
+.card-screen--bcleam::after,.card-screen--tees::after,.card-screen--petalwings::after{content:'';display:block;height:100%;border-radius:6px;background:repeating-linear-gradient(0deg,rgba(255,255,255,.03) 0px,rgba(255,255,255,.03) 2px,transparent 2px,transparent 14px);}
+.portfolio-card__body{padding:1.25rem 1.25rem 1.5rem;}
+.portfolio-card__industry{font-family:var(--f-n);font-size:.45rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(250,240,226,.25);margin-bottom:.375rem;}
+.portfolio-card__name{font-weight:700;font-size:.9375rem;color:var(--bg);margin-bottom:.5rem;}
+.portfolio-card__metric{font-family:var(--f-a);font-style:italic;font-size:.9375rem;color:var(--sage);line-height:1.4;}
+.portfolio-cta{text-align:center;margin-bottom:1.5rem;}
+.portfolio-cta__label{font-size:.9375rem;color:rgba(250,240,226,.4);margin-bottom:1rem;}
+.portfolio-cta a{color:var(--sage);text-decoration:underline;text-underline-offset:3px;font-size:.9375rem;}
+.proof-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(255,255,255,.07);border-radius:var(--r-xl);overflow:hidden;margin:2rem 0;}
+.proof-item{background:rgba(255,255,255,.025);padding:2.25rem 2rem;display:flex;flex-direction:column;gap:.75rem;min-width:0;}
+.proof-item__accent{width:28px;height:2.5px;border-radius:2px;}
+.proof-item:nth-child(odd) .proof-item__accent{background:var(--accent);}
+.proof-item:nth-child(even) .proof-item__accent{background:var(--green);}
+.proof-item__num{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(250,240,226,.2);}
+.proof-item__title{font-family:var(--f-b);font-weight:700;font-size:1.0625rem;color:var(--bg);line-height:1.3;}
+.proof-item__body{font-size:.9375rem;line-height:1.65;color:rgba(250,240,226,.62);}
+
+/* ── CLOSING CTA (shared across all options) ── */
+.cta-wrap{background:var(--bg);border-radius:var(--r-xl);padding:3rem 2.5rem;text-align:center;margin-top:2.5rem;}
+.cta-wrap__eyebrow{font-family:var(--f-n);font-size:.6875rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:1rem;}
+.cta-wrap__heading{font-family:var(--f-d);font-style:italic;font-size:clamp(1.625rem,3vw,2.25rem);font-weight:400;color:var(--charcoal);line-height:1.2;margin-bottom:.75rem;}
+.cta-wrap__heading em{color:var(--accent);}
+.cta-wrap__sub{font-size:.9375rem;color:var(--text-sec);margin-bottom:2rem;line-height:1.6;}
+.cta-stats{display:flex;align-items:center;justify-content:center;gap:1.5rem;margin-bottom:2rem;flex-wrap:wrap;}
+.cta-stat{text-align:center;}
+.cta-stat--div{width:1px;height:28px;background:var(--border);}
+.cta-stat__num{display:block;font-family:var(--f-d);font-style:italic;font-size:1.375rem;color:var(--charcoal);line-height:1;margin-bottom:.2rem;}
+.cta-stat__label{font-family:var(--f-n);font-size:.45rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);}
+.btn-pill--dark{background:var(--charcoal);color:var(--bg);border-color:var(--charcoal);padding:5px 5px 5px 26px;min-height:52px;font-size:.9375rem;}
+.btn-pill--dark .btn-pill__fill{background:var(--accent);left:calc(100% - 44px);}
+.btn-pill--dark:hover .btn-pill__fill{left:4px;}
+.btn-pill--dark .btn-pill__label{color:var(--bg);}
+.btn-pill--dark .btn-pill__arrow{width:40px;height:40px;background:rgba(250,240,226,.12);color:var(--bg);margin-left:16px;}
+.cta-wrap__secondary{font-size:.875rem;color:var(--text-muted);margin-top:1.25rem;}
+.cta-wrap__secondary a{color:var(--accent-dk);text-decoration:underline;text-underline-offset:3px;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:700px){
+  .team-grid,.tri-grid,.results-bar,.results-pillars,.sop-reasons,.portfolio-grid,.proof-grid{grid-template-columns:1fr;}
+  .sec-head{grid-template-columns:1fr;}
+  .sec-head__num{font-size:2.5rem;}
+}
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <p class="page-header__eyebrow">Prospect Template · Design Direction</p>
+  <h1 class="page-header__title">Why <em>Aspire</em> — Option Compare</h1>
+  <p class="page-header__body">Five different angles for the closing section of the prospect brief. Same content, different persuasion strategy. Pick one — or tell Vegas what to mix.</p>
+</div>
+
+<div class="divider"></div>
+
+
+<!-- ═══════════════════════════════════════════════════
+     OPTION A — FACE-FORWARD
+════════════════════════════════════════════════════ -->
+
+<div class="option-bar">
+  <span class="option-bar__letter">A</span>
+  <div>
+    <div class="option-bar__name">Face-Forward</div>
+  </div>
+  <span class="option-bar__desc">Lead with the people, not the pitch</span>
+</div>
+
+<div class="option-section">
+  <div class="sec-badge">
+    <span class="sec-badge__icon"><svg viewBox="0 0 12 12"><path d="M6 1l1.5 3.5L11 5l-2.75 2.5L9 11 6 9l-3 2 .75-3.5L1 5l3.5-.5z"/></svg></span>
+    <span class="sec-badge__label">Why Us</span>
+  </div>
+  <div class="sec-head">
+    <span class="sec-head__num">10</span>
+    <div>
+      <h2 class="sec-head__title">The People Behind <em>The Work</em></h2>
+      <p class="sec-head__sub">You won't talk to an account manager. You talk to us.</p>
+    </div>
+  </div>
+
+  <p class="team-intro">Most agencies have you work with a salesperson, then hand you off to a production team you've never met. At Aspire, you work directly with the two people who built the company — and who will personally build your site.</p>
+
+  <div class="team-promise">
+    <p class="team-promise__text">"Every site that ships under our name is one we stand behind completely. <strong>If we can't do that, we don't take the project.</strong>"</p>
+  </div>
+
+  <div class="team-grid">
+    <div class="team-card team-card--chris">
+      <div class="team-card__photo">
+        <img src="/assets/chris-profile.png" alt="Chris Otten">
+        <div class="team-card__tint"></div>
+        <div class="team-card__socials">
+          <a href="https://instagram.com/chrisotten" class="team-card__social-btn" target="_blank" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://linkedin.com/in/chrisotten" class="team-card__social-btn" target="_blank" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+        <div class="team-card__overlay">
+          <p class="team-card__role">Founder &amp; Technical Director</p>
+          <h3 class="team-card__name">Chris Otten</h3>
+        </div>
+      </div>
+      <div class="team-card__body">
+        <p class="team-card__bio">Handles the strategy, development, and business ops that make a launch actually land. Every site Chris builds is fast, accessible, and SEO-ready from the first line of code.</p>
+        <div class="team-card__links">
+          <a href="mailto:chris@madebyaspire.com">chris@madebyaspire.com</a>
+        </div>
+      </div>
+    </div>
+    <div class="team-card team-card--jaime">
+      <div class="team-card__photo">
+        <img src="/assets/jaime-profile.png" alt="Jaime Otten">
+        <div class="team-card__tint"></div>
+        <div class="team-card__socials">
+          <a href="https://instagram.com/jaimeotten" class="team-card__social-btn" target="_blank" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://linkedin.com/in/jaimeotten" class="team-card__social-btn" target="_blank" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+        <div class="team-card__overlay">
+          <p class="team-card__role">Founder &amp; Creative Director</p>
+          <h3 class="team-card__name">Jaime Otten</h3>
+        </div>
+      </div>
+      <div class="team-card__body">
+        <p class="team-card__bio">20+ years of senior UX/UI design across agencies, startups, and product studios. Every visual direction on every site runs through Jaime. Your brand is in good hands.</p>
+        <div class="team-card__links">
+          <a href="mailto:jaime@madebyaspire.com">jaime@madebyaspire.com</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="review-grid">
+    <div class="review-card">
+      <div class="review-card__stars">★★★★★</div>
+      <p class="review-card__quote">"They felt like partners, not vendors. Jaime really listened to what I was going for and Chris made sure it ran perfectly."</p>
+      <p class="review-card__by">Sarah M. — B Clean Carpet</p>
+    </div>
+    <div class="review-card">
+      <div class="review-card__stars">★★★★★</div>
+      <p class="review-card__quote">"I never felt like I was just a ticket in a queue. They knew my business and it showed in every design decision."</p>
+      <p class="review-card__by">Bryan T. — Local Business Owner</p>
+    </div>
+  </div>
+
+  <div class="cta-wrap">
+    <p class="cta-wrap__eyebrow">Let's Build Something</p>
+    <h3 class="cta-wrap__heading">Ready to talk to the people <em>who'll actually build it?</em></h3>
+    <p class="cta-wrap__sub">30 minutes. No pressure. We'll tell you exactly what we'd do and what it costs.</p>
+    <a href="#" class="btn-pill btn-pill--dark">
+      <span class="btn-pill__fill"></span>
+      <span class="btn-pill__label">Book a Free Strategy Call</span>
+      <span class="btn-pill__arrow">→</span>
+    </a>
+    <p class="cta-wrap__secondary">or email <a href="#">chris@madebyaspire.com</a> directly</p>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+
+<!-- ═══════════════════════════════════════════════════
+     OPTION B — THREE-WAY COMPARE
+════════════════════════════════════════════════════ -->
+
+<div class="option-bar">
+  <span class="option-bar__letter">B</span>
+  <div>
+    <div class="option-bar__name">Three-Way Compare</div>
+  </div>
+  <span class="option-bar__desc">DIY vs. big agency vs. Aspire — let them self-select</span>
+</div>
+
+<div class="option-section">
+  <div class="sec-badge">
+    <span class="sec-badge__icon"><svg viewBox="0 0 12 12"><path d="M6 1l1.5 3.5L11 5l-2.75 2.5L9 11 6 9l-3 2 .75-3.5L1 5l3.5-.5z"/></svg></span>
+    <span class="sec-badge__label">Why Us</span>
+  </div>
+  <div class="sec-head">
+    <span class="sec-head__num">10</span>
+    <div>
+      <h2 class="sec-head__title">Why <em>Aspire Digital</em></h2>
+      <p class="sec-head__sub">There are a few ways to get a website. Here's what each actually delivers.</p>
+    </div>
+  </div>
+
+  <div class="tri-grid">
+    <div class="tri-col tri-col--diy">
+      <div class="tri-head">
+        <p class="tri-head__label">Option 1</p>
+        <p class="tri-head__name">DIY Builder</p>
+        <p class="tri-head__sub">Squarespace, Wix, GoDaddy</p>
+      </div>
+      <div class="tri-rows">
+        <div class="tri-row">
+          <p class="tri-row__category">Design</p>
+          <p class="tri-row__val tri-row__val--bad">Template — looks like everyone else</p>
+        </div>
+        <div class="tri-row">
+          <p class="tri-row__category">Performance</p>
+          <p class="tri-row__val tri-row__val--bad">Slow — hurts SEO &amp; conversions</p>
+        </div>
+        <div class="tri-row">
+          <p class="tri-row__category">SEO</p>
+          <p class="tri-row__val tri-row__val--bad">Basic at best — no local strategy</p>
+        </div>
+        <div class="tri-row">
+          <p class="tri-row__category">Your time</p>
+          <p class="tri-row__val tri-row__val--bad">40–80 hrs to learn &amp; build it yourself</p>
+        </div>
+        <div class="tri-row">
+          <p class="tri-row__category">Support</p>
+          <p class="tri-row__val tri-row__val--bad">You're on your own</p>
+        </div>
+        <div class="tri-row">
+          <p class="tri-row__category">Cost</p>
+          <p class="tri-row__val">$15–40/mo + your time</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="tri-col tri-col--aspire">
+      <div class="tri-head">
+        <p class="tri-head__label">Best Fit ✦</p>
+        <p class="tri-head__name">Aspire Digital</p>
+        <p class="tri-head__sub">Custom · Strategic · Personal</p>
+      </div>
+      <div class="tri-rows">
+        <div class="tri-row">
+          <p class="tri-row__category">Design</p>
+          <p class="tri-row__val tri-row__val--good">Custom — built for your brand specifically</p>
+        </div>
+        <div class="tri-row">
+          <p class="tri-row__category">Performance</p>
+          <p class="tri-row__val tri-row__val--good">Top 5% — Astro 6 on Cloudflare</p>
+        </div>
+        <div class="tri-row">
+          <p class="tri-row__category">SEO</p>
+          <p class="tri-row__val tri-row__val--good">Local SEO strategy baked in from day one</p>
+        </div>
+        <div class="tri-row">
+          <p class="tri-row__category">Your time</p>
+          <p class="tri-row__val tri-row__val--good">~3 hours total — we handle everything</p>
+        </div>
+        <div class="tri-row">
+          <p class="tri-row__category">Support</p>
+          <p class="tri-row__val tri-row__val--good">30 days post-launch, then ongoing option</p>
+        </div>
+        <div class="tri-row">
+          <p class="tri-row__category">Cost</p>
+          <p class="tri-row__val">One-time project <span class="tri-aspire-tag">best value</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="tri-col tri-col--agency">
+      <div class="tri-head">
+        <p class="tri-head__label">Option 3</p>
+        <p class="tri-head__name">Large Agency</p>
+        <p class="tri-head__sub">Regional or national shop</p>
+      </div>
+      <div class="tri-rows">
+        <div class="tri-row">
+          <p class="tri-row__category">Design</p>
+          <p class="tri-row__val tri-row__val--mid">Good — but you're not their priority client</p>
+        </div>
+        <div class="tri-row">
+          <p class="tri-row__category">Performance</p>
+          <p class="tri-row__val tri-row__val--mid">Varies — often WordPress-heavy</p>
+        </div>
+        <div class="tri-row">
+          <p class="tri-row__category">SEO</p>
+          <p class="tri-row__val tri-row__val--mid">Add-on service — usually extra cost</p>
+        </div>
+        <div class="tri-row">
+          <p class="tri-row__category">Your time</p>
+          <p class="tri-row__val tri-row__val--mid">More meetings, more approvals</p>
+        </div>
+        <div class="tri-row">
+          <p class="tri-row__category">Support</p>
+          <p class="tri-row__val tri-row__val--mid">Retainer required, account manager buffer</p>
+        </div>
+        <div class="tri-row">
+          <p class="tri-row__category">Cost</p>
+          <p class="tri-row__val">$15k–$50k+</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="review-grid">
+    <div class="review-card">
+      <div class="review-card__stars">★★★★★</div>
+      <p class="review-card__quote">"I'd gotten quotes from two agencies before talking to Chris. Aspire came in sharper, faster, and more personal than either of them."</p>
+      <p class="review-card__by">Sarah M. — B Clean Carpet</p>
+    </div>
+    <div class="review-card">
+      <div class="review-card__stars">★★★★★</div>
+      <p class="review-card__quote">"I'd been using Squarespace for years. This is night and day — I had no idea what I was leaving on the table."</p>
+      <p class="review-card__by">Bryan T. — Local Business Owner</p>
+    </div>
+  </div>
+
+  <div class="cta-wrap">
+    <p class="cta-wrap__eyebrow">Let's Build Something</p>
+    <h3 class="cta-wrap__heading">You've seen the options. <em>Here's the next step.</em></h3>
+    <p class="cta-wrap__sub">30 minutes. We'll show you exactly what we'd build, why, and what it costs. No pressure.</p>
+    <a href="#" class="btn-pill btn-pill--dark">
+      <span class="btn-pill__fill"></span>
+      <span class="btn-pill__label">Book a Free Strategy Call</span>
+      <span class="btn-pill__arrow">→</span>
+    </a>
+    <p class="cta-wrap__secondary">or email <a href="#">chris@madebyaspire.com</a> directly</p>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+
+<!-- ═══════════════════════════════════════════════════
+     OPTION C — RESULTS-FIRST
+════════════════════════════════════════════════════ -->
+
+<div class="option-bar">
+  <span class="option-bar__letter">C</span>
+  <div>
+    <div class="option-bar__name">Results-First</div>
+  </div>
+  <span class="option-bar__desc">Lead with outcomes — reviews, then pillars</span>
+</div>
+
+<div class="option-section">
+  <div class="sec-badge">
+    <span class="sec-badge__icon"><svg viewBox="0 0 12 12"><path d="M6 1l1.5 3.5L11 5l-2.75 2.5L9 11 6 9l-3 2 .75-3.5L1 5l3.5-.5z"/></svg></span>
+    <span class="sec-badge__label">Why Us</span>
+  </div>
+  <div class="sec-head">
+    <span class="sec-head__num">10</span>
+    <div>
+      <h2 class="sec-head__title">Why <em>Aspire Digital</em></h2>
+      <p class="sec-head__sub">The numbers. Then the words. Then the call.</p>
+    </div>
+  </div>
+
+  <div class="results-bar">
+    <div class="result-cell">
+      <div class="result-cell__num">4.9★</div>
+      <div class="result-cell__label">Avg. client rating</div>
+      <div class="result-cell__note">Across every project we've shipped</div>
+    </div>
+    <div class="result-cell">
+      <div class="result-cell__num">&lt;30</div>
+      <div class="result-cell__label">Days avg. to launch</div>
+      <div class="result-cell__note">From kickoff call to live site</div>
+    </div>
+    <div class="result-cell">
+      <div class="result-cell__num">100%</div>
+      <div class="result-cell__label">Custom-built</div>
+      <div class="result-cell__note">No templates. No recycled work. Ever.</div>
+    </div>
+  </div>
+
+  <div class="review-grid">
+    <div class="review-card">
+      <div class="review-card__stars">★★★★★</div>
+      <p class="review-card__quote">"Fastest, most professional web project I've ever been part of. They knew exactly what to do and just did it."</p>
+      <p class="review-card__by">Sarah M. — B Clean Carpet</p>
+    </div>
+    <div class="review-card">
+      <div class="review-card__stars">★★★★★</div>
+      <p class="review-card__quote">"Within two weeks of launch I had three new inquiries come through the site. Never happened with my old one."</p>
+      <p class="review-card__by">Bryan T. — Local Business Owner</p>
+    </div>
+  </div>
+
+  <div class="results-pillars">
+    <div class="result-pillar">
+      <div class="result-pillar__ico"><svg viewBox="0 0 14 14"><rect x="2" y="2" width="10" height="10" rx="2"/><path d="M5 7l2 2 3-3"/></svg></div>
+      <div class="result-pillar__body">
+        <div class="result-pillar__title">Custom-built, no exceptions</div>
+        <p class="result-pillar__desc">Astro 6 on Cloudflare — fastest stack, built specifically for your business.</p>
+      </div>
+    </div>
+    <div class="result-pillar">
+      <div class="result-pillar__ico"><svg viewBox="0 0 14 14"><circle cx="7" cy="5" r="3"/><path d="M2 13a5 5 0 0 1 10 0"/></svg></div>
+      <div class="result-pillar__body">
+        <div class="result-pillar__title">20+ years of design leadership</div>
+        <p class="result-pillar__desc">Jaime leads every visual direction. Your brand comes out clearer than it went in.</p>
+      </div>
+    </div>
+    <div class="result-pillar">
+      <div class="result-pillar__ico"><svg viewBox="0 0 14 14"><path d="M7 1l1.5 3.5L12 5l-2.5 2.5.75 3.5L7 9.5l-3.25 1.5.75-3.5L2 5l3.5-.5z"/></svg></div>
+      <div class="result-pillar__body">
+        <div class="result-pillar__title">The portfolio is the proof</div>
+        <p class="result-pillar__desc">Every site we've shipped is in our portfolio. That's the bar we hold every new project to.</p>
+      </div>
+    </div>
+    <div class="result-pillar">
+      <div class="result-pillar__ico"><svg viewBox="0 0 14 14"><circle cx="7" cy="7" r="5"/><path d="M7 4v3l2 1"/></svg></div>
+      <div class="result-pillar__body">
+        <div class="result-pillar__title">We stay after launch</div>
+        <p class="result-pillar__desc">30 days of post-launch support included. You're never handed off and forgotten.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-wrap">
+    <p class="cta-wrap__eyebrow">Let's Build Something</p>
+    <h3 class="cta-wrap__heading">Ready to see what we'd <em>build for you?</em></h3>
+    <p class="cta-wrap__sub">Free 30-minute strategy call. We'll tell you exactly what we'd do and what it costs.</p>
+    <div class="cta-stats">
+      <div class="cta-stat"><span class="cta-stat__num">30</span><span class="cta-stat__label">Days post-launch support</span></div>
+      <div class="cta-stat cta-stat--div"></div>
+      <div class="cta-stat"><span class="cta-stat__num">100%</span><span class="cta-stat__label">Custom — no templates</span></div>
+      <div class="cta-stat cta-stat--div"></div>
+      <div class="cta-stat"><span class="cta-stat__num">2–3</span><span class="cta-stat__label">New clients / month — limited</span></div>
+    </div>
+    <a href="#" class="btn-pill btn-pill--dark">
+      <span class="btn-pill__fill"></span>
+      <span class="btn-pill__label">Book a Free Strategy Call</span>
+      <span class="btn-pill__arrow">→</span>
+    </a>
+    <p class="cta-wrap__secondary">or email <a href="#">chris@madebyaspire.com</a> directly</p>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+
+<!-- ═══════════════════════════════════════════════════
+     OPTION D — SMALL ON PURPOSE
+════════════════════════════════════════════════════ -->
+
+<div class="option-bar">
+  <span class="option-bar__letter">D</span>
+  <div>
+    <div class="option-bar__name">Small on Purpose</div>
+  </div>
+  <span class="option-bar__desc">Scarcity as a feature — limited capacity = full attention</span>
+</div>
+
+<div class="option-section">
+  <div class="sec-badge">
+    <span class="sec-badge__icon"><svg viewBox="0 0 12 12"><path d="M6 1l1.5 3.5L11 5l-2.75 2.5L9 11 6 9l-3 2 .75-3.5L1 5l3.5-.5z"/></svg></span>
+    <span class="sec-badge__label">Why Us</span>
+  </div>
+  <div class="sec-head">
+    <span class="sec-head__num">10</span>
+    <div>
+      <h2 class="sec-head__title">Why <em>Aspire Digital</em></h2>
+      <p class="sec-head__sub">We take on 2–3 new clients per month. That's not a limitation — it's the reason the work is this good.</p>
+    </div>
+  </div>
+
+  <div class="sop-statement">
+    <p class="sop-statement__pre">The Aspire approach</p>
+    <h3 class="sop-statement__heading">We said no to growth<br>so we could say <em>yes</em> to quality.</h3>
+    <p class="sop-statement__body">Most agencies scale by adding clients and spreading attention thin. We made the opposite choice. Two people, a handful of clients at a time, and the kind of focus that only comes from genuinely caring about the outcome.</p>
+  </div>
+
+  <div class="sop-availability">
+    <div class="sop-dots">
+      <div class="sop-dot sop-dot--open"></div>
+      <div class="sop-dot sop-dot--open"></div>
+      <div class="sop-dot sop-dot--taken"></div>
+    </div>
+    <span class="sop-avail__count">2 spots open</span>
+    <span class="sop-avail__label">this month — April 2025</span>
+  </div>
+
+  <div class="sop-reasons">
+    <div class="sop-reason">
+      <p class="sop-reason__num">01</p>
+      <div class="sop-reason__title">You get the people who built it.</div>
+      <p class="sop-reason__body">Not an account manager. Not a junior designer. Jaime and Chris work every project personally, from kickoff to launch.</p>
+    </div>
+    <div class="sop-reason">
+      <p class="sop-reason__num">02</p>
+      <div class="sop-reason__title">Custom-built, no exceptions.</div>
+      <p class="sop-reason__body">No templates, no page-builders. Every site is Astro 6 on Cloudflare — purpose-built for your business and no one else's.</p>
+    </div>
+    <div class="sop-reason">
+      <p class="sop-reason__num">03</p>
+      <div class="sop-reason__title">20+ years of design leadership.</div>
+      <p class="sop-reason__body">Jaime leads every visual direction. Your brand goes in and comes out clearer, stronger, and more distinctly yours.</p>
+    </div>
+    <div class="sop-reason">
+      <p class="sop-reason__num">04</p>
+      <div class="sop-reason__title">We stay after launch.</div>
+      <p class="sop-reason__body">The first 30 days are on us — site monitoring, fixes, and help reading the first wave of analytics. You're never abandoned.</p>
+    </div>
+  </div>
+
+  <div class="review-grid">
+    <div class="review-card">
+      <div class="review-card__stars">★★★★★</div>
+      <p class="review-card__quote">"They treated our project like it was their only one. I've never experienced that from a web agency before."</p>
+      <p class="review-card__by">Sarah M. — B Clean Carpet</p>
+    </div>
+    <div class="review-card">
+      <div class="review-card__stars">★★★★★</div>
+      <p class="review-card__quote">"Fast, communicative, and they actually cared about how the site would perform — not just how it would look."</p>
+      <p class="review-card__by">Bryan T. — Local Business Owner</p>
+    </div>
+  </div>
+
+  <div class="cta-wrap">
+    <p class="cta-wrap__eyebrow">Let's Build Something</p>
+    <h3 class="cta-wrap__heading">Two spots this month. <em>Is one yours?</em></h3>
+    <p class="cta-wrap__sub">Free 30-minute call. We'll walk you through exactly what we'd build, and you'll know by the end whether it's the right fit.</p>
+    <a href="#" class="btn-pill btn-pill--dark">
+      <span class="btn-pill__fill"></span>
+      <span class="btn-pill__label">Book a Free Strategy Call</span>
+      <span class="btn-pill__arrow">→</span>
+    </a>
+    <p class="cta-wrap__secondary">or email <a href="#">chris@madebyaspire.com</a> directly</p>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+
+<!-- ═══════════════════════════════════════════════════
+     OPTION E — PORTFOLIO GLIMPSE
+════════════════════════════════════════════════════ -->
+
+<div class="option-bar">
+  <span class="option-bar__letter">E</span>
+  <div>
+    <div class="option-bar__name">Portfolio Glimpse</div>
+  </div>
+  <span class="option-bar__desc">Show the work — screenshots + outcomes lead the close</span>
+</div>
+
+<div class="option-section">
+  <div class="sec-badge">
+    <span class="sec-badge__icon"><svg viewBox="0 0 12 12"><path d="M6 1l1.5 3.5L11 5l-2.75 2.5L9 11 6 9l-3 2 .75-3.5L1 5l3.5-.5z"/></svg></span>
+    <span class="sec-badge__label">Why Us</span>
+  </div>
+  <div class="sec-head">
+    <span class="sec-head__num">10</span>
+    <div>
+      <h2 class="sec-head__title">The Portfolio Is <em>The Proof</em></h2>
+      <p class="sec-head__sub">Every site we've built, we're proud of. Here's a few.</p>
+    </div>
+  </div>
+
+  <p class="portfolio-intro">We don't need to tell you we do good work. We can show you. Every project in our portfolio is there because we'd build it the same way again.</p>
+
+  <div class="portfolio-grid">
+    <div class="portfolio-card">
+      <div class="portfolio-card__thumb">
+        <div class="portfolio-card__thumb-inner">
+          <div class="portfolio-card__browser">
+            <div class="portfolio-card__dot"></div>
+            <div class="portfolio-card__dot"></div>
+            <div class="portfolio-card__dot"></div>
+          </div>
+          <div class="portfolio-card__screen card-screen--bcleam"></div>
+        </div>
+      </div>
+      <div class="portfolio-card__body">
+        <p class="portfolio-card__industry">Carpet Cleaning · Columbus, OH</p>
+        <p class="portfolio-card__name">B Clean Carpet</p>
+        <p class="portfolio-card__metric">Online booking live — 3 new leads in first week</p>
+      </div>
+    </div>
+    <div class="portfolio-card">
+      <div class="portfolio-card__thumb">
+        <div class="portfolio-card__thumb-inner">
+          <div class="portfolio-card__browser">
+            <div class="portfolio-card__dot"></div>
+            <div class="portfolio-card__dot"></div>
+            <div class="portfolio-card__dot"></div>
+          </div>
+          <div class="portfolio-card__screen card-screen--tees"></div>
+        </div>
+      </div>
+      <div class="portfolio-card__body">
+        <p class="portfolio-card__industry">Flooring · Central Ohio</p>
+        <p class="portfolio-card__name">Tee's Flooring</p>
+        <p class="portfolio-card__metric">Brand system + site — positioned for referral growth</p>
+      </div>
+    </div>
+    <div class="portfolio-card">
+      <div class="portfolio-card__thumb">
+        <div class="portfolio-card__thumb-inner">
+          <div class="portfolio-card__browser">
+            <div class="portfolio-card__dot"></div>
+            <div class="portfolio-card__dot"></div>
+            <div class="portfolio-card__dot"></div>
+          </div>
+          <div class="portfolio-card__screen card-screen--petalwings"></div>
+        </div>
+      </div>
+      <div class="portfolio-card__body">
+        <p class="portfolio-card__industry">Community Platform · National</p>
+        <p class="portfolio-card__name">PetalsWings</p>
+        <p class="portfolio-card__metric">Full rebrand + platform — community launch Q1 2025</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio-cta">
+    <p class="portfolio-cta__label">See every project → <a href="https://madebyaspire.com/work" target="_blank">madebyaspire.com/work</a></p>
+  </div>
+
+  <div class="proof-grid">
+    <div class="proof-item">
+      <div class="proof-item__accent"></div>
+      <span class="proof-item__num">01</span>
+      <div class="proof-item__title">Custom-built, no exceptions.</div>
+      <p class="proof-item__body">No templates, no page-builders. Every site is purpose-built in Astro 6 on Cloudflare — the fastest stack available to local businesses.</p>
+    </div>
+    <div class="proof-item">
+      <div class="proof-item__accent"></div>
+      <span class="proof-item__num">02</span>
+      <div class="proof-item__title">20+ years of design leadership.</div>
+      <p class="proof-item__body">Jaime leads every visual direction with senior UX/UI expertise most agencies can't match. Your brand comes out clearer than it went in.</p>
+    </div>
+    <div class="proof-item">
+      <div class="proof-item__accent"></div>
+      <span class="proof-item__num">03</span>
+      <div class="proof-item__title">30 days post-launch support.</div>
+      <p class="proof-item__body">We stay on after launch — monitoring, fixing, and helping you read the first wave of analytics. You're never left to figure it out alone.</p>
+    </div>
+    <div class="proof-item">
+      <div class="proof-item__accent"></div>
+      <span class="proof-item__num">04</span>
+      <div class="proof-item__title">2–3 clients per month, on purpose.</div>
+      <p class="proof-item__body">We limit our intake so every project gets the full attention of both Jaime and Chris — personally, start to finish.</p>
+    </div>
+  </div>
+
+  <div class="cta-wrap">
+    <p class="cta-wrap__eyebrow">Let's Build Something</p>
+    <h3 class="cta-wrap__heading">Ready to be the next <em>site we're proud of?</em></h3>
+    <p class="cta-wrap__sub">Free 30-minute call. We'll show you exactly what we'd build for you — no pressure, no pitch deck.</p>
+    <a href="#" class="btn-pill btn-pill--dark">
+      <span class="btn-pill__fill"></span>
+      <span class="btn-pill__label">Book a Free Strategy Call</span>
+      <span class="btn-pill__arrow">→</span>
+    </a>
+    <p class="cta-wrap__secondary">or email <a href="#">chris@madebyaspire.com</a> directly</p>
+  </div>
+</div>
+
+<div style="height:4rem;"></div>
+
+</body>
+</html>
