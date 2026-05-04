@@ -4,1084 +4,1812 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Aspire Digital — Digital Growth Brief | Aspire Digital</title>
-<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="icon" type="image/svg+xml" href="./favicon.svg">
 <!-- Open Graph / iMessage / SMS preview -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Aspire Digital — Your Digital Growth Opportunity">
-<meta property="og:description" content="A comprehensive self-audit of Aspire Digital's online presence — strengths, gaps, and where the next phase of growth lives.">
+<meta property="og:description" content="A self-audit of Aspire Digital's online presence — the wins, the gaps, and the roadmap to capture Columbus search traffic.">
 <meta property="og:image" content="https://yoursite.madebyaspire.com/aspire-digital/welcome/og-card.png">
 <meta property="og:url" content="https://yoursite.madebyaspire.com/aspire-digital/welcome/">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Aspire Digital — Your Digital Growth Opportunity">
-<meta name="twitter:description" content="A personalized digital audit prepared by Aspire Digital for Aspire Digital.">
+<meta name="twitter:description" content="A self-audit prepared by Paris · Aspire Digital's prospecting agent.">
 <meta name="twitter:image" content="https://yoursite.madebyaspire.com/aspire-digital/welcome/og-card.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Serif+Display:ital@0;1&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Unbounded:wght@400;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0" rel="stylesheet">
 <style>
-  :root {
-    --bg: #FAF0E2;
-    --bg-alt: #F2EDE6;
-    --text: #2C3340;
-    --text-sec: #666666;
-    --text-muted: #999999;
-    --accent: #C4622D;
-    --accent-dark: #B53D00;
-    --border: #E5E5E5;
-    --border-light: #F0F0F0;
-    --green: #4a7b5a;
-    --hero-green: #8FAF8A;
-    --white: #ffffff;
-    --font: 'DM Sans', system-ui, -apple-system, sans-serif;
-    --font-head: 'Montserrat', system-ui, sans-serif;
-    --font-accent: 'Playfair Display', Georgia, serif;
-  }
+/* ── TOKENS ── */
+:root{
+  --bg:#FAF0E2; --bg-alt:#F2EDE6; --bg-night:#1A1F28;
+  --accent:#C4622D; --accent-dk:#A34E1A;
+  --green:#4A7B5A; --sage:#8FAF8A;
+  --charcoal:#2C3340;
+  --text:#2C3340; --text-sec:#5A6072; --text-muted:#888E97;
+  --border:rgba(44,51,64,.13); --border-lt:rgba(44,51,64,.07);
+  --white:#fff;
+  --r-sm:6px; --r-md:10px; --r-lg:16px; --r-xl:22px; --r-full:999px;
+  --sh-sm:0 1px 4px rgba(0,0,0,.07); --sh-md:0 4px 16px rgba(0,0,0,.1);
+  --f-d:"DM Serif Display",Georgia,serif;
+  --f-a:"EB Garamond",Georgia,serif;
+  --f-n:"Unbounded",-apple-system,system-ui,sans-serif;
+  --f-b:"DM Sans",-apple-system,system-ui,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{font-size:17px;-webkit-font-smoothing:antialiased;scroll-behavior:smooth;scroll-padding-top:80px;}
+body{font-family:var(--f-b);font-size:16px;line-height:1.75;background:var(--bg-night);color:var(--text);}
+img{max-width:100%;display:block;}
+::selection{background:var(--accent);color:#fff;}
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+/* ── TOPBAR ── */
+.topbar{position:fixed;top:0;left:0;right:0;z-index:200;height:58px;background:var(--white);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.875rem;padding:0 2rem;box-shadow:0 1px 0 var(--border);}
+.topbar__logo{height:22px;flex-shrink:0;}
+.topbar__sep{width:1px;height:20px;background:var(--border);flex-shrink:0;}
+.topbar__label{font-family:var(--f-b);font-size:.9375rem;font-weight:600;color:var(--text-sec);}
+.topbar__ver{font-family:var(--f-n);font-size:.75rem;font-weight:500;color:var(--text-muted);letter-spacing:.03em;}
+.topbar__badge{margin-left:auto;font-family:var(--f-n);font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--white);background:var(--accent);padding:4px 12px;border-radius:var(--r-full);max-width:50%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 
-  body {
-    font-family: var(--font);
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.7;
-    font-size: 15px;
-    font-weight: 400;
-    -webkit-font-smoothing: antialiased;
-  }
+/* ── HERO ── */
+.hero{padding-top:58px;background:var(--bg-night);padding-bottom:0;}
+.hero__inner{max-width:960px;margin:0 auto;padding:5rem 2rem 5.5rem;display:grid;grid-template-columns:1.35fr 1fr;grid-template-rows:auto auto;gap:1.5rem 3.5rem;align-items:start;}
+.hero__top{grid-column:1/-1;padding-bottom:.5rem;}
+.hero__top .hero__h1{font-size:clamp(2.25rem,4.5vw,3.5rem);line-height:1.08;}
+.hero__text{min-width:0;}
+.hero__h1{overflow-wrap:anywhere;word-break:break-word;hyphens:auto;}
+.hero__eyebrow{font-family:var(--f-n);font-size:.75rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:1.25rem;display:flex;align-items:center;gap:.625rem;}
+.hero__eyebrow-dot{width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;}
+.hero__h1{font-family:var(--f-d);font-style:italic;font-size:clamp(2.5rem,5.5vw,4.25rem);font-weight:400;color:var(--bg);line-height:1.05;margin-bottom:1rem;}
+.hero__h1 em{font-style:italic;color:var(--accent);font-family:var(--f-d);}
+.hero__sub{font-family:var(--f-b);font-size:1.125rem;color:rgba(250,240,226,.72);line-height:1.65;margin-bottom:0;max-width:480px;}
+.hero__meta{display:flex;flex-direction:column;gap:1.25rem;padding:.25rem 0 .25rem 2rem;border-left:1px solid rgba(255,255,255,.1);margin-top:2rem;}
+.hero__meta-item dt{font-family:var(--f-n);font-size:.6875rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(250,240,226,.3);margin-bottom:.35rem;}
+.hero__meta-item dd{font-family:var(--f-b);font-size:.9375rem;font-weight:500;color:var(--bg);}
+.hero__meta-item dd.fill{font-family:var(--f-d);font-style:normal;font-size:1.125rem;color:var(--sage);}
+.hero__meta-item a{color:inherit;text-decoration:none;border-bottom:1px solid rgba(143,175,138,.4);padding-bottom:1px;}
 
-  ::selection { background: var(--accent); color: #fff; }
+/* ── ACCENT STRIPE ── */
+.accent-stripe{height:3px;background:linear-gradient(to right,var(--accent),#A34E1A);}
 
-  /* PAGE HEADER */
-  .page-header {
-    background: var(--white);
-    border-bottom: 1px solid var(--border);
-    padding: 16px 48px;
-  }
-  .page-header-inner {
-    max-width: 900px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .page-header .aspire-logo {
-    width: 200px;
-    height: auto;
-  }
+/* ── SECTION GROUPS ── */
+.sec-group{padding:5rem 2rem;}
+.sec-group--dark{background:var(--bg-night);}
+.sec-group--cream{background:var(--bg);}
+.sec-group--alt{background:var(--bg-alt);}
+.sec-group__in{max-width:860px;margin:0 auto;}
 
-  /* HERO */
-  .hero {
-    background: var(--hero-green);
-    text-align: center;
-    padding: 60px 48px 80px;
-    position: relative;
-  }
-  .hero h1 {
-    font-family: var(--font-head);
-    font-weight: 800;
-    font-size: clamp(36px, 6vw, 56px);
-    color: var(--accent);
-    line-height: 1.08;
-    text-transform: uppercase;
-    letter-spacing: -0.02em;
-    margin-bottom: 8px;
-  }
-  .hero .sub {
-    font-family: var(--font-head);
-    font-weight: 600;
-    font-size: clamp(18px, 3vw, 24px);
-    color: #2C3340;
-    margin-bottom: 4px;
-    letter-spacing: -0.01em;
-  }
-  .hero .accent-word {
-    font-family: var(--font-accent);
-    font-style: italic;
-    font-weight: 400;
-    font-size: clamp(36px, 6vw, 56px);
-    color: var(--white);
-    line-height: 1.08;
-  }
-  .hero .body-text {
-    color: var(--white);
-    font-size: 17px;
-    max-width: 540px;
-    margin: 28px auto 0;
-    line-height: 1.7;
-  }
+.sec-badge{display:inline-flex;align-items:center;gap:10px;padding:5px 18px 5px 5px;border-radius:var(--r-full);margin-bottom:1.75rem;}
+.sec-group--cream .sec-badge,.sec-group--alt .sec-badge{background:var(--bg);border:1px solid var(--border);box-shadow:var(--sh-sm);}
+.sec-group--dark .sec-badge{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);}
+.sec-badge__icon{width:30px;height:30px;border-radius:50%;background:var(--green);color:var(--white);display:grid;place-items:center;flex-shrink:0;}
+.sec-badge__icon svg{width:12px;height:12px;fill:none;stroke:#fff;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;}
+.sec-badge__label{font-family:var(--f-n);font-size:.6875rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;}
+.sec-group--cream .sec-badge__label,.sec-group--alt .sec-badge__label{color:var(--text-sec);}
+.sec-group--dark .sec-badge__label{color:rgba(250,240,226,.55);}
 
-  /* ARC DIVIDER */
-  .hero-arc {
-    margin-top: -1px;
-    background: var(--hero-green);
-  }
-  .hero-arc svg {
-    display: block;
-    width: 100%;
-    height: 80px;
-  }
+/* ── SECTION HEADINGS (big italic number + title pattern) ── */
+.sec-head{display:grid;grid-template-columns:auto 1fr;column-gap:1.75rem;align-items:baseline;margin-bottom:2.5rem;}
+.sec-head__num{font-family:var(--f-d);font-style:italic;font-size:clamp(3rem,5vw,4.5rem);font-weight:400;line-height:1;color:var(--accent);}
+.sec-head__body{display:flex;flex-direction:column;gap:.5rem;}
+.sec-head__title{font-family:var(--f-d);font-style:italic;font-size:clamp(1.75rem,3vw,2.5rem);font-weight:400;line-height:1.15;margin:0;}
+.sec-group--cream .sec-head__title,.sec-group--alt .sec-head__title{color:var(--charcoal);}
+.sec-group--dark .sec-head__title{color:var(--bg);}
+.sec-head__title em{font-style:italic;color:var(--accent);}
+.sec-group--dark .sec-head__title em{color:var(--accent);}
+.sec-head__sub{font-family:var(--f-b);font-size:1rem;line-height:1.65;}
+.sec-group--cream .sec-head__sub,.sec-group--alt .sec-head__sub{color:var(--text-sec);}
+.sec-group--dark .sec-head__sub{color:rgba(250,240,226,.5);}
 
-  /* CONTAINER */
-  .container {
-    max-width: 820px;
-    margin: 0 auto;
-    padding: 0 32px;
-  }
+/* ── PROSE ── */
+.prose p{margin-bottom:1rem;line-height:1.8;}
+.sec-group--cream .prose p,.sec-group--alt .prose p{color:var(--text-sec);}
+.sec-group--dark .prose p{color:rgba(250,240,226,.82);}
+.prose p:last-child{margin-bottom:0;}
+.prose strong{font-weight:600;}
+.sec-group--cream .prose strong,.sec-group--alt .prose strong{color:var(--charcoal);}
+.sec-group--dark .prose strong{color:var(--bg);}
+.prose em{font-family:var(--f-a);font-style:italic;}
+.prose ul{list-style:none;padding:0;margin:1rem 0;display:flex;flex-direction:column;gap:.625rem;}
+.prose ul li{position:relative;padding-left:1.375rem;line-height:1.75;}
+.prose ul li::before{content:'';position:absolute;left:.35rem;top:.75em;width:5px;height:5px;border-radius:50%;background:var(--green);}
+.sec-group--cream .prose ul li,.sec-group--alt .prose ul li{color:var(--text-sec);}
+.sec-group--dark .prose ul li{color:rgba(250,240,226,.78);}
 
-  /* META BAR */
-  .meta-bar {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 16px;
-    padding: 32px 0 20px;
-    border-bottom: 1px solid var(--border);
-    margin-bottom: 56px;
-    font-size: 13px;
-    color: var(--text-muted);
-    letter-spacing: 0.3px;
-  }
-  .meta-bar strong { color: var(--text); font-weight: 600; }
-  .meta-bar a { color: var(--accent); text-decoration: none; }
+/* ── SUB-HEADING (h3 inside sections) ── */
+.sub-head{font-family:var(--f-n);font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin:2.5rem 0 1rem;display:flex;align-items:center;gap:.5rem;}
+.sec-group--cream .sub-head,.sec-group--alt .sub-head{color:var(--text-sec);}
+.sec-group--dark .sub-head{color:rgba(250,240,226,.4);}
+.sub-head::before{content:'';display:block;width:20px;height:1px;background:currentColor;opacity:.6;}
 
-  /* SECTIONS */
-  section { margin-bottom: 64px; }
+/* ── SCREENSHOT FRAME ── */
+.screenshot-frame{background:var(--white);border-radius:var(--r-lg);padding:8px;border:1px solid var(--border);box-shadow:var(--sh-md);margin:1.5rem 0;overflow:hidden;}
+.sec-group--dark .screenshot-frame{background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.08);}
+.screenshot-frame img{width:100%;border-radius:10px;display:block;max-height:440px;object-fit:cover;object-position:top center;}
+.screenshot-caption{text-align:center;font-family:var(--f-n);font-size:.6875rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--text-muted);margin-top:.75rem;}
+.sec-group--dark .screenshot-caption{color:rgba(250,240,226,.35);}
 
-  h2 {
-    font-family: var(--font-head);
-    font-weight: 700;
-    font-size: clamp(24px, 3.5vw, 32px);
-    color: var(--text);
-    line-height: 1.12;
-    letter-spacing: -0.02em;
-    margin-bottom: 8px;
-  }
-  h2 .number {
-    font-family: var(--font);
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.15em;
-    color: var(--accent);
-    display: block;
-    margin-bottom: 4px;
-    text-transform: uppercase;
-  }
-  h2 em {
-    font-family: var(--font-accent);
-    font-style: italic;
-    font-weight: 400;
-    color: var(--accent);
-  }
+/* ── SCORE CARDS ── */
+.score-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin:1.5rem 0;}
+.score-card{min-width:0;border-radius:var(--r-lg);padding:1.5rem 1.25rem;text-align:center;}
+.sec-group--cream .score-card,.sec-group--alt .score-card{background:var(--white);border:1px solid var(--border-lt);box-shadow:var(--sh-sm);}
+.sec-group--dark .score-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);}
+.score-card__label{font-family:var(--f-n);font-size:.625rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--text-muted);margin-bottom:.5rem;overflow-wrap:anywhere;}
+.sec-group--dark .score-card__label{color:rgba(250,240,226,.4);}
+.score-card__value{font-family:var(--f-n);font-size:clamp(1.375rem,2.25vw,2rem);font-weight:700;color:var(--accent);line-height:1;overflow-wrap:anywhere;letter-spacing:-.02em;}
+.score-card__note{font-family:var(--f-b);font-size:.8125rem;color:var(--text-muted);margin-top:.5rem;}
+.sec-group--dark .score-card__note{color:rgba(250,240,226,.4);}
 
-  h3 {
-    font-family: var(--font-head);
-    font-weight: 600;
-    font-size: 13px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--text-muted);
-    margin: 32px 0 12px;
-  }
+/* ── BAR CHART ── */
+.bar-chart{margin:1.5rem 0;display:flex;flex-direction:column;gap:.875rem;}
+.bar-row{display:flex;align-items:center;gap:.875rem;}
+.bar-row__label{width:160px;font-size:.8125rem;font-weight:500;flex-shrink:0;}
+.sec-group--cream .bar-row__label,.sec-group--alt .bar-row__label{color:var(--charcoal);}
+.sec-group--dark .bar-row__label{color:rgba(250,240,226,.8);}
+.bar-row__track{flex:1;height:26px;border-radius:13px;position:relative;overflow:visible;}
+.sec-group--cream .bar-row__track,.sec-group--alt .bar-row__track{background:var(--bg-alt);}
+.sec-group--dark .bar-row__track{background:rgba(255,255,255,.06);}
+.bar-row__fill{height:100%;border-radius:13px;background:var(--accent);max-width:100%;overflow:hidden;}
+.bar-row__fill--green{background:var(--green);}
+.bar-row__cmp{position:absolute;top:-3px;bottom:-3px;width:2px;background:rgba(250,240,226,.32);border-radius:1px;}
+.bar-chart__legend{display:flex;gap:1.25rem;margin-bottom:.75rem;font-family:var(--f-n);font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;}
+.bar-chart__legend-item--you{display:flex;align-items:center;gap:.375rem;color:var(--accent);}
+.bar-chart__legend-item--you::before{content:'';width:16px;height:3px;background:var(--accent);border-radius:2px;flex-shrink:0;}
+.bar-chart__legend-item--cmp{display:flex;align-items:center;gap:.375rem;color:rgba(250,240,226,.38);}
+.bar-chart__legend-item--cmp::before{content:'';width:2px;height:12px;background:rgba(250,240,226,.38);border-radius:1px;flex-shrink:0;}
+.bar-row__val{width:auto;min-width:72px;font-family:var(--f-n);font-size:.75rem;font-weight:700;text-align:right;}
+.bar-row__cmp-val{font-family:var(--f-b);font-size:.625rem;font-weight:400;display:block;opacity:.5;}
+.kw-table-wrap{background:rgba(250,240,226,.07);border:1px solid rgba(250,240,226,.11);border-radius:12px;padding:1rem;margin:1.5rem 0;}
+.sec-group--cream .bar-row__val,.sec-group--alt .bar-row__val{color:var(--text-sec);}
+.sec-group--dark .bar-row__val{color:rgba(250,240,226,.65);}
 
-  p { margin-bottom: 16px; color: var(--text-sec); }
-  p strong { color: var(--text); }
-  ul { margin: 0 0 16px 20px; }
-  li { margin-bottom: 6px; color: var(--text-sec); }
-  li strong { color: var(--text); }
+/* ── COMPARE CARDS ── */
+.compare-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin:1.5rem 0;}
+.compare-card{border-radius:var(--r-lg);padding:1.5rem 1.25rem;}
+.sec-group--cream .compare-card,.sec-group--alt .compare-card{background:var(--white);border:1px solid var(--border-lt);box-shadow:var(--sh-sm);}
+.sec-group--dark .compare-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);}
+.compare-card--you{border:2px solid var(--accent)!important;background:rgba(196,98,45,.06)!important;}
+.compare-card{min-width:0;}
+.compare-card__name{font-family:var(--f-d);font-style:italic;font-size:1.25rem;font-weight:400;margin-bottom:.875rem;line-height:1.2;overflow-wrap:anywhere;}
+.sec-group--cream .compare-card__name,.sec-group--alt .compare-card__name{color:var(--charcoal);}
+.sec-group--dark .compare-card__name{color:var(--bg);}
+.compare-card__stat{display:flex;justify-content:space-between;padding:.35rem 0;font-size:.8125rem;border-bottom:1px solid var(--border-lt);}
+.sec-group--dark .compare-card__stat{border-bottom-color:rgba(255,255,255,.06);}
+.compare-card__stat:last-child{border-bottom:none;}
+.compare-card__stat-label{color:var(--text-muted);}
+.sec-group--dark .compare-card__stat-label{color:rgba(250,240,226,.35);}
+.compare-card__stat-val{font-weight:600;}
+.sec-group--cream .compare-card__stat-val,.sec-group--alt .compare-card__stat-val{color:var(--charcoal);}
+.sec-group--dark .compare-card__stat-val{color:rgba(250,240,226,.85);}
+.compare-card__stat-val--good{color:var(--green)!important;}
+.compare-card__stat-val--mid{color:#B8860B!important;}
+.compare-card__stat-val--low{color:var(--accent)!important;}
 
-  /* CALLOUT */
-  .callout {
-    background: var(--bg-alt);
-    border-left: 3px solid var(--accent);
-    padding: 20px 24px;
-    margin: 24px 0;
-    font-size: 0.9rem;
-    border-radius: 0 12px 12px 0;
-    color: var(--text-sec);
-  }
-  .callout strong { color: var(--text); }
+/* ── KEYWORD CARDS ── */
+.kw-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:.625rem;margin:1.5rem 0;}
+.kw-card{border-radius:var(--r-md);padding:.875rem 1rem;display:flex;justify-content:space-between;align-items:center;}
+.sec-group--cream .kw-card,.sec-group--alt .kw-card{background:var(--white);border:1px solid var(--border-lt);}
+.sec-group--dark .kw-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);}
+.kw-card{min-width:0;}
+.kw-card__term{font-weight:500;font-size:.8125rem;overflow-wrap:anywhere;min-width:0;}
+.sec-group--cream .kw-card__term,.sec-group--alt .kw-card__term{color:var(--charcoal);}
+.sec-group--dark .kw-card__term{color:rgba(250,240,226,.85);}
+.kw-card__vol{font-family:var(--f-n);font-size:.625rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text-muted);white-space:nowrap;margin-left:.75rem;}
+.sec-group--dark .kw-card__vol{color:rgba(250,240,226,.4);}
+.kw-card__vol strong{font-family:var(--f-n);font-size:.875rem;font-weight:700;color:var(--accent);letter-spacing:0;}
+.kw-card--hot{border-color:rgba(196,98,45,.3)!important;background:rgba(196,98,45,.06)!important;}
 
-  /* PILL TAGS */
-  .tag {
-    display: inline-block;
-    padding: 4px 14px;
-    border-radius: 9999px;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-  }
-  .tag.easy { background: #e8f5e9; color: #2e7d32; }
-  .tag.medium { background: #fff3e0; color: #e65100; }
-  .tag.high { background: var(--accent); color: white; }
-  .tag.mid-impact { background: #e3f2fd; color: #1565c0; }
+/* ── PILL TAGS ── */
+.tag{display:inline-block;padding:3px 10px;border-radius:var(--r-full);font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;}
+.tag--easy{background:rgba(74,123,90,.15);color:var(--green);}
+.tag--medium{background:rgba(184,134,11,.12);color:#B8860B;}
+.tag--high{background:var(--accent);color:#fff;}
+.tag--mid-impact{background:rgba(74,123,90,.12);color:var(--green);}
 
-  /* SCORE CARDS */
-  .score-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 16px;
-    margin: 24px 0;
-  }
-  .score-card {
-    background: var(--white);
-    border-radius: 16px;
-    padding: 24px 16px;
-    text-align: center;
-    border: 1px solid var(--border-light);
-    transition: box-shadow 0.3s, transform 0.3s;
-  }
-  .score-card:hover {
-    box-shadow: 0 8px 32px rgba(0,0,0,0.06);
-    transform: translateY(-2px);
-  }
-  .score-card .label {
-    font-family: var(--font-head);
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--text-muted);
-    margin-bottom: 8px;
-  }
-  .score-card .value {
-    font-family: var(--font-head);
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--accent);
-  }
-  .score-card .note {
-    font-size: 12px;
-    color: var(--text-muted);
-    margin-top: 4px;
-  }
+/* ── OPPORTUNITY CARDS (matching website-reveal page-row) ── */
+/* padding-left indents the list past the section's "06" number so the nested 01/02/03/04 sit subordinate to the section heading */
+.opp-list{display:flex;flex-direction:column;margin:1.5rem 0;padding-left:clamp(2.5rem,6vw,6.25rem);}
+.opp-row{display:grid;grid-template-columns:68px 1fr;grid-template-rows:auto auto;column-gap:1.5rem;row-gap:.5rem;padding:2rem 0;border-top:1px solid var(--border);}
+.sec-group--dark .opp-row{border-top-color:rgba(255,255,255,.08);}
+.opp-row:last-child{border-bottom:1px solid var(--border);}
+.sec-group--dark .opp-row:last-child{border-bottom-color:rgba(255,255,255,.08);}
+.opp-row__num{grid-row:1/3;font-family:var(--f-d);font-style:italic;font-size:clamp(1.75rem,2.75vw,2.5rem);font-weight:400;color:var(--accent);line-height:1;opacity:.85;}
+.opp-row__title{font-family:var(--f-d);font-style:italic;font-size:clamp(1.125rem,1.8vw,1.4375rem);font-weight:400;line-height:1.2;align-self:end;overflow-wrap:anywhere;}
+.sec-group--cream .opp-row__title,.sec-group--alt .opp-row__title{color:var(--charcoal);}
+.sec-group--dark .opp-row__title{color:var(--bg);}
+.opp-row__desc{font-size:.9375rem;line-height:1.7;}
+.sec-group--cream .opp-row__desc,.sec-group--alt .opp-row__desc{color:var(--text-sec);}
+.sec-group--dark .opp-row__desc{color:rgba(250,240,226,.75);}
+.opp-row__tags{grid-column:1/-1;display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.5rem;}
 
-  /* BAR CHART */
-  .bar-chart { margin: 24px 0; }
-  .bar-row {
-    display: flex;
-    align-items: center;
-    margin-bottom: 12px;
-  }
-  .bar-row .bar-label {
-    width: 160px;
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--text);
-    flex-shrink: 0;
-  }
-  .bar-row .bar-track {
-    flex: 1;
-    height: 28px;
-    background: var(--bg-alt);
-    border-radius: 14px;
-    overflow: hidden;
-    margin: 0 12px;
-  }
-  .bar-row .bar-fill {
-    height: 100%;
-    border-radius: 14px;
-  }
-  .bar-row .bar-val {
-    width: 40px;
-    font-family: var(--font-head);
-    font-size: 13px;
-    font-weight: 700;
-    color: var(--text-muted);
-    text-align: right;
-  }
+/* ── TIMELINE (website-reveal action-item style) ── */
+.timeline{display:flex;flex-direction:column;margin:1.5rem 0;}
+.timeline-item{display:flex;gap:1rem;padding:1.25rem 0;border-top:1px solid var(--border);}
+.sec-group--dark .timeline-item{border-top-color:rgba(255,255,255,.07);}
+.timeline-item:first-child{border-top:none;padding-top:0;}
+.timeline-item__num{font-family:var(--f-n);font-size:.6875rem;font-weight:700;color:var(--accent);min-width:3rem;padding-top:.3em;flex-shrink:0;letter-spacing:.08em;text-transform:uppercase;}
+.timeline-item__body{flex:1;}
+.timeline-item__title{font-family:var(--f-d);font-style:italic;font-size:clamp(1.1rem,1.6vw,1.25rem);font-weight:400;margin-bottom:.35rem;line-height:1.2;overflow-wrap:anywhere;}
+.sec-group--cream .timeline-item__title,.sec-group--alt .timeline-item__title{color:var(--charcoal);}
+.sec-group--dark .timeline-item__title{color:rgba(250,240,226,.92);}
+.timeline-item__detail{font-size:.9375rem;line-height:1.65;}
+.sec-group--cream .timeline-item__detail,.sec-group--alt .timeline-item__detail{color:var(--text-sec);}
+.sec-group--dark .timeline-item__detail{color:rgba(250,240,226,.6);}
 
-  /* COMPARE CARDS */
-  .compare-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 16px;
-    margin: 24px 0;
-  }
-  .compare-card {
-    background: var(--white);
-    border-radius: 16px;
-    padding: 24px 20px;
-    border: 1px solid var(--border-light);
-    transition: box-shadow 0.3s, transform 0.3s;
-  }
-  .compare-card:hover {
-    box-shadow: 0 8px 32px rgba(0,0,0,0.06);
-    transform: translateY(-2px);
-  }
-  .compare-card.you {
-    border: 2px solid var(--accent);
-    background: #FFF9F5;
-  }
-  .compare-card .comp-name {
-    font-family: var(--font-head);
-    font-weight: 700;
-    font-size: 14px;
-    color: var(--text);
-    margin-bottom: 14px;
-  }
-  .compare-card .comp-stat {
-    display: flex;
-    justify-content: space-between;
-    font-size: 13px;
-    padding: 5px 0;
-    border-bottom: 1px solid var(--border-light);
-  }
-  .compare-card .comp-stat:last-child { border-bottom: none; }
-  .compare-card .comp-stat .stat-label { color: var(--text-muted); }
-  .compare-card .comp-stat .stat-val { font-weight: 600; }
-  .stat-val.good { color: var(--green); }
-  .stat-val.mid { color: #b8860b; }
-  .stat-val.low { color: #c44; }
+/* ── REVENUE BOX (legacy, kept for backward compat) ── */
+.revenue-box{background:var(--green);color:#fff;border-radius:var(--r-xl);padding:3rem 2.5rem;text-align:center;margin:2rem 0;}
+.revenue-box__label{font-family:var(--f-n);font-size:.6875rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;opacity:.7;margin-bottom:.625rem;}
+.revenue-box__amount{font-family:var(--f-d);font-style:italic;font-size:clamp(2.75rem,7vw,4.5rem);font-weight:400;line-height:1;margin-bottom:.5rem;overflow-wrap:anywhere;}
+.revenue-box__note{font-family:var(--f-a);font-style:italic;font-size:1rem;opacity:.82;max-width:500px;margin:0 auto;line-height:1.55;}
 
-  /* KEYWORD CARDS */
-  .kw-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 10px;
-    margin: 24px 0;
-  }
-  .kw-card {
-    background: var(--white);
-    border: 1px solid var(--border-light);
-    border-radius: 12px;
-    padding: 14px 16px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: box-shadow 0.3s;
-  }
-  .kw-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.05); }
-  .kw-card .kw-term {
-    font-weight: 500;
-    font-size: 13px;
-    color: var(--text);
-  }
-  .kw-card .kw-vol {
-    font-size: 11px;
-    color: var(--text-muted);
-    white-space: nowrap;
-    margin-left: 12px;
-  }
-  .kw-card .kw-vol strong {
-    font-family: var(--font-head);
-    font-size: 14px;
-    font-weight: 700;
-    color: var(--accent);
-  }
+/* ── FUNNEL B — EQUATION HEADER + CARD GRID ── */
+.funnel-b{margin:0 0 2rem;}
+.funnel-b__eq{font-family:var(--f-n);font-weight:900;font-size:clamp(.9rem,2vw,1.625rem);color:var(--charcoal);line-height:1.35;letter-spacing:-.02em;text-align:center;padding:2.25rem 2rem 1.75rem;background:var(--white);border:1px solid var(--border);border-radius:var(--r-xl) var(--r-xl) 0 0;border-bottom:none;}
+.funnel-b__eq .op{color:var(--accent);}
+.funnel-b__eq .result{display:block;font-size:clamp(2.5rem,5.5vw,4rem);color:var(--accent);margin-top:.625rem;letter-spacing:-.03em;line-height:1;}
+.funnel-b__eq .result-meta{display:block;font-size:.5rem;letter-spacing:.16em;color:var(--text-muted);font-weight:700;text-transform:uppercase;margin-top:.5rem;}
+.funnel-b__cards{display:flex;border:1px solid var(--border);border-radius:0 0 var(--r-xl) var(--r-xl);border-top:2px solid var(--border-light);overflow:hidden;}
+.funnel-b__card{flex:1;min-width:0;padding:1.375rem 1.25rem 1.5rem;background:var(--white);border-right:1px solid var(--border-light);}
+.funnel-b__card:last-child{border-right:none;}
+.funnel-b__op{flex-shrink:0;width:2.25rem;display:flex;align-items:center;justify-content:center;background:var(--white);font-family:var(--f-n);font-weight:900;font-size:1rem;color:var(--accent);border-right:1px solid var(--border-light);}
+.funnel-b__card-label{font-family:var(--f-n);font-size:.45rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:.4rem;}
+.funnel-b__card-val{font-family:var(--f-n);font-weight:700;font-size:clamp(.875rem,1.5vw,1.125rem);color:var(--charcoal);line-height:1;margin-bottom:.5rem;}
+.funnel-b__card-sub{font-size:.75rem;color:var(--text-muted);line-height:1.5;}
+.funnel-note{padding:1.25rem 1.5rem;border-radius:var(--r-md);background:var(--bg-alt);border-left:3px solid var(--border);}
+.funnel-note p{font-size:.875rem;color:var(--text-muted);line-height:1.6;}
+.funnel-note strong{color:var(--text-sec);font-weight:600;}
 
-  /* TIMELINE */
-  .timeline {
-    position: relative;
-    margin: 24px 0;
-    padding-left: 36px;
-  }
-  .timeline::before {
-    content: '';
-    position: absolute;
-    left: 8px;
-    top: 8px;
-    bottom: 8px;
-    width: 2px;
-    background: var(--border);
-  }
-  .timeline-item {
-    position: relative;
-    margin-bottom: 32px;
-  }
-  .timeline-item:last-child { margin-bottom: 0; }
-  .timeline-item::before {
-    content: '';
-    position: absolute;
-    left: -32px;
-    top: 6px;
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    background: var(--accent);
-    border: 3px solid var(--bg);
-    box-shadow: 0 0 0 2px var(--accent);
-  }
-  .timeline-item .week {
-    font-family: var(--font-head);
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 4px;
-  }
-  .timeline-item .task {
-    font-family: var(--font-head);
-    font-weight: 700;
-    font-size: 16px;
-    color: var(--text);
-    margin-bottom: 4px;
-    line-height: 1.3;
-  }
-  .timeline-item .detail {
-    font-size: 14px;
-    color: var(--text-sec);
-    line-height: 1.65;
-  }
+/* ── REVENUE VARIANT B — THE GAP (before/after split) ── */
+.gap-wrap{display:grid;grid-template-columns:1fr 1fr;border-radius:var(--r-xl);overflow:hidden;margin-bottom:1.5rem;min-height:340px;}
+.gap-now{background:#222830;padding:3rem 2.75rem;display:flex;flex-direction:column;justify-content:space-between;position:relative;}
+.gap-now::after{content:'';position:absolute;inset:0;background:repeating-linear-gradient(-45deg,transparent,transparent 12px,rgba(255,255,255,.012) 12px,rgba(255,255,255,.012) 13px);pointer-events:none;}
+.gap-now__eyebrow,.gap-after__eyebrow{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;margin-bottom:1.5rem;}
+.gap-now__eyebrow{color:rgba(250,240,226,.25);}
+.gap-after__eyebrow{color:rgba(250,240,226,.5);}
+.gap-now__headline{font-family:var(--f-b);font-style:normal;font-size:clamp(1rem,1.8vw,1.375rem);line-height:1.45;color:rgba(250,240,226,.45);flex:1;margin-bottom:1.5rem;}
+.gap-after__headline{font-family:var(--f-b);font-style:normal;font-size:clamp(1rem,1.8vw,1.375rem);line-height:1.45;color:rgba(250,240,226,.92);flex:1;margin-bottom:1.5rem;}
+.gap-now__num{font-family:var(--f-n);font-weight:700;font-size:clamp(1.625rem,3.25vw,2.625rem);line-height:1;color:rgba(250,240,226,.18);overflow-wrap:anywhere;}
+.gap-now__sublabel,.gap-after__sublabel{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-top:.5rem;}
+.gap-now__sublabel{color:rgba(250,240,226,.15);}
+.gap-after{background:var(--green-dk);padding:3rem 2.75rem;display:flex;flex-direction:column;justify-content:space-between;}
+.gap-after__num{font-family:var(--f-n);font-weight:700;font-size:clamp(1.625rem,3.25vw,2.625rem);line-height:1;color:var(--sage);overflow-wrap:anywhere;}
+.gap-after__sublabel{color:rgba(250,240,226,.4);}
+.gap-bridge{background:var(--bg-alt);border-radius:var(--r-lg);padding:1.5rem 2rem;display:flex;align-items:center;gap:1.5rem;margin-bottom:1.5rem;}
+.gap-bridge__line{flex:1;height:1px;background:var(--border);}
+.gap-bridge__text{font-size:1.0625rem;font-weight:500;color:var(--text-sec);white-space:nowrap;}
+.gap-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;}
+.gap-metric{text-align:center;padding:1.25rem 1rem;}
+.gap-metric__val{font-family:var(--f-d);font-style:italic;font-size:1.75rem;color:var(--accent);line-height:1;margin-bottom:.375rem;}
+.gap-metric__label{font-size:.8125rem;color:var(--text-sec);}
 
-  /* OPPORTUNITY CARDS */
-  .opp-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 16px;
-    margin: 24px 0;
-  }
-  .opp-card {
-    background: var(--white);
-    border: 1px solid var(--border-light);
-    border-radius: 16px;
-    padding: 28px 24px;
-    transition: box-shadow 0.3s, transform 0.3s;
-  }
-  .opp-card:hover {
-    box-shadow: 0 8px 32px rgba(0,0,0,0.06);
-    transform: translateY(-2px);
-  }
-  .opp-card h4 {
-    font-family: var(--font-head);
-    font-size: 15px;
-    font-weight: 700;
-    color: var(--text);
-    margin-bottom: 8px;
-  }
-  .opp-card p { font-size: 13px; color: var(--text-sec); margin-bottom: 14px; }
-  .opp-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+/* ── REVENUE VARIANT C — THE RANGE (floor / plan / ceiling) ── */
+.range-lead{text-align:center;padding:2rem 2rem 2.5rem;}
+.range-lead__eyebrow{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(250,240,226,.3);margin-bottom:1rem;}
+.range-lead__num{font-family:var(--f-n);font-weight:900;font-size:clamp(3.5rem,7vw,5.5rem);color:var(--accent);line-height:1;letter-spacing:-.03em;overflow-wrap:anywhere;}
+.range-lead__label{font-family:var(--f-b);font-size:1.125rem;color:rgba(250,240,226,.6);margin:.5rem 0 .875rem;}
+.range-lead__badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(196,98,45,.15);border:1px solid rgba(196,98,45,.3);border-radius:var(--r-full);padding:.375rem 1.125rem;font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);}
+.range-spectrum{margin:0 0 2rem;padding:0 .25rem;}
+.range-spectrum__meta{display:grid;grid-template-columns:1fr 1fr 1fr;margin-bottom:.625rem;align-items:end;}
+.range-spectrum__col{display:flex;flex-direction:column;gap:.25rem;}
+.range-spectrum__col--plan{text-align:center;align-items:center;}
+.range-spectrum__col--ceil{text-align:right;align-items:flex-end;}
+.range-spectrum__tier{font-family:var(--f-n);font-size:.45rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;}
+.range-spectrum__col--floor .range-spectrum__tier{color:rgba(250,240,226,.25);}
+.range-spectrum__col--plan .range-spectrum__tier{color:var(--accent);}
+.range-spectrum__col--ceil .range-spectrum__tier{color:var(--sage);}
+.range-spectrum__amt{font-family:var(--f-n);font-weight:700;line-height:1;}
+.range-spectrum__col--floor .range-spectrum__amt{font-size:1rem;color:rgba(250,240,226,.35);}
+.range-spectrum__col--plan .range-spectrum__amt{font-size:1.5rem;color:rgba(250,240,226,.9);}
+.range-spectrum__col--ceil .range-spectrum__amt{font-size:1rem;color:var(--sage);}
+.range-track-wrap{position:relative;height:10px;border-radius:var(--r-full);background:rgba(255,255,255,.06);margin:1rem 0 1.75rem;}
+.range-track{position:absolute;inset:0;border-radius:var(--r-full);background:linear-gradient(to right,rgba(255,255,255,.1) 0%,var(--accent) 58%,var(--green) 100%);}
+.range-marker{position:absolute;top:50%;width:18px;height:18px;border-radius:50%;transform:translate(-50%,-50%);}
+.range-marker--floor{left:12%;background:rgba(255,255,255,.18);border:2px solid rgba(255,255,255,.25);}
+.range-marker--plan{left:58%;background:var(--accent);box-shadow:0 0 0 5px rgba(196,98,45,.22);}
+.range-marker--ceil{left:98%;background:var(--green);border:2px solid rgba(74,123,90,.5);}
+.range-fc{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:1.5rem;}
+.range-fc__item{border-radius:var(--r-lg);padding:1.375rem 1.5rem;}
+.range-fc__item--floor{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);}
+.range-fc__item--ceil{background:rgba(74,123,90,.1);border:1px solid rgba(74,123,90,.2);}
+.range-fc__label{font-family:var(--f-n);font-size:.45rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:.5rem;}
+.range-fc__item--floor .range-fc__label{color:rgba(250,240,226,.25);}
+.range-fc__item--ceil .range-fc__label{color:var(--sage);}
+.range-fc__amt{font-family:var(--f-n);font-weight:700;font-size:1.25rem;line-height:1;margin-bottom:.5rem;overflow-wrap:anywhere;}
+.range-fc__item--floor .range-fc__amt{color:rgba(250,240,226,.42);}
+.range-fc__item--ceil .range-fc__amt{color:var(--sage);}
+.range-fc__desc{font-size:.8125rem;line-height:1.6;}
+.range-fc__item--floor .range-fc__desc{color:rgba(250,240,226,.35);}
+.range-fc__item--ceil .range-fc__desc{color:rgba(250,240,226,.6);}
+@media(max-width:600px){.range-fc{grid-template-columns:1fr;}}
+.range-callout{border-radius:var(--r-lg);padding:1.5rem 2rem;background:rgba(250,240,226,.04);border:1px solid rgba(250,240,226,.06);display:flex;align-items:center;gap:1.5rem;}
+.range-callout__icon{width:36px;height:36px;border-radius:50%;background:rgba(196,98,45,.15);display:grid;place-items:center;flex-shrink:0;}
+.range-callout__icon svg{width:16px;height:16px;stroke:var(--accent);stroke-width:2;fill:none;}
+.range-callout__text{font-size:1rem;color:rgba(250,240,226,.55);line-height:1.55;}
+.range-callout__text strong{font-style:normal;font-weight:600;color:rgba(250,240,226,.82);}
 
-  /* REVENUE BOX */
-  .revenue-box {
-    background: var(--green);
-    color: white;
-    border-radius: 16px;
-    padding: 48px 40px;
-    text-align: center;
-    margin: 32px 0;
-  }
-  .revenue-box .rev-label {
-    font-family: var(--font-head);
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    opacity: 0.7;
-    margin-bottom: 8px;
-  }
-  .revenue-box .rev-amount {
-    font-family: var(--font-head);
-    font-size: clamp(40px, 8vw, 56px);
-    font-weight: 800;
-    color: var(--white);
-    margin-bottom: 8px;
-    letter-spacing: -0.02em;
-  }
-  .revenue-box .rev-note {
-    font-size: 14px;
-    opacity: 0.7;
-  }
+/* ── VARIANT B REDESIGN — stats-first layout ── */
+.gap-hook{font-family:var(--f-b);font-style:normal;font-size:clamp(1rem,1.75vw,1.1875rem);line-height:1.65;color:rgba(250,240,226,.48);margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid rgba(255,255,255,.07);}
+.gap-metrics--hero{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-radius:var(--r-xl);overflow:hidden;border:1px solid rgba(255,255,255,.08);margin-bottom:1.5rem;}
+.gap-metrics--hero .gap-metric{padding:2.25rem 1.75rem;border-right:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.025);text-align:left;}
+.gap-metrics--hero .gap-metric:last-child{border-right:none;}
+.gap-metrics--hero .gap-metric__val{font-size:clamp(2.25rem,4vw,3.25rem);margin-bottom:.375rem;}
+.gap-metrics--hero .gap-metric__label{margin-bottom:.75rem;}
+.gap-metric__sub{font-size:.8125rem;color:rgba(250,240,226,.38);line-height:1.6;}
+.gap-anchor{text-align:center;padding:1.75rem 1rem;margin-bottom:1.5rem;}
+.gap-anchor__label{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(250,240,226,.28);margin-bottom:.875rem;}
+.gap-anchor__num{font-family:var(--f-n);font-weight:900;font-size:clamp(2.75rem,5.5vw,4.25rem);color:var(--accent);line-height:1;letter-spacing:-.025em;overflow-wrap:anywhere;}
+.gap-anchor__period{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(250,240,226,.22);margin-top:.625rem;}
+@media(max-width:640px){.gap-metrics--hero{grid-template-columns:1fr;}.gap-metrics--hero .gap-metric{border-right:none;border-bottom:1px solid rgba(255,255,255,.08);}.gap-metrics--hero .gap-metric:last-child{border-bottom:none;}}
 
-  /* CTA BOX */
-  .cta-box {
-    text-align: center;
-    border: 2px solid var(--accent);
-    border-radius: 16px;
-    padding: 40px 32px;
-    margin: 32px 0;
-  }
-  .cta-box .cta-heading {
-    font-family: var(--font-head);
-    font-size: clamp(20px, 3vw, 28px);
-    font-weight: 700;
-    color: var(--text);
-    margin-bottom: 8px;
-    line-height: 1.2;
-  }
-  .cta-box .cta-heading em {
-    font-family: var(--font-accent);
-    font-style: italic;
-    font-weight: 400;
-    color: var(--accent);
-  }
-  .cta-box .cta-sub {
-    color: var(--text-muted);
-    margin-bottom: 24px;
-  }
-  .cta-button {
-    display: inline-block;
-    background: var(--accent);
-    color: var(--white);
-    padding: 16px 40px;
-    border-radius: 9999px;
-    font-family: var(--font-head);
-    font-weight: 700;
-    font-size: 16px;
-    text-decoration: none;
-    letter-spacing: 0.02em;
-    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
-  }
-  .cta-button:hover {
-    background: var(--accent-dark);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(196,98,45,0.3);
-  }
-  .cta-or {
-    font-size: 13px;
-    color: var(--text-muted);
-    margin-top: 16px;
-    margin-bottom: 0;
-  }
-  .cta-or a { color: var(--accent); text-decoration: none; }
+/* ── VARIANT C — cream background overrides ── */
+.sec-group--cream .range-lead__eyebrow{color:var(--text-muted);}
+.sec-group--cream .range-lead__label{color:var(--text-sec);}
+.sec-group--cream .range-lead__badge{background:rgba(196,98,45,.08);border-color:rgba(196,98,45,.22);}
+.sec-group--cream .range-spectrum__col--floor .range-spectrum__tier{color:var(--text-muted);}
+.sec-group--cream .range-spectrum__col--floor .range-spectrum__amt{color:var(--text-muted);}
+.sec-group--cream .range-spectrum__col--plan .range-spectrum__amt{color:var(--charcoal);}
+.sec-group--cream .range-track-wrap{background:var(--bg-alt);}
+.sec-group--cream .range-track{background:linear-gradient(to right,rgba(0,0,0,.06) 0%,var(--accent) 58%,var(--green) 100%);}
+.sec-group--cream .range-marker{width:2px;height:18px;border-radius:1px;border:none;box-shadow:none;}
+.sec-group--cream .range-marker--floor{background:rgba(0,0,0,.2);}
+.sec-group--cream .range-marker--plan{background:var(--accent-dk);}
+.sec-group--cream .range-marker--ceil{background:var(--green);}
+.sec-group--cream .range-fc__item--floor{background:var(--white);border-color:var(--border-lt);box-shadow:var(--sh-sm);}
+.sec-group--cream .range-fc__item--ceil{background:rgba(74,123,90,.05);border-color:rgba(74,123,90,.18);}
+.sec-group--cream .range-fc__item--floor .range-fc__label{color:var(--text-muted);}
+.sec-group--cream .range-fc__item--floor .range-fc__amt{color:var(--text-sec);}
+.sec-group--cream .range-fc__item--floor .range-fc__desc{color:var(--text-sec);}
+.sec-group--cream .range-fc__item--ceil .range-fc__label{color:var(--green);}
+.sec-group--cream .range-fc__item--ceil .range-fc__amt{color:var(--green);}
+.sec-group--cream .range-fc__item--ceil .range-fc__desc{color:var(--charcoal);}
+.sec-group--cream .range-callout{background:var(--white);border-color:var(--border);box-shadow:var(--sh-sm);}
+.sec-group--cream .range-callout__icon{background:rgba(196,98,45,.08);}
+.sec-group--cream .range-callout__text{color:var(--text-sec);}
+.sec-group--cream .range-callout__text strong{color:var(--charcoal);}
 
-  /* SCREENSHOT FRAME */
-  .screenshot-frame {
-    background: var(--white);
-    border-radius: 12px;
-    padding: 8px;
-    border: 1px solid var(--border);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-    margin: 16px 0;
-    overflow: hidden;
-  }
+/* ── REVENUE VARIANT D — WHAT IT MEANS (human translation) ── */
+.meaning-anchor{text-align:center;margin-bottom:3rem;padding:2.5rem 2rem;border-bottom:1px solid var(--border);}
+.meaning-anchor__label{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--text-muted);margin-bottom:1.25rem;}
+.meaning-anchor__num{font-family:var(--f-n);font-weight:900;font-size:clamp(3.25rem,5.75vw,4.5rem);color:var(--accent);line-height:1;margin-bottom:.5rem;overflow-wrap:anywhere;}
+.meaning-anchor__period{font-size:1.25rem;color:var(--text-sec);}
+.meaning-anchor__note{font-size:.875rem;color:var(--text-muted);margin-top:.75rem;}
+.meaning-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--r-xl);overflow:hidden;margin-bottom:1.5rem;}
+.meaning-item{background:var(--white);padding:2.5rem 2rem;display:flex;flex-direction:column;gap:.875rem;}
+.meaning-item__ico{width:44px;height:44px;border-radius:var(--r-md);background:rgba(196,98,45,.1);display:grid;place-items:center;}
+.meaning-item__ico svg{width:20px;height:20px;stroke:var(--accent-dk);stroke-width:1.75;fill:none;}
+.meaning-item__num{font-family:var(--f-n);font-weight:700;font-size:clamp(1.375rem,2.375vw,2rem);color:var(--charcoal);line-height:1;overflow-wrap:anywhere;}
+.meaning-item__num em{color:var(--accent);font-style:normal;}
+.meaning-item__label{font-size:.9375rem;font-weight:600;color:var(--charcoal);}
+.meaning-item__sub{font-size:.875rem;color:var(--text-sec);line-height:1.6;}
+.meaning-close{background:var(--charcoal);border-radius:var(--r-xl);padding:2.5rem;display:flex;align-items:center;gap:2rem;flex-wrap:wrap;}
+.meaning-close__quote{font-family:var(--f-b);font-style:normal;font-size:1.125rem;font-weight:600;line-height:1.5;color:rgba(250,240,226,.85);flex:1;min-width:200px;}
+.meaning-close__quote em{color:var(--accent);font-style:normal;}
+.meaning-close__aside{flex-shrink:0;width:130px;text-align:center;}
+.meaning-close__aside-num{font-family:var(--f-d);font-style:italic;font-size:2.25rem;color:var(--accent);line-height:1;margin-bottom:.25rem;}
+.meaning-close__aside-label{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(250,240,226,.25);}
 
-  /* DIVIDER */
-  .divider {
-    border: none;
-    border-top: 1px solid var(--border);
-    margin: 56px 0;
-  }
+/* ── REVIEW / TESTIMONIAL CARDS ── */
+.review-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem;margin:1.5rem 0;}
+.review-card{border-radius:var(--r-lg);padding:1.5rem 1.5rem 1.25rem;display:flex;flex-direction:column;gap:.875rem;}
+.sec-group--cream .review-card,.sec-group--alt .review-card{background:var(--white);border:1px solid var(--border-lt);box-shadow:var(--sh-sm);}
+.sec-group--dark .review-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);}
+.review-card__stars{color:var(--accent);font-size:1rem;letter-spacing:.2em;line-height:1;}
+.review-card__quote{font-family:var(--f-b);font-style:normal;font-size:1.0625rem;line-height:1.55;margin:0;}
+.sec-group--cream .review-card__quote,.sec-group--alt .review-card__quote{color:var(--charcoal);}
+.sec-group--dark .review-card__quote{color:rgba(250,240,226,.92);}
+.review-card__by{font-family:var(--f-b);font-size:.8125rem;font-weight:500;color:var(--text-muted);margin-top:auto;}
+.sec-group--dark .review-card__by{color:rgba(250,240,226,.45);}
 
-  /* FOOTER */
-  .footer {
-    background: var(--bg);
-    text-align: center;
-    padding: 32px 48px;
-    border-top: 1px solid var(--border);
-    color: var(--text-muted);
-    font-size: 13px;
-  }
-  .footer a { color: var(--accent); text-decoration: none; }
+/* ── BUILD / E-E-A-T GRID (icon + body cards) ── */
+.build-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin:1.5rem 0;}
+.build-item{display:flex;gap:.875rem;padding:1.25rem 1.25rem 1.375rem;border-radius:var(--r-lg);align-items:flex-start;}
+.sec-group--cream .build-item,.sec-group--alt .build-item{background:var(--white);border:1px solid var(--border-lt);box-shadow:var(--sh-sm);}
+.sec-group--dark .build-item{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);}
+.build-item__ico{width:32px;height:32px;border-radius:50%;background:rgba(196,98,45,.12);color:var(--accent);display:grid;place-items:center;flex-shrink:0;}
+.build-item__ico .material-symbols-outlined{font-size:18px;}
+.sec-group--dark .build-item__ico{background:rgba(196,98,45,.2);color:#E09360;}
+.build-item__body{flex:1;min-width:0;}
+.build-item__label{font-family:var(--f-b);font-weight:700;font-size:.9375rem;margin-bottom:.3rem;line-height:1.3;}
+.sec-group--cream .build-item__label,.sec-group--alt .build-item__label{color:var(--charcoal);}
+.sec-group--dark .build-item__label{color:var(--bg);}
+.build-item__desc{font-size:.875rem;line-height:1.6;}
+.sec-group--cream .build-item__desc,.sec-group--alt .build-item__desc{color:var(--text-sec);}
+.sec-group--dark .build-item__desc{color:rgba(250,240,226,.7);}
 
-  /* ALERT BOX */
-  .alert-box {
-    background: #fff8e1;
-    border-left: 3px solid #f59e0b;
-    border-radius: 0 12px 12px 0;
-    padding: 16px 20px;
-    margin: 16px 0;
-    font-size: 14px;
-    color: var(--text-sec);
-  }
-  .alert-box strong { color: var(--text); }
+/* ── OPPORTUNITY CALLOUT (labeled block with accent border) ── */
+.opp-callout{border-left:3px solid var(--accent);border-radius:0 var(--r-md) var(--r-md) 0;padding:1.25rem 1.5rem;margin:2rem 0;font-size:.9375rem;line-height:1.7;}
+.sec-group--cream .opp-callout,.sec-group--alt .opp-callout{background:var(--bg-alt);color:var(--text-sec);}
+.sec-group--dark .opp-callout{background:rgba(250,240,226,.04);color:rgba(250,240,226,.82);}
+.opp-callout strong{font-weight:600;}
+.sec-group--cream .opp-callout strong,.sec-group--alt .opp-callout strong{color:var(--charcoal);}
+.sec-group--dark .opp-callout strong{color:var(--bg);}
 
-  .success-box {
-    background: #f0fdf4;
-    border-left: 3px solid var(--green);
-    border-radius: 0 12px 12px 0;
-    padding: 16px 20px;
-    margin: 16px 0;
-    font-size: 14px;
-    color: var(--text-sec);
-  }
-  .success-box strong { color: #2e7d32; }
+/* ── SCORE CARD VARIANT for word values (High, Strong, Full) ── */
+.score-card__value--word{font-size:clamp(1.5rem,2vw,1.875rem);font-weight:700;font-family:var(--f-b);font-style:normal;letter-spacing:-.01em;}
+.grade-legend{margin:1rem 0 2.5rem;}
+.grade-legend__label{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);margin-bottom:.5rem;}
+.grade-legend__items{display:flex;background:var(--white);border:1px solid rgba(44,51,64,.12);border-radius:10px;box-shadow:0 1px 4px rgba(44,51,64,.07);overflow:hidden;}
+.grade-legend__item{flex:1;padding:.875rem 1rem;border-right:1px solid rgba(44,51,64,.1);}
+.grade-legend__item:last-child{border-right:none;}
+.grade-legend__dots{font-size:.55rem;letter-spacing:.15em;line-height:1;margin-bottom:.3rem;}
+.grade-legend__grade{font-family:var(--f-n);font-size:.6875rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-bottom:.25rem;}
+.grade-legend__def{font-family:var(--f-b);font-size:.7rem;color:var(--text-muted);line-height:1.4;}
+.grade-legend__item--strong{border-top:3px solid #1B7A6E;}.grade-legend__item--strong .grade-legend__grade,.grade-legend__item--strong .grade-legend__dots{color:#1B7A6E;}
+.grade-legend__item--fair{border-top:3px solid #8B7200;}.grade-legend__item--fair .grade-legend__grade,.grade-legend__item--fair .grade-legend__dots{color:#8B7200;}
+.grade-legend__item--weak{border-top:3px solid #B85C00;}.grade-legend__item--weak .grade-legend__grade,.grade-legend__item--weak .grade-legend__dots{color:#B85C00;}
+.grade-legend__item--poor{border-top:3px solid #8B1A1A;}.grade-legend__item--poor .grade-legend__grade,.grade-legend__item--poor .grade-legend__dots{color:#8B1A1A;}
 
-  /* RESPONSIVE */
-  @media (max-width: 640px) {
-    .hero { padding: 40px 20px 60px; }
-    .hero h1 { font-size: 32px; }
-    .hero .accent-word { font-size: 32px; }
-    .container { padding: 0 20px; }
-    .meta-bar { flex-direction: column; gap: 8px; }
-    .compare-grid { grid-template-columns: 1fr; }
-    .bar-row .bar-label { width: 100px; font-size: 11px; }
-    .score-grid { grid-template-columns: repeat(2, 1fr); }
-  }
+/* ── CALLOUT (secondary emphasis) ── */
+.callout{border-radius:var(--r-md);padding:1.25rem 1.5rem;margin:1.5rem 0;font-size:.9375rem;line-height:1.7;border-left:3px solid var(--accent);}
+.sec-group--cream .callout,.sec-group--alt .callout{background:var(--white);color:var(--text-sec);box-shadow:var(--sh-sm);}
+.sec-group--dark .callout{background:rgba(250,240,226,.04);color:rgba(250,240,226,.75);border-left-color:var(--accent);}
+.callout strong{font-weight:600;}
+.sec-group--cream .callout strong,.sec-group--alt .callout strong{color:var(--charcoal);}
+.sec-group--dark .callout strong{color:var(--bg);}
 
-  /* Section 08: Beyond the Website — Icon Cards */
-  .icon-card-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    margin-top: 32px;
-  }
-  @media (max-width: 700px) {
-    .icon-card-grid { grid-template-columns: 1fr; }
-  }
-  .icon-card {
-    background: #fff;
-    border-radius: 16px;
-    padding: 36px 28px 32px;
-    text-align: center;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-  }
-  .icon-card .material-icons {
-    font-size: 42px;
-    color: var(--accent);
-    display: block;
-    margin-bottom: 16px;
-  }
-  .icon-card h4 {
-    font-family: var(--font-head);
-    font-size: 16px;
-    font-weight: 700;
-    color: var(--text);
-    margin: 0 0 12px;
-  }
-  .icon-card p {
-    font-size: 13.5px;
-    color: var(--text-sec);
-    line-height: 1.6;
-    margin: 0;
-  }
+/* ── PILL BUTTON (from website-reveal) ── */
+.btn-pill{position:relative;overflow:hidden;isolation:isolate;display:inline-flex;align-items:center;border-radius:var(--r-full);text-decoration:none;cursor:pointer;border:1.5px solid;font-family:var(--f-b);font-weight:600;}
+.btn-pill__fill{position:absolute;top:4px;bottom:4px;right:4px;border-radius:var(--r-full);transition:left .65s cubic-bezier(.22,1,.36,1);}
+.btn-pill__label{position:relative;z-index:1;}
+.btn-pill__arrow{position:relative;z-index:1;border-radius:50%;display:grid;place-items:center;flex-shrink:0;transition:transform .2s;}
+.btn-pill:hover .btn-pill__arrow{transform:translateX(3px);}
+.btn-pill--cream{background:#FAF0E2;color:var(--accent);border-color:#FAF0E2;padding:5px 5px 5px 26px;min-height:56px;font-size:1rem;}
+.btn-pill--cream .btn-pill__fill{background:var(--white);left:calc(100% - 48px);}
+.btn-pill--cream:hover .btn-pill__fill{left:4px;}
+.btn-pill--cream .btn-pill__label{color:var(--accent);}
+.btn-pill--cream .btn-pill__arrow{width:44px;height:44px;background:rgba(196,98,45,.14);color:var(--accent);margin-left:18px;font-size:1rem;}
+
+/* ── CTA BOX (closing section) ── */
+.cta-box{text-align:center;border-radius:var(--r-xl);padding:3rem 2.5rem;margin:2rem 0;}
+.sec-group--cream .cta-box,.sec-group--alt .cta-box{background:var(--bg-night);color:var(--bg);}
+.sec-group--dark .cta-box{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);}
+.cta-box__eyebrow{font-family:var(--f-n);font-size:.6875rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:1rem;}
+.cta-box__heading{font-family:var(--f-d);font-style:italic;font-size:clamp(1.75rem,3vw,2.5rem);font-weight:400;line-height:1.15;margin-bottom:.75rem;color:var(--bg);overflow-wrap:anywhere;}
+.sec-group--dark .cta-box__heading{color:var(--bg);}
+.cta-box__heading em{color:var(--accent);}
+.cta-box__sub{font-size:1.0625rem;color:rgba(250,240,226,.55);margin-bottom:2rem;max-width:500px;margin-left:auto;margin-right:auto;line-height:1.55;}
+.cta-box__secondary{font-size:.875rem;color:rgba(250,240,226,.45);margin-top:1.25rem;}
+.cta-box__secondary a{color:var(--sage);text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(143,175,138,.35);}
+
+/* ── FOOTER (standard Aspire doc footer) ── */
+.guide-footer{background:var(--charcoal);border-top:1px solid rgba(250,240,226,.08);padding:4rem 3rem 3rem;display:flex;flex-direction:column;align-items:center;gap:1.5rem;text-align:center;}
+.guide-footer__heading{font-family:var(--f-d);font-style:italic;font-size:1.375rem;color:rgba(250,240,226,.82);margin-bottom:.25rem;line-height:1.2;}
+.guide-footer__sub{font-family:var(--f-a);font-style:italic;font-size:.9375rem;color:rgba(250,240,226,.35);margin-bottom:.5rem;}
+.footer-contacts{display:grid;grid-template-columns:1fr 1fr;gap:1rem;width:100%;max-width:640px;}
+.footer-contact{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.07);border-left:3px solid var(--green);border-radius:var(--r-lg);padding:1.5rem 1.75rem;text-align:left;}
+.footer-contact__name{font-family:var(--f-b);font-weight:700;font-size:1.0625rem;color:rgba(250,240,226,.92);margin-bottom:.3rem;}
+.footer-contact__role{font-size:.9375rem;color:rgba(250,240,226,.38);margin-bottom:1rem;}
+.footer-contact__links{display:flex;flex-direction:column;gap:.3rem;}
+.footer-contact__links a{font-size:.9375rem;color:rgba(250,240,226,.65);text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(250,240,226,.25);transition:color .18s,text-decoration-color .18s;}
+.footer-contact__links a:hover{color:rgba(250,240,226,.92);text-decoration-color:rgba(250,240,226,.55);}
+.footer-social{width:100%;max-width:640px;text-align:center;}
+.footer-social__label{font-family:var(--f-b);font-size:.9375rem;font-weight:600;color:rgba(250,240,226,.4);margin-bottom:1rem;}
+.footer-social__icons{display:flex;gap:.875rem;justify-content:center;}
+.footer-social__link{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);display:grid;place-items:center;color:rgba(250,240,226,.5);transition:background .2s,color .2s;}
+.footer-social__link:hover{background:var(--accent);color:#fff;}
+.footer-social__link svg{width:16px;height:16px;fill:currentColor;}
+.guide-footer__tagline{font-family:var(--f-a);font-style:italic;font-size:.875rem;color:rgba(250,240,226,.22);letter-spacing:.01em;margin-top:.5rem;}
+
+/* ── PLAN GRID (2-col border-divided grid — "Here's What We'd Actually Do") ── */
+.plan-grid{display:grid;grid-template-columns:1fr 1fr;margin:2rem -2.5rem 0;}
+.plan-item{padding:2.5rem 2.5rem;border-top:1px solid var(--border);display:flex;flex-direction:column;gap:.625rem;}
+.plan-item:nth-child(odd){border-right:1px solid var(--border);}
+.plan-item__num{font-family:var(--f-n);font-size:.6875rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);line-height:1;margin-bottom:.375rem;}
+.plan-item__title{font-family:var(--f-d);font-style:normal;font-size:clamp(1.375rem,2.2vw,1.875rem);font-weight:400;line-height:1.15;margin:0;}
+.sec-group--cream .plan-item__title,.sec-group--alt .plan-item__title{color:var(--charcoal);}
+.sec-group--dark .plan-item__title{color:var(--bg);}
+.plan-item__desc{font-size:.9375rem;line-height:1.72;flex:1;}
+.sec-group--cream .plan-item__desc,.sec-group--alt .plan-item__desc{color:var(--text-sec);}
+.sec-group--dark .plan-item__desc{color:rgba(250,240,226,.75);}
+.plan-item__tag{margin-top:.875rem;}
+
+/* ── PHASE ROADMAP (section 05 — grouped by timeline) ── */
+.phase-roadmap{margin:2rem 0 0;display:flex;flex-direction:column;gap:1.75rem;}
+.phase-header{display:flex;align-items:center;gap:.75rem;margin-bottom:.875rem;}
+.phase-label{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:4px 14px;border-radius:var(--r-full);white-space:nowrap;}
+.phase-label--quick{background:rgba(196,98,45,.1);color:var(--accent-dk);}
+.phase-label--m1{background:rgba(74,123,90,.1);color:#3D6B4A;}
+.phase-label--m2{background:rgba(44,51,64,.07);color:var(--text-sec);}
+.phase-divider{flex:1;height:1px;background:var(--border-light);}
+.phase-note{font-family:var(--f-b);font-size:.8125rem;color:var(--text-muted);white-space:nowrap;}
+.phase-items{display:grid;grid-template-columns:1fr;gap:.625rem;}
+.phase-items--grid{grid-template-columns:1fr 1fr;}
+.phase-item{padding:1.25rem 1.5rem;border-radius:var(--r-lg);background:var(--white);border:1px solid var(--border-light);display:flex;flex-direction:column;gap:.5rem;}
+.phase-item__title{font-family:var(--f-b);font-weight:700;font-size:.9375rem;color:var(--charcoal);line-height:1.25;margin:0;}
+.phase-item__desc{font-size:.875rem;color:var(--text-sec);line-height:1.65;margin:0;flex:1;}
+.tag--outline{background:transparent;border:1.5px solid rgba(196,98,45,.45);color:var(--accent-dk);}
+.sec-group--dark .tag--outline{border-color:rgba(196,98,45,.45);color:#E09360;}
+
+/* ── TEAM CARDS (Why Aspire — Option A) ── */
+.team-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:2.5rem;}
+.team-card{border-radius:var(--r-xl);overflow:hidden;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);}
+.team-card__photo{aspect-ratio:3/4;overflow:hidden;position:relative;}
+.team-card__photo img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;transition:transform .5s cubic-bezier(.22,1,.36,1);}
+.team-card:hover .team-card__photo img{transform:scale(1.04);}
+.team-card__tint{position:absolute;inset:0;background:linear-gradient(to bottom,transparent 30%,rgba(20,24,32,.55) 65%,rgba(20,24,32,.92) 100%);}
+.team-card__overlay{position:absolute;bottom:0;left:0;right:0;padding:1.5rem 1.75rem 1.75rem;display:flex;flex-direction:column;gap:.375rem;}
+.team-card__socials{position:absolute;top:1.25rem;right:1.25rem;display:flex;gap:.625rem;}
+.team-card__social-btn{width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,.35);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.15);display:grid;place-items:center;color:rgba(250,240,226,.75);transition:background .2s,color .2s;}
+.team-card__social-btn:hover{background:var(--accent);color:#fff;border-color:var(--accent);}
+.team-card__social-btn svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+.team-card__role{font-family:var(--f-b);font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.55);margin:0;}
+.team-card__name{font-family:var(--f-d);font-size:clamp(28px,3.5vw,48px);font-weight:400;line-height:1;letter-spacing:-.02em;color:#fff;margin:0;}
+.team-card__body{padding:1.5rem 1.75rem 1.875rem;}
+.team-card__bio{font-size:.9375rem;line-height:1.65;color:rgba(250,240,226,.6);}
+.team-card__links{display:flex;flex-direction:column;gap:.3rem;margin-top:1.125rem;}
+.team-card__links a{font-size:.875rem;color:rgba(250,240,226,.5);text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(250,240,226,.2);}
+.team-promise{background:rgba(196,98,45,.08);border:1px solid rgba(196,98,45,.15);border-left:3px solid var(--accent);border-radius:0 var(--r-lg) var(--r-lg) 0;padding:1.5rem 2rem;margin-bottom:2.5rem;}
+.team-promise__text{font-family:var(--f-a);font-style:italic;font-size:1.125rem;color:rgba(250,240,226,.82);line-height:1.6;}
+.team-promise__text strong{font-style:normal;font-weight:600;color:var(--bg);}
+.why-reviews{margin-top:2.5rem;}
+.why-reviews__label{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(250,240,226,.25);margin-bottom:1rem;}
+
+/* ── CTA STATS ROW ── */
+.cta-stats{display:flex;align-items:center;justify-content:center;gap:1.5rem;margin-bottom:2rem;flex-wrap:wrap;}
+.cta-stat{text-align:center;min-width:0;}
+.cta-stat--divider{width:1px;height:32px;background:rgba(250,240,226,.15);flex-shrink:0;}
+.cta-stat__num{display:block;font-family:var(--f-d);font-style:italic;font-size:1.5rem;color:var(--bg);line-height:1;margin-bottom:.25rem;}
+.cta-stat__label{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(250,240,226,.35);}
+
+/* ── BEYOND STRIP (compact 4-cell) ── */
+.beyond-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.07);border-radius:var(--r-xl);overflow:hidden;margin:1.5rem 0;}
+.beyond-item{background:rgba(255,255,255,.025);padding:1.75rem 1.5rem;display:flex;flex-direction:column;gap:.625rem;}
+.beyond-item__ico{width:36px;height:36px;border-radius:var(--r-md);background:rgba(196,98,45,.15);display:grid;place-items:center;flex-shrink:0;}
+.beyond-item__ico .material-symbols-outlined{font-size:18px;color:#E09360;}
+.beyond-item__label{font-family:var(--f-b);font-weight:700;font-size:.9375rem;color:var(--bg);line-height:1.2;}
+.beyond-item__desc{font-size:.8125rem;color:rgba(250,240,226,.52);line-height:1.55;}
+
+/* ── CTA PROCESS LINE ── */
+.cta-process{font-size:.875rem;color:rgba(250,240,226,.38);margin-bottom:1.75rem;letter-spacing:.01em;}
+.cta-process strong{color:rgba(250,240,226,.65);font-weight:600;}
+
+/* ── CTA STEPS (1 / 2 / 3 numbered flow) ── */
+.cta-steps{display:flex;flex-direction:column;gap:.625rem;margin:1.5rem auto 2rem;max-width:400px;text-align:left;}
+.cta-step{display:flex;gap:.875rem;align-items:flex-start;}
+.cta-step__num{width:26px;height:26px;border-radius:50%;background:rgba(196,98,45,.2);border:1px solid rgba(196,98,45,.35);color:#E09360;font-family:var(--f-n);font-size:.5625rem;font-weight:700;display:grid;place-items:center;flex-shrink:0;margin-top:.175rem;}
+.cta-step__label{display:block;font-family:var(--f-b);font-weight:700;font-size:.9375rem;color:var(--bg);line-height:1.3;margin-bottom:.2rem;}
+.cta-step__desc{font-size:.8125rem;color:rgba(250,240,226,.42);line-height:1.5;margin:0;}
+
+/* ── OVERFLOW FIX — long placeholder strings ── */
+.funnel-step__val,.funnel-result__amt,.revenue-box__amt,.gap-now__num,.gap-after__num,.range-hero__num,.meaning-anchor__num,.score-card__value,.meaning-item__num,.meaning-close__aside-num{overflow-wrap:anywhere;word-break:break-word;}
+.funnel-step,.gap-metric,.meaning-item,.build-item__body{min-width:0;overflow:hidden;}
+
+/* ── HERO OPPORTUNITY CARD ── */
+.hero__opp-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:var(--r-xl);padding:2.5rem 2rem;text-align:center;display:flex;flex-direction:column;align-items:center;gap:.75rem;}
+.hero__opp-label{font-family:var(--f-n);font-size:.625rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(250,240,226,.32);}
+.hero__opp-num{font-family:var(--f-d);font-style:italic;font-size:clamp(2.5rem,5vw,3.75rem);font-weight:400;line-height:1;color:var(--bg);overflow-wrap:anywhere;}
+.hero__opp-denom{font-family:var(--f-n);font-size:.625rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(250,240,226,.22);margin-top:-.25rem;}
+.hero__opp-badge{font-family:var(--f-b);font-size:.8125rem;font-weight:600;padding:5px 16px;border-radius:var(--r-full);background:rgba(196,98,45,.15);color:#E09360;}
+.hero__opp-badge--high{background:rgba(126,200,150,.12);color:#7EC896;}
+.hero__opp-desc{font-family:var(--f-b);font-size:.875rem;color:rgba(250,240,226,.35);line-height:1.55;max-width:220px;text-align:center;}
+
+/* ── QUICK SUMMARY (who / what / status 3-col strip) ── */
+.quick-summary{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--r-xl);overflow:hidden;margin:0 0 2.5rem;}
+.quick-summary__item{background:var(--white);padding:1.5rem 1.75rem;}
+.quick-summary__label{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:.625rem;}
+.quick-summary__text{font-size:.9rem;color:var(--text-sec);line-height:1.65;}
+.quick-summary__list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.375rem;}
+.quick-summary__list li{font-size:.875rem;color:var(--text-sec);line-height:1.55;padding-left:1rem;position:relative;}
+.quick-summary__list li::before{content:'';position:absolute;left:.25rem;top:.62em;width:4px;height:4px;border-radius:50%;background:var(--accent);}
+
+/* ── WIN CARDS (What's Working) ── */
+.win-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin:1rem 0 2.5rem;}
+.win-card{display:flex;gap:.875rem;padding:1.125rem 1.25rem;border-radius:var(--r-md);background:var(--white);border:1px solid rgba(74,123,90,.18);align-items:flex-start;}
+.win-card__ico{width:26px;height:26px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;flex-shrink:0;font-size:.75rem;font-weight:700;font-family:var(--f-b);margin-top:.1rem;}
+.win-card__body{flex:1;min-width:0;}
+.win-card__label{display:block;font-family:var(--f-b);font-weight:700;font-size:.9375rem;color:var(--charcoal);margin-bottom:.25rem;line-height:1.25;}
+.win-card__desc{font-size:.875rem;color:var(--text-sec);line-height:1.55;margin:0;}
+
+/* ── GAP CARDS (Where the Gaps Are) ── */
+.gap-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin:1rem 0 2rem;}
+.gap-card{display:flex;gap:.875rem;padding:1.125rem 1.25rem;border-radius:var(--r-md);background:rgba(196,98,45,.04);border:1px solid rgba(196,98,45,.18);align-items:flex-start;}
+.gap-card__ico{width:26px;height:26px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;flex-shrink:0;font-size:.875rem;font-weight:700;font-family:var(--f-b);margin-top:.1rem;}
+.gap-card__body{flex:1;min-width:0;}
+.gap-card__label{display:block;font-family:var(--f-b);font-weight:700;font-size:.9375rem;color:var(--charcoal);margin-bottom:.25rem;line-height:1.25;}
+.gap-card__desc{font-size:.875rem;color:var(--text-sec);line-height:1.55;margin:0;}
+
+/* ── KEYWORD TABLE (ranked scannable list) ── */
+.kw-table{display:flex;flex-direction:column;border:1px solid rgba(255,255,255,.08);border-radius:var(--r-lg);overflow:hidden;}
+.kw-row{display:grid;grid-template-columns:36px 1fr auto;align-items:center;padding:.875rem 1.25rem;border-bottom:1px solid rgba(255,255,255,.06);gap:.875rem;}
+.kw-row:last-child{border-bottom:none;}
+.kw-row--hot{background:rgba(196,98,45,.08);}
+.kw-row__rank{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.08em;color:rgba(250,240,226,.28);}
+.kw-row__term{font-size:.9375rem;font-weight:500;color:rgba(250,240,226,.85);min-width:0;}
+.kw-row__right{display:flex;align-items:center;gap:.625rem;justify-content:flex-end;flex-wrap:wrap;}
+.kw-row__vol{font-family:var(--f-n);font-size:.75rem;font-weight:700;color:var(--accent);text-align:right;white-space:nowrap;}
+.kw-row__tag{display:flex;justify-content:flex-end;flex-shrink:0;}
+
+/* ── AI READINESS SCORE ROWS ── */
+.ai-score{display:flex;flex-direction:column;border:1px solid rgba(255,255,255,.08);border-radius:var(--r-lg);overflow:hidden;margin:1.25rem 0 2rem;}
+.ai-score__row{display:flex;align-items:flex-start;gap:1rem;padding:1rem 1.25rem;border-bottom:1px solid rgba(255,255,255,.06);}
+.ai-score__row:last-child{border-bottom:none;}
+.ai-score__status{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;flex-shrink:0;font-size:.75rem;font-weight:700;font-family:var(--f-b);margin-top:.1rem;}
+.ai-score__status--good{background:rgba(74,123,90,.2);color:#7EC896;}
+.ai-score__status--warn{background:rgba(184,134,11,.15);color:#D4A832;}
+.ai-score__status--bad{background:rgba(196,98,45,.15);color:#E09360;}
+.ai-score__body{flex:1;min-width:0;}
+.ai-score__label{display:block;font-family:var(--f-b);font-weight:700;font-size:.9375rem;color:rgba(250,240,226,.85);margin-bottom:.2rem;}
+.ai-score__note{font-size:.8125rem;color:rgba(250,240,226,.45);line-height:1.55;}
+
+/* ── QUICK WINS (3-col action grid, dark bg) ── */
+.quick-wins{margin:2rem 0;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:var(--r-xl);padding:1.75rem 2rem 1.5rem;}
+.quick-wins__head{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:1.25rem;}
+.quick-wins__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.875rem;margin-bottom:1.25rem;}
+.quick-wins__item{display:flex;flex-direction:column;gap:.5rem;padding:1.125rem 1.125rem 1.25rem;background:rgba(255,255,255,.04);border-radius:var(--r-md);border:1px solid rgba(255,255,255,.07);}
+.quick-wins__num{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(196,98,45,.6);}
+.quick-wins__title{font-family:var(--f-b);font-weight:700;font-size:.9375rem;color:rgba(250,240,226,.88);}
+.quick-wins__desc{font-size:.8125rem;color:rgba(250,240,226,.42);line-height:1.6;margin:0;flex:1;}
+.quick-wins__note{font-size:.8125rem;color:rgba(250,240,226,.35);line-height:1.55;padding-top:1.125rem;border-top:1px solid rgba(255,255,255,.06);}
+
+/* ── FUNNEL ASSUMPTIONS (conservative by design) ── */
+.funnel-assumptions{border-radius:var(--r-lg);background:var(--bg-alt);overflow:hidden;}
+.funnel-assumptions__head{font-family:var(--f-b);font-size:.9375rem;font-weight:600;color:var(--charcoal);padding:1.25rem 1.5rem;border-bottom:1px solid var(--border);}
+.funnel-assumptions__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;}
+.funnel-assumptions__item{padding:1.375rem 1.5rem;border-right:1px solid var(--border);display:flex;flex-direction:column;gap:.375rem;}
+.funnel-assumptions__item:last-child{border-right:none;}
+.funnel-assumptions__val{font-family:var(--f-n);font-weight:700;font-size:clamp(1.375rem,2vw,1.75rem);color:var(--accent);line-height:1;}
+.funnel-assumptions__label{font-size:.8125rem;color:var(--text-muted);line-height:1.5;}
+.funnel-assumptions__footer{font-size:.8125rem;color:var(--text-muted);line-height:1.55;padding:.875rem 1.5rem;border-top:1px solid var(--border);}
+
+/* ── COMPARE TABLE (matrix view) ── */
+.compare-table{border:1px solid var(--border);border-radius:var(--r-xl);overflow:hidden;margin:1.5rem 0;}
+.compare-table__head,.compare-table__row{display:grid;grid-template-columns:150px repeat(3,1fr);}
+.compare-table__corner{background:var(--bg-alt);border-right:1px solid var(--border);padding:.875rem 1.25rem;}
+.compare-table__col-head{padding:1.125rem 1.25rem .75rem;font-family:var(--f-d);font-style:italic;font-size:1.0625rem;font-weight:400;color:var(--charcoal);border-left:1px solid var(--border);background:var(--bg-alt);}
+.compare-table__col-context{display:block;font-family:var(--f-b);font-style:normal;font-size:.6875rem;color:var(--text-muted);margin-top:.3rem;line-height:1.4;font-weight:400;}
+.compare-table__col-head--you .compare-table__col-context{color:var(--green);}
+.compare-table__col-head--you{background:rgba(196,98,45,.06);position:relative;}
+.compare-table__col-head--you::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--accent);}
+.compare-table__label{padding:.75rem 1.25rem;font-size:.8125rem;font-weight:500;color:var(--text-muted);display:flex;align-items:center;background:var(--bg-alt);border-top:1px solid var(--border);border-right:1px solid var(--border);}
+.compare-table__cell{padding:.75rem 1.25rem;font-size:.875rem;font-weight:600;border-left:1px solid var(--border);border-top:1px solid var(--border);display:flex;align-items:center;background:var(--white);}
+.compare-table__cell--you{background:rgba(196,98,45,.04);}
+.compare-table__cell--good{color:var(--green);}
+.compare-table__cell--mid{color:#B8860B;}
+.compare-table__cell--low{color:var(--accent);}
+
+/* ── KW TABLE CREAM CARD (dark-section override) ── */
+.kw-table-wrap{background:var(--bg)!important;border:1px solid rgba(44,51,64,.12)!important;border-radius:var(--r-lg);padding:1rem;margin:1.5rem 0;}
+.kw-table-wrap .kw-table{border-color:rgba(44,51,64,.08);}
+.kw-table-wrap .kw-row{border-bottom-color:rgba(44,51,64,.06);}
+.kw-table-wrap .kw-row--hot{background:rgba(196,98,45,.05);}
+.kw-table-wrap .kw-row__rank{color:var(--text-muted);}
+.kw-table-wrap .kw-row__term{color:var(--charcoal);}
+.kw-table-wrap .kw-row__vol{color:var(--accent);}
+
+/* ── STACK SPLIT (win / gap comparison — replaces bar chart in Section 03) ── */
+.stack-split{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(44,51,64,.08);border-radius:var(--r-xl);overflow:hidden;margin:1.5rem 0;}
+.stack-split__side{padding:2rem 1.75rem;display:flex;flex-direction:column;gap:1.5rem;}
+.stack-split__side--win{background:rgba(74,123,90,.06);}
+.stack-split__side--gap{background:rgba(196,98,45,.04);}
+.stack-split__badge{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:4px 12px;border-radius:var(--r-full);display:inline-block;width:fit-content;}
+.stack-split__side--win .stack-split__badge{background:rgba(74,123,90,.15);color:var(--green);}
+.stack-split__side--gap .stack-split__badge{background:rgba(196,98,45,.1);color:var(--accent-dk);}
+.stack-split__stat{display:flex;flex-direction:column;gap:.25rem;}
+.stack-split__num{font-family:var(--f-n);font-weight:700;font-size:clamp(1.125rem,1.875vw,1.5rem);line-height:1.1;}
+.stack-split__side--win .stack-split__num{color:var(--green);}
+.stack-split__side--gap .stack-split__num{color:var(--accent);}
+.stack-split__cmp{font-size:.65em;opacity:.55;font-style:normal;}
+.stack-split__label{font-family:var(--f-b);font-weight:700;font-size:.875rem;color:var(--charcoal);}
+.stack-split__note{font-size:.8125rem;line-height:1.5;color:var(--text-muted);}
+
+/* ── AI SEARCH COMPARE ── */
+.search-compare{display:grid;grid-template-columns:1fr 1fr;border-radius:var(--r-lg);overflow:hidden;margin:.875rem 0 1.25rem;border:1px solid rgba(250,240,226,.08);}
+.search-compare__col{padding:1.25rem 1.5rem;}
+.search-compare__col--google{background:rgba(250,240,226,.04);border-right:1px solid rgba(250,240,226,.08);}
+.search-compare__col--ai{background:rgba(196,98,45,.1);}
+.search-compare__label{font-family:var(--f-b);font-size:.875rem;font-weight:700;color:rgba(250,240,226,.55);margin-bottom:.875rem;}
+.search-compare__label--ai{color:var(--accent);}
+.search-compare__rows{display:flex;flex-direction:column;gap:.625rem;}
+.search-compare__row{display:flex;align-items:flex-start;gap:.625rem;}
+.search-compare__dot{width:5px;height:5px;border-radius:50%;background:rgba(250,240,226,.2);margin-top:.425rem;flex-shrink:0;}
+.search-compare__dot--ai{background:var(--accent);}
+.search-compare__text{font-size:.875rem;color:rgba(250,240,226,.5);line-height:1.55;}
+.search-compare__text--ai{color:rgba(250,240,226,.85);}
+.search-compare__footer{grid-column:1/-1;padding:1.125rem 1.5rem;background:rgba(250,240,226,.06);border-top:1px solid rgba(250,240,226,.08);font-family:var(--f-b);font-size:1rem;font-weight:500;color:rgba(250,240,226,.82);line-height:1.6;text-align:center;}
+
+/* ── SPLIT CARDS (AI gap → fix, 3-col) ── */
+.split-cards-wrap{background:var(--bg);border-radius:var(--r-xl);padding:1.5rem;margin:1.25rem 0 1.5rem;}
+.split-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:.875rem;}
+.split-card{border-radius:var(--r-lg);overflow:hidden;border:1px solid rgba(196,98,45,.15);}
+.split-card__gap{background:rgba(196,98,45,.05);border-bottom:2px solid rgba(196,98,45,.2);padding:1.25rem 1.5rem;display:flex;align-items:center;gap:.75rem;}
+.split-card__gap-icon{width:26px;height:26px;border-radius:50%;background:rgba(196,98,45,.15);border:1px solid rgba(196,98,45,.3);display:flex;align-items:center;justify-content:center;font-size:.75rem;flex-shrink:0;color:var(--accent);}
+.split-card__gap-title{font-family:var(--f-b);font-size:.875rem;font-weight:700;color:var(--charcoal);line-height:1.25;}
+.split-card__solve{background:var(--white);padding:1.375rem 1.5rem;}
+.split-card__solve-num{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:.375rem;}
+.split-card__solve-title{font-family:var(--f-b);font-size:.9375rem;font-weight:700;color:var(--charcoal);margin-bottom:.375rem;line-height:1.3;}
+.split-card__solve-copy{font-size:.875rem;color:var(--text-sec);line-height:1.6;}
+/* ── FUNNEL RESULT BAR (variant A revenue payoff) ── */
+.funnel-b__result{display:flex;align-items:center;justify-content:center;gap:3rem;background:var(--accent);border-radius:0 0 var(--r-xl) var(--r-xl);padding:2rem 2.5rem;text-align:center;}
+.funnel-b__result-item{display:flex;flex-direction:column;gap:.375rem;}
+.funnel-b__result-val{font-family:var(--f-n);font-weight:900;font-size:clamp(2rem,4.5vw,3.25rem);color:#fff;line-height:1;letter-spacing:-.03em;}
+.funnel-b__result-label{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.65);}
+.funnel-b__result-div{width:1px;height:48px;background:rgba(255,255,255,.25);}
+/* ── OPPORTUNITY BULLETS (Why Aspire opening, client-specific) ── */
+.opp-bullets{background:rgba(196,98,45,.06);border:1px solid rgba(196,98,45,.18);border-left:3px solid var(--accent);border-radius:0 var(--r-lg) var(--r-lg) 0;padding:1.375rem 1.75rem;margin-bottom:2rem;}
+.opp-bullets__label{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:.75rem;}
+.opp-bullets__list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.5rem;}
+.opp-bullets__list li{font-size:.9375rem;color:rgba(250,240,226,.82);line-height:1.55;padding-left:1.25rem;position:relative;}
+.opp-bullets__list li::before{content:'';position:absolute;left:.3rem;top:.65em;width:4px;height:4px;border-radius:50%;background:var(--accent);}
+
+/* ── WHY VALUES STRIP (Section 08 — 3 values below prose) ── */
+.why-values{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.07);border-radius:var(--r-xl);overflow:hidden;margin:2rem 0;}
+.why-val{background:rgba(255,255,255,.03);padding:1.625rem 1.5rem;display:flex;flex-direction:column;gap:.5rem;}
+.why-val__icon{width:34px;height:34px;border-radius:var(--r-md);background:rgba(196,98,45,.14);display:grid;place-items:center;flex-shrink:0;}
+.why-val__icon .material-symbols-outlined{font-size:17px;color:#E09360;}
+.why-val__label{font-family:var(--f-b);font-weight:700;font-size:.9375rem;color:rgba(250,240,226,.88);line-height:1.2;}
+.why-val__desc{font-size:.8125rem;color:rgba(250,240,226,.48);line-height:1.55;margin:0;}
+
+/* ── FUNNEL B RESPONSIVE ── */
+@media(max-width:700px){.funnel-b__cards{flex-wrap:wrap;}.funnel-b__op{display:none;}.funnel-b__card{flex:0 0 50%;border-right:1px solid var(--border-light);border-top:1px solid var(--border-light);}.funnel-b__card:nth-of-type(1){border-top:none;}.funnel-b__card:nth-of-type(2){border-top:none;}.funnel-b__card:nth-of-type(2n){border-right:none;}}
+
+/* ── RESPONSIVE ── */
+@media(max-width:820px){
+  .team-grid{grid-template-columns:1fr;}
+  .beyond-strip{grid-template-columns:repeat(2,1fr);}
+  .hero__inner{grid-template-columns:1fr;gap:2.5rem;padding:4rem 1.5rem 4.5rem;}
+  .hero__meta{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem 2rem;padding:2rem 0 0;border-left:none;border-top:1px solid rgba(255,255,255,.1);}
+  .sec-group{padding:3.5rem 1.5rem;}
+  .sec-head{grid-template-columns:1fr;row-gap:.25rem;}
+  .sec-head__num{font-size:2.5rem;}
+  .opp-list{padding-left:0;}
+  .opp-row{grid-template-columns:52px 1fr;column-gap:1rem;padding:1.5rem 0;}
+  .opp-row__num{font-size:1.75rem;}
+  .plan-grid{margin-left:-1.5rem;margin-right:-1.5rem;}
+  .plan-item{padding:1.75rem 1.5rem;}
+  .compare-grid{grid-template-columns:1fr;}
+  .stack-split{grid-template-columns:1fr;}
+  .why-values{grid-template-columns:1fr;}
+  .score-grid{grid-template-columns:repeat(2,1fr);}
+  .kw-grid{grid-template-columns:1fr;}
+  .cta-box,.revenue-box{padding:2.25rem 1.5rem;}
+  .quick-summary{grid-template-columns:1fr;}
+  .win-grid,.gap-grid{grid-template-columns:1fr;}
+  .kw-row{grid-template-columns:28px 1fr auto;}.kw-row__vol{display:none;}
+  .quick-wins__grid{grid-template-columns:1fr;}
+  .funnel-assumptions__grid{grid-template-columns:1fr 1fr;}.funnel-assumptions__item:nth-child(2){border-right:none;}.funnel-assumptions__item:nth-child(3){border-top:1px solid var(--border);}
+  .compare-table{overflow:hidden;}
+  .compare-table__head{grid-template-columns:repeat(3,1fr);position:sticky;top:52px;z-index:10;}
+  .compare-table__corner{display:none;}
+  .compare-table__col-head{font-size:.7rem;padding:.6rem .5rem;text-align:center;border-left:none;}
+  .compare-table__col-head+.compare-table__col-head{border-left:1px solid var(--border);}
+  .compare-table__row{display:flex;flex-wrap:wrap;}
+  .compare-table__label{width:100%;border-right:none;background:rgba(44,51,64,.06);font-size:.8125rem;padding:.5rem 1rem;border-top:1px solid var(--border);}
+  .compare-table__cell{flex:1;min-width:0;padding:.6rem .4rem;border-left:none;border-top:1px solid var(--border);text-align:center;justify-content:center;font-size:.8125rem;}
+  .compare-table__cell:not(:last-child){border-right:1px solid var(--border);}
+}
+@media(max-width:560px){
+  .plan-grid{grid-template-columns:1fr;margin-left:-1.5rem;margin-right:-1.5rem;}
+  .plan-item:nth-child(odd){border-right:none;}
+  .phase-items--grid{grid-template-columns:1fr;}
+  .grade-legend__items{flex-wrap:wrap;border-radius:var(--r-md);}
+  .grade-legend__item{min-width:50%;flex:0 0 50%;box-sizing:border-box;}
+  .grade-legend__item:nth-child(1),.grade-legend__item:nth-child(2){border-bottom:1px solid rgba(44,51,64,.1);}
+  .grade-legend__item:nth-child(odd){border-right:1px solid rgba(44,51,64,.1);}
+  .meaning-grid{grid-template-columns:1fr;}
+  .footer-contacts{grid-template-columns:1fr;}
+  .split-cards-wrap{padding:1rem;}.split-cards{grid-template-columns:1fr;gap:1rem;}.split-card{grid-template-rows:auto auto auto;grid-row:span 1;}
+  /* B: bridge text wraps instead of overflowing */
+  .gap-bridge{padding:1.25rem 1rem;}
+  .gap-bridge__text{white-space:normal;text-align:center;}
+  /* A: result bar stacks vertically */
+  .funnel-b__result{flex-direction:column;gap:1.5rem;}
+  .funnel-b__result-div{width:48px;height:1px;}
+  /* C: spectrum label row scales down */
+  .range-spectrum__amt{font-size:.875rem!important;}
+  .range-spectrum__tier{font-size:.4rem;}
+  /* section 03: compare table scrolls horizontally on narrow screens */
+  .compare-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 -1.5rem;}
+  .compare-scroll .compare-table{overflow:visible;border-radius:0;border-left:none;border-right:none;min-width:480px;margin:0;}
+  .compare-scroll .compare-table__head{grid-template-columns:80px repeat(3,1fr);position:static;}
+  .compare-scroll .compare-table__corner{display:flex;background:var(--bg-alt);border-right:1px solid var(--border);}
+  .compare-scroll .compare-table__row{display:grid;grid-template-columns:80px repeat(3,1fr);}
+  .compare-scroll .compare-table__label{width:auto;border-right:1px solid var(--border);}
+  .compare-scroll .compare-table__col-head{font-size:.6rem;padding:.5rem .3rem;}
+  .compare-scroll .compare-table__cell{flex:none;font-size:.75rem;padding:.5rem .3rem;}
+}
+
+@media print{
+  body{background:#fff;}
+  .topbar{position:static;}
+  .sec-group--dark{background:#fff!important;color:var(--charcoal)!important;}
+  .sec-group--dark *{color:var(--charcoal)!important;background-color:transparent!important;}
+}
 </style>
 </head>
 <body>
 
-<!-- PAGE HEADER -->
-<div class="page-header">
-  <div class="page-header-inner">
-    <img class="aspire-logo" src="/assets/aspire-logo.svg" alt="Aspire Digital">
-  </div>
-</div>
+<!-- TOPBAR -->
+<header class="topbar">
+  <img class="topbar__logo" src="./aspire-logo.svg" alt="Aspire Digital">
+  <div class="topbar__sep"></div>
+  <span class="topbar__label">Digital Growth Brief</span>
+  <span class="topbar__ver">v1.2</span>
+  <span class="topbar__badge">Aspire Digital — Self-Audit</span>
+</header>
 
 <!-- HERO -->
-<div class="hero">
-  <h1>ASPIRE DIGITAL</h1>
-  <div class="sub">Your business is built to</div>
-  <div class="accent-word">grow.</div>
-  <div class="body-text">
-    You've built a real portfolio, earned real results, and earned the trust of real business owners across Central Ohio. This brief is a mirror — an honest look at where you stand digitally, where the gaps are, and what the next chapter looks like.
+<section class="hero">
+  <div class="hero__inner">
+    <div class="hero__top">
+      <p class="hero__eyebrow"><span class="hero__eyebrow-dot"></span>Aspire Digital &nbsp;·&nbsp; Digital Growth Brief · May 4, 2026</p>
+      <h1 class="hero__h1">The portfolio is real. <em>Now let's get found.</em></h1>
+    </div>
+    <div class="hero__text">
+      <p class="hero__sub">You've built a track record that speaks for itself — eight clients, real results, 7 years of craft. The problem isn't the work. It's that the people searching for a Columbus web designer can't find you.</p>
+      <dl class="hero__meta">
+        <div class="hero__meta-item"><dt>Prepared For</dt><dd class="fill">Chris &amp; Jaime Otten</dd></div>
+        <div class="hero__meta-item"><dt>Business</dt><dd class="fill">Aspire Digital</dd></div>
+        <div class="hero__meta-item"><dt>Date</dt><dd>May 4, 2026</dd></div>
+        <div class="hero__meta-item"><dt>Prepared By</dt><dd><a href="https://madebyaspire.com" target="_blank">Paris · Aspire AI</a></dd></div>
+      </dl>
+    </div>
+    <div class="hero__opp-card">
+      <p class="hero__opp-label">Revenue Opportunity</p>
+      <p class="hero__opp-num">$30K–$50K</p>
+      <p class="hero__opp-denom">projected annual lift</p>
+      <span class="hero__opp-badge hero__opp-badge--high">High Opportunity</span>
+      <p class="hero__opp-desc">Local search + GBP activation unlocks Columbus inquiries currently going to Conspire and Marcy Design</p>
+    </div>
   </div>
-</div>
+</section>
+<div class="accent-stripe"></div>
 
-<!-- ARC DIVIDER -->
-<div class="hero-arc">
-  <svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0,120 C480,0 960,0 1440,120 L1440,120 L0,120 Z" fill="#FAF0E2"/>
-  </svg>
-</div>
 
-<!-- MAIN CONTENT -->
-<div class="container">
+<!-- ═══════════════════════════════════════════════════════════
+     01 · THE HONEST PICTURE
+═══════════════════════════════════════════════════════════ -->
+<section class="sec-group sec-group--cream">
+  <div class="sec-group__in">
+    <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><circle cx="6" cy="6" r="3.5"/><circle cx="6" cy="6" r="1" fill="#fff" stroke="none"/></svg></span><span class="sec-badge__label">The Starting Point</span></div>
+    <div class="sec-head">
+      <span class="sec-head__num">01</span>
+      <div class="sec-head__body">
+        <h2 class="sec-head__title">The Honest <em>Picture</em></h2>
+        <p class="sec-head__sub">Who you are, what you've built, how you show up today.</p>
+      </div>
+    </div>
+    <div class="quick-summary">
+      <div class="quick-summary__item">
+        <p class="quick-summary__label">Who They Are</p>
+        <ul class="quick-summary__list">
+          <li>Husband-and-wife studio — Chris (strategy + dev) and Jaime (UX/UI, 20+ yrs)</li>
+          <li>Faith-driven, no-template philosophy — every site hand-coded from scratch</li>
+          <li>Columbus, Ohio · Est. 2018 · 7 years of client partnerships</li>
+        </ul>
+      </div>
+      <div class="quick-summary__item">
+        <p class="quick-summary__label">What They've Built</p>
+        <ul class="quick-summary__list">
+          <li>8 active/completed client sites with measurable outcomes</li>
+          <li>NRX Asphalt +210% leads, Patina +90% bookings, Tees 471+ reviews</li>
+          <li>Services: web, branding, SEO/AI, Shopify, CRM automation, retainer partnerships</li>
+        </ul>
+      </div>
+      <div class="quick-summary__item">
+        <p class="quick-summary__label">How They Show Up</p>
+        <ul class="quick-summary__list">
+          <li>madebyaspire.com — fast, hand-coded on Cloudflare Workers</li>
+          <li>No Google Business Profile — zero local pack visibility</li>
+          <li>9-post blog, Instagram + LinkedIn present, solid on-page SEO</li>
+        </ul>
+      </div>
+    </div>
 
-  <div class="meta-bar">
-    <span><strong>Date:</strong> April 23, 2026</span>
-    <span><strong>By:</strong> <a href="https://madebyaspire.com" target="_blank">madebyaspire.com</a></span>
-  </div>
-
-  <!-- 01: THE HONEST PICTURE -->
-  <section>
-    <h2><span class="number">01</span>The Honest <em>Picture</em></h2>
-
-    <p>Aspire Digital is a <strong>faith-driven husband-and-wife web design studio</strong> based in Central Ohio, founded by Chris and Jaime Otten. With 30+ combined years of digital experience, they specialize in <strong>custom websites, AI-powered workflows, local SEO, CRM integrations, and long-term digital partnerships</strong> for small businesses that are serious about growth.</p>
-
-    <p>The results speak for themselves: <strong>NRX Asphalt saw +210% in qualified leads</strong> within six weeks of launch. Modern Maid saw <strong>+140% more leads</strong> after a redesign. Patina Salon Studio saw <strong>+90% more bookings</strong> with a 24/7 online booking integration. These aren't rounding errors — they're directional shifts in how these businesses earn. That's a track record worth marketing louder than it currently is.</p>
-
-    <p>The brand DNA is strong: <em>defined by craft, rooted in faith</em>. No handoffs, no templates, no ghosting after launch. Starting at $2,500 with delivery in 2–6 weeks and no long-term contracts — Aspire occupies a <strong>distinctive position in the market</strong>: boutique output at a price point that's genuinely accessible to local small businesses. Most small-business owners in Central Ohio can't afford the agency rates of a Marcy Design or a WebFX, but they also can't risk a freelancer who disappears. Aspire fills that gap beautifully — and needs to claim it more aggressively.</p>
-
-    <p>One critical note: <strong>madebyaspire.com was registered on March 22, 2026</strong> — just over a month ago. The domain is brand new. Canonically and in the schema markup, the site still references the old domain <code>aspiredigital.dev</code>. This creates a split-identity situation in search engines that needs to be resolved before the new domain can build meaningful authority. It's the single most urgent technical issue in this audit.</p>
-
+    <!-- BUSINESS-AT-A-GLANCE STAT CARDS -->
+    <h3 class="sub-head">At a glance</h3>
     <div class="score-grid">
       <div class="score-card">
-        <div class="label">Active Clients</div>
-        <div class="value">8+</div>
-        <div class="note">Live or in-build</div>
+        <div class="score-card__label">Years in Business</div>
+        <div class="score-card__value">7</div>
+        <div class="score-card__note">Est. 2018, Columbus OH</div>
       </div>
       <div class="score-card">
-        <div class="label">Top Lead Result</div>
-        <div class="value">+210%</div>
-        <div class="note">NRX Asphalt</div>
+        <div class="score-card__label">Clients Delivered</div>
+        <div class="score-card__value">8+</div>
+        <div class="score-card__note">No templates — ever</div>
       </div>
       <div class="score-card">
-        <div class="label">Avg. Launch Time</div>
-        <div class="value">5 wks</div>
-        <div class="note">From kickoff to live</div>
+        <div class="score-card__label">GBP Reviews</div>
+        <div class="score-card__value">0</div>
+        <div class="score-card__note">No GBP profile exists</div>
       </div>
       <div class="score-card">
-        <div class="label">Starting Price</div>
-        <div class="value">$2.5k</div>
-        <div class="note">No long-term contracts</div>
+        <div class="score-card__label">Blog Posts</div>
+        <div class="score-card__value">9</div>
+        <div class="score-card__note">Columbus-targeted content</div>
+      </div>
+    </div>
+
+    <!-- REVIEWS -->
+    <h3 class="sub-head">What clients are saying</h3>
+    <div class="review-grid">
+      <div class="review-card">
+        <span class="review-card__stars">★★★★★</span>
+        <p class="review-card__quote">"Before Aspire, we were buried on page 3. Now we get more calls in a week than we used to get in a month. Best investment this company has ever made."</p>
+        <span class="review-card__by">— Tex Heyman, NRX Asphalt</span>
+      </div>
+      <div class="review-card">
+        <span class="review-card__stars">★★★★★</span>
+        <p class="review-card__quote">"They cared more about my business outcomes than my last three agencies combined. The gallery and the quote flow do the selling before I even pick up the phone."</p>
+        <span class="review-card__by">— Tony T., Tees Flooring</span>
+      </div>
+    </div>
+
+    <!-- THE OPPORTUNITY CALLOUT (1 sentence framing the gap) -->
+    <div class="opp-callout">
+      <strong>The opportunity is clear:</strong> Aspire Digital has the portfolio, the proof, and the positioning to win Columbus — but with no Google Business Profile and two well-reviewed competitors occupying the local pack, the people searching "web designer Columbus Ohio" are calling someone else.
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     02 · YOUR SCORECARD
+═══════════════════════════════════════════════════════════ -->
+<section class="sec-group sec-group--cream">
+  <div class="sec-group__in">
+    <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><path d="M2 9V3M6 9V5M10 9V2"/></svg></span><span class="sec-badge__label">Digital Scorecard</span></div>
+    <div class="sec-head">
+      <span class="sec-head__num">02</span>
+      <div class="sec-head__body">
+        <h2 class="sec-head__title">Your Digital <em>Scorecard</em></h2>
+        <p class="sec-head__sub">A snapshot of where your online presence stands today.</p>
+      </div>
+    </div>
+
+    <h3 class="sub-head">Technical Quality</h3>
+    <div class="score-grid">
+      <div class="score-card">
+        <div class="score-card__label">Performance</div>
+        <div class="score-card__value score-card__value--word">Strong</div>
+        <div class="score-card__note">Cloudflare Workers edge — sub-100ms TTFB globally</div>
       </div>
       <div class="score-card">
-        <div class="label">Domain Age</div>
-        <div class="value">~30d</div>
-        <div class="note">madebyaspire.com</div>
+        <div class="score-card__label">Accessibility</div>
+        <div class="score-card__value score-card__value--word">Fair</div>
+        <div class="score-card__note">Self-hosted fonts, semantic HTML — PSI quota unavailable</div>
       </div>
       <div class="score-card">
-        <div class="label">Client Satisfaction</div>
-        <div class="value">100%</div>
-        <div class="note">Reported on site</div>
+        <div class="score-card__label">Mobile</div>
+        <div class="score-card__value score-card__value--word">Strong</div>
+        <div class="score-card__note">Hand-coded responsive — no Wix/Squarespace quirks</div>
+      </div>
+      <div class="score-card">
+        <div class="score-card__label">SEO Foundation</div>
+        <div class="score-card__value score-card__value--word">Fair</div>
+        <div class="score-card__note">Solid on-page + schema — no GBP, no local citations</div>
       </div>
     </div>
 
-    <h3>What Clients Are Saying</h3>
-    <div class="callout">
-      <strong>"Before Aspire, we were buried on page 3. Now we get more calls in a week than we used to in a month."</strong><br>
-      — Tex H., Owner · NRX Asphalt
-    </div>
-    <div class="callout">
-      <strong>"I went from chasing clients to turning them away. Aspire built something that actually works."</strong><br>
-      — Hannah S., Owner · Modern Maid
-    </div>
-    <div class="callout">
-      <strong>"My site finally looks like the salon. Clients tell me they booked because of the website."</strong><br>
-      — Kayla H., Owner · Patina Salon Studio
-    </div>
-  </section>
-
-  <!-- 02: YOUR SCORECARD -->
-  <section>
-    <h2><span class="number">02</span>Your Digital <em>Scorecard</em></h2>
-
-    <div class="site-screenshot">
-      <h3>Your Current Website</h3>
-      <div class="screenshot-frame">
-        <img src="./aspire-digital-screenshot.jpg" alt="Aspire Digital current website" style="width:100%;border-radius:8px;border:1px solid var(--border)">
-      </div>
-      <p style="text-align:center;font-size:12px;color:var(--text-muted);margin-top:8px">Captured April 23, 2026 · madebyaspire.com</p>
-    </div>
-
-    <h3>Technical Health</h3>
-
-    <div class="success-box">
-      <strong>Cloudflare Workers — excellent infrastructure choice.</strong> Your site runs on Cloudflare's edge network. HTTP/2, global CDN, fast headers. This is the right foundation.
-    </div>
-
-    <div class="alert-box">
-      <strong>Domain Split Identity — urgent.</strong> madebyaspire.com was registered March 22, 2026. The canonical tag and all schema markup still point to <code>aspiredigital.dev</code>. Google sees two identities. All domain authority built since 2018 is sitting on the old domain, not flowing to the new one. Fix: update canonical to <code>https://madebyaspire.com</code>, update schema URL, and ensure 301 redirect from aspiredigital.dev is permanent and indexed.
-    </div>
-
-    <div class="alert-box">
-      <strong>Schema OG image points to old domain.</strong> The Open Graph image URL in schema is <code>https://www.aspiredigital.dev/og-image.png</code>. When the brief is shared via iMessage or Slack, it may pull a broken preview. Fix: update OG image URLs to madebyaspire.com domain.
-    </div>
-
-    <div class="success-box">
-      <strong>SSL valid, HTTP/2, strict referrer policy.</strong> Security headers are solid. Cloudflare's protections are active. This is enterprise-grade infrastructure for a boutique studio.
-    </div>
-
-    <h3>SEO & Discoverability</h3>
-
-    <div class="bar-chart">
-      <div class="bar-row">
-        <div class="bar-label">Schema Markup</div>
-        <div class="bar-track"><div class="bar-fill" style="width:60%;background:#b8860b;"></div></div>
-        <div class="bar-val" style="color:#b8860b;">60%</div>
-      </div>
-      <div class="bar-row">
-        <div class="bar-label">On-Page SEO</div>
-        <div class="bar-track"><div class="bar-fill" style="width:75%;background:var(--green);"></div></div>
-        <div class="bar-val" style="color:var(--green);">75%</div>
-      </div>
-      <div class="bar-row">
-        <div class="bar-label">GBP Presence</div>
-        <div class="bar-track"><div class="bar-fill" style="width:5%;background:#c44;"></div></div>
-        <div class="bar-val" style="color:#c44;">–</div>
-      </div>
-      <div class="bar-row">
-        <div class="bar-label">Social Signals</div>
-        <div class="bar-track"><div class="bar-fill" style="width:20%;background:#c44;"></div></div>
-        <div class="bar-val" style="color:#c44;">Low</div>
-      </div>
-      <div class="bar-row">
-        <div class="bar-label">Content Depth</div>
-        <div class="bar-track"><div class="bar-fill" style="width:55%;background:#b8860b;"></div></div>
-        <div class="bar-val" style="color:#b8860b;">55%</div>
-      </div>
-      <div class="bar-row">
-        <div class="bar-label">Portfolio Proof</div>
-        <div class="bar-track"><div class="bar-fill" style="width:85%;background:var(--green);"></div></div>
-        <div class="bar-val" style="color:var(--green);">85%</div>
+    <div class="grade-legend">
+      <div class="grade-legend__label">Grading Scale</div>
+      <div class="grade-legend__items">
+        <div class="grade-legend__item grade-legend__item--strong">
+          <div class="grade-legend__dots">●●●●</div>
+          <div class="grade-legend__grade">Strong</div>
+          <div class="grade-legend__def">No urgent action needed</div>
+        </div>
+        <div class="grade-legend__item grade-legend__item--fair">
+          <div class="grade-legend__dots">●●●○</div>
+          <div class="grade-legend__grade">Fair</div>
+          <div class="grade-legend__def">Works, but has fixable gaps</div>
+        </div>
+        <div class="grade-legend__item grade-legend__item--weak">
+          <div class="grade-legend__dots">●●○○</div>
+          <div class="grade-legend__grade">Weak</div>
+          <div class="grade-legend__def">Noticeable issues hurting results</div>
+        </div>
+        <div class="grade-legend__item grade-legend__item--poor">
+          <div class="grade-legend__dots">●○○○</div>
+          <div class="grade-legend__grade">Poor</div>
+          <div class="grade-legend__def">Significant drag — fix first</div>
+        </div>
       </div>
     </div>
 
-    <h3>What's Working</h3>
-    <ul>
-      <li><strong>Portfolio page is doing heavy lifting</strong> — real results, real client names, real metrics. This converts.</li>
-      <li><strong>Services architecture is clean</strong> — five distinct capabilities clearly articulated with real before/after context.</li>
-      <li><strong>Meta description is strong</strong> — clearly communicates Ohio-based, AI-forward, multi-service studio.</li>
-      <li><strong>Testimonials with attribution</strong> — named clients with verifiable businesses. High trust signals.</li>
-      <li><strong>Contact process is frictionless</strong> — form with budget selector, clear follow-up promise, 24-hour response commitment.</li>
-      <li><strong>About page builds connection</strong> — faith-driven identity, family story, blended approach. Differentiates from faceless agencies.</li>
-    </ul>
+    <h3 class="sub-head">Current Website</h3>
+    <div class="screenshot-frame">
+      <img src="./aspire-digital-screenshot.jpg" alt="Aspire Digital current website — madebyaspire.com" style="width:100%;border-radius:10px;display:block;max-height:440px;object-fit:cover;object-position:top center;">
+    </div>
+    <p class="screenshot-caption">Captured May 4, 2026 · madebyaspire.com</p>
 
-    <h3>Where the Gaps Are</h3>
-    <ul>
-      <li><strong>No verified Google Business Profile</strong> — a local web design studio in Central Ohio with no GBP is invisible in local pack results. Competitors Conspire and Marcy Design both show up here; Aspire doesn't.</li>
-      <li><strong>LinkedIn company page returns 404</strong> — the LinkedIn link in the site footer leads to a dead page. B2B referrals and professional credibility are being lost silently.</li>
-      <li><strong>Facebook page is restricted</strong> — not publicly accessible, or settings limiting discovery.</li>
-      <li><strong>Domain authority starts at zero</strong> — madebyaspire.com is 30 days old. No backlinks, no domain history. SEO will be slow until the old aspiredigital.dev authority is properly consolidated.</li>
-      <li><strong>No blog or resource content</strong> — the site sells well but has nothing to attract top-of-funnel search traffic or demonstrate expertise to AI search engines.</li>
-      <li><strong>No pricing page</strong> — "starts at $2,500" is buried in the hero. A transparent pricing/packages page would reduce friction and pre-qualify leads.</li>
-    </ul>
-  </section>
-
-  <!-- 03: HOW YOU STACK UP -->
-  <section>
-    <h2><span class="number">03</span>How You <em>Stack Up</em></h2>
-
-    <p>The Columbus OH web design market has established players. Here's how Aspire compares to two direct local competitors and one national player you'll encounter in search results.</p>
-
-    <div class="compare-grid">
-      <div class="compare-card you">
-        <div class="comp-name">Aspire Digital ★</div>
-        <div class="comp-stat"><span class="stat-label">GBP Reviews</span><span class="stat-val low">None found</span></div>
-        <div class="comp-stat"><span class="stat-label">Domain Age</span><span class="stat-val low">~30 days</span></div>
-        <div class="comp-stat"><span class="stat-label">Portfolio Depth</span><span class="stat-val good">8+ clients</span></div>
-        <div class="comp-stat"><span class="stat-label">AI Search Ready</span><span class="stat-val good">Strong</span></div>
-        <div class="comp-stat"><span class="stat-label">Pricing Entry</span><span class="stat-val good">$2,500</span></div>
-        <div class="comp-stat"><span class="stat-label">Faith-Driven Brand</span><span class="stat-val good">Unique</span></div>
+    <h3 class="sub-head">What's Working</h3>
+    <div class="win-grid">
+      <div class="win-card">
+        <span class="win-card__ico">✓</span>
+        <div class="win-card__body">
+          <strong class="win-card__label">Edge-Deployed Website</strong>
+          <p class="win-card__desc">Cloudflare Workers means the site loads fast anywhere — faster than 95% of competitor sites running on shared hosting.</p>
+        </div>
       </div>
-      <div class="compare-card">
-        <div class="comp-name">Conspire (Columbus)</div>
-        <div class="comp-stat"><span class="stat-label">GBP Reviews</span><span class="stat-val good">45 · 5.0★</span></div>
-        <div class="comp-stat"><span class="stat-label">Domain Age</span><span class="stat-val good">Established</span></div>
-        <div class="comp-stat"><span class="stat-label">Portfolio Depth</span><span class="stat-val mid">Moderate</span></div>
-        <div class="comp-stat"><span class="stat-label">AI Search Ready</span><span class="stat-val mid">Unknown</span></div>
-        <div class="comp-stat"><span class="stat-label">Pricing Entry</span><span class="stat-val mid">Not listed</span></div>
-        <div class="comp-stat"><span class="stat-label">Local GBP Rank</span><span class="stat-val good">Top result</span></div>
+      <div class="win-card">
+        <span class="win-card__ico">✓</span>
+        <div class="win-card__body">
+          <strong class="win-card__label">Real Proof, Front and Center</strong>
+          <p class="win-card__desc">The portfolio page leads with measurable outcomes (NRX +210% leads, Patina +90% bookings) — not just pretty screenshots.</p>
+        </div>
       </div>
-      <div class="compare-card">
-        <div class="comp-name">Marcy Design (Bexley)</div>
-        <div class="comp-stat"><span class="stat-label">GBP Reviews</span><span class="stat-val good">50 · 5.0★</span></div>
-        <div class="comp-stat"><span class="stat-label">Domain Age</span><span class="stat-val good">20+ years</span></div>
-        <div class="comp-stat"><span class="stat-label">Portfolio Depth</span><span class="stat-val good">Deep</span></div>
-        <div class="comp-stat"><span class="stat-label">AI Search Ready</span><span class="stat-val low">Lagging</span></div>
-        <div class="comp-stat"><span class="stat-label">Pricing Entry</span><span class="stat-val low">Enterprise</span></div>
-        <div class="comp-stat"><span class="stat-label">Small Biz Focus</span><span class="stat-val low">Secondary</span></div>
+      <div class="win-card">
+        <span class="win-card__ico">✓</span>
+        <div class="win-card__body">
+          <strong class="win-card__label">Targeted Blog Content</strong>
+          <p class="win-card__desc">9 posts aimed at Columbus business owners and contractors — exactly the audience that needs a website and doesn't know where to start.</p>
+        </div>
+      </div>
+      <div class="win-card">
+        <span class="win-card__ico">✓</span>
+        <div class="win-card__body">
+          <strong class="win-card__label">Clean Schema + Correct Canonical</strong>
+          <p class="win-card__desc">ProfessionalService schema, FAQPage markup, and canonical now all point to madebyaspire.com — the technical foundation is solid.</p>
+        </div>
       </div>
     </div>
 
-    <h3>Strategic Insight</h3>
-    <p>The landscape reveals a clear opening. <strong>Conspire is the immediate threat</strong> — similar positioning, same market, and they have 45 verified Google reviews to Aspire's zero. But Aspire's work is better documented and more results-oriented. <strong>Marcy Design is the incumbent</strong> — established, credible, but expensive and not particularly small-business focused. <strong>WebFX and national agencies</strong> price out 90% of Aspire's natural prospects.</p>
-
-    <p>Aspire's moat isn't price — it's the combination of <strong>faith-driven trust, real results documentation, and husband-wife accountability</strong> that no agency can replicate. The problem is that moat is only visible after someone lands on the site. The Google Business Profile gap means many prospects never make it there.</p>
-  </section>
-
-  <!-- 04: WHAT PEOPLE ARE SEARCHING FOR -->
-  <section>
-    <h2><span class="number">04</span>What People Are <em>Searching For</em></h2>
-
-    <p>Small business owners in Central Ohio searching for web help use a different vocabulary than design professionals. Here's the landscape of terms that should be driving traffic to madebyaspire.com — and aren't yet, because the domain is brand new and has no content to match against them.</p>
-
-    <div class="kw-grid">
-      <div class="kw-card"><div class="kw-term">web design Columbus Ohio</div><div class="kw-vol"><strong>High</strong> volume</div></div>
-      <div class="kw-card"><div class="kw-term">small business website Ohio</div><div class="kw-vol"><strong>High</strong> volume</div></div>
-      <div class="kw-card"><div class="kw-term">custom website design Columbus</div><div class="kw-vol"><strong>Med</strong> volume</div></div>
-      <div class="kw-card"><div class="kw-term">website redesign Columbus OH</div><div class="kw-vol"><strong>Med</strong> volume</div></div>
-      <div class="kw-card"><div class="kw-term">affordable web designer Ohio</div><div class="kw-vol"><strong>Med</strong> volume</div></div>
-      <div class="kw-card"><div class="kw-term">AI website optimization Ohio</div><div class="kw-vol"><strong>Growing</strong></div></div>
-      <div class="kw-card"><div class="kw-term">contractor website builder Ohio</div><div class="kw-vol"><strong>Med</strong> volume</div></div>
-      <div class="kw-card"><div class="kw-term">salon booking website design</div><div class="kw-vol"><strong>Med</strong> volume</div></div>
-      <div class="kw-card"><div class="kw-term">home services website Ohio</div><div class="kw-vol"><strong>Med</strong> volume</div></div>
-      <div class="kw-card"><div class="kw-term">faith based web design agency</div><div class="kw-vol"><strong>Low</strong>, low comp</div></div>
-      <div class="kw-card"><div class="kw-term">GEO optimization Ohio</div><div class="kw-vol"><strong>Emerging</strong></div></div>
-      <div class="kw-card"><div class="kw-term">Shopify store setup Columbus</div><div class="kw-vol"><strong>Med</strong> volume</div></div>
-    </div>
-
-    <h3>Content Gap Analysis</h3>
-    <p>Currently, <strong>madebyaspire.com has no blog, no resource content, and no location-specific landing pages</strong>. This means every one of these search terms returns zero content matches. A competitor with a single well-optimized blog post on "how to choose a web designer in Columbus Ohio" will outrank Aspire on that term indefinitely — until Aspire publishes something.</p>
-
-    <p>The portfolio pages for individual clients (NRX Asphalt, Patina Salon, etc.) are a latent SEO asset. Each could become an individual case study page that ranks for that client's industry + "Columbus website" queries. <strong>These pages don't exist yet</strong> — only a combined portfolio grid does.</p>
-
-    <h3>Autocomplete Signals</h3>
-    <p>When someone in Ohio types "web design for" into Google, the autocomplete finishes with: <em>small business, contractors, restaurants, salons, photographers, home services</em>. Aspire has portfolio proof in home services (NRX, Keeler, B Clean), beauty (Patina), photography (PhotosbyB4), and retail (PetalsWings, Tees). <strong>That's a perfect content map waiting to happen.</strong></p>
-  </section>
-
-  <!-- 05: THE FUTURE OF SEARCH -->
-  <section>
-    <h2><span class="number">05</span>The Future of <em>Search</em></h2>
-
-    <p>Aspire is uniquely positioned for the AI search era — and needs to lean into it harder. The services page already mentions GEO analytics and AI-search optimization. But the agency's own web presence doesn't yet model the practices it sells.</p>
-
-    <h3>What AI Search Looks For (E-E-A-T)</h3>
-    <ul>
-      <li><strong>Experience:</strong> Real client work with named businesses and verifiable results — Aspire has this. It's the strongest E-E-A-T signal on the site.</li>
-      <li><strong>Expertise:</strong> No published thought leadership yet. AI search engines (Perplexity, ChatGPT, Google AI Overviews) cite sources. With no blog content, Aspire has nothing to cite.</li>
-      <li><strong>Authoritativeness:</strong> No backlinks to madebyaspire.com yet (30-day domain). No press mentions, no directory listings. Authority is zero from a raw signal standpoint.</li>
-      <li><strong>Trustworthiness:</strong> Strong on-site — named founders, real phone number, privacy policy dated April 2026, testimonials with attribution. Trust signals are excellent if a searcher lands on the site.</li>
-    </ul>
-
-    <h3>Schema Assessment</h3>
-
-    <div class="alert-box">
-      <strong>Organization schema exists but references the wrong domain.</strong> The JSON-LD block correctly describes Aspire's services but <code>"url": "https://www.aspiredigital.dev/"</code> is the old domain. This tells AI crawlers that the authoritative source for Aspire Digital lives somewhere else. Fix urgently.
-    </div>
-
-    <div class="success-box">
-      <strong>Service schema is solid.</strong> The OfferCatalog lists seven distinct services: Custom Website Design, E-Commerce, SEO and AI Discoverability, Branding, CRM/Booking Integrations, Analytics, AI Workflow Optimization. This is exactly the right schema structure for AI search to surface Aspire in relevant queries.
-    </div>
-
-    <h3>Voice & Conversational Search Readiness</h3>
-    <p>Voice queries tend to be longer and question-based: <em>"Who does affordable website design near Columbus Ohio?"</em> or <em>"What's a good web agency for a small contractor business in Ohio?"</em> Without FAQ schema or content that answers these naturally, Aspire can't appear in voice results. A simple FAQ section on the homepage or a dedicated FAQ page would close this gap quickly.</p>
-  </section>
-
-  <!-- 06: THE OPPORTUNITY -->
-  <section>
-    <h2><span class="number">06</span>Here's What We'd <em>Actually Do</em></h2>
-
-    <p>If this were a new client brief, these are the five things that would go on the build list — in priority order.</p>
-
-    <div class="opp-grid">
-      <div class="opp-card">
-        <h4>1. Fix the Domain Identity Crisis</h4>
-        <p>Update canonical tag, all schema URLs, and OG image paths from aspiredigital.dev to madebyaspire.com. Verify 301 redirects are permanent and properly indexed. Submit new sitemap to Google Search Console under the new domain. This is a 2-hour fix that unblocks everything else.</p>
-        <div class="opp-tags"><span class="tag high">Urgent</span><span class="tag easy">Quick Win</span></div>
+    <h3 class="sub-head">Where the Gaps Are</h3>
+    <div class="gap-grid">
+      <div class="gap-card">
+        <span class="gap-card__ico">!</span>
+        <div class="gap-card__body">
+          <strong class="gap-card__label">No Google Business Profile</strong>
+          <p class="gap-card__desc">When someone in Columbus searches "web designer near me," Google shows a map with 3 local businesses. You're not on it. Conspire and Marcy Design are.</p>
+        </div>
       </div>
-      <div class="opp-card">
-        <h4>2. Create & Verify a Google Business Profile</h4>
-        <p>A home-services agency that helps clients dominate local search should itself rank in the local pack for "web design Columbus OH." With no GBP, Aspire is invisible in map results. Competitor Conspire (45 reviews, 5.0★) and Marcy Design (50 reviews, 5.0★) own this space right now. A verified GBP with accurate categories, photos of the work, and a link to madebyaspire.com would start accumulating reviews and local authority immediately.</p>
-        <div class="opp-tags"><span class="tag high">High Impact</span><span class="tag easy">Quick Win</span></div>
+      <div class="gap-card">
+        <span class="gap-card__ico">!</span>
+        <div class="gap-card__body">
+          <strong class="gap-card__label">Zero Public Reviews</strong>
+          <p class="gap-card__desc">You have glowing client testimonials on the site — but no verified Google reviews. Competitors have 45–50 reviews visible in search results.</p>
+        </div>
       </div>
-      <div class="opp-card">
-        <h4>3. Fix LinkedIn & Social Presence</h4>
-        <p>The LinkedIn link in the footer returns a 404. B2B referrals — from realtors, attorneys, accountants who work with small businesses — often start with a LinkedIn lookup. Create or reclaim the company page, populate it with the same portfolio proof that's on the site, and post consistently. The Facebook situation also needs investigation — the page either needs to be made public or replaced with a properly configured business page.</p>
-        <div class="opp-tags"><span class="tag medium">Medium</span><span class="tag easy">Quick Win</span></div>
-      </div>
-      <div class="opp-card">
-        <h4>4. Build Individual Case Study Pages</h4>
-        <p>The current portfolio is a summary grid. Each client deserves a dedicated case study: the before (what the business had), the challenge (what wasn't working), the solution (what Aspire built), and the results (with real numbers). This creates eight SEO landing pages — one per industry vertical — that can rank for "[industry] website Columbus Ohio" queries. NRX alone ("asphalt contractor website Ohio") is a near-zero-competition keyword with real search intent.</p>
-        <div class="opp-tags"><span class="tag high">High Impact</span><span class="tag medium">Medium Effort</span></div>
-      </div>
-      <div class="opp-card">
-        <h4>5. Launch a Content Strategy (Even a Small One)</h4>
-        <p>Three to four blog posts per quarter targeted at local search — "How to choose a web designer in Columbus," "5 signs your small business website is losing you leads," "What GEO analytics means for your Ohio business" — would build topical authority, support AI search citation, and give Aspire something to share on social without having to create new content from scratch every time. The playbook already exists; the publishing mechanism doesn't.</p>
-        <div class="opp-tags"><span class="tag medium">Medium</span><span class="tag mid-impact">Long-Term Authority</span></div>
+      <div class="gap-card">
+        <span class="gap-card__ico">!</span>
+        <div class="gap-card__body">
+          <strong class="gap-card__label">No Local Service Pages</strong>
+          <p class="gap-card__desc">There's no page targeting "Columbus web design," "Ohio web designer," or specific service+location combos that local buyers search for.</p>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- 07: HOW THIS WORKS -->
-  <section>
-    <h2><span class="number">07</span>How This <em>Works</em></h2>
 
-    <p>The same process Aspire uses for clients applies here. The difference is you already know the brand, the story, and the audience — so the discovery phase is shorter and the build can move fast.</p>
-
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="week">Week 1</div>
-        <div class="task">Fix the Technical Foundation</div>
-        <div class="detail">Update canonical tags, schema URLs, OG image paths. Submit new sitemap to Search Console. Audit the 301 redirect chain from aspiredigital.dev. This work is invisible to visitors but critical for search.</div>
-      </div>
-      <div class="timeline-item">
-        <div class="week">Week 2</div>
-        <div class="task">GBP Creation & Social Cleanup</div>
-        <div class="detail">Create and verify the Google Business Profile. Add service categories, photos of client work, contact info, and a link to madebyaspire.com. Fix or rebuild the LinkedIn company page. Configure Facebook for public discoverability.</div>
-      </div>
-      <div class="timeline-item">
-        <div class="week">Weeks 3–5</div>
-        <div class="task">Case Study Pages + Content Foundation</div>
-        <div class="detail">Build individual case study pages for the top 4–5 clients (NRX, Modern Maid, Patina, Tees Flooring, PhotosbyB4). Write the first 2–3 blog posts. Add FAQ schema to the homepage. Each page becomes a standalone SEO asset.</div>
-      </div>
-      <div class="timeline-item">
-        <div class="week">Ongoing</div>
-        <div class="task">Content Cadence + Review Acquisition</div>
-        <div class="detail">One blog post per month. Actively request Google reviews from past and current clients — even a handful would leapfrog the current zero-review standing. Monitor Search Console weekly until the new domain shows consistent indexing.</div>
+<!-- ═══════════════════════════════════════════════════════════
+     03 · HOW YOU STACK UP
+═══════════════════════════════════════════════════════════ -->
+<section class="sec-group sec-group--cream">
+  <div class="sec-group__in">
+    <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><path d="M2 10V6M6 10V3M10 10V7"/></svg></span><span class="sec-badge__label">Competitor Landscape</span></div>
+    <div class="sec-head">
+      <span class="sec-head__num">03</span>
+      <div class="sec-head__body">
+        <h2 class="sec-head__title">How You <em>Stack Up</em></h2>
+        <p class="sec-head__sub">Side-by-side with the top competitors in your space.</p>
       </div>
     </div>
-  </section>
 
-  <!-- 08: BEYOND THE WEBSITE -->
-  <section>
-    <h2><span class="number">08</span>Beyond the <em>Website</em></h2>
-    <p>The site is genuinely good — the problem is that 90% of the work that gets people to the site hasn't started yet. Here's what a full-stack digital presence looks like for Aspire in 2026.</p>
+    <h3 class="sub-head">Side by Side</h3>
+    <div class="compare-scroll"><div class="compare-table">
+      <div class="compare-table__head">
+        <div class="compare-table__corner"></div>
+        <div class="compare-table__col-head compare-table__col-head--you">
+          Aspire Digital
+          <span class="compare-table__col-context">Custom craft, edge-deployed, proven results</span>
+        </div>
+        <div class="compare-table__col-head">
+          Conspire
+          <span class="compare-table__col-context">Full-service agency, Columbus, GBP-anchored</span>
+        </div>
+        <div class="compare-table__col-head">
+          Marcy Design
+          <span class="compare-table__col-context">Established studio, Bexley OH, 30+ yr brand</span>
+        </div>
+      </div>
+      <div class="compare-table__row">
+        <div class="compare-table__label">Website</div>
+        <div class="compare-table__cell compare-table__cell--you compare-table__cell--good">Custom-coded, fast</div>
+        <div class="compare-table__cell compare-table__cell--mid">CMS-based, decent UX</div>
+        <div class="compare-table__cell compare-table__cell--mid">Outdated design, content-heavy</div>
+      </div>
+      <div class="compare-table__row">
+        <div class="compare-table__label">Discovery call booking</div>
+        <div class="compare-table__cell compare-table__cell--you compare-table__cell--good">Yes — madebyaspire.com/book</div>
+        <div class="compare-table__cell compare-table__cell--good">Yes — contact form</div>
+        <div class="compare-table__cell compare-table__cell--good">Yes — phone + form</div>
+      </div>
+      <div class="compare-table__row">
+        <div class="compare-table__label">Portfolio online</div>
+        <div class="compare-table__cell compare-table__cell--you compare-table__cell--good">8 case studies w/ results</div>
+        <div class="compare-table__cell compare-table__cell--mid">Portfolio present, limited</div>
+        <div class="compare-table__cell compare-table__cell--good">Extensive gallery</div>
+      </div>
+      <div class="compare-table__row">
+        <div class="compare-table__label">Google reviews (GBP)</div>
+        <div class="compare-table__cell compare-table__cell--you compare-table__cell--low">None — no GBP</div>
+        <div class="compare-table__cell compare-table__cell--good">5.0★ · 45 reviews</div>
+        <div class="compare-table__cell compare-table__cell--good">5.0★ · 50 reviews</div>
+      </div>
+      <div class="compare-table__row">
+        <div class="compare-table__label">Local pack visibility</div>
+        <div class="compare-table__cell compare-table__cell--you compare-table__cell--low">Invisible</div>
+        <div class="compare-table__cell compare-table__cell--good">Top 3 Columbus result</div>
+        <div class="compare-table__cell compare-table__cell--good">Top 3 Columbus result</div>
+      </div>
+    </div></div>
 
-    <div class="icon-card-grid">
+    <div class="stack-split">
+      <div class="stack-split__side stack-split__side--win">
+        <span class="stack-split__badge">Where You Lead</span>
+        <div class="stack-split__stat">
+          <p class="stack-split__num">8 clients</p>
+          <p class="stack-split__label">Documented, measurable outcomes</p>
+          <p class="stack-split__note">NRX +210% leads, Patina +90% bookings, Tees 471+ reviews — no competitor shows numbers like this.</p>
+        </div>
+        <div class="stack-split__stat">
+          <p class="stack-split__num">Edge infra</p>
+          <p class="stack-split__label">Cloudflare Workers — faster than any CMS competitor</p>
+          <p class="stack-split__note">Your own sites load faster than what you sell. That's a credibility advantage in every sales call.</p>
+        </div>
+      </div>
+      <div class="stack-split__side stack-split__side--gap">
+        <span class="stack-split__badge">The Digital Gap</span>
+        <div class="stack-split__stat">
+          <p class="stack-split__num">0 <span class="stack-split__cmp">vs 45–50</span></p>
+          <p class="stack-split__label">Google Business Profile reviews</p>
+          <p class="stack-split__note">Both Conspire and Marcy Design show 5.0★ with 40+ reviews in the local pack. Aspire is simply not there.</p>
+        </div>
+        <div class="stack-split__stat">
+          <p class="stack-split__num">0 <span class="stack-split__cmp">vs 2 competitors</span></p>
+          <p class="stack-split__label">Local pack positions</p>
+          <p class="stack-split__note">No GBP = no map pin = no visibility for buyers who search with local intent ("near me," "Columbus OH").</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-      <div class="icon-card">
-        <span class="material-icons">location_on</span>
-        <h4>Google Business Profile</h4>
-        <p>Zero GBP presence means zero local pack visibility. Creating and optimizing a GBP is the single highest-ROI move available right now — it costs nothing and starts building review authority immediately.</p>
+
+<!-- ═══════════════════════════════════════════════════════════
+     04 · WHAT PEOPLE ARE SEARCHING FOR
+═══════════════════════════════════════════════════════════ -->
+<section class="sec-group sec-group--dark">
+  <div class="sec-group__in">
+    <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><circle cx="5" cy="5" r="3"/><path d="m7.5 7.5 2 2"/></svg></span><span class="sec-badge__label">Search Demand</span></div>
+    <div class="sec-head">
+      <span class="sec-head__num">04</span>
+      <div class="sec-head__body">
+        <h2 class="sec-head__title">What People Are <em>Searching For</em></h2>
+        <p class="sec-head__sub">The exact questions your prospects type into Google — with monthly volume.</p>
+      </div>
+    </div>
+
+    <div class="prose">
+      <p>Every month, Columbus-area business owners search for a web designer, an SEO company, or someone to build their Shopify store. These aren't passive browsers — they're buyers with a budget and a problem to solve. Right now, most of them find Aspire Digital's competitors, because Aspire doesn't appear in local search results.</p>
+    </div>
+
+    <h3 class="sub-head">Primary Search Terms</h3>
+    <div class="kw-table-wrap">
+    <div class="kw-table">
+      <div class="kw-row kw-row--hot">
+        <span class="kw-row__rank">01</span>
+        <span class="kw-row__term">web design company columbus ohio</span>
+        <div class="kw-row__right"><span class="kw-row__vol">High vol.</span><span class="kw-row__tag"><span class="tag tag--high">Money term</span></span></div>
+      </div>
+      <div class="kw-row kw-row--hot">
+        <span class="kw-row__rank">02</span>
+        <span class="kw-row__term">web designer columbus ohio</span>
+        <div class="kw-row__right"><span class="kw-row__vol">High vol.</span><span class="kw-row__tag"><span class="tag tag--high">Money term</span></span></div>
+      </div>
+      <div class="kw-row">
+        <span class="kw-row__rank">03</span>
+        <span class="kw-row__term">website design columbus ohio</span>
+        <div class="kw-row__right"><span class="kw-row__vol">Medium vol.</span><span class="kw-row__tag"><span class="tag tag--medium">High intent</span></span></div>
+      </div>
+      <div class="kw-row">
+        <span class="kw-row__rank">04</span>
+        <span class="kw-row__term">small business website design columbus</span>
+        <div class="kw-row__right"><span class="kw-row__vol">Medium vol.</span><span class="kw-row__tag"><span class="tag tag--medium">Target buyer</span></span></div>
+      </div>
+      <div class="kw-row">
+        <span class="kw-row__rank">05</span>
+        <span class="kw-row__term">shopify web designer ohio</span>
+        <div class="kw-row__right"><span class="kw-row__vol">Low-med vol.</span><span class="kw-row__tag"><span class="tag tag--easy">Low competition</span></span></div>
+      </div>
+      <div class="kw-row">
+        <span class="kw-row__rank">06</span>
+        <span class="kw-row__term">seo company columbus ohio small business</span>
+        <div class="kw-row__right"><span class="kw-row__vol">Low-med vol.</span><span class="kw-row__tag"><span class="tag tag--easy">Low competition</span></span></div>
+      </div>
+    </div>
+    </div>
+
+    <h3 class="sub-head">The Opportunity Window</h3>
+    <div class="prose">
+      <p>Web design is a year-round category with no off-season — business owners plan rebrands and site launches throughout the year. The advantage right now is that the local pack is thin. Two competitors hold all three visible spots. There's room for a third, and a GBP with even 10–15 reviews would be competitive immediately.</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     05 · THE AI SEARCH EDGE
+═══════════════════════════════════════════════════════════ -->
+<section class="sec-group sec-group--dark">
+  <div class="sec-group__in">
+    <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><path d="M7 1L3 7h3l-1 4 5-6H7l1-4Z"/></svg></span><span class="sec-badge__label">AI Search — The Edge</span></div>
+    <div class="sec-head">
+      <span class="sec-head__num">05</span>
+      <div class="sec-head__body">
+        <h2 class="sec-head__title">The <em>AI Search</em> Edge</h2>
+        <p class="sec-head__sub">Most business owners don't know AI search exists — let alone that they're invisible to it. Here's what it is, how it works alongside Google, and how we make Aspire Digital show up in both.</p>
+      </div>
+    </div>
+
+    <div class="search-compare">
+      <div class="search-compare__col search-compare__col--google">
+        <div class="search-compare__label">Google Search</div>
+        <div class="search-compare__rows">
+          <div class="search-compare__row"><div class="search-compare__dot"></div><span class="search-compare__text">Returns 10 links — they scroll and choose</span></div>
+          <div class="search-compare__row"><div class="search-compare__dot"></div><span class="search-compare__text">Drives clicks to your website</span></div>
+          <div class="search-compare__row"><div class="search-compare__dot"></div><span class="search-compare__text">You compete in a list with 9 others</span></div>
+        </div>
+      </div>
+      <div class="search-compare__col search-compare__col--ai">
+        <div class="search-compare__label search-compare__label--ai">AI Search</div>
+        <div class="search-compare__rows">
+          <div class="search-compare__row"><div class="search-compare__dot search-compare__dot--ai"></div><span class="search-compare__text search-compare__text--ai">Gives one name — they call</span></div>
+          <div class="search-compare__row"><div class="search-compare__dot search-compare__dot--ai"></div><span class="search-compare__text search-compare__text--ai">Drives calls directly to your phone</span></div>
+          <div class="search-compare__row"><div class="search-compare__dot search-compare__dot--ai"></div><span class="search-compare__text search-compare__text--ai">You're the recommendation, not an option</span></div>
+        </div>
+      </div>
+      <div class="search-compare__footer">They work together, not against each other. Google brings researchers. AI brings buyers ready to book. You need to show up in both.</div>
+    </div>
+
+    <div class="split-cards-wrap">
+    <div class="split-cards">
+      <div class="split-card">
+        <div class="split-card__gap">
+          <div class="split-card__gap-icon">!</div>
+          <h3 class="split-card__gap-title">Not in Google's local map</h3>
+        </div>
+        <div class="split-card__solve">
+          <div class="split-card__solve-num">The Fix</div>
+          <h3 class="split-card__solve-title">Claim &amp; Optimize Google Business Profile</h3>
+          <p class="split-card__solve-copy">A verified GBP with service categories, photos, and 10+ reviews puts Aspire in the local pack — where buyers with intent actually look.</p>
+        </div>
+      </div>
+      <div class="split-card">
+        <div class="split-card__gap">
+          <div class="split-card__gap-icon">!</div>
+          <h3 class="split-card__gap-title">AI tools can't verify location</h3>
+        </div>
+        <div class="split-card__solve">
+          <div class="split-card__solve-num">The Fix</div>
+          <h3 class="split-card__solve-title">Build Local Citation Signals</h3>
+          <p class="split-card__solve-copy">ChatGPT and Perplexity pull from directories and verified data — getting listed on Yelp, BBB, and local business directories makes Aspire a citable source.</p>
+        </div>
+      </div>
+      <div class="split-card">
+        <div class="split-card__gap">
+          <div class="split-card__gap-icon">!</div>
+          <h3 class="split-card__gap-title">No service-specific landing pages</h3>
+        </div>
+        <div class="split-card__solve">
+          <div class="split-card__solve-num">The Fix</div>
+          <h3 class="split-card__solve-title">Add Location + Service Pages</h3>
+          <p class="split-card__solve-copy">Pages targeting "Columbus web design," "Ohio Shopify developer," and "Columbus SEO company" create the topical authority AI search engines use to recommend local providers.</p>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div class="callout"><strong>The advantage:</strong> Aspire already sells AI search optimization to clients. Being invisible to AI search while selling AI search visibility is a gap worth closing — and it's a quick win once the GBP and citations are in place.</div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     06 · WHAT WE'D ACTUALLY DO
+═══════════════════════════════════════════════════════════ -->
+<section class="sec-group sec-group--cream">
+  <div class="sec-group__in">
+    <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><path d="M3 3h6v6H3z"/><path d="M3 6h6"/></svg></span><span class="sec-badge__label">The Plan</span></div>
+    <div class="sec-head">
+      <span class="sec-head__num">06</span>
+      <div class="sec-head__body">
+        <h2 class="sec-head__title">Here's What We'd <em>Actually Do</em></h2>
+        <p class="sec-head__sub">Specific, prioritized recommendations — not a generic checklist.</p>
+      </div>
+    </div>
+
+    <div class="phase-roadmap">
+
+      <div class="phase-section phase-section--quick">
+        <div class="phase-header">
+          <span class="phase-label phase-label--quick">Quick Win</span>
+          <div class="phase-divider"></div>
+          <span class="phase-note">Start this week</span>
+        </div>
+        <div class="phase-items">
+          <div class="phase-item">
+            <strong class="phase-item__title">Claim and verify Google Business Profile</strong>
+            <p class="phase-item__desc">Create the GBP listing under "Aspire Digital" in Columbus, OH — verify by postcard or phone. Add the primary service category ("Web Design Agency"), hours, phone, and website. This alone begins building local pack eligibility.</p>
+          </div>
+        </div>
       </div>
 
-      <div class="icon-card">
-        <span class="material-icons">star</span>
-        <h4>Review Acquisition</h4>
-        <p>Eight active clients and 100% satisfaction rate — but zero Google reviews to show for it. A simple post-launch email asking for a Google review from each client would create a review portfolio that validates everything the website claims.</p>
+      <div class="phase-section phase-section--m1">
+        <div class="phase-header">
+          <span class="phase-label phase-label--m1">Month 1</span>
+          <div class="phase-divider"></div>
+          <span class="phase-note">Core launch deliverables</span>
+        </div>
+        <div class="phase-items phase-items--grid">
+          <div class="phase-item">
+            <strong class="phase-item__title">Request reviews from past clients</strong>
+            <p class="phase-item__desc">Email every past client a direct GBP review link. Even 5–10 reviews at 5.0★ would put Aspire on par with both competitors in the local pack.</p>
+          </div>
+          <div class="phase-item">
+            <strong class="phase-item__title">Add AI Search Signals</strong>
+            <p class="phase-item__desc">Install FAQ schema on the services pages, add structured data for each service offered, and submit to Bing Webmaster Tools — AI tools pull from structured, verifiable sources.</p>
+          </div>
+          <div class="phase-item">
+            <strong class="phase-item__title">Build a Columbus Web Design landing page</strong>
+            <p class="phase-item__desc">A dedicated /columbus-web-design/ page targeting local searchers — 500+ words, client logos, local trust signals. This is the page that ranks for the money terms.</p>
+          </div>
+          <div class="phase-item">
+            <strong class="phase-item__title">Local citation audit + submission</strong>
+            <p class="phase-item__desc">Get listed on Yelp, BBB, Google Maps (via GBP), Clutch, and at least three Columbus-specific directories. Consistent NAP (name, address, phone) across all listings is the citation signal search engines trust.</p>
+          </div>
+        </div>
       </div>
 
-      <div class="icon-card">
-        <span class="material-icons">work</span>
-        <h4>LinkedIn Presence</h4>
-        <p>The LinkedIn footer link returns a 404. A rebuilt company page with portfolio highlights, client results, and regular posts about the craft of web design would generate B2B referrals from professionals who refer small businesses to vendors.</p>
-      </div>
-
-      <div class="icon-card">
-        <span class="material-icons">article</span>
-        <h4>Content & Thought Leadership</h4>
-        <p>No blog means no topical authority, no AI citations, and no top-of-funnel search traffic. Three to four posts per quarter — written in Aspire's honest, direct voice — would start compounding authority within 6 months.</p>
-      </div>
-
-      <div class="icon-card">
-        <span class="material-icons">share</span>
-        <h4>Social Distribution</h4>
-        <p>Before/after screenshots, client result announcements, and process content (showing the build process) perform well for service businesses on Instagram and TikTok. The portfolio proof already exists — it just needs to move off the website and into social feeds.</p>
-      </div>
-
-      <div class="icon-card">
-        <span class="material-icons">hub</span>
-        <h4>Referral Network</h4>
-        <p>Realtors, accountants, attorneys, and business coaches in Central Ohio regularly refer service providers to clients. A structured referral program — even informal — with partners in complementary fields would create a steady pipeline of warm prospects.</p>
+      <div class="phase-section phase-section--m2">
+        <div class="phase-header">
+          <span class="phase-label phase-label--m2">Month 2+</span>
+          <div class="phase-divider"></div>
+          <span class="phase-note">Growth phase</span>
+        </div>
+        <div class="phase-items">
+          <div class="phase-item">
+            <strong class="phase-item__title">Service + location page expansion</strong>
+            <p class="phase-item__desc">Add targeted pages for high-value service+location combos: "Ohio Shopify developer," "Columbus SEO company," "small business web design Columbus." Each page is a new entry point from search — compounding traffic over time.</p>
+          </div>
+        </div>
       </div>
 
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- 09: REVENUE IMPACT -->
-  <section>
-    <h2><span class="number">09</span>What This Could <em>Mean</em></h2>
 
-    <p>Numbers are directional, not guaranteed. But the math on these fixes is straightforward.</p>
-
-    <div class="revenue-box">
-      <div class="rev-label">Conservative Annual Revenue Impact</div>
-      <div class="rev-amount">$48,000–$96,000</div>
-      <div class="rev-note">Based on 2–4 additional projects per year at $2,500–$7,000 avg. — a plausible outcome from a verified GBP + case study pages alone.</div>
+<!-- ═══════════════════════════════════════════════════════════
+     07 · BEYOND THE WEBSITE
+═══════════════════════════════════════════════════════════ -->
+<section class="sec-group sec-group--dark">
+  <div class="sec-group__in">
+    <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><circle cx="6" cy="6" r="4"/><path d="M6 2v4l2 1"/></svg></span><span class="sec-badge__label">The Bigger Picture</span></div>
+    <div class="sec-head">
+      <span class="sec-head__num">07</span>
+      <div class="sec-head__body">
+        <h2 class="sec-head__title">Beyond the <em>Website</em></h2>
+        <p class="sec-head__sub">Additional growth levers we'd put to work for you.</p>
+      </div>
     </div>
 
-    <h3>How the Math Works</h3>
-    <ul>
-      <li><strong>GBP + Reviews:</strong> Appearing in local pack results for "web design Columbus OH" conservatively generates 5–15 new contact form inquiries per month from people who wouldn't have found the site otherwise. Convert 10–20% of qualified inquiries and you're looking at 1–3 new projects per quarter.</li>
-      <li><strong>Case Study Pages:</strong> Each case study page is a long-tail SEO asset. A "salon website design Columbus" page that ranks in the top 5 generates ongoing passive inbound from salon owners across Central Ohio — the exact buyer Patina Salon Studio proves Aspire can serve.</li>
-      <li><strong>LinkedIn Referrals:</strong> A single accountant or realtor who refers two clients per year at an average project value of $4,000 is worth $8,000 annually — and those referrals tend to be high-trust, pre-sold prospects who convert faster.</li>
-    </ul>
-
-    <div class="callout">
-      <strong>The most important number isn't revenue — it's pipeline visibility.</strong> Right now, Aspire is largely invisible to prospects who aren't already referred. Every fix in this brief is about turning off the invisibility cloak, not just building a prettier website.
+    <div class="beyond-strip">
+      <div class="beyond-item">
+        <span class="beyond-item__ico"><span class="material-symbols-outlined">storefront</span></span>
+        <div class="beyond-item__label">Google Business Profile</div>
+        <p class="beyond-item__desc">The single highest-ROI action available. A verified, optimized GBP with 15+ reviews puts Aspire in the local pack — visible to every Columbus buyer with local intent.</p>
+      </div>
+      <div class="beyond-item">
+        <span class="beyond-item__ico"><span class="material-symbols-outlined">star</span></span>
+        <div class="beyond-item__label">Review Velocity</div>
+        <p class="beyond-item__desc">Aspire has 8 satisfied clients with zero public reviews. A simple review request email to past clients could generate 8–12 reviews in a week — instantly competitive with both Conspire and Marcy Design.</p>
+      </div>
+      <div class="beyond-item">
+        <span class="beyond-item__ico"><span class="material-symbols-outlined">share</span></span>
+        <div class="beyond-item__label">Social Consistency</div>
+        <p class="beyond-item__desc">Instagram (@madebyaspire) and LinkedIn are present but post frequency is unclear. A consistent 2–3 posts per week showing client work builds the referral engine that supplements search.</p>
+      </div>
+      <div class="beyond-item">
+        <span class="beyond-item__ico"><span class="material-symbols-outlined">mail</span></span>
+        <div class="beyond-item__label">Newsletter / Lead Nurture</div>
+        <p class="beyond-item__desc">The blog attracts Columbus business owners at the awareness stage. An email capture with a lead magnet ("5 Signs Your Website Is Hurting You") turns readers into pipeline contacts.</p>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- 10: WHY ASPIRE DIGITAL + CTA -->
-  <section>
-    <h2><span class="number">10</span>The Bottom <em>Line</em></h2>
 
-    <p>Aspire Digital is building something real. The portfolio is legitimate, the results are verifiable, and the brand story — faith-driven, husband-and-wife, craftsman standard — is genuinely differentiated from every agency in the Columbus market.</p>
+<!-- ═══════════════════════════════════════════════════════════
+     08 · WHAT THIS COULD MEAN
+     ─────────────────────────────────────────────────────────
+     PICK ONE VARIANT. Uncomment the section that fits the
+     prospect. Keep the others commented out.
 
-    <p>But right now, <strong>the infrastructure of discovery isn't there</strong>. A new domain with no authority, no GBP, and no local signal means the best agency in the room can still lose to a mediocre one with 50 Google reviews and a 10-year-old domain. That's the gap. And unlike building a new website from scratch, these gaps close fast — some within weeks of starting.</p>
+     A — THE MATH       → Skeptics, contractors, analytical
+         sec-group--cream   owners who want to see the work.
+                            Show the calculation chain.
 
-    <p>The opportunity Aspire is sitting on is this: <strong>you already have the proof, the process, and the positioning</strong>. You just haven't built the channels that carry the signal outward. Fix the domain, build the GBP, write the case studies, and the business that's been operating on referrals becomes one that attracts strangers who are already sold before they pick up the phone.</p>
+     B — THE GAP        → Visual thinkers, lifestyle business
+         sec-group--dark    owners, anyone with FOMO energy.
+                            Before vs. after contrast.
 
-    <p>That's the next chapter — and none of it requires a bigger team, a different product, or a new business model. It requires the same craft applied inward.</p>
+     C — THE RANGE      → Risk-averse owners, accountants,
+         sec-group--dark    anyone who hates being oversold.
+                            Conservative / moderate / optimistic.
 
+     D — WHAT IT MEANS  → Heart-led owners, creatives, service
+         sec-group--cream   pros who think in people not numbers.
+                            Translate the dollar into real life.
+
+     Compare page: yoursite.madebyaspire.com/template/revenue-compare/
+═══════════════════════════════════════════════════════════ -->
+
+
+<!-- ─── VARIANT A · THE MATH — commented out ──────────────── -->
+<!--
+<section class="sec-group sec-group--cream"> ... </section>
+-->
+
+<!-- Variant B: Strong Columbus search demand + GBP gap = clear before/after contrast — The Gap fits perfectly -->
+<!-- ─── VARIANT B · THE GAP ──────────────────────────────── -->
+<section class="sec-group sec-group--dark">
+  <div class="sec-group__in">
+    <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><path d="M2 9l3-3 2 2 3-4"/></svg></span><span class="sec-badge__label">Revenue Impact</span></div>
+    <div class="sec-head">
+      <span class="sec-head__num">08</span>
+      <div class="sec-head__body">
+        <h2 class="sec-head__title">What This Could <em>Mean</em></h2>
+        <p class="sec-head__sub">The gap between where you are and where you could be.</p>
+      </div>
+    </div>
+    <p class="gap-hook">Hundreds of Columbus business owners search for a web designer every month. Right now, most of them find Conspire or Marcy Design — because Aspire Digital doesn't appear in the local pack. One GBP. Some reviews. A landing page. That's what stands between you and those inquiries.</p>
+    <div class="gap-metrics gap-metrics--hero">
+      <div class="gap-metric">
+        <div class="gap-metric__val">5–8</div>
+        <div class="gap-metric__label">new clients per year</div>
+        <div class="gap-metric__sub">Columbus buyers who found you on Google, liked the portfolio, and reached out. Conservative — based on local search volume and a 15–20% inquiry-to-client rate.</div>
+      </div>
+      <div class="gap-metric">
+        <div class="gap-metric__val">20–35</div>
+        <div class="gap-metric__label">more inquiries per year</div>
+        <div class="gap-metric__sub">Real leads from people actively searching for a web designer in Columbus — currently going to competitors with a GBP and reviews.</div>
+      </div>
+      <div class="gap-metric">
+        <div class="gap-metric__val">4–6×</div>
+        <div class="gap-metric__label">return on investment</div>
+        <div class="gap-metric__sub">GBP setup and local SEO is a low-cost, high-payoff move. Even 2 new clients cover the work — everything after is margin.</div>
+      </div>
+    </div>
+    <div class="gap-anchor">
+      <div class="gap-anchor__label">That adds up to</div>
+      <div class="gap-anchor__num">$30K–$50K</div>
+      <div class="gap-anchor__period">in new annual revenue — conservative estimate based on 5–8 projects at $4K–$7K avg.</div>
+    </div>
+    <div class="gap-bridge">
+      <div class="gap-bridge__line"></div>
+      <span class="gap-bridge__text">The difference is a GBP, some reviews, and one landing page.</span>
+      <div class="gap-bridge__line"></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── VARIANT C · THE RANGE ────────────────────────────── -->
+<!--
+<section class="sec-group sec-group--dark">
+  <div class="sec-group__in">
+    <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><path d="M2 9l3-3 2 2 3-4"/></svg></span><span class="sec-badge__label">Revenue Impact</span></div>
+    <div class="sec-head">
+      <span class="sec-head__num">08</span>
+      <div class="sec-head__body">
+        <h2 class="sec-head__title">What This Could <em>Mean</em></h2>
+        <p class="sec-head__sub">Three scenarios. All grounded. You pick which one you believe.</p>
+      </div>
+    </div>
+    <div class="range-lead">
+      <div class="range-lead__eyebrow">The Ceiling · Year One</div>
+      <div class="range-lead__num">{REVENUE_OPTIMISTIC}</div>
+      <div class="range-lead__label">in new annual revenue — what's possible</div>
+      <div class="range-lead__badge">★ Full Potential</div>
+    </div>
+    <div class="range-spectrum">
+      <div class="range-spectrum__meta">
+        <div class="range-spectrum__col range-spectrum__col--floor">
+          <span class="range-spectrum__tier">The Floor</span>
+          <span class="range-spectrum__amt">{REVENUE_CONSERVATIVE}</span>
+        </div>
+        <div class="range-spectrum__col range-spectrum__col--plan">
+          <span class="range-spectrum__tier">Our Plan</span>
+          <span class="range-spectrum__amt">{REVENUE_AMOUNT}</span>
+        </div>
+        <div class="range-spectrum__col range-spectrum__col--ceil">
+          <span class="range-spectrum__tier">The Ceiling</span>
+          <span class="range-spectrum__amt">{REVENUE_OPTIMISTIC}</span>
+        </div>
+      </div>
+      <div class="range-track-wrap">
+        <div class="range-track"></div>
+        <div class="range-marker range-marker--floor"></div>
+        <div class="range-marker range-marker--plan"></div>
+        <div class="range-marker range-marker--ceil"></div>
+      </div>
+    </div>
+    <div class="range-fc">
+      <div class="range-fc__item range-fc__item--floor">
+        <div class="range-fc__label">If only free Google results bring you in</div>
+        <div class="range-fc__amt">{REVENUE_CONSERVATIVE} / yr</div>
+        <p class="range-fc__desc">No referrals, no repeat bookings, no social — just the people who find you on Google for free. That's the floor — and it's still a real gain.</p>
+      </div>
+      <div class="range-fc__item range-fc__item--ceil">
+        <div class="range-fc__label">When Google, reviews, and word-of-mouth all work together</div>
+        <div class="range-fc__amt">{REVENUE_OPTIMISTIC} / yr</div>
+        <p class="range-fc__desc">Google Maps momentum, repeat clients, AI search results, and word-of-mouth from a site people actually share. The ceiling — and it's reachable.</p>
+      </div>
+    </div>
+    <div class="range-callout">
+      <div class="range-callout__icon"><svg viewBox="0 0 16 16" fill="none"><path d="M8 2v4l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="2"/></svg></div>
+      <p class="range-callout__text"><strong>The year-one plan targets {REVENUE_AMOUNT}.</strong> That's the conservative read — and it's still a meaningful gain. The ceiling is {REVENUE_OPTIMISTIC} when everything compounds.</p>
+    </div>
+  </div>
+</section>
+-->
+
+
+<!-- ─── VARIANT D · WHAT IT MEANS ────────────────────────── -->
+<!--
+<section class="sec-group sec-group--alt">
+  <div class="sec-group__in">
+    <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><path d="M2 9l3-3 2 2 3-4"/></svg></span><span class="sec-badge__label">Revenue Impact</span></div>
+    <div class="sec-head">
+      <span class="sec-head__num">08</span>
+      <div class="sec-head__body">
+        <h2 class="sec-head__title">What This Could <em>Mean</em></h2>
+        <p class="sec-head__sub">Put a number on it — then make it real.</p>
+      </div>
+    </div>
+    <div class="meaning-anchor">
+      <div class="meaning-anchor__label">Projected Annual Revenue Lift</div>
+      <div class="meaning-anchor__num">{REVENUE_AMOUNT}</div>
+      <div class="meaning-anchor__period">per year — conservative</div>
+      <div class="meaning-anchor__note">{REVENUE_MATH_PARAGRAPH}</div>
+    </div>
+    <div class="meaning-grid">
+      <div class="meaning-item">
+        <div class="meaning-item__ico"><svg viewBox="0 0 20 20" fill="none"><path d="M10 2a4 4 0 1 0 0 8 4 4 0 0 0 0-8zM4 18a6 6 0 0 1 12 0" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></svg></div>
+        <div class="meaning-item__num"><em>{METRIC_NEW_CLIENTS}</em> new clients</div>
+        <div class="meaning-item__label">in your first year</div>
+        <p class="meaning-item__sub">People who found you on Google, liked what they saw, and booked — without you lifting a finger.</p>
+      </div>
+      <div class="meaning-item">
+        <div class="meaning-item__ico"><svg viewBox="0 0 20 20" fill="none"><rect x="3" y="5" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.75"/><path d="M3 8l7 5 7-5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></svg></div>
+        <div class="meaning-item__num"><em>{METRIC_INQUIRIES}</em> inquiries</div>
+        <div class="meaning-item__label">that actually come to you</div>
+        <p class="meaning-item__sub">Real leads, in your inbox, from people already searching for exactly what you offer.</p>
+      </div>
+      <div class="meaning-item">
+        <div class="meaning-item__ico"><svg viewBox="0 0 20 20" fill="none"><rect x="3" y="4" width="14" height="13" rx="2" stroke="currentColor" stroke-width="1.75"/><path d="M3 8h14M7 2v4M13 2v4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></svg></div>
+        <div class="meaning-item__num">One <em>extra</em> booking</div>
+        <div class="meaning-item__label">{METRIC_BOOKING_CADENCE}</div>
+        <p class="meaning-item__sub">Consistent, predictable income growth — not feast-or-famine, not depending on word of mouth alone.</p>
+      </div>
+      <div class="meaning-item">
+        <div class="meaning-item__ico"><svg viewBox="0 0 20 20" fill="none"><path d="M10 3v14M5 8l5-5 5 5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="meaning-item__num">A <em>real</em> investment</div>
+        <div class="meaning-item__label">in your next chapter</div>
+        <p class="meaning-item__sub">{METRIC_MEANING_STATEMENT}</p>
+      </div>
+    </div>
+    <div class="meaning-close">
+      <p class="meaning-close__quote">Most clients break even within <em>three bookings.</em> Everything after that is the business you always wanted to run.</p>
+      <div class="meaning-close__aside">
+        <div class="meaning-close__aside-num">3×</div>
+        <div class="meaning-close__aside-label">typical time to break even</div>
+      </div>
+    </div>
+  </div>
+</section>
+-->
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     09 · WHY ASPIRE + CTA
+═══════════════════════════════════════════════════════════ -->
+<section class="sec-group sec-group--dark">
+  <div class="sec-group__in">
+    <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><path d="M6 1l1.5 3.5L11 5l-2.75 2.5L9 11 6 9l-3 2 .75-3.5L1 5l3.5-.5z"/></svg></span><span class="sec-badge__label">Why Us</span></div>
+    <div class="sec-head">
+      <span class="sec-head__num">09</span>
+      <div class="sec-head__body">
+        <h2 class="sec-head__title">Why <em>Aspire Digital</em></h2>
+        <p class="sec-head__sub">Craft, clarity, and a partnership that lasts past launch.</p>
+      </div>
+    </div>
+
+    <div class="opp-bullets">
+      <div class="opp-bullets__label">The Opportunity — Specific to Aspire Digital</div>
+      <ul class="opp-bullets__list">
+        <li>Zero GBP presence while both top Columbus competitors have verified listings with 45–50 five-star reviews — this is the single highest-ROI fix available.</li>
+        <li>The blog, portfolio, and case studies are already built — the content foundation is there. What's missing is the local search infrastructure to surface it.</li>
+        <li>Aspire sells AI search optimization to clients. Being invisible to AI search while running that service is a credibility gap worth closing.</li>
+      </ul>
+    </div>
+
+    <div class="prose">
+      <p>This self-audit was built the same way every Aspire client brief is built — real research, real data, no flattery. The portfolio is genuine, the craft is real, and the work speaks for itself. The gap isn't the product. It's the pipeline. Fix the GBP, earn some reviews, and let the work do what it's always done.</p>
+    </div>
+
+    <div class="why-values">
+      <div class="why-val">
+        <div class="why-val__icon"><span class="material-symbols-outlined">design_services</span></div>
+        <p class="why-val__label">Tailored from scratch</p>
+        <p class="why-val__desc">No templates. Every site is built around your business, your customers, and your market.</p>
+      </div>
+      <div class="why-val">
+        <div class="why-val__icon"><span class="material-symbols-outlined">verified</span></div>
+        <p class="why-val__label">We show up after launch</p>
+        <p class="why-val__desc">Monthly care plans keep your site fast, secure, and growing — not left to go stale.</p>
+      </div>
+      <div class="why-val">
+        <div class="why-val__icon"><span class="material-symbols-outlined">handshake</span></div>
+        <p class="why-val__label">Honest to the core</p>
+        <p class="why-val__desc">We tell you what you actually need — and what you don't. Straight talk, no upsells.</p>
+      </div>
+    </div>
+
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-card__photo">
+          <img src="./chris-profile.png" alt="Chris Otten">
+          <div class="team-card__tint"></div>
+          <div class="team-card__socials">
+            <a href="https://instagram.com/chrisotten" class="team-card__social-btn" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://linkedin.com/in/chrisotten" class="team-card__social-btn" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+          </div>
+          <div class="team-card__overlay">
+            <p class="team-card__role">Founder &amp; Technical Director</p>
+            <h3 class="team-card__name">Chris Otten</h3>
+          </div>
+        </div>
+        <div class="team-card__body">
+          <p class="team-card__bio">Technical architecture, development, and strategy — every site ships fast, accessible, and SEO-ready.</p>
+          <div class="team-card__links">
+            <a href="mailto:chris@madebyaspire.com">chris@madebyaspire.com</a>
+          </div>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-card__photo">
+          <img src="./jaime-profile.png" alt="Jaime Otten">
+          <div class="team-card__tint"></div>
+          <div class="team-card__socials">
+            <a href="https://instagram.com/jaimeotten" class="team-card__social-btn" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://linkedin.com/in/jaimeotten" class="team-card__social-btn" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+          </div>
+          <div class="team-card__overlay">
+            <p class="team-card__role">Founder &amp; Creative Director</p>
+            <h3 class="team-card__name">Jaime Otten</h3>
+          </div>
+        </div>
+        <div class="team-card__body">
+          <p class="team-card__bio">20+ years of senior UX/UI design. Every visual direction, every site, every time.</p>
+          <div class="team-card__links">
+            <a href="mailto:jaime@madebyaspire.com">jaime@madebyaspire.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="why-reviews">
+      <p class="why-reviews__label">What our clients say</p>
+      <div class="review-grid">
+        <div class="review-card">
+          <div class="review-card__stars">★★★★★</div>
+          <p class="review-card__quote">"My portfolio finally feels like me. The gallery is the hero of the site and clients show up already sold — I'm not chasing down leads anymore."</p>
+          <p class="review-card__by">Betsy B. — Photos by B4</p>
+        </div>
+        <div class="review-card">
+          <div class="review-card__stars">★★★★★</div>
+          <p class="review-card__quote">"Chris and Jaime designed my logo years ago — when I needed the digital side redone, there was no question who to call. They just get us."</p>
+          <p class="review-card__by">Bryan C. — B Clean Carpet</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA — standalone closing section -->
+<section class="sec-group sec-group--cream">
+  <div class="sec-group__in">
     <div class="cta-box">
-      <div class="cta-heading">Ready to apply the same <em>standard</em> to yourself?</div>
-      <p class="cta-sub">This is the roadmap. The only thing left is to start.</p>
-      <a href="https://madebyaspire.com/contact.html" class="cta-button" target="_blank">Start the Conversation</a>
-      <p class="cta-or">or reach Chris directly at <a href="mailto:Chris@aspiredigital.dev">Chris@aspiredigital.dev</a></p>
+      <p class="cta-box__eyebrow">Let's Build Something</p>
+      <h3 class="cta-box__heading">Ready to show up where Columbus <em>is already looking?</em></h3>
+      <div class="cta-steps">
+        <div class="cta-step">
+          <span class="cta-step__num">1</span>
+          <div>
+            <strong class="cta-step__label">Book a free 30-min strategy call</strong>
+            <p class="cta-step__desc">We'll map out the exact plan for your business — no pitch, just a plan.</p>
+          </div>
+        </div>
+        <div class="cta-step">
+          <span class="cta-step__num">2</span>
+          <div>
+            <strong class="cta-step__label">We design and build — 100% custom</strong>
+            <p class="cta-step__desc">No templates. Typically 30 days from kickoff to launch-ready.</p>
+          </div>
+        </div>
+        <div class="cta-step">
+          <span class="cta-step__num">3</span>
+          <div>
+            <strong class="cta-step__label">You launch and own your market</strong>
+            <p class="cta-step__desc">30 days of post-launch support included. We take 2–3 new clients per month — spots are limited.</p>
+          </div>
+        </div>
+      </div>
+      <a href="https://madebyaspire.com/book" class="btn-pill btn-pill--cream" target="_blank" rel="noopener">
+        <span class="btn-pill__fill"></span>
+        <span class="btn-pill__label">Book a Free Strategy Call</span>
+        <span class="btn-pill__arrow">→</span>
+      </a>
     </div>
-  </section>
+  </div>
+</section>
 
-</div>
 
-<!-- FOOTER -->
-<div class="footer">
-  <p>Prepared by <strong>Aspire Digital</strong> · <a href="https://madebyaspire.com">madebyaspire.com</a></p>
-  <p style="margin-top:8px">Questions? Reach out to <a href="mailto:Chris@aspiredigital.dev">Chris</a> · <a href="mailto:Chris@aspiredigital.dev">Chris@aspiredigital.dev</a></p>
-  <p style="margin-top:12px;font-size:11px;color:var(--text-muted)">© 2026 Aspire Digital · This brief was prepared for Aspire Digital</p>
-</div>
+<!-- FOOTER — Standard Aspire doc footer -->
+<footer class="guide-footer">
+  <div style="display:flex;flex-direction:column;align-items:center;gap:.5rem;width:100%;max-width:640px;padding-bottom:2rem;border-bottom:1px solid rgba(250,240,226,.07);">
+    <a href="https://madebyaspire.com" target="_blank" rel="noopener" aria-label="Aspire Digital — visit website" style="display:block;margin-bottom:.25rem;">
+      <img src="./aspire-primary-white.svg" alt="Aspire Digital" style="height:26px;width:auto;display:block;opacity:.65;">
+    </a>
+    <p class="guide-footer__heading" style="margin:0;">Questions? We're here.</p>
+    <p class="guide-footer__sub" style="margin:0;">Reach out to either of us directly — we'll get back to you same day.</p>
+  </div>
+  <div class="footer-contacts">
+    <div class="footer-contact">
+      <p class="footer-contact__name">Chris Otten</p>
+      <p class="footer-contact__role">Founder &amp; Strategist</p>
+      <div class="footer-contact__links">
+        <a href="mailto:chris@madebyaspire.com">chris@madebyaspire.com</a>
+        <a href="tel:+16144993575">614-499-3575</a>
+      </div>
+    </div>
+    <div class="footer-contact">
+      <p class="footer-contact__name">Jaime Otten</p>
+      <p class="footer-contact__role">Lead Designer</p>
+      <div class="footer-contact__links">
+        <a href="mailto:jaime@madebyaspire.com">jaime@madebyaspire.com</a>
+        <a href="tel:+16142052796">614-205-2796</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-social">
+    <p class="footer-social__label">Follow us</p>
+    <div class="footer-social__icons">
+      <a class="footer-social__link" href="https://instagram.com/madebyaspire" target="_blank" aria-label="Instagram">
+        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      </a>
+      <a class="footer-social__link" href="https://linkedin.com/company/aspire-digital-dev" target="_blank" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </a>
+      <a class="footer-social__link" href="https://facebook.com/madebyaspire" target="_blank" aria-label="Facebook">
+        <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+      </a>
+    </div>
+  </div>
+  <p class="guide-footer__tagline">Defined by craft. Rooted in faith.</p>
+</footer>
 
 </body>
 </html>
