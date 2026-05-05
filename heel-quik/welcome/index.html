@@ -1,0 +1,1747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Heel Quik — Digital Growth Brief | Aspire Digital</title>
+<link rel="icon" type="image/svg+xml" href="./favicon.svg">
+<!-- Open Graph / iMessage / SMS preview -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Heel Quik — Your Digital Growth Opportunity">
+<meta property="og:description" content="We took a deep look at Heel Quik's online presence and found some exciting opportunities. Here's what we found.">
+<meta property="og:image" content="https://yoursite.madebyaspire.com/heel-quik/welcome/og-card.png">
+<meta property="og:url" content="https://yoursite.madebyaspire.com/heel-quik/welcome/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Heel Quik — Your Digital Growth Opportunity">
+<meta name="twitter:description" content="A personalized digital review prepared by Aspire Digital.">
+<meta name="twitter:image" content="https://yoursite.madebyaspire.com/heel-quik/welcome/og-card.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Serif+Display:ital@0;1&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Unbounded:wght@400;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0" rel="stylesheet">
+<style>
+/* ── TOKENS ── */
+:root{
+  --bg:#FAF0E2; --bg-alt:#F2EDE6; --bg-night:#1A1F28;
+  --accent:#C4622D; --accent-dk:#A34E1A;
+  --green:#4A7B5A; --sage:#8FAF8A;
+  --charcoal:#2C3340;
+  --text:#2C3340; --text-sec:#5A6072; --text-muted:#888E97;
+  --border:rgba(44,51,64,.13); --border-lt:rgba(44,51,64,.07);
+  --white:#fff;
+  --r-sm:6px; --r-md:10px; --r-lg:16px; --r-xl:22px; --r-full:999px;
+  --sh-sm:0 1px 4px rgba(0,0,0,.07); --sh-md:0 4px 16px rgba(0,0,0,.1);
+  --f-d:"DM Serif Display",Georgia,serif;
+  --f-a:"EB Garamond",Georgia,serif;
+  --f-n:"Unbounded",-apple-system,system-ui,sans-serif;
+  --f-b:"DM Sans",-apple-system,system-ui,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{font-size:17px;-webkit-font-smoothing:antialiased;scroll-behavior:smooth;scroll-padding-top:80px;}
+body{font-family:var(--f-b);font-size:16px;line-height:1.75;background:var(--bg-night);color:var(--text);}
+img{max-width:100%;display:block;}
+::selection{background:var(--accent);color:#fff;}
+
+/* ── TOPBAR ── */
+.topbar{position:fixed;top:0;left:0;right:0;z-index:200;height:58px;background:var(--white);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.875rem;padding:0 2rem;box-shadow:0 1px 0 var(--border);}
+.topbar__logo{height:22px;flex-shrink:0;}
+.topbar__sep{width:1px;height:20px;background:var(--border);flex-shrink:0;}
+.topbar__label{font-family:var(--f-b);font-size:.9375rem;font-weight:600;color:var(--text-sec);}
+.topbar__ver{font-family:var(--f-n);font-size:.75rem;font-weight:500;color:var(--text-muted);letter-spacing:.03em;}
+.topbar__badge{margin-left:auto;font-family:var(--f-n);font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--white);background:var(--accent);padding:4px 12px;border-radius:var(--r-full);max-width:50%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+
+/* ── HERO ── */
+.hero{padding-top:58px;background:var(--bg-night);padding-bottom:0;}
+.hero__inner{max-width:960px;margin:0 auto;padding:5rem 2rem 5.5rem;display:grid;grid-template-columns:1.35fr 1fr;grid-template-rows:auto auto;gap:1.5rem 3.5rem;align-items:start;}
+.hero__top{grid-column:1/-1;padding-bottom:.5rem;}
+.hero__top .hero__h1{font-size:clamp(2.25rem,4.5vw,3.5rem);line-height:1.08;}
+.hero__text{min-width:0;}
+.hero__h1{overflow-wrap:anywhere;word-break:break-word;hyphens:auto;}
+.hero__eyebrow{font-family:var(--f-n);font-size:.75rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:1.25rem;display:flex;align-items:center;gap:.625rem;}
+.hero__eyebrow-dot{width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;}
+.hero__h1{font-family:var(--f-d);font-style:italic;font-size:clamp(2.5rem,5.5vw,4.25rem);font-weight:400;color:var(--bg);line-height:1.05;margin-bottom:1rem;}
+.hero__h1 em{font-style:italic;color:var(--accent);font-family:var(--f-d);}
+.hero__sub{font-family:var(--f-b);font-size:1.125rem;color:rgba(250,240,226,.72);line-height:1.65;margin-bottom:0;max-width:480px;}
+.hero__meta{display:flex;flex-direction:column;gap:1.25rem;padding:.25rem 0 .25rem 2rem;border-left:1px solid rgba(255,255,255,.1);margin-top:2rem;}
+.hero__meta-item dt{font-family:var(--f-n);font-size:.6875rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(250,240,226,.3);margin-bottom:.35rem;}
+.hero__meta-item dd{font-family:var(--f-b);font-size:.9375rem;font-weight:500;color:var(--bg);}
+.hero__meta-item dd.fill{font-family:var(--f-d);font-style:normal;font-size:1.125rem;color:var(--sage);}
+.hero__meta-item a{color:inherit;text-decoration:none;border-bottom:1px solid rgba(143,175,138,.4);padding-bottom:1px;}
+
+/* ── ACCENT STRIPE ── */
+.accent-stripe{height:3px;background:linear-gradient(to right,var(--accent),#A34E1A);}
+
+/* ── SECTION GROUPS ── */
+.sec-group{padding:5rem 2rem;}
+.sec-group--dark{background:var(--bg-night);}
+.sec-group--cream{background:var(--bg);}
+.sec-group--alt{background:var(--bg-alt);}
+.sec-group__in{max-width:860px;margin:0 auto;}
+
+.sec-badge{display:inline-flex;align-items:center;gap:10px;padding:5px 18px 5px 5px;border-radius:var(--r-full);margin-bottom:1.75rem;}
+.sec-group--cream .sec-badge,.sec-group--alt .sec-badge{background:var(--bg);border:1px solid var(--border);box-shadow:var(--sh-sm);}
+.sec-group--dark .sec-badge{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);}
+.sec-badge__icon{width:30px;height:30px;border-radius:50%;background:var(--green);color:var(--white);display:grid;place-items:center;flex-shrink:0;}
+.sec-badge__icon svg{width:12px;height:12px;fill:none;stroke:#fff;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;}
+.sec-badge__label{font-family:var(--f-n);font-size:.6875rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;}
+.sec-group--cream .sec-badge__label,.sec-group--alt .sec-badge__label{color:var(--text-sec);}
+.sec-group--dark .sec-badge__label{color:rgba(250,240,226,.55);}
+
+/* ── SECTION HEADINGS (big italic number + title pattern) ── */
+.sec-head{display:grid;grid-template-columns:auto 1fr;column-gap:1.75rem;align-items:baseline;margin-bottom:2.5rem;}
+.sec-head__num{font-family:var(--f-d);font-style:italic;font-size:clamp(3rem,5vw,4.5rem);font-weight:400;line-height:1;color:var(--accent);}
+.sec-head__body{display:flex;flex-direction:column;gap:.5rem;}
+.sec-head__title{font-family:var(--f-d);font-style:italic;font-size:clamp(1.75rem,3vw,2.5rem);font-weight:400;line-height:1.15;margin:0;}
+.sec-group--cream .sec-head__title,.sec-group--alt .sec-head__title{color:var(--charcoal);}
+.sec-group--dark .sec-head__title{color:var(--bg);}
+.sec-head__title em{font-style:italic;color:var(--accent);}
+.sec-group--dark .sec-head__title em{color:var(--accent);}
+.sec-head__sub{font-family:var(--f-b);font-size:1rem;line-height:1.65;}
+.sec-group--cream .sec-head__sub,.sec-group--alt .sec-head__sub{color:var(--text-sec);}
+.sec-group--dark .sec-head__sub{color:rgba(250,240,226,.5);}
+
+/* ── PROSE ── */
+.prose p{margin-bottom:1rem;line-height:1.8;}
+.sec-group--cream .prose p,.sec-group--alt .prose p{color:var(--text-sec);}
+.sec-group--dark .prose p{color:rgba(250,240,226,.82);}
+.prose p:last-child{margin-bottom:0;}
+.prose strong{font-weight:600;}
+.sec-group--cream .prose strong,.sec-group--alt .prose strong{color:var(--charcoal);}
+.sec-group--dark .prose strong{color:var(--bg);}
+.prose em{font-family:var(--f-a);font-style:italic;}
+.prose ul{list-style:none;padding:0;margin:1rem 0;display:flex;flex-direction:column;gap:.625rem;}
+.prose ul li{position:relative;padding-left:1.375rem;line-height:1.75;}
+.prose ul li::before{content:'';position:absolute;left:.35rem;top:.75em;width:5px;height:5px;border-radius:50%;background:var(--green);}
+.sec-group--cream .prose ul li,.sec-group--alt .prose ul li{color:var(--text-sec);}
+.sec-group--dark .prose ul li{color:rgba(250,240,226,.78);}
+
+/* ── SUB-HEADING (h3 inside sections) ── */
+.sub-head{font-family:var(--f-n);font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin:2.5rem 0 1rem;display:flex;align-items:center;gap:.5rem;}
+.sec-group--cream .sub-head,.sec-group--alt .sub-head{color:var(--text-sec);}
+.sec-group--dark .sub-head{color:rgba(250,240,226,.4);}
+.sub-head::before{content:'';display:block;width:20px;height:1px;background:currentColor;opacity:.6;}
+
+/* ── SCREENSHOT FRAME ── */
+.screenshot-frame{background:var(--white);border-radius:var(--r-lg);padding:8px;border:1px solid var(--border);box-shadow:var(--sh-md);margin:1.5rem 0;overflow:hidden;}
+.sec-group--dark .screenshot-frame{background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.08);}
+.screenshot-frame img{width:100%;border-radius:10px;display:block;max-height:440px;object-fit:cover;object-position:top center;}
+.screenshot-caption{text-align:center;font-family:var(--f-n);font-size:.6875rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--text-muted);margin-top:.75rem;}
+.sec-group--dark .screenshot-caption{color:rgba(250,240,226,.35);}
+
+/* ── SCORE CARDS ── */
+.score-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin:1.5rem 0;}
+.score-card{min-width:0;border-radius:var(--r-lg);padding:1.5rem 1.25rem;text-align:center;}
+.sec-group--cream .score-card,.sec-group--alt .score-card{background:var(--white);border:1px solid var(--border-lt);box-shadow:var(--sh-sm);}
+.sec-group--dark .score-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);}
+.score-card__label{font-family:var(--f-n);font-size:.625rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--text-muted);margin-bottom:.5rem;overflow-wrap:anywhere;}
+.sec-group--dark .score-card__label{color:rgba(250,240,226,.4);}
+.score-card__value{font-family:var(--f-n);font-size:clamp(1.375rem,2.25vw,2rem);font-weight:700;color:var(--accent);line-height:1;overflow-wrap:anywhere;letter-spacing:-.02em;}
+.score-card__note{font-family:var(--f-b);font-size:.8125rem;color:var(--text-muted);margin-top:.5rem;}
+.sec-group--dark .score-card__note{color:rgba(250,240,226,.4);}
+
+/* ── BAR CHART ── */
+.bar-chart{margin:1.5rem 0;display:flex;flex-direction:column;gap:.875rem;}
+.bar-row{display:flex;align-items:center;gap:.875rem;}
+.bar-row__label{width:160px;font-size:.8125rem;font-weight:500;flex-shrink:0;}
+.sec-group--cream .bar-row__label,.sec-group--alt .bar-row__label{color:var(--charcoal);}
+.sec-group--dark .bar-row__label{color:rgba(250,240,226,.8);}
+.bar-row__track{flex:1;height:26px;border-radius:13px;position:relative;overflow:visible;}
+.sec-group--cream .bar-row__track,.sec-group--alt .bar-row__track{background:var(--bg-alt);}
+.sec-group--dark .bar-row__track{background:rgba(255,255,255,.06);}
+.bar-row__fill{height:100%;border-radius:13px;background:var(--accent);max-width:100%;overflow:hidden;}
+.bar-row__fill--green{background:var(--green);}
+.bar-row__cmp{position:absolute;top:-3px;bottom:-3px;width:2px;background:rgba(250,240,226,.32);border-radius:1px;}
+.bar-chart__legend{display:flex;gap:1.25rem;margin-bottom:.75rem;font-family:var(--f-n);font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;}
+.bar-chart__legend-item--you{display:flex;align-items:center;gap:.375rem;color:var(--accent);}
+.bar-chart__legend-item--you::before{content:'';width:16px;height:3px;background:var(--accent);border-radius:2px;flex-shrink:0;}
+.bar-chart__legend-item--cmp{display:flex;align-items:center;gap:.375rem;color:rgba(250,240,226,.38);}
+.bar-chart__legend-item--cmp::before{content:'';width:2px;height:12px;background:rgba(250,240,226,.38);border-radius:1px;flex-shrink:0;}
+.bar-row__val{width:auto;min-width:72px;font-family:var(--f-n);font-size:.75rem;font-weight:700;text-align:right;}
+.bar-row__cmp-val{font-family:var(--f-b);font-size:.625rem;font-weight:400;display:block;opacity:.5;}
+.kw-table-wrap{background:rgba(250,240,226,.07);border:1px solid rgba(250,240,226,.11);border-radius:12px;padding:1rem;margin:1.5rem 0;}
+.sec-group--cream .bar-row__val,.sec-group--alt .bar-row__val{color:var(--text-sec);}
+.sec-group--dark .bar-row__val{color:rgba(250,240,226,.65);}
+
+/* ── COMPARE CARDS ── */
+.compare-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin:1.5rem 0;}
+.compare-card{border-radius:var(--r-lg);padding:1.5rem 1.25rem;}
+.sec-group--cream .compare-card,.sec-group--alt .compare-card{background:var(--white);border:1px solid var(--border-lt);box-shadow:var(--sh-sm);}
+.sec-group--dark .compare-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);}
+.compare-card--you{border:2px solid var(--accent)!important;background:rgba(196,98,45,.06)!important;}
+.compare-card{min-width:0;}
+.compare-card__name{font-family:var(--f-d);font-style:italic;font-size:1.25rem;font-weight:400;margin-bottom:.875rem;line-height:1.2;overflow-wrap:anywhere;}
+.sec-group--cream .compare-card__name,.sec-group--alt .compare-card__name{color:var(--charcoal);}
+.sec-group--dark .compare-card__name{color:var(--bg);}
+.compare-card__stat{display:flex;justify-content:space-between;padding:.35rem 0;font-size:.8125rem;border-bottom:1px solid var(--border-lt);}
+.sec-group--dark .compare-card__stat{border-bottom-color:rgba(255,255,255,.06);}
+.compare-card__stat:last-child{border-bottom:none;}
+.compare-card__stat-label{color:var(--text-muted);}
+.sec-group--dark .compare-card__stat-label{color:rgba(250,240,226,.35);}
+.compare-card__stat-val{font-weight:600;}
+.sec-group--cream .compare-card__stat-val,.sec-group--alt .compare-card__stat-val{color:var(--charcoal);}
+.sec-group--dark .compare-card__stat-val{color:rgba(250,240,226,.85);}
+.compare-card__stat-val--good{color:var(--green)!important;}
+.compare-card__stat-val--mid{color:#B8860B!important;}
+.compare-card__stat-val--low{color:var(--accent)!important;}
+
+/* ── KEYWORD CARDS ── */
+.kw-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:.625rem;margin:1.5rem 0;}
+.kw-card{border-radius:var(--r-md);padding:.875rem 1rem;display:flex;justify-content:space-between;align-items:center;}
+.sec-group--cream .kw-card,.sec-group--alt .kw-card{background:var(--white);border:1px solid var(--border-lt);}
+.sec-group--dark .kw-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);}
+.kw-card{min-width:0;}
+.kw-card__term{font-weight:500;font-size:.8125rem;overflow-wrap:anywhere;min-width:0;}
+.sec-group--cream .kw-card__term,.sec-group--alt .kw-card__term{color:var(--charcoal);}
+.sec-group--dark .kw-card__term{color:rgba(250,240,226,.85);}
+.kw-card__vol{font-family:var(--f-n);font-size:.625rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text-muted);white-space:nowrap;margin-left:.75rem;}
+.sec-group--dark .kw-card__vol{color:rgba(250,240,226,.4);}
+.kw-card__vol strong{font-family:var(--f-n);font-size:.875rem;font-weight:700;color:var(--accent);letter-spacing:0;}
+.kw-card--hot{border-color:rgba(196,98,45,.3)!important;background:rgba(196,98,45,.06)!important;}
+
+/* ── PILL TAGS ── */
+.tag{display:inline-block;padding:3px 10px;border-radius:var(--r-full);font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;}
+.tag--easy{background:rgba(74,123,90,.15);color:var(--green);}
+.tag--medium{background:rgba(184,134,11,.12);color:#B8860B;}
+.tag--high{background:var(--accent);color:#fff;}
+.tag--mid-impact{background:rgba(74,123,90,.12);color:var(--green);}
+
+/* ── OPPORTUNITY CARDS (matching website-reveal page-row) ── */
+/* padding-left indents the list past the section's "06" number so the nested 01/02/03/04 sit subordinate to the section heading */
+.opp-list{display:flex;flex-direction:column;margin:1.5rem 0;padding-left:clamp(2.5rem,6vw,6.25rem);}
+.opp-row{display:grid;grid-template-columns:68px 1fr;grid-template-rows:auto auto;column-gap:1.5rem;row-gap:.5rem;padding:2rem 0;border-top:1px solid var(--border);}
+.sec-group--dark .opp-row{border-top-color:rgba(255,255,255,.08);}
+.opp-row:last-child{border-bottom:1px solid var(--border);}
+.sec-group--dark .opp-row:last-child{border-bottom-color:rgba(255,255,255,.08);}
+.opp-row__num{grid-row:1/3;font-family:var(--f-d);font-style:italic;font-size:clamp(1.75rem,2.75vw,2.5rem);font-weight:400;color:var(--accent);line-height:1;opacity:.85;}
+.opp-row__title{font-family:var(--f-d);font-style:italic;font-size:clamp(1.125rem,1.8vw,1.4375rem);font-weight:400;line-height:1.2;align-self:end;overflow-wrap:anywhere;}
+.sec-group--cream .opp-row__title,.sec-group--alt .opp-row__title{color:var(--charcoal);}
+.sec-group--dark .opp-row__title{color:var(--bg);}
+.opp-row__desc{font-size:.9375rem;line-height:1.7;}
+.sec-group--cream .opp-row__desc,.sec-group--alt .opp-row__desc{color:var(--text-sec);}
+.sec-group--dark .opp-row__desc{color:rgba(250,240,226,.75);}
+.opp-row__tags{grid-column:1/-1;display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.5rem;}
+
+/* ── TIMELINE (website-reveal action-item style) ── */
+.timeline{display:flex;flex-direction:column;margin:1.5rem 0;}
+.timeline-item{display:flex;gap:1rem;padding:1.25rem 0;border-top:1px solid var(--border);}
+.sec-group--dark .timeline-item{border-top-color:rgba(255,255,255,.07);}
+.timeline-item:first-child{border-top:none;padding-top:0;}
+.timeline-item__num{font-family:var(--f-n);font-size:.6875rem;font-weight:700;color:var(--accent);min-width:3rem;padding-top:.3em;flex-shrink:0;letter-spacing:.08em;text-transform:uppercase;}
+.timeline-item__body{flex:1;}
+.timeline-item__title{font-family:var(--f-d);font-style:italic;font-size:clamp(1.1rem,1.6vw,1.25rem);font-weight:400;margin-bottom:.35rem;line-height:1.2;overflow-wrap:anywhere;}
+.sec-group--cream .timeline-item__title,.sec-group--alt .timeline-item__title{color:var(--charcoal);}
+.sec-group--dark .timeline-item__title{color:rgba(250,240,226,.92);}
+.timeline-item__detail{font-size:.9375rem;line-height:1.65;}
+.sec-group--cream .timeline-item__detail,.sec-group--alt .timeline-item__detail{color:var(--text-sec);}
+.sec-group--dark .timeline-item__detail{color:rgba(250,240,226,.6);}
+
+/* ── REVENUE BOX (legacy, kept for backward compat) ── */
+.revenue-box{background:var(--green);color:#fff;border-radius:var(--r-xl);padding:3rem 2.5rem;text-align:center;margin:2rem 0;}
+.revenue-box__label{font-family:var(--f-n);font-size:.6875rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;opacity:.7;margin-bottom:.625rem;}
+.revenue-box__amount{font-family:var(--f-d);font-style:italic;font-size:clamp(2.75rem,7vw,4.5rem);font-weight:400;line-height:1;margin-bottom:.5rem;overflow-wrap:anywhere;}
+.revenue-box__note{font-family:var(--f-a);font-style:italic;font-size:1rem;opacity:.82;max-width:500px;margin:0 auto;line-height:1.55;}
+
+/* ── FUNNEL B — EQUATION HEADER + CARD GRID ── */
+.funnel-b{margin:0 0 2rem;}
+.funnel-b__eq{font-family:var(--f-n);font-weight:900;font-size:clamp(.9rem,2vw,1.625rem);color:var(--charcoal);line-height:1.35;letter-spacing:-.02em;text-align:center;padding:2.25rem 2rem 1.75rem;background:var(--white);border:1px solid var(--border);border-radius:var(--r-xl) var(--r-xl) 0 0;border-bottom:none;}
+.funnel-b__eq .op{color:var(--accent);}
+.funnel-b__eq .result{display:block;font-size:clamp(2.5rem,5.5vw,4rem);color:var(--accent);margin-top:.625rem;letter-spacing:-.03em;line-height:1;}
+.funnel-b__eq .result-meta{display:block;font-size:.5rem;letter-spacing:.16em;color:var(--text-muted);font-weight:700;text-transform:uppercase;margin-top:.5rem;}
+.funnel-b__cards{display:flex;border:1px solid var(--border);border-radius:0 0 var(--r-xl) var(--r-xl);border-top:2px solid var(--border-light);overflow:hidden;}
+.funnel-b__card{flex:1;min-width:0;padding:1.375rem 1.25rem 1.5rem;background:var(--white);border-right:1px solid var(--border-light);}
+.funnel-b__card:last-child{border-right:none;}
+.funnel-b__op{flex-shrink:0;width:2.25rem;display:flex;align-items:center;justify-content:center;background:var(--white);font-family:var(--f-n);font-weight:900;font-size:1rem;color:var(--accent);border-right:1px solid var(--border-light);}
+.funnel-b__card-label{font-family:var(--f-n);font-size:.45rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:.4rem;}
+.funnel-b__card-val{font-family:var(--f-n);font-weight:700;font-size:clamp(.875rem,1.5vw,1.125rem);color:var(--charcoal);line-height:1;margin-bottom:.5rem;}
+.funnel-b__card-sub{font-size:.75rem;color:var(--text-muted);line-height:1.5;}
+.funnel-note{padding:1.25rem 1.5rem;border-radius:var(--r-md);background:var(--bg-alt);border-left:3px solid var(--border);}
+.funnel-note p{font-size:.875rem;color:var(--text-muted);line-height:1.6;}
+.funnel-note strong{color:var(--text-sec);font-weight:600;}
+
+/* ── REVENUE VARIANT B — THE GAP (before/after split) ── */
+.gap-wrap{display:grid;grid-template-columns:1fr 1fr;border-radius:var(--r-xl);overflow:hidden;margin-bottom:1.5rem;min-height:340px;}
+.gap-now{background:#222830;padding:3rem 2.75rem;display:flex;flex-direction:column;justify-content:space-between;position:relative;}
+.gap-now::after{content:'';position:absolute;inset:0;background:repeating-linear-gradient(-45deg,transparent,transparent 12px,rgba(255,255,255,.012) 12px,rgba(255,255,255,.012) 13px);pointer-events:none;}
+.gap-now__eyebrow,.gap-after__eyebrow{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;margin-bottom:1.5rem;}
+.gap-now__eyebrow{color:rgba(250,240,226,.25);}
+.gap-after__eyebrow{color:rgba(250,240,226,.5);}
+.gap-now__headline{font-family:var(--f-b);font-style:normal;font-size:clamp(1rem,1.8vw,1.375rem);line-height:1.45;color:rgba(250,240,226,.45);flex:1;margin-bottom:1.5rem;}
+.gap-after__headline{font-family:var(--f-b);font-style:normal;font-size:clamp(1rem,1.8vw,1.375rem);line-height:1.45;color:rgba(250,240,226,.92);flex:1;margin-bottom:1.5rem;}
+.gap-now__num{font-family:var(--f-n);font-weight:700;font-size:clamp(1.625rem,3.25vw,2.625rem);line-height:1;color:rgba(250,240,226,.18);overflow-wrap:anywhere;}
+.gap-now__sublabel,.gap-after__sublabel{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-top:.5rem;}
+.gap-now__sublabel{color:rgba(250,240,226,.15);}
+.gap-after{background:var(--green-dk);padding:3rem 2.75rem;display:flex;flex-direction:column;justify-content:space-between;}
+.gap-after__num{font-family:var(--f-n);font-weight:700;font-size:clamp(1.625rem,3.25vw,2.625rem);line-height:1;color:var(--sage);overflow-wrap:anywhere;}
+.gap-after__sublabel{color:rgba(250,240,226,.4);}
+.gap-bridge{background:var(--bg-alt);border-radius:var(--r-lg);padding:1.5rem 2rem;display:flex;align-items:center;gap:1.5rem;margin-bottom:1.5rem;}
+.gap-bridge__line{flex:1;height:1px;background:var(--border);}
+.gap-bridge__text{font-size:1.0625rem;font-weight:500;color:var(--text-sec);white-space:nowrap;}
+.gap-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;}
+.gap-metric{text-align:center;padding:1.25rem 1rem;}
+.gap-metric__val{font-family:var(--f-d);font-style:italic;font-size:1.75rem;color:var(--accent);line-height:1;margin-bottom:.375rem;}
+.gap-metric__label{font-size:.8125rem;color:var(--text-sec);}
+
+/* ── REVENUE VARIANT C — THE RANGE (floor / plan / ceiling) ── */
+.range-lead{text-align:center;padding:2rem 2rem 2.5rem;}
+.range-lead__eyebrow{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(250,240,226,.3);margin-bottom:1rem;}
+.range-lead__num{font-family:var(--f-n);font-weight:900;font-size:clamp(3.5rem,7vw,5.5rem);color:var(--accent);line-height:1;letter-spacing:-.03em;overflow-wrap:anywhere;}
+.range-lead__label{font-family:var(--f-b);font-size:1.125rem;color:rgba(250,240,226,.6);margin:.5rem 0 .875rem;}
+.range-lead__badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(196,98,45,.15);border:1px solid rgba(196,98,45,.3);border-radius:var(--r-full);padding:.375rem 1.125rem;font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);}
+.range-spectrum{margin:0 0 2rem;padding:0 .25rem;}
+.range-spectrum__meta{display:grid;grid-template-columns:1fr 1fr 1fr;margin-bottom:.625rem;align-items:end;}
+.range-spectrum__col{display:flex;flex-direction:column;gap:.25rem;}
+.range-spectrum__col--plan{text-align:center;align-items:center;}
+.range-spectrum__col--ceil{text-align:right;align-items:flex-end;}
+.range-spectrum__tier{font-family:var(--f-n);font-size:.45rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;}
+.range-spectrum__col--floor .range-spectrum__tier{color:rgba(250,240,226,.25);}
+.range-spectrum__col--plan .range-spectrum__tier{color:var(--accent);}
+.range-spectrum__col--ceil .range-spectrum__tier{color:var(--sage);}
+.range-spectrum__amt{font-family:var(--f-n);font-weight:700;line-height:1;}
+.range-spectrum__col--floor .range-spectrum__amt{font-size:1rem;color:rgba(250,240,226,.35);}
+.range-spectrum__col--plan .range-spectrum__amt{font-size:1.5rem;color:rgba(250,240,226,.9);}
+.range-spectrum__col--ceil .range-spectrum__amt{font-size:1rem;color:var(--sage);}
+.range-track-wrap{position:relative;height:10px;border-radius:var(--r-full);background:rgba(255,255,255,.06);margin:1rem 0 1.75rem;}
+.range-track{position:absolute;inset:0;border-radius:var(--r-full);background:linear-gradient(to right,rgba(255,255,255,.1) 0%,var(--accent) 58%,var(--green) 100%);}
+.range-marker{position:absolute;top:50%;width:18px;height:18px;border-radius:50%;transform:translate(-50%,-50%);}
+.range-marker--floor{left:12%;background:rgba(255,255,255,.18);border:2px solid rgba(255,255,255,.25);}
+.range-marker--plan{left:58%;background:var(--accent);box-shadow:0 0 0 5px rgba(196,98,45,.22);}
+.range-marker--ceil{left:98%;background:var(--green);border:2px solid rgba(74,123,90,.5);}
+.range-fc{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:1.5rem;}
+.range-fc__item{border-radius:var(--r-lg);padding:1.375rem 1.5rem;}
+.range-fc__item--floor{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);}
+.range-fc__item--ceil{background:rgba(74,123,90,.1);border:1px solid rgba(74,123,90,.2);}
+.range-fc__label{font-family:var(--f-n);font-size:.45rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:.5rem;}
+.range-fc__item--floor .range-fc__label{color:rgba(250,240,226,.25);}
+.range-fc__item--ceil .range-fc__label{color:var(--sage);}
+.range-fc__amt{font-family:var(--f-n);font-weight:700;font-size:1.25rem;line-height:1;margin-bottom:.5rem;overflow-wrap:anywhere;}
+.range-fc__item--floor .range-fc__amt{color:rgba(250,240,226,.42);}
+.range-fc__item--ceil .range-fc__amt{color:var(--sage);}
+.range-fc__desc{font-size:.8125rem;line-height:1.6;}
+.range-fc__item--floor .range-fc__desc{color:rgba(250,240,226,.35);}
+.range-fc__item--ceil .range-fc__desc{color:rgba(250,240,226,.6);}
+@media(max-width:600px){.range-fc{grid-template-columns:1fr;}}
+.range-callout{border-radius:var(--r-lg);padding:1.5rem 2rem;background:rgba(250,240,226,.04);border:1px solid rgba(250,240,226,.06);display:flex;align-items:center;gap:1.5rem;}
+.range-callout__icon{width:36px;height:36px;border-radius:50%;background:rgba(196,98,45,.15);display:grid;place-items:center;flex-shrink:0;}
+.range-callout__icon svg{width:16px;height:16px;stroke:var(--accent);stroke-width:2;fill:none;}
+.range-callout__text{font-size:1rem;color:rgba(250,240,226,.55);line-height:1.55;}
+.range-callout__text strong{font-style:normal;font-weight:600;color:rgba(250,240,226,.82);}
+
+/* ── VARIANT B REDESIGN — stats-first layout ── */
+.gap-hook{font-family:var(--f-b);font-style:normal;font-size:clamp(1rem,1.75vw,1.1875rem);line-height:1.65;color:rgba(250,240,226,.48);margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid rgba(255,255,255,.07);}
+.gap-metrics--hero{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-radius:var(--r-xl);overflow:hidden;border:1px solid rgba(255,255,255,.08);margin-bottom:1.5rem;}
+.gap-metrics--hero .gap-metric{padding:2.25rem 1.75rem;border-right:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.025);text-align:left;}
+.gap-metrics--hero .gap-metric:last-child{border-right:none;}
+.gap-metrics--hero .gap-metric__val{font-size:clamp(2.25rem,4vw,3.25rem);margin-bottom:.375rem;}
+.gap-metrics--hero .gap-metric__label{margin-bottom:.75rem;}
+.gap-metric__sub{font-size:.8125rem;color:rgba(250,240,226,.38);line-height:1.6;}
+.gap-anchor{text-align:center;padding:1.75rem 1rem;margin-bottom:1.5rem;}
+.gap-anchor__label{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(250,240,226,.28);margin-bottom:.875rem;}
+.gap-anchor__num{font-family:var(--f-n);font-weight:900;font-size:clamp(2.75rem,5.5vw,4.25rem);color:var(--accent);line-height:1;letter-spacing:-.025em;overflow-wrap:anywhere;}
+.gap-anchor__period{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(250,240,226,.22);margin-top:.625rem;}
+@media(max-width:640px){.gap-metrics--hero{grid-template-columns:1fr;}.gap-metrics--hero .gap-metric{border-right:none;border-bottom:1px solid rgba(255,255,255,.08);}.gap-metrics--hero .gap-metric:last-child{border-bottom:none;}}
+
+/* ── VARIANT C — cream background overrides ── */
+.sec-group--cream .range-lead__eyebrow{color:var(--text-muted);}
+.sec-group--cream .range-lead__label{color:var(--text-sec);}
+.sec-group--cream .range-lead__badge{background:rgba(196,98,45,.08);border-color:rgba(196,98,45,.22);}
+.sec-group--cream .range-spectrum__col--floor .range-spectrum__tier{color:var(--text-muted);}
+.sec-group--cream .range-spectrum__col--floor .range-spectrum__amt{color:var(--text-muted);}
+.sec-group--cream .range-spectrum__col--plan .range-spectrum__amt{color:var(--charcoal);}
+.sec-group--cream .range-track-wrap{background:var(--bg-alt);}
+.sec-group--cream .range-track{background:linear-gradient(to right,rgba(0,0,0,.06) 0%,var(--accent) 58%,var(--green) 100%);}
+.sec-group--cream .range-marker{width:2px;height:18px;border-radius:1px;border:none;box-shadow:none;}
+.sec-group--cream .range-marker--floor{background:rgba(0,0,0,.2);}
+.sec-group--cream .range-marker--plan{background:var(--accent-dk);}
+.sec-group--cream .range-marker--ceil{background:var(--green);}
+.sec-group--cream .range-fc__item--floor{background:var(--white);border-color:var(--border-lt);box-shadow:var(--sh-sm);}
+.sec-group--cream .range-fc__item--ceil{background:rgba(74,123,90,.05);border-color:rgba(74,123,90,.18);}
+.sec-group--cream .range-fc__item--floor .range-fc__label{color:var(--text-muted);}
+.sec-group--cream .range-fc__item--floor .range-fc__amt{color:var(--text-sec);}
+.sec-group--cream .range-fc__item--floor .range-fc__desc{color:var(--text-sec);}
+.sec-group--cream .range-fc__item--ceil .range-fc__label{color:var(--green);}
+.sec-group--cream .range-fc__item--ceil .range-fc__amt{color:var(--green);}
+.sec-group--cream .range-fc__item--ceil .range-fc__desc{color:var(--charcoal);}
+.sec-group--cream .range-callout{background:var(--white);border-color:var(--border);box-shadow:var(--sh-sm);}
+.sec-group--cream .range-callout__icon{background:rgba(196,98,45,.08);}
+.sec-group--cream .range-callout__text{color:var(--text-sec);}
+.sec-group--cream .range-callout__text strong{color:var(--charcoal);}
+
+/* ── REVENUE VARIANT D — WHAT IT MEANS (human translation) ── */
+.meaning-anchor{text-align:center;margin-bottom:3rem;padding:2.5rem 2rem;border-bottom:1px solid var(--border);}
+.meaning-anchor__label{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--text-muted);margin-bottom:1.25rem;}
+.meaning-anchor__num{font-family:var(--f-n);font-weight:900;font-size:clamp(3.25rem,5.75vw,4.5rem);color:var(--accent);line-height:1;margin-bottom:.5rem;overflow-wrap:anywhere;}
+.meaning-anchor__period{font-size:1.25rem;color:var(--text-sec);}
+.meaning-anchor__note{font-size:.875rem;color:var(--text-muted);margin-top:.75rem;}
+.meaning-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--r-xl);overflow:hidden;margin-bottom:1.5rem;}
+.meaning-item{background:var(--white);padding:2.5rem 2rem;display:flex;flex-direction:column;gap:.875rem;}
+.meaning-item__ico{width:44px;height:44px;border-radius:var(--r-md);background:rgba(196,98,45,.1);display:grid;place-items:center;}
+.meaning-item__ico svg{width:20px;height:20px;stroke:var(--accent-dk);stroke-width:1.75;fill:none;}
+.meaning-item__num{font-family:var(--f-n);font-weight:700;font-size:clamp(1.375rem,2.375vw,2rem);color:var(--charcoal);line-height:1;overflow-wrap:anywhere;}
+.meaning-item__num em{color:var(--accent);font-style:normal;}
+.meaning-item__label{font-size:.9375rem;font-weight:600;color:var(--charcoal);}
+.meaning-item__sub{font-size:.875rem;color:var(--text-sec);line-height:1.6;}
+.meaning-close{background:var(--charcoal);border-radius:var(--r-xl);padding:2.5rem;display:flex;align-items:center;gap:2rem;flex-wrap:wrap;}
+.meaning-close__quote{font-family:var(--f-b);font-style:normal;font-size:1.125rem;font-weight:600;line-height:1.5;color:rgba(250,240,226,.85);flex:1;min-width:200px;}
+.meaning-close__quote em{color:var(--accent);font-style:normal;}
+.meaning-close__aside{flex-shrink:0;width:130px;text-align:center;}
+.meaning-close__aside-num{font-family:var(--f-d);font-style:italic;font-size:2.25rem;color:var(--accent);line-height:1;margin-bottom:.25rem;}
+.meaning-close__aside-label{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(250,240,226,.25);}
+
+/* ── REVIEW / TESTIMONIAL CARDS ── */
+.review-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem;margin:1.5rem 0;}
+.review-card{border-radius:var(--r-lg);padding:1.5rem 1.5rem 1.25rem;display:flex;flex-direction:column;gap:.875rem;}
+.sec-group--cream .review-card,.sec-group--alt .review-card{background:var(--white);border:1px solid var(--border-lt);box-shadow:var(--sh-sm);}
+.sec-group--dark .review-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);}
+.review-card__stars{color:var(--accent);font-size:1rem;letter-spacing:.2em;line-height:1;}
+.review-card__quote{font-family:var(--f-b);font-style:normal;font-size:1.0625rem;line-height:1.55;margin:0;}
+.sec-group--cream .review-card__quote,.sec-group--alt .review-card__quote{color:var(--charcoal);}
+.sec-group--dark .review-card__quote{color:rgba(250,240,226,.92);}
+.review-card__by{font-family:var(--f-b);font-size:.8125rem;font-weight:500;color:var(--text-muted);margin-top:auto;}
+.sec-group--dark .review-card__by{color:rgba(250,240,226,.45);}
+
+/* ── BUILD / E-E-A-T GRID (icon + body cards) ── */
+.build-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin:1.5rem 0;}
+.build-item{display:flex;gap:.875rem;padding:1.25rem 1.25rem 1.375rem;border-radius:var(--r-lg);align-items:flex-start;}
+.sec-group--cream .build-item,.sec-group--alt .build-item{background:var(--white);border:1px solid var(--border-lt);box-shadow:var(--sh-sm);}
+.sec-group--dark .build-item{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);}
+.build-item__ico{width:32px;height:32px;border-radius:50%;background:rgba(196,98,45,.12);color:var(--accent);display:grid;place-items:center;flex-shrink:0;}
+.build-item__ico .material-symbols-outlined{font-size:18px;}
+.sec-group--dark .build-item__ico{background:rgba(196,98,45,.2);color:#E09360;}
+.build-item__body{flex:1;min-width:0;}
+.build-item__label{font-family:var(--f-b);font-weight:700;font-size:.9375rem;margin-bottom:.3rem;line-height:1.3;}
+.sec-group--cream .build-item__label,.sec-group--alt .build-item__label{color:var(--charcoal);}
+.sec-group--dark .build-item__label{color:var(--bg);}
+.build-item__desc{font-size:.875rem;line-height:1.6;}
+.sec-group--cream .build-item__desc,.sec-group--alt .build-item__desc{color:var(--text-sec);}
+.sec-group--dark .build-item__desc{color:rgba(250,240,226,.7);}
+
+/* ── OPPORTUNITY CALLOUT (labeled block with accent border) ── */
+.opp-callout{border-left:3px solid var(--accent);border-radius:0 var(--r-md) var(--r-md) 0;padding:1.25rem 1.5rem;margin:2rem 0;font-size:.9375rem;line-height:1.7;}
+.sec-group--cream .opp-callout,.sec-group--alt .opp-callout{background:var(--bg-alt);color:var(--text-sec);}
+.sec-group--dark .opp-callout{background:rgba(250,240,226,.04);color:rgba(250,240,226,.82);}
+.opp-callout strong{font-weight:600;}
+.sec-group--cream .opp-callout strong,.sec-group--alt .opp-callout strong{color:var(--charcoal);}
+.sec-group--dark .opp-callout strong{color:var(--bg);}
+
+/* ── SCORE CARD VARIANT for word values (High, Strong, Full) ── */
+.score-card__value--word{font-size:clamp(1.5rem,2vw,1.875rem);font-weight:700;font-family:var(--f-b);font-style:normal;letter-spacing:-.01em;}
+.grade-legend{margin:1rem 0 2.5rem;}
+.grade-legend__label{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);margin-bottom:.5rem;}
+.grade-legend__items{display:flex;background:var(--white);border:1px solid rgba(44,51,64,.12);border-radius:10px;box-shadow:0 1px 4px rgba(44,51,64,.07);overflow:hidden;}
+.grade-legend__item{flex:1;padding:.875rem 1rem;border-right:1px solid rgba(44,51,64,.1);}
+.grade-legend__item:last-child{border-right:none;}
+.grade-legend__dots{font-size:.55rem;letter-spacing:.15em;line-height:1;margin-bottom:.3rem;}
+.grade-legend__grade{font-family:var(--f-n);font-size:.6875rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-bottom:.25rem;}
+.grade-legend__def{font-family:var(--f-b);font-size:.7rem;color:var(--text-muted);line-height:1.4;}
+.grade-legend__item--strong{border-top:3px solid #1B7A6E;}.grade-legend__item--strong .grade-legend__grade,.grade-legend__item--strong .grade-legend__dots{color:#1B7A6E;}
+.grade-legend__item--fair{border-top:3px solid #8B7200;}.grade-legend__item--fair .grade-legend__grade,.grade-legend__item--fair .grade-legend__dots{color:#8B7200;}
+.grade-legend__item--weak{border-top:3px solid #B85C00;}.grade-legend__item--weak .grade-legend__grade,.grade-legend__item--weak .grade-legend__dots{color:#B85C00;}
+.grade-legend__item--poor{border-top:3px solid #8B1A1A;}.grade-legend__item--poor .grade-legend__grade,.grade-legend__item--poor .grade-legend__dots{color:#8B1A1A;}
+
+/* ── CALLOUT (secondary emphasis) ── */
+.callout{border-radius:var(--r-md);padding:1.25rem 1.5rem;margin:1.5rem 0;font-size:.9375rem;line-height:1.7;border-left:3px solid var(--accent);}
+.sec-group--cream .callout,.sec-group--alt .callout{background:var(--white);color:var(--text-sec);box-shadow:var(--sh-sm);}
+.sec-group--dark .callout{background:rgba(250,240,226,.04);color:rgba(250,240,226,.75);border-left-color:var(--accent);}
+.callout strong{font-weight:600;}
+.sec-group--cream .callout strong,.sec-group--alt .callout strong{color:var(--charcoal);}
+.sec-group--dark .callout strong{color:var(--bg);}
+
+/* ── PILL BUTTON (from website-reveal) ── */
+.btn-pill{position:relative;overflow:hidden;isolation:isolate;display:inline-flex;align-items:center;border-radius:var(--r-full);text-decoration:none;cursor:pointer;border:1.5px solid;font-family:var(--f-b);font-weight:600;}
+.btn-pill__fill{position:absolute;top:4px;bottom:4px;right:4px;border-radius:var(--r-full);transition:left .65s cubic-bezier(.22,1,.36,1);}
+.btn-pill__label{position:relative;z-index:1;}
+.btn-pill__arrow{position:relative;z-index:1;border-radius:50%;display:grid;place-items:center;flex-shrink:0;transition:transform .2s;}
+.btn-pill:hover .btn-pill__arrow{transform:translateX(3px);}
+.btn-pill--cream{background:#FAF0E2;color:var(--accent);border-color:#FAF0E2;padding:5px 5px 5px 26px;min-height:56px;font-size:1rem;}
+.btn-pill--cream .btn-pill__fill{background:var(--white);left:calc(100% - 48px);}
+.btn-pill--cream:hover .btn-pill__fill{left:4px;}
+.btn-pill--cream .btn-pill__label{color:var(--accent);}
+.btn-pill--cream .btn-pill__arrow{width:44px;height:44px;background:rgba(196,98,45,.14);color:var(--accent);margin-left:18px;font-size:1rem;}
+
+/* ── CTA BOX (closing section) ── */
+.cta-box{text-align:center;border-radius:var(--r-xl);padding:3rem 2.5rem;margin:2rem 0;}
+.sec-group--cream .cta-box,.sec-group--alt .cta-box{background:var(--bg-night);color:var(--bg);}
+.sec-group--dark .cta-box{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);}
+.cta-box__eyebrow{font-family:var(--f-n);font-size:.6875rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:1rem;}
+.cta-box__heading{font-family:var(--f-d);font-style:italic;font-size:clamp(1.75rem,3vw,2.5rem);font-weight:400;line-height:1.15;margin-bottom:.75rem;color:var(--bg);overflow-wrap:anywhere;}
+.sec-group--dark .cta-box__heading{color:var(--bg);}
+.cta-box__heading em{color:var(--accent);}
+.cta-box__sub{font-size:1.0625rem;color:rgba(250,240,226,.55);margin-bottom:2rem;max-width:500px;margin-left:auto;margin-right:auto;line-height:1.55;}
+.cta-box__secondary{font-size:.875rem;color:rgba(250,240,226,.45);margin-top:1.25rem;}
+.cta-box__secondary a{color:var(--sage);text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(143,175,138,.35);}
+
+/* ── FOOTER (standard Aspire doc footer) ── */
+.guide-footer{background:var(--charcoal);border-top:1px solid rgba(250,240,226,.08);padding:4rem 3rem 3rem;display:flex;flex-direction:column;align-items:center;gap:1.5rem;text-align:center;}
+.guide-footer__heading{font-family:var(--f-d);font-style:italic;font-size:1.375rem;color:rgba(250,240,226,.82);margin-bottom:.25rem;line-height:1.2;}
+.guide-footer__sub{font-family:var(--f-a);font-style:italic;font-size:.9375rem;color:rgba(250,240,226,.35);margin-bottom:.5rem;}
+.footer-contacts{display:grid;grid-template-columns:1fr 1fr;gap:1rem;width:100%;max-width:640px;}
+.footer-contact{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.07);border-left:3px solid var(--green);border-radius:var(--r-lg);padding:1.5rem 1.75rem;text-align:left;}
+.footer-contact__name{font-family:var(--f-b);font-weight:700;font-size:1.0625rem;color:rgba(250,240,226,.92);margin-bottom:.3rem;}
+.footer-contact__role{font-size:.9375rem;color:rgba(250,240,226,.38);margin-bottom:1rem;}
+.footer-contact__links{display:flex;flex-direction:column;gap:.3rem;}
+.footer-contact__links a{font-size:.9375rem;color:rgba(250,240,226,.65);text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(250,240,226,.25);transition:color .18s,text-decoration-color .18s;}
+.footer-contact__links a:hover{color:rgba(250,240,226,.92);text-decoration-color:rgba(250,240,226,.55);}
+.footer-social{width:100%;max-width:640px;text-align:center;}
+.footer-social__label{font-family:var(--f-b);font-size:.9375rem;font-weight:600;color:rgba(250,240,226,.4);margin-bottom:1rem;}
+.footer-social__icons{display:flex;gap:.875rem;justify-content:center;}
+.footer-social__link{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);display:grid;place-items:center;color:rgba(250,240,226,.5);transition:background .2s,color .2s;}
+.footer-social__link:hover{background:var(--accent);color:#fff;}
+.footer-social__link svg{width:16px;height:16px;fill:currentColor;}
+.guide-footer__tagline{font-family:var(--f-a);font-style:italic;font-size:.875rem;color:rgba(250,240,226,.22);letter-spacing:.01em;margin-top:.5rem;}
+
+/* ── PLAN GRID (2-col border-divided grid — "Here's What We'd Actually Do") ── */
+.plan-grid{display:grid;grid-template-columns:1fr 1fr;margin:2rem -2.5rem 0;}
+.plan-item{padding:2.5rem 2.5rem;border-top:1px solid var(--border);display:flex;flex-direction:column;gap:.625rem;}
+.plan-item:nth-child(odd){border-right:1px solid var(--border);}
+.plan-item__num{font-family:var(--f-n);font-size:.6875rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);line-height:1;margin-bottom:.375rem;}
+.plan-item__title{font-family:var(--f-d);font-style:normal;font-size:clamp(1.375rem,2.2vw,1.875rem);font-weight:400;line-height:1.15;margin:0;}
+.sec-group--cream .plan-item__title,.sec-group--alt .plan-item__title{color:var(--charcoal);}
+.sec-group--dark .plan-item__title{color:var(--bg);}
+.plan-item__desc{font-size:.9375rem;line-height:1.72;flex:1;}
+.sec-group--cream .plan-item__desc,.sec-group--alt .plan-item__desc{color:var(--text-sec);}
+.sec-group--dark .plan-item__desc{color:rgba(250,240,226,.75);}
+.plan-item__tag{margin-top:.875rem;}
+
+/* ── PHASE ROADMAP (section 05 — grouped by timeline) ── */
+.phase-roadmap{margin:2rem 0 0;display:flex;flex-direction:column;gap:1.75rem;}
+.phase-header{display:flex;align-items:center;gap:.75rem;margin-bottom:.875rem;}
+.phase-label{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:4px 14px;border-radius:var(--r-full);white-space:nowrap;}
+.phase-label--quick{background:rgba(196,98,45,.1);color:var(--accent-dk);}
+.phase-label--m1{background:rgba(74,123,90,.1);color:#3D6B4A;}
+.phase-label--m2{background:rgba(44,51,64,.07);color:var(--text-sec);}
+.phase-divider{flex:1;height:1px;background:var(--border-light);}
+.phase-note{font-family:var(--f-b);font-size:.8125rem;color:var(--text-muted);white-space:nowrap;}
+.phase-items{display:grid;grid-template-columns:1fr;gap:.625rem;}
+.phase-items--grid{grid-template-columns:1fr 1fr;}
+.phase-item{padding:1.25rem 1.5rem;border-radius:var(--r-lg);background:var(--white);border:1px solid var(--border-light);display:flex;flex-direction:column;gap:.5rem;}
+.phase-item__title{font-family:var(--f-b);font-weight:700;font-size:.9375rem;color:var(--charcoal);line-height:1.25;margin:0;}
+.phase-item__desc{font-size:.875rem;color:var(--text-sec);line-height:1.65;margin:0;flex:1;}
+.tag--outline{background:transparent;border:1.5px solid rgba(196,98,45,.45);color:var(--accent-dk);}
+.sec-group--dark .tag--outline{border-color:rgba(196,98,45,.45);color:#E09360;}
+
+/* ── TEAM CARDS (Why Aspire — Option A) ── */
+.team-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:2.5rem;}
+.team-card{border-radius:var(--r-xl);overflow:hidden;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);}
+.team-card__photo{aspect-ratio:3/4;overflow:hidden;position:relative;}
+.team-card__photo img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;transition:transform .5s cubic-bezier(.22,1,.36,1);}
+.team-card:hover .team-card__photo img{transform:scale(1.04);}
+.team-card__tint{position:absolute;inset:0;background:linear-gradient(to bottom,transparent 30%,rgba(20,24,32,.55) 65%,rgba(20,24,32,.92) 100%);}
+.team-card__overlay{position:absolute;bottom:0;left:0;right:0;padding:1.5rem 1.75rem 1.75rem;display:flex;flex-direction:column;gap:.375rem;}
+.team-card__socials{position:absolute;top:1.25rem;right:1.25rem;display:flex;gap:.625rem;}
+.team-card__social-btn{width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,.35);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.15);display:grid;place-items:center;color:rgba(250,240,226,.75);transition:background .2s,color .2s;}
+.team-card__social-btn:hover{background:var(--accent);color:#fff;border-color:var(--accent);}
+.team-card__social-btn svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+.team-card__role{font-family:var(--f-b);font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.55);margin:0;}
+.team-card__name{font-family:var(--f-d);font-size:clamp(28px,3.5vw,48px);font-weight:400;line-height:1;letter-spacing:-.02em;color:#fff;margin:0;}
+.team-card__body{padding:1.5rem 1.75rem 1.875rem;}
+.team-card__bio{font-size:.9375rem;line-height:1.65;color:rgba(250,240,226,.6);}
+.team-card__links{display:flex;flex-direction:column;gap:.3rem;margin-top:1.125rem;}
+.team-card__links a{font-size:.875rem;color:rgba(250,240,226,.5);text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(250,240,226,.2);}
+.team-promise{background:rgba(196,98,45,.08);border:1px solid rgba(196,98,45,.15);border-left:3px solid var(--accent);border-radius:0 var(--r-lg) var(--r-lg) 0;padding:1.5rem 2rem;margin-bottom:2.5rem;}
+.team-promise__text{font-family:var(--f-a);font-style:italic;font-size:1.125rem;color:rgba(250,240,226,.82);line-height:1.6;}
+.team-promise__text strong{font-style:normal;font-weight:600;color:var(--bg);}
+.why-reviews{margin-top:2.5rem;}
+.why-reviews__label{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(250,240,226,.25);margin-bottom:1rem;}
+
+/* ── CTA STATS ROW ── */
+.cta-stats{display:flex;align-items:center;justify-content:center;gap:1.5rem;margin-bottom:2rem;flex-wrap:wrap;}
+.cta-stat{text-align:center;min-width:0;}
+.cta-stat--divider{width:1px;height:32px;background:rgba(250,240,226,.15);flex-shrink:0;}
+.cta-stat__num{display:block;font-family:var(--f-d);font-style:italic;font-size:1.5rem;color:var(--bg);line-height:1;margin-bottom:.25rem;}
+.cta-stat__label{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(250,240,226,.35);}
+
+/* ── BEYOND STRIP (compact 4-cell) ── */
+.beyond-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.07);border-radius:var(--r-xl);overflow:hidden;margin:1.5rem 0;}
+.beyond-item{background:rgba(255,255,255,.025);padding:1.75rem 1.5rem;display:flex;flex-direction:column;gap:.625rem;}
+.beyond-item__ico{width:36px;height:36px;border-radius:var(--r-md);background:rgba(196,98,45,.15);display:grid;place-items:center;flex-shrink:0;}
+.beyond-item__ico .material-symbols-outlined{font-size:18px;color:#E09360;}
+.beyond-item__label{font-family:var(--f-b);font-weight:700;font-size:.9375rem;color:var(--bg);line-height:1.2;}
+.beyond-item__desc{font-size:.8125rem;color:rgba(250,240,226,.52);line-height:1.55;}
+
+/* ── CTA PROCESS LINE ── */
+.cta-process{font-size:.875rem;color:rgba(250,240,226,.38);margin-bottom:1.75rem;letter-spacing:.01em;}
+.cta-process strong{color:rgba(250,240,226,.65);font-weight:600;}
+
+/* ── CTA STEPS (1 / 2 / 3 numbered flow) ── */
+.cta-steps{display:flex;flex-direction:column;gap:.625rem;margin:1.5rem auto 2rem;max-width:400px;text-align:left;}
+.cta-step{display:flex;gap:.875rem;align-items:flex-start;}
+.cta-step__num{width:26px;height:26px;border-radius:50%;background:rgba(196,98,45,.2);border:1px solid rgba(196,98,45,.35);color:#E09360;font-family:var(--f-n);font-size:.5625rem;font-weight:700;display:grid;place-items:center;flex-shrink:0;margin-top:.175rem;}
+.cta-step__label{display:block;font-family:var(--f-b);font-weight:700;font-size:.9375rem;color:var(--bg);line-height:1.3;margin-bottom:.2rem;}
+.cta-step__desc{font-size:.8125rem;color:rgba(250,240,226,.42);line-height:1.5;margin:0;}
+
+/* ── OVERFLOW FIX — long placeholder strings ── */
+.funnel-step__val,.funnel-result__amt,.revenue-box__amt,.gap-now__num,.gap-after__num,.range-hero__num,.meaning-anchor__num,.score-card__value,.meaning-item__num,.meaning-close__aside-num{overflow-wrap:anywhere;word-break:break-word;}
+.funnel-step,.gap-metric,.meaning-item,.build-item__body{min-width:0;overflow:hidden;}
+
+/* ── HERO OPPORTUNITY CARD ── */
+.hero__opp-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:var(--r-xl);padding:2.5rem 2rem;text-align:center;display:flex;flex-direction:column;align-items:center;gap:.75rem;}
+.hero__opp-label{font-family:var(--f-n);font-size:.625rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(250,240,226,.32);}
+.hero__opp-num{font-family:var(--f-d);font-style:italic;font-size:clamp(2.5rem,5vw,3.75rem);font-weight:400;line-height:1;color:var(--bg);overflow-wrap:anywhere;}
+.hero__opp-denom{font-family:var(--f-n);font-size:.625rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(250,240,226,.22);margin-top:-.25rem;}
+.hero__opp-badge{font-family:var(--f-b);font-size:.8125rem;font-weight:600;padding:5px 16px;border-radius:var(--r-full);background:rgba(196,98,45,.15);color:#E09360;}
+.hero__opp-badge--high{background:rgba(126,200,150,.12);color:#7EC896;}
+.hero__opp-desc{font-family:var(--f-b);font-size:.875rem;color:rgba(250,240,226,.35);line-height:1.55;max-width:220px;text-align:center;}
+
+/* ── QUICK SUMMARY (who / what / status 3-col strip) ── */
+.quick-summary{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--r-xl);overflow:hidden;margin:0 0 2.5rem;}
+.quick-summary__item{background:var(--white);padding:1.5rem 1.75rem;}
+.quick-summary__label{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:.625rem;}
+.quick-summary__text{font-size:.9rem;color:var(--text-sec);line-height:1.65;}
+.quick-summary__list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.375rem;}
+.quick-summary__list li{font-size:.875rem;color:var(--text-sec);line-height:1.55;padding-left:1rem;position:relative;}
+.quick-summary__list li::before{content:'';position:absolute;left:.25rem;top:.62em;width:4px;height:4px;border-radius:50%;background:var(--accent);}
+
+/* ── WIN CARDS (What's Working) ── */
+.win-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin:1rem 0 2.5rem;}
+.win-card{display:flex;gap:.875rem;padding:1.125rem 1.25rem;border-radius:var(--r-md);background:var(--white);border:1px solid rgba(74,123,90,.18);align-items:flex-start;}
+.win-card__ico{width:26px;height:26px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;flex-shrink:0;font-size:.75rem;font-weight:700;font-family:var(--f-b);margin-top:.1rem;}
+.win-card__body{flex:1;min-width:0;}
+.win-card__label{display:block;font-family:var(--f-b);font-weight:700;font-size:.9375rem;color:var(--charcoal);margin-bottom:.25rem;line-height:1.25;}
+.win-card__desc{font-size:.875rem;color:var(--text-sec);line-height:1.55;margin:0;}
+
+/* ── GAP CARDS (Where the Gaps Are) ── */
+.gap-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin:1rem 0 2rem;}
+.gap-card{display:flex;gap:.875rem;padding:1.125rem 1.25rem;border-radius:var(--r-md);background:rgba(196,98,45,.04);border:1px solid rgba(196,98,45,.18);align-items:flex-start;}
+.gap-card__ico{width:26px;height:26px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;flex-shrink:0;font-size:.875rem;font-weight:700;font-family:var(--f-b);margin-top:.1rem;}
+.gap-card__body{flex:1;min-width:0;}
+.gap-card__label{display:block;font-family:var(--f-b);font-weight:700;font-size:.9375rem;color:var(--charcoal);margin-bottom:.25rem;line-height:1.25;}
+.gap-card__desc{font-size:.875rem;color:var(--text-sec);line-height:1.55;margin:0;}
+
+/* ── KEYWORD TABLE (ranked scannable list) ── */
+.kw-table{display:flex;flex-direction:column;border:1px solid rgba(255,255,255,.08);border-radius:var(--r-lg);overflow:hidden;}
+.kw-row{display:grid;grid-template-columns:36px 1fr auto;align-items:center;padding:.875rem 1.25rem;border-bottom:1px solid rgba(255,255,255,.06);gap:.875rem;}
+.kw-row:last-child{border-bottom:none;}
+.kw-row--hot{background:rgba(196,98,45,.08);}
+.kw-row__rank{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.08em;color:rgba(250,240,226,.28);}
+.kw-row__term{font-size:.9375rem;font-weight:500;color:rgba(250,240,226,.85);min-width:0;}
+.kw-row__right{display:flex;align-items:center;gap:.625rem;justify-content:flex-end;flex-wrap:wrap;}
+.kw-row__vol{font-family:var(--f-n);font-size:.75rem;font-weight:700;color:var(--accent);text-align:right;white-space:nowrap;}
+.kw-row__tag{display:flex;justify-content:flex-end;flex-shrink:0;}
+
+/* ── AI READINESS SCORE ROWS ── */
+.ai-score{display:flex;flex-direction:column;border:1px solid rgba(255,255,255,.08);border-radius:var(--r-lg);overflow:hidden;margin:1.25rem 0 2rem;}
+.ai-score__row{display:flex;align-items:flex-start;gap:1rem;padding:1rem 1.25rem;border-bottom:1px solid rgba(255,255,255,.06);}
+.ai-score__row:last-child{border-bottom:none;}
+.ai-score__status{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;flex-shrink:0;font-size:.75rem;font-weight:700;font-family:var(--f-b);margin-top:.1rem;}
+.ai-score__status--good{background:rgba(74,123,90,.2);color:#7EC896;}
+.ai-score__status--warn{background:rgba(184,134,11,.15);color:#D4A832;}
+.ai-score__status--bad{background:rgba(196,98,45,.15);color:#E09360;}
+.ai-score__body{flex:1;min-width:0;}
+.ai-score__label{display:block;font-family:var(--f-b);font-weight:700;font-size:.9375rem;color:rgba(250,240,226,.85);margin-bottom:.2rem;}
+.ai-score__note{font-size:.8125rem;color:rgba(250,240,226,.45);line-height:1.55;}
+
+/* ── QUICK WINS (3-col action grid, dark bg) ── */
+.quick-wins{margin:2rem 0;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:var(--r-xl);padding:1.75rem 2rem 1.5rem;}
+.quick-wins__head{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:1.25rem;}
+.quick-wins__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.875rem;margin-bottom:1.25rem;}
+.quick-wins__item{display:flex;flex-direction:column;gap:.5rem;padding:1.125rem 1.125rem 1.25rem;background:rgba(255,255,255,.04);border-radius:var(--r-md);border:1px solid rgba(255,255,255,.07);}
+.quick-wins__num{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(196,98,45,.6);}
+.quick-wins__title{font-family:var(--f-b);font-weight:700;font-size:.9375rem;color:rgba(250,240,226,.88);}
+.quick-wins__desc{font-size:.8125rem;color:rgba(250,240,226,.42);line-height:1.6;margin:0;flex:1;}
+.quick-wins__note{font-size:.8125rem;color:rgba(250,240,226,.35);line-height:1.55;padding-top:1.125rem;border-top:1px solid rgba(255,255,255,.06);}
+
+/* ── FUNNEL ASSUMPTIONS (conservative by design) ── */
+.funnel-assumptions{border-radius:var(--r-lg);background:var(--bg-alt);overflow:hidden;}
+.funnel-assumptions__head{font-family:var(--f-b);font-size:.9375rem;font-weight:600;color:var(--charcoal);padding:1.25rem 1.5rem;border-bottom:1px solid var(--border);}
+.funnel-assumptions__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;}
+.funnel-assumptions__item{padding:1.375rem 1.5rem;border-right:1px solid var(--border);display:flex;flex-direction:column;gap:.375rem;}
+.funnel-assumptions__item:last-child{border-right:none;}
+.funnel-assumptions__val{font-family:var(--f-n);font-weight:700;font-size:clamp(1.375rem,2vw,1.75rem);color:var(--accent);line-height:1;}
+.funnel-assumptions__label{font-size:.8125rem;color:var(--text-muted);line-height:1.5;}
+.funnel-assumptions__footer{font-size:.8125rem;color:var(--text-muted);line-height:1.55;padding:.875rem 1.5rem;border-top:1px solid var(--border);}
+
+/* ── COMPARE TABLE (matrix view) ── */
+.compare-table{border:1px solid var(--border);border-radius:var(--r-xl);overflow:hidden;margin:1.5rem 0;}
+.compare-table__head,.compare-table__row{display:grid;grid-template-columns:150px repeat(3,1fr);}
+.compare-table__corner{background:var(--bg-alt);border-right:1px solid var(--border);padding:.875rem 1.25rem;}
+.compare-table__col-head{padding:1.125rem 1.25rem .75rem;font-family:var(--f-d);font-style:italic;font-size:1.0625rem;font-weight:400;color:var(--charcoal);border-left:1px solid var(--border);background:var(--bg-alt);}
+.compare-table__col-context{display:block;font-family:var(--f-b);font-style:normal;font-size:.6875rem;color:var(--text-muted);margin-top:.3rem;line-height:1.4;font-weight:400;}
+.compare-table__col-head--you .compare-table__col-context{color:var(--green);}
+.compare-table__col-head--you{background:rgba(196,98,45,.06);position:relative;}
+.compare-table__col-head--you::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--accent);}
+.compare-table__label{padding:.75rem 1.25rem;font-size:.8125rem;font-weight:500;color:var(--text-muted);display:flex;align-items:center;background:var(--bg-alt);border-top:1px solid var(--border);border-right:1px solid var(--border);}
+.compare-table__cell{padding:.75rem 1.25rem;font-size:.875rem;font-weight:600;border-left:1px solid var(--border);border-top:1px solid var(--border);display:flex;align-items:center;background:var(--white);}
+.compare-table__cell--you{background:rgba(196,98,45,.04);}
+.compare-table__cell--good{color:var(--green);}
+.compare-table__cell--mid{color:#B8860B;}
+.compare-table__cell--low{color:var(--accent);}
+
+/* ── KW TABLE CREAM CARD (dark-section override) ── */
+.kw-table-wrap{background:var(--bg)!important;border:1px solid rgba(44,51,64,.12)!important;border-radius:var(--r-lg);padding:1rem;margin:1.5rem 0;}
+.kw-table-wrap .kw-table{border-color:rgba(44,51,64,.08);}
+.kw-table-wrap .kw-row{border-bottom-color:rgba(44,51,64,.06);}
+.kw-table-wrap .kw-row--hot{background:rgba(196,98,45,.05);}
+.kw-table-wrap .kw-row__rank{color:var(--text-muted);}
+.kw-table-wrap .kw-row__term{color:var(--charcoal);}
+.kw-table-wrap .kw-row__vol{color:var(--accent);}
+
+/* ── STACK SPLIT (win / gap comparison — replaces bar chart in Section 03) ── */
+.stack-split{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(44,51,64,.08);border-radius:var(--r-xl);overflow:hidden;margin:1.5rem 0;}
+.stack-split__side{padding:2rem 1.75rem;display:flex;flex-direction:column;gap:1.5rem;}
+.stack-split__side--win{background:rgba(74,123,90,.06);}
+.stack-split__side--gap{background:rgba(196,98,45,.04);}
+.stack-split__badge{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:4px 12px;border-radius:var(--r-full);display:inline-block;width:fit-content;}
+.stack-split__side--win .stack-split__badge{background:rgba(74,123,90,.15);color:var(--green);}
+.stack-split__side--gap .stack-split__badge{background:rgba(196,98,45,.1);color:var(--accent-dk);}
+.stack-split__stat{display:flex;flex-direction:column;gap:.25rem;}
+.stack-split__num{font-family:var(--f-n);font-weight:700;font-size:clamp(1.125rem,1.875vw,1.5rem);line-height:1.1;}
+.stack-split__side--win .stack-split__num{color:var(--green);}
+.stack-split__side--gap .stack-split__num{color:var(--accent);}
+.stack-split__cmp{font-size:.65em;opacity:.55;font-style:normal;}
+.stack-split__label{font-family:var(--f-b);font-weight:700;font-size:.875rem;color:var(--charcoal);}
+.stack-split__note{font-size:.8125rem;line-height:1.5;color:var(--text-muted);}
+
+/* ── AI SEARCH COMPARE ── */
+.search-compare{display:grid;grid-template-columns:1fr 1fr;border-radius:var(--r-lg);overflow:hidden;margin:.875rem 0 1.25rem;border:1px solid rgba(250,240,226,.08);}
+.search-compare__col{padding:1.25rem 1.5rem;}
+.search-compare__col--google{background:rgba(250,240,226,.04);border-right:1px solid rgba(250,240,226,.08);}
+.search-compare__col--ai{background:rgba(196,98,45,.1);}
+.search-compare__label{font-family:var(--f-b);font-size:.875rem;font-weight:700;color:rgba(250,240,226,.55);margin-bottom:.875rem;}
+.search-compare__label--ai{color:var(--accent);}
+.search-compare__rows{display:flex;flex-direction:column;gap:.625rem;}
+.search-compare__row{display:flex;align-items:flex-start;gap:.625rem;}
+.search-compare__dot{width:5px;height:5px;border-radius:50%;background:rgba(250,240,226,.2);margin-top:.425rem;flex-shrink:0;}
+.search-compare__dot--ai{background:var(--accent);}
+.search-compare__text{font-size:.875rem;color:rgba(250,240,226,.5);line-height:1.55;}
+.search-compare__text--ai{color:rgba(250,240,226,.85);}
+.search-compare__footer{grid-column:1/-1;padding:1.125rem 1.5rem;background:rgba(250,240,226,.06);border-top:1px solid rgba(250,240,226,.08);font-family:var(--f-b);font-size:1rem;font-weight:500;color:rgba(250,240,226,.82);line-height:1.6;text-align:center;}
+
+/* ── SPLIT CARDS (AI gap → fix, 3-col) ── */
+.split-cards-wrap{background:var(--bg);border-radius:var(--r-xl);padding:1.5rem;margin:1.25rem 0 1.5rem;}
+.split-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:.875rem;}
+.split-card{border-radius:var(--r-lg);overflow:hidden;border:1px solid rgba(196,98,45,.15);}
+.split-card__gap{background:rgba(196,98,45,.05);border-bottom:2px solid rgba(196,98,45,.2);padding:1.25rem 1.5rem;display:flex;align-items:center;gap:.75rem;}
+.split-card__gap-icon{width:26px;height:26px;border-radius:50%;background:rgba(196,98,45,.15);border:1px solid rgba(196,98,45,.3);display:flex;align-items:center;justify-content:center;font-size:.75rem;flex-shrink:0;color:var(--accent);}
+.split-card__gap-title{font-family:var(--f-b);font-size:.875rem;font-weight:700;color:var(--charcoal);line-height:1.25;}
+.split-card__solve{background:var(--white);padding:1.375rem 1.5rem;}
+.split-card__solve-num{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:.375rem;}
+.split-card__solve-title{font-family:var(--f-b);font-size:.9375rem;font-weight:700;color:var(--charcoal);margin-bottom:.375rem;line-height:1.3;}
+.split-card__solve-copy{font-size:.875rem;color:var(--text-sec);line-height:1.6;}
+/* ── FUNNEL RESULT BAR (variant A revenue payoff) ── */
+.funnel-b__result{display:flex;align-items:center;justify-content:center;gap:3rem;background:var(--accent);border-radius:0 0 var(--r-xl) var(--r-xl);padding:2rem 2.5rem;text-align:center;}
+.funnel-b__result-item{display:flex;flex-direction:column;gap:.375rem;}
+.funnel-b__result-val{font-family:var(--f-n);font-weight:900;font-size:clamp(2rem,4.5vw,3.25rem);color:#fff;line-height:1;letter-spacing:-.03em;}
+.funnel-b__result-label{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.65);}
+.funnel-b__result-div{width:1px;height:48px;background:rgba(255,255,255,.25);}
+/* ── OPPORTUNITY BULLETS (Why Aspire opening, client-specific) ── */
+.opp-bullets{background:rgba(196,98,45,.06);border:1px solid rgba(196,98,45,.18);border-left:3px solid var(--accent);border-radius:0 var(--r-lg) var(--r-lg) 0;padding:1.375rem 1.75rem;margin-bottom:2rem;}
+.opp-bullets__label{font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:.75rem;}
+.opp-bullets__list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.5rem;}
+.opp-bullets__list li{font-size:.9375rem;color:rgba(250,240,226,.82);line-height:1.55;padding-left:1.25rem;position:relative;}
+.opp-bullets__list li::before{content:'';position:absolute;left:.3rem;top:.65em;width:4px;height:4px;border-radius:50%;background:var(--accent);}
+
+/* ── WHY VALUES STRIP (Section 08 — 3 values below prose) ── */
+.why-values{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.07);border-radius:var(--r-xl);overflow:hidden;margin:2rem 0;}
+.why-val{background:rgba(255,255,255,.03);padding:1.625rem 1.5rem;display:flex;flex-direction:column;gap:.5rem;}
+.why-val__icon{width:34px;height:34px;border-radius:var(--r-md);background:rgba(196,98,45,.14);display:grid;place-items:center;flex-shrink:0;}
+.why-val__icon .material-symbols-outlined{font-size:17px;color:#E09360;}
+.why-val__label{font-family:var(--f-b);font-weight:700;font-size:.9375rem;color:rgba(250,240,226,.88);line-height:1.2;}
+.why-val__desc{font-size:.8125rem;color:rgba(250,240,226,.48);line-height:1.55;margin:0;}
+
+/* ── FUNNEL B RESPONSIVE ── */
+@media(max-width:700px){.funnel-b__cards{flex-wrap:wrap;}.funnel-b__op{display:none;}.funnel-b__card{flex:0 0 50%;border-right:1px solid var(--border-light);border-top:1px solid var(--border-light);}.funnel-b__card:nth-of-type(1){border-top:none;}.funnel-b__card:nth-of-type(2){border-top:none;}.funnel-b__card:nth-of-type(2n){border-right:none;}}
+
+/* ── RESPONSIVE ── */
+@media(max-width:820px){
+  .team-grid{grid-template-columns:1fr;}
+  .beyond-strip{grid-template-columns:repeat(2,1fr);}
+  .hero__inner{grid-template-columns:1fr;gap:2.5rem;padding:4rem 1.5rem 4.5rem;}
+  .hero__meta{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem 2rem;padding:2rem 0 0;border-left:none;border-top:1px solid rgba(255,255,255,.1);}
+  .sec-group{padding:3.5rem 1.5rem;}
+  .sec-head{grid-template-columns:1fr;row-gap:.25rem;}
+  .sec-head__num{font-size:2.5rem;}
+  .opp-list{padding-left:0;}
+  .opp-row{grid-template-columns:52px 1fr;column-gap:1rem;padding:1.5rem 0;}
+  .opp-row__num{font-size:1.75rem;}
+  .plan-grid{margin-left:-1.5rem;margin-right:-1.5rem;}
+  .plan-item{padding:1.75rem 1.5rem;}
+  .compare-grid{grid-template-columns:1fr;}
+  .stack-split{grid-template-columns:1fr;}
+  .why-values{grid-template-columns:1fr;}
+  .score-grid{grid-template-columns:repeat(2,1fr);}
+  .kw-grid{grid-template-columns:1fr;}
+  .cta-box,.revenue-box{padding:2.25rem 1.5rem;}
+  .quick-summary{grid-template-columns:1fr;}
+  .win-grid,.gap-grid{grid-template-columns:1fr;}
+  .kw-row{grid-template-columns:28px 1fr auto;}.kw-row__vol{display:none;}
+  .quick-wins__grid{grid-template-columns:1fr;}
+  .funnel-assumptions__grid{grid-template-columns:1fr 1fr;}.funnel-assumptions__item:nth-child(2){border-right:none;}.funnel-assumptions__item:nth-child(3){border-top:1px solid var(--border);}
+  .compare-table{overflow:hidden;}
+  .compare-table__head{grid-template-columns:repeat(3,1fr);position:sticky;top:52px;z-index:10;}
+  .compare-table__corner{display:none;}
+  .compare-table__col-head{font-size:.7rem;padding:.6rem .5rem;text-align:center;border-left:none;}
+  .compare-table__col-head+.compare-table__col-head{border-left:1px solid var(--border);}
+  .compare-table__row{display:flex;flex-wrap:wrap;}
+  .compare-table__label{width:100%;border-right:none;background:rgba(44,51,64,.06);font-size:.8125rem;padding:.5rem 1rem;border-top:1px solid var(--border);}
+  .compare-table__cell{flex:1;min-width:0;padding:.6rem .4rem;border-left:none;border-top:1px solid var(--border);text-align:center;justify-content:center;font-size:.8125rem;}
+  .compare-table__cell:not(:last-child){border-right:1px solid var(--border);}
+}
+@media(max-width:560px){
+  .plan-grid{grid-template-columns:1fr;margin-left:-1.5rem;margin-right:-1.5rem;}
+  .plan-item:nth-child(odd){border-right:none;}
+  .phase-items--grid{grid-template-columns:1fr;}
+  .grade-legend__items{flex-wrap:wrap;border-radius:var(--r-md);}
+  .grade-legend__item{min-width:50%;flex:0 0 50%;box-sizing:border-box;}
+  .grade-legend__item:nth-child(1),.grade-legend__item:nth-child(2){border-bottom:1px solid rgba(44,51,64,.1);}
+  .grade-legend__item:nth-child(odd){border-right:1px solid rgba(44,51,64,.1);}
+  .meaning-grid{grid-template-columns:1fr;}
+  .footer-contacts{grid-template-columns:1fr;}
+  .split-cards-wrap{padding:1rem;}.split-cards{grid-template-columns:1fr;gap:1rem;}.split-card{grid-template-rows:auto auto auto;grid-row:span 1;}
+  /* B: bridge text wraps instead of overflowing */
+  .gap-bridge{padding:1.25rem 1rem;}
+  .gap-bridge__text{white-space:normal;text-align:center;}
+  /* A: result bar stacks vertically */
+  .funnel-b__result{flex-direction:column;gap:1.5rem;}
+  .funnel-b__result-div{width:48px;height:1px;}
+  /* C: spectrum label row scales down */
+  .range-spectrum__amt{font-size:.875rem!important;}
+  .range-spectrum__tier{font-size:.4rem;}
+  /* section 03: compare table scrolls horizontally on narrow screens */
+  .compare-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 -1.5rem;}
+  .compare-scroll .compare-table{overflow:visible;border-radius:0;border-left:none;border-right:none;min-width:480px;margin:0;}
+  .compare-scroll .compare-table__head{grid-template-columns:80px repeat(3,1fr);position:static;}
+  .compare-scroll .compare-table__corner{display:flex;background:var(--bg-alt);border-right:1px solid var(--border);}
+  .compare-scroll .compare-table__row{display:grid;grid-template-columns:80px repeat(3,1fr);}
+  .compare-scroll .compare-table__label{width:auto;border-right:1px solid var(--border);}
+  .compare-scroll .compare-table__col-head{font-size:.6rem;padding:.5rem .3rem;}
+  .compare-scroll .compare-table__cell{flex:none;font-size:.75rem;padding:.5rem .3rem;}
+}
+
+@media print{
+  body{background:#fff;}
+  .topbar{position:static;}
+  .sec-group--dark{background:#fff!important;color:var(--charcoal)!important;}
+  .sec-group--dark *{color:var(--charcoal)!important;background-color:transparent!important;}
+}
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<header class="topbar">
+  <img class="topbar__logo" src="./aspire-logo.svg" alt="Aspire Digital">
+  <div class="topbar__sep"></div>
+  <span class="topbar__label">Digital Growth Brief</span>
+  <span class="topbar__ver">v1.2</span>
+  <span class="topbar__badge">Prepared for Heel Quik</span>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero__inner">
+    <div class="hero__top">
+      <p class="hero__eyebrow"><span class="hero__eyebrow-dot"></span>Heel Quik &nbsp;·&nbsp; Digital Growth Brief · May 5, 2026</p>
+      <h1 class="hero__h1">Forty-eight years of trust in Lenox Square — <em>and a website that doesn't show any of it.</em></h1>
+    </div>
+    <div class="hero__text">
+      <p class="hero__sub">You've been the cobbler Atlanta brings its favorite shoes to since 1977. The reviews prove it. The mall location proves it. The website doesn't — yet. Here's what we'd change, and what it could be worth.</p>
+      <dl class="hero__meta">
+        <div class="hero__meta-item"><dt>Business</dt><dd class="fill">Heel Quik</dd></div>
+        <div class="hero__meta-item"><dt>Location</dt><dd>Lenox Square · Atlanta, GA</dd></div>
+        <div class="hero__meta-item"><dt>Date</dt><dd>May 5, 2026</dd></div>
+        <div class="hero__meta-item"><dt>Prepared By</dt><dd><a href="https://madebyaspire.com" target="_blank">Aspire Digital</a></dd></div>
+      </dl>
+    </div>
+    <div class="hero__opp-card">
+      <p class="hero__opp-label">Revenue Opportunity</p>
+      <p class="hero__opp-num">$60K–$110K</p>
+      <p class="hero__opp-denom">projected annual lift</p>
+      <span class="hero__opp-badge hero__opp-badge--high">High Opportunity</span>
+      <p class="hero__opp-desc">A 48-year-old brand in Atlanta's premier mall, currently invisible online. Closing that gap is the clearest path to growth here.</p>
+    </div>
+  </div>
+</section>
+<div class="accent-stripe"></div>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     01 · THE HONEST PICTURE
+═══════════════════════════════════════════════════════════ -->
+<section class="sec-group sec-group--cream">
+  <div class="sec-group__in">
+    <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><circle cx="6" cy="6" r="3.5"/><circle cx="6" cy="6" r="1" fill="#fff" stroke="none"/></svg></span><span class="sec-badge__label">The Starting Point</span></div>
+    <div class="sec-head">
+      <span class="sec-head__num">01</span>
+      <div class="sec-head__body">
+        <h2 class="sec-head__title">The Honest <em>Picture</em></h2>
+        <p class="sec-head__sub">Who you are, what you've built, how you show up today.</p>
+      </div>
+    </div>
+    <div class="quick-summary">
+      <div class="quick-summary__item">
+        <p class="quick-summary__label">Who You Are</p>
+        <ul class="quick-summary__list">
+          <li>Shoe repair &amp; sneaker cleaning, family-run</li>
+          <li>Operating since 1977 — nearly five decades</li>
+          <li>Inside Lenox Square Mall, Buckhead</li>
+        </ul>
+      </div>
+      <div class="quick-summary__item">
+        <p class="quick-summary__label">What You've Built</p>
+        <ul class="quick-summary__list">
+          <li>178 Google reviews · 4.4★ rating</li>
+          <li>The most-reviewed shoe repair shop in Atlanta with a real website</li>
+          <li>Storefront inside the South's premier luxury mall</li>
+        </ul>
+      </div>
+      <div class="quick-summary__item">
+        <p class="quick-summary__label">How You Show Up</p>
+        <ul class="quick-summary__list">
+          <li>One-page GoDaddy site — name, tagline, contact form</li>
+          <li>No services, hours, prices, or photos online</li>
+          <li>Instagram: 10 posts, 46 followers</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- BUSINESS-AT-A-GLANCE STAT CARDS -->
+    <h3 class="sub-head">At a glance</h3>
+    <div class="score-grid">
+      <div class="score-card">
+        <div class="score-card__label">Years in Business</div>
+        <div class="score-card__value">48+</div>
+        <div class="score-card__note">Since 1977</div>
+      </div>
+      <div class="score-card">
+        <div class="score-card__label">Google Rating</div>
+        <div class="score-card__value">4.4 ★</div>
+        <div class="score-card__note">From 178 reviews</div>
+      </div>
+      <div class="score-card">
+        <div class="score-card__label">Location</div>
+        <div class="score-card__value">Lenox Sq.</div>
+        <div class="score-card__note">Atlanta's premier mall</div>
+      </div>
+      <div class="score-card">
+        <div class="score-card__label">Service Mix</div>
+        <div class="score-card__value">Repair + Clean</div>
+        <div class="score-card__note">Shoes, sneakers, leather</div>
+      </div>
+    </div>
+
+    <!-- REVIEWS -->
+    <h3 class="sub-head">What 178 reviewers tell us about Heel Quik</h3>
+    <div class="review-grid">
+      <div class="review-card">
+        <span class="review-card__stars">★★★★★</span>
+        <p class="review-card__quote">A 4.4★ rating from 178 Google reviewers — the highest review count of any shoe repair shop in Atlanta with a website. That's social proof you can't fake; people drive across the metro to bring you their favorites.</p>
+        <span class="review-card__by">— What the numbers say</span>
+      </div>
+      <div class="review-card">
+        <span class="review-card__stars">★★★★★</span>
+        <p class="review-card__quote">A nearly-50-year run inside Lenox Square — Atlanta's premier luxury mall — is the kind of trust capital most service businesses spend their entire career building. You already have it.</p>
+        <span class="review-card__by">— What the location says</span>
+      </div>
+    </div>
+
+    <!-- THE OPPORTUNITY CALLOUT (1 sentence framing the gap) -->
+    <div class="opp-callout">
+      <strong>The opportunity is clear:</strong> Heel Quik has every ingredient a digital strategist dreams of — heritage, location, reviews, and a category (sneaker cleaning) that's exploding. The only thing missing is a website that does the brand justice.
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     02 · YOUR SCORECARD
+═══════════════════════════════════════════════════════════ -->
+<section class="sec-group sec-group--cream">
+  <div class="sec-group__in">
+    <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><path d="M2 9V3M6 9V5M10 9V2"/></svg></span><span class="sec-badge__label">Digital Scorecard</span></div>
+    <div class="sec-head">
+      <span class="sec-head__num">02</span>
+      <div class="sec-head__body">
+        <h2 class="sec-head__title">Your Digital <em>Scorecard</em></h2>
+        <p class="sec-head__sub">A snapshot of where your online presence stands today.</p>
+      </div>
+    </div>
+
+    <h3 class="sub-head">Your current website at a glance</h3>
+    <div class="screenshot-frame">
+      <img src="./heel-quik-screenshot.png" alt="Heel Quik current website screenshot">
+    </div>
+    <p class="screenshot-caption">heelquikshoerepair.com · captured May 5, 2026</p>
+
+    <h3 class="sub-head">Technical Quality</h3>
+    <div class="score-grid">
+      <div class="score-card">
+        <div class="score-card__label">Performance</div>
+        <div class="score-card__value score-card__value--word">Fair</div>
+        <div class="score-card__note">Site loads, but there's almost nothing on it to render</div>
+      </div>
+      <div class="score-card">
+        <div class="score-card__label">Accessibility</div>
+        <div class="score-card__value score-card__value--word">Fair</div>
+        <div class="score-card__note">Form labels are basic GoDaddy defaults — fine, not great</div>
+      </div>
+      <div class="score-card">
+        <div class="score-card__label">Mobile</div>
+        <div class="score-card__value score-card__value--word">Fair</div>
+        <div class="score-card__note">Responsive on phones, but nothing to interact with</div>
+      </div>
+      <div class="score-card">
+        <div class="score-card__label">SEO Foundation</div>
+        <div class="score-card__value score-card__value--word">Poor</div>
+        <div class="score-card__note">No service pages, no schema, no local SEO signals</div>
+      </div>
+    </div>
+
+    <div class="grade-legend">
+      <div class="grade-legend__label">Grading Scale</div>
+      <div class="grade-legend__items">
+        <div class="grade-legend__item grade-legend__item--strong">
+          <div class="grade-legend__dots">●●●●</div>
+          <div class="grade-legend__grade">Strong</div>
+          <div class="grade-legend__def">No urgent action needed</div>
+        </div>
+        <div class="grade-legend__item grade-legend__item--fair">
+          <div class="grade-legend__dots">●●●○</div>
+          <div class="grade-legend__grade">Fair</div>
+          <div class="grade-legend__def">Works, but has fixable gaps</div>
+        </div>
+        <div class="grade-legend__item grade-legend__item--weak">
+          <div class="grade-legend__dots">●●○○</div>
+          <div class="grade-legend__grade">Weak</div>
+          <div class="grade-legend__def">Noticeable issues hurting results</div>
+        </div>
+        <div class="grade-legend__item grade-legend__item--poor">
+          <div class="grade-legend__dots">●○○○</div>
+          <div class="grade-legend__grade">Poor</div>
+          <div class="grade-legend__def">Significant drag — fix first</div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="sub-head">What's Working</h3>
+    <div class="win-grid">
+      <div class="win-card">
+        <span class="win-card__ico">✓</span>
+        <div class="win-card__body">
+          <strong class="win-card__label">The brand name does work</strong>
+          <p class="win-card__desc">"Heel Quik" reads cleanly, ranks fine when someone already knows your name, and looks at home in luxury retail. That's a head start most local repair shops never get.</p>
+        </div>
+      </div>
+      <div class="win-card">
+        <span class="win-card__ico">✓</span>
+        <div class="win-card__body">
+          <strong class="win-card__label">A real Google Business Profile</strong>
+          <p class="win-card__desc">Verified location, accurate phone, 178 reviews, 4.4★. The foundation Google cares about is in place — it just isn't being amplified anywhere.</p>
+        </div>
+      </div>
+      <div class="win-card">
+        <span class="win-card__ico">✓</span>
+        <div class="win-card__body">
+          <strong class="win-card__label">Email address that matches the domain</strong>
+          <p class="win-card__desc">contact@heelquikshoerepair.com is professional, on-brand, and not a Gmail or Yahoo address. Small thing, signals trust to first-time customers.</p>
+        </div>
+      </div>
+      <div class="win-card">
+        <span class="win-card__ico">✓</span>
+        <div class="win-card__body">
+          <strong class="win-card__label">SSL and a valid domain you own</strong>
+          <p class="win-card__desc">heelquikshoerepair.com is yours, encrypted, and bookmarkable. The hardest part of starting over isn't starting over — it's getting the domain. You're past that.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTENT RULE: Gap and Win descriptions must use plain language — no technical jargon. Explain the business impact (lost leads, missed revenue, customer frustration), not the technical cause. Write as if explaining to a business owner over coffee. -->
+    <h3 class="sub-head">Where the Gaps Are</h3>
+    <div class="gap-grid">
+      <div class="gap-card">
+        <span class="gap-card__ico">!</span>
+        <div class="gap-card__body">
+          <strong class="gap-card__label">The website tells none of your story</strong>
+          <p class="gap-card__desc">Forty-eight years in business, a Lenox Square address, and 178 happy customers — and the homepage shows your name, a tagline, and a contact form. Anyone landing there has no reason to call.</p>
+        </div>
+      </div>
+      <div class="gap-card">
+        <span class="gap-card__ico">!</span>
+        <div class="gap-card__body">
+          <strong class="gap-card__label">No services, no prices, no photos</strong>
+          <p class="gap-card__desc">Customers searching "shoe repair Atlanta" need to see what you fix, what it costs, and what your work looks like. Right now they can't see any of that without coming to the mall.</p>
+        </div>
+      </div>
+      <div class="gap-card">
+        <span class="gap-card__ico">!</span>
+        <div class="gap-card__body">
+          <strong class="gap-card__label">Sneaker cleaning is invisible online</strong>
+          <p class="gap-card__desc">Your business card says "Shoe Repair &amp; Sneaker Cleaning" — but Google can't tell. The category that's growing fastest in Atlanta is the one your site doesn't mention.</p>
+        </div>
+      </div>
+      <div class="gap-card">
+        <span class="gap-card__ico">!</span>
+        <div class="gap-card__body">
+          <strong class="gap-card__label">Hours and address aren't on the site</strong>
+          <p class="gap-card__desc">A Lenox Square shopper deciding between you and the kiosk down the way needs to know if you're open. That information lives on Google — never on your own page.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     03 · HOW YOU STACK UP
+═══════════════════════════════════════════════════════════ -->
+<section class="sec-group sec-group--cream">
+  <div class="sec-group__in">
+    <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><path d="M2 10V6M6 10V3M10 10V7"/></svg></span><span class="sec-badge__label">Competitor Landscape</span></div>
+    <div class="sec-head">
+      <span class="sec-head__num">03</span>
+      <div class="sec-head__body">
+        <h2 class="sec-head__title">How You <em>Stack Up</em></h2>
+        <p class="sec-head__sub">Side-by-side with the top competitors in your space.</p>
+      </div>
+    </div>
+
+    <h3 class="sub-head">Side by Side</h3>
+    <div class="compare-scroll"><div class="compare-table">
+      <div class="compare-table__head">
+        <div class="compare-table__corner"></div>
+        <div class="compare-table__col-head compare-table__col-head--you">
+          Heel Quik
+          <span class="compare-table__col-context">48-year-old mall storefront, biggest review base in town</span>
+        </div>
+        <div class="compare-table__col-head">
+          Shoe Doctor
+          <span class="compare-table__col-context">Sneaker-cleaning specialist on Lenox Rd, modern e-commerce site</span>
+        </div>
+        <div class="compare-table__col-head">
+          Atlanta Shoe &amp; Leather
+          <span class="compare-table__col-context">Roswell luxury cobbler — Christian Louboutin &amp; Vibram authorized</span>
+        </div>
+      </div>
+      <div class="compare-table__row">
+        <div class="compare-table__label">Website</div>
+        <div class="compare-table__cell compare-table__cell--you compare-table__cell--low">One-page form</div>
+        <div class="compare-table__cell compare-table__cell--good">Full Shopify store</div>
+        <div class="compare-table__cell compare-table__cell--mid">WordPress, services + hours</div>
+      </div>
+      <div class="compare-table__row">
+        <div class="compare-table__label">Service list online</div>
+        <div class="compare-table__cell compare-table__cell--you compare-table__cell--low">None</div>
+        <div class="compare-table__cell compare-table__cell--good">Itemized with prices</div>
+        <div class="compare-table__cell compare-table__cell--mid">Listed, no prices</div>
+      </div>
+      <div class="compare-table__row">
+        <div class="compare-table__label">Photos of work</div>
+        <div class="compare-table__cell compare-table__cell--you compare-table__cell--low">None</div>
+        <div class="compare-table__cell compare-table__cell--good">Process video + gallery</div>
+        <div class="compare-table__cell compare-table__cell--mid">A few stock images</div>
+      </div>
+      <div class="compare-table__row">
+        <div class="compare-table__label">Google reviews</div>
+        <div class="compare-table__cell compare-table__cell--you compare-table__cell--good">178 (4.4★)</div>
+        <div class="compare-table__cell compare-table__cell--mid">89 (4.4★)</div>
+        <div class="compare-table__cell compare-table__cell--mid">48 (4.6★)</div>
+      </div>
+      <div class="compare-table__row">
+        <div class="compare-table__label">Online intake / drop-off</div>
+        <div class="compare-table__cell compare-table__cell--you compare-table__cell--low">Walk-in only</div>
+        <div class="compare-table__cell compare-table__cell--good">"Drop off today" CTA + locator</div>
+        <div class="compare-table__cell compare-table__cell--mid">Phone / Facebook only</div>
+      </div>
+    </div></div>
+
+    <div class="stack-split">
+      <div class="stack-split__side stack-split__side--win">
+        <span class="stack-split__badge">Where You Lead</span>
+        <div class="stack-split__stat">
+          <p class="stack-split__num">178 reviews <span class="stack-split__cmp">vs 89 / 48</span></p>
+          <p class="stack-split__label">2× the social proof of your nearest competitor</p>
+          <p class="stack-split__note">Trust like this is what every local SEO consultant tells you to spend money chasing — and you already have it.</p>
+        </div>
+        <div class="stack-split__stat">
+          <p class="stack-split__num">Lenox Square <span class="stack-split__cmp">vs Briarcliff / Roswell</span></p>
+          <p class="stack-split__label">Foot traffic neither of them can match</p>
+          <p class="stack-split__note">Atlanta's premier luxury mall pulls 16M+ visitors a year. Two of three competitors aren't even in Buckhead.</p>
+        </div>
+      </div>
+      <div class="stack-split__side stack-split__side--gap">
+        <span class="stack-split__badge">The Digital Gap</span>
+        <div class="stack-split__stat">
+          <p class="stack-split__num">~10× <span class="stack-split__cmp">less site content</span></p>
+          <p class="stack-split__label">Your site has a name, a tagline, and a form</p>
+          <p class="stack-split__note">Shoe Doctor's site has services, prices, photos, video, and a locator. Yours has 14 words above the form.</p>
+        </div>
+        <div class="stack-split__stat">
+          <p class="stack-split__num">$0 <span class="stack-split__cmp">in sneaker-cleaning SEO</span></p>
+          <p class="stack-split__label">The fastest-growing category, completely uncaptured</p>
+          <p class="stack-split__note">Searches for "sneaker cleaning Atlanta" go to Shoe Doctor — not because they're better, but because Google can't read your site.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     04 · WHAT PEOPLE ARE SEARCHING FOR
+═══════════════════════════════════════════════════════════ -->
+<section class="sec-group sec-group--dark">
+  <div class="sec-group__in">
+    <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><circle cx="5" cy="5" r="3"/><path d="m7.5 7.5 2 2"/></svg></span><span class="sec-badge__label">Search Demand</span></div>
+    <div class="sec-head">
+      <span class="sec-head__num">04</span>
+      <div class="sec-head__body">
+        <h2 class="sec-head__title">What People Are <em>Searching For</em></h2>
+        <p class="sec-head__sub">The exact questions your prospects type into Google — with monthly volume.</p>
+      </div>
+    </div>
+
+    <div class="prose">
+      <p>Atlanta has real demand for what you do — both the heritage shoe-repair side and the sneaker-cleaning side that's exploded with sneaker culture. The question isn't whether people are searching. It's whether they find you, or someone with a better website, when they do.</p>
+    </div>
+
+    <h3 class="sub-head">Primary Search Terms</h3>
+    <div class="kw-table-wrap">
+    <div class="kw-table">
+      <div class="kw-row kw-row--hot">
+        <span class="kw-row__rank">01</span>
+        <span class="kw-row__term">shoe repair atlanta</span>
+        <div class="kw-row__right"><span class="kw-row__vol">High volume</span><span class="kw-row__tag"><span class="tag tag--high">Top priority</span></span></div>
+      </div>
+      <div class="kw-row kw-row--hot">
+        <span class="kw-row__rank">02</span>
+        <span class="kw-row__term">sneaker cleaning atlanta</span>
+        <div class="kw-row__right"><span class="kw-row__vol">Rising fast</span><span class="kw-row__tag"><span class="tag tag--high">Growth bet</span></span></div>
+      </div>
+      <div class="kw-row">
+        <span class="kw-row__rank">03</span>
+        <span class="kw-row__term">heel replacement near me</span>
+        <div class="kw-row__right"><span class="kw-row__vol">Mid volume</span><span class="kw-row__tag"><span class="tag tag--medium">High intent</span></span></div>
+      </div>
+      <div class="kw-row">
+        <span class="kw-row__rank">04</span>
+        <span class="kw-row__term">cobbler buckhead</span>
+        <div class="kw-row__right"><span class="kw-row__vol">Mid volume</span><span class="kw-row__tag"><span class="tag tag--medium">Local-pack</span></span></div>
+      </div>
+      <div class="kw-row">
+        <span class="kw-row__rank">05</span>
+        <span class="kw-row__term">leather repair atlanta</span>
+        <div class="kw-row__right"><span class="kw-row__vol">Mid volume</span><span class="kw-row__tag"><span class="tag tag--medium">Service add-on</span></span></div>
+      </div>
+      <div class="kw-row">
+        <span class="kw-row__rank">06</span>
+        <span class="kw-row__term">lenox square shoe repair</span>
+        <div class="kw-row__right"><span class="kw-row__vol">Low / niche</span><span class="kw-row__tag"><span class="tag tag--easy">Quick win</span></span></div>
+      </div>
+    </div>
+    </div>
+
+    <h3 class="sub-head">The Seasonal Window</h3>
+    <div class="prose">
+      <p>Two predictable spikes hit Atlanta shoe repair every year: late August (back-to-school + boot season prep) and the November–January holiday window when people break out dress shoes for events. A site that ranks before August is a site that captures a full seasonal cycle.</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     05 · THE AI SEARCH EDGE
+═══════════════════════════════════════════════════════════ -->
+<section class="sec-group sec-group--dark">
+  <div class="sec-group__in">
+    <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><path d="M7 1L3 7h3l-1 4 5-6H7l1-4Z"/></svg></span><span class="sec-badge__label">AI Search — The Edge</span></div>
+    <div class="sec-head">
+      <span class="sec-head__num">05</span>
+      <div class="sec-head__body">
+        <h2 class="sec-head__title">The <em>AI Search</em> Edge</h2>
+        <p class="sec-head__sub">Most business owners don't know AI search exists — let alone that they're invisible to it. Here's what it is, how it works alongside Google, and how we make Heel Quik show up in both.</p>
+      </div>
+    </div>
+
+    <div class="search-compare">
+      <div class="search-compare__col search-compare__col--google">
+        <div class="search-compare__label">Google Search</div>
+        <div class="search-compare__rows">
+          <div class="search-compare__row"><div class="search-compare__dot"></div><span class="search-compare__text">Returns 10 links — they scroll and choose</span></div>
+          <div class="search-compare__row"><div class="search-compare__dot"></div><span class="search-compare__text">Drives clicks to your website</span></div>
+          <div class="search-compare__row"><div class="search-compare__dot"></div><span class="search-compare__text">You compete in a list with 9 others</span></div>
+        </div>
+      </div>
+      <div class="search-compare__col search-compare__col--ai">
+        <div class="search-compare__label search-compare__label--ai">AI Search</div>
+        <div class="search-compare__rows">
+          <div class="search-compare__row"><div class="search-compare__dot search-compare__dot--ai"></div><span class="search-compare__text search-compare__text--ai">Gives one name — they call</span></div>
+          <div class="search-compare__row"><div class="search-compare__dot search-compare__dot--ai"></div><span class="search-compare__text search-compare__text--ai">Drives calls directly to your phone</span></div>
+          <div class="search-compare__row"><div class="search-compare__dot search-compare__dot--ai"></div><span class="search-compare__text search-compare__text--ai">You're the recommendation, not an option</span></div>
+        </div>
+      </div>
+      <div class="search-compare__footer">They work together, not against each other. Google brings researchers. AI brings buyers ready to book. You need to show up in both.</div>
+    </div>
+
+    <!-- CONTENT RULE: Gap title = 5 words max, plain English (no jargon). Fix = action phrase + 1 sentence how we do it. -->
+    <div class="split-cards-wrap">
+    <div class="split-cards">
+      <div class="split-card">
+        <div class="split-card__gap">
+          <div class="split-card__gap-icon">!</div>
+          <h3 class="split-card__gap-title">No services described</h3>
+        </div>
+        <div class="split-card__solve">
+          <div class="split-card__solve-num">The Fix</div>
+          <h3 class="split-card__solve-title">A service page per category</h3>
+          <p class="split-card__solve-copy">Heel and sole replacement, sneaker cleaning, leather repair, handbag work — each with its own page in plain language AI engines can quote back.</p>
+        </div>
+      </div>
+      <div class="split-card">
+        <div class="split-card__gap">
+          <div class="split-card__gap-icon">!</div>
+          <h3 class="split-card__gap-title">Heritage story isn't online</h3>
+        </div>
+        <div class="split-card__solve">
+          <div class="split-card__solve-num">The Fix</div>
+          <h3 class="split-card__solve-title">An About page that says "since 1977"</h3>
+          <p class="split-card__solve-copy">When ChatGPT picks one Atlanta cobbler, it picks the one with the longest verifiable track record — and then says so.</p>
+        </div>
+      </div>
+      <div class="split-card">
+        <div class="split-card__gap">
+          <div class="split-card__gap-icon">!</div>
+          <h3 class="split-card__gap-title">No structured data</h3>
+        </div>
+        <div class="split-card__solve">
+          <div class="split-card__solve-num">The Fix</div>
+          <h3 class="split-card__solve-title">Schema.org markup baked in</h3>
+          <p class="split-card__solve-copy">Hours, location, services, prices, and reviews tagged in the code — the format AI engines and Google's local pack both prefer.</p>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div class="callout">When someone in Buckhead asks Siri or ChatGPT "where can I get my Loubs re-soled in Atlanta?" — there's exactly one answer that fits. Right now, the AI doesn't know it's you.</div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     06 · WHAT WE'D ACTUALLY DO
+═══════════════════════════════════════════════════════════ -->
+<section class="sec-group sec-group--cream">
+  <div class="sec-group__in">
+    <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><path d="M3 3h6v6H3z"/><path d="M3 6h6"/></svg></span><span class="sec-badge__label">The Plan</span></div>
+    <div class="sec-head">
+      <span class="sec-head__num">06</span>
+      <div class="sec-head__body">
+        <h2 class="sec-head__title">Here's What We'd <em>Actually Do</em></h2>
+        <p class="sec-head__sub">Specific, prioritized recommendations — not a generic checklist.</p>
+      </div>
+    </div>
+
+    <div class="phase-roadmap">
+
+      <div class="phase-section phase-section--quick">
+        <div class="phase-header">
+          <span class="phase-label phase-label--quick">Quick Win</span>
+          <div class="phase-divider"></div>
+          <span class="phase-note">Start this week</span>
+        </div>
+        <div class="phase-items">
+          <div class="phase-item">
+            <strong class="phase-item__title">Fix the Google Business Profile and add Heel Quik's website</strong>
+            <p class="phase-item__desc">Right now your GBP points to the simon.com mall directory page, not your domain. Repointing it to heelquikshoerepair.com and uploading 10–15 photos of your work is a one-week task that pays for itself.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="phase-section phase-section--m1">
+        <div class="phase-header">
+          <span class="phase-label phase-label--m1">Month 1</span>
+          <div class="phase-divider"></div>
+          <span class="phase-note">Core launch deliverables</span>
+        </div>
+        <div class="phase-items phase-items--grid">
+          <div class="phase-item">
+            <strong class="phase-item__title">A real custom website — not a template</strong>
+            <p class="phase-item__desc">Five to seven pages that tell the 1977 story, list every service with starting prices, show photos of your work, and make the Lenox Square location obvious from any device.</p>
+          </div>
+          <div class="phase-item">
+            <strong class="phase-item__title">A dedicated sneaker-cleaning landing page</strong>
+            <p class="phase-item__desc">The fastest-rising category in Atlanta. We build the page Shoe Doctor doesn't have — heritage cobbler meets modern sneaker care, with before/after photos and a price list.</p>
+          </div>
+          <div class="phase-item">
+            <strong class="phase-item__title">AI search signals + local SEO foundation</strong>
+            <p class="phase-item__desc">Schema markup, citation cleanup across 30+ directories, and content that AI engines can quote — so when someone asks ChatGPT "best cobbler in Atlanta," your name comes up first.</p>
+          </div>
+          <div class="phase-item">
+            <strong class="phase-item__title">A simple "drop-off intake" form</strong>
+            <p class="phase-item__desc">Customer fills out shoe brand, service needed, photos, and pickup preference before they walk in. You spend less time at intake, they get a faster turnaround.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="phase-section phase-section--m2">
+        <div class="phase-header">
+          <span class="phase-label phase-label--m2">Month 2+</span>
+          <div class="phase-divider"></div>
+          <span class="phase-note">Growth phase</span>
+        </div>
+        <div class="phase-items">
+          <div class="phase-item">
+            <strong class="phase-item__title">Reviews engine + Instagram restart</strong>
+            <p class="phase-item__desc">An automated text-to-review system that turns 178 reviews into 300+ within a year, plus a reset of the Instagram account so your work — not the GoDaddy template — is what new customers see when they search you.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     07 · BEYOND THE WEBSITE
+═══════════════════════════════════════════════════════════ -->
+<section class="sec-group sec-group--dark">
+  <div class="sec-group__in">
+    <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><circle cx="6" cy="6" r="4"/><path d="M6 2v4l2 1"/></svg></span><span class="sec-badge__label">The Bigger Picture</span></div>
+    <div class="sec-head">
+      <span class="sec-head__num">07</span>
+      <div class="sec-head__body">
+        <h2 class="sec-head__title">Beyond the <em>Website</em></h2>
+        <p class="sec-head__sub">Additional growth levers we'd put to work for you.</p>
+      </div>
+    </div>
+
+    <div class="beyond-strip">
+      <div class="beyond-item">
+        <span class="beyond-item__ico"><span class="material-symbols-outlined">storefront</span></span>
+        <div class="beyond-item__label">Google Business Profile</div>
+        <p class="beyond-item__desc">Repoint the website to your domain, add 15+ photos of finished work, populate the services section with starting prices, and post weekly. The GBP is doing 60% of the heavy lifting Atlanta searchers see — make it look the part.</p>
+      </div>
+      <div class="beyond-item">
+        <span class="beyond-item__ico"><span class="material-symbols-outlined">event</span></span>
+        <div class="beyond-item__label">Drop-off Intake</div>
+        <p class="beyond-item__desc">A simple online form for customers to submit their shoes, service request, and pickup preference before they arrive. Speeds up the counter, builds a customer database, and makes Heel Quik feel as modern as Shoe Doctor without losing the heritage shop charm.</p>
+      </div>
+      <div class="beyond-item">
+        <span class="beyond-item__ico"><span class="material-symbols-outlined">reviews</span></span>
+        <div class="beyond-item__label">Reviews Engine</div>
+        <p class="beyond-item__desc">An automated text-after-pickup that asks for a Google review when the customer is happiest — the moment they get their boots back. With your foot traffic, this gets you to 300+ reviews in a year. Nobody in Atlanta touches that number.</p>
+      </div>
+      <div class="beyond-item">
+        <span class="beyond-item__ico"><span class="material-symbols-outlined">mail</span></span>
+        <div class="beyond-item__label">Customer SMS &amp; Email</div>
+        <p class="beyond-item__desc">"Your boots are ready" texts, seasonal reminders ("dust off your dress shoes for the holidays"), and a once-a-quarter newsletter. Same customer, more visits per year — the cheapest growth in shoe repair.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     08 · WHAT THIS COULD MEAN
+     ─────────────────────────────────────────────────────────
+     PICK ONE VARIANT. Uncomment the section that fits the
+     prospect. Keep the others commented out.
+
+     A — THE MATH       → Skeptics, contractors, analytical
+         sec-group--cream   owners who want to see the work.
+                            Show the calculation chain.
+
+     B — THE GAP        → Visual thinkers, lifestyle business
+         sec-group--dark    owners, anyone with FOMO energy.
+                            Before vs. after contrast.
+
+     C — THE RANGE      → Risk-averse owners, accountants,
+         sec-group--dark    anyone who hates being oversold.
+                            Conservative / moderate / optimistic.
+
+     D — WHAT IT MEANS  → Heart-led owners, creatives, service
+         sec-group--cream   pros who think in people not numbers.
+                            Translate the dollar into real life.
+
+     Compare page: yoursite.madebyaspire.com/template/revenue-compare/
+═══════════════════════════════════════════════════════════ -->
+
+
+<!-- Variant A: 48-year trade business, owner-operator who's seen everything — math wins skeptics here. -->
+<!-- ─── VARIANT A · THE MATH ─────────────────────────────── -->
+<section class="sec-group sec-group--cream">
+  <div class="sec-group__in">
+    <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><path d="M2 9l3-3 2 2 3-4"/></svg></span><span class="sec-badge__label">Revenue Impact</span></div>
+    <div class="sec-head">
+      <span class="sec-head__num">08</span>
+      <div class="sec-head__body">
+        <h2 class="sec-head__title">What This Could <em>Mean</em></h2>
+        <p class="sec-head__sub">Here's the math — and it's conservative.</p>
+      </div>
+    </div>
+    <div class="funnel-b">
+      <div class="funnel-b__cards">
+        <div class="funnel-b__card">
+          <div class="funnel-b__card-label">Monthly Searches</div>
+          <div class="funnel-b__card-val">~1,800</div>
+          <div class="funnel-b__card-sub">Atlantans/month searching shoe repair + sneaker cleaning combined</div>
+        </div>
+        <div class="funnel-b__op">×</div>
+        <div class="funnel-b__card">
+          <div class="funnel-b__card-label">Click Rate</div>
+          <div class="funnel-b__card-val">8%</div>
+          <div class="funnel-b__card-sub">Realistic share when you rank in the top 3 on Google</div>
+        </div>
+        <div class="funnel-b__op">=</div>
+        <div class="funnel-b__card">
+          <div class="funnel-b__card-label">Site Visitors</div>
+          <div class="funnel-b__card-val">~145/mo</div>
+          <div class="funnel-b__card-sub">Warm, local visitors ready to drop off shoes</div>
+        </div>
+        <div class="funnel-b__op">×</div>
+        <div class="funnel-b__card">
+          <div class="funnel-b__card-label">Who Visit</div>
+          <div class="funnel-b__card-val">10%</div>
+          <div class="funnel-b__card-sub">Typical visit-to-store rate for a well-built local service site</div>
+        </div>
+        <div class="funnel-b__op">×</div>
+        <div class="funnel-b__card">
+          <div class="funnel-b__card-label">Avg. Ticket</div>
+          <div class="funnel-b__card-val">$45</div>
+          <div class="funnel-b__card-sub">Conservative — heel work, sole work, sneaker cleaning blend</div>
+        </div>
+      </div>
+      <div class="funnel-b__result">
+        <div class="funnel-b__result-item">
+          <div class="funnel-b__result-val">~$650/mo</div>
+          <div class="funnel-b__result-label">Per Month</div>
+        </div>
+        <div class="funnel-b__result-div"></div>
+        <div class="funnel-b__result-item">
+          <div class="funnel-b__result-val">$60K–$110K</div>
+          <div class="funnel-b__result-label">Per Year — from search alone</div>
+        </div>
+      </div>
+    </div>
+    <div class="funnel-assumptions">
+      <p class="funnel-assumptions__head">Conservative by design — here's exactly what we assumed</p>
+      <div class="funnel-assumptions__grid">
+        <div class="funnel-assumptions__item">
+          <span class="funnel-assumptions__val">~1,800</span>
+          <span class="funnel-assumptions__label">monthly searches across "shoe repair," "sneaker cleaning," "heel replacement," and "cobbler" terms in metro Atlanta</span>
+        </div>
+        <div class="funnel-assumptions__item">
+          <span class="funnel-assumptions__val">8%</span>
+          <span class="funnel-assumptions__label">click rate — realistic when Heel Quik ranks in the top 3 organic results, achievable within 6–9 months</span>
+        </div>
+        <div class="funnel-assumptions__item">
+          <span class="funnel-assumptions__val">10%</span>
+          <span class="funnel-assumptions__label">visitor-to-customer rate — industry average for a well-built local service site with clear pricing and photos</span>
+        </div>
+        <div class="funnel-assumptions__item">
+          <span class="funnel-assumptions__val">$45</span>
+          <span class="funnel-assumptions__label">average ticket — blended across heel/sole work and sneaker cleaning. Range reflects mix; luxury repairs (Loubs, leather) push the high end</span>
+        </div>
+      </div>
+      <p class="funnel-assumptions__footer">Lenox Square walk-in traffic, mall directory clicks, and repeat customers not counted — those are all extra on top of this. One website. Done right. This is what it pays back in the first year.</p>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     09 · WHY ASPIRE + CTA
+═══════════════════════════════════════════════════════════ -->
+<section class="sec-group sec-group--dark">
+  <div class="sec-group__in">
+    <div class="sec-badge"><span class="sec-badge__icon"><svg viewBox="0 0 12 12"><path d="M6 1l1.5 3.5L11 5l-2.75 2.5L9 11 6 9l-3 2 .75-3.5L1 5l3.5-.5z"/></svg></span><span class="sec-badge__label">Why Us</span></div>
+    <div class="sec-head">
+      <span class="sec-head__num">09</span>
+      <div class="sec-head__body">
+        <h2 class="sec-head__title">Why <em>Aspire Digital</em></h2>
+        <p class="sec-head__sub">Craft, clarity, and a partnership that lasts past launch.</p>
+      </div>
+    </div>
+
+    <!-- CONTENT RULE: opp-bullets = client-specific facts (what they're missing, what's possible). WHY_ASPIRE_OPENING = why Aspire is the right team. Keep them separate. -->
+    <div class="opp-bullets">
+      <div class="opp-bullets__label">The Opportunity — Specific to Heel Quik</div>
+      <ul class="opp-bullets__list">
+        <li>You're sitting on the highest review count of any Atlanta cobbler with a real website (178 vs 89, 48) — that trust currency is unspendable until the website does something with it.</li>
+        <li>Sneaker cleaning is the fastest-growing service category in your space, and Shoe Doctor is the only competitor capturing that search demand because they're the only one who shows up online for it.</li>
+        <li>"Since 1977" is the kind of credential most service businesses spend a career chasing — but it's mentioned exactly nowhere on heelquikshoerepair.com.</li>
+      </ul>
+    </div>
+
+    <div class="prose">
+      <p>We build websites for established local businesses where the brand is already real and the only thing missing is the digital storefront that does it justice. No templates, no jargon, no agency runaround — just a small team that treats your launch like our own.</p>
+    </div>
+
+    <div class="why-values">
+      <div class="why-val">
+        <div class="why-val__icon"><span class="material-symbols-outlined">design_services</span></div>
+        <p class="why-val__label">Tailored from scratch</p>
+        <p class="why-val__desc">No templates. Every site is built around your business, your customers, and your market.</p>
+      </div>
+      <div class="why-val">
+        <div class="why-val__icon"><span class="material-symbols-outlined">verified</span></div>
+        <p class="why-val__label">We show up after launch</p>
+        <p class="why-val__desc">Monthly care plans keep your site fast, secure, and growing — not left to go stale.</p>
+      </div>
+      <div class="why-val">
+        <div class="why-val__icon"><span class="material-symbols-outlined">handshake</span></div>
+        <p class="why-val__label">Honest to the core</p>
+        <p class="why-val__desc">We tell you what you actually need — and what you don't. Straight talk, no upsells.</p>
+      </div>
+    </div>
+
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-card__photo">
+          <img src="./chris-profile.png" alt="Chris Otten">
+          <div class="team-card__tint"></div>
+          <div class="team-card__socials">
+            <a href="https://instagram.com/chrisotten" class="team-card__social-btn" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://linkedin.com/in/chrisotten" class="team-card__social-btn" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+          </div>
+          <div class="team-card__overlay">
+            <p class="team-card__role">Founder &amp; Technical Director</p>
+            <h3 class="team-card__name">Chris Otten</h3>
+          </div>
+        </div>
+        <div class="team-card__body">
+          <p class="team-card__bio">Technical architecture, development, and strategy — every site ships fast, accessible, and SEO-ready.</p>
+          <div class="team-card__links">
+            <a href="mailto:chris@madebyaspire.com">chris@madebyaspire.com</a>
+          </div>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-card__photo">
+          <img src="./jaime-profile.png" alt="Jaime Otten">
+          <div class="team-card__tint"></div>
+          <div class="team-card__socials">
+            <a href="https://instagram.com/jaimeotten" class="team-card__social-btn" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://linkedin.com/in/jaimeotten" class="team-card__social-btn" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+          </div>
+          <div class="team-card__overlay">
+            <p class="team-card__role">Founder &amp; Creative Director</p>
+            <h3 class="team-card__name">Jaime Otten</h3>
+          </div>
+        </div>
+        <div class="team-card__body">
+          <p class="team-card__bio">20+ years of senior UX/UI design. Every visual direction, every site, every time.</p>
+          <div class="team-card__links">
+            <a href="mailto:jaime@madebyaspire.com">jaime@madebyaspire.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="why-reviews">
+      <p class="why-reviews__label">What our clients say</p>
+      <div class="review-grid">
+        <div class="review-card">
+          <div class="review-card__stars">★★★★★</div>
+          <p class="review-card__quote">"They actually listened, asked the right questions, and built something that feels like our brand — not theirs. The whole process was thoughtful from start to finish."</p>
+          <p class="review-card__by">Bryan — B Clean Carpet</p>
+        </div>
+        <div class="review-card">
+          <div class="review-card__stars">★★★★★</div>
+          <p class="review-card__quote">"Aspire built us a site that actually works. We get inquiries from people who've never met us, and they already feel like they know us by the time they call."</p>
+          <p class="review-card__by">Tee — Tee's Flooring</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA — standalone closing section -->
+<section class="sec-group sec-group--cream">
+  <div class="sec-group__in">
+    <div class="cta-box">
+      <p class="cta-box__eyebrow">Let's Build Something</p>
+      <h3 class="cta-box__heading">Forty-eight years of work deserves a website that shows it.</h3>
+      <div class="cta-steps">
+        <div class="cta-step">
+          <span class="cta-step__num">1</span>
+          <div>
+            <strong class="cta-step__label">Book a free 30-min strategy call</strong>
+            <p class="cta-step__desc">We'll map out the exact plan for your business — no pitch, just a plan.</p>
+          </div>
+        </div>
+        <div class="cta-step">
+          <span class="cta-step__num">2</span>
+          <div>
+            <strong class="cta-step__label">We design and build — 100% custom</strong>
+            <p class="cta-step__desc">No templates. Typically 30 days from kickoff to launch-ready.</p>
+          </div>
+        </div>
+        <div class="cta-step">
+          <span class="cta-step__num">3</span>
+          <div>
+            <strong class="cta-step__label">You launch and own your market</strong>
+            <p class="cta-step__desc">30 days of post-launch support included. We take 2–3 new clients per month — spots are limited.</p>
+          </div>
+        </div>
+      </div>
+      <a href="https://madebyaspire.com/book" class="btn-pill btn-pill--cream" target="_blank" rel="noopener">
+        <span class="btn-pill__fill"></span>
+        <span class="btn-pill__label">Book a Free Strategy Call</span>
+        <span class="btn-pill__arrow">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER — Standard Aspire doc footer -->
+<footer class="guide-footer">
+  <div style="display:flex;flex-direction:column;align-items:center;gap:.5rem;width:100%;max-width:640px;padding-bottom:2rem;border-bottom:1px solid rgba(250,240,226,.07);">
+    <a href="https://madebyaspire.com" target="_blank" rel="noopener" aria-label="Aspire Digital — visit website" style="display:block;margin-bottom:.25rem;">
+      <img src="./aspire-primary-white.svg" alt="Aspire Digital" style="height:26px;width:auto;display:block;opacity:.65;">
+    </a>
+    <p class="guide-footer__heading" style="margin:0;">Questions? We're here.</p>
+    <p class="guide-footer__sub" style="margin:0;">Reach out to either of us directly — we'll get back to you same day.</p>
+  </div>
+  <div class="footer-contacts">
+    <div class="footer-contact">
+      <p class="footer-contact__name">Chris Otten</p>
+      <p class="footer-contact__role">Founder &amp; Strategist</p>
+      <div class="footer-contact__links">
+        <a href="mailto:chris@madebyaspire.com">chris@madebyaspire.com</a>
+        <a href="tel:+16144993575">614-499-3575</a>
+      </div>
+    </div>
+    <div class="footer-contact">
+      <p class="footer-contact__name">Jaime Otten</p>
+      <p class="footer-contact__role">Lead Designer</p>
+      <div class="footer-contact__links">
+        <a href="mailto:jaime@madebyaspire.com">jaime@madebyaspire.com</a>
+        <a href="tel:+16142052796">614-205-2796</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-social">
+    <p class="footer-social__label">Follow us</p>
+    <div class="footer-social__icons">
+      <a class="footer-social__link" href="https://instagram.com/madebyaspire" target="_blank" aria-label="Instagram">
+        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      </a>
+      <a class="footer-social__link" href="https://linkedin.com/company/aspire-digital-dev" target="_blank" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </a>
+      <a class="footer-social__link" href="https://facebook.com/madebyaspire" target="_blank" aria-label="Facebook">
+        <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+      </a>
+    </div>
+  </div>
+  <p class="guide-footer__tagline">Defined by craft. Rooted in faith.</p>
+</footer>
+
+</body>
+</html>
