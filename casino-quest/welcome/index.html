@@ -785,9 +785,8 @@ img{max-width:100%;display:block;}
 .aud-card--dealer{border-right-color:var(--green);}
 .aud-card--group{border-right-color:#B8860B;}
 @media(max-width:700px){.aud-cards{max-width:100%;margin-left:0;}}
-/* Audience pills inside a compare-table cell: flex-wrap so multiple chips fit */
-.compare-table__cell .aud-pill{margin:.15rem .2rem .15rem 0;}
-.compare-table__cell{flex-wrap:wrap;}
+/* Audience pills inside a compare-table cell: stack vertically right-justified */
+.aud-pill-stack{display:inline-flex;flex-direction:column;align-items:flex-end;gap:.35rem;}
 
 /* CHANNEL ROLLUP grid: 3-col desktop, 1-col mobile (used in Variant A bridge to $60K) */
 .channel-rollup{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.5rem 0;}
@@ -1161,9 +1160,9 @@ img{max-width:100%;display:block;}
       </div>
       <div class="compare-table__row">
         <div class="compare-table__label">Audiences served</div>
-        <div class="compare-table__cell compare-table__cell--you compare-table__cell--win" data-competitor="Casino Quest"><span class="aud-pill aud-pill--tourist"><span class="aud-pill__dot"></span>Tourist</span> <span class="aud-pill aud-pill--dealer"><span class="aud-pill__dot"></span>Dealer</span> <span class="aud-pill aud-pill--group"><span class="aud-pill__dot"></span>Group</span></div>
-        <div class="compare-table__cell" data-competitor="PCI"><span class="aud-pill aud-pill--dealer"><span class="aud-pill__dot"></span>Dealer</span></div>
-        <div class="compare-table__cell" data-competitor="Royal Intl"><span class="aud-pill aud-pill--dealer"><span class="aud-pill__dot"></span>Dealer</span></div>
+        <div class="compare-table__cell compare-table__cell--you compare-table__cell--win" data-competitor="Casino Quest"><span class="aud-pill-stack"><span class="aud-pill aud-pill--tourist"><span class="aud-pill__dot"></span>Tourist</span><span class="aud-pill aud-pill--dealer"><span class="aud-pill__dot"></span>Dealer</span><span class="aud-pill aud-pill--group"><span class="aud-pill__dot"></span>Group</span></span></div>
+        <div class="compare-table__cell" data-competitor="PCI"><span class="aud-pill-stack"><span class="aud-pill aud-pill--dealer"><span class="aud-pill__dot"></span>Dealer</span></span></div>
+        <div class="compare-table__cell" data-competitor="Royal Intl"><span class="aud-pill-stack"><span class="aud-pill aud-pill--dealer"><span class="aud-pill__dot"></span>Dealer</span></span></div>
       </div>
       <div class="compare-table__row">
         <div class="compare-table__label">Website</div>
