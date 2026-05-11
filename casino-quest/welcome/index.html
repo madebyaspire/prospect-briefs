@@ -770,21 +770,21 @@ img{max-width:100%;display:block;}
 .sec-group--dark .aud-pill--group{background:rgba(217,166,46,.2);color:#E0BD63;}
 .aud-row{display:flex;flex-wrap:wrap;gap:.5rem;margin:.75rem 0 1.5rem;}
 
-/* ── AUDIENCE GOAL CARDS ── richer 3-up grid showing each buyer + their goal */
-.aud-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.5rem 0 2rem;}
-.aud-card{position:relative;padding:1.25rem 1.25rem 1.5rem;border-radius:var(--r-lg);background:rgba(250,240,226,.04);border:1px solid rgba(250,240,226,.08);display:flex;flex-direction:column;gap:.625rem;}
+/* ── AUDIENCE GOAL CARDS ── vertical stack, right-justified within the section */
+.aud-cards{display:flex;flex-direction:column;gap:.875rem;margin:1.5rem 0 2rem;max-width:540px;margin-left:auto;}
+.aud-card{position:relative;padding:1.125rem 1.25rem 1.25rem;border-radius:var(--r-lg);background:rgba(250,240,226,.04);border:1px solid rgba(250,240,226,.08);border-right:3px solid transparent;display:flex;flex-direction:column;gap:.5rem;text-align:right;}
 .sec-group--cream .aud-card,.sec-group--alt .aud-card{background:var(--white);border:1px solid var(--border-lt);box-shadow:var(--sh-sm);}
-.aud-card__pill{align-self:flex-start;}
+.aud-card__pill{align-self:flex-end;}
 .aud-card__goal{font-family:var(--f-d);font-style:italic;font-size:1.05rem;line-height:1.3;color:var(--bg);}
 .sec-group--cream .aud-card__goal,.sec-group--alt .aud-card__goal{color:var(--charcoal);}
 .aud-card__intent{font-family:var(--f-b);font-size:.8125rem;line-height:1.55;color:rgba(250,240,226,.6);}
 .sec-group--cream .aud-card__intent,.sec-group--alt .aud-card__intent{color:var(--text-sec);}
-.aud-card__cue{margin-top:auto;padding-top:.625rem;border-top:1px solid rgba(250,240,226,.08);font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(250,240,226,.4);}
+.aud-card__cue{margin-top:.25rem;padding-top:.625rem;border-top:1px solid rgba(250,240,226,.08);font-family:var(--f-n);font-size:.5625rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(250,240,226,.4);}
 .sec-group--cream .aud-card__cue,.sec-group--alt .aud-card__cue{border-top-color:var(--border-lt);color:var(--text-muted);}
-.aud-card--tourist{border-top:3px solid var(--accent);}
-.aud-card--dealer{border-top:3px solid var(--green);}
-.aud-card--group{border-top:3px solid #B8860B;}
-@media(max-width:700px){.aud-cards{grid-template-columns:1fr;}}
+.aud-card--tourist{border-right-color:var(--accent);}
+.aud-card--dealer{border-right-color:var(--green);}
+.aud-card--group{border-right-color:#B8860B;}
+@media(max-width:700px){.aud-cards{max-width:100%;margin-left:0;}}
 /* Audience pills inside a compare-table cell: flex-wrap so multiple chips fit */
 .compare-table__cell .aud-pill{margin:.15rem .2rem .15rem 0;}
 .compare-table__cell{flex-wrap:wrap;}
