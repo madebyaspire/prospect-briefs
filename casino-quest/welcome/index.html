@@ -739,7 +739,12 @@ img{max-width:100%;display:block;}
 .why-val__desc{font-size:.8125rem;color:rgba(250,240,226,.48);line-height:1.55;margin:0;}
 
 /* ── FUNNEL B RESPONSIVE ── */
-@media(max-width:700px){.funnel-b__cards{flex-wrap:wrap;}.funnel-b__op{display:none;}.funnel-b__card{flex:0 0 50%;border-right:1px solid var(--border-light);border-top:1px solid var(--border-light);}.funnel-b__card:nth-of-type(1){border-top:none;}.funnel-b__card:nth-of-type(2){border-top:none;}.funnel-b__card:nth-of-type(2n){border-right:none;}}
+@media(max-width:700px){
+  .funnel-b__cards{flex-direction:column;border-radius:0 0 var(--r-xl) var(--r-xl);}
+  .funnel-b__card{flex:none;width:100%;border-right:none;border-bottom:1px solid var(--border-light);padding:1.25rem 1.25rem 1.5rem;}
+  .funnel-b__card:last-child{border-bottom:none;}
+  .funnel-b__op{width:100%;height:auto;padding:.625rem 0;border-right:none;border-bottom:1px solid var(--border-light);background:var(--bg-alt);font-size:1.125rem;}
+}
 
 /* ── RESPONSIVE ── */
 @media(max-width:640px){
@@ -991,7 +996,7 @@ img{max-width:100%;display:block;}
       <div class="score-card">
         <div class="score-card__label">SEO Foundation</div>
         <div class="score-card__value score-card__value--word">Weak</div>
-        <div class="score-card__note">Authority is split five ways across five domains. The dealer school <code>&lt;title&gt;</code> is a 200-character keyword paragraph — AI search engines downgrade exactly this.</div>
+        <div class="score-card__note">Authority is split five ways across five domains. The dealer-school site's page-title line — the one Google shows in search results — is a 200-character run-on sentence listing every game. AI search engines downgrade exactly this.</div>
       </div>
     </div>
 
@@ -1033,8 +1038,8 @@ img{max-width:100%;display:block;}
       <div class="win-card">
         <span class="win-card__ico">✓</span>
         <div class="win-card__body">
-          <strong class="win-card__label">An MCP endpoint already live (on Wix)</strong>
-          <p class="win-card__desc">casinoquest.biz exposes <code>/_api/mcp</code> — AI agents can query it directly today. You're accidentally ahead on AI search on one of your five domains. The other four are invisible to AI.</p>
+          <strong class="win-card__label">Already AI-search ready (on your Wix site)</strong>
+          <p class="win-card__desc">casinoquest.biz happens to speak the language AI search engines use to read sites — which means Claude, ChatGPT, and Perplexity can already pull live answers from your tourist pages. The other four domains stay invisible to those same engines.</p>
         </div>
       </div>
       <div class="win-card">
@@ -1066,8 +1071,8 @@ img{max-width:100%;display:block;}
       <div class="gap-card">
         <span class="gap-card__ico">!</span>
         <div class="gap-card__body">
-          <strong class="gap-card__label">The dealer-school title tag is a keyword paragraph</strong>
-          <p class="gap-card__desc">cegdealers.com's <code>&lt;title&gt;</code> is 200+ characters listing every game in a single sentence. Google truncates it to 60 characters in results — and AI engines treat keyword stuffing as a downgrade signal. Real prose wins both rooms.</p>
+          <strong class="gap-card__label">The dealer-school page title is a keyword list</strong>
+          <p class="gap-card__desc">The line Google shows under cegdealers.com in search results is 200+ characters listing every game in one breathless run-on sentence. Google truncates it to about 60 characters — and AI engines treat keyword-list titles like this as a downgrade signal. Real prose wins both rooms.</p>
         </div>
       </div>
       <div class="gap-card">
@@ -1145,7 +1150,7 @@ img{max-width:100%;display:block;}
       </div>
       <div class="compare-table__row">
         <div class="compare-table__label">AI search ready</div>
-        <div class="compare-table__cell compare-table__cell--you compare-table__cell--warn">MCP on 1 of 5</div>
+        <div class="compare-table__cell compare-table__cell--you compare-table__cell--warn">1 of 5 sites</div>
         <div class="compare-table__cell compare-table__cell--lose">No</div>
         <div class="compare-table__cell compare-table__cell--lose">No</div>
       </div>
@@ -1293,34 +1298,34 @@ img{max-width:100%;display:block;}
       <div class="split-card">
         <div class="split-card__gap">
           <div class="split-card__gap-icon">!</div>
-          <h3 class="split-card__gap-title">One MCP endpoint of five</h3>
+          <h3 class="split-card__gap-title">One of five sites is AI-ready</h3>
         </div>
         <div class="split-card__solve">
           <div class="split-card__solve-num">The Fix</div>
-          <h3 class="split-card__solve-title">One Front Door, MCP Everywhere</h3>
-          <p class="split-card__solve-copy">Wix gave casinoquest.biz an MCP endpoint for free — but cegdealers.com, cqnexus.com, cegnexus.com, and shopcasinoquest.com are invisible to AI agents. A unified domain with first-class <code>llms.txt</code> + MCP coverage means Claude, ChatGPT, and Perplexity answer for every line of business.</p>
+          <h3 class="split-card__solve-title">One front door, AI coverage everywhere</h3>
+          <p class="split-card__solve-copy">Wix happens to give casinoquest.biz the structured signals AI search engines look for — but cegdealers.com, cqnexus.com, cegnexus.com, and shopcasinoquest.com are silent to those same engines. A single unified site, with proper AI-search signals on every page, means Claude, ChatGPT, and Perplexity have one source to quote for every line of business.</p>
         </div>
       </div>
       <div class="split-card">
         <div class="split-card__gap">
           <div class="split-card__gap-icon">!</div>
-          <h3 class="split-card__gap-title">A 200-character title tag</h3>
+          <h3 class="split-card__gap-title">Page titles read like keyword lists</h3>
         </div>
         <div class="split-card__solve">
           <div class="split-card__solve-num">The Fix</div>
-          <h3 class="split-card__solve-title">Page Titles AI Can Quote</h3>
-          <p class="split-card__solve-copy">cegdealers.com's homepage <code>&lt;title&gt;</code> lists every game in one sentence. Rewrite every page title and meta description in the founders' voice — AI engines reward natural language, and David and Alex already speak it on the podcast.</p>
+          <h3 class="split-card__solve-title">Titles AI search can quote out loud</h3>
+          <p class="split-card__solve-copy">The cegdealers.com homepage title shown in Google results is 200+ characters listing every game in one run-on sentence. Rewrite every page title and search description in the founders' voice — AI engines reward natural language, and David and Alex already speak it on the podcast.</p>
         </div>
       </div>
       <div class="split-card">
         <div class="split-card__gap">
           <div class="split-card__gap-icon">!</div>
-          <h3 class="split-card__gap-title">No EducationalOrganization schema</h3>
+          <h3 class="split-card__gap-title">The school's licensure is invisible</h3>
         </div>
         <div class="split-card__solve">
           <div class="split-card__solve-num">The Fix</div>
-          <h3 class="split-card__solve-title">Dedicated Funnels, Clear Signals</h3>
-          <p class="split-card__solve-copy">Separate tourist and dealer-school pages give AI tools and Google a precise, unambiguous answer for each query — so when someone asks "best casino lesson experience in Vegas," you're the recommendation, not an option in a list.</p>
+          <h3 class="split-card__solve-title">Make the trust signals readable to AI</h3>
+          <p class="split-card__solve-copy">CEG is a Nevada-licensed school with a 100-casino placement network — but nothing in the page code tells Google or Claude that. We add the small, invisible tags AI engines look for ("this is an accredited school," "this is an event venue," "these are course prices") so the licensure, the BBB A+, and the placement network become facts AI assistants can repeat.</p>
         </div>
       </div>
     </div>
@@ -1369,20 +1374,20 @@ img{max-width:100%;display:block;}
         </div>
         <div class="phase-items phase-items--grid">
           <div class="phase-item">
-            <strong class="phase-item__title">Consolidate to a Single Authority Domain</strong>
-            <p class="phase-item__desc">Migrate casinoquest.biz, cqnexus.com, and shopcasinoquest.com to one .com domain with clean 301 redirects. Every backlink, review citation, and press mention starts working together — not split three ways across a .biz, a Kajabi, and a Shopify store.</p>
+            <strong class="phase-item__title">Consolidate to a single home domain</strong>
+            <p class="phase-item__desc">Move casinoquest.biz, cegdealers.com, cqnexus.com, cegnexus.com, and shopcasinoquest.com to one .com address with permanent redirects so every old link still works. Every backlink, review citation, and press mention starts pulling in the same direction — not split five ways across five separate platforms.</p>
           </div>
           <div class="phase-item">
             <strong class="phase-item__title">Build Dedicated Tourist + Dealer Funnels</strong>
             <p class="phase-item__desc">Separate top-level pages for each buyer type: tourist lesson booking, dealer school enrollment, group/event rental, and the online course platform — each optimized for its own search terms and buyer journey. No more shared homepage confusion.</p>
           </div>
           <div class="phase-item">
-            <strong class="phase-item__title">Replace Wix with a Performance-First Build</strong>
-            <p class="phase-item__desc">Move to Astro on Cloudflare Workers — sub-1-second mobile load times, no platform lock-in, and a booking system that integrates with your CRM. Wix's JS bundle is your biggest ranking drag; removing it unlocks Google momentum within weeks of launch.</p>
+            <strong class="phase-item__title">Replace the Wix template with a faster custom build</strong>
+            <p class="phase-item__desc">Rebuild on the same fast hosting we use for every Aspire site — sub-one-second mobile load times, no platform lock-in, and a booking system that talks to your customer database. Wix's heavy code is your biggest ranking drag; replacing it unlocks Google momentum within weeks of launch.</p>
           </div>
           <div class="phase-item">
-            <strong class="phase-item__title">Structured Schema for Services and Location</strong>
-            <p class="phase-item__desc">Mark up every page with structured data (LocalBusiness, Service, Event, Review) so Google and AI tools understand exactly what you offer, where you are, and who it's for. This is the foundation of AI search visibility — and it's invisible to users but critical to rankings.</p>
+            <strong class="phase-item__title">Add the AI-search tags on every page</strong>
+            <p class="phase-item__desc">Every page gets the small, invisible labels that AI engines look for — describing what you offer, where you are, who it's for, what it costs, and when it's open. Invisible to your visitors but critical to whether Google and Claude actually quote you in search results.</p>
           </div>
         </div>
       </div>
@@ -1574,7 +1579,7 @@ img{max-width:100%;display:block;}
     <div class="opp-bullets">
       <div class="opp-bullets__label">The Opportunity — Specific to Casino Quest</div>
       <ul class="opp-bullets__list">
-        <li>You're already AI-ready on one of five domains — the Wix MCP endpoint at <code>casinoquest.biz/_api/mcp</code> means Claude, ChatGPT, and Perplexity can query the tourist side directly. Roll that capability across every revenue line and you become one of the only Vegas operators with full-stack AI search coverage.</li>
+        <li>You're already AI-search ready on one of five domains — Wix accidentally gives casinoquest.biz the structured signals AI engines need to read and quote a business. Roll that capability across every revenue line and you become one of the only Vegas operators with full AI search coverage.</li>
         <li>Five public domains, three phone numbers, two business hours, multiple platforms — every consolidation step compounds your existing 4.9★ reputation instead of dividing it. The hard work of building this brand is already done.</li>
         <li>A 3,445-member paying Patreon and no email capture on the main site means your most valuable audience lives on a platform you don't own. A custom CRM-integrated site changes that permanently.</li>
       </ul>
