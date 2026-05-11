@@ -755,6 +755,16 @@ img{max-width:100%;display:block;}
   .hero__h1,.hero__top .hero__h1{font-size:clamp(1.875rem,7.5vw,2.5rem)!important;}
   .hero__inner{padding:3rem 1.25rem 3.5rem!important;}
 }
+/* CHANNEL ROLLUP grid: 3-col desktop, 1-col mobile (used in Variant A bridge to $60K) */
+.channel-rollup{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.5rem 0;}
+@media(max-width:700px){.channel-rollup{grid-template-columns:1fr;}}
+/* COMPARE TABLE mobile: tighter headers, hide context subtext, allow names to wrap */
+@media(max-width:560px){
+  .compare-scroll{overflow-x:visible;margin:0;}
+  .compare-table{min-width:0;}
+  .compare-table__col-head .compare-table__col-context{display:none;}
+  .compare-table__col-head{font-size:.625rem;padding:.55rem .35rem;line-height:1.2;white-space:normal;}
+}
 @media(max-width:820px){
   .team-grid{grid-template-columns:1fr;}
   .beyond-strip{grid-template-columns:repeat(2,1fr);}
@@ -1541,7 +1551,7 @@ img{max-width:100%;display:block;}
     <div class="prose">
       <p>The funnel above is just the tourist-lessons channel — the part that's easiest to model from search demand and the existing 4.9★ booking flow. Casino Quest has two more revenue lines a unified site unlocks at the same time. Conservatively, they roll up like this:</p>
     </div>
-    <div class="compare-grid" style="grid-template-columns:repeat(3,1fr);">
+    <div class="channel-rollup">
       <div class="compare-card">
         <p class="compare-card__name">Tourist lessons</p>
         <div class="compare-card__stat"><span class="compare-card__stat-label">Added year one</span><span class="compare-card__stat-val">~$22K</span></div>
