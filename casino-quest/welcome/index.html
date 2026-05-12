@@ -711,9 +711,11 @@ img{max-width:100%;display:block;}
 .split-cards-wrap{background:var(--bg);border-radius:var(--r-xl);padding:1.5rem;margin:1.25rem 0 1.5rem;}
 .split-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:.875rem;}
 .split-card{border-radius:var(--r-lg);overflow:hidden;border:1px solid rgba(196,98,45,.15);}
-.split-card__gap{background:rgba(196,98,45,.05);border-bottom:2px solid rgba(196,98,45,.2);padding:1.25rem 1.5rem;display:flex;align-items:center;gap:.75rem;}
-.split-card__gap-icon{width:26px;height:26px;border-radius:50%;background:rgba(196,98,45,.15);border:1px solid rgba(196,98,45,.3);display:flex;align-items:center;justify-content:center;font-size:.75rem;flex-shrink:0;color:var(--accent);}
-.split-card__gap-title{font-family:var(--f-b);font-size:.875rem;font-weight:700;color:var(--charcoal);line-height:1.25;}
+.split-card__gap{background:rgba(196,98,45,.05);border-bottom:2px solid rgba(196,98,45,.2);padding:1.25rem 1.5rem 1.375rem;display:flex;flex-direction:column;gap:.375rem;}
+.split-card__gap-label{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);display:inline-flex;align-items:center;gap:.4rem;}
+.split-card__gap-label::before{content:"";width:18px;height:1px;background:var(--accent);opacity:.6;}
+.split-card__gap-title{font-family:var(--f-b);font-size:.9375rem;font-weight:700;color:var(--charcoal);line-height:1.3;}
+/* Legacy icon style kept commented out — replaced by .split-card__gap-label eyebrow */
 .split-card__solve{background:var(--white);padding:1.375rem 1.5rem;}
 .split-card__solve-num{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:.375rem;}
 .split-card__solve-title{font-family:var(--f-b);font-size:.9375rem;font-weight:700;color:var(--charcoal);margin-bottom:.375rem;line-height:1.3;}
@@ -1349,7 +1351,7 @@ img{max-width:100%;display:block;}
     <div class="split-cards">
       <div class="split-card">
         <div class="split-card__gap">
-          <div class="split-card__gap-icon">!</div>
+          <span class="split-card__gap-label">The Gap</span>
           <h3 class="split-card__gap-title">One of five sites is AI-ready</h3>
         </div>
         <div class="split-card__solve">
@@ -1360,7 +1362,7 @@ img{max-width:100%;display:block;}
       </div>
       <div class="split-card">
         <div class="split-card__gap">
-          <div class="split-card__gap-icon">!</div>
+          <span class="split-card__gap-label">The Gap</span>
           <h3 class="split-card__gap-title">Page titles read like keyword lists</h3>
         </div>
         <div class="split-card__solve">
@@ -1371,7 +1373,7 @@ img{max-width:100%;display:block;}
       </div>
       <div class="split-card">
         <div class="split-card__gap">
-          <div class="split-card__gap-icon">!</div>
+          <span class="split-card__gap-label">The Gap</span>
           <h3 class="split-card__gap-title">The school's licensure is invisible</h3>
         </div>
         <div class="split-card__solve">
