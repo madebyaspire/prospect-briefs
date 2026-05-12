@@ -556,12 +556,13 @@ img{max-width:100%;display:block;}
 .beyond-item{background:rgba(255,255,255,.025);padding:1.75rem 1.5rem;display:flex;flex-direction:column;gap:.625rem;}
 .beyond-item__ico{width:36px;height:36px;border-radius:var(--r-md);background:rgba(196,98,45,.15);display:grid;place-items:center;flex-shrink:0;}
 .beyond-item__ico .material-symbols-outlined{font-size:18px;color:#E09360;}
-.beyond-item__label{font-family:var(--f-b);font-weight:700;font-size:.9375rem;color:var(--bg);line-height:1.2;}
+.beyond-item__label{font-family:var(--f-b);font-weight:700;font-size:.9375rem;color:var(--bg);line-height:1.25;min-height:2.5em;display:flex;align-items:flex-start;}
 .beyond-item__desc{font-size:.8125rem;color:rgba(250,240,226,.52);line-height:1.55;}
-/* Two-tier scan pattern for Beyond cards: bold move + italic accent win */
-.beyond-item__move{font-family:var(--f-b);font-weight:600;font-size:.875rem;color:rgba(250,240,226,.85);line-height:1.5;margin:.25rem 0 0;}
-.beyond-item__win{font-family:var(--f-a);font-style:italic;font-size:.875rem;color:var(--accent);line-height:1.45;margin-top:.75rem;padding-top:.625rem;border-top:1px solid rgba(196,98,45,.22);display:flex;align-items:flex-start;gap:.4rem;}
-.beyond-item__win::before{content:"→";color:var(--accent);font-style:normal;font-weight:700;flex-shrink:0;font-family:var(--f-n);}
+/* Two-tier scan pattern: bold move (fills space) + outcome line pinned to bottom */
+.beyond-item__move{font-family:var(--f-b);font-weight:600;font-size:.875rem;color:rgba(250,240,226,.82);line-height:1.55;margin:.25rem 0 0;flex:1;}
+.beyond-item__win{font-family:var(--f-b);font-style:normal;font-weight:500;font-size:.8125rem;color:rgba(250,240,226,.65);line-height:1.5;margin-top:1rem;padding-top:.75rem;border-top:1px solid rgba(255,255,255,.08);display:flex;align-items:flex-start;gap:.5rem;}
+.beyond-item__win-icon{display:inline-flex;width:18px;height:18px;border-radius:50%;background:rgba(143,175,138,.18);color:var(--sage);align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
+.beyond-item__win-icon .material-symbols-outlined{font-size:12px;font-weight:700;}
 
 /* ── CTA PROCESS LINE ── */
 .cta-process{font-size:.875rem;color:rgba(250,240,226,.38);margin-bottom:1.75rem;letter-spacing:.01em;}
@@ -1488,25 +1489,25 @@ img{max-width:100%;display:block;}
         <span class="beyond-item__ico"><span class="material-symbols-outlined">storefront</span></span>
         <div class="beyond-item__label">Google Business Profile</div>
         <p class="beyond-item__move">Add "Event Venue" + "Tourist Attraction" categories. Switch on booking. Post weekly.</p>
-        <p class="beyond-item__win">Maps drives calls before anyone opens the website.</p>
+        <p class="beyond-item__win"><span class="beyond-item__win-icon"><span class="material-symbols-outlined">north_east</span></span><span>Maps drives calls before anyone opens the website.</span></p>
       </div>
       <div class="beyond-item">
         <span class="beyond-item__ico"><span class="material-symbols-outlined">event</span></span>
         <div class="beyond-item__label">Online Booking</div>
         <p class="beyond-item__move">Replace one Wix bucket with three smart-routed forms — tourist, dealer, group.</p>
-        <p class="beyond-item__win">CRM gets clean segmented data on day one.</p>
+        <p class="beyond-item__win"><span class="beyond-item__win-icon"><span class="material-symbols-outlined">north_east</span></span><span>CRM gets clean segmented data on day one.</span></p>
       </div>
       <div class="beyond-item">
         <span class="beyond-item__ico"><span class="material-symbols-outlined">reviews</span></span>
         <div class="beyond-item__label">Reviews Engine</div>
         <p class="beyond-item__move">Automated text 24 hours after every lesson asking for the Google review.</p>
-        <p class="beyond-item__win">Past 500 reviews in a year, ahead of PCI's 412.</p>
+        <p class="beyond-item__win"><span class="beyond-item__win-icon"><span class="material-symbols-outlined">north_east</span></span><span>Past 500 reviews in a year, ahead of PCI's 412.</span></p>
       </div>
       <div class="beyond-item">
         <span class="beyond-item__ico"><span class="material-symbols-outlined">mail</span></span>
         <div class="beyond-item__label">Email &amp; CRM</div>
         <p class="beyond-item__move">Every booking, YouTube sub, and shop buyer into one CRM, segmented by audience.</p>
-        <p class="beyond-item__win">Own the list. Stop renting attention from Patreon.</p>
+        <p class="beyond-item__win"><span class="beyond-item__win-icon"><span class="material-symbols-outlined">north_east</span></span><span>Own the list. Stop renting attention from Patreon.</span></p>
       </div>
     </div>
   </div>
