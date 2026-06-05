@@ -729,6 +729,15 @@ img{max-width:100%;display:block;}
   .gap-bridge__line{width:100%;flex:none;}
   .gap-wrap{grid-template-columns:1fr;min-height:0;}
   .gap-after,.gap-now{padding:2rem 1.5rem;}
+  /* Section 08 — keep the "fading revenue" metaphor legible when stacked */
+  .gap-now__eyebrow{color:rgba(250,240,226,.5);}
+  .gap-now__headline{color:rgba(250,240,226,.66);}
+  .gap-now__num{color:rgba(250,240,226,.4);}
+  .gap-now__sublabel{color:rgba(250,240,226,.42);}
+  /* Header — drop the truncating badge, keep the label on one line */
+  .topbar{padding:0 1.25rem;gap:.625rem;}
+  .topbar__label{white-space:nowrap;font-size:.875rem;}
+  .topbar__badge{display:none;}
 }
 
 @media print{
