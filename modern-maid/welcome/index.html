@@ -706,12 +706,27 @@ img{max-width:100%;display:block;}
   .quick-wins__grid{grid-template-columns:1fr;}
   .funnel-assumptions__grid{grid-template-columns:1fr 1fr;}.funnel-assumptions__item:nth-child(2){border-right:none;}.funnel-assumptions__item:nth-child(3){border-top:1px solid var(--border);}
   .compare-table{overflow-x:auto;}.compare-table__head,.compare-table__row{min-width:580px;}
+  /* ── mobile fixes ── */
+  .stack-split{grid-template-columns:1fr;}
+  .gap-wrap{grid-template-columns:1fr;min-height:auto;}
+  .gap-now,.gap-after{padding:2.25rem 1.75rem;}
+  .gap-metrics{grid-template-columns:1fr 1fr;}
+  .range-scenarios{grid-template-columns:1fr;}
+  .footer-contacts{grid-template-columns:1fr;}
+  .topbar__label,.topbar__sep{display:none;}
+  .topbar__badge{max-width:none;}
+  .gap-bridge__text{white-space:normal;}
+  .meaning-grid{grid-template-columns:1fr;}
 }
 @media(max-width:560px){
   .plan-grid{grid-template-columns:1fr;margin-left:-1.5rem;margin-right:-1.5rem;}
   .plan-item:nth-child(odd){border-right:none;}
   .phase-items--grid{grid-template-columns:1fr;}
   .why-values{grid-template-columns:1fr;}
+  .beyond-strip{grid-template-columns:1fr;}
+  .score-grid{grid-template-columns:1fr;}
+  .hero__meta{grid-template-columns:1fr;}
+  .gap-metrics{grid-template-columns:1fr;}
 }
 
 @media print{
@@ -1761,7 +1776,7 @@ img{max-width:100%;display:block;}
           </div>
         </div>
       </div>
-      <a href="https://madebyaspire.com/book" class="btn-pill btn-pill--cream" target="_blank" rel="noopener">
+      <a href="https://madebyaspire.com/contact/" class="btn-pill btn-pill--cream" target="_blank" rel="noopener">
         <span class="btn-pill__fill"></span>
         <span class="btn-pill__label">Book a Free Strategy Call</span>
         <span class="btn-pill__arrow">→</span>

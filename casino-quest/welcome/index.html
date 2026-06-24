@@ -724,7 +724,10 @@ img{max-width:100%;display:block;}
 .split-card__solve{background:var(--white);padding:1.375rem 1.5rem;}
 .split-card__solve-num{font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:.375rem;}
 .split-card__solve-title{font-family:var(--f-b);font-size:.9375rem;font-weight:700;color:var(--charcoal);margin-bottom:.375rem;line-height:1.3;}
-.split-card__solve-copy{font-size:.875rem;color:var(--text-sec);line-height:1.6;}
+.split-card__solve-copy{font-size:.875rem;color:var(--text-sec);line-height:1.6;margin-bottom:.75rem;}
+.split-card__solve-outcome{display:flex;align-items:baseline;gap:.625rem;margin-top:.625rem;}
+.split-card__solve-chip{flex-shrink:0;font-family:var(--f-n);font-size:.5rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green);background:rgba(74,123,90,.12);padding:3px 9px;border-radius:var(--r-full);white-space:nowrap;}
+.split-card__solve-outcome-text{font-size:.8125rem;color:var(--text-sec);line-height:1.5;}
 /* ── FUNNEL RESULT BAR (variant A revenue payoff) ── */
 .funnel-b__result{display:flex;align-items:center;justify-content:center;gap:3rem;background:var(--accent);border-radius:0 0 var(--r-xl) var(--r-xl);padding:2rem 2.5rem;text-align:center;}
 .funnel-b__result-item{display:flex;flex-direction:column;gap:.375rem;}
@@ -1363,7 +1366,7 @@ img{max-width:100%;display:block;}
           <div class="split-card__solve-num">The Fix</div>
           <h3 class="split-card__solve-title">One front door, AI coverage everywhere</h3>
           <p class="split-card__solve-copy">Unify the five domains under one canonical site, with AI-search signals on every page.</p>
-          <p class="split-card__solve-win"><span class="split-card__solve-win-icon"><span class="material-symbols-outlined">north_east</span></span><span>Claude, ChatGPT, and Perplexity get one place to quote — for every line of business.</span></p>
+          <div class="split-card__solve-outcome"><span class="split-card__solve-chip">The Win</span><span class="split-card__solve-outcome-text">AI quotes one place for every line of business.</span></div>
         </div>
       </div>
       <div class="split-card">
@@ -1375,7 +1378,7 @@ img{max-width:100%;display:block;}
           <div class="split-card__solve-num">The Fix</div>
           <h3 class="split-card__solve-title">Titles AI search can quote out loud</h3>
           <p class="split-card__solve-copy">Rewrite every page title and search description in David and Alex's voice — the same prose that works on the podcast.</p>
-          <p class="split-card__solve-win"><span class="split-card__solve-win-icon"><span class="material-symbols-outlined">north_east</span></span><span>AI engines stop seeing keyword stuffing and start quoting the real story.</span></p>
+          <div class="split-card__solve-outcome"><span class="split-card__solve-chip">The Win</span><span class="split-card__solve-outcome-text">AI stops seeing keyword stuffing and starts quoting the real story.</span></div>
         </div>
       </div>
       <div class="split-card">
@@ -1387,7 +1390,7 @@ img{max-width:100%;display:block;}
           <div class="split-card__solve-num">The Fix</div>
           <h3 class="split-card__solve-title">Make the trust signals readable to AI</h3>
           <p class="split-card__solve-copy">Add invisible tags to the page code: "accredited school," "event venue," "course prices."</p>
-          <p class="split-card__solve-win"><span class="split-card__solve-win-icon"><span class="material-symbols-outlined">north_east</span></span><span>The licensure, BBB A+, and 100-casino placement network become facts AI assistants can repeat.</span></p>
+          <div class="split-card__solve-outcome"><span class="split-card__solve-chip">The Win</span><span class="split-card__solve-outcome-text">BBB A+, state licensure, and 100-casino placements become facts AI assistants repeat.</span></div>
         </div>
       </div>
     </div>
