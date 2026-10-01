@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+# Crawlers may fetch pages so they see the noindex header; nothing here is meant for search results.
