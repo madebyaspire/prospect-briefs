@@ -662,7 +662,7 @@ img{max-width:100%;display:block;}
 
 /* ── COMPARE TABLE (matrix view) ── */
 .compare-table{border:1px solid var(--border);border-radius:var(--r-xl);overflow:hidden;margin:1.5rem 0;}
-.compare-table__head,.compare-table__row{display:grid;grid-template-columns:150px repeat(3,1fr);}
+.compare-table__head,.compare-table__row{display:grid;grid-template-columns:130px repeat(4,1fr);}
 .compare-table__corner{background:var(--bg-alt);border-right:1px solid var(--border);padding:.875rem 1.25rem;}
 .compare-table__col-head{padding:1.125rem 1.25rem .75rem;font-family:var(--f-d);font-style:italic;font-size:1.0625rem;font-weight:400;color:var(--charcoal);border-left:1px solid var(--border);background:var(--bg-alt);}
 .compare-table__col-context{display:block;font-family:var(--f-b);font-style:normal;font-size:.6875rem;color:var(--text-muted);margin-top:.3rem;line-height:1.4;font-weight:400;}
@@ -1158,36 +1158,45 @@ img{max-width:100%;display:block;}
           Ocken Photography
           <span class="compare-table__col-context">Fine art and weddings, 45 reviews</span>
         </div>
+        <div class="compare-table__col-head">
+          Liza Jane Photography
+          <span class="compare-table__col-context">Seniors and sports, 7 reviews</span>
+        </div>
       </div>
       <div class="compare-table__row">
         <div class="compare-table__label">Website</div>
-        <div class="compare-table__cell compare-table__cell--you compare-table__cell--low">Bare home page</div>
-        <div class="compare-table__cell compare-table__cell--good">Service pages</div>
-        <div class="compare-table__cell compare-table__cell--good">Galleries and prices</div>
+        <div class="compare-table__cell compare-table__cell--you compare-table__cell--low" data-competitor="Rock Town Media">Bare home page</div>
+        <div class="compare-table__cell compare-table__cell--good" data-competitor="LeMay Photography Studio">Service pages</div>
+        <div class="compare-table__cell compare-table__cell--good" data-competitor="Ocken Photography">Galleries and prices</div>
+        <div class="compare-table__cell compare-table__cell--good" data-competitor="Liza Jane Photography">Pages for each service</div>
       </div>
       <div class="compare-table__row">
         <div class="compare-table__label">Online booking</div>
-        <div class="compare-table__cell compare-table__cell--you compare-table__cell--low">Form only</div>
-        <div class="compare-table__cell compare-table__cell--good">Book-now pages</div>
-        <div class="compare-table__cell compare-table__cell--mid">Contact page</div>
+        <div class="compare-table__cell compare-table__cell--you compare-table__cell--low" data-competitor="Rock Town Media">Form only</div>
+        <div class="compare-table__cell compare-table__cell--good" data-competitor="LeMay Photography Studio">Book-now pages</div>
+        <div class="compare-table__cell compare-table__cell--mid" data-competitor="Ocken Photography">Contact page</div>
+        <div class="compare-table__cell compare-table__cell--good" data-competitor="Liza Jane Photography">Booking calendar page</div>
       </div>
       <div class="compare-table__row">
         <div class="compare-table__label">Portfolio online</div>
-        <div class="compare-table__cell compare-table__cell--you compare-table__cell--good">Portfolio page</div>
-        <div class="compare-table__cell compare-table__cell--mid">Service tiles</div>
-        <div class="compare-table__cell compare-table__cell--good">Galleries by type</div>
+        <div class="compare-table__cell compare-table__cell--you compare-table__cell--good" data-competitor="Rock Town Media">Portfolio page</div>
+        <div class="compare-table__cell compare-table__cell--mid" data-competitor="LeMay Photography Studio">Service tiles</div>
+        <div class="compare-table__cell compare-table__cell--good" data-competitor="Ocken Photography">Galleries by type</div>
+        <div class="compare-table__cell compare-table__cell--mid" data-competitor="Liza Jane Photography">Client photo finder</div>
       </div>
       <div class="compare-table__row">
         <div class="compare-table__label">Google reviews</div>
-        <div class="compare-table__cell compare-table__cell--you compare-table__cell--low">1 (5.0)</div>
-        <div class="compare-table__cell compare-table__cell--good">105 (4.9)</div>
-        <div class="compare-table__cell compare-table__cell--good">45 (4.9)</div>
+        <div class="compare-table__cell compare-table__cell--you compare-table__cell--low" data-competitor="Rock Town Media">1 (5.0)</div>
+        <div class="compare-table__cell compare-table__cell--good" data-competitor="LeMay Photography Studio">105 (4.9)</div>
+        <div class="compare-table__cell compare-table__cell--good" data-competitor="Ocken Photography">45 (4.9)</div>
+        <div class="compare-table__cell compare-table__cell--mid" data-competitor="Liza Jane Photography">7 (5.0)</div>
       </div>
       <div class="compare-table__row">
         <div class="compare-table__label">Domain authority</div>
-        <div class="compare-table__cell compare-table__cell--you compare-table__cell--mid">58 linking sites</div>
-        <div class="compare-table__cell compare-table__cell--mid">80 linking sites</div>
-        <div class="compare-table__cell compare-table__cell--good">1,325 linking sites</div>
+        <div class="compare-table__cell compare-table__cell--you compare-table__cell--mid" data-competitor="Rock Town Media">58 linking sites</div>
+        <div class="compare-table__cell compare-table__cell--mid" data-competitor="LeMay Photography Studio">80 linking sites</div>
+        <div class="compare-table__cell compare-table__cell--good" data-competitor="Ocken Photography">1,325 linking sites</div>
+        <div class="compare-table__cell compare-table__cell--mid" data-competitor="Liza Jane Photography">Unmeasured</div>
       </div>
     </div></div>
 
@@ -1349,7 +1358,7 @@ img{max-width:100%;display:block;}
           <div class="split-card__solve-num">The Fix</div>
           <h3 class="split-card__solve-title">A media day page that answers</h3>
           <p class="split-card__solve-copy">One page covering what a media day includes, how it works, rough pricing and the questions parents ask, so AI tools have something to quote.</p>
-          <div class="split-card__solve-outcome"><span class="split-card__solve-chip">The Win</span><span class="split-card__solve-outcome-text">Both engines name Liza Jane Photography for media days today. This makes you a second answer.</span></div>
+          <div class="split-card__solve-outcome"><span class="split-card__solve-chip">The Win</span><span class="split-card__solve-outcome-text">Liza Jane Photography has its own media day, pricing and booking calendar pages (site checked October 13, 2026) and is the name both engines give for media days. A page like this makes you a second answer.</span></div>
         </div>
       </div>
       <div class="split-card">
@@ -1379,7 +1388,7 @@ img{max-width:100%;display:block;}
     </div>
     </div>
 
-    <div class="callout">We asked Perplexity and ChatGPT web search eight buying questions each on October 12, 2026. Perplexity named you for senior sports photos, sports studios and posing guides. ChatGPT named you for the best sports photographer in North Little Rock, senior sports photos and sports studios. Each scored 6 of 24 on our scale. Neither named you for media days, lighting workshops, beginner courses or studio rental. Gemini and Claude were not tested (unmeasured), and this is a directional read, not a ranking.</div>
+    <div class="callout">We asked Perplexity and ChatGPT web search eight buying questions each on October 12, 2026. Perplexity named you for senior sports photos, sports studios and posing guides. ChatGPT named you for the best sports photographer in North Little Rock, senior sports photos and sports studios. Each scored 6 of 24 on our scale. Neither named you for media days, lighting workshops, beginner courses or studio rental. For media days both name Liza Jane Photography, which has 7 Google reviews against your 1, so reviews alone do not explain it: dedicated pages do. Gemini and Claude were not tested (unmeasured), and this is a directional read, not a ranking.</div>
   </div>
 </section>
 
@@ -1427,7 +1436,7 @@ img{max-width:100%;display:block;}
           </div>
           <div class="phase-item">
             <strong class="phase-item__title">Local pages for seniors and media days</strong>
-            <p class="phase-item__desc">Dedicated pages for senior sports photos, team media days and studio rental (if the studio is open to rent), each titled with the service and North Little Rock. Rivals rank for these terms today and you do not.</p>
+            <p class="phase-item__desc">Dedicated pages for senior sports photos, team media days and studio rental (if the studio is open to rent), each titled with the service and North Little Rock. Liza Jane Photography is #1 on Google for "team media day photography arkansas" today (October 12, 2026 snapshot) and you do not appear.</p>
           </div>
           <div class="phase-item">
             <strong class="phase-item__title">An education hub that sells</strong>
