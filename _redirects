@@ -1,0 +1,3 @@
+# Chamber Day plan moved to docs (CLI-774, Jaime 2026-10-20)
+/delaware-area-chamber/chamber-day https://docs.madebyaspire.com/delaware-area-chamber/chamber-day/ 301
+/delaware-area-chamber/chamber-day/* https://docs.madebyaspire.com/delaware-area-chamber/chamber-day/:splat 301
