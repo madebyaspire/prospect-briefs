@@ -240,6 +240,11 @@ img{max-width:100%;display:block;}
 
 .gallery-note{margin-top:2rem;}
 
+.share-lead{font-size:1.0625rem;line-height:1.7;color:var(--text-sec);margin-bottom:1.5rem;max-width:720px;}
+.share-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin-bottom:1rem;}
+.share-grid .caption{margin-bottom:0;background:var(--white);}
+@media(max-width:820px){.share-grid{grid-template-columns:minmax(0,1fr);}}
+
 /* Email + checklist */
 .steps{list-style:none;counter-reset:step;padding:0;margin:1.5rem 0;display:flex;flex-direction:column;gap:.75rem;}
 .steps li{counter-increment:step;position:relative;padding:1rem 1.25rem 1rem 3.5rem;border-radius:var(--r-lg);line-height:1.6;}
@@ -591,12 +596,47 @@ Call our office at <span class="nowrap">740-369-6221</span> or visit delawareare
 
 
 <!-- ═══════════════════════════════════════════════════════════
-     04 · YOUR CHAMBER DAY EMAIL
+     04 · SHARE KIT FOR YOUR MEMBERS
+═══════════════════════════════════════════════════════════ -->
+<section class="sec-group sec-group--alt" id="share-kit">
+  <div class="sec-group__in">
+    <div class="sec-head">
+      <span class="sec-head__num">04</span>
+      <div class="sec-head__body">
+        <h2 class="sec-head__title">Share kit for <em>your members</em></h2>
+      </div>
+    </div>
+    <p class="share-lead">Chamber Day goes further when your members post too. Send these to your members, board and ambassadors tonight so they can copy, paste and share on Wednesday. Ask them to tag the Delaware Area Chamber of Commerce Facebook page and attach the Happy Chamber Day image from post 1.</p>
+    <div class="share-grid">
+      <div class="caption">
+        <div class="caption__head"><span class="caption__label">Member post 1</span><button type="button" class="copy-btn" data-copy="share-1"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span><span class="copy-btn__text">Copy caption</span></button></div>
+        <div class="caption__text" id="share-1">Happy Support Your Local Chamber Day! We're proud members of the Delaware Area Chamber of Commerce. From networking to training to great community connections, the Chamber helps local businesses like ours grow. #SupportYourLocalChamber</div>
+      </div>
+      <div class="caption">
+        <div class="caption__head"><span class="caption__label">Member post 2</span><button type="button" class="copy-btn" data-copy="share-2"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span><span class="copy-btn__text">Copy caption</span></button></div>
+        <div class="caption__text" id="share-2">Looking for ways to grow your business in Delaware County? Check out the Delaware Area Chamber of Commerce. We're so glad to be members! #SupportYourLocalChamber</div>
+      </div>
+      <div class="caption">
+        <div class="caption__head"><span class="caption__label">Member post 3</span><button type="button" class="copy-btn" data-copy="share-3"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span><span class="copy-btn__text">Copy caption</span></button></div>
+        <div class="caption__text" id="share-3">Today is Support Your Local Chamber Day! If you haven't connected with the Delaware Area Chamber of Commerce yet, today's a great day to start. #SupportYourLocalChamber</div>
+      </div>
+      <div class="caption">
+        <div class="caption__head"><span class="caption__label">Member post 4</span><button type="button" class="copy-btn" data-copy="share-4"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span><span class="copy-btn__text">Copy caption</span></button></div>
+        <div class="caption__text" id="share-4">The Delaware Area Chamber of Commerce is there every step of the way for local businesses, and we're grateful to be part of it. Thank you to Susie, Melissa and the whole Chamber team! #SupportYourLocalChamber</div>
+      </div>
+    </div>
+    <p class="sched-note">Adapted from the U.S. Chamber's Support Your Local Chamber Day toolkit.</p>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     05 · YOUR CHAMBER DAY EMAIL
 ═══════════════════════════════════════════════════════════ -->
 <section class="sec-group sec-group--dark" id="email">
   <div class="sec-group__in">
     <div class="sec-head">
-      <span class="sec-head__num">04</span>
+      <span class="sec-head__num">05</span>
       <div class="sec-head__body">
         <h2 class="sec-head__title">Your Chamber Day <em>email</em></h2>
       </div>
@@ -619,12 +659,12 @@ Call our office at <span class="nowrap">740-369-6221</span> or visit delawareare
 
 
 <!-- ═══════════════════════════════════════════════════════════
-     05 · WHAT WE NEED FROM YOU
+     06 · WHAT WE NEED FROM YOU
 ═══════════════════════════════════════════════════════════ -->
 <section class="sec-group sec-group--cream" id="next">
   <div class="sec-group__in">
     <div class="sec-head">
-      <span class="sec-head__num">05</span>
+      <span class="sec-head__num">06</span>
       <div class="sec-head__body">
         <h2 class="sec-head__title">What we need <em>from you</em></h2>
       </div>
